@@ -133,7 +133,7 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 ### Task 4 - Configure a Group Naming Policy
 
-A group naming policy lets you standardize and manage the names of distribution groups created by users in your organization. You can require a specific prefix and suffix be added to the name for a distribution group when it's created, and you can block specific words from being used. This helps you minimize the use of inappropriate words in group names. Adatum’s CTO wants to implement a standard naming policy throughout the organization based on the following format: &lt;Department&gt;&lt;Group Name&gt;&lt;City&gt;. You have been tasked with creating this company-wide policy.
+A group naming policy lets you standardize and manage the names of distribution groups created by users in your organization. You can require a specific prefix and suffix be added to the name for a distribution group when it's created, and you can block specific words from being used. This helps you minimize the use of inappropriate words in group names. Adatum’s CTO wants to implement a standard naming policy throughout the organization based on the following format: {Department}{Group Name}{City}. You have been tasked with creating this company-wide policy.
 
 1. In the **Exchange admin center**, you should still be displaying the list of groups. In the menu bar that appears over the list of groups, select the **ellipsis** icon, and in the menu that appears, select **Configure group naming policy.**
 

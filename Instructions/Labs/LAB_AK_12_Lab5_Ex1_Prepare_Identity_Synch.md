@@ -108,7 +108,7 @@ In this task you will download and use the IdFix tool to fix the accounts that w
 
 	‎**Note:** Notice that IdFix updated the three user objects and corrected the errors. 
 
-17. Switch to **File Explorer**, and in the **C:\Deployment Tools\IdFix** folder, double-click **Verbose &lt;date&gt; &lt;time&gt;.txt** to open Notepad and view the updated transactions in the transaction log. Note the three Updates that appear at the bottom of the file that reflect the updates you just initiated. When you’re done, close Notepad. 
+17. Switch to **File Explorer**, and in the **C:\Deployment Tools\IdFix** folder, double-click **Verbose {date} {time}.txt** to open Notepad and view the updated transactions in the transaction log. Note the three Updates that appear at the bottom of the file that reflect the updates you just initiated. When you’re done, close Notepad. 
 
 18. Switch back to the **IdFix tool**. On the toolbar, select **Query**. 
 

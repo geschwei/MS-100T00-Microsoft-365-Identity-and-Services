@@ -20,7 +20,7 @@ This task guides you though a variety of tools used to troubleshoot different ma
 
 7. Wait for the delivery failure message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
-8. In the **Underliverable: &lt;subject of message&gt;** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
+8. In the **Underliverable: {subject of message}** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
 
 9. Close the message window.
 
@@ -50,7 +50,7 @@ This task guides you though a variety of tools used to troubleshoot different ma
 
 17. Wait for the delivery failure message to appear. When the message appears in Holly’s Inbox, double-click the message to open it in a separate window. 
 
-18. In the **Underliverable: &lt;subject of message&gt;** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
+18. In the **Underliverable: {subject of message}** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
 
 19. Close the message window.
 

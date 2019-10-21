@@ -468,9 +468,9 @@ Azure AD is required to perform several group management tasks in Microsoft 365,
 
 	- You should then run the following command to retrieve and restore the deleted group whose Object ID matches the value you enter:<br/>  
 
-		‎**Note:** Replace the &lt;objectId&gt; in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command, right-click and select **Paste** when you get to the &lt;objectId&gt; parameter, then press Enter to run the command.  <br/>
+		‎**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command, right-click and select **Paste** when you get to the {objectId} parameter, then press Enter to run the command.  <br/>
 
-		‎**Restore-AzureADMSDeletedDirectoryObject -Id &lt;objectId&gt;**  
+		‎**Restore-AzureADMSDeletedDirectoryObject -Id {objectId}**  
 		
 4. Leave your Windows PowerShell window open for the next exercise; simply minimize the Windows PoweShell window for now.
 

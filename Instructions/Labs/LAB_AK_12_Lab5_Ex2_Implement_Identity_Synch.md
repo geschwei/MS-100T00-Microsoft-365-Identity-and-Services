@@ -276,9 +276,9 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 22. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, select the **ObjectID** for the **Research** group in the prior list, right-click on it and select **Copy**.   <br/>
 
-	‎Then run the following command to retrieve this group (where **&lt;&lt;ObjectID for Research group&gt;&gt;** is the ObjectID of the group; when you get to this point when entering the command, right-click and select **Paste** to paste in the ObjectID that you previously copied): <br/>
+	‎Then run the following command to retrieve this group (where **{ObjectID}** is the ObjectID of the Research group; when you get to this point when entering the command, right-click and select **Paste** to paste in the ObjectID that you previously copied): <br/>
 	
-	‎**Get-MsolGroupMember -GroupObjectId &lt;&lt;ObjectID for Research group&gt;&gt;**
+	‎**Get-MsolGroupMember -GroupObjectId {ObjectID}**
 
 23. Verify the membership of the Research group does NOT contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
 
@@ -558,7 +558,7 @@ If you’ll recall, you earlier created identity mismatch situations where the e
 
 5. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account (don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider):  <br/>
 
-	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID “&lt;paste in the objectGuid that you copied earlier to Notepad&gt;**  
+	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID {paste in the objectGuid that you copied earlier to Notepad}**  
 
 6. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
 

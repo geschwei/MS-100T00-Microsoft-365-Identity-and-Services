@@ -10,17 +10,17 @@ To test the manual, forced synchronization process, you will set up a user scena
 
 - You will create a new user account in your on-premises AD that will be synchronized with Azure AD. 
 
-- However, when creating this new user account, you will purposely create an identity mismatch scenario (also known as identity forking), which is a common error faced by organizations that lack discipline when maintaining user accounts. For a given user, you will create cloud and on-premises mailboxes that have a domain mismatch. The email address of the cloud account will point to the **onmicrosoft.com** domain, and the email address of the on-premises account will point to the primary SMTP domain of **xtremelabs.us**. This will end up creating an identity mismatch during the synchronization process.  <br/>
+- However, when creating this new user account, you will purposely create an identity mismatch scenario (also known as identity forking), which is a common error faced by organizations that lack discipline when maintaining user accounts. For a given user, you will create cloud and on-premises mailboxes that have a domain mismatch. The email address of the cloud account will point to the **onmicrosoft.com** domain, and the email address of the on-premises account will point to the primary SMTP domain of **CustomDomain.us**. This will end up creating an identity mismatch during the synchronization process.  <br/>
 
 	‎Because of this domain mismatch, the synchronization process will create two accounts for this user in the Microsoft 365 Active User list. Each account will have its own mailbox because the mailboxes will have different domain and routing addresses.   <br/>
 	
 	‎In a normal situation in which the user’s on-premises and cloud accounts have the same UPN and domain, the synchronization process will create one user account in the Microsoft 365 Active User list that has multiple SMTP addresses in the email address property chain. 
 
-You will create this identity mismatch situation by first creating a user account for Scotty Heyward in Microsoft 365 that references the onmicrosoft.com domain. You will then create an on-premises user account and mailbox for Scotty in Adatum’s local Exchange Server that references the xtremelabs.us domain. 
+You will create this identity mismatch situation by first creating a user account for Scotty Heyward in Microsoft 365 that references the onmicrosoft.com domain. You will then create an on-premises user account and mailbox for Scotty in Adatum’s local Exchange Server that references the CustomDomain.us domain. 
 
 By purposely creating this mismatch scenario, you will then learn how to use Soft Matching to troubleshoot the problem in the next exercise.
   
-‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.xtremelabs.us.**
+‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.CustomDomain.us.**
 
 1. On the Domain Controller VM (LON-DC1), you will first create a user account for **Scotty Heyward** in Microsoft 365. In **Internet Explorer**, select the **Microsoft 365 admin center** tab, and in the left-hand navigation pane, select **Users** and then **Active users**. 
 
@@ -38,7 +38,7 @@ By purposely creating this mismatch scenario, you will then learn how to use Sof
 
 	- Username: When you tab into this field, **Scotty** will appear; leave this as the username   <br/>
 
-		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xtremelabs.us** on-premises domain; however, to create the identity mismatch, select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). So Scotty’s username should appear as: ‎**Scotty@M365xZZZZZZ.onmicrosoft.com**  
+		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.CustomDomain.us** on-premises domain; however, to create the identity mismatch, select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). So Scotty’s username should appear as: ‎**Scotty@M365xZZZZZZ.onmicrosoft.com**  
 
 	- Password settings: select the **Let me create the password** option
 
@@ -62,7 +62,7 @@ By purposely creating this mismatch scenario, you will then learn how to use Sof
 
 9. On the **Scotty Heyward has been added** page, select **Close.** 
 
-10. You will now create an on-premises mailbox and user account for Scotty on Adatum’s local Exchange Server that references the primary SMTP domain of **xtremelabs.us**.  <br/>
+10. You will now create an on-premises mailbox and user account for Scotty on Adatum’s local Exchange Server that references the primary SMTP domain of **CustomDomain.us**.  <br/>
 
 	‎In the **Virtual machine** box at the top of the VM, switch to the **Exchange Server VM** (LON-EX1).
 
@@ -94,7 +94,7 @@ By purposely creating this mismatch scenario, you will then learn how to use Sof
 
 	- User logon name: **Scotty** 
 
-	- Domain: To the right of the **User logon name**, select the drop-down arrow in the domain field and select **XXYYZZa.xtremelabs.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider)
+	- Domain: To the right of the **User logon name**, select the drop-down arrow in the domain field and select **XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider)
 
 	- Password and Confirm password: **Pa55w.rd**
 
@@ -234,9 +234,9 @@ In this task, you will validate whether the changes you made earlier were synchr
 	
 	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter Scotty again in the Search box). You cannot proceed until Scotty’s accounts appear. 
 
-8. Because you created an identity mismatch situation, the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **xtremelabs.us** account. Each of Scotty’s accounts will have its own mailbox because the mailboxes will have different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
+8. Because you created an identity mismatch situation, the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **CustomDomain.us** account. Each of Scotty’s accounts will have its own mailbox because the mailboxes will have different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
 
-	‎Once Scotty’s two accounts appear, scroll to the right in the **Active users** list to display the **Sync status** of each. You’ll notice that Scotty’s **onmicrosoft.com** account has a sync status of **In cloud**, while his on-premises **xtremelabs.us** account has a sync status of **Synced with Active Directory**. <br/>
+	‎Once Scotty’s two accounts appear, scroll to the right in the **Active users** list to display the **Sync status** of each. You’ll notice that Scotty’s **onmicrosoft.com** account has a sync status of **In cloud**, while his on-premises **CustomDomain.us** account has a sync status of **Synced with Active Directory**. <br/>
 	
 	‎This is the result of the forked identity mismatch that we purposely created. To fix this situation, you will use soft matching to troubleshoot this problem in the next task.
 
@@ -266,7 +266,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎**Connect-MsolService**
 
-19. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xtremelabs.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) and password of **Pa55w.rd**.   
+19. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) and password of **Pa55w.rd**.   
 
 20. Run the following command that retrieves all the Office 365 groups:   <br/>
 
@@ -327,7 +327,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 		‎**Connect-MsolService**  <br/>
 		
-		‎When you enter this command, you will be prompted to log in. Log in as **Holly@XXYYZZa.xtremelabs.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) and password of **Pa55w.rd**.
+		‎When you enter this command, you will be prompted to log in. Log in as **Holly@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) and password of **Pa55w.rd**.
 
 6. In PowerShell, run the following command to disable directory synchronization: <br/>
 
@@ -337,7 +337,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 	‎**Note:** The command that you run in this step turns off Directory Synchronization, which if left turned Off, would trigger all synchronized identities to be changed to cloud-only identities. Obviously, this is not something you would do in a real-world environment if you want to maintain synchronized accounts. Directory Synchronization is turned off here to that you can make the necessary corrections to Scotty’s accounts, at which time you will enable synchronization so that you can run a forced sync to apply your changes. It’s very important that you understand the implications of turning off Directory Synchronization as well as the rare cases such as this when you would need to do so.  
 	
-7. There’s an email address associated with Adatum’s accepted domain that you must add as an email alias for Scotty’s on-premises and Microsoft 365 accounts. To get this address, in **Internet Explorer**, navigate to the **Microsoft 365 admin center** tab (if you’re not already on it), and then proceed to the next step. If you previously closed the Microsoft 365 admin center, then enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@XXYYZZa.xtremelabs.us** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
+7. There’s an email address associated with Adatum’s accepted domain that you must add as an email alias for Scotty’s on-premises and Microsoft 365 accounts. To get this address, in **Internet Explorer**, navigate to the **Microsoft 365 admin center** tab (if you’re not already on it), and then proceed to the next step. If you previously closed the Microsoft 365 admin center, then enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@XXYYZZa.CustomDomain.us** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
 
 8. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**. Scroll down to the **Admin centers** section and select **Exchange** to open the Exchange admin center for Exchange Online.
 
@@ -355,7 +355,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 14. In the **email address** list for Holly, locate the two SMTP addresses:
 
-	- The primary email address is the mailbox where **SMTP** is capitalized and bolded. This email address points to her on-premises mailbox at **Holly@XXYYZZa.xtremelabs.us**. 
+	- The primary email address is the mailbox where **SMTP** is capitalized and bolded. This email address points to her on-premises mailbox at **Holly@XXYYZZa.CustomDomain.us**. 
 
 	- Then notice her additional email address, where smtp is in lower-case and is not bolded. This email alias points to her Microsoft 365 cloud mailbox of **Holly@M365xZZZZZZ.onmicrosoft.com**.
 
@@ -371,15 +371,15 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	- Scotty has a primary SMTP address (bold and upper-case **SMTP**) but not an additional smtp email alias. 
 
-	- Scotty’s primary SMTP address is his **onmicrosoft.com** cloud address. This is different from the normal account for Holly Dickson in which her primary SMTP address was her on-premises **xtremelabs.us** address. Holly also has an email alias that references her **onmicrosoft.com** address.
+	- Scotty’s primary SMTP address is his **onmicrosoft.com** cloud address. This is different from the normal account for Holly Dickson in which her primary SMTP address was her on-premises **CustomDomain.us** address. Holly also has an email alias that references her **onmicrosoft.com** address.
 
 18. To correct this identity mismatch situation, you need to:
 
-	- Update Scotty’s on-premises email addresses to include the email addresses from his Microsoft 365 account, change his primary SMTP address to the xtremelabs.us domain, and add an additional alias for the mail.onmicrosoft.com domain.
+	- Update Scotty’s on-premises email addresses to include the email addresses from his Microsoft 365 account, change his primary SMTP address to the CustomDomain.us domain, and add an additional alias for the mail.onmicrosoft.com domain.
 
-	- Delete the second Microsoft 365 user account that was created for Scotty by the sync process. This account points to the xtremelabs.us domain, and if you attempt to change Scotty’s primary SMTP address to the xtremelabs.us domain while this second user account exists, it will result in an error when you attempt to save the address change.
+	- Delete the second Microsoft 365 user account that was created for Scotty by the sync process. This account points to the CustomDomain.us domain, and if you attempt to change Scotty’s primary SMTP address to the CustomDomain.us domain while this second user account exists, it will result in an error when you attempt to save the address change.
 
-	- Update Scotty’s Microsoft 365 email addresses to include the email addresses from his on-premises account, change the primary SMTP address to this xtremelabs.us address, and add an additional alias for the mail.onmicrosoft.com account.<br/>
+	- Update Scotty’s Microsoft 365 email addresses to include the email addresses from his on-premises account, change the primary SMTP address to this CustomDomain.us address, and add an additional alias for the mail.onmicrosoft.com account.<br/>
 	
 	By making these changes, the email addresses for Scotty’s on-premises and Microsoft 365 accounts should be identical. Then when you do a force sync it will synchronize the on-premises and Microsoft 365 addresses together in Scotty’s one Microsoft 365 account.   <br/>
 	
@@ -401,13 +401,13 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 23. In the **Edit User Mailbox** window for **Scotty Heyward**, select **email address** in the left-hand navigation pane.
 
-24. The **email address** tab displays just one mailbox for Scotty, which is his primary SMTP address of **Scotty@adatum.com**. You need to change this to Adatum’s accepted domain of **xtremelabs.us**, as well as add in his email addresses from his Microsoft 365 account and the mail.onmicrosoft.com accepted domain; however, before you can do so, you must clear the check box next to the **Automatically update email addresses based on the email address policy applied to this recipient** option. If you leave this option selected, you will be unable to change the primary SMTP email address in the next step.
+24. The **email address** tab displays just one mailbox for Scotty, which is his primary SMTP address of **Scotty@adatum.com**. You need to change this to Adatum’s accepted domain of **CustomDomain.us**, as well as add in his email addresses from his Microsoft 365 account and the mail.onmicrosoft.com accepted domain; however, before you can do so, you must clear the check box next to the **Automatically update email addresses based on the email address policy applied to this recipient** option. If you leave this option selected, you will be unable to change the primary SMTP email address in the next step.
 
 25. In the **email address** tab, select the **pencil (edit)** icon to edit the selected SMTP email address. 
 
-26. In the **email address** dialog box enter **Scotty@XXYYZZa.xtremelabs.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) in the **Email address** field and then select **OK**.  <br/>
+26. In the **email address** dialog box enter **Scotty@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) in the **Email address** field and then select **OK**.  <br/>
 
-	‎This email address that points to the primary accepted domain for Adatum (xtremelabs.us) now appears as the primary SMTP address for Scotty’s on-premises account. Later in this task, you will also change Scotty’s primary SMTP address on his Microsoft 365 to this xtremelabs.us address.
+	‎This email address that points to the primary accepted domain for Adatum (CustomDomain.us) now appears as the primary SMTP address for Scotty’s on-premises account. Later in this task, you will also change Scotty’s primary SMTP address on his Microsoft 365 to this CustomDomain.us address.
 
 27. This returns you to the **email address** tab for Scotty’s on-premises account. You must then add in the two email addresses from Scotty’s Microsoft 365 account (the SIP and SMTP types), as well as the address for the mail.onmicrosoft.com domain. Select the **plus (+)** sign to add a new email address.
 
@@ -417,7 +417,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	‎Enter **Scotty@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 
-30. You now need to create another on-premises email address for Scotty that matches his second email address from his Microsoft 365 account. This is currently his primary SMTP address in Microsoft 365. However, since both accounts must have the same primary SMTP address, and since the xtremelabs.us domain is Adatum’s primary domain, you will add this address as an email alias for his on-premises account.  <br/>
+30. You now need to create another on-premises email address for Scotty that matches his second email address from his Microsoft 365 account. This is currently his primary SMTP address in Microsoft 365. However, since both accounts must have the same primary SMTP address, and since the CustomDomain.us domain is Adatum’s primary domain, you will add this address as an email alias for his on-premises account.  <br/>
 
 	‎On the email address tab, select the **plus (+)** sign to add a new email address.
 
@@ -427,7 +427,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	‎Enter **Scotty@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 
-33. You now need to create an email alias that matches the address of the xtremelabs.us accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
+33. You now need to create an email alias that matches the address of the CustomDomain.us accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
 
 34. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
 
@@ -439,7 +439,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	- **SIP** - **Scotty@M365xZZZZZZ.onmicrosoft.com**
 
-	- **SMTP – Scotty@XXYYZZa.xtremelabs.us**
+	- **SMTP – Scotty@XXYYZZa.CustomDomain.us**
 
 	- smtp - Scotty@M365xZZZZZZ.mail.onmicrosoft.com
 
@@ -453,15 +453,15 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 39. If you’re on the **Active users** page, then refresh it; otherwise, navigate to **Active users**.
 
-40. In the **Search** box, enter **Scotty.** This should display both of Scotty’s Microsoft 365 accounts. In the next few steps, you want to delete the second user account that was created by the sync process, which is the **xtremelabs.us** account. You need to do this so that you can add an email address to Scotty’s account that uses the xtremelabs.us domain; however, the system will prohibit you from adding this email address when this second account exists that already points to the xtremelabs.us domain.
+40. In the **Search** box, enter **Scotty.** This should display both of Scotty’s Microsoft 365 accounts. In the next few steps, you want to delete the second user account that was created by the sync process, which is the **CustomDomain.us** account. You need to do this so that you can add an email address to Scotty’s account that uses the CustomDomain.us domain; however, the system will prohibit you from adding this email address when this second account exists that already points to the CustomDomain.us domain.
 
-41. In the **Active users** list, select the **Scotty Heyward** account whose username is **Scotty@XXYYZZa.xtremelabs.us**, select the **More options** icon to the left of the username (the three dots stacked on top of each other), and then select **Delete user.** 
+41. In the **Active users** list, select the **Scotty Heyward** account whose username is **Scotty@XXYYZZa.CustomDomain.us**, select the **More options** icon to the left of the username (the three dots stacked on top of each other), and then select **Delete user.** 
 
 42. On the **Delete this user?** page, select **Delete user**. Once the user is deleted, select **Close.**  <br/>
 
 	‎**Note:** If the deletion fails, then you will need to refresh the **Active users** list as the user’s sync status must be “**In cloud**”.
 
-43. You now need to update Scotty’s Microsoft 365 account to contain the email address that was assigned to his on-premises account. If you’ll recall, Scotty’s on-premises account originally had only one email address, which was his primary **SMTP** address of **Scotty@Adatum.com**. Previously in this task you changed th primary SMTP address of his on-premises account to **Scotty@XXYYZZa.xtremelabs.us.** You will need to do the same here for his Microsoft 365 account.   
+43. You now need to update Scotty’s Microsoft 365 account to contain the email address that was assigned to his on-premises account. If you’ll recall, Scotty’s on-premises account originally had only one email address, which was his primary **SMTP** address of **Scotty@Adatum.com**. Previously in this task you changed th primary SMTP address of his on-premises account to **Scotty@XXYYZZa.CustomDomain.us.** You will need to do the same here for his Microsoft 365 account.   
 
 44. In **Internet Explorer**, select the **Exchange admin center** tab if you’re not already there. 
 
@@ -473,13 +473,13 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 48. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
 
-49. In the **Email address** field, enter **Scotty@XXYYZZa.xtremelabs.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider).
+49. In the **Email address** field, enter **Scotty@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider).
 
 50. Select the **Make this the reply address** check box and then select **OK**.   <br/>
 
 	‎**Note:** Setting this check box will make this smtp address the primary SMTP address, and it will change the current primary SMTP address to an email alias. 
 
-51. You now need to create another email alias that matches the address of the xtremelabs.us accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
+51. You now need to create another email alias that matches the address of the CustomDomain.us accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
 
 52. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
 
@@ -491,7 +491,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	- **SIP** - **Scotty@M365xZZZZZZ.onmicrosoft.com**
 
-	- **SMTP – Scotty@XXYYZZa.xtremelabs.us**
+	- **SMTP – Scotty@XXYYZZa.CustomDomain.us**
 
 	- smtp - Scotty@M365xZZZZZZ.mail.onmicrosoft.com
 
@@ -523,16 +523,16 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 59. You now want to see if the identity mismatch was corrected in Scotty’s Microsoft 365 account. Navigate to the **Microsoft 365 admin center**, select **Active users**, and in the **Search** field, enter **Scotty** to display Scotty Heyward’s user account.   <br/>
 
-	‎You should only see one user account, and if you select it, you’ll see the xtremelabs.us address listed as Scotty’s primary email address, and you’ll see his onmicrosoft.com and mail.onmicrosoft.com addresses listed as email aliases. This user account should also have a sync status of “Synced from on-premises”.
+	‎You should only see one user account, and if you select it, you’ll see the CustomDomain.us address listed as Scotty’s primary email address, and you’ll see his onmicrosoft.com and mail.onmicrosoft.com addresses listed as email aliases. This user account should also have a sync status of “Synced from on-premises”.
 
 60. Leave your Domain Controller VM open, as well as Windows PowerShell, which will be used in the next task.
  
 
 ### Task 7: Use Hard Matching to Troubleshoot Identity Mismatch  
 
-If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Dickson and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain (Exercise 1, Task 4 for Holly, and Exercise 2, Task 1 for Scotty). In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **xtremelabs.us** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
+If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Dickson and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain (Exercise 1, Task 4 for Holly, and Exercise 2, Task 1 for Scotty). In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **CustomDomain.us** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
 
-‎When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync status of **In cloud**, while his on-premises **xtremelabs.us** account had a sync status of **Synced with Active Directory**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching.   
+‎When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync status of **In cloud**, while his on-premises **CustomDomain.us** account had a sync status of **Synced with Active Directory**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching.   
 
 ‎Since the forced synchronization process created that same two user account situation for Holly Dickson as it did for Scotty Heyward, in this task you will use hard matching to fix the forked identity mismatch that occurred for Holly.
 

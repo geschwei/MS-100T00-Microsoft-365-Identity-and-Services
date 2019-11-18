@@ -116,7 +116,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 ### Task 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xtremelabs.us, where XXYYZZ is the UPN name associated with your on-premises lab network.
+Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.CustomDomain.us, where XXYYZZ is the UPN name associated with your on-premises lab network.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
@@ -126,7 +126,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to change XXYYZZa to the unique UPN name provided by your lab hosting provider):   <br/>
 
-    ‎**dnscmd /zoneadd XXYYZZa.xtremelabs.us /DsPrimary** 
+    ‎**dnscmd /zoneadd XXYYZZa.CustomDomain.us /DsPrimary** 
 
 5. Select the **Internet Explorer** icon on the taskbar at the bottom of the page and select the **Microsoft 365 admin center** tab that displays the **Organization Profile** page from the prior task. 
 
@@ -134,7 +134,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 7. Select +**Add domain** to start the domain setup wizard. 
 
-8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xtremelabs.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider), and then select **Next**. 
+8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider), and then select **Next**. 
 
 9. In the **Verify domain** page, you must select a verification method to prove you own the domain. While the recommended option is **Verification email**, for the purposes of your lab environment you want to instead use a **TXT** record. Therefore, scroll down and select the **Add a TXT record instead** option and select **Next**. 
 
@@ -146,7 +146,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 12. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
 
-13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then right-click on the DNS zone called **XXYYZZa.xtremelabs.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider). 
+13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then right-click on the DNS zone called **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider). 
 
 14. In the menu that appears, select **Other New Records**. 
 
@@ -176,9 +176,9 @@ Not every company has just one domain; in fact, many companies have more than on
 
 25. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-26. In **DNS Manager**, under **Forward Lookup Zones**, the **xxyyzza.xtremelabs.us** domain should be selected from when you earlier left off. If not, select this zone now. You should now see the **TXT** record that you just created. You must now create a Host record (A) and a Mail Exchanger (MX) record for this domain in the following steps.
+26. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.CustomDomain.us** domain should be selected from when you earlier left off. If not, select this zone now. You should now see the **TXT** record that you just created. You must now create a Host record (A) and a Mail Exchanger (MX) record for this domain in the following steps.
 
-27. Under **Forward Lookup Zones**, right-click the **xxyyzza.xtremelabs.us** domain and select **Other New Records**.
+27. Under **Forward Lookup Zones**, right-click the **XXYYZZa.CustomDomain.us** domain and select **Other New Records**.
 
 28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
 
@@ -192,7 +192,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 33. In the **Browse** window, select the **Forward Lookup zones** folder and then select **OK**.
 
-34. In the **Browse** window, select your domain of **XXYYZZa.xtremelabs.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider) and then select **OK.**
+34. In the **Browse** window, select your domain of **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider) and then select **OK.**
 
 35. In the **Browse** window, select the IP address of this domain and then select **OK.** 
 
@@ -206,11 +206,11 @@ Not every company has just one domain; in fact, many companies have more than on
 
 40. Remain logged into the LON-DC1 VM with the Microsoft 365 admin center tab left open for the next task.
 
-**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to change xxyyzza to your unique UPN name and n.n.n.n to your unique IP address):
+**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to change XXYYZZa to your unique UPN name and n.n.n.n to your unique IP address):
 
-‎**dnscmd /recordadd xxyyzza.xtremelabs.us '@' A n.n.n.n**   
+‎**dnscmd /recordadd XXYYZZa.CustomDomain.us '@' A n.n.n.n**   
 	
-**dnscmd /recordadd xxyyzza.xtremelabs.us '@' MX 10 xxyyzza.xtremelabs.us**  
+**dnscmd /recordadd XXYYZZa.CustomDomain.us '@' MX 10 XXYYZZa.CustomDomain.us**  
 
 
 ### Task 4 - Create Office 365 User Accounts 
@@ -237,7 +237,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	- Username: When you tab into this field, **Holly** will appear; leave this as the username<br/>
 	
-		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xtremelabs.us** on-premises domain; however, you must select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
+		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.CustomDomain.us** on-premises domain; however, you must select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
 	
 		After configuring this field, Holly’s username should appear as:<br/>
 
@@ -285,7 +285,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
     - **Laura Atkins** with username **Laura** 
     
-    **IMPORTANT:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the custom **XXYYZZa.xtremelabs.us** on-premises domain; however, since the purpose of this task is to create Microsoft 365 user accounts, you must select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
+    **IMPORTANT:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the custom **XXYYZZa.CustomDomain.us** on-premises domain; however, since the purpose of this task is to create Microsoft 365 user accounts, you must select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
 ‎
 14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
@@ -304,9 +304,9 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 	- Group email address: When you tab into this field, **insidesales** will appear; leave this as the group email address <br/>
 	
-		**IMPORTANT:** To the right of the **Group email address** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xtremelabs.us** on-premises domain, and if you select the drop-down arrow, no other domains appear (this is different from adding users). So the value in this field can be left as is.   <br/>
+		**IMPORTANT:** To the right of the **Group email address** field is the domain field. It’s already prefilled with the custom **XXYYZZa.CustomDomain.us** on-premises domain, and if you select the drop-down arrow, no other domains appear (this is different from adding users). So the value in this field can be left as is.   <br/>
 		
-		After configuring this field, the Inside Sales group email address should appear as: **insidesales@XXYYZZa.xtremelabs.us**
+		After configuring this field, the Inside Sales group email address should appear as: **insidesales@XXYYZZa.CustomDomain.us**
 
 	- Description: **Collaboration group for the Inside Sales team**
 

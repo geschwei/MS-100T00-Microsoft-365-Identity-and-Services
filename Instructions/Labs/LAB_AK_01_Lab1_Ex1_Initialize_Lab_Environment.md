@@ -1,4 +1,4 @@
-# Module 1 - Lab 1 - Exercise 1 - Set Up Your Microsoft 365 Tenant 
+# Module 1 - Lab 1 - Exercise 1 - Initialize your Lab Environment 
 
 In the following lab exercise you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. Adatum runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
 

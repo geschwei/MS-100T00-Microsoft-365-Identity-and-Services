@@ -1,6 +1,6 @@
 # Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
 
-In the following lab exercise you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. In this lab, you will add several users and groups that will be used throughout the remainder to the labs in this course. 
+In the following lab exercise you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. In this lab, you will add several users and groups that will be used throughout the remainder to the labs in this course. You will also install the Windows PowerShell module, which enables you to access Azure Active Directory through PowerShell. You will then use PowerShell to perform several group management tasks in Microsoft 365.
 
 
 ### Task 1 - Create Office 365 User Accounts 

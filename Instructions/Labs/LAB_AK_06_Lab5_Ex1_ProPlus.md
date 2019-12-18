@@ -1,4 +1,4 @@
-# Module 10 - Lab 4 - Exercise 1 - Manage an Office 365 ProPlus Installation
+# Module 6 - Lab 5 - Exercise 1 - Install Office 365 ProPlus
 
 You are the Enterprise Administrator for Adatum Corporation, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. You will also deploy and configure Office Telemetry components.
 

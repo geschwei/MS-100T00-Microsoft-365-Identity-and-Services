@@ -1,4 +1,4 @@
-# Module 7 - Lab 3 - Exercise 2 - Review Key Features of SharePoint Online
+# Module 4 - Lab 4 - Exercise 2 - Review Key Features of SharePoint Online
 
 In this exercise you will review some of the basic administrator functions in SharePoint Online.
 

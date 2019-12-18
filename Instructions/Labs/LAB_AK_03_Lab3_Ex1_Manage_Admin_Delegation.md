@@ -1,4 +1,4 @@
-# Module 5 - Lab 2 - Exercise 1 - Manage Administration Delegation
+# Module 3 - Lab 3 - Exercise 1 - Manage Administration Delegation
 
 You are the Enterprise Administrator for Adatum Corporation, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
 

@@ -66,7 +66,7 @@ In this task, you will run a script that breaks various Adatum user accounts. As
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix tool to fix the accounts that were broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD 
+In this task you will download and use the IdFix tool to fix the accounts that were broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. Switch to the Client 1 VM (LON-CL1) and log in as **adatum\administrator**. The desktop will display the login screen for Adam Hobbs, who was the last user to previously user the Client 1 VM. On the Desktop, select **Other user**, and then enter **adatum\administrator** as the **User name** and **Pa55w.rd** as the **Password.**
 

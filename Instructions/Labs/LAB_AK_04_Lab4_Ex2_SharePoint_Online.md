@@ -38,7 +38,7 @@ A team site includes a group of related web pages, a default document library fo
 
 7. Select **Next**.
 
-8. In the **Human Resources private group** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Dickson**.
+8. In the **Human Resources private group** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
 
 9. You need to add a second owner to this group. In the **Add additional owners** field, enter **Laura**. As you enter Laura, a window appears listing users whose first name starts with Laura. Select **Laura Atkins**.
 
@@ -111,7 +111,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 	- About me: **This group is used for members of the IT staff**
 
-	- Group owner: If Holly Dickson appears as the owner, select the x to the right of her name to remove her, and then enter **MOD.** As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator.**  
+	- Group owner: If Holly Spencer appears as the owner, select the x to the right of her name to remove her, and then enter **MOD.** As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator.**  
 	
 		‎**Best Practice:** When you create groups make sure this is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
 
@@ -127,7 +127,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- Auto-accept requests: **No**
 
-		- Send membership requests to the following e-mail address: If Holly Dickson’s email appears as the owner, select the x to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+		- Send membership requests to the following e-mail address: If Holly Spencer’s email appears as the owner, select the x to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
 	- Give group permission to this site:
 
@@ -135,7 +135,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 15. Select **Create**. 
 
-16. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The users displayed in the list are the members of this group. Since Holly Dickson created the group, she is listed as the sole member.
+16. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The users displayed in the list are the members of this group. Since Holly Spencer created the group, she is listed as the sole member.
 
 17. In the menu bar that appears above the user list, select **New**, and then in the drop-down menu, select **Add users to this group.**
 

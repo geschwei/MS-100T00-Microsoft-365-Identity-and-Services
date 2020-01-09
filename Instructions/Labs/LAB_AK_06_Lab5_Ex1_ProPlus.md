@@ -1,6 +1,6 @@
 # Module 6 - Lab 5 - Exercise 1 - Install Office 365 ProPlus
 
-You are the Enterprise Administrator for Adatum Corporation, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. You will also deploy and configure Office Telemetry components.
+You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. You will also deploy and configure Office Telemetry components.
 
 In this exercise you will learn how to download and manage the Office 365 ProPlus suite for an individual user. 
 
@@ -50,7 +50,7 @@ In this task, you will complete the first step by reviewing several user account
 
 17. You’re now going to test whether users can be prohibited from downloading Office 365 ProPlus if an admin such as Holly turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.<br/>
 	
-	‎You need to switch back the Domain Controller VM, so select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Dickson, Adatum’s Global Administrator.
+	‎You need to switch back the Domain Controller VM, so select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Spencer, Adatum’s Enterprise Administrator.
 
 18. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, select **Show all** in the left-hand navigation pane, select **Settings,** and then select **Services &amp; add-ins**. 
 
@@ -102,7 +102,7 @@ In this task, you will complete the first step by reviewing several user account
 
 36. At this point you want Holly to turn the global Office download setting back On so that you can see if Adam can download Office 365 ProPlus. To do this, you must switch back the Domain Controller VM.<br/>
 	
-	‎To do so, select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Dickson.
+	‎To do so, select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Spencer.
 
 37. The **Microsoft 365 admin center** should still be displaying the **Services and add-ins** window. Select **Office software download settings.**
 
@@ -122,7 +122,7 @@ In this task, you will complete the first step by reviewing several user account
 	
 	‎**Important:** You have just verified that a user with an Office license is able to download Office 365 ProPlus if the global Office download setting is turned On.
 
-44. Leave this page open and continue to the next task to perform the user-driven installation for Holly Dickson.
+44. Leave this page open and continue to the next task to perform the user-driven installation for Holly Spencer.
 
 
 ### Task 2 – Perform a User-Driven Installation of Office 365 ProPlus 

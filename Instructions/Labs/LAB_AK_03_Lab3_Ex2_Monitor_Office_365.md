@@ -6,7 +6,7 @@ In this exercise you will be introduced to some troubleshooting tools in Office 
 
 This task guides you though a variety of tools used to troubleshoot different mail conflict scenarios. To prepare yourself for mail flow problems that may occur within Adatum’s Exchange environment, you have decided to create a test scenario to analyze some of the troubleshooting options available to you. 
 
-1. Switch to your Domain Controller (LON-DC1) VM. You should still be logged into Microsoft 365 as Holly Dickson.
+1. Switch to your Domain Controller (LON-DC1) VM. You should still be logged into Microsoft 365 as Holly Spencer.
 
 2. In **Internet Explorer**, select the **Office 365 home page** tab, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@M365xZZZZZZ.onmicrosoft.com** and **Pa55w.rd**).
 
@@ -80,7 +80,7 @@ This task guides you though a variety of tools used to troubleshoot different ma
 
 31. Scroll to the bottom of the page. To the right of the **Sender** field, select **add sender**. 
 
-32. In the **Select Members** window, in the list of users, select **Holly Dickson**, select **add-&gt;,** and then select **OK**.<br/>
+32. In the **Select Members** window, in the list of users, select **Holly Spencer**, select **add-&gt;,** and then select **OK**.<br/>
 
 	**Note:** If no names appear in the list when the window first opens, select the **Refresh** icon above the **Display name** field. 
 

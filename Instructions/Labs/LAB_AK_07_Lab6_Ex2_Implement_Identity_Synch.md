@@ -18,7 +18,7 @@ To test the manual, forced synchronization process, you will set up a user scena
 
 You will create this identity mismatch situation by first creating a user account for Scotty Heyward in Microsoft 365 that references the onmicrosoft.com domain. You will then create an on-premises user account and mailbox for Scotty in Adatum’s local Exchange Server that references the CustomDomain.us domain. 
 
-By purposely creating this mismatch scenario, you will then learn how to use Soft Matching to troubleshoot the problem in the next exercise.
+By purposely creating this mismatch scenario, you will learn how to use Soft Matching to troubleshoot the problem in the next exercise.
   
 ‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.CustomDomain.us.**
 
@@ -254,11 +254,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using Active Directory users and groups (i.e. users and computers) or the Exchange admin center. 
 
-14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Dickson as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. Close the **Manufacturing** group window.
+14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. Close the **Manufacturing** group window.
 
 15. In the **Groups** list, select the **Purchasing** group. 
 
-16. In the **Purchasing** group window, note that it’s a public group that contains only one member. Select the **Members** tab. Recall for the Manufacturing security group, no owner was assigned. For this distribution group, note that Holly Dickson was automatically assigned as the group owner, as well as being assigned as a group member. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud.  
+16. In the **Purchasing** group window, note that it’s a public group that contains only one member. Select the **Members** tab. Recall for the Manufacturing security group, no owner was assigned. For this distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud.  
 
 17. Now let’s examine these groups using Windows PowerShell. If **Windows PowerShell** is already open, then proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
@@ -292,7 +292,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎**Get-MsolAccountSku**  
 
-25. Repeat steps 22-24 for the **Purchasing** distribution group. Note that it only lists Holly Dickson as the lone member of the group. This is because distribution group members are not synchronized in the cloud as part of the group; only the group owner is listed as a member of the group.
+25. Repeat steps 22-24 for the **Purchasing** distribution group. Note that it only lists Holly Spencer as the lone member of the group. This is because distribution group members are not synchronized in the cloud as part of the group; only the group owner is listed as a member of the group.
 
 26. Repeat steps 22-24 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
 
@@ -349,9 +349,9 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 12. Before we look at the forked situation with Scotty Heyward’s email accounts, let’s begin by looking at a normal situation in which a user with two accounts (cloud and on-premises) that have the same UPN end up with one cloud user account that has multiple SMTP addresses in the email address property chain. <br/>
 
-	‎In the **recipients** page, in the list of mailboxes, select **Holly Dickson** and then select the **pencil (edit)** icon on the menu bar.
+	‎In the **recipients** page, in the list of mailboxes, select **Holly Spencer** and then select the **pencil (edit)** icon on the menu bar.
 
-13. In the **Holly Dickson** account window, select **email address** in the left-hand navigation pane.
+13. In the **Holly Spencer** account window, select **email address** in the left-hand navigation pane.
 
 14. In the **email address** list for Holly, locate the two SMTP addresses:
 
@@ -371,7 +371,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	- Scotty has a primary SMTP address (bold and upper-case **SMTP**) but not an additional smtp email alias. 
 
-	- Scotty’s primary SMTP address is his **onmicrosoft.com** cloud address. This is different from the normal account for Holly Dickson in which her primary SMTP address was her on-premises **CustomDomain.us** address. Holly also has an email alias that references her **onmicrosoft.com** address.
+	- Scotty’s primary SMTP address is his **onmicrosoft.com** cloud address. This is different from the normal account for Holly Spencer in which her primary SMTP address was her on-premises **CustomDomain.us** address. Holly also has an email alias that references her **onmicrosoft.com** address.
 
 18. To correct this identity mismatch situation, you need to:
 
@@ -530,11 +530,11 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 ### Task 7: Use Hard Matching to Troubleshoot Identity Mismatch  
 
-If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Dickson and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain (Exercise 1, Task 4 for Holly, and Exercise 2, Task 1 for Scotty). In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **CustomDomain.us** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
+If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Spencer and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain (Exercise 1, Task 4 for Holly, and Exercise 2, Task 1 for Scotty). In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **CustomDomain.us** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
 
 ‎When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync status of **In cloud**, while his on-premises **CustomDomain.us** account had a sync status of **Synced with Active Directory**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching.   
 
-‎Since the forced synchronization process created that same two user account situation for Holly Dickson as it did for Scotty Heyward, in this task you will use hard matching to fix the forked identity mismatch that occurred for Holly.
+‎Since the forced synchronization process created that same two user account situation for Holly Spencer as it did for Scotty Heyward, in this task you will use hard matching to fix the forked identity mismatch that occurred for Holly.
 
 ‎Hard matching is required to resolve a user or group that has not only been forked, but its Immutable ID has been altered, since soft matching can’t fix this condition. With hard matching, you must replace the existing cloud **Immutable ID** with the on-premises **objectGuid** and then force a sync.
 
@@ -542,9 +542,9 @@ If you’ll recall, you earlier created identity mismatch situations where the e
 
 1. On your **Domain Controller**, navigate to your **Windows PowerShell** session.
 
-2. You must first retrieve the **objectGuid** for Holly Dickson’s on-premises user account. The ObjectGuid is the source address for the user account and without it, you won’t be able to fix the mismatch between the ImmutableID of her cloud account and the objectGUID of her on-premises account.  <br/>
+2. You must first retrieve the **objectGuid** for Holly Spencer’s on-premises user account. The ObjectGuid is the source address for the user account and without it, you won’t be able to fix the mismatch between the ImmutableID of her cloud account and the objectGUID of her on-premises account.  <br/>
 
-	‎In Windows PowerShell, run the following command to retrieve the **ObjectGuid** for Holly Dickson’s on-premises user account:  <br/>
+	‎In Windows PowerShell, run the following command to retrieve the **ObjectGuid** for Holly Spencer’s on-premises user account:  <br/>
 	
 	‎**Get-ADUser -Identity “holly”|Get-ADObject -properties “objectGuid”**  
 

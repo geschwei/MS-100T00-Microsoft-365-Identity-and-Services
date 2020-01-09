@@ -1,10 +1,10 @@
 # Module 1 - Lab 1 - Exercise 1 - Initialize your Lab Environment 
 
-In the following lab exercise you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. Adatum runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
+In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. Adatum runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
 
 You have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this lab, you will set up a Microsoft 365 trial tenant and add a custom on-premises accepted domain. 
 
-In this lab, the trial tenant has already been selected and a default tenant admin account has already been created. In your role as Holly Dickson, Adatum’s Enterprise Administrator, you will be responsible for the remainder of the initial setup. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. Once you create your Microsoft 365 account for Holly, you will log into Microsoft 365 as Holly from that point forward.
+In this lab, the trial tenant has already been selected and a default tenant admin account has already been created. In your role as Holly Spencer, Adatum’s Enterprise Administrator, you will be responsible for the remainder of the initial setup. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. Once you create your Microsoft 365 account for Holly, you will log into Microsoft 365 as Holly from that point forward.
 
 
 ### Task 1 - Obtain Your Office 365 Credentials
@@ -19,7 +19,7 @@ Once you launch the lab, a free trial tenant will be automatically created for y
 
 ### Task 2- Set up the Organization Profile
 
-In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account (you will do this in Task 3), Holly will initially sign into Microsoft 365 as the default Microsoft 365 MOD Administrator account using the Tenant email address and password that was assigned by your lab hosting provider.
+In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account (you will do this in Task 3), Holly will initially sign into Microsoft 365 as the default Microsoft 365 MOD Administrator account using the Tenant email address and password that was assigned by your lab hosting provider.
 
 1. When the Virtual Machine opens, it opens with the Client PC VM (LON-CL1). You need to switch to the Domain Controller VM; therefore, in the **Virtual Machine** field at the top of the page, select the drop-down arrow an select the Domain Controller VM (LON-DC1).
 

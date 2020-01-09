@@ -1,6 +1,6 @@
 # Module 7 - Lab 6 - Exercise 1 - Prepare for Identity Synchronization  
 
-As in the previous lab exercises you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
+As in the previous lab exercises you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
 During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
 
@@ -159,15 +159,15 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 12. Enter the following URL in the address bar to open the **Microsoft Office Home** page: **https://portal.office.com/** 
 
-13. If you’re signed in as Holly Dickson (the circle in the upper-right corner displays **HD**), then proceed to the next step; otherwise, sign in as **Holly@M365xZZZZZZ.onmicrosoft.com** with the password **Pa55w.rd** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). 
+13. If you’re signed in as Holly Spencer (the circle in the upper-right corner displays **HS**), then proceed to the next step; otherwise, sign in as **Holly@M365xZZZZZZ.onmicrosoft.com** with the password **Pa55w.rd** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). 
 
 14. In the **Microsoft Office Home** page, select **Admin**. 
 
 15. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then select **Active** **Users**.  
 
-16. In the **Active users** list, select **Holly Dickson**. 
+16. In the **Active users** list, select **Holly Spencer**. 
 
-17. In Holly Dickson’s account page, under the **Username/E-mail** section, select **Manage username**.
+17. In Holly Spencer’s account page, under the **Username/E-mail** section, select **Manage username**.
 
 18. In the **Manage username** window, select the drop-down arrow in the **domain** field and then select the **XXYYZZa.CustomDomain.us** domain (where XXYYZZ is your unique UPN Name provided by your lab hosting provider).   <br/>
 

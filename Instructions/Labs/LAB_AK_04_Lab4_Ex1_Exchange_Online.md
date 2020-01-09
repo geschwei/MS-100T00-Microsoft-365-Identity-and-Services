@@ -1,6 +1,6 @@
 # Module 4 - Lab 4 - Exercise 1 - Review Key Features of Exchange Online
 
-Holly Dickson is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
+Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
 
 When Holly created her Microsoft 365 user account back in Lab 1, she assigned herself the Microsoft 365 Global Administrator role. Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Online Administrator role, Holly can perform all the tasks in Exchange.
 
@@ -73,7 +73,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
-	- Owners: Since you are logged into the EAC using Holly Dickson, her account is displayed as the default Owner. However, Holly wants the MOD Administrator to be the owner of the group, so select the **plus (+)** sign, and in the **Select Owner** window, select **MOD Administrator**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants the MOD Administrator to be the owner of the group, so select the **plus (+)** sign, and in the **Select Owner** window, select **MOD Administrator**, select the **add-&gt;** button, and then select **OK**.
 
 	- Members: select the plus (+) sign, and in the **Select Members** window, hold down the **Ctrl** key and select **Alan Yoo, Libby Hayward,** and **Adam Hobbs.** This will select all three users at once; then select the **add-&gt;** button and select **OK.** 
 
@@ -194,7 +194,7 @@ A room mailbox is a resource mailbox that's assigned to a physical location, suc
 
 	**Note:** This option allows a user to filter booking requests.
 
-12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window hold down the **Ctrl** key and select Holly Dickson and the MOD Administrator. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
+12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window hold down the **Ctrl** key and select Holly Spencer and the MOD Administrator. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
 
 13. Select **Save**.
 

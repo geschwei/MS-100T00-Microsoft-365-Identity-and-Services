@@ -155,7 +155,7 @@ With Microsoft 365, if you ever run into a situation where you need assistance w
 
 	‎**IMPORTANT:** Do NOT complete this form in your lab environment. If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative.  
 	
-7. Since this is the end of Lab 2, close Internet Explorer and any other applications that you may have open (such as PowerShell). Leave your LON-DC1 VM open for the next lab.  
+7. Since this is the end of Lab 3, close Internet Explorer and any other applications that you may have open (such as PowerShell). Leave your LON-DC1 VM open for the next lab.  
 ‎  
 ‎
 

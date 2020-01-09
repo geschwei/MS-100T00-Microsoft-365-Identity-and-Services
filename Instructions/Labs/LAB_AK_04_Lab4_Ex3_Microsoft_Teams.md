@@ -4,7 +4,9 @@ In this exercise you will learn how to manage and configure teams through the Mi
 
 ### Task 1 – Manage Meeting Policies
 
-Meeting policies control the features that are available to meeting participants for meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are assigned this meeting policy by default. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign it to one or more users who will have the settings applied to them. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to customize the Global meeting policy.
+Meeting policies control the features that are available to meeting participants for meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are assigned this meeting policy by default. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign it to one or more users who will have the settings applied to them. 
+
+As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
 
 1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, under **Admin Centers**, select **Teams.** This will open the Microsoft Teams admin center.
 
@@ -27,7 +29,7 @@ Meeting policies control the features that are available to meeting participants
 
 ### Task 2 – Manage Meeting Settings
 
-As Holly Dickson, Adatum’s Microsoft 365 Global Admin, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
+As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Meetings** and then select **Meeting settings.**
 
@@ -54,7 +56,9 @@ As Holly Dickson, Adatum’s Microsoft 365 Global Admin, you use the Teams meeti
 
 ### Task 3 – Manage Messaging Policies
 
-Messaging policies are used to control which chat and channel messaging features are available to users in Microsoft Teams. You can use the Global default policy that is created automatically or create one or more custom messaging policies for people in your organization. After you create a policy, you can assign it to a user or group of users in your organization. As part of your Microsoft Teams pilot project for Adatum, you want to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. 
+Messaging policies are used to control which chat and channel messaging features are available to users in Microsoft Teams. You can use the Global default policy that is created automatically or create one or more custom messaging policies for people in your organization. After you create a policy, you can assign it to a user or group of users in your organization. 
+
+As part of your Microsoft Teams pilot project for Adatum, you want to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. 
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Messaging policies.**
 
@@ -101,7 +105,9 @@ Messaging policies are used to control which chat and channel messaging features
 
 ### Task 4 – Create a Resource Account
 
-A resource account, which is also known as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms. In Microsoft Teams, each Phone System call queue or auto attendant is required to have an associated resource account. As part of Adatum’s pilot project for implementing Microsoft Teams, you have been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
+A resource account, which is also known as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms. In Microsoft Teams, each Phone System call queue or auto attendant is required to have an associated resource account. 
+
+As part of Adatum’s pilot project for implementing Microsoft Teams, you have been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
 
 Creating a calling queue is a two-step process. In this task, you will first create a resource account that represents the call queue. In the next task, you will create the call queue and associate it with this resource account. 
 
@@ -194,7 +200,9 @@ As part of your Microsoft Teams pilot project, you will create a custom calling 
 
 ### Task 7 – Manage External Access
 
-With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls. As part of your Microsoft Teams pilot project, you will enable the users from one external domain to participate in chats and calls, and you will block users from another domain from doing the same. 
+With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls. 
+
+As part of your Microsoft Teams pilot project, you will enable the users from one external domain to participate in chats and calls, and you will block users from another domain from doing the same. 
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Org-wide settings** and then select **External access.**
 
@@ -312,7 +320,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 3. Select **Save.**
 
-4. Since this is the end of Lab 3, close Internet Explorer.  
+4. Since this is the end of Lab 4, close Internet Explorer.  
 
 
 # End of Lab 4

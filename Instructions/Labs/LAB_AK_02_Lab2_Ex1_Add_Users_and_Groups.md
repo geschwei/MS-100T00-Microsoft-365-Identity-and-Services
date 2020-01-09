@@ -1,11 +1,11 @@
 # Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
 
-In the following lab exercise you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. In this lab, you will add several users and groups that will be used throughout the remainder to the labs in this course. You will also install the Windows PowerShell module, which enables you to access Azure Active Directory through PowerShell. You will then use PowerShell to perform several group management tasks in Microsoft 365.
+In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will add several users and groups that will be used throughout the remainder to the labs in this course. You will also install the Windows PowerShell module, which enables you to access Azure Active Directory through PowerShell. You will then use PowerShell to perform several group management tasks in Microsoft 365.
 
 
 ### Task 1 - Create Office 365 User Accounts 
 
-Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, Holly initially signed into Microsoft 365 as the default Microsoft 365 MOD Administrator account. In this task, she will create a Microsoft 365 user account for herself, and she will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365.
+Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, Holly initially signed into Microsoft 365 as the default Microsoft 365 MOD Administrator account. In this task, she will create a Microsoft 365 user account for herself, and she will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365.
 
 ‎You will then create several additional user accounts in the Microsoft 365 admin center, each of which you will later add to new security groups that you’ll also create. While Enterprise Admins typically do not add user accounts, this is a one-time task that you need to perform to prepare Adatum’s test environment for future lab exercises in this course.
 
@@ -13,7 +13,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 1. On the LON-DC1 VM, the **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**. 
 
-2. In the **Active users** list, you will see that the only user is the default **MOD Administrator** account. Since you’re taking on the role of Holly Dickson in this lab scenario, you will create a user account for yourself, and you will assign yourself the Microsoft 365 role of Global Administrator. You will also create several other user accounts that will be used throughout the remaining labs in this course.
+2. In the **Active users** list, you will see that the only user is the default **MOD Administrator** account. Since you’re taking on the role of Holly Spencer in this lab scenario, you will create a user account for yourself, and you will assign yourself the Microsoft 365 role of Global Administrator. You will also create several other user accounts that will be used throughout the remaining labs in this course.
 
 3. In the **Active Users** window, select **Add a user**. 
 
@@ -21,9 +21,9 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	- First name: **Holly**
 
-	- Last name: **Dickson** 
+	- Last name: **Spencer** 
 
-	- Display name: When you tab into this field, **Holly Dickson** will appear.
+	- Display name: When you tab into this field, **Holly Spencer** will appear.
 
 	- Username: When you tab into this field, **Holly** will appear; leave this as the username<br/>
 	
@@ -57,7 +57,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 11. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
 
-12. On the **Holly Dickson has been added** page, select **Close.** 
+12. On the **Holly Spencer has been added** page, select **Close.** 
 
 13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license.** <br/>
 

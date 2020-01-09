@@ -16,7 +16,7 @@ To test the manual, forced synchronization process, you will set up a user scena
 	
 	‎In a normal situation in which the user’s on-premises and cloud accounts have the same UPN and domain, the synchronization process will create one user account in the Microsoft 365 Active User list that has multiple SMTP addresses in the email address property chain. 
 
-You will create this identity mismatch situation by first creating a user account for Scotty Heyward in Microsoft 365 that references the onmicrosoft.com domain. You will then create an on-premises user account and mailbox for Scotty in Adatum’s local Exchange Server that references the CustomDomain.us domain. 
+You will create this identity mismatch situation by first creating a user account for Scotty Heyward in Microsoft 365 that references the onmicrosoft.com domain. Then in Adatum’s on-premises Exchange Server, you will create an on-premises user account and mailbox for Scotty that references the CustomDomain.us domain. 
 
 By purposely creating this mismatch scenario, you will learn how to use Soft Matching to troubleshoot the problem in the next exercise.
   
@@ -62,7 +62,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 9. On the **Scotty Heyward has been added** page, select **Close.** 
 
-10. You will now create an on-premises mailbox and user account for Scotty on Adatum’s local Exchange Server that references the primary SMTP domain of **CustomDomain.us**.  <br/>
+10. You will now create an on-premises mailbox and user account for Scotty in Adatum’s on-premises Exchange Server that references the primary SMTP domain of **CustomDomain.us**.  <br/>
 
 	‎In the **Virtual machine** box at the top of the VM, switch to the **Exchange Server VM** (LON-EX1).
 
@@ -70,15 +70,15 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	‎**Note:** If you receive a notification that you need some updates, simply ignore it for lab purposes.
 
-12. Select the **Start** icon on the lower-left corner of the taskbar. In the **Start** menu, in the list of programs, select **Microsoft Exchange Server 2019** to expand the program group, and then select **Exchange Administrative Center**.
+12. Select the **Start** icon on the lower-left corner of the taskbar. In the **Start** menu, in the list of programs, select **Microsoft Exchange Server 2019** to expand the program group, and then select **Exchange Administrative Center** (this is the on-premises Exchange Admin Center).
 
 13. This opens **Internet Explorer**. In the **Set up Internet Explorer 11** dialog box that appears (the first time you run Internet Explorer), the **Use recommended security, privacy, and compatibility settings** option is selected by default. Accept this setting by selecting **OK**. 
 
 14. In the **This site is not secure** window that appears, select **More information** and then select **Go on to the webpage (not recommended).**
 
-15. In the **Exchange Admin Center** sign-in screen, **adatum\administrator** should be prefilled in the **Domain\user name** field; if it isn’t, you need to enter it. Enter **Pa55w.rd** in the **Password** field, and then select **sign in.**
+15. In the on-premises **Exchange Admin Center** sign-in screen, **adatum\administrator** should be prefilled in the **Domain\user name** field; if it isn’t, you need to enter it. Enter **Pa55w.rd** in the **Password** field, and then select **sign in.**
 
-16. In the **Exchange admin center**, the **mailboxes** tab in the **recipients** window is displayed by default. Select the **plus (+)** sign on the menu bar to create a new on-premises user account and user mailbox. In the drop-down menu that appears, select **User mailbox**.
+16. In the on-premises **Exchange admin center**, the **mailboxes** tab in the **recipients** window is displayed by default. Select the **plus (+)** sign on the menu bar to create a new on-premises user account and user mailbox. In the drop-down menu that appears, select **User mailbox**.
 
 17. In the **new user mailbox** window, enter the following information:
 
@@ -102,7 +102,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 18. Select **Save**. Scotty Heyward should now appear in the list of mailboxes.
 
-19. Leave the **Exchange admin center** open in Internet Explorer and do not close the Exchange Server VM. 
+19. Leave the on-premises **Exchange admin center** open in Internet Explorer and do not close the Exchange Server VM. 
 
 
 ### Task 2: Create Group Accounts to Test Synchronization  
@@ -252,7 +252,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 12. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
-13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using Active Directory users and groups (i.e. users and computers) or the Exchange admin center. 
+13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. 
 
 14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. Close the **Manufacturing** group window.
 
@@ -339,7 +339,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 7. There’s an email address associated with Adatum’s accepted domain that you must add as an email alias for Scotty’s on-premises and Microsoft 365 accounts. To get this address, in **Internet Explorer**, navigate to the **Microsoft 365 admin center** tab (if you’re not already on it), and then proceed to the next step. If you previously closed the Microsoft 365 admin center, then enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@XXYYZZa.CustomDomain.us** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
 
-8. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**. Scroll down to the **Admin centers** section and select **Exchange** to open the Exchange admin center for Exchange Online.
+8. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**. Scroll down to the **Admin centers** section and select **Exchange** to open the Office 365 Exchange admin center for Exchange Online.
 
 9. In the **Exchange admin center**, in the left-hand navigation pane, select **mail flow**. 
 
@@ -383,7 +383,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 	By making these changes, the email addresses for Scotty’s on-premises and Microsoft 365 accounts should be identical. Then when you do a force sync it will synchronize the on-premises and Microsoft 365 addresses together in Scotty’s one Microsoft 365 account.   <br/>
 	
-	‎You are currently in the Domain Controller VM (LON-DC1) looking at the **Exchange admin center** for Exchange Online. You are in the **email address** tab for Scotty’s Microsoft 365 account. This displays the following two email addresses:
+	‎You are currently in the Domain Controller VM (LON-DC1) looking at the Office 365 **Exchange admin center** for Exchange Online. You are in the **email address** tab for Scotty’s Microsoft 365 account. This displays the following two email addresses:
 
 	- **SIP** type – **Scotty@M365xZZZZZZ.onmicrosoft.com**
 
@@ -393,9 +393,9 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 19. Switch to the **Exchange Server VM** (LON-EX1).
 
-20. In the **Exchange Server VM**, in **Internet Explorer**, it should still be displaying the on-premises **Exchange admin center.** If the Exchange admin center was closed, then select the **Start** button, and in the **Start** menu, select **Microsoft Exchange Server 2019**, and then select **Exchange Administrative Center.**
+20. In the **Exchange Server VM**, in **Internet Explorer**, it should still be displaying the on-premises **Exchange admin center.** If the on-premises Exchange admin center was closed, then select the **Start** button, and in the **Start** menu, select **Microsoft Exchange Server 2019**, and then select **Exchange Administrative Center.**
 
-21. In the **Exchange admin center**, if necessary, select **recipients** in the left-hand navigation pane. The **mailboxes** tab will display by default.
+21. In the on-premises **Exchange admin center**, if necessary, select **recipients** in the left-hand navigation pane. The **mailboxes** tab will display by default.
 
 22. In the **mailboxes** tab, select **Scotty Heyward** and then select the **pencil (edit)** icon.
 
@@ -431,7 +431,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 34. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
 
-35. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Exchange admin center for Exchange Online. <br/>
+35. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Office 365 Exchange admin center for Exchange Online. <br/>
 
 	‎Enter **Scotty@M365xZZZZZZ.mail.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 
@@ -483,7 +483,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 52. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
 
-53. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Exchange admin center for Exchange Online.   <br/>
+53. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Office 365 Exchange admin center for Exchange Online.   <br/>
 
 	‎Enter **Scotty@M365xZZZZZZ.mail.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 

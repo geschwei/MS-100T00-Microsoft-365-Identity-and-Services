@@ -4,7 +4,7 @@ In this exercise, you will configure the Microsoft 365 Telemetry engine to gathe
 
 ### Task 1 – Prepare to Deploy Office Telemetry Components 
 
-Before you can install the Telemetry Processor in the next step, you must first prepare your LON-CL1 VM for the installation. You will create a folder on the C Drive for storing the Telemetry components, and you will add Adam Hobbs as a Local Administrator on the VM. If Adam is not set up as a local admin, then when you run the Microsoft Office Telemetry Processor Setup Wizard in the next step, you will be prompted three different time as to whether you want to allow this app to make changes to your device, and you will have to enter the adatum\administrator account and password each time. By making Adam a local admin, you will not receive this message repeatedly throughout the wizard.
+Before you can install the Telemetry Processor in the next step, you must first prepare your Client 1 VM for the installation. You will create a folder on the C Drive for storing the Telemetry components, and you will add Adam Hobbs as a Local Administrator on the VM. If Adam is not set up as a local admin, then when you run the Microsoft Office Telemetry Processor Setup Wizard in the next step, you will be prompted three different time as to whether you want to allow this app to make changes to your device, and you will have to enter the adatum\administrator account and password each time. By making Adam a local admin, you will not receive this message repeatedly throughout the wizard.
 
 1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as **Adam Hobbs**. You need to log in as the **adatum\administrator** account to make Adam a local admin. <br/>
 
@@ -55,7 +55,7 @@ Before you can install the Telemetry Processor in the next step, you must first 
 
 The Office Telemetry Processor runs on one or more computers and collects inventory, usage, and health data from a shared folder and imports the data to a SQL Server database controlled by your organization (the data is NOT sent to Microsoft). The processor is installed as a Windows service named "Office Telemetry Processor."
 
-In this task, you will continue to be logged into LON-CL1 as Adam Hobbs, and you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
+In this task, you will continue to be logged into the Client 1 VM as Adam Hobbs, and you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
 
 1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as Adam Hobbs. 
 

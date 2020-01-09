@@ -2,15 +2,15 @@
 
 You are the Enterprise Administrator for Adatum Corporation, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
 
-In this lab, you will take on the persona of Holly Dickson, Adatum’s Enterprise Administrator. If you’ll recall, in the prior lab you created Holly’s Microsoft 365 user account and assigned her the Microsoft 365 Global Administrator role. As Holly, you will now begin managing Adatum’s Microsoft 365 tenant.
+In this lab, you will take on the persona of Holly Spencer, Adatum’s Enterprise Administrator. If you’ll recall, in the prior lab you created Holly’s Microsoft 365 user account and assigned her the Microsoft 365 Global Administrator role. As Holly, you will now begin managing Adatum’s Microsoft 365 tenant.
 
 ### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
 
-As Holly Dickson, Adatum’s Enterprise Administrator (and Microsoft 365 Global Admin), you will use the Microsoft 365 Admin Center to assign administrator rights to several users. 
+As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global Admin), you will use the Microsoft 365 Admin Center to assign administrator rights to several users. 
 
 1. If you’re not logged into the Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. After completing Lab 1, you are still signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
+2. After completing Lab 1, you are still signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Spencer, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
 
 	On the Microsoft 365 admin center tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser, and in the **My account** pane, select **Sign out.** <br/>
 	
@@ -28,7 +28,7 @@ As Holly Dickson, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 8. In the **Office 365 home page**, select **Admin** to open the Microsoft 365 admin center.
 
-9. In the **Good morning/afternoon/evening Holly Dickson** window, select **Get started**.
+9. In the **Good morning/afternoon/evening Holly Spencer** window, select **Get started**.
 
 10. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
@@ -46,14 +46,14 @@ As Holly Dickson, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 17. Repeat steps 10 through 15 for **Ada Russell.** Assign Ada to both the **User management administrator** role and the **Helpdesk Administrator** role. 
 
-18. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Dickson.
+18. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform these functions rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
-‎In this task, you will log into PowerShell as Holly Dickson, who is Adatum’s Enterprise Administrator.
+‎In this task, you will log into PowerShell as Holly Spencer, who is Adatum’s Enterprise Administrator.
 
 1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from a previous task in Lab 1. If you closed the PowerShell window, then open it again using the same instruction as before. 
 
@@ -105,7 +105,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 11. Verify that **Laura Atkins** is in the list of users who have the **Company Administrator** role.   <br/>
 
-	‎**Important:** Since Global Administrators are also automatically assigned to the Company Administrator role, notice that Holly Dickson is also in this list even though she wasn’t manually assigned the role. Finally, notice that the system admin (the MOD Administrator) is also assigned to this role by default. 
+	‎**Important:** Since Global Administrators are also automatically assigned to the Company Administrator role, notice that Holly Spencer is also in this list even though she wasn’t manually assigned the role. Finally, notice that the system admin (the MOD Administrator) is also assigned to this role by default. 
 	
 12. You should now run the following two commands to verify which Adatum users have been assigned to the Billing Administrator role.  <br/>
 
@@ -158,7 +158,7 @@ In this task, you will log into the Client 1 (LON-CL1) VM and then log into the 
 
 15. Select **Reset**.
 
-16. You should receive an error message indicating that you cannot reset Libby’s password because she has admin roles. In Libby’s case, she was assigned to the Service Support Admin role. Since only Global Admins can change another admin’s password, you’ll need to ask Holly Dickson to make this change. Select **Close**. 
+16. You should receive an error message indicating that you cannot reset Libby’s password because she has admin roles. In Libby’s case, she was assigned to the Service Support Admin role. Since only Global Admins can change another admin’s password, you’ll need to ask Holly Spencer to make this change. Select **Close**. 
 
 17. In the **Active users** list, select the **key icon (Reset a password)** to the right of **Alan Yoo’s** name. 
 

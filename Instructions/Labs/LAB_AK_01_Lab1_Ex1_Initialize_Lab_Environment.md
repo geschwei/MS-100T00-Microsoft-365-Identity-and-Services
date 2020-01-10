@@ -127,7 +127,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 7. Select +**Add domain** to start the domain setup wizard. 
 
-8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx with your lab hosting provider's domain name), and then select **Next**. 
+8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name), and then select **Next**. 
 
 9. In the **Verify domain** page, you must select a verification method to prove you own the domain. While the recommended option is **Verification email**, for the purposes of your lab environment you want to instead use a **TXT** record. Therefore, scroll down and select the **Add a TXT record instead** option and select **Next**. 
 

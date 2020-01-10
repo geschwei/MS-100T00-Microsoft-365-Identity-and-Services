@@ -43,29 +43,21 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 11. If a **Set your time zone** window appears, select **set the time zone for your calendar**. In the **Outlook** window that opens, under **Time zone,** select your time zone and select **Save**, then close your browser window and re-open the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com**.
 
-12. In the Office 365 portal, select the **Install Office** button, and then select **Office 365 apps.**
+12. If a notification bar appears at the bottom of the screen for enabling the **Skype for Business Browser Helper add-on**, select **Don’t enable**. 
 
-13. In the notification bar that appears at the bottom of the page, select the option to **Run** the setup program. Installation of the Office 365 apps will take around five minutes to complete, at which point, select **Close** in the dialog box once Office is installed.   <br/>
+13. If a **Good morning/afternoon/evening MOD Administrator** window appears, select **Get started**.
 
-    **Note:** If you don’t want to wait for the Office 365 apps to complete, open a new tab in your browser and continue with the next steps while the installation continues.
+14. In the **Microsoft Office Home** page, select the **Admin** app. This opens the **Microsoft 365 admin center.**
 
-14. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+15. In the left-hand navigation pane, select the **Show All** ellipsis … icon to display all the navigation menu options.
 
-15. If a notification bar appears at the bottom of the screen for enabling the **Skype for Business Browser Helper add-on**, select **Don’t enable**. 
+16. In the left-hand navigation pane, select **Settings** and then select **Organization profile**.
 
-16. If a **Good morning/afternoon/evening MOD Administrator** window appears, select **Get started**.
-
-17. In the **Microsoft Office Home** page, select the **Admin** app. This opens the **Microsoft 365 admin center.**
-
-18. In the left-hand navigation pane, select the **Show All** ellipsis … icon to display all the navigation menu options.
-
-19. In the left-hand navigation pane, select **Settings** and then select **Organization profile**.
-
-20. In the **Organization Profile** window, it displays Contoso as the organization name. To the right of this, select the **pencil** (**Edit**) icon to change this information.   <br/>
+17. In the **Organization Profile** window, it displays Contoso as the organization name. To the right of this, select the **pencil** (**Edit**) icon to change this information.   <br/>
 
     ‎**Note:** The Contoso organization name was explained in the Introduction section at the start of this lab. In the following steps, you will change it to Adatum Corporation. 
 
-21. In the **Organization information** window, enter the following information:
+18. In the **Organization information** window, enter the following information:
 
 	- Name: **Adatum Corporation**
 
@@ -83,35 +75,35 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 	- Preferred language: **select your preferred language**
 
-22. Select **Save**.
+19. Select **Save**.
 
-23. On the **Organization information** window, select **Close.**
+20. On the **Organization information** window, select **Close.**
 
-24. To the right of **Release preferences**, select the **pencil** (**Edit**) icon.
+21. To the right of **Release preferences**, select the **pencil** (**Edit**) icon.
 
-25. In the **Release preferences** window, select **Targeted release for selected users** and then select **Next.**  <br/>
+22. In the **Release preferences** window, select **Targeted release for selected users** and then select **Next.**  <br/>
 
     ‎**Note:** One of the benefits of Office 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization. By setting up your Release preferences, you can control how and when your Office 365 tenant receives these updates.
 
-26. In the **Are you sure you want to change to Targeted release for select people** window, select **Yes.**  <br/>
+23. In the **Are you sure you want to change to Targeted release for select people** window, select **Yes.**  <br/>
 
     **Note:** This option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they’ve been reviewed by the control group.
 
-27. In the **Release preferences** window, select **Add people.**
+24. In the **Release preferences** window, select **Add people.**
 
-28. In the **Manage people for First** **release** window, in the list of users, select the checkbox for **MOD Administrator** and then select **Save**.
+25. In the **Manage people for First** **release** window, in the list of users, select the checkbox for **MOD Administrator** and then select **Save**.
 
-29. Select **Close**, and then select **Close** again. This returns you to the **Organization Profile** window.
+26. Select **Close**, and then select **Close** again. This returns you to the **Organization Profile** window.
 
-30. To the right of **Manage custom themes for your organization**, select the **pencil** (**Edit**) icon.
+27. To the right of **Manage custom themes for your organization**, select the **pencil** (**Edit**) icon.
 
-31. In the **Customize Office 365 for your organization** window, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore some different options for your tenant. Make any changes that you wish. <br/>
+28. In the **Customize Office 365 for your organization** window, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore some different options for your tenant. Make any changes that you wish. <br/>
 
     **Note:** Some colors patterns aesthetically distract users. Avoid using high contrasting colors together, such as neon colors and high-resolution colors like white and bright pink.
 
-32. Once you’re done exploring and making any further changes, select **Save** and then **Close**.
+29. Once you’re done exploring and making any further changes, select **Save** and then **Close**.
 
-33. Remain logged into the domain controller VM and in Internet Explorer, leave your Microsoft 365 admin center tab and all tabs open for the remaining tasks. 
+30. Remain logged into the domain controller VM and in Internet Explorer, leave your Microsoft 365 admin center tab and all tabs open for the remaining tasks. 
  
 
 ### Task 3 - Add a Custom Domain

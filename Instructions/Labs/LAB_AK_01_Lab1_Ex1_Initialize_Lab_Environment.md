@@ -108,7 +108,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 ### Task 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.CustomDomain.us, where XXYYZZ is the UPN name associated with your on-premises lab network.
+Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZ is the UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain (see the instructions for replacing these domain name values in the Lab Introduction section of your student manual)
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
@@ -116,9 +116,9 @@ Not every company has just one domain; in fact, many companies have more than on
 
 3. In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
 
-4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to change XXYYZZa to the unique UPN name provided by your lab hosting provider):   <br/>
+4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to change XXYYZZa to the unique UPN name provided by your lab hosting provider, and replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name): <br/>
 
-    ‎**dnscmd /zoneadd XXYYZZa.CustomDomain.us /DsPrimary** 
+    ‎**dnscmd /zoneadd XXYYZZa.xxxCustomDomainxxx.xxx /DsPrimary** 
 
 5. Select the **Internet Explorer** icon on the taskbar at the bottom of the page and select the **Microsoft 365 admin center** tab that displays the **Organization Profile** page from the prior task. 
 
@@ -126,7 +126,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 7. Select +**Add domain** to start the domain setup wizard. 
 
-8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider), and then select **Next**. 
+8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx with your lab hosting provider's domain name), and then select **Next**. 
 
 9. In the **Verify domain** page, you must select a verification method to prove you own the domain. While the recommended option is **Verification email**, for the purposes of your lab environment you want to instead use a **TXT** record. Therefore, scroll down and select the **Add a TXT record instead** option and select **Next**. 
 
@@ -138,7 +138,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 12. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
 
-13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then right-click on the DNS zone called **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider). 
+13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then right-click on the DNS zone called **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
 
 14. In the menu that appears, select **Other New Records**. 
 
@@ -168,9 +168,9 @@ Not every company has just one domain; in fact, many companies have more than on
 
 25. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-26. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.CustomDomain.us** domain should be selected from when you earlier left off. If not, select this zone now. You should now see the **TXT** record that you just created. You must now create a Host record (A) and a Mail Exchanger (MX) record for this domain in the following steps.
+26. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should now see the **TXT** record that you just created. You must now create a Host record (A) and a Mail Exchanger (MX) record for this domain in the following steps.
 
-27. Under **Forward Lookup Zones**, right-click the **XXYYZZa.CustomDomain.us** domain and select **Other New Records**.
+27. Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records**.
 
 28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
 
@@ -184,7 +184,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 33. In the **Browse** window, select the **Forward Lookup zones** folder and then select **OK**.
 
-34. In the **Browse** window, select your domain of **XXYYZZa.CustomDomain.us** (where XXYYZZa is the unique UPN name provided by your lab hosting provider) and then select **OK.**
+34. In the **Browse** window, select your domain of **XXYYZZa.xxxCustomDomainxxx.xxx** and then select **OK.**
 
 35. In the **Browse** window, select the IP address of this domain and then select **OK.** 
 
@@ -198,11 +198,11 @@ Not every company has just one domain; in fact, many companies have more than on
 
 40. Remain logged into the LON-DC1 VM with the Microsoft 365 admin center tab left open for the next task.
 
-**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to change XXYYZZa to your unique UPN name and n.n.n.n to your unique IP address):
+**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to change XXYYZZa to your unique UPN name, xxxCustomDomainxxx.xxx to your lab hosting provider's domain name, and n.n.n.n to your unique IP address):
 
-‎**dnscmd /recordadd XXYYZZa.CustomDomain.us '@' A n.n.n.n**   
+‎**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' A n.n.n.n**   
 	
-**dnscmd /recordadd XXYYZZa.CustomDomain.us '@' MX 10 XXYYZZa.CustomDomain.us**  
+**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' MX 10 XXYYZZa.xxxCustomDomainxxx.xxx**  
 
 
 # End of Lab 1

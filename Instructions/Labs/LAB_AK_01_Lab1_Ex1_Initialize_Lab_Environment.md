@@ -15,7 +15,7 @@ Once you launch the lab, a free trial tenant will be automatically created for y
 
 	- **Tenant suffix ID.** This ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
 	- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
-	- **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format XXYYZZa.xxxCustomDomainxxx.xxx. You must replace XXYYZZa with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us.  
+	- **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format XXYYZZa.xxxCustomDomainxxx.xxx. You must replace XXYYZZa with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's custom domain name.  
 	- **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
 ### Task 2- Set up the Organization Profile
@@ -109,7 +109,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 ### Task 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZ is the UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain (see the instructions for replacing these domain name values in the Lab Introduction section of your student manual)
+Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is the UPN name assigned to your tenant by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain. Your instructor will provide you with your lab hosting provider's custom domain name.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
@@ -117,7 +117,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 3. In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
 
-4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to change XXYYZZa to the unique UPN name provided by your lab hosting provider, and replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name): <br/>
+4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to replace XXYYZZa with the unique UPN name assigned to your tenant by your lab hosting provider, and replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain name): <br/>
 
     ‎**dnscmd /zoneadd XXYYZZa.xxxCustomDomainxxx.xxx /DsPrimary** 
 
@@ -199,7 +199,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 40. Remain logged into the LON-DC1 VM with the Microsoft 365 admin center tab left open for the next task.
 
-**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to change XXYYZZa to your unique UPN name, xxxCustomDomainxxx.xxx to your lab hosting provider's domain name, and n.n.n.n to your unique IP address):
+**Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 
 ‎**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' A n.n.n.n**   
 	

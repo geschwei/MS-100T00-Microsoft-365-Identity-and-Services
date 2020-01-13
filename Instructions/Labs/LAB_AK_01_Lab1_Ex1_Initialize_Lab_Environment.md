@@ -197,9 +197,9 @@ Not every company has just one domain; in fact, many companies have more than on
 
 39. Close DNS Manager. 
 
-40. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab left open for the next task.
+40. In the **Microsoft 365 admin center** tab in Internet Explorer, the **Domains** window should display your onmicrosoft.com domain and the new XXYYZZa.xxxCustomDomainxxx.xxx custom domain that you just created. You should note the status of XXYYZZa.xxxCustomDomainxxx.xxx is **Possible service issues**. This is NOT an indication that you have an error with this domain; rather, it simply indicates that one or more issues need to be updated before the domain can be used with Skype for Business or other Office 365 services. This status is the result of having selected just the **Exchange** option back on the **Choose your online services** window. While this selection is sufficient for this lab, it does result in this warning message, which you can ignore. 
 
-41. In the **Microsoft 365 admin center** tab in Internet Explorer, the status of your XXYYZZa.xxxCustomDomainxxx.xxx custom domain will display **Possible service issues**. This is NOT an indication that you have an error with your domain; rather, it simply indicates that one or more issues need to be updated before the domain can be used with Skype for Business or other Office 365 services. This status is the result of having selected only Exchange back on the **Choose your online services** window. While this selection is sufficient for this lab, it does result in this warning message, which you can ignore. 
+41. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab left open for the next task.
 
 **Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 

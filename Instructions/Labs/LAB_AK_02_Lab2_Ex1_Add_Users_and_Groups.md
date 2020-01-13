@@ -37,7 +37,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	- Password: **Pa55w.rd** 
 
-	- Uncheck the **Make this user change their password when they first sign in** checkbox 
+	- Uncheck the **Require this user to change their password when they first sign in** checkbox 
 
 5. Select **Next**.
 
@@ -51,15 +51,15 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 8. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
 
-9. In the **Roles information** that appears, uncheck **User (no administrator access).** By doing so, all the Microsoft 365 administrator roles are now enabled and available to be assigned.
+9. In the **Roles information** that appears, select **Admin center access**. By doing so, all the Microsoft 365 administrator roles are now enabled and available to be assigned.
 
-10. Select **Global Administrator** and then select **Next**.
+10. Select **Global Admin** and then select **Next**.
 
 11. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
 
-12. On the **Holly Spencer has been added** page, select **Close.** 
+12. On the **Add user** page, select **Close.** 
 
-13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license.** <br/>
+13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license (an Office 365 E5 license).** <br/>
 
 	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
 

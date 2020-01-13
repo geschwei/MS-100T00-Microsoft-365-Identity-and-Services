@@ -14,15 +14,15 @@ In Active Directory, the default User Principal Name (UPN) suffix is the DNS nam
 
 3. In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
 
-4. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **XXYYZZa.CustomDomain.us** domain (where XXYYZZ is your unique UPN name provided by your lab hosting provider). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@XXYYZZa.CustomDomain.us**. <br/> 
+4. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where you will replace XXYYZZa with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. <br/> 
 
-	‎In the following command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change XXYYZZ to your unique UPN name):<br/>
+	‎In the following command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
-	‎**Set-ADForest -identity adatum.com -UPNSuffixes @{replace="XXYYZZa.CustomDomain.us"}**
+	‎**Set-ADForest -identity adatum.com -UPNSuffixes @{replace="XXYYZZa.xxxCustomDomainxxx.xxx"}**
 
-5. You must then run the following command that changes all existing adatum.com accounts to the new UPN @XXYYZZa.CustomDomain.us domain. As you type the following command, remember to change XXYYZZ to your unique UPN name: <br/>
+5. You must then run the following command that changes all existing adatum.com accounts to the new UPN @XXYYZZa.xxxCustomDomainxxx.xxx domain (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
 
-	‎**Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser \$_  -UserPrincipalName (\$_.SamAccountName + "@XXYYZZa.CustomDomain.us" )}**
+	‎**Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser \$_  -UserPrincipalName (\$_.SamAccountName + "@XXYYZZa.xxxCustomDomainxxx.xxx" )}**
 
 6. You will continue using PowerShell on your Domain Controller VM in the next task.
 
@@ -169,7 +169,7 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 17. In Holly Spencer’s account page, under the **Username/E-mail** section, select **Manage username**.
 
-18. In the **Manage username** window, select the drop-down arrow in the **domain** field and then select the **XXYYZZa.CustomDomain.us** domain (where XXYYZZ is your unique UPN Name provided by your lab hosting provider).   <br/>
+18. In the **Manage username** window, select the drop-down arrow in the **domain** field and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name).   <br/>
 
 	‎**Important:** This step will break Holly’s account. You are purposely doing this to introduce a common problem that many organizations face today – they will correctly create the same UPN’s for a user’s on-premises and cloud accounts, but they accidentally (and incorrectly) point each account to a different domain.   <br/>
 	
@@ -179,9 +179,9 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 20. You should be signed out automatically. 
 
-21. In the **Pick an account** window, you want to log in using Holly’s **Holly@XXYYZZa.CustomDomain.us** account. Note that her **Holly@M365xZZZZZZ.onmicrosoft.com** account appears in the list, but not her **Holly@XXYYZZa.CustomDomain.us** account. Therefore, select **Use another account.** 
+21. In the **Pick an account** window, you want to log in using Holly’s **Holly@XXYYZZa.xxxCustomDomainxxx.xx** account. Note that her **Holly@M365xZZZZZZ.onmicrosoft.com** account appears in the list, but not her **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** account. Therefore, select **Use another account.** 
 
-22. In the **Sign in** window, enter **Holly@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) and then select **Next**. 
+22. In the **Sign in** window, enter **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and then select **Next**. 
 
 23. In the **Enter password** window, enter **Pa55w.rd** and then select Sign in.
 
@@ -196,7 +196,7 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
 
-‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.CustomDomain.us** and you closed and then reopened Internet Explorer.
+‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.xxxCustomDomainxxx.xx** and you closed and then reopened Internet Explorer.
 
 1. In **Internet Explorer**, select the **Microsoft 365 admin center** tab. 
 
@@ -214,7 +214,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 8. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
-9. On the **Connect to Azure AD** window, enter **Holly@XXYYZZa.CustomDomain.us** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider) in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.** 
+9. On the **Connect to Azure AD** window, enter **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.** 
 
 10. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.**
 

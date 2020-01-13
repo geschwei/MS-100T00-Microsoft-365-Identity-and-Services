@@ -61,7 +61,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 1. In the **Exchange admin center (EAC)**, you should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
 
-	**Note:** You should already see the Inside Sales group that you created in Lab 1. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.CustomDomain.us). In the following steps, you will create a Distribution list group and an Office 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
+	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Office 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
 
 2.	Select the drop-down arrow next to the **New Office 365 group** button. In the drop-down menu, select **Distribution list**.
 
@@ -412,15 +412,15 @@ You have discovered that mail flow rules contain a richer set of conditions, exc
 
 ### Task 11 – Validate Accepted Domains
 
-A domain that’s added to Office 365 is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive or send mails. In Lab 1, you created a domain for Adatum Corporation based on your unique UPN name of XXYYZZa.CustomDomain.us (where XXYYZZ is your unique UPN Name provided by your lab hosting provider). In this task, you will use the Exchange Admin Center to view your accepted domain and configure the domain type. Each domain can be changed to either authoritative (which accepts all inbound or outbound mail) or internal relay (which only accepts internal email). By default, all domains should be set to authoritative. You want to ensure that your accepted domain’s type is set to authoritative.
+A domain that’s added to Office 365 is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive and send email. In Lab 1, you created a domain for Adatum Corporation based on the unique UPN name assigned to your tenant and the custom domain name provided by your lab hosting provider (i.e. XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is your unique UPN Name and xxxCustomDomainxxx.xxx is the domain of your lab hosting provider). In this task, you will use the Exchange Admin Center to view your accepted domain and configure the domain type. Each domain can be changed to either authoritative (which accepts all inbound or outbound mail) or internal relay (which only accepts internal email). By default, all domains should be set to authoritative. You want to ensure that your accepted domain’s type is set to authoritative.
 
 1. In the **Exchange admin center**, you should still be displaying **mail flow** from the left-hand navigation pane. In this list of mail flow tabs across the top of the screen, select **accepted domains.**
 
-2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (XXYYZZa.CustomDomain.us) and its Microsoft 365 cloud domain (M365xZZZZZZ.onmicrosoft.com).
+2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (XXYYZZa.xxxCustomDomainxxx.xxx) and its Microsoft 365 cloud domain (M365xZZZZZZ.onmicrosoft.com).
 
 3. You can see from this display that the domain type for each domain is already set to **Authoritative,** so you don’t need to make any changes here. 
 
-4. However, let’s assume that you set the domain type to **Internal Relay** when you initially created the custom **XXYYZZa.CustomDomain.us** domain. If you wanted to change it now to **Authoritative,** you would perform the following steps (you can perform the first step to see the window and the corresponding options, but the domain is already set to Authoritative, so you can’t actually make this change):
+4. However, let’s assume that you set the domain type to **Internal Relay** when you initially created the custom **XXYYZZa.xxxCustomDomainxxx.xxx** domain. If you wanted to change it now to **Authoritative,** you would perform the following steps (you can perform the first step to see the window and the corresponding options, but the domain is already set to Authoritative, so you can’t actually make this change):
 
 	- Select this domain in the list, and then select the **pencil (edit)** icon on the menu bar. 
 

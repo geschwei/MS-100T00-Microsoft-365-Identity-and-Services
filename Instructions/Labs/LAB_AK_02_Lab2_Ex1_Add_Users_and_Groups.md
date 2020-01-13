@@ -63,7 +63,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
 
-	**Roles.** By default, a user is assigned **User role (no administration access)**; this will be sufficient for these users for now. In Lab 2 (Module 5), you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
+	**Roles.** By default, a user is assigned **User role (no administration access)**; this will be sufficient for these users for now. In the next lab, you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
 
 	- **Alan Yoo** with username **Alan**  
 

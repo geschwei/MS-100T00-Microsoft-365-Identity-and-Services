@@ -75,26 +75,6 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
     - **Laura Atkins** with username **Laura** 
     
-    **IMPORTANT:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the custom **XXYYZZa. done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
-
-12. On the **Holly Spencer has been added** page, select **Close.** 
-
-13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license.** <br/>
-
-	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
-
-	**Roles.** By default, a user is assigned **User role (no administration access)**; this will be sufficient for these users for now. In Lab 2 (Module 5), you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
-
-	- **Alan Yoo** with username **Alan**  
-
-	- **Ada Russell** with username **Ada**
-
-	- **Adam Hobbs** with username **Adam**
-
-	- **Libby Hayward** with username **Libby**
-
-    - **Laura Atkins** with username **Laura** 
-    
     **IMPORTANT:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, since the purpose of this task is to create Microsoft 365 user accounts, you must select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
 ‎
 14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.

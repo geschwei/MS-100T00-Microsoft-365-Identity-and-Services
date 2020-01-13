@@ -14,7 +14,7 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 3. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@XXYYZZa.CustomDomain.us.** Enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
+4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@XXYYZZa.xxxCustomDomainxxx.xxx.** Enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
 
 5. On the **User sign-in** page, select **Pass-Through Authentication** and then select **Next**. 
 

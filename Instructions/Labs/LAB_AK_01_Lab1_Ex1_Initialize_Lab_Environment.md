@@ -15,7 +15,7 @@ Once you launch the lab, a free trial tenant will be automatically created for y
 
 	- **Tenant suffix ID.** This ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
 	- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
-	- **Domain name components.** For the new accepted domain that you will create, you will need the UPN name provided by your lab hosting provider, and the lab hosting provider's domain name. The UPN name will be in the the format XXYYZZa, and the domain name will be in the format xxxCustomDomainxxx.xxx. 
+	- **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format XXYYZZa.xxxCustomDomainxxx.xxx. You must replace XXYYZZa with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us.  
 	- **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
 ### Task 2- Set up the Organization Profile

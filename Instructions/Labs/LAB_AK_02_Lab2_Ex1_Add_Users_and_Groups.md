@@ -27,7 +27,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	- Username: When you tab into this field, **Holly** will appear; leave this as the username<br/>
 	
-		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, you must select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
+		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, you MUST select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
 	
 		After configuring this field, Holly’s username should appear as:<br/>
 
@@ -63,7 +63,9 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
 
-	**Roles.** By default, a user is assigned **User role (no administration access)**; this will be sufficient for these users for now. In the next lab, you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
+	**Roles.** By default, a user is assigned **User (no admin center access)**; this will be sufficient for these users for now. In the next lab, you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
+    
+    **Domain:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the accepted **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain that you previously created; however, since the purpose of this task is to create Microsoft 365 user accounts, you must instead select the **M365xZZZZZZ.onmicrosoft.com** cloud domain (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
 
 	- **Alan Yoo** with username **Alan**  
 
@@ -74,9 +76,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 	- **Libby Hayward** with username **Libby**
 
     - **Laura Atkins** with username **Laura** 
-    
-    **IMPORTANT:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, since the purpose of this task is to create Microsoft 365 user accounts, you must select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
-‎
+ 
 14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
@@ -86,101 +86,61 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 1. On the LON-DC1 VM, in the **Microsoft 365 admin center**, select **Groups** in the navigation pane on the left, and then under it, select **Groups**. 
 
-2. In the **Groups** window, select **Add a group** and then enter the following information for the new group: 
+2. In the **Groups** page, select **Add a group**.  
 
-	- Type: **Office 365**
+3. In the **Choose a group type** window, select **Office 365 (recommended)** and select **Next**. 
 
-	- Name: **Inside Sales**
+4. In the **Set up the basics** window, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field. Select **Next**.
 
-	- Group email address: When you tab into this field, **insidesales** will appear; leave this as the group email address <br/>
-	
-		**IMPORTANT:** To the right of the **Group email address** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain, and if you select the drop-down arrow, no other domains appear (this is different from adding users). So the value in this field can be left as is.   <br/>
-		
-		After configuring this field, the Inside Sales group email address should appear as: **insidesales@XXYYZZa.xxxCustomDomainxxx.xxx**
+5. In the **Edit settings** window, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, leave the default setting of **Public** and then select **Next**.
 
-	- Description: **Collaboration group for the Inside Sales team**
+6. In the **Assign Owners** window, enter **Alan** in the **Owners** field. In the drop-down menu that appears, select **Alan Yoo**. Enter **Holly** in the **Owners** field, and then in the drop-down menu that appears, select **Holly Spencer**. Select **Next**.
 
-	- Privacy: leave the default setting of **Public**
+7. In the **Review and finish adding group** window, review the content that you entered. If everything looks good, select **Create group**; otherwise, select **Back** and fix anything that needs correction (or select **Edit** under the specific area).
 
-	- Owner: **Alan Yoo**
+8. Select **Close**. This returns you to the **Groups** page. Note that your group may not immediatgely appear in the list. As indicated on the page, it can take up to an hour for new distribution groups and mail-enabled security groups to appear in this list. However, in your lab environment, our experience has shown that the group will appear by the time you finish adding the next group.
 
-3. Select **Add** and then **Close.**
+9. Repeat steps 2-8 to add a new group with the following information:
 
-4. In the **Groups** window, select **Add a group** and then enter the following information for the new group:
-
-	- Type: **Security**
-
-	- Name: **Sales**
-
-	- Description: **Sales Department users**<br/>
-
-	**Note:** there is no owner, email address, or privacy setting for Security groups
-
-5. Select **Add** and then **Close.**
-
-6. If the new groups do not appear in the **Groups** list, select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. 
-
-7. You’re now ready to add members to the groups. In the list of **Groups**, select the **Inside Sales** group, which opens a window for the group. 
-
-8. In the **Inside Sales** group window, select **Members**.
-
-9. In the **Members** section, you can see that there are zero (0) members. Select **View all and manage members** to add members to the group. 
-
-10. In the **Inside Sales** group window, select **Add members**. This displays the list of current users.
-
-11. In the list of users, select **Ada Russell** and **Alan Yoo** and then select **Save**. 
-
-12. Select **Close**. This displays the list of users for this group. Select **Close** again. 
-
-13. On the **Inside Sales** window, select the **X** in the upper right-hand corner to close the window. 
-
-14. In the **Groups** window, select **Add a group** and then enter the following information for the new group:
-
-	- Type: **Security**
+	- Group type: **Security**
 
 	- Name: **Accounts Receivable**
 
-	- Description: **Accounts Receivable department users** 
+	- Description: **A/R department users**<br/>
 
-15. Select **Add** and then **Close.**
+	**Note:** there is no owner, email address, or privacy setting for Security groups
 
-16. If the Accounts Receivable group does not appear in the **Groups** list, select the **Refresh** icon to the right of the URL in Internet Explorer. The group should now appear.
+10. If either of the two new groups do not appear in the **Groups** list, select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. Note that the Accounts Receivable group does not have a group email address because it's a Security group.
 
-17. In the **Groups** list, select the **Accounts Receivable** group, which opens a window for the group. 
+11. You’re now ready to add members to the groups. In the list of **Groups**, select the **Inside Sales** group, which opens a window for the group. 
 
-18. In the **Accounts Receivable** group window, select **Members**.
+12. In the **Inside Sales** group window, select **Members**.
 
-19. In the **Members** section, you can see that there are zero (0) group owners and members. Select **View all and manage owners** to add an owner for the group.
+13. In the **Members** section, you can see that there are zero (0) members. Select **View all and manage members** to add members to the group. 
 
-20. In the **Accounts Receivable** group window, select **Add owners**. This displays the list of current users.
+14. In the **Inside Sales** group window, select **Add members**. This displays the list of current users.
 
-21. In the list of users, select **Libby Hayward** and then select **Save**. 
+15. In the list of users, select **Ada Russell** and **Alan Yoo** and then select **Save**. 
 
-22. Select **Close**. This displays the list of owners for this group. Select **Close** again. 
+16. Select **Close**. This displays the list of users for this group. Select **Close** again. 
 
-23. In the **Accounts Receivable** group window, select **View all and manage members** to add members to the group. 
+17. On the **Inside Sales** window, Alan and Ada now appear as members of the group. Select the **X** in the upper right-hand corner to close the window. 
 
-24. In the **Accounts Receivable** group window, select **Add members**. This displays the list of current users.
+18. Repeat steps 11-17 to add **Adam Hobbs** and **Libby Hayward** as members of the **Accounts Receivable** group.
 
-25. In the list of users, select **Adam Hobbs** and **Libby Hayward** and then select **Save**. 
+19. You now want to test the effect of deleting a group. In the list of **Groups,** select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the menu box, select **Delete group**. 
 
-26. Select **Close**. This displays the list of users for this group. Select **Close** again. 
+20. In the **Delete group** window, select the **Delete** button.
 
-27. On the **Accounts Receivable** window, select the X in the upper right-hand corner to close the window. This will return you to the list of **Groups** in the **Microsoft 365 admin center**. 
+21. Once the group is deleted, select **Close**. 
 
-28. You now want to test the effect of deleting a group. In the list of **Groups,** select the vertical ellipsis icon (**More actions**) to the right of the **Inside Sales** group. In the menu box, select **Delete group**. 
+22. This will return you to the list of **Groups** in the **Microsoft 365 admin center**. The **Inside Sales** group should no longer appear. If the Inside Sales group still displays, select the **Refresh** icon to the right of the URL in Internet Explorer. The updated **Groups** list should no longer include the Inside Sales group.
 
-29. In the **Delete group** window, select the **Delete** button.
+23. To verify whether deleting this group affected any of its members, select **Users** and then **Active Users** in the navigation pane on the left-hand side of the Groups window. 
 
-30. Once the group is deleted, select **Close**. 
+24. In the **Active users** list verify that the two members of the Inside Sales group, Ada Russell and Alan Yoo, still exist in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
 
-31. This will return you to the list of **Groups** in the **Microsoft 365 admin center**. The **Inside Sales** group should no longer appear. 
-
-32. To verify whether deleting this group affected any of its members, select **Users** and then **Active Users** in the navigation pane on the left-hand side of the Groups window. 
-
-33. In the list of **Active** **Users** verify that the two members of this group, Alan Yoo and Ada Russell, still exist in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
-
-34. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+25. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
 ### Task 3 – Prepare for Microsoft Azure Active Directory 

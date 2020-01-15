@@ -143,64 +143,13 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 25. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
-### Task 3 – Prepare for Microsoft Azure Active Directory 
+### Task 3 – Recover Groups using PowerShell 
 
-Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. However, before you can use PowerShell to access Azure AD, you must first install the Windows PowerShell modules that enable you to access Azure AD through PowerShell. In this task, you will prepare for using Azure AD by installing those PowerShell modules. 
-
-In the next task, you will recover the Inside Sales group that you deleted in the prior task. Azure AD is required to perform several group management tasks in Microsoft 365, one of which is recovering deleted groups. Therefore, you will prepare for Azure AD in this task so that you can recover the deleted group in the next task.
-
-1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
-
-    ‎This will take you to the **Microsoft Download Center** for the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW.**
-
-2. Scroll down on the page and under **Microsoft Online Services Sign-In Assistant for IT Professionals RTW**, verify that English is selected as your **Language,** and then select **Download**. 
-
-3. On the **Choose the download you want** page, select the **en\msoidcl_64.msi** check box, and then select **Next**. 
-
-4. If a notification bar appears at the bottom of the page indicating that Internet Explorer blocked a pop-up from www.microsoft.com, select **Allow once**.
-
-5. In the notification bar that appears at the bottom of the page asking whether you want to Run or Save the setup program from the Download Center, select **Run**. 
-
-6. In the **Microsoft Online Services Sign-in Assistant Setup** wizard, select **I accept the terms in the License Agreement and Privacy Statement**, and then select **Install**. 
-
-7. On the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
-
-8. Close this tab in Internet Explorer. 
-
-9. If Windows PowerShell is still open from the earlier task (see the Windows PowerShell icon on the taskbar), then proceed to the next step. Otherwise, you must open **Windows PowerShell** by performing the following steps:
-
-	- Select the magnifying glass (Search Windows) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. 
-
-	- In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
-
-10. In **Windows PowerShell**, type the following command and then press Enter:<br/>
-
-	‎**Install-Module MSOnline** 
-	
-11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
-
-12. If you are prompted to install the module from **PSGallery,** enter **A** to select **[A] Yes to All.** 
-
-13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt.
-
-14. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
-
-	**Install-Module AzureADPreview**   
-	
-15. If you are prompted to confirm that you want to execute this command, enter **A** to select **[A] Yes to All**.
-
-16. You have now installed the Windows PowerShell modules required to access Azure AD.
-
-17. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next task.
-
-
-### Task 4 – Recover Groups using PowerShell 
-
-Azure AD is required to perform several group management tasks in Microsoft 365, one of which is recovering deleted groups. In this task, you will recover the Inside Sales group that you deleted back in Task 4.
+In this task, you will use Windows PowerShell to recover the Inside Sales group that you deleted in the prior task. You will do so by accessing Azure Active Directory, which is required to perform several group management tasks in Microsoft 365. In the prior lab, you installed the Windows PowerShell modules that enable you to access Azure AD. In this task, you will use Windows PowerShell to recover the deleted group. 
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. If you closed Windows PowerShell after the prior task, you will need to open it again.
+2. If you closed Windows PowerShell after the prior lab, then you must open an elevated instance of it again. task, you will need to open it again.
 
 3. In **Windows PowerShell**, type the following commands (after each command, press Enter):
 

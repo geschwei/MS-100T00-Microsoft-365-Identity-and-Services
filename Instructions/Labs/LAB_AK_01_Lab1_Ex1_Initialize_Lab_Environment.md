@@ -199,13 +199,59 @@ Not every company has just one domain; in fact, many companies have more than on
 
 40. In the **Microsoft 365 admin center** tab in Internet Explorer, the **Domains** window should display your onmicrosoft.com domain and the new XXYYZZa.xxxCustomDomainxxx.xxx custom domain that you just created. You should note the status of XXYYZZa.xxxCustomDomainxxx.xxx is **Possible service issues**. This is NOT an indication that you have an error with this domain; rather, it simply indicates that one or more issues need to be updated before the domain can be used with Skype for Business or other Office 365 services. This status is the result of having selected just the **Exchange** option back on the **Choose your online services** window. While this selection is sufficient for this lab, it does result in this warning message, which you can ignore. 
 
-41. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab left open for the next task.
+41. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab and **Windows PowerShell** left open for the next task. 
 
 **Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 
 ‎**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' A n.n.n.n**   
 	
 **dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' MX 10 XXYYZZa.xxxCustomDomainxxx.xxx**  
+
+
+### Task 4 – Prepare for Microsoft Azure Active Directory 
+
+Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. However, before you can use PowerShell to access Azure AD, you must first install the Windows PowerShell modules that enable you to access Azure AD through PowerShell. In this task, you will prepare for using Azure AD by installing these PowerShell modules. 
+
+1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
+
+    ‎This will take you to the **Microsoft Download Center** for the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW.**
+
+2. Scroll down on the page and under **Microsoft Online Services Sign-In Assistant for IT Professionals RTW**, verify that English is selected as your **Language,** and then select **Download**. 
+
+3. On the **Choose the download you want** page, select the **en\msoidcl_64.msi** check box, and then select **Next**. 
+
+4. If a notification bar appears at the bottom of the page indicating that Internet Explorer blocked a pop-up from www.microsoft.com, select **Allow once**.
+
+5. In the notification bar that appears at the bottom of the page asking whether you want to Run or Save the setup program from the Download Center, select **Run**. 
+
+6. In the **Microsoft Online Services Sign-in Assistant Setup** wizard, select **I accept the terms in the License Agreement and Privacy Statement**, and then select **Install**. 
+
+7. On the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
+
+8. Close this tab in Internet Explorer. 
+
+9. If Windows PowerShell is still open from the previous task, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of **Windows PowerShell** just as you did in the prior task.
+
+10. In **Windows PowerShell**, type the following command and then press Enter:<br/>
+
+	‎**Install-Module MSOnline** 
+	
+11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
+
+12. If you are prompted to install the module from **PSGallery,** enter **A** to select **[A] Yes to All.** 
+
+13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt.
+
+14. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
+
+	**Install-Module AzureADPreview**   
+	
+15. If you are prompted to confirm that you want to execute this command, enter **A** to select **[A] Yes to All**.
+
+16. You have now installed the Windows PowerShell modules required to access Azure AD.
+
+17. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next lab.
+
 
 
 # End of Lab 1

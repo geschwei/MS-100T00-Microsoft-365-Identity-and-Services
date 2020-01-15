@@ -115,7 +115,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 2. You must now open **Windows PowerShell**. Select the magnifying glass (Search Windows) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. 
 
-3. In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
+3. In the menu that appears, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
 4. At the command prompt, you should run the following command to create a new Zone in DNS (remember to replace XXYYZZa with the unique UPN name assigned to your tenant by your lab hosting provider, and replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain name): <br/>
 

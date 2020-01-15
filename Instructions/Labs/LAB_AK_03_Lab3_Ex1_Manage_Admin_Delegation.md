@@ -57,7 +57,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 ‎In this task, you will log into PowerShell as Holly Spencer, who is Adatum’s Enterprise Administrator.
 
-1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from a previous task in Lab 1. If you closed the PowerShell window, then open it again using the same instruction as before. 
+1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from the previous lab. If you closed the PowerShell window, then open it again using the same instruction as before. 
 
 2. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 

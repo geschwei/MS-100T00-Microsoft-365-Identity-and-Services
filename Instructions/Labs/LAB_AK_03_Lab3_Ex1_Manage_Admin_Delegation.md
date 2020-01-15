@@ -10,7 +10,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 1. If you’re not logged into the Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. After completing Lab 1, you are still signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Spencer, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
+2. After completing the previous lab, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Spencer, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
 
 	On the Microsoft 365 admin center tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser, and in the **My account** pane, select **Sign out.** <br/>
 	
@@ -28,7 +28,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 8. In the **Office 365 home page**, select **Admin** to open the Microsoft 365 admin center.
 
-9. In the **Good morning/afternoon/evening Holly Spencer** window, select **Get started**.
+9. If a **Good morning/afternoon/evening Holly Spencer** window appears, select **Get started**.
 
 10. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
@@ -36,17 +36,19 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 12. Adam Hobbs’s properties window displays, and the **Account** tab is displayed by default. Under the **Roles** section, select **Manage roles**. 
 
-13. In the **Manage admin roles** window, uncheck the **User (no administrator access)** checkbox. This enables the roles. 
+13. In the **Manage admin roles** window, the **User (no admin center access)** option is currently selected because you did not assign Adam a role when you created his user account in the prior lab. Now that you want to assign Adam a role, select the **Admin center access** option. This enables the roles. 
 
-14. Scroll down, and under the **Billing** section, select the **Billing administrator** role and then select **Save changes**. 
+14. Scroll down and select **Show all by category**. 
 
-15. Select the **X** in the upper-right corner of the screen to close the **Admin roles updated** window.
+15. In the list of roles that appear by category, scroll down to the **Other** category and select **Billing admin**, and then select **Save changes**. 
 
-16. Select the **X** in the upper-right corner of the screen to close the **Adam Hobbs** properties window. This returns you to the **Active users** list. 
+16. On the **Admin roles updated** page, select the **X** in the upper-right corner of the screen to close the **Admin roles updated** window.
 
-17. Repeat steps 10 through 15 for **Ada Russell.** Assign Ada to both the **User management administrator** role and the **Helpdesk Administrator** role. 
+17. On the **Adam Hobbs** properties window, verify the **Billing admin role** appears under the **Roles** section. Select the **X** in the upper-right corner of the screen to close the window. This returns you to the **Active users** list. 
 
-18. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
+18. Repeat steps 11 through 17 for **Ada Russell.** Assign Ada to both the **Helpdesk admin** role and the **User admin** role (both roles are in the initial list of admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
+
+19. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
@@ -63,23 +65,19 @@ This task is similar to the prior one in that you will assign administrator righ
 	
 3. In the **Sign in** dialog box, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with password **Pa55w.rd**. 
 
-4. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to Unrestricted enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+4. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 	‎**Set-ExecutionPolicy unrestricted**<br/>
 
-	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A]** **Yes to All.** 
+	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-5. Holly now wants to assign **Libby Hayward** to the **Service Support Administrator** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press:  <br/>
+5. Holly now wants to assign **Libby Hayward** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press:  <br/>
 
-	**Add-MsolRoleMember -RoleName "Service Support Administrator” –RoleMemberEmailAddress Libby@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
+	**Add-MsolRoleMember -RoleName "Service support admin” –RoleMemberEmailAddress Libby@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
 
-6. Holly now wants to assign **Laura Atkins** to the **Company Administrator** role. At the command prompt, type the following command, and then press Enter:   <br/>
+6. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
 
-	‎**Add-MsolRoleMember -RoleName "Company Administrator" -RoleMemberEmailAddress Laura@M365xZZZZZZ.onmicrosoft.com**  (where ZZZZZZ is your unique O365 Credentials) 
-
-7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process.<br/>
-
-	‎**Note:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to simply describe what you will be doing in the remaining steps in this task. Once you understand what you will be doing, then proceed to step 8.
+	‎**Note:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to simply describe what you will be doing in the remaining steps in this task. Once you understand what you will be doing, then proceed to step 7.
 
 	- You will begin by running a command that creates a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you’re validating.  <br/> 
 		
@@ -89,33 +87,35 @@ This task is similar to the prior one in that you will assign administrator righ
 	
 		**Get-MsolRoleMember -RoleObjectId $role.ObjectId**  ‎
 			
-8. You should now run the following two commands to verify that Libby was assigned to the Service Support Administrator role:  <br/> 
+7. You should now run the following two commands to verify that Libby Hayward was assigned to the Service support admin role:  <br/> 
 
-	**&dollar;role = Get-MsolRole -RoleName "Service Support Administrator"**<br/>
+	**&dollar;role = Get-MsolRole -RoleName "Service support admin"**<br/>
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**
 	
-9. Verify that **Libby Hayward** is in the list of users who have the **Service Support Administrator** role. 
+8. Verify that **Libby Hayward** is in the list of users who have the **Service support admin** role. 
 
-10. You should now run the following two commands to verify that Laura was assigned to the Company Administrator role.<br/>
+9. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing admin** role.  <br/>
 
-	**&dollar;role = Get-MsolRole -RoleName "Company Administrator"**<br/>
-
-	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**   
-
-11. Verify that **Laura Atkins** is in the list of users who have the **Company Administrator** role.   <br/>
-
-	‎**Important:** Since Global Administrators are also automatically assigned to the Company Administrator role, notice that Holly Spencer is also in this list even though she wasn’t manually assigned the role. Finally, notice that the system admin (the MOD Administrator) is also assigned to this role by default. 
-	
-12. You should now run the following two commands to verify which Adatum users have been assigned to the Billing Administrator role.  <br/>
-
-	**&dollar;role = Get-MsolRole -RoleName "Billing Administrator"**  <br/>
+	**&dollar;role = Get-MsolRole -RoleName "Billing admin"**  <br/>
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId** 
 
-13. Verify that **Adam Hobbs** is in the list of users who have the **Billing Administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
+10. Verify that **Adam Hobbs** is in the list of users who have the **Billing admin** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
 
-14. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+11. You should now run the following two commands to verify which users have been assigned to the Global admin role.<br/>
+
+	**&dollar;role = Get-MsolRole -RoleName "Global admin"**<br/>
+
+	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**   
+
+12. Verify that **Holly Spencer** and the **MOD Administrator** are the only two users who have the **Global admin** role.   <br/>
+
+	‎**Important:** Holly Spencer is in this list because you manually assigned her this role when you created her user account in the prior lab. However, the MOD Administrator was also assigned to this role by default becasue the person who signed up for Microsoft online services automatically becomes a Global admin. For Adatum, this was the MOD Administrator account. 
+
+	‎Verifying which users has been assigned the Global admin role is an important task that should be performed periodically for auditing purposes. Since the Global admin role should only be assigned to users who need global access to most management features and data across Microsoft online services, giving too many users global access is a security risk. Therefore, it is recommended that you only have between 2 and 4 Global admins.  
+	
+13. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  

@@ -129,25 +129,25 @@ Not every company has just one domain; in fact, many companies have more than on
 
 8. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name), and then select **Next**. 
 
-9. In the **Verify domain** page, you must select a verification method to prove you own the domain. While the recommended option is **Verification email**, for the purposes of your lab environment you want to instead use a **TXT** record. Therefore, scroll down and select the **Add a TXT record instead** option and select **Next**. 
+9. In the **Verify domain** page, you must select a verification method to prove you own the domain. You can choose to verify using either a TXT record or a MX record. For this lab, we will use the **TXT record**, which is displayed by default. 
 
-10. In the next **Verify domain** page, write down the what’s displayed to the right of the **TXT value**. This entry will be similar to **MS=msXXXXXXXX**. Record this value so that you have it available when you create an additional TXT record later in this task.   <br/>
+10. To configure the domain later on in DNS Manager, you need to copy the **TXT value**. To do so, select the **Copy to clipboard** icon that appears to the right of **TXT value** (next to the **MS=msXXXXXXXX** value). In the dialog box that appears, select **Allow access**.  <br/>
 
     ‎**Important:** If you select **Verify** at this point, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. 
 
-11. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window.
+11. You must now switch over to Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
 
 12. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
 
-13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then right-click on the DNS zone called **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
+13. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** DNS zone that you previously added in Windows PowerShell (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
 
-14. In the menu that appears, select **Other New Records**. 
+14. Right-click on this **XXYYZZa.xxxCustomDomainxxx.xxx** DNS zone, and in the menu that appears, select **Other New Records**. 
 
 15. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record** button at the bottom of the window.
 
 16. In the **New Resource Record** box, leave the **Record name** field blank. 
 
-17. In the **Text** field, type **MS=msXXXXXXXX**, replacing XXXXXXXX with the value that you recorded in Step 12. 
+17. In the **Text** field, right-click and select **Paste** from the menu. This will paste in the TXT valued of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
 
 18. Select **OK** to create the record. 
 

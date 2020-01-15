@@ -145,7 +145,7 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 ### Task 3 – Recover Groups using PowerShell 
 
-In this task, you will use Windows PowerShell to recover the Inside Sales group that you deleted in the prior task. You will do so by accessing Azure Active Directory, which is required to perform several group management tasks in Microsoft 365. In the prior lab, you installed the Windows PowerShell module that enables you to access Azure AD. In this task, you will access Azure AD using Windows PowerShell to recover the deleted group. 
+In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this Azure AD-related task, the Windows Azure Active Directory PowerShell Module must first be installed. You should have installed the Windows Azure Active Directory PowerShell Module during the prior lab.   
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 

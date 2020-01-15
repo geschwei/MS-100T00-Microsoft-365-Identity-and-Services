@@ -145,7 +145,9 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 ### Task 3 – Prepare for Microsoft Azure Active Directory 
 
-Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. However, before you can use PowerShell to access Azure AD, you must first install the Windows PowerShell modules that enable you to access Azure AD through PowerShell. In this task, you will prepare for using Azure AD by installing those PowerShell modules.
+Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. However, before you can use PowerShell to access Azure AD, you must first install the Windows PowerShell modules that enable you to access Azure AD through PowerShell. 
+
+In this task, you will prepare for using Azure AD by installing those PowerShell modules. In the next task, you will recover the Inside Sales group that you deleted in the prior task. Azure AD is required to perform several group management tasks in Microsoft 365, one of which is recovering deleted groups. Therefore, you will prepare for Azure AD in this task so that you can recover the deleted group in the next task.
 
 1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
 

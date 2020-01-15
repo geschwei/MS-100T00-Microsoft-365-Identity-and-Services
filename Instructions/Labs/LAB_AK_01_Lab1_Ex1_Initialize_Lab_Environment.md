@@ -208,11 +208,13 @@ Not every company has just one domain; in fact, many companies have more than on
 **dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' MX 10 XXYYZZa.xxxCustomDomainxxx.xxx**  
 
 
-### Task 4 – Install the Microsoft Online Services Sign-In Assistant
+### Task 4 – Prepare for Microsoft Azure Active Directory 
 
-The Microsoft Online Services Sign-In Assistant (MOS SIA) provides end user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow common applications, such as Microsoft Outlook, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, such that end users can access Microsoft Online Services without having to re-enter their credentials. 
+Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. To access Azure Active Directory, you must first prepare for it by performing the following tasks: installing the Microsoft Online Services Sign-In Assistant (MOS SIA) and installing the Windows Azure Active Directory PowerShell Module.
 
-The Microsoft Online Services Sign-In Assistant is also utilized by the Windows Azure Active Directory PowerShell Module, which is installed in the next task and used in later labs to configure various tasks within Office 365. In this task, you will download and install the MOS SIA so that it's configured for the Windows Azure AD PowerShell Module.  
+The Microsoft Online Services Sign-In Assistant provides end user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, such that end-users can access Microsoft Online Services without having to re-enter their credentials. 
+
+To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
 
 1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
 
@@ -232,32 +234,27 @@ The Microsoft Online Services Sign-In Assistant is also utilized by the Windows 
 
 8. Close this tab in Internet Explorer. 
 
+9. If Windows PowerShell is still open from the previous task when you added the custom domain, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of **Windows PowerShell** just as you did in the prior task.
 
-### Task 5 – Prepare for Microsoft Azure Active Directory 
-
-Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. In this task, you will install the Windows Azure AD Powershell module so that you can perform various configuration steps in later labs. 
-
-1. On the LON-DC1 VM, if Windows PowerShell is still open from the previous task when you added the custom domain, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of **Windows PowerShell** just as you did in that prior task.
-
-2. In **Windows PowerShell**, type the following command and then press Enter:<br/>
+10. In **Windows PowerShell**, type the following command and then press Enter:<br/>
 
 	‎**Install-Module MSOnline** 
 	
-3. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
+11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
 
-4. If you are prompted to install the module from **PSGallery,** enter **A** to select **[A] Yes to All.** 
+12. If you are prompted to install the module from **PSGallery,** enter **A** to select **[A] Yes to All.** 
 
-5. Once the installation is complete, the screen will return to the Windows PowerShell command prompt.
+13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt.
 
-6. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
+14. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
 
 	**Install-Module AzureADPreview**   
 	
-7. If you are prompted to confirm that you want to execute this command, enter **A** to select **[A] Yes to All**.
+15. If you are prompted to confirm that you want to execute this command, enter **A** to select **[A] Yes to All**.
 
-8. You have now installed the Windows PowerShell modules required to access Azure AD.
+16. You have now installed the Windows PowerShell modules required to access Azure AD.
 
-9. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next lab.
+17. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next lab.
 
 
 

@@ -165,7 +165,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 23. In the **Update DNS settings** window, scroll down through the window to see the MX, CNAME, and TXT records for this domain. At the bottom of the window is a check box titled **Skip this step.** Select this checkbox, which changes the **Verify** button to a **Skip** button. You have already created the TXT record, and in the following steps you will create additional MX and A records in DNS Manager. Therefore, select the **Skip** button.
 
-24. In the **Update DNS settings** window, select **Finish** to complete the new domain setup. 
+24. In the **Update DNS settings** window, select **Finish** to complete the new domain setup. This returns you to the **Domains** window. Note the Status of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
 
 25. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 

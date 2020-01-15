@@ -210,7 +210,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 ### Task 4 – Prepare for Microsoft Azure Active Directory 
 
-Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. However, before you can use PowerShell to access Azure AD, you must first install the Windows PowerShell modules that enable you to access Azure AD through PowerShell. In this task, you will prepare for using Azure AD by installing these PowerShell modules. 
+Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. These steps are performed using Windows PowerShell. In this task, you will install the Azure AD module into Windows PowerShell so that you can perform various configuration steps in later labs. 
 
 1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
 

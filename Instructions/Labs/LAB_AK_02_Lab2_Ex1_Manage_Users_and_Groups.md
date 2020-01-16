@@ -51,15 +51,15 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 8. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
 
-9. In the **Roles information** that appears, select **Admin center access**. By doing so, all the Microsoft 365 administrator roles are now enabled and available to be assigned.
+9. In the **Roles information** that appears, select **Admin center access**. By doing so, the primary Microsoft 365 administrator roles are now displayed below this option and are available to be assigned. **Note:** All of the admin roles will be displayed if you select **Show all by category**. For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of primary roles.
 
-10. Select **Global Admin** and then select **Next**.
+10. Select **Global admin** and then select **Next**.
 
-11. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
+11. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-12. On the **Add user** page, select **Close.** 
+12. On the **Holly Spencer has been added** page, select **Close.** If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 
-13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license (an Office 365 E5 license).** <br/>
+13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license (in both cases, an Office 365 E5 license).** <br/>
 
 	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
 
@@ -77,6 +77,12 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
     - **Laura Atkins** with username **Laura** 
  
+14. Once you have added all the user accounts, review the users in the list of **Active users**. Specifically, review the username assigned to each new user account to verify that you assigned each user to the **M365xZZZZZZ.onmicrosoft.com** domain. 
+
+If all of the new users were assigned to this **M365xZZZZZZ.onmicrosoft.com** domain, then proceed to the next step. 
+
+However, if any of the new users has a username that references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, you must change it to instead reference your **M365xZZZZZZ.onmicrosoft.com** domain. To do this, select the inverted elipsis icon **(More actions)** that appears to the left of the user's username value. In the menu that appears, select **Edit username**. In the **Manage username** window that appears, select the domain drop-down arrow, select the **M365xZZZZZZ.onmicrosoft.com** domain, select **Save changes**, and then close the window. 
+
 14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 

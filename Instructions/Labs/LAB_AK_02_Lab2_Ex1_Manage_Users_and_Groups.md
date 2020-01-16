@@ -1,13 +1,13 @@
 # Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
 
-In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will create a Microsoft 365 user account for Holly, and you will create a couple of Office 365 groups. You will then delete one of the groups and then use PowerShell to recover the deleted group.
+In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, and then you will create two Office 365 groups and assign Microsoft 365 users as members of the groups. You will then delete one of the groups and then use PowerShell to recover the deleted group.
 
-**Note:** The VM environment provided by your lab hosting provider comes with ten existing Microsoft 365 user accounts, as well as a number of existing on-premises user accounts. Several of these user accounts will be used throughout the labs in this course. 
+**Note:** The VM environment provided by your lab hosting provider comes with ten existing Microsoft 365 user accounts, as well as a number of existing on-premises user accounts. Several of these existing user accounts will be used throughout the labs in this course. This will save you from having to perform the tedious task of creating user accounts, which is typically not a task performed by Enterprise Administrators. You will, however, create Holly Spencer's user account, since having more than one Global admin if a best practice, and it does provide you with the experience of creating a user account in case you are not familiar with the process.
 
 
 ### Task 1 - Create a User Account for Adatum's Enterprise Administrator
 
-Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, you initially signed into Microsoft 365 as the default Microsoft 365 MOD Administrator account in the previous lab. In this task, you will continue in your role as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly, and you will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365. Following this task, you will perform all remaining labs using Holly's persona. 
+Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, you initially signed into Microsoft 365 as the MOD Administrator account (the default Global admin) in the previous lab. In this task, you will continue in your role as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly, and you will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365. Following this task, you will perform all remaining labs using Holly's persona. 
 
 **Important:** As a best practice in your real-world deployments, you should always write down the first global admin account’s credentials (in this lab, the MOD Administrator) and store it away for security reasons. This account is a non-personalized identity that owns the highest privileges possible in a tenant. It is **not** MFA activated (because it is not personalized) and the password for this account is typically shared among several users. Therefore, this first global admin is a perfect target for attacks, so it’s always recommended to create personalized service admins and keep as few global admins as possible. For those global admins that you do create, they should each be mapped to a single identity, and they should each have MFA enforced.
 
@@ -69,6 +69,28 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 ### Task 2 – Create and Manage Groups  
 
 In this task, you will create two new groups and then manage the groups by assigning users to them. You will also analyze the effect on group members when you delete a group.
+
+2. After completing the previous lab, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Spencer, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
+
+	On the Microsoft 365 admin center tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser, and in the **My account** pane, select **Sign out.** <br/>
+	
+	**Important:** When signing out of one account and signing in as another, you should close all your browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Please close all other browser tabs now. 
+	
+3. In Internet Explorer browser, navigate to **https://portal.office.com**. 
+
+4. In the **Pick an account** window, only the admin account that you just logged out from appears. Select **Use another account**. 
+
+5. In the **Sign in** window, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Select **Next**.
+
+6. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**.
+
+7. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
+
+8. In the **Office 365 home page**, select **Admin** to open the Microsoft 365 admin center.
+
+9. If a **Good morning/afternoon/evening Holly Spencer** window appears, select **Get started**.
+
+
 
 1. On the LON-DC1 VM, in the **Microsoft 365 admin center**, select **Groups** in the navigation pane on the left, and then under it, select **Groups**. 
 

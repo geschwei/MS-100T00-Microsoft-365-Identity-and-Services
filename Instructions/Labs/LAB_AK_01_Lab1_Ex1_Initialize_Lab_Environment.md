@@ -214,17 +214,19 @@ The Microsoft Online Services Sign-In Assistant provides end user sign-in capabi
 
 To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
 
-1. On the LON-DC1 VM, in Internet Explorer, open a new tab and then enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
+1. On the LON-DC1 VM, in Internet Explorer, open a new tab and then enter the following URL in the address bar: **https://aka.ms/AA6zxrs**   <br/>
 
     ‎This will take you to the **Microsoft Download Center** for the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW.**
+    
+2. On the pop-up notification window that appears at the bottom of the screen asking whether you want to run or save the 32 bit .msi file, select **Cancel**.
 
-2. Scroll down on the page and under **Microsoft Online Services Sign-In Assistant for IT Professionals RTW**, verify that English is selected as your **Language,** and then select **Download**. 
+3. Since you want to install the 64 bit .msi file, scroll down on the page and under **Thank you for downloading Microsoft Online Services Sign-In Assistant for IT Professionals RTW**, select **click here to download manually**.
 
-3. On the **Choose the download you want** page, select the **en\msoidcl_64.msi** check box, and then select **Next**. 
+3. On the **Choose the files that didn't download** page, select the **msoidcli_64bit.msi** check box, and then select **Try again**. 
 
 4. If a notification bar appears at the bottom of the page indicating that Internet Explorer blocked a pop-up from www.microsoft.com, select **Allow once**.
 
-5. In the notification bar that appears at the bottom of the page asking whether you want to Run or Save the setup program from the Download Center, select **Run**. 
+5. In the notification bar that appears at the bottom of the page asking whether you want to run or save msoidcli_64bit.msi from the Download Center, select **Run**. 
 
 6. In the **Microsoft Online Services Sign-in Assistant Setup** wizard, select **I accept the terms in the License Agreement and Privacy Statement**, and then select **Install**. 
 
@@ -240,19 +242,17 @@ To prepare for Azure Active Directory, you must first download and install the M
 	
 11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
 
-12. If you are prompted to install the module from **PSGallery,** enter **A** to select **[A] Yes to All.** 
+12. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery),** enter **A** to select **[A] Yes to All.** 
 
-13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt.
-
-14. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
+13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
 
 	**Install-Module AzureADPreview**   
 	
-15. If you are prompted to confirm that you want to execute this command, enter **A** to select **[A] Yes to All**.
+14. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery),** enter **A** to select **[A] Yes to All.** 
 
-16. You have now installed the Windows PowerShell modules required to access Azure AD.
+15. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Windows Azure Active Directory PowerShell Module.
 
-17. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next lab.
+16. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next lab.
 
 
 

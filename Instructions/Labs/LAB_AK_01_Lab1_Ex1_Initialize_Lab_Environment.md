@@ -175,7 +175,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
 
-29. In the **New Resource Record** box, you need to enter the Host’s IP address. At the start of this lab you opened the **Lab Network Info** window for the VM and wrote down the **IP Address** associated with the domain for this VM. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
+29. In the **New Resource Record** box, you need to enter the Host’s IP address. At the start of this lab your instructor provided you with instruction on how to determine the Host's IP address. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
 
 30. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record** button at the bottom of the window.
 
@@ -197,9 +197,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 39. Close DNS Manager. 
 
-40. In the **Microsoft 365 admin center** tab in Internet Explorer, the **Domains** window should display your onmicrosoft.com domain and the new XXYYZZa.xxxCustomDomainxxx.xxx custom domain that you just created. You should note the status of XXYYZZa.xxxCustomDomainxxx.xxx is **Possible service issues**. This is NOT an indication that you have an error with this domain; rather, it simply indicates that one or more issues need to be updated before the domain can be used with Skype for Business or other Office 365 services. This status is the result of having selected just the **Exchange** option back on the **Choose your online services** window. While this selection is sufficient for this lab, it does result in this warning message, which you can ignore. 
-
-41. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab and **Windows PowerShell** left open for the next task. 
+40. Remain logged into the LON-DC1 VM with the **Microsoft 365 admin center** tab and **Windows PowerShell** left open for the next task. 
 
 **Note:** Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 
@@ -216,7 +214,7 @@ The Microsoft Online Services Sign-In Assistant provides end user sign-in capabi
 
 To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
 
-1. On the LON-DC1 VM, in Internet Explorer, enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
+1. On the LON-DC1 VM, in Internet Explorer, open a new tab and then enter the following URL in the address bar: **http://aka.ms/t01i**   <br/>
 
     ‎This will take you to the **Microsoft Download Center** for the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW.**
 

@@ -71,14 +71,21 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-5. Holly now wants to assign **Libby Hayward** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press:  <br/>
+5. The "official" name of all roles within Office 365 includes the complete spelling of the word "administrator"; whereas, in the Office 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator"; otherwise, the command will return an error indicating that it cannot find the role.
 
-	**Add-MsolRoleMember -RoleName "Service support admin” –RoleMemberEmailAddress Libby@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
+	To view all of the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
+	
+	**Get-MsolRole**
 
-6. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
+6. Holly now wants to assign **Libby Hayward** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
 
-	‎**Note:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to simply describe what you will be doing in the remaining steps in this task. Once you understand what you will be doing, then proceed to step 7.
+	**Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress Libby@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
 
+
+7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
+
+	‎**Note:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to simply describe what you will be doing in the remaining steps in this task. 
+	
 	- You will begin by running a command that creates a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you’re validating.  <br/> 
 		
 		**&dollar;role = Get-MsolRole -RoleName "enter name of role here"**
@@ -87,35 +94,35 @@ This task is similar to the prior one in that you will assign administrator righ
 	
 		**Get-MsolRoleMember -RoleObjectId $role.ObjectId**  ‎
 			
-7. You should now run the following two commands to verify that Libby Hayward was assigned to the Service support admin role:  <br/> 
+8. You should now run the following two commands as described in the previous step to verify that Libby Hayward was assigned the Service support administrator role:  <br/> 
 
-	**&dollar;role = Get-MsolRole -RoleName "Service support admin"**<br/>
+	**&dollar;role = Get-MsolRole -RoleName "Service support administrator"**<br/>
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**
 	
-8. Verify that **Libby Hayward** is in the list of users who have the **Service support admin** role. 
+9. Verify that **Libby Hayward** is in the list of users who have been assigned the **Service support administrator** role. 
 
-9. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing admin** role.  <br/>
+10. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing administrator** role.  <br/>
 
-	**&dollar;role = Get-MsolRole -RoleName "Billing admin"**  <br/>
+	**&dollar;role = Get-MsolRole -RoleName "Billing administrator"**  <br/>
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId** 
 
-10. Verify that **Adam Hobbs** is in the list of users who have the **Billing admin** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
+11. Verify that **Adam Hobbs** is in the list of users who have been assigned the **Billing administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
 
-11. You should now run the following two commands to verify which users have been assigned to the Global admin role.<br/>
+12. You should now run the following two commands to verify which users have been assigned to the Company administrator role.<br/>
 
-	**&dollar;role = Get-MsolRole -RoleName "Global admin"**<br/>
+	**&dollar;role = Get-MsolRole -RoleName "Company administrator"**<br/>
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**   
 
-12. Verify that **Holly Spencer** and the **MOD Administrator** are the only two users who have the **Global admin** role.   <br/>
+13. Verify that **Holly Spencer** and the **MOD Administrator** are the only two users who have the **Global admin** role.   <br/>
 
 	‎**Important:** Holly Spencer is in this list because you manually assigned her this role when you created her user account in the prior lab. However, the MOD Administrator was also assigned to this role by default becasue the person who signed up for Microsoft online services automatically becomes a Global admin. For Adatum, this was the MOD Administrator account. 
 
-	‎Verifying which users has been assigned the Global admin role is an important task that should be performed periodically for auditing purposes. Since the Global admin role should only be assigned to users who need global access to most management features and data across Microsoft online services, giving too many users global access is a security risk. Therefore, it is recommended that you only have between 2 and 4 Global admins.  
+	‎Verifying which users has been assigned the Company admin role is an important task that should be performed periodically for auditing purposes. Since the Company admin role should only be assigned to users who need global access to most management features and data across Microsoft online services, giving too many users global access is a security risk. Therefore, it is recommended that you only have between 2 and 4 Company admins.  
 	
-13. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+14. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  

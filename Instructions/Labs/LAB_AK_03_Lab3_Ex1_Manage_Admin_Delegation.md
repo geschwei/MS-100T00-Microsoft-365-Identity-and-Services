@@ -53,7 +53,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform these functions rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
+This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Office 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
 
 ‎In this task, you will log into PowerShell as Holly Spencer, who is Adatum’s Enterprise Administrator.
 
@@ -71,7 +71,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-5. The "official" name of all roles within Office 365 includes the complete spelling of the word "administrator"; whereas, in the Office 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator"; otherwise, the command will return an error indicating that it cannot find the role.
+5. The "official" name of all roles within Office 365 includes the complete spelling of the word "administrator"; whereas, in the Office 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role.
 
 	To view all of the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
 	
@@ -109,20 +109,8 @@ This task is similar to the prior one in that you will assign administrator righ
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId** 
 
 11. Verify that **Adam Hobbs** is in the list of users who have been assigned the **Billing administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
-
-12. You should now run the following two commands to verify which users have been assigned to the Company administrator role.<br/>
-
-	**&dollar;role = Get-MsolRole -RoleName "Company administrator"**<br/>
-
-	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**   
-
-13. Verify that **Holly Spencer** and the **MOD Administrator** are the only two users who have the **Global admin** role.   <br/>
-
-	‎**Important:** Holly Spencer is in this list because you manually assigned her this role when you created her user account in the prior lab. However, the MOD Administrator was also assigned to this role by default becasue the person who signed up for Microsoft online services automatically becomes a Global admin. For Adatum, this was the MOD Administrator account. 
-
-	‎Verifying which users has been assigned the Company admin role is an important task that should be performed periodically for auditing purposes. Since the Company admin role should only be assigned to users who need global access to most management features and data across Microsoft online services, giving too many users global access is a security risk. Therefore, it is recommended that you only have between 2 and 4 Company admins.  
 	
-14. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+12. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  

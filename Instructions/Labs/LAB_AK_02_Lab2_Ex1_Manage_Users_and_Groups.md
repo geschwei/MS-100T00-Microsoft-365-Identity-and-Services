@@ -1,23 +1,25 @@
 # Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
 
-In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will add several users and groups that will be used throughout the remainder to the labs in this course. You will also install the Windows PowerShell module, which enables you to access Azure Active Directory through PowerShell. You will then use PowerShell to perform several group management tasks in Microsoft 365.
+In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will create a Microsoft 365 user account for Holly, as well as several Office 365 groups. You will then use PowerShell to perform several group management tasks in Office 365.
+
+**Note:** The VM environment provided by your lab hosting provider comes with ten existing Microsoft 365 user accounts, as well as a number of existing on-premises user accounts. Several of these user accounts will be used throughout the labs in this course. 
 
 
-### Task 1 - Create Office 365 User Accounts 
+### Task 1 - Create a User Account for Adatum's Enterprise Administrator
 
-Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, Holly initially signed into Microsoft 365 as the default Microsoft 365 MOD Administrator account. In this task, she will create a Microsoft 365 user account for herself, and she will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365.
-
-‎You will then create several additional user accounts in the Microsoft 365 admin center, each of which you will later add to new security groups that you’ll also create. While Enterprise Admins typically do not add user accounts, this is a one-time task that you need to perform to prepare Adatum’s test environment for future lab exercises in this course.
+Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a personal Microsoft 365 user account set up for herself, you initially signed into Microsoft 365 as the default Microsoft 365 MOD Administrator account in the previous lab. In this lab, you will create a Microsoft 365 user account for Holly, and you will assign her user account the Microsoft 365 Global Administrator role, which gives her the ability to perform all administrative functions within Microsoft 365. Following this lab, you will perform all remaining labs using Holly's persona. 
 
 **Important:** As a best practice in your real-world deployments, you should always write down the first global admin account’s credentials (in this lab, the MOD Administrator) and store it away for security reasons. This account is a non-personalized identity that owns the highest privileges possible in a tenant. It is **not** MFA activated (because it is not personalized) and the password for this account is typically shared among several users. Therefore, this first global admin is a perfect target for attacks, so it’s always recommended to create personalized service admins and keep as few global admins as possible. For those global admins that you do create, they should each be mapped to a single identity, and they should each have MFA enforced.
 
-1. On the LON-DC1 VM, the **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**. 
+1. On the LON-DC1 VM, the **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab, and you should be signed into Microsoft 365 as the MOD Administrator. 
 
-2. In the **Active users** list, you will see that the only user is the default **MOD Administrator** account. Since you’re taking on the role of Holly Spencer in this lab scenario, you will create a user account for yourself, and you will assign yourself the Microsoft 365 role of Global Administrator. You will also create several other user accounts that will be used throughout the remaining labs in this course.
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**. 
 
-3. In the **Active Users** window, select **Add a user**. 
+3. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. In this task, you are taking on the role of the MOD Administrator, and as such, you must create a user account for Holly Spencer, who is Adatum's new Enterprise Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. 
 
-4. In the **Set up the basics** window, enter the following information:
+4. In the **Active Users** window, select **Add a user**. 
+
+5. In the **Set up the basics** window, enter the following information:
 
 	- First name: **Holly**
 
@@ -39,56 +41,34 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
 
 	- Uncheck the **Require this user to change their password when they first sign in** checkbox 
 
-5. Select **Next**.
+6. Select **Next**.
 
-6. In the **Assign product licenses** window, enter the following information:
+7. In the **Assign product licenses** window, enter the following information:
 
 	- Select location: **United States**
 
 	- Licenses: Under **Assign user a product license**, select **Office 365 E5** 
 
-7. Select **Next.**
+8. Select **Next.**
 
-8. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
+9. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
 
-9. In the **Roles information** that appears, select **Admin center access**. By doing so, the primary Microsoft 365 administrator roles are now displayed below this option and are available to be assigned. **Note:** All of the admin roles will be displayed if you select **Show all by category**. For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of primary roles.
+10. In the **Roles information** that appears, select **Admin center access**. By doing so, the most commonly used Microsoft 365 administrator roles are displayed below this option and are available to be assigned. 
 
-10. Select **Global admin** and then select **Next**.
+	**Note:** All of the admin roles will be displayed if you select **Show all by category**. For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of most commonly used roles.
 
-11. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
+11. Select **Global admin** and then select **Next**.
 
-12. On the **Holly Spencer has been added** page, select **Close.** If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
+12. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-13. Repeat steps 2-12 to add the following users with all the same data that was assigned to Holly, with the following exceptions: **Do NOT assign a role to any of the following users, and of this group, you should only assign a license to Alan Yoo. Alan and Holly should be the only users assigned a license (in both cases, an Office 365 E5 license).** <br/>
+13. On the **Holly Spencer has been added** page, select **Close.** If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 
-	**Licenses.** For Alan, you should assign an **Office 365 E5** license on the **Assign product licenses** page; he must be licensed for a later lab. For the remaining users, select the **Create user without product license (not recommended)** option on the **Assign product licenses** page. <br/>
-
-	**Roles.** By default, a user is assigned **User (no admin center access)**; this will be sufficient for these users for now. In the next lab, you will assign roles to the users. So when you reach the **Optional settings** window, select **Next** to bypass assigning a role. 
-    
-    **Domain:** When you enter the **Username** for each of these users, make sure that in the domain field, you select the **M365xZZZZZZ.onmicrosoft.com** domain, just as you did when you created Holly’s user account record. The domain field will be prefilled with the accepted **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain that you previously created; however, since the purpose of this task is to create Microsoft 365 user accounts, you must instead select the **M365xZZZZZZ.onmicrosoft.com** cloud domain (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
-
-	- **Alan Yoo** with username **Alan**  
-
-	- **Ada Russell** with username **Ada**
-
-	- **Adam Hobbs** with username **Adam**
-
-	- **Libby Hayward** with username **Libby**
-
-    - **Laura Atkins** with username **Laura** 
- 
-14. Once you have added all the user accounts, review the users in the list of **Active users**. Specifically, review the username assigned to each new user account to verify that you assigned each user to the **M365xZZZZZZ.onmicrosoft.com** domain. 
-
-	- If all new users were assigned to the **M365xZZZZZZ.onmicrosoft.com** domain, then proceed to the next step. 
-
-	- However, if any of the new users has a username that references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, you must change it to instead reference the **M365xZZZZZZ.onmicrosoft.com** domain. To do this, select the inverted elipsis icon **(More actions)** that appears to the left of the user's username value. In the menu that appears, select **Edit username**. In the **Manage username** window that appears, select the domain drop-down arrow, select the **M365xZZZZZZ.onmicrosoft.com** domain, select **Save changes**, and then close the window. 
-
-15. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
 ### Task 2 – Create and Manage Groups  
 
-In the prior task, you added several new Microsoft 365 user accounts. In this task, you will create two new groups and then manage the groups by assigning users to them. You will also analyze the effect on group members when you delete a group.
+In this task, you will create two new groups and then manage the groups by assigning users to them. You will also analyze the effect on group members when you delete a group.
 
 1. On the LON-DC1 VM, in the **Microsoft 365 admin center**, select **Groups** in the navigation pane on the left, and then under it, select **Groups**. 
 
@@ -100,9 +80,9 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 5. In the **Edit settings** window, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, leave the default setting of **Public** and then select **Next**.
 
-6. In the **Assign Owners** window, you will assign Alan Yoo and Holly Spencer as owners of this group. 
-	- Enter **Alan** in the **Owners** field. In the drop-down menu that appears, select **Alan Yoo**. 
-	- Enter **Holly** in the **Owners** field. In the drop-down menu that appears, select **Holly Spencer**. 
+6. In the **Assign Owners** window, you will assign Allan Deyoung and Patti Fernandez as owners of this group. 
+	- Enter **Allan** in the **Owners** field. In the drop-down menu that appears, select **Allan Deyoung**. 
+	- Enter **Patti** in the **Owners** field. In the drop-down menu that appears, select **Patti Fernandez**. 
 	- Select **Next**.
 
 7. In the **Review and finish adding group** window, review the content that you entered. If everything is correct, select **Create group**; otherwise, select **Back** and fix anything that needs correction (or select **Edit** under the specific area that needs adjustment).
@@ -113,13 +93,13 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 	- Group type: **Security**
 
-	- Name: **Accounts Receivable**
+	- Name: **Financial admins**
 
-	- Description: **A/R department users**<br/>
+	- Description: **Financial administrative personnel**<br/>
 
 	**Note:** there is no owner, email address, or privacy setting for Security groups
 
-10. If either of the two new groups do not appear in the **Groups** list, wait a couple of minutes and then select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. Note that the Accounts Receivable group does not have a group email address because it's a Security group.
+10. If either of the two new groups do not appear in the **Groups** list, wait a couple of minutes and then select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. Note that the Financial admins group does not have a group email address because it's a Security group.
 
 11. You’re now ready to add members to the groups. In the list of **Groups**, select the **Inside Sales** group, which opens a window for the group. 
 
@@ -129,13 +109,13 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 14. In the **Inside Sales** group window, select **Add members**. This displays the list of current users.
 
-15. In the list of users, select **Ada Russell** and **Alan Yoo** and then select **Save**. 
+15. In the list of users, select **Diego Siciliani** and **Lynne Robbins** and then select **Save**. 
 
 16. Select **Close**. This displays the list of users for this group. Select **Close** again. 
 
-17. On the **Inside Sales** window, Alan and Ada now appear as members of the group. Select the **X** in the upper right-hand corner to close the window. 
+17. On the **Inside Sales** window, Diego and Lynne should now appear as members of the group. Select the **X** in the upper right-hand corner to close the window. 
 
-18. Repeat steps 11-17 to add **Adam Hobbs** and **Libby Hayward** as members of the **Accounts Receivable** group.
+18. Repeat steps 11-17 to add **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke** as members of the **Financial admins** group.
 
 19. You now want to test the effect of deleting a group. In the list of **Groups,** select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the menu box, select **Delete group**. 
 
@@ -147,14 +127,16 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 23. To verify whether deleting this group affected any of its members, select **Users** and then **Active Users** in the left-hand navigation pane. 
 
-24. In the **Active users** list verify that the two members of the Inside Sales group, Ada Russell and Alan Yoo, still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
+24. In the **Active users** list verify that the two members of the Inside Sales group, **Diego Siciliani** and **Lynne Robbins**, still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
 
 25. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
 ### Task 3 – Recover Groups using PowerShell 
 
-In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this Azure AD-related task, the Windows Azure Active Directory PowerShell Module must be installed. Note: You should have installed the Windows Azure Active Directory PowerShell Module during the prior lab.   
+In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this Azure AD-related task, the Windows Azure Active Directory PowerShell Module must be installed. 
+
+**NOTE:** You should have installed the Windows Azure Active Directory PowerShell Module in the prior lab.   
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
@@ -190,7 +172,7 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 7. You now want to verify that the recovery process correctly updated the group's membership. From the **Groups** windows, select the **Inside Sales** group.
 
-8. In the **Inside Sales** window, select the **Members** tab. **Alan Yoo** and **Ada Russell** should appear as members of the group.
+8. In the **Inside Sales** window, select the **Members** tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group.
 
 9. Close the **Inside Sales** window.
 

@@ -1,6 +1,6 @@
 # Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
 
-In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will create a Microsoft 365 user account for Holly, as well as several Office 365 groups. You will then use PowerShell to perform several group management tasks in Office 365.
+In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will create a Microsoft 365 user account for Holly, and you will create a couple of Office 365 groups. You will then delete one of the groups and then use PowerShell to recover the deleted group.
 
 **Note:** The VM environment provided by your lab hosting provider comes with ten existing Microsoft 365 user accounts, as well as a number of existing on-premises user accounts. Several of these user accounts will be used throughout the labs in this course. 
 

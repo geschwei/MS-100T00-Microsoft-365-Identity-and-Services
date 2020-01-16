@@ -94,15 +94,18 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 2. In the **Groups** page, select **Add a group**.  
 
-3. In the **Choose a group type** window, select **Office 365 (recommended)** and select **Next**. 
+3. In the **Choose a group type** window, select **Office 365 (recommended)** and then select **Next**. 
 
 4. In the **Set up the basics** window, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field. Select **Next**.
 
 5. In the **Edit settings** window, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, leave the default setting of **Public** and then select **Next**.
 
-6. In the **Assign Owners** window, enter **Alan** in the **Owners** field. In the drop-down menu that appears, select **Alan Yoo**. Enter **Holly** in the **Owners** field, and then in the drop-down menu that appears, select **Holly Spencer**. Select **Next**.
+6. In the **Assign Owners** window, you will assign Alan Yoo and Holly Spencer as owners of this group. 
+	- Enter **Alan** in the **Owners** field. In the drop-down menu that appears, select **Alan Yoo**. 
+	- Enter **Holly** in the **Owners** field. In the drop-down menu that appears, select **Holly Spencer**. 
+	- Select **Next**.
 
-7. In the **Review and finish adding group** window, review the content that you entered. If everything looks good, select **Create group**; otherwise, select **Back** and fix anything that needs correction (or select **Edit** under the specific area).
+7. In the **Review and finish adding group** window, review the content that you entered. If everything is correct, select **Create group**; otherwise, select **Back** and fix anything that needs correction (or select **Edit** under the specific area that needs adjustment).
 
 8. Select **Close**. This returns you to the **Groups** page. Note that your group may not immediatgely appear in the list. As indicated on the page, it can take up to an hour for new distribution groups and mail-enabled security groups to appear in this list. However, in your lab environment, our experience has shown that the group will appear by the time you finish adding the next group.
 
@@ -116,13 +119,13 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 	**Note:** there is no owner, email address, or privacy setting for Security groups
 
-10. If either of the two new groups do not appear in the **Groups** list, select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. Note that the Accounts Receivable group does not have a group email address because it's a Security group.
+10. If either of the two new groups do not appear in the **Groups** list, wait a couple of minutes and then select the **Refresh** icon to the right of the URL in Internet Explorer. Both groups should now appear. Note that the Accounts Receivable group does not have a group email address because it's a Security group.
 
 11. You’re now ready to add members to the groups. In the list of **Groups**, select the **Inside Sales** group, which opens a window for the group. 
 
-12. In the **Inside Sales** group window, select **Members**.
+12. In the **Inside Sales** group window, select the **Members** tab.
 
-13. In the **Members** section, you can see that there are zero (0) members. Select **View all and manage members** to add members to the group. 
+13. Under the **Members** section, you can see that there are zero (0) members. Select **View all and manage members** to add members to the group. 
 
 14. In the **Inside Sales** group window, select **Add members**. This displays the list of current users.
 
@@ -140,11 +143,11 @@ In the prior task, you added several new Microsoft 365 user accounts. In this ta
 
 21. Once the group is deleted, select **Close**. 
 
-22. This will return you to the list of **Groups** in the **Microsoft 365 admin center**. The **Inside Sales** group should no longer appear. If the Inside Sales group still displays, select the **Refresh** icon to the right of the URL in Internet Explorer. The updated **Groups** list should no longer include the Inside Sales group.
+22. This will return you to the list of **Groups** in the **Microsoft 365 admin center**. The **Inside Sales** group should no longer appear. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** icon to the right of the URL in Internet Explorer. The updated **Groups** list should no longer include the Inside Sales group.
 
-23. To verify whether deleting this group affected any of its members, select **Users** and then **Active Users** in the navigation pane on the left-hand side of the Groups window. 
+23. To verify whether deleting this group affected any of its members, select **Users** and then **Active Users** in the left-hand navigation pane. 
 
-24. In the **Active users** list verify that the two members of the Inside Sales group, Ada Russell and Alan Yoo, still exist in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
+24. In the **Active users** list verify that the two members of the Inside Sales group, Ada Russell and Alan Yoo, still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were members of the group.
 
 25. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
@@ -155,7 +158,7 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. If Windows PowerShell is still open from the previous lab, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before.
+2. If Windows PowerShell is still open from the previous lab, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
 3. In **Windows PowerShell**, type the following commands (press Enter after each command):
 
@@ -171,11 +174,11 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 	- Before you can restore this deleted group, you must first copy the Object ID of the Inside Sales group that appears in the table of deleted groups. When you perform the next command to restore the group, you will use this ID to identify the group that you want restored. <br/>
 	
-		To copy the ID, select the entire ID and then right-click and select **Copy**.
+		To copy the ID, select the entire ID and then press Ctrl-C.
 
 	- You should then run the following command to retrieve and restore the deleted group whose Object ID matches the value you enter:<br/>  
 
-		‎**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command, right-click and select **Paste** when you get to the {objectId} parameter, then press Enter to run the command.  <br/>
+		‎**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, simply right-click to paste in the Id. Then press Enter to run the command.  <br/>
 
 		‎**Restore-AzureADMSDeletedDirectoryObject -Id {objectId}**  
 		

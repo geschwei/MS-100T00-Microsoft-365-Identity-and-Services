@@ -186,9 +186,15 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 5. Validate that the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Internet Explorer browser, select **Groups** from the left-hand navigation pane, and then under it select **Groups** to display the list of groups. 
 
-6. Verify that the **Inside Sales** group has been restored and is present in the list of groups.
+6. Verify that the **Inside Sales** group has been restored and is present in the list of groups. If the Inside Sales group does not appear, wait a minute or two and then select the **Refresh** icon to the right of the URL in Internet Explorer.
 
-7. Leave your browser windows open so that they’re ready for the next task. 
+7. You now want to verify that the recovery process correctly updated the group's membership. From the **Groups** windows, select the **Inside Sales** group.
+
+8. In the **Inside Sales** window, select the **Members** tab. **Alan Yoo** and **Ada Russell** should appear as members of the group.
+
+9. Close the **Inside Sales** window.
+
+10. Leave your browser windows open so that they’re ready for the next task. 
 
 
 # End of Lab 2

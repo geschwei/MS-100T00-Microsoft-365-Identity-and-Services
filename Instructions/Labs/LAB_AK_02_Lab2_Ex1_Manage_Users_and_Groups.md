@@ -79,11 +79,11 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since she doesn’t have a
  
 14. Once you have added all the user accounts, review the users in the list of **Active users**. Specifically, review the username assigned to each new user account to verify that you assigned each user to the **M365xZZZZZZ.onmicrosoft.com** domain. 
 
-If all of the new users were assigned to this **M365xZZZZZZ.onmicrosoft.com** domain, then proceed to the next step. 
+	- If all new users were assigned to the **M365xZZZZZZ.onmicrosoft.com** domain, then proceed to the next step. 
 
-However, if any of the new users has a username that references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, you must change it to instead reference your **M365xZZZZZZ.onmicrosoft.com** domain. To do this, select the inverted elipsis icon **(More actions)** that appears to the left of the user's username value. In the menu that appears, select **Edit username**. In the **Manage username** window that appears, select the domain drop-down arrow, select the **M365xZZZZZZ.onmicrosoft.com** domain, select **Save changes**, and then close the window. 
+	- However, if any of the new users has a username that references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, you must change it to instead reference the **M365xZZZZZZ.onmicrosoft.com** domain. To do this, select the inverted elipsis icon **(More actions)** that appears to the left of the user's username value. In the menu that appears, select **Edit username**. In the **Manage username** window that appears, select the domain drop-down arrow, select the **M365xZZZZZZ.onmicrosoft.com** domain, select **Save changes**, and then close the window. 
 
-14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+15. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
 ### Task 2 – Create and Manage Groups  

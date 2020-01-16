@@ -1,8 +1,7 @@
 # Module 3 - Lab 3 - Exercise 1 - Manage Administration Delegation
 
-You are the Enterprise Administrator for Adatum Corporation, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
+In this lab, you will continue in your role as Holly Spencer, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
 
-In this lab, you will take on the persona of Holly Spencer, Adatum’s Enterprise Administrator. If you’ll recall, in the prior lab you created Holly’s Microsoft 365 user account and assigned her the Microsoft 365 Global Administrator role. As Holly, you will now begin managing Adatum’s Microsoft 365 tenant.
 
 ### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
 
@@ -10,45 +9,25 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 1. If you’re not logged into the Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. After completing the previous lab, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this lab, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Spencer, Adatum’s Enterprise Admin (whom you previously assigned a Microsoft 365 Global Admin role). Therefore, you must log out of Microsoft 365 as the MOD Administrator and log back in as Holly.<br/>
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
-	On the Microsoft 365 admin center tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser, and in the **My account** pane, select **Sign out.** <br/>
-	
-	**Important:** When signing out of one account and signing in as another, you should close all your browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Please close all other browser tabs now. 
-	
-3. In Internet Explorer browser, navigate to **https://portal.office.com**. 
+3. In the **Active users** list, select **Diego Siciliani**. 
 
-4. In the **Pick an account** window, only the admin account that you just logged out from appears. Select **Use another account**. 
+4. Diego Siciliani’s properties window displays, and the **Account** tab is displayed by default. Under the **Roles** section, select **Manage roles**. 
 
-5. In the **Sign in** window, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). Select **Next**.
+5. In the **Manage admin roles** window, the **User (no admin center access)** option is currently selected. Now that you want to assign Diego an administrator a role, select the **Admin center access** option. This enables the roles. 
 
-6. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**.
+6. Diego has been promoted to Billing administrator, but since the Billing admin role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
-7. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
+7. In the list of roles that appear by category, scroll down to the **Other** category and select **Billing admin**, and then select **Save changes**. 
 
-8. In the **Office 365 home page**, select **Admin** to open the Microsoft 365 admin center.
+8. On the **Admin roles updated** page, select the **X** in the upper-right corner of the screen to close the **Admin roles updated** window.
 
-9. If a **Good morning/afternoon/evening Holly Spencer** window appears, select **Get started**.
+9. On the **Diego Siciliani** properties window, verify that **Billing admin** appears under the **Roles** section. Select the **X** in the upper-right corner of the screen to close the window. This returns you to the **Active users** list. 
 
-10. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
+10. Repeat steps 3-9 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the initial list of admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
 
-11. In the **Active users** list, select **Adam Hobbs**. 
-
-12. Adam Hobbs’s properties window displays, and the **Account** tab is displayed by default. Under the **Roles** section, select **Manage roles**. 
-
-13. In the **Manage admin roles** window, the **User (no admin center access)** option is currently selected because you did not assign Adam a role when you created his user account in the prior lab. Now that you want to assign Adam a role, select the **Admin center access** option. This enables the roles. 
-
-14. Scroll down and select **Show all by category**. 
-
-15. In the list of roles that appear by category, scroll down to the **Other** category and select **Billing admin**, and then select **Save changes**. 
-
-16. On the **Admin roles updated** page, select the **X** in the upper-right corner of the screen to close the **Admin roles updated** window.
-
-17. On the **Adam Hobbs** properties window, verify the **Billing admin role** appears under the **Roles** section. Select the **X** in the upper-right corner of the screen to close the window. This returns you to the **Active users** list. 
-
-18. Repeat steps 11 through 17 for **Ada Russell.** Assign Ada to both the **Helpdesk admin** role and the **User admin** role (both roles are in the initial list of admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
-
-19. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
+11. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  

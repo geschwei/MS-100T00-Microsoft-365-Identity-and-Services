@@ -91,69 +91,83 @@ This task is similar to the prior one in that you will assign administrator righ
 
 ### Task 3 - Verify Delegated Administration  
 
-In this task, you will log into the Client 1 (LON-CL1) VM and then log into the Microsoft 365 admin center as various users to confirm several of the changes that you made when managing your administrative delegation in the prior tasks. 
+In this task, you will begin by examining the administrative properties of two users, Allan Deyound and Lynne Robbins. You will then log into the Office 365 home page on the Client 1 VM (LON-CL1) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. 
 
 **Password Note:** When logging into Office 365 as any of the existing user accounts that were created for you in the Microsoft 365 tenant (for example, Allan Deyoung, Lynne Robbins, and so on), you must use the same Tenant Password that you used in Lab 1 when you signed in using the tenant email account (admin@M365xZZZZZZ.onmicrosoft.com) to set up your organization profile. All the existing Microsoft 365 user accounts in your tenant have been assigned this same Tenant Password, which your instructor will provide for you.
 
-1. Switch to the Client 1 VM (LON-CL1) by selecting the **Virtual machine** field at the top of the screen and then selecting **LON-CL1**.
+1. In the Domain Controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as Holly Spencer. If not, then do so now.
 
-2. On the log-in screen, you will log in as the **Administrator** account with a password of **Pa55w.rd**.
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
-3. If a **Networks** window appears, select **No**.
+3. In the **Active users** list, select **Allan Deyoung**. 
 
-4. On the taskbar, select the **Microsoft Edge** icon. 
+4. In **Allan Deyoung's** properties window, the **Account** tab is displayed by default. Under the **Roles** section, it should indicate that Allan has **No administrator access**. Select the **X** in the upper right corner to close Allan's properties window.
 
-5. In your **Edge** browser navigate to **https://portal.office.com**. 
+5. In the **Active users** list, select **Lynne Robbins**. 
 
-6. In the **Sign-in** window, enter **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
+6. In **Lynne Robbins's** properties window, it should indicate that Lynne has been assigned the **User admin** and **Helpdesk admin** roles. Close Lynne's properties window.
 
-7. If a **Get your work done with Office 365** window appears, select the **X** to close it.
+7. Switch to the Client 1 VM (LON-CL1) by selecting the **Virtual machine** field at the top of the screen and then selecting **LON-CL1**.
 
-8. In the **Office 365 home page**, note how the **Admin** option is not available since Allan was never assigned an administrator role. 
+8. On the log-in screen, you will log in as the **Administrator** account with a password of **Pa55w.rd**.
 
-9. In **Microsoft Edge**, at the top right of the **Office 365 home page**, select the user icon for **Allan Deyoung**, and in his **My account** pane, select **Sign out.**   <br/>
+9. If a **Networks** window appears, select **No**.
 
-	‎**Important:** When signing out of one account and signing in as another, you should close all your browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Please close all other browser tabs now.  
+10. On the taskbar, select the **Microsoft Edge** icon. 
+
+11. In your **Edge** browser navigate to **https://portal.office.com**. 
+
+12. You will begin by signing into Office 365 as **Allan Deyoung**. In the **Sign-in** window, enter **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
+
+13. If a **Get your work done with Office 365** window appears, select the **X** to close it.
+
+14. In the **Office 365 home page**, note how the **Admin** option is not available since Allan was never assigned an administrator role. 
+
+15. In **Microsoft Edge**, at the top right of the **Office 365 home page**, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with **AD** in it), and in his **My account** pane, select **Sign out.**   <br/>
+
+	‎**Important:** When signing out of Office 365 as one user account and signing in as another, you should close all your Office 365 browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the Office 365 windows associated with the prior user. Please close all other Office 365 browser tabs now.  
 	
-10. In your **Edge** browser, navigate to **https://portal.office.com** and repeat the previous sign-in steps to sign in as **Lynne Roibbins** with a username of **LynneR@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with the password **Pa55w.rd**. 
+16. You will now sign into Office 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Allan, you're signed out now**. In this window, it gives you the option of signing back in as Allan, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the Tenant Password provided by your instructor. 
 
-11. Since Lynne has been assigned to an administrator role, note how **Admin** appears in the **Office 365 home page**. Select **Admin.**
+17. Since Lynne has been assigned to an administrator role, note how **Admin** appears in the **Office 365 home page**. Select **Admin.**
 
-12. If the **Good morning/afternoon/evening Lynne Robbins** window appears, select **Get started**.
+18. If the **Good morning/afternoon/evening Lynne Robbins** window appears, select **Get started**.
 
-13. On the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
+19. On the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
 
-14. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords have been compromised. Lynne has been asked to reset their passwords to a different value.   <br/>
+20. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords have been compromised. Lynne has been asked to reset their passwords to a different value.   <br/>
 
-	‎In the **Active users** list, select the **key icon (Reset a password)** to the right of **Diego Siciliani's** name. 
+	‎In the **Active users** list, as you move your mouse from one user account to another, notice the **key (Reset a password)** icon that appears to the right of each user's name. Select the key icon that appears to the right of **Diego Siciliani's** name.
 
-15. In the **Reset password** window for Diego, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was selected. 
+21. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If a checdkmark does not appear in the **Require this user to change their password when they first sign in** checkbox, then select it now so that it displays a checkmark. 
 
-16. Select **Reset**.
+22. Select **Reset**.
 
-17. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Spencer to make this change. Select **Close**. 
+23. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Spencer to make this change. Select **Close**. 
 
-18. In the **Active users** list, select the **key icon (Reset a password)** to the right of **Allan Deyoung’s** name. 
+24. If a survey request window appars, select **Cancel**.
 
-19. In the **Reset password** window for Allan, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was checked. 
+25. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
-20. Select **Reset**.<br/>
+26. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If a checdkmark does not appear in the **Require this user to change their password when they first sign in** checkbox, then select it now so that it displays a checkmark.  
 
-	**IMPORTANT:** It is very important that you write down the temporary password that was automatically generated for Allan’s account. You will need this password in the next exercise when you log into Office 365 as Allan. Once you write down this password, select the **Send password in email** checkbox, and then select **Close.**
+27. Select **Reset**.<br/>
 
-21. Select **Send email and close.** 
+28. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** checkbox. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider), and then select **Send email and close**.
 
-22. Management has recently discovered that Nestor Wilke’s username may have been compromised. As a result, Lynne has been asked to block Nestor’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Nestor Wilke’s** name (do NOT select Nestor’s name itself). 
+29. Management has recently discovered that Nestor Wilke’s username may have been compromised. As a result, Lynne has been asked to block Nestor’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Nestor Wilke’s** name (do NOT select Nestor’s name itself). 
 
-23. In the menu bar at the top of the page, select the **ellipsis icon** to display a drop-down menu of additional options. Select **Edit sign-in status**.
+	**Note:** if any other user account is selected, you must unselect that user account before proceeding. Only Nestor's account should be selected.
 
-24. In the **Block this user?** window, select the **Block this user from signing in** checkbox, and then select **Save changes.** 
+30. In the menu bar at the top of the page, select the **ellipsis icon** to display a drop-down menu of additional options. Select **Edit sign-in status**.
 
-25. Close the **Block this user?** window by selecting **Cancel**. 
+31. In the **Block this user?** window, select the **Block this user from signing in** checkbox, and then select **Save changes.** 
 
-26. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the **LR circle**), and in her **My account** pane, select **Sign out.** 
+32. Close the **Block this user?** window by selecting the **X** in the upper right-hand corner. 
 
-27. Once Lynne is signed out, close Microsoft Edge. 
+33. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
+
+34. Once Lynne is signed out, close Microsoft Edge. 
 
 
 # Proceed to Exercise 2

@@ -113,15 +113,15 @@ In this task, you will create two new groups and then manage the groups by assig
 
 	- Group type: **Security**
 
-	- Name: **Financial administrators**
+	- Name: **IT Admins**
 
-	- Description: **Financial administrative personnel**<br/>
+	- Description: **IT administrative personnel**<br/>
 
 	**Note:** there is no owner, email address, or privacy setting for Security groups
 
-18. If either of the two new groups do not appear in the **Groups** list, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). Both groups should now appear. Note that the Financial administrators group does not have a group email address because it's a Security group.
+18. If either of the two new groups do not appear in the **Groups** list, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). Both groups should now appear.
 
-	**Note:** Two of the additional group types are Mail-enabled Security groups and Distribution groups. We did not use either of these group types in this lab because it typically takes an hour or more to add these two types of groups into Microsoft 365; whereas, Office 365 groups and Security groups usually take just a matter of minutes to add. 
+	**Note:** The IT admins group does not have a group email address because it's a Security group. Two additional group types are Mail-enabled Security groups and Distribution groups. We did not use either of these group types in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas, Office 365 groups and Security groups usually take just a matter of minutes to appear. 
 
 19. You’re now ready to add members to the groups. In the list of **Groups**, select the **Inside Sales** group, which opens a window for the group. 
 
@@ -137,7 +137,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 25. On the **Inside Sales** window, Diego and Lynne should now appear as members of the group. Select the **X** in the upper right-hand corner to close the window. 
 
-26. Repeat steps 19-25 to add **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke** as members of the **Financial administrators** group.
+26. Repeat steps 19-25 to add **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke** as members of the **IT admins** group.
 
 27. You now want to test the effect of deleting a group. In the list of **Groups,** select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the menu box, select **Delete group**. 
 

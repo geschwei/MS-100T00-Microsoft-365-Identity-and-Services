@@ -15,7 +15,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 4. Diego Siciliani’s properties window displays, and the **Account** tab is displayed by default. Under the **Roles** section, select **Manage roles**. 
 
-5. In the **Manage admin roles** window, the **User (no admin center access)** option is currently selected. Now that you want to assign Diego an administrator a role, select the **Admin center access** option. This enables the roles. 
+5. In the **Manage admin roles** window, the **User (no admin center access)** option is currently selected. Now that you want to assign Diego an administrator a role, select the **Admin center access** option. This enables the admin roles for selection. 
 
 6. Diego has been promoted to Billing administrator, but since the Billing admin role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
@@ -25,7 +25,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 9. On the **Diego Siciliani** properties window, verify that **Billing admin** appears under the **Roles** section. Select the **X** in the upper-right corner of the screen to close the window. This returns you to the **Active users** list. 
 
-10. Repeat steps 3-9 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the initial list of admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
+10. Repeat steps 3-9 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the list of commonly used admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
 
 11. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
 
@@ -33,8 +33,6 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Office 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
-
-‎In this task, you will log into PowerShell as Holly Spencer, who is Adatum’s Enterprise Administrator.
 
 1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from the previous lab. If you closed the PowerShell window, then open it again using the same instruction as before. 
 
@@ -60,10 +58,9 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	**Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
 
-
 7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
 
-	‎**Note:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to simply describe what you will be doing in the remaining steps in this task. 
+	‎**Important:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to describe what you will be doing in the remaining steps in this task. 
 	
 	- You will begin by running a command that creates a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you’re validating.  <br/> 
 		
@@ -73,7 +70,7 @@ This task is similar to the prior one in that you will assign administrator righ
 	
 		**Get-MsolRoleMember -RoleObjectId $role.ObjectId**  ‎
 			
-8. You should now run the following two commands as described in the previous step to verify that Libby Hayward was assigned the Service support administrator role:  <br/> 
+8. You should now run the following two commands as described in the previous step to verify that Patti Fernandez was assigned the Service support administrator role:  <br/> 
 
 	**&dollar;role = Get-MsolRole -RoleName "Service support administrator"**<br/>
 
@@ -87,7 +84,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId** 
 
-11. Verify that **Diego Siciliani** is in the list of users who have been assigned the **Billing administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
+11. Verify that **Diego Siciliani** is in the list of users who have been assigned the **Billing administrator** role (you assigned Diego to this role in the prior task using the Microsoft 365 admin center). 
 	
 12. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 

@@ -135,11 +135,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 19. On the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
 
-20. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords have been compromised. Lynne has been asked to reset their passwords to a different value.   <br/>
+20. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords may have been compromised. Per Adatum's company policy, Lynne must reset their passwords to a temporary value, and then force them to reset their password at their next login.   <br/>
 
 	‎In the **Active users** list, as you move your mouse from one user account to another, notice the **key (Reset a password)** icon that appears to the right of each user's name. Select the key icon that appears to the right of **Diego Siciliani's** name.
 
-21. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If a checdkmark does not appear in the **Require this user to change their password when they first sign in** checkbox, then select it now so that it displays a checkmark. 
+21. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** checkbox so that it displays a checkmark. 
 
 22. Select **Reset**.
 
@@ -149,7 +149,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 25. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
-26. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If a checdkmark does not appear in the **Require this user to change their password when they first sign in** checkbox, then select it now so that it displays a checkmark.  
+26. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** checkbox so that it displays a checkmark.  
 
 27. Select **Reset**.<br/>
 

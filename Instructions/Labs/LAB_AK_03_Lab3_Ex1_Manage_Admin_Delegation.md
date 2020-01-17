@@ -93,7 +93,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 In this task, you will log into the Client 1 (LON-CL1) VM and then log into the Microsoft 365 admin center as various users to confirm several of the changes that you made when managing your administrative delegation in the prior tasks. 
 
-**Password Note:** When logging into Office 365 as any of the existing user accounts that were created for you in the Microsoft 365 tenant (for example, Allan Deyoung, Lynne Robbins, and so on), you must use the same Tenant Password that you used in Lab 1 when you signed in using the tenant email account (admin@M365xZZZZZZ.onmicrosoft.com). All of the existing user accounts have been assigned this same Tenant Password, which your instructor will provide for you.
+**Password Note:** When logging into Office 365 as any of the existing user accounts that were created for you in the Microsoft 365 tenant (for example, Allan Deyoung, Lynne Robbins, and so on), you must use the same Tenant Password that you used in Lab 1 when you signed in using the tenant email account (admin@M365xZZZZZZ.onmicrosoft.com) to set up your organization profile. All the existing Microsoft 365 user accounts in your tenant have been assigned this same Tenant Password, which your instructor will provide for you.
 
 1. Switch to the Client 1 VM (LON-CL1) by selecting the **Virtual machine** field at the top of the screen and then selecting **LON-CL1**.
 
@@ -105,9 +105,9 @@ In this task, you will log into the Client 1 (LON-CL1) VM and then log into the 
 
 5. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-6. In the **Sign-in** window, enter **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with the password **Pa55w.rd**.   <br/>
+6. In the **Sign-in** window, enter **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
 
-7. If a **Get your work done with Office 365** window appears, select the **X t**o close it.
+7. If a **Get your work done with Office 365** window appears, select the **X** to close it.
 
 8. In the **Office 365 home page**, note how the **Admin** option is not available since Allan was never assigned an administrator role. 
 

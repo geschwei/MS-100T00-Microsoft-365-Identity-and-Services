@@ -52,13 +52,13 @@ This task is similar to the prior one in that you will assign administrator righ
 
 5. The "official" name of all roles within Office 365 includes the complete spelling of the word "administrator"; whereas, in the Office 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role.
 
-	To view all of the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
+	To view all the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
 	
 	**Get-MsolRole**
 
-6. Holly now wants to assign **Libby Hayward** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
+6. Holly now wants to assign **Patti Fernandez** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
 
-	**Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress Libby@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
+	**Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) 
 
 
 7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
@@ -79,7 +79,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId**
 	
-9. Verify that **Libby Hayward** is in the list of users who have been assigned the **Service support administrator** role. 
+9. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service support administrator** role. 
 
 10. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing administrator** role.  <br/>
 
@@ -87,7 +87,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎**Get-MsolRoleMember -RoleObjectId $role.ObjectId** 
 
-11. Verify that **Adam Hobbs** is in the list of users who have been assigned the **Billing administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
+11. Verify that **Diego Siciliani** is in the list of users who have been assigned the **Billing administrator** role (you assigned Adam to this role in the prior task using the Microsoft 365 admin center). 
 	
 12. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
@@ -104,47 +104,45 @@ In this task, you will log into the Client 1 (LON-CL1) VM and then log into the 
 
 4. On the taskbar, select the **Microsoft Edge** icon. 
 
-5. In your **Edge** browser navigate to **https://portal.office.com**. In the **Pick an Account** window, if **Alan Yoo** is listed then select his username; otherwise, select **Use another account** and log in as [](https://login.microsoftonline.com/)**Alan@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).   <br/>
-
-	‎**Note:** When entering Alan’s password, you must enter the temporary password that was assigned to Alan’s account in the prior exercise when you reset Alan’s account and had the system automatically assign him a temporary password. 
+5. In your **Edge** browser navigate to **https://portal.office.com**. In the **Pick an Account** window, if **Allan Deyoung** is listed then select his username; otherwise, select **Use another account** and log in as **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with the password **Pa55w.rd**.   <br/>
 
 6. If a **Get your work done with Office 365** window appears, select the **X t**o close it.
 
-7. In the **Office 365 home page**, note how the **Admin** option is not available since Alan was never assigned an administrator role. 
+7. In the **Office 365 home page**, note how the **Admin** option is not available since Allan was never assigned an administrator role. 
 
-8. In **Microsoft Edge**, at the top right of the **Office 365 home page**, select the user icon for **Alan Yoo**, and in his **My account** pane, select **Sign out.**   <br/>
+8. In **Microsoft Edge**, at the top right of the **Office 365 home page**, select the user icon for **Allan Deyoung**, and in his **My account** pane, select **Sign out.**   <br/>
 
 	‎**Important:** When signing out of one account and signing in as another, you should close all your browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Please close all other browser tabs now.  
 	
-9. In your **Edge** browser, navigate to **https://portal.office.com** and repeat the previous sign-in steps to sign in as **Ada Russell** with a username of **Ada@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with the password **Pa55w.rd.** 
+9. In your **Edge** browser, navigate to **https://portal.office.com** and repeat the previous sign-in steps to sign in as **Lynne Roibbins** with a username of **LynneR@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with the password **Pa55w.rd**. 
 
-10. Since Ada has been assigned to an administrator role, note how **Admin** appears in the **Office 365 home page**. Select **Admin.**
+10. Since Lynne has been assigned to an administrator role, note how **Admin** appears in the **Office 365 home page**. Select **Admin.**
 
-11. In the **Good morning/afternoon/evening Ada Russell** window, select **Get started**.
+11. If the **Good morning/afternoon/evening Lynne Robbins** window appears, select **Get started**.
 
 12. On the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
 
-13. As the **Helpdesk administrator**, Ada has permission to change user passwords. In this case, Libby Hayward and Alan Yoo have reported that their passwords have been compromised. Ada has been asked to reset their passwords to a different value.   <br/>
+13. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords have been compromised. Lynne has been asked to reset their passwords to a different value.   <br/>
 
-	‎In the **Active users** list, select the **key icon (Reset a password)** to the right of **Libby Hayward’s** name. 
+	‎In the **Active users** list, select the **key icon (Reset a password)** to the right of **Diego Siciliani's** name. 
 
-14. In the **Reset password** window for Libby, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was selected. 
+14. In the **Reset password** window for Diego, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was selected. 
 
 15. Select **Reset**.
 
-16. You should receive an error message indicating that you cannot reset Libby’s password because she has admin roles. In Libby’s case, she was assigned to the Service Support Admin role. Since only Global Admins can change another admin’s password, you’ll need to ask Holly Spencer to make this change. Select **Close**. 
+16. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Spencer to make this change. Select **Close**. 
 
-17. In the **Active users** list, select the **key icon (Reset a password)** to the right of **Alan Yoo’s** name. 
+17. In the **Active users** list, select the **key icon (Reset a password)** to the right of **Allan Deyoung’s** name. 
 
-18. In the **Reset password** window for Alan, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was checked. 
+18. In the **Reset password** window for Allan, ensure the **Auto-generate password** option is selected, and then uncheck the **Require this user to change their password when they first sign in** checkbox if it was checked. 
 
 19. Select **Reset**.<br/>
 
-	**IMPORTANT:** It is very important that you write down the temporary password that was automatically generated for Alan’s account. You will need this password in the next exercise when you log into Office 365 as Alan. Once you write down this password, select the **Send password in email** checkbox, and then select **Close.**
+	**IMPORTANT:** It is very important that you write down the temporary password that was automatically generated for Allan’s account. You will need this password in the next exercise when you log into Office 365 as Allan. Once you write down this password, select the **Send password in email** checkbox, and then select **Close.**
 
 20. Select **Send email and close.** 
 
-21. Management has recently discovered that Adam Hobbs’s username may have been compromised. As a result, Ada has been asked to block Adam’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Adam Hobbs’s** name (do NOT select Adam’s name itself). 
+21. Management has recently discovered that Nestor Wilke’s username may have been compromised. As a result, Lynne has been asked to block Nestor’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Nestor Wilke’s** name (do NOT select Nestor’s name itself). 
 
 22. In the menu bar at the top of the page, select the **ellipsis icon** to display a drop-down menu of additional options. Select **Edit sign-in status**.
 
@@ -152,9 +150,9 @@ In this task, you will log into the Client 1 (LON-CL1) VM and then log into the 
 
 24. Close the **Block this user?** window by selecting **Cancel**. 
 
-25. Ada has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Ada Russell** (the **AR circle**), and in her **My account** pane, select **Sign out.** 
+25. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the **LR circle**), and in her **My account** pane, select **Sign out.** 
 
-26. Once Ada is signed out, close Microsoft Edge. 
+26. Once Lynne is signed out, close Microsoft Edge. 
 
 
 # Proceed to Exercise 2

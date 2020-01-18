@@ -4,33 +4,37 @@ In this exercise you will be introduced to some troubleshooting tools in Office 
 
 ### Task 1 - Troubleshoot Mail Flow in Office 365  
 
-This task guides you though a variety of tools used to troubleshoot different mail conflict scenarios. To prepare yourself for mail flow problems that may occur within Adatum’s Exchange environment, you have decided to create a test scenario to analyze some of the troubleshooting options available to you. 
+Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create a test scenario to analyze some of the troubleshooting options available to her. This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
 1. Switch to your Domain Controller (LON-DC1) VM. You should still be logged into Microsoft 365 as Holly Spencer.
 
 2. In **Internet Explorer**, select the **Office 365 home page** tab, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@M365xZZZZZZ.onmicrosoft.com** and **Pa55w.rd**).
 
-3. In the **Office 365 home page,** select **Outlook.**
+3. In the **Office 365 home page,** select **Outlook.** In the Outlook settings window that appears, accept **English** as the language, select your corresponding **Time zone**, and then select **Save**.
 
-4. In Holly’s mailbox, at the top of the left-hand navigation pane, select +**New message** to create a new email.
+4. If a **Welcome** window appears, select the **X** in the upper right-hand corner to close it. 
 
-5. In the **To** text box, type **user@alt.none**. 
+5. In Holly’s mailbox, at the top of the left-hand navigation pane, select the **New message** button to create a new email.
 
-6. Enter a subject and some body text and then send the email. 
+6. In the email pane that appears on the right side of the window, in the **To** text box, type **user@alt.none**. 
 
-7. Wait for the delivery failure message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
+7. Enter a subject and some body text and then send the email. 
 
-8. In the **Underliverable: {subject of message}** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
+8. Wait for the delivery failure message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
-9. Close the message window.
+9. In the **Underliverable: {subject of message}** window, scroll down through the message until you reach the body of text that says **Original message headers**. Select the text in the body of the message starting after **Original message headers** through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard.  
 
-10. Open a new tab in your web browser and browse to **testconnectivity.microsoft.com**. 
+10. Close the message window.
 
-11. On the **Microsoft Remote Connectivity Analyzer** page, below the announcement at the top of the page, select the **Message Analyzer** tab. 
+11. Open a new tab in your web browser and enter the following URL: **https://testconnectivity.microsoft.com**. 
 
-12. Under **Message Header Analyzer**, paste the message, and then select **Analyze headers**. <br/>
+12. On the **Microsoft Remote Connectivity Analyzer** page, below the announcement at the top of the page, select the **Message Analyzer** tab. 
 
-	**Important:** Note the diagnostic information and the time taken for the message to be rejected. SMTP message headers contain a wealth of information which allows you to determine the origins of a message and how it made its way through one or more SMTP servers to its destination. Here’s a quick summary:
+13. Under the **Message Header Analyzer**, it indicates that the Message Analyzer Header has moved to a new location. Select the link for the new location; this will open a new tab that displays the Message Header Analyzer. 
+
+14. In the **Message Analyer Header** window, paste the message (right-click and select **Paste**) and then select **Analyze headers**. <br/>
+
+	**Important:** Note the diagnostic information and the time taken for the message to be rejected. SMTP message headers contain a wealth of information that allows you to determine the origins of a message and how it made its way through one or more SMTP servers to its destination. Here’s a quick summary:
 
 	- **Summary section**: Displays the most important properties and total delivery time at a quick glance.
 
@@ -38,61 +42,59 @@ This task guides you though a variety of tools used to troubleshoot different ma
 
 	- **Other headers section**: Enables you to quickly detect where the longest message transfer delays occurred. You can sort all headers by occurrence number, name or value.   
 
-	The primary problem in this example is that the domain of the email address **(@alt.none**) does not exist. Normally this is caused by a typo in the recipient’s domain name that needs to be corrected to resolve the issue. 
+	The primary problem in this example (see Hop 1) is that the domain of the email address **(@alt.none**) does not exist. Normally this is caused by a typo in the recipient’s domain name that needs to be corrected to resolve the issue. 
 
-13. Select **Clear** to reset the Message Header Analyzer window. 
+15. Select **Clear** to reset the Message Header Analyzer window. 
 
-14. Return to Holly’s **Mail** tab. 
+16. Return to the **Mail - Holly Spencer - Outlook** tab in your browser. 
 
-15. Select **New** **Message**, and then in the **To** text box, type **difflop8675399@outlook.com**. 
+17. Select **New message**, and then in the **To** field for the email, type **difflop8675399@outlook.com**. 
 
-16. Enter a subject and some body text, and then select **Send**. 
+18. Enter a subject and some body text, and then select **Send**. 
 
-17. Wait for the delivery failure message to appear. When the message appears in Holly’s Inbox, double-click the message to open it in a separate window. 
+19. Wait for the delivery failure message to appear. When the message appears in Holly’s Inbox, double-click the message to open it in a separate window. 
 
-18. In the **Underliverable: {subject of message}** window, select the text in the body of the message starting after “**Original message headers**” through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
+20. In the **Underliverable: {subject of message}** window, scroll down through the message until you reach the body of text that says **Original message headers**. Select the text in the body of the message starting after **Original message headers** through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard. 
 
-19. Close the message window.
+21. Close the message window.
 
-20. Switch to the **Microsoft Remote Connectivity Analyzer** tab. 
+22. Switch to the **Message Header Analyzer** tab in your browser. 
 
-21. On the **Microsoft Remote Connectivity Analyzer** page, ensure that you are on the **Message Analyzer** tab. 
+23. In the **Message Header Analyzer** box, right-click and select **Paste** to paste in the message, and then select **Analyze headers**. <br/>
 
-22. Under **Message Header Analyzer**, paste the message, and then select **Analyze headers**. <br/>
+	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, the user's domain (outlook.com) was valid, but the user mailbox (**difflop8675399@outlook.com**) does not exist. 
 
-	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, the domain (outlook.com) was valid, but the user mailbox (**difflop8675399@outlook.com**) does not exist. 
+24. Close the **Microsoft Remote Connectivity Analyzer** tab and the **Message Header Analyzer** tab in Internet Explorer. 
 
-23. Close the **Microsoft Remote Connectivity Analyzer** tab in Internet Explorer. 
+25. Select the **Microsoft Office Home** tab in Internet Explorer and then select **Admin**. 
 
-24. Select the **Microsoft Office Home** tab in Internet Explorer and then select **Admin**. 
+26. On the **Microsoft 365 admin center** page, in the left-hand navigation pane, select **Show all**. 
 
-25. On the **Microsoft 365 admin center** page, in the left-hand navigation pane, select **Show all**. 
+27. Scroll down through left-hand navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange Admin Center.
 
-26. Scroll down through left-hand navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange Admin Center.
+28. On the **Exchange Admin Center**, in the left-hand navigation pane, select **mail flow**. 
 
-27. On the **Exchange Admin Center**, in the left-hand navigation pane, select **mail flow**. 
+29. In the **mail flow** window, select **message trace** in the menu bar at the top of the page. 
 
-28. In the **mail flow** window, select **message trace** in the menu bar at the top of the page. 
+30. In the **message trace** window, in the **Date range** field, select the drop-down arrow and select **Past 24 hours**. 
 
-29. In the **message trace** window, in the **Date range** field, select the drop-down arrow and select **Past 24 hours**. 
+31. In the **Delivery status** field, select the drop-down arrow and select **Failed**.
 
-30. In the **Delivery status** field, select the drop-down arrow and select **Failed**.
+32. Scroll to the bottom of the page. To the right of the **Sender** field, select **add sender**. 
 
-31. Scroll to the bottom of the page. To the right of the **Sender** field, select **add sender**. 
-
-32. In the **Select Members** window, in the list of users, select **Holly Spencer**, select **add-&gt;,** and then select **OK**.<br/>
+33. In the **Select Members** window, in the list of users, select **Holly Spencer**, select **add-&gt;,** and then select **OK**.<br/>
 
 	**Note:** If no names appear in the list when the window first opens, select the **Refresh** icon above the **Display name** field. 
 
-33. At the bottom of the page, select the **search** button. 
+34. At the bottom of the page, select the **search** button. 
 
-34. In the **Message Trace Results** window that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** icon that appears above the item list. 
+35. In the **Message Trace Results** window that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** icon that appears above the item list. 
 
-35. Double-click on each failed message to view the sender, recipient, message size, ID, and IP address information, as well as the **HOW TO FIX IT** instructions.
+36. Double-click on each failed message to view the sender, recipient, message size, ID, and IP address information, as well as the **HOW TO FIX IT** instructions. Select the **Close** button to close each message window.
 
-36. Close the Message Trace Results window. This will return you to the Exchange admin center.
+37. Close the Message Trace Results window. This will return you to the Exchange admin center.
 
-37. Remain signed into Office 365 as Holly. 
+38. Remain signed into Office 365 as Holly. 
 
   
 
@@ -106,7 +108,7 @@ Adatum is concerned with the service health issues that have recently come to li
 
 3. In the left-hand navigation pane, select **Health** and then select **Service health**. 
 
-4. On the right side of the page, select **View history** (depending on your monitor, you may need to scroll to the far right of the window to see **View history**). 
+4. On the **Service health** page, the **All services** tab is displayed by default. Select the **History** tab.  
 
 5. The default option is to display a list of items from the last 7 days. Select any entry in the list to see further details about incident. Close the incident window when you’re done reviewing it. 
 

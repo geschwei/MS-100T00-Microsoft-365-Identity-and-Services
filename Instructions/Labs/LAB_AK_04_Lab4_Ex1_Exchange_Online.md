@@ -8,7 +8,7 @@ When Holly created her Microsoft 365 user account back in Lab 1, she assigned he
 
 Now that Adatum’s tenant account is set up, you are ready to review how to create and manage mail flow recipients.
 
-1. If necessary, you should log into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd.**
+1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
@@ -16,7 +16,7 @@ Now that Adatum’s tenant account is set up, you are ready to review how to cre
 
 4. In the **Exchange admin center,** select **recipients** in the left-hand navigation pane.
 
-5. In the list of user mailboxes, you should see all the user accounts that were pre-created in the lab environment for Adatum Corporation. Select **Joni Sherman** by double clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
+5. In the **recipients** view, the **mailboxes** tab appears by default. You should see all the user accounts that were pre-created in your tenant by your lab hosting provider, along with Holly's mailbox that was added when you created her account in Lab 2. Select the mailbox for **Joni Sherman** by double-clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
 
 6.  At the bottom of the **general** tab, select **More options**.
 
@@ -26,7 +26,7 @@ Now that Adatum’s tenant account is set up, you are ready to review how to cre
 
 	‎**Note:** Custom attributes are properties your company can use for specific mailbox identification, such as a cost center number for the mailbox or other information such as an HR personnel number.
 
-9. In addition to the **genera**l tab, the left-hand pane of the **Edit User Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, you should still select the following tabs to see what information can be captured: 
+9. In addition to the **general** tab, the left-hand pane of the **Edit User Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, you should still select the following tabs to see what information can be captured: 
 
 	- **contact information.** This tab enables you to add personal information such as Street, City or Mobile number for the user.
 
@@ -34,15 +34,15 @@ Now that Adatum’s tenant account is set up, you are ready to review how to cre
 
 	- **mailbox features.** This tab enables the admin to assign specific policies to the user. These policies range from the sharing policy to the address book policy. This option also covers device usage and connectivity.
 
-	- **MailTip.** This tab enables you to create a MailTip that’s displayed when people send email to this user. 
-
+	- **member of.** This tab displays the Distribution groups that include this user.
+	
 10. On the left-hand pane select **mailbox delegation.** This option allows the admin to assign a user to this mailbox’s Send As, Send on Behalf, or Full Access permissions. This option is commonly used if you want another user to be able to send messages from this mailbox.
 
-11. Scroll down on this **mailbox delegation** window and select the plus (+) sign next in the **Full Access** section. 
+11. Scroll down on this **mailbox delegation** window and select the plus (+) sign under the **Full Access** section. 
 
-12. In the **Select Full Access** window select the **MOD Administrator** account, select **add-&gt;**, and then select **OK.**  <br/>
+12. In the **Select Full Access** window select **Holly Spencer**, select **add-&gt;**, and then select **OK.**  <br/>
 
-	‎**Note:** After about an hour the MOD Administrator account will be able to access Joni’s mailbox without needing a password.
+	‎**Note:** After about an hour Holly Spencer will be able to access Joni’s mailbox without needing a password.
 
 13. On the **Edit User Mailbox** window select **Save** to authorize the changes and close the window.
 
@@ -63,17 +63,17 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Alias: **SalesDept**
 
-	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants the MOD Administrator to be the owner of the group, so select the **plus (+)** sign, and in the **Select Owner** window, select **MOD Administrator**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to be the owner of the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
 
-	- Members: select the plus (+) sign, and in the **Select Members** window, hold down the **Ctrl** key and select **Alan Yoo, Libby Hayward,** and **Adam Hobbs.** This will select all three users at once; then select the **add-&gt;** button and select **OK.** 
+	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, hold down the **Ctrl** key and select **Allan Deyoung, Diego Siciliani,** and **Lynne Robbins.** This will select all three users at once; then select the **add-&gt;** button and select **OK.** 
 
 4. Select **Save.**
 
 5. Select the **New Office 365 group** button. 
 
-6. In the **create a group** window that appears, enter the following information:
+6. In the **reate a group** window that appears, enter the following information:
 
 	- Group name: **Dynamics CRM Project Team**
 
@@ -87,17 +87,17 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Language: select the language for the group
 
-	- Description: **This is a group of all company employees working on the Microsoft Dynamics CRM implementation project.**
+	- Description: **Group of all company employees working on the Microsoft Dynamics CRM project.**
 
-	- Language: select the language for the group
+	- Subscribe new members: leave this checkbox selected so that members get conversations and calendar events sent to their inbox.
 
-7. Select **Save**. This will open the Dynamics CRM Project Team window.
+7. Select **Save**. This will save the information that you entered and open the Dynamics CRM Project Team window.
 
-8. In the **Dynamics CRM Project Team** window, the **ownership** tab in the left-hand pane is displayed by default. Under **Owners**, select the **plus (+)** sign, and in the **Select Members** window, select **MOD Administrator**, select the **add-&gt;** button, and then select **OK**.
+8. In the **Dynamics CRM Project Team** window, the **ownership** tab in the left-hand pane is displayed by default. Under **Owners**, select the **plus (+)** sign, and in the **Select Members** window, select **Nestor Wilke**, select the **add-&gt;** button, and then select **OK**.
 
 9. In the left-hand pane, select **membership**.
 
-10. Under **Members**, select the **plus (+)** sign, and in the **Select Members** window, hold down the **Ctrl** key and select **Ada Russell**, **Adam Hobbs**, **Laura Atkins**, and **Libby Hayward**. Since this process will select all four users, select the **add-&gt;** button and then select **OK.** 
+10. Under **Members**, select the **plus (+)** sign, and in the **Select Members** window, hold down the **Ctrl** key and select **Isaiah Langer**, **Joni Sherman**, and **Patti Fernandez**. Since this process will select all three users, select the **add-&gt;** button and then select **OK.** 
 
 11. Select **Save**.
 

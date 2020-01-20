@@ -10,31 +10,23 @@ Now that Adatum’s tenant account is set up, you are ready to review how to cre
 
 1. If necessary, you should log into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd.**
 
-2. At the end of the previous lab, you were instructed to close Internet Explorer. If you did, then open it now and maximize the browser window; otherwise, close all but one of the open tabs, which you’ll use in the next step to navigate to the Microsoft Office Home page.
+2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
-3. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Exchange**. This will open the **Exchange admin center.**
 
-4. In the **Pick an account** window, select **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
+4. In the **Exchange admin center,** select **recipients** in the left-hand navigation pane.
 
-5. In the **Enter password** dialog box, enter **Pa55w.rd** and then select **Sign in**.
+5. In the list of user mailboxes, you should see all the user accounts that were pre-created in the lab environment for Adatum Corporation. Select **Joni Sherman** by double clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
 
-6. In the **Microsoft Office Home** page, select **Admin**, which opens the Microsoft 365 admin center.
+6.  At the bottom of the **general** tab, select **More options**.
 
-7. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all**, then scroll down and under **Admin centers,** select **Exchange**. This will open the **Exchange admin center.**
+7. Under **Custom attributes**, select the **pencil (edit)** icon. 
 
-8. In the **Exchange admin center,** select **recipients** in the left-hand navigation pane.
-
-9. In the list of user mailboxes, you should see all the user accounts that were pre-created in the lab environment for Adatum Corporation. Select **Joni Sherman** by double clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
-
-10.  At the bottom of the **general** tab, select **More options**.
-
-11. Under **Custom attributes**, select the **pencil (edit)** icon. 
-
-12. This opens the **Custom attributes** window for Joni. You can enter up to 15 attributes. You will not be entering any attributes in this lab exercise, but it’s important that you know this feature is available. Select **Cancel**.   <br/>
+8. This opens the **Custom attributes** window for Joni. You can enter up to 15 attributes. You will not be entering any attributes in this lab exercise, but it’s important that you know this feature is available. Select **Cancel**.   <br/>
 
 	‎**Note:** Custom attributes are properties your company can use for specific mailbox identification, such as a cost center number for the mailbox or other information such as an HR personnel number.
 
-13. In addition to the **genera**l tab, the left-hand pane of the **Edit User Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, you should still select the following tabs to see what information can be captured: 
+9. In addition to the **genera**l tab, the left-hand pane of the **Edit User Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, you should still select the following tabs to see what information can be captured: 
 
 	- **contact information.** This tab enables you to add personal information such as Street, City or Mobile number for the user.
 
@@ -44,15 +36,15 @@ Now that Adatum’s tenant account is set up, you are ready to review how to cre
 
 	- **MailTip.** This tab enables you to create a MailTip that’s displayed when people send email to this user. 
 
-14. On the left-hand pane select **mailbox delegation.** This option allows the admin to assign a user to this mailbox’s Send As, Send on Behalf, or Full Access permissions. This option is commonly used if you want another user to be able to send messages from this mailbox.
+10. On the left-hand pane select **mailbox delegation.** This option allows the admin to assign a user to this mailbox’s Send As, Send on Behalf, or Full Access permissions. This option is commonly used if you want another user to be able to send messages from this mailbox.
 
-15. Scroll down on this **mailbox delegation** window and select the plus (+) sign next in the **Full Access** section. 
+11. Scroll down on this **mailbox delegation** window and select the plus (+) sign next in the **Full Access** section. 
 
-16. In the **Select Full Access** window select the **MOD Administrator** account, select **add-&gt;**, and then select **OK.**  <br/>
+12. In the **Select Full Access** window select the **MOD Administrator** account, select **add-&gt;**, and then select **OK.**  <br/>
 
 	‎**Note:** After about an hour the MOD Administrator account will be able to access Joni’s mailbox without needing a password.
 
-17. On the **Edit User Mailbox** window select **Save** to authorize the changes and close the window.
+13. On the **Edit User Mailbox** window select **Save** to authorize the changes and close the window.
 
  
 ### Task 2 – Manage Groups 

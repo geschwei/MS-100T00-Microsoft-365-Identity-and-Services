@@ -94,70 +94,69 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 37. Close the Message Trace Results window. This will return you to the Exchange admin center.
 
-38. Remain signed into Office 365 as Holly. 
-
+38. Remain signed into Office 365 as Holly. In your Internet Explorer browser, leave the other Microsoft 365 admin center tabs open for the next task.
   
 
 ### Task 2 - Monitor Service Health and Analyze Reports 
 
-Adatum is concerned with the service health issues that have recently come to light throughout the organization They have asked you to review several of the key service health queries and reports so that you can analyze the issues facing the company.
+Adatum is concerned with the service health issues that have recently come to light throughout the organization They have asked you to review several of the key service health queries and reports so that you become aware of the information that's available to help Adatum monitor its service health.
 
-1. On the LON-DC1 VM, in the **Office 365 Home** page, select **Admin**. 
+1. On the LON-DC1 VM, select the **Microsoft 365 admin center** tab within your Internet Explorer browser. 
 
-2. In Internet Explorer, select the **Microsoft 365 admin center** tab. 
+2. In the left-hand navigation pane, you previously selected the **Show all** option in the prior task. Select the **Health** group that displayed when you selected **Show all**, and then select **Service health**. 
 
-3. In the left-hand navigation pane, select **Health** and then select **Service health**. 
+3. On the **Service health** page, the **All services** tab is displayed by default. Select the **History** tab.  
 
-4. On the **Service health** page, the **All services** tab is displayed by default. Select the **History** tab.  
+4. The default option is to display a list of items from the past 7 days. Select any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
-5. The default option is to display a list of items from the last 7 days. Select any entry in the list to see further details about incident. Close the incident window when you’re done reviewing it. 
+5. In the **Office 365 admin center**, on the left-hand navigation pane, select **Reports**, and then select **Usage.** 
 
-6. In the left-hand navigation pane, select the **Home** icon. 
-
-7. In the **Office 365 admin center**, on the left-hand navigation pane, select **Reports**, and then select **Usage.** 
-
-8. On the **Usage** page, scroll down and view the **Email activity** chart.  <br/>
+6. On the **Usage** page, scroll down and view the **Email activity** chart.  <br/>
 
 	‎**Note:** There might be little or no data shown because there is not much mailbox usage in the lab environment. 
 
-9. At the top of the page, select the **Select a report** drop-down arrow, select **Exchange**, and then select **Mailbox usage**. 
+7. At the top of the **Usage** page, select the **Select a report** drop-down arrow. In the menu that appears, select **Exchange**, and then select **Mailbox usage**. 
 
-10. Select the different date views to see how the display changes: **7 days**, **30 days**, **90 days** and **180 days**. 
+8. Select the following different date views to see how the display changes: **7 days**, **30 days**, **90 days** and **180 days**. 
 
-11. In top left of the report, select the drop down (currently showing **Mailbox usage**), select **SharePoint** to further expand the dropdown, and then select **Site usage**. 
+9. Scroll back to the top of the page. On the menu bar above the chart, it currently displays **Mailbox usage** followed by a drop-down arrow. Select the drop-down arrow, and in the menu that appears, select **SharePoint**. In the SharePoint group, select **Site usage**. 
 
-12. Select the different date views to see how the display changes: **7 days**, **30 days**, **90 days** and **180 days**. 
+10. Select the following different date views to see how the display changes: **7 days**, **30 days**, **90 days** and **180 days**. 
 
-13. You now want to look at the reports that are available in the **Security &amp; Compliance center**. In your browser, select a new tab and then enter the following URL in the address bar: **https://protection.office.com.** 
+11. You now want to review the reports that are available in the **Security &amp; Compliance center**. In your browser, select a new tab and then enter the following URL in the address bar: **https://protection.office.com.** 
 
-14. In the **Security &amp; Compliance center**, scroll down in the left-hand navigation pane and select **Reports,** and then under the **Reports** section, select **Dashboard.** 
+12. In the **Office 365 Security &amp; Compliance center**, scroll down in the left-hand navigation pane and select **Reports,** and then under the **Reports** section, select **Dashboard.** 
 
-15. Scroll down to any of the reports that have data displayed and click in the chart area to open the **Report Viewer** for that report. 
+13. Scroll down to any report that has data displayed and click in the chart area to open the **Report Viewer** for that particular report. 
 
-16. After reviewing the report, select **Dashboard** in the left-hand navigation pane (under the **Reports** section) to return to the report dashboard.
+14. After reviewing the report, select **Dashboard** in the menu bar at the top of the page to return to the report dashboard.
 
-17. Repeat these last two steps for any other report that has data displayed.
+15. Repeat these last two steps for any other report that has data displayed.
+
+16. Close the **Security &amp; Compliance center** tab in your Internet Explorer browser, but leave the other Microsoft 365 admin center tabs open for the next task.
  
 
 ### Task 3 – Submit a Help Request to Microsoft Support
 
 With Microsoft 365, if you ever run into a situation where you need assistance with a problem, you must submit a service request with the Microsoft Support team. Adatum has asked that you submit a test request that does not require a call back so that you know how to submit a request should a situation ever arise that requires it.
 
-1. On the LON-DC1 VM, in your Internet Explorer browser, select the **Microsoft 365 admin center** tab.
+1. On the LON-DC1 VM, in the **Microsoft 365 admin center** tab of your Internet Explorer browser, select **Support** in the left-hand navigation pane, and then select **Service request history** to see if there are any outstanding service request tickets.
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Support** and then select **New service request**.
+2. In the left-hand navigation bar, under the **Support** group, select **New service request**.
 
-3. In the **Need help?** window that appears, in the **Briefly describe your issue** box, type the following and then press Enter: **This is a test of the request system. A call back is not needed.**
+3. In the **Support Assistant** window that appears, select the Message line at the bottom of the window (which currently displays **Messge e.g. How do I install Office?**), type the following and then press Enter: **This is a test of the request system. A call back is not needed.**
 
 4. This displays a list of recommended articles related to the issue that you entered.
 
-5. If you need further assistance and would like to speak to a Microsoft support agent, at the top of the window select the **headset** icon (the middle icon) to get help from one of the support agents. 
+5. If you need further assistance and would like to speak to a Microsoft support agent, at the top of the window select the **headset** icon (the middle icon) to get help from one of the support agents. Select the **headset** icon now.
 
-6. Selecting the headset icon opens the **Contact support** window. To complete this request in a real-world environment, you would enter an extended **description**, a **phone number,** an **email address, a preferred method of contact,** and you would attach any necessary documents before selecting **Contact me**.   <br/>
+6. In the **Contact support** window that appears, do NOT enter any information; instead, just review the information that you would enter to complete this request in a real-world environment. You could also attach any necessary documents before selecting **Contact me** at the bottom of the page.   <br/>
 
 	‎**IMPORTANT:** Do NOT complete this form in your lab environment. If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative.  
 	
-7. Since this is the end of Lab 3, close Internet Explorer and any other applications that you may have open (such as PowerShell). Leave your LON-DC1 VM open for the next lab.  
+7. Select the **X** in the upper right-hand corner of the page to close the **Contact support** window.
+	
+8. Since this is the end of Lab 3, close Internet Explorer and any other applications that you may have open (such as PowerShell). Leave your LON-DC1 VM open for the next lab.  
 ‎  
 ‎
 

@@ -156,7 +156,7 @@ With Microsoft 365, if you ever run into a situation where you need assistance w
 	
 7. Select the **X** in the upper right-hand corner of the page to close the **Contact support** window.
 	
-8. Since this is the end of Lab 3, close Internet Explorer and any other applications that you may have open (such as PowerShell). Leave your LON-DC1 VM open for the next lab.  
+8. Leave your LON-DC1 VM open for the next lab.  
 ‎  
 ‎
 

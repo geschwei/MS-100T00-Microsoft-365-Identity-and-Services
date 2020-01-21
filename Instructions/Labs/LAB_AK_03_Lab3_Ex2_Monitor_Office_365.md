@@ -99,7 +99,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 ### Task 2 - Monitor Service Health and Analyze Reports 
 
-Adatum is concerned with the service health issues that have recently come to light throughout the organization They have asked you to review several of the key service health queries and reports so that you become aware of the information that's available to help Adatum monitor its service health.
+Adatum's CTO is concerned with the service health issues that have recently come to light throughout the organization He has asked Holly to review several of the key service health queries and reports so that she becomes aware of the information that's available to help Adatum monitor its service health.
 
 1. On the LON-DC1 VM, select the **Microsoft 365 admin center** tab within your Internet Explorer browser. 
 
@@ -138,7 +138,7 @@ Adatum is concerned with the service health issues that have recently come to li
 
 ### Task 3 – Submit a Help Request to Microsoft Support
 
-With Microsoft 365, if you ever run into a situation where you need assistance with a problem, you must submit a service request with the Microsoft Support team. Adatum has asked that you submit a test request that does not require a call back so that you know how to submit a request should a situation ever arise that requires it.
+With Microsoft 365, if you ever run into a situation where you need assistance with a problem, you must submit a service request with the Microsoft Support team. As part of Adatum's pilot project, Holly and Patti Fernandez, Adatum's Service Support Administrator, have decided to submit a test request that does not require a call back so that they know how to submit a request should a situation ever arise that requires it.
 
 1. On the LON-DC1 VM, in the **Microsoft 365 admin center** tab of your Internet Explorer browser, select **Support** in the left-hand navigation pane, and then select **Service request history** to see if there are any outstanding service request tickets.
 

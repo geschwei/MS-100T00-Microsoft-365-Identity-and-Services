@@ -89,7 +89,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Description: **Group of all company employees working on the Microsoft Dynamics CRM project.**
 
-	- Subscribe new members: leave this checkbox selected so that members get conversations and calendar events sent to their inbox.
+	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their inbox.
 
 7. Select **Save**. This will save the information that you entered and open the Dynamics CRM Project Team window.
 
@@ -264,12 +264,12 @@ Adatum has experienced a rash of malware infections. Your CTO has asked Holly to
 
 6. In the **Common Attachment Types Filter**, select **On – Emails with attachments of filtered file types will trigger the Malware Detection Response (recommended).**
 
-7. Scroll down to the **Notifications** section and under **Administrator Notifications**, select the following two checkboxes:  
+7. Scroll down to the **Notifications** section and under **Administrator Notifications**, select the following two check boxes:  
 
 	- **Notify administrator about undelivered messages from internal senders**
 	- **Notify administrator about undelivered messages from external senders**
 
-8. Below the first checkbox that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second checkbox that you selected in the prior step.
+8. Below the first check box that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second check box that you selected in the prior step.
 
 9. Select **Save**, which may take a few minutes to update Adatum’s organization settings.  <br/>
 
@@ -278,19 +278,19 @@ Adatum has experienced a rash of malware infections. Your CTO has asked Holly to
 
 ### Task 8 – Manage Connection Filters
 
-You were just contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked Holly to address this problem by making sure that email sent from people that are trusted isn't blocked. You have investigated the situation and have found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
+Holly has been contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked Holly to address this problem by making sure that email sent from people that are trusted isn't blocked. Holly has investigated the situation and has found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
 
-1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In this list of protection tabs across the top of the screen, select **connection filter.**
+1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In the list of protection tabs across the top of the screen, select **connection filter.**
 
 2. In the list of connection filters, the **Default** filter is already selected by default. Select the **pencil (edit)** icon in the menu bar that appears above the filter list to edit this filter.
 
-3. In the **Default** window, in the left-hand pane, select **connection filtering**.  <br/>
+3. In the **Default** window, in the left-hand pane, select the **connection filtering** tab.  <br/>
 
 	**Note:** In this section you will be presented a variety of options on what IP Addresses will be allowed to send messages to your environment and what IP addresses will be blocked.
 
 4. At this time, you will NOT be adding IP addresses to the allow or block lists. You can do this if you have a known IP address you would like to test against. It typically takes up to 1 hour to replicate the change. For this lab, simply review the fact that you can create allowed and blocked lists of IP addresses.
 
-5. As a best practice, select **Enable safe list** to enable the most common third-party sources of trusted senders for your tenant.
+5. As a best practice, select the **Enable safe list** check box at the bottom of the page to enable the most common third-party sources of trusted senders for your tenant.
 
 6. Select **Save** to save this filter.
 
@@ -299,9 +299,9 @@ You were just contacted by Adatum’s CTO. He is upset that he keeps finding ema
 
 For Office 365 customers whose mailboxes are hosted in Microsoft Exchange Online, their email messages are automatically protected against spam and malware. Office 365 has built-in malware and spam filtering capabilities that help protect inbound and outbound messages from malicious software and help protect you from spam. 
 
-As Adatum’s Global Admin, you don't need to set up or maintain the filtering technologies, which are enabled by default. However, you can make company-specific filtering customizations in the Exchange admin center. You have decided to test this out by configuring a spam policy to grant or deny an email by focusing on language of the email and location of email origin.
+As Adatum’s Global Admin, Holly doesn't need to set up or maintain the filtering technologies, which are enabled by default. However, she can make company-specific filtering customizations in the Exchange admin center. She has decided to test this out by configuring a spam policy to grant or deny an email by focusing on the language of the email and the location of email origin.
 
-1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In this list of protection tabs across the top of the screen, select **spam** **filter.**
+1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In this list of tabs across the top of the screen, select **spam filter**.
 
 2. In the list of spam filters, the **Default** filter is already selected by default. Select the **pencil (edit)** icon in the menu bar that appears above the filter list to edit this filter.
 
@@ -309,7 +309,7 @@ As Adatum’s Global Admin, you don't need to set up or maintain the filtering t
 
 	‎**Note:** In this section you will be presented a variety of options on how you would like spam to be handled and what rating will be triggered depending on the severity of the spam.
 
-4. In the **spam** section, make the following selections:
+4. In the **spam and bulk actions** section, make the following selections:
 
 	- Spam: **Move message to junk Email folder**
 
@@ -317,9 +317,9 @@ As Adatum’s Global Admin, you don't need to set up or maintain the filtering t
 
 5. In the **Bulk email** section, make the following selections:
 
-	- Mark bulk email as spam: Leave this option selected
+	- Mark bulk email as spam: Leave this check box selected
 
-	- Select the threshold: select the drop-down arrow and change the threshold to **6**
+	- Select the threshold: select the drop-down arrow and change the threshold to **5**
 
 6. In the **Quarantine** section, make the following selections:
 
@@ -363,16 +363,16 @@ As Adatum’s Global Admin, you don't need to set up or maintain the filtering t
 
 18. In the list of spam filters, the **Default** filter that you just edited is selected and a summary of the filter is displayed in the right-hand pane. Scroll down in the right-hand pane and note how **End-user spam notifications** are disabled. Below this option, select **Configure end-user spam notifications**.
 
-19. In the **edit end-user spam notifications** window, select the **Enable end-user spam notifications** check box, and change the **Send end-user spam notifications every (days)** value to **5**.
+19. In the **edit end-user spam notifications** window, select the **Enable end-user spam notifications** check box, and then change the **Send end-user spam notifications every (days)** value to **5**.
 
 20. Select **Save**.
 
 
 ### Task 10 – Manage Mail Flow Rules 
 
-After analyzing your messaging environment at Adatum Corporation, you realize that you could provide a more efficient and secure environment if you created a set of mail flow rules that identify and take action on messages that are in transit through your Exchange Online organization, as opposed to simply waiting until the messages are delivered to mailboxes before being acted upon by Inbox rules in Outlook and Outlook on the web. 
+After Holly reviewed the messaging environment at Adatum Corporation, she realize that she could provide a more efficient and secure environment if she created a set of mail flow rules that identify and take action on messages that are in transit through her Exchange Online organization, as opposed to simply waiting until the messages are delivered to mailboxes before being acted upon by Inbox rules in Outlook and Outlook on the web. 
 
-You have discovered that mail flow rules contain a richer set of conditions, exceptions, and actions, all of which will provide you with the flexibility to implement many types of messaging policies for Adatum. You are eager to put this to the test regarding a big issue currently affecting Adatum’s messaging environment, which is users who send extremely large email messages. You have decided that your first task will be to create a mail flow rule that restricts email size.
+Holly has discovered that mail flow rules contain a richer set of conditions, exceptions, and actions, all of which will provide her with the flexibility to implement many types of messaging policies for Adatum. She is eager to put this to the test regarding a significant issue currently affecting Adatum’s messaging environment - users who send extremely large email messages. She has decided that her first task will be to create a mail flow rule that restricts email size.
 
 1. In the **Exchange Admin Center**, in the left-hand navigation pane, select **mail flow.**
 

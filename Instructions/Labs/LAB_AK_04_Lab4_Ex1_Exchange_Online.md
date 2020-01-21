@@ -1,12 +1,12 @@
 # Module 4 - Lab 4 - Exercise 1 - Review Key Features of Exchange Online
 
-Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
+Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up and has been assigned to the Global Administrator role, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
 
-When Holly created her Microsoft 365 user account back in Lab 1, she assigned herself the Microsoft 365 Global Administrator role. Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Online Administrator role, Holly can perform all the tasks in Exchange.
+With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Online Administrator role, Holly can perform all the tasks in Exchange.
 
 ### Task 1 – Manage Recipients
 
-Now that Adatum’s tenant account is set up, you are ready to review how to create and manage mail flow recipients.
+As you continue in your role as Holly Spencer, you are ready to review how to create and manage mail flow recipients.
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
@@ -108,49 +108,47 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane, and you should still be displaying the **groups** tab. If not, then navigate to **recipients &gt; groups**. 
 
-2. On the top right of the **groups** tab is a section that says **UPGRADE Distribution Lists.** In this section, select **Get Started.** This opens a **Bulk upgrade DLs to groups in Outlook** window.
+2. Below the tabs at the top of the screen is a row that enables you to perform either of two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** area, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
 
-3. The **Bulk upgrade DLs to groups in Outlook** window displays, by default, the distribution list groups that are available for upgrade to Office 365 groups (the **Showing** field displays **Available for upgrade** by default). Adatum currently has only one distribution list, the Sales Department group. Select the check box to the left of the **Sales Department** distribution list and at the bottom of the window select **Start Upgrade.**<br/>
+3. By default, the **Bulk upgrade DLs to groups in Outlook** window displays the distribution lists (DLs) that are available for upgrade to Office 365 groups (the **Showing** field displays **Available for upgrade** by default). Adatum currently has only one distribution list, the Sales Department DL. Select the check box to the left of the **Sales Department** distribution list and at the bottom of the window select the **Start Upgrade** button.<br/>
+	
+4. In the **Upgrade in progress** window, select **OK**. Note that the upgrade process may take a minute or two to complete.
 
-	**Note:** This may take a minute or two to complete.
+5. Once the upgrade is complete, the **Showing** field will change to **Upgraded DLs** and the **Sales Department** group will be displayed in the group list. 
 
-4. In the **Upgrade in Progress** window, select **OK**.
+6. Select the **X** in the upper-right corner of the **Bulk Upgrade** window to close it.
 
-5. Once the upgrade is complete, the Showing field will change to **Upgraded DLs** and the **Sales Department** group will be displayed in the group list. 
-
-6. Select the **Cancel** button to close the window (this closes the window but does not cancel the transaction).
-
-7. This returns you to the **groups** tab. The **Sales Department** group still displays as a **Distribution list**. In the menu bar above the list, select the **Refresh** icon. The Sales Department group will now display as an **Office 365** group. 
+7. This returns you to the **groups** tab in the **recipients** view. Note how the **Sales Department** group still displays as a **Distribution list**. In the menu bar above the list, select the **Refresh** icon. The Sales Department group will now display as an **Office 365** group. 
  
 
 ### Task 4 - Configure a Group Naming Policy
 
-A group naming policy lets you standardize and manage the names of distribution groups created by users in your organization. You can require a specific prefix and suffix be added to the name for a distribution group when it's created, and you can block specific words from being used. This helps you minimize the use of inappropriate words in group names. Adatum’s CTO wants to implement a standard naming policy throughout the organization based on the following format: {Department}{Group Name}{City}. You have been tasked with creating this company-wide policy.
+A group naming policy lets you standardize and manage the names of distribution groups created by users in your organization. You can require a specific prefix and suffix be added to the name for a distribution group when it's created, and you can block specific words from being used. This helps you minimize the use of inappropriate words in group names. 
+
+Adatum’s CTO wants to implement a standard naming policy throughout the organization based on the following format: {Department}{Group Name}{City}. Holly has been tasked with creating this company-wide policy.
 
 1. In the **Exchange admin center**, you should still be displaying the list of groups. In the menu bar that appears over the list of groups, select the **ellipsis** icon, and in the menu that appears, select **Configure group naming policy.**
 
-2. In the **group naming policy** window that appears, in the **general** tab in the left-hand pane, under **Group Naming Policy** you can select a prefix and a suffix. 
+2. In the **group naming policy** window that appears, the **general** tab in the left-hand pane appears by default. Under **Group Naming Policy** you can select a prefix and a suffix. In the **For the prefix** field, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK**.
 
-	- In the **For the prefix** field, select the drop-down arrow and select **Attribute.**
+3. In the **For the suffix** field, select the drop-down arrow and select **Text**. This opens an **Enter text** window. Enter **Group** and then select **OK**.
 
-	- This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK**.
+4. Select the **Add** button below the **For the suffix** field. 
 
-	- In the **For the suffix** field, select the drop-down arrow and select **Text**.
+5. In the **followed by...** field that appears, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **City**, and then select **OK**.
 
-	- This opens an **Enter text** window. Enter **Group** and then select **OK**.
-
-	- Review the **Preview of policy** example and then select **Save.**
+6. Review the **Preview of policy** example and then select the **Save** button at the bottom of the window.
 
 
 ### Task 5 – Manage Resources
 
-A room mailbox is a resource mailbox that's assigned to a physical location, such as a conference room, an auditorium, or a training room. With room mailboxes, users can easily reserve these rooms by including room mailboxes in their meeting requests. Adatum’s CTO wants to test out this option using the company’s most popular conference room, and he has asked you to configure this resource.
+A room mailbox is a resource mailbox that's assigned to a physical location, such as a conference room, an auditorium, or a training room. With room mailboxes, users can easily reserve these rooms by including room mailboxes in their meeting requests. Adatum’s CTO wants to test out this option using the company’s most popular conference room, and he has asked Holly to configure this resource.
 
-1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane. In this list of recipient tabs across the top of the screen, select **resources.**
+1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane. In this list of tabs across the top of the screen, select **resources.**
 
 2. In the menu bar that appears over the list of resources, select the **plus (+)** sign and then in the drop-down menu, select **Room mailbox.**  <br/>
 	
-	‎**Note:** This selection is designed for administrators to set up a meeting location to be used for booking purposes. When scheduling meetings, you will be able to select the room from the GAL.
+	‎**Note:** This selection is designed for administrators to set up a meeting location to be used for booking purposes. When scheduling meetings, you will be able to select the room from the Global Address List (GAL).
 
 3. In the **new room mailbox** window that appears, enter the following information:
 
@@ -162,13 +160,13 @@ A room mailbox is a resource mailbox that's assigned to a physical location, suc
 
 	- Location: The room is in Building 5, Room 2011, so enter **5/2011**
 
-	- Phone: **425-555-1111**
+	- Phone: **425-555-2011**
 
 	- Capacity: **15**
 
-4. Select **Save**.
+4. Select **Save**. If a **Warning** dialog box appears, select **OK**.
 
-5. Conference Room 1 now appears in the list of resources. Select **Conference Room 1**, and then select the **Edit** (pencil) icon on the menu bar.
+5. **Conference Room 1** now appears in the list of resources. You must now edit the booking properties for this resource. Since Conference Room 1 is the only resource in the list, it's already selected by default; therefore, select the **Edit** (pencil) icon on the menu bar.
 
 6. In the **Conference Room 1** window that appears, select **booking options** in the left-hand pane.
 
@@ -178,7 +176,7 @@ A room mailbox is a resource mailbox that's assigned to a physical location, suc
 
 	‎**Note:** The standard duration of 180 days can be too long for scheduling out most meetings. As a best practice, organizations should establish a company standard so events do not over-book locations.
 
-9. In the **Maximum duration (hours)** field, change the value from **24** hours to **120** hours (this is five days, or one work week).   
+9. In the **Maximum duration (hours)** field, change the value from **24** hours to **120** hours (this is five days, or one work week). 
 
 10. In the left-hand navigation pane, select **booking delegates**.
 
@@ -186,7 +184,7 @@ A room mailbox is a resource mailbox that's assigned to a physical location, suc
 
 	**Note:** This option allows a user to filter booking requests.
 
-12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window hold down the **Ctrl** key and select Holly Spencer and the MOD Administrator. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
+12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window hold down the **Ctrl** key and select Holly Spencer and Nestor Wilke. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
 
 13. Select **Save**.
 
@@ -250,7 +248,7 @@ One of the key features of Exchange Online is the ability to maintain different 
  
 ### Task 7 – Configure Messaging Protection
 
-Adatum has experienced a rash of malware infections. Your CTO has asked you to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.
+Adatum has experienced a rash of malware infections. Your CTO has asked Holly to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.
 
 1. In the **Exchange admin center**, in the left-hand navigation pane, select **protection.**
 
@@ -258,17 +256,20 @@ Adatum has experienced a rash of malware infections. Your CTO has asked you to i
 
 3. In the list of malware filters, the **Default** filter is already selected by default. Select the **pencil (edit)** icon in the menu bar that appears above the filter list to edit this filter.
 
-4. In the **Default** window, in the left-hand pane, select **settings.**  <br/>
+4. In the **Default** window, select **settings** in the left-hand pane.  <br/>
 
 	**Note:** In this section you will be presented a variety of options on how your environment will respond, what it will respond to, and how it identifies key recipients.
 
 5. In the **Malware Detection Response** section, select **Yes and use the default notification text.**
 
-6. In the **Common Attachment Types** **Filter**, select **On – Emails with attachments of filtered file types will trigger the Malware Detection Response (recommended).**
+6. In the **Common Attachment Types Filter**, select **On – Emails with attachments of filtered file types will trigger the Malware Detection Response (recommended).**
 
-7. Scroll down to the **Administrator Notifications** section and select both check boxes – **Notify administrator about undelivered messages from internal senders**, and **Notify administrator about undelivered messages from external senders.**
+7. Scroll down to the **Notifications** section and under **Administrator Notifications** select both checkboxes: <br/> 
 
-8. Below each of the two check boxes that you selected in the prior step, enter **Holly@Mc365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+	– **Notify administrator about undelivered messages from internal senders**
+	- **Notify administrator about undelivered messages from external senders**
+
+8. Below the first checkbox that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second checkbox that you selected in the prior step.
 
 9. Select **Save**, which may take a few minutes to update Adatum’s organization settings.  <br/>
 

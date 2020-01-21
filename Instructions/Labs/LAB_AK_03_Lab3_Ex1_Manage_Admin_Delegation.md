@@ -139,7 +139,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 	‎In the **Active users** list, as you move your mouse from one user account to another, notice the **key (Reset a password)** icon that appears to the right of each user's name. Select the key icon that appears to the right of **Diego Siciliani's** name.
 
-21. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** checkbox so that it displays a checkmark. 
+21. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark. 
 
 22. Select **Reset**.
 
@@ -149,11 +149,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 25. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
-26. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** checkbox so that it displays a checkmark.  
+26. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark.  
 
 27. Select **Reset**.<br/>
 
-28. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** checkbox. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider), and then select **Send email and close**.
+28. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** check box. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider), and then select **Send email and close**.
 
 29. Management has recently discovered that Nestor Wilke’s username may have been compromised. As a result, Lynne has been asked to block Nestor’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Nestor Wilke’s** name (do NOT select Nestor’s name itself). 
 
@@ -161,7 +161,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 30. In the menu bar at the top of the page, select the **ellipsis icon** to display a drop-down menu of additional options. Select **Edit sign-in status**.
 
-31. In the **Block this user?** window, select the **Block this user from signing in** checkbox, and then select **Save changes.** 
+31. In the **Block this user?** window, select the **Block this user from signing in** check box, and then select **Save changes.** 
 
 32. Close the **Block this user?** window by selecting the **X** in the upper right-hand corner. 
 

@@ -65,15 +65,15 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to be the owner of the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
 
-	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, hold down the **Ctrl** key and select **Allan Deyoung, Diego Siciliani,** and **Lynne Robbins.** This will select all three users at once; then select the **add-&gt;** button and select **OK.** 
+	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, hold down the **Ctrl** key and select **Allan Deyoung**, **Diego Siciliani**, and **Lynne Robbins**. This will select all three users at once, at which point you should select the **add-&gt;** button and then select **OK**. 
 
 4. Select **Save.**
 
 5. Select the **New Office 365 group** button. 
 
-6. In the **reate a group** window that appears, enter the following information:
+6. In the **Create a group** window that appears, enter the following information:
 
 	- Group name: **Dynamics CRM Project Team**
 
@@ -83,13 +83,13 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Privacy: **Public – Anyone can see content**
 
-	- Owners: Leave this as is.
+	- Owners: Leave this as is
 
 	- Language: select the language for the group
 
 	- Description: **Group of all company employees working on the Microsoft Dynamics CRM project.**
 
-	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their inbox.
+	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their inbox
 
 7. Select **Save**. This will save the information that you entered and open the Dynamics CRM Project Team window.
 
@@ -278,7 +278,9 @@ Adatum has experienced a recent rash of malware infections. The company's CTO ha
 
 ### Task 8 – Manage Connection Filters
 
-Holly has been contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked Holly to address this problem by making sure that email sent from people that are trusted isn't blocked. Holly has investigated the situation and has found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
+Holly has been contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked Holly to address this problem by making sure that email sent from people that are trusted doesn't get blocked. 
+
+Holly has investigated the situation and has found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
 
 1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In the list of protection tabs across the top of the screen, select **connection filter.**
 
@@ -376,7 +378,7 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 1. In the **Exchange Admin Center**, in the left-hand navigation pane, select **mail flow.**
 
-2. In the list of mail flow tabs across the top of the page, **rules** is already selected by default since it’s the first tab. Note that two mail flow rules already exist based on tasks that you performed in an earlier lab.  <br/>
+2. In the list of mail flow tabs across the top of the page, **rules** is already selected by default since it’s the first tab. <br/>
 
 	**Note:** In this section you will be presented with a variety of options to protect against emails being sent from Adatum that have sensitive information, as well as creating custom rules to prevent or track messaging-related issues from recipients in your environment.
 
@@ -384,7 +386,7 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 4. In the **new rule** window that appears, enter the following information:
 
-	- Name: **Size restriction**
+	- Name: **Email size restriction**
 
 	- Apply this rule if: select **the message size is greater than or equal to** 
 
@@ -392,7 +394,7 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 		- In the **specify size** window, enter **1024** and then select **OK**. 
 
-	- Do the following: select **block the message**, and then in the drop-down menu that appears, select **Reject the message and** **include an explanation.** 
+	- Do the following: select **block the message**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
 
 		- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email and send it as a zipped file.**
 
@@ -405,11 +407,13 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 ### Task 11 – Validate Accepted Domains
 
-A domain that’s added to Office 365 is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive and send email. In Lab 1, you created a domain for Adatum Corporation based on the unique UPN name assigned to your tenant and the custom domain name provided by your lab hosting provider (i.e. XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is your unique UPN Name and xxxCustomDomainxxx.xxx is the domain of your lab hosting provider). In this task, you will use the Exchange Admin Center to view your accepted domain and configure the domain type. Each domain can be changed to either authoritative (which accepts all inbound or outbound mail) or internal relay (which only accepts internal email). By default, all domains should be set to authoritative. You want to ensure that your accepted domain’s type is set to authoritative.
+A domain that’s added to an organization's on-premises environment is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive and send email. In Lab 1, you created a domain for Adatum Corporation based on the unique UPN name assigned to your tenant and the custom domain name provided by your lab hosting provider (in this case, XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is your unique UPN Name and xxxCustomDomainxxx.xxx is the domain of your lab hosting provider). 
+
+In this task, you will use the Exchange Admin Center to view your accepted domain and configure the domain type. Each domain can be changed to either authoritative (which accepts all inbound or outbound mail) or internal relay (which only accepts internal email). By default, all domains should be set to authoritative. You want to ensure that your accepted domain’s type is set to authoritative.
 
 1. In the **Exchange admin center**, you should still be displaying **mail flow** from the left-hand navigation pane. In this list of mail flow tabs across the top of the screen, select **accepted domains.**
 
-2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (XXYYZZa.xxxCustomDomainxxx.xxx) and its Microsoft 365 cloud domain (M365xZZZZZZ.onmicrosoft.com).
+2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (XXYYZZa.xxxCustomDomainxxx.xxx) that you added in Lab 1, and its Microsoft 365 cloud domain (M365xZZZZZZ.onmicrosoft.com).
 
 3. You can see from this display that the domain type for each domain is already set to **Authoritative,** so you don’t need to make any changes here. 
 
@@ -417,7 +421,7 @@ A domain that’s added to Office 365 is called an accepted, or custom domain. Y
 
 	- Select this domain in the list, and then select the **pencil (edit)** icon on the menu bar. 
 
-	- In the window for this domain, you would select the **Authoritative** option and then select **Save**.
+	- In the window for this domain, you would select the **Authoritative** option and then select **Save**. However, since you did not make any changes, select **Cancel** to close this window.
 
 5. This concludes the exercise on reviewing Exchange Online features. You can close the **Exchange admin center** tab in Internet Explorer. This will return you to the Microsoft 365 admin center tab.
 

@@ -38,7 +38,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 8. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-9. On the **Stay signed in?** dialog box, select the **Don’t show this again** checkbox and then select **Yes.**
+9. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.**
 
 10. If a **Get your work done with Office 365** window appears, then close it now. 
 
@@ -92,7 +92,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 24. In the **Release preferences** window, select **Add people.**
 
-25. In the **Manage people for First** **release** window, in the list of users, select the checkbox for **MOD Administrator** and then select **Save**.
+25. In the **Manage people for First** **release** window, in the list of users, select the check box for **MOD Administrator** and then select **Save**.
 
 26. Select **Close**, and then select **Close** again. This returns you to the **Organization Profile** window.
 
@@ -109,7 +109,9 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 ### Task 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). For the purposes of our hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is the UPN name assigned to your tenant by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain. Your instructor will provide you with your lab hosting provider's custom domain name.
+Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
+
+For the purposes of your hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is the UPN name assigned to your tenant by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain. Your instructor will provide you with your lab hosting provider's custom domain name.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
@@ -165,7 +167,7 @@ Not every company has just one domain; in fact, many companies have more than on
 
 23. If your domain was successfully verified, the **Choose your online services** window will appear (also note at the top of the window that the **Add a domain** and **Verify domain** tasks have a checkmark displayed below them to indicate these tasks are complete). In this window, **Exchange** is the only service selected. This is sufficient for Adatum, so scroll to the bottom of the window and select **Next**. 
 
-24. In the **Update DNS settings** window, scroll down through the window to see the MX, CNAME, and TXT records for this domain. At the bottom of the window is a check box titled **Skip this step.** Select this checkbox, which changes the **Verify** button to a **Skip** button. You have already created the TXT record, and in the following steps you will create additional MX and A records in DNS Manager. Therefore, select the **Skip** button.
+24. In the **Update DNS settings** window, scroll down through the window to see the MX, CNAME, and TXT records for this domain. At the bottom of the window is a check box titled **Skip this step.** Select this check box, which changes the **Verify** button to a **Skip** button. You have already created the TXT record, and in the following steps you will create additional MX and A records in DNS Manager. Therefore, select the **Skip** button.
 
 25. In the **Update DNS settings** window, select **Finish** to complete the new domain setup. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
 
@@ -222,7 +224,7 @@ To prepare for Azure Active Directory, you must first download and install the M
    
 2. Scroll down to the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** section, leave **English** as the Language, and then select **Download**. 
    
-3. In the **Choose the download that you want** window, select the **msoidcli_64bit.msi** checkbox and then select **Next**. 
+3. In the **Choose the download that you want** window, select the **msoidcli_64bit.msi** check box and then select **Next**. 
 
 4. If a notification bar appears at the bottom of the page indicating that Internet Explorer blocked a pop-up from www.microsoft.com, select **Allow once**.
 

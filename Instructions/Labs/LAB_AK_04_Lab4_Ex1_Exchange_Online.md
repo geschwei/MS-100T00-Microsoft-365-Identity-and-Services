@@ -248,7 +248,7 @@ One of the key features of Exchange Online is the ability to maintain different 
  
 ### Task 7 – Configure Messaging Protection
 
-Adatum has experienced a rash of malware infections. Your CTO has asked Holly to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.
+Adatum has experienced a recent rash of malware infections. The company's CTO has asked Holly to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.
 
 1. In the **Exchange admin center**, in the left-hand navigation pane, select **protection.**
 

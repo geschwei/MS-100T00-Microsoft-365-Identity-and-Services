@@ -4,17 +4,17 @@ In this exercise you will review some of the basic administrator functions in Sh
 
 ### Task 1 – Site Management
 
-A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of your pilot project, you have been tasked with creating a team site for the Human Resources department so that the HR team can work on projects and share information from anywhere and on any device. 
+A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been tasked with creating a team site for the Human Resources department so that the HR team can work on projects and share information from anywhere and on any device. 
 
 1. You should already be in the **Microsoft 365 admin center** after having finished the prior exercise. 
 
 2. In the left-hand navigation pane, under **Admin Centers**, select **SharePoint.** This will open the SharePoint admin center.
 
-3. In the **SharePoint admin center**, in the left-hand navigation pane, under **Sites**, select **Active sites.** Note that there are already several sites in this list that you created in the previous lab. 
+3. In the **SharePoint admin center**, in the left-hand navigation pane, select **Sites**, and then select **Active sites.** 
 
 4. In the **Active sites** window, select the **+Create** option on the menu bar.   
 
-	‎**Note:** Depending on the team or company need, there are several templates that can be used).
+	‎**Note:** Depending on the team or company need, there are several templates that can be used.
 
 5. In the **Create a site** window, select **Team site.**
 
@@ -22,9 +22,9 @@ A team site includes a group of related web pages, a default document library fo
 
 	- Site name: **Human Resources**
 
-	- Group email address: this is the alias for the group email address. As you typed in **Human Resources** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word.
+	- Group email address: this is the alias for the group email address. As you typed in **Human Resources** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word. Do not change this default value.
 
-	- Group owner: type **Libby**, and in the window that appears displaying the users whose first name starts with Libby, select **Libby Hayward**.
+	- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
 
 	- Select a language: Select your appropriate language
 
@@ -34,41 +34,39 @@ A team site includes a group of related web pages, a default document library fo
 
 		- Time zone: since this group is located in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
 
-		- Site Description: **This site is used by the Human Resources department** 
+		- Site Description: **This site is used by the HR department** 
 
 7. Select **Next**.
 
-8. In the **Human Resources private group** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
+8. In the **Add group members** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
 
-9. You need to add a second owner to this group. In the **Add additional owners** field, enter **Laura**. As you enter Laura, a window appears listing users whose first name starts with Laura. Select **Laura Atkins**.
+9. You now want to add **Patti Fernandez** and **Nestor Wilke** as members of this group. 
 
-10. You now want to add **Alan Yoo** and **Ada Russell** as members of this group. 
+	In the **Add members** field, enter **Patti**. As you enter Patti, a window appears listing users whose first name starts with Patti. Select **Patti Fernandez**. 
 
-	In the **Add members** field, enter **Alan**. As you enter Alan, a window appears listing users whose first name starts with Alan. Select **Alan Yoo**. 
+10. Repeat the previous step for **Nestor Wilke**.
 
-11. Repeat the previous step for **Ada Russell**.
+11. Select **Finish**.
 
-12. Select **Finish**.
+12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle and checkmark to the left of the **Human Resources** site name (do not select the Human Resources site name, as this will open a properties window for the site).
 
-13. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the newly created **Human Resources** team site.
+13. In the menu bar at the top of the page, select the **ellipsis (…)** icon, and in the drop-down menu that appears, select **Delete**. 
 
-14. In the menu bar at the top of the page, select the **ellipsis (…)** icon, and in the drop-down menu that appears, select **Delete**. 
+14. In the **Delete Office 365 group** window, select the **Delete the group “Human Resources” and all its resources** check box, and then select **Delete.** Note that the Human Resources site disappears from the **Active sites** list. 
 
-15. In the **Delete Office 365 group** window, select the **Delete the group “Human Resources” and all its resources** check box, and then select **Delete.** Note that the Human Resources group is no longer displayed in the **Active sites** list. 
+15. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the Human Resources site that you just deleted appears in the list of deleted sites. 
 
-16. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the Human Resources site that you just deleted appears in the list of deleted sites. 
+16. In the **Deleted sites** window, select the circle and checkmark to the left of the **Human Resources** site name (do not select the Human Resources site name).
 
-17. In the **Deleted sites** window, select the **Human Resources** team site.
+17. In the menu bar at the top of the page, select **Restore**.
 
-18. In the menu bar at the top of the page, select **Restore**.
+18. In the **Restore Office 365 group** window, select **Restore**.  Note that the Human Resources site disappears from the **Deleted sites** list. 
 
-19. In the **Restore Office 365 group** window, select **Restore**. 
+19. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The Human Resources site should once again appear in the **Active sites** list. 
 
-20. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The Human Resources site should once again appear in the **Active sites** list. 
+20. In the **Active sites** list, select the checkmark to the left of the **Human Resources** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
 
-21. In the **Active sites** list, select the **Human Resources** site. The summarized information for this site is displayed in the pane that appears on the right-side of the window. If you scroll down through this pane, you will see that the information that you previously entered for this site has been restored.
-
-22. Remain in the SharePoint admin center for the next task.
+21. Remain in the SharePoint admin center for the next task.
 
  
 ### Task 2 – Hierarchical Permissions

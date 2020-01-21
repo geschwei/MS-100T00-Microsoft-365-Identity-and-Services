@@ -264,9 +264,9 @@ Adatum has experienced a rash of malware infections. Your CTO has asked Holly to
 
 6. In the **Common Attachment Types Filter**, select **On – Emails with attachments of filtered file types will trigger the Malware Detection Response (recommended).**
 
-7. Scroll down to the **Notifications** section and under **Administrator Notifications** select both checkboxes: <br/> 
+7. Scroll down to the **Notifications** section and under **Administrator Notifications**, select the following two checkboxes:  
 
-	– **Notify administrator about undelivered messages from internal senders**
+	- **Notify administrator about undelivered messages from internal senders**
 	- **Notify administrator about undelivered messages from external senders**
 
 8. Below the first checkbox that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second checkbox that you selected in the prior step.
@@ -278,7 +278,7 @@ Adatum has experienced a rash of malware infections. Your CTO has asked Holly to
 
 ### Task 8 – Manage Connection Filters
 
-You were just contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked you to address this problem by making sure that email sent from people that are trusted isn't blocked. You have investigated the situation and have found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
+You were just contacted by Adatum’s CTO. He is upset that he keeps finding email from friends and business associates in his junk email folder, and he’s even had email blocked entirely by a spam filter. He has asked Holly to address this problem by making sure that email sent from people that are trusted isn't blocked. You have investigated the situation and have found that in Exchange Online, you can create a connection filter policy that defines a list of IP addresses that you trust. This is known as an Allow list, or Safe Sender list. You can also create a blocked senders list, which is a list of IP addresses, typically from known spammers, that you don't ever want to receive email messages from. 
 
 1. In the **Exchange admin center**, you should still be displaying **protection** from the left-hand navigation pane. In this list of protection tabs across the top of the screen, select **connection filter.**
 

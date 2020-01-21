@@ -39,7 +39,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 	- Password: **Pa55w.rd** 
 
-	- Uncheck the **Require this user to change their password when they first sign in** checkbox 
+	- Uncheck the **Require this user to change their password when they first sign in** check box 
 
 6. Select **Next**.
 

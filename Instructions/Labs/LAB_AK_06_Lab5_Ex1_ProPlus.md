@@ -10,7 +10,11 @@ Performing a user-driven Office 365 ProPlus installation is a two-step process: 
 
 In this task, you will complete the first step by reviewing several user accounts to see which are eligible to perform a user-driven installation. In doing so, you will see what factors play a role in determining whether a user can download the deployment tool. In the next task, you will install the Office 365 ProPlus suite for one of the users.
 
-‎**Note:** There are two ways in which a user can be blocked from downloading the Office 365 ProPlus suite. First, an individual user can be prohibited from downloading Office 365 ProPlus if he or she does not have an appropriate Microsoft 365 license (which you will verify in this task with Laura Atkins). Second, all users can be prohibited from downloading Office 365 ProPlus if an admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify with Adam Hobbs).<br/>
+There are two ways in which a user can be blocked from downloading the Office 365 ProPlus suite: <br/>
+
+	- First, an individual user can be prohibited from downloading Office 365 ProPlus if he or she does not have an appropriate Microsoft 365 license (which you will verify in this task with Laura Atkins). <br/>
+	
+	- Second, all users can be prohibited from downloading Office 365 ProPlus if an admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify with Adam Hobbs).
 
 1. You should switch to your Domain Controller VM (LON-DC1) and if necessary, log in as **ADATUM\Administrator** and password **Pa55w.rd.**
 

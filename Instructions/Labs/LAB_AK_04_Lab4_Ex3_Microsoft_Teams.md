@@ -10,21 +10,21 @@ As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the c
 
 1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, under **Admin Centers**, select **Teams.** This will open the Microsoft Teams admin center.
 
-2. In the **Microsoft Teams admin center**, the left-hand navigation pane by default only displays the icons of each feature area. For easier navigation, select the navigation menu option at the top (the 3 lines, above the house). This expands the navigation pane. 
+2. In the **Microsoft Teams admin center**, the left-hand navigation pane by default only displays the icons of each feature area. For easier navigation, select the navigation menu option at the top (the 3 lines that appear above the house). This expands the navigation pane. 
 
-3. In the expanded left-hand navigation pane, select **Meetings** and then in the drop=down menu, select **Meeting policies.**
+3. In the left-hand navigation pane, select **Meetings** and then in the drop=down menu, select **Meeting policies**.
 
-4. In the Meeting policies window, select **Global (Org-wide default)**. This opens the **Global** window.
+4. In the **Meeting policies** window, scroll down to the list of meeting policies and select **Global (Org-wide default)**. 
 
-5. In the Global window, under the **General** section, review each option. All options should be turned **On.**
+5. In the **Global** window that appears, under the **General** section, review each option. All options should be turned **On**.
 
-6. Scroll down and under the **Audio &amp; video** section, review each option. Set **Allow transcription** to **On.**
+6. Under the **Audio &amp; video** section, review each option. Set **Allow transcription** to **On**.
 
-7. Scroll down and under the **Content Sharing** section, review each option. Set **screen sharing mode** to **Single application.**
+7. Under the **Content Sharing** section, review each option. Set the **Screen sharing mode** to **Single application**.
 
-8. Scroll down and under the **Participant &amp; guests** section, review each option. Set **allow dial-in users to bypass the lobby** to **On.**
+8. Under the **Participants &amp; guests** section, review each option. Set **Allow dial-in users to bypass the lobby** to **On**.
 
-9. Scroll to the bottom of the page and select **Save.**
+9. Scroll to the bottom of the page and select **Save**.
 
 
 ### Task 2 – Manage Meeting Settings
@@ -33,13 +33,13 @@ As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Meetings** and then select **Meeting settings.**
 
-2. Under the **Email invitation** section, enter the following information:
+2. On the **Meetings settings** page, under the **Email invitation** section, enter the following information:
 
 	- Logo URL: leave blank
 
-	- Legal URL: **https://adatum.com/legal/html**
+	- Legal URL: **https://adatum.com/legal.html**
 
-	- Help URL: **https://adatum.com/joingingmeetinghelp.htm**
+	- Help URL: **https://adatum.com/joiningmeetinghelp.html**
 
 	- Footer: **Please accept at your earliest convenience. Thank you!!!!**
 
@@ -47,7 +47,7 @@ As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the
 
 4. Review the preview image of the invitation and then select **Close**.
 
-5. Under the **Network** section, review the current settings.  
+5. On the **Meetings settings** page, under the **Network** section, review the current settings.  
 
 	‎**Note:** If you have specific ports that your company uses for sending and receiving media traffic, this is where you would enter those ports. If you do not have specific media ports prescribed by your network administrator, then you would leave this section alone. For the purposes of this lab, you will not update this section. 
 
@@ -58,21 +58,21 @@ As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the
 
 Messaging policies are used to control which chat and channel messaging features are available to users in Microsoft Teams. You can use the Global default policy that is created automatically or create one or more custom messaging policies for people in your organization. After you create a policy, you can assign it to a user or group of users in your organization. 
 
-As part of your Microsoft Teams pilot project for Adatum, you want to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. 
+As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a new messaging policy that addresses the chat and channel messaging requirements set forth by Adatum’s project team. 
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Messaging policies.**
 
-2. In the **Messaging policies** window, select **+Add** in the menu bar at the top of the page.
+2. In the **Messaging policies** window, scroll down and view the list of messaging policies. As you can see, only the **Global (Org-wide default)** policy exists. Select **+Add** in the menu bar that appears above the list of policies.
 
-3. Select the **New messaging policy** field at the top of the page and enter **Chat and Channel Messaging Policy** as the name of the policy.
+3. The unnamed field at the top of the page (above the Description) is the name of your new messaging policy. Select this field and enter **Chat and Channel Messaging Policy** as the name of the policy.
 
 4. Select the following values for each option:
 
 	- Owners can delete sent messages: **Off**
 
-	- Users can delete sent messages: **Off**
+	- Delete sent messages: **Off**
 
-	- User can edit sent messages: **On**
+	- Edit sent messages: **On**
 
 	- Read receipts: **Turned on for everyone**
 
@@ -88,17 +88,17 @@ As part of your Microsoft Teams pilot project for Adatum, you want to create a n
 
 	- Allow URL preview: **On**
 
-	- Allow users to translate messages: **On**
+	- Translate messages: **On**
 
 	- Allow immersive reader for viewing messages: **On**
 
-	- Lets users send urgent messages using priority notifications: **On** 
+	- Send urgent messages using priority notifications: **On** 
 
 	- Voice message creation: **Allowed in chats and channels**
 
 	- On mobile devices, display favorite channels about recent chats: **Disabled**
 
-	- Allow a user to remove users from a group chat: **Off**
+	- Remove users from a group chat: **Off**
 
 5. Select **Save.** 
  
@@ -107,7 +107,7 @@ As part of your Microsoft Teams pilot project for Adatum, you want to create a n
 
 A resource account, which is also known as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms. In Microsoft Teams, each Phone System call queue or auto attendant is required to have an associated resource account. 
 
-As part of Adatum’s pilot project for implementing Microsoft Teams, you have been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
+As part of Adatum’s pilot project for implementing Microsoft Teams, Holly Spencer has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
 
 Creating a calling queue is a two-step process. In this task, you will first create a resource account that represents the call queue. In the next task, you will create the call queue and associate it with this resource account. 
 
@@ -136,9 +136,9 @@ Now that you have created the resource account for your calling queue, you will 
 
 2. In the **Call queues** window, select **+Add** in the menu bar at the top of the page.
 
-3. The unnamed field at the top of the page is the title of the call queue. A message displays below this field indicating that it’s required as well as its length. Enter **Call Queue 1**  as the name of the call queue.
+3. The unnamed field at the top of the page is the title of your new call queue. Select this field and enter **Call Queue 1**  as the name of the call queue.
 
-4. The page displays a message indicating **You haven’t added any resource accounts**. Below this message, select **Add accounts**.
+4. The page displays a message indicating **You haven’t added any resource accounts yet.** Below this message, select **Add accounts**.
 
 5. In the **Add account** pane, in the **Search** box, enter **Calling.** As you type Calling, a window appears listing call queues whose title starts with Calling. **Calling Queue 1** is displayed. As you hover your mouse over **Calling Queue 1**, an **Add** button appears to the right. Select the **Add** button.
 
@@ -150,7 +150,15 @@ Now that you have created the resource account for your calling queue, you will 
 
 	- Music on hold: **Play default music**
 
-	- Call answering: select the **Add call agents** button. In the **Add call agents** pane, in the **Search** box, enter **Sales.** As you type Sales, a window appears listing call agents whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right. Select the **Add** button.
+	- Call answering: 
+	
+		- Under **Choose which call agents to associate with this call queue**, select the **Add users** button. In the **Add call agents** pane, in the **Search** box, enter **Allan**. As you type Allan, a window appears listing users whose name starts with Allan. As you hover your mouse over **Allan Deyoung**, an **Add** button appears to the right. Select the **Add** button.
+		
+		Note the error message that appears under the **Add Users** pane. To view the entire message, select **Cancel** to close the **Add Users** pane. Note the error message indicates that Allan cannot be associated with this call queue because he is not enterprise-voice enabled. Select the **X** on the right side of this error message to close it.
+		
+		- Under **Choose which groups to associate with this call queue**, select the **Add groups** button. In the **Add call agents** pane, in the **Search** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right. Select the **Add** button.
+		
+		In the **Add call agents** pane, the Sales Department appears under the **Selected call agent groups**. Select the **Add** button at the bottom of the pane.
 
 	- Routing Method: **Round Robin**   
 	
@@ -158,7 +166,7 @@ Now that you have created the resource account for your calling queue, you will 
 
 	- Agents can opt out of taking calls: **On**
 
-	- Call overflow: **leave all settings to their default values**
+	- Call overflow handling: **leave all settings to their default values**
 
 	- Call time out handling: **leave all settings to their default values**
 
@@ -169,15 +177,15 @@ Now that you have created the resource account for your calling queue, you will 
 
 In Microsoft Teams, calling policies control which calling and call forwarding features are available to users. Calling policies determine whether a user can make private calls, use call forwarding or simultaneous ringing to other users or external phone numbers, route calls to voicemail, send calls to Call Groups, use delegation for inbound and outbound calls, and so on. A default global policy is created automatically, but admins can also create and assign custom calling policies. 
 
-As part of your Microsoft Teams pilot project, you will create a custom calling policy for Adatum. Instead of customizing the default global policy, you will follow best practice guidelines and create your own customized policy that will be used as Adatum’s default policy.
+As part of her Microsoft Teams pilot project, Holly Spencer has been tasked with creatig a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Voice** and then select **Calling policies.**
 
-2. In the **Calling policies** window, select **+Add** in the menu bar at the top of the page.
+2. In the **Calling policies** window, select **+Add** in the menu bar that appears above the list of calling policies.
 
-3. Select the **Add new calling policy** field at the top of the page and enter **Default Adatum Calling Policy** as the name of the policy.
+3. The unnamed field at the top of the page is the title of your new calling policy. Select this field and enter **Default Adatum Calling Policy** as the name of the policy.
 
-4. In the window that appears, scroll down the page and select the following values for each option:
+4. Scroll down the page and select the following values for each option:
 
 	- Make private calls: **On**
 
@@ -202,7 +210,7 @@ As part of your Microsoft Teams pilot project, you will create a custom calling 
 
 With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls. 
 
-As part of your Microsoft Teams pilot project, you will enable the users from one external domain to participate in chats and calls, and you will block users from another domain from doing the same. 
+As part of her Microsoft Teams pilot project, Holly Spencer will enable the users from one external domain to participate in chats and calls, and she will block users from another domain from doing the same. 
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Org-wide settings** and then select **External access.**
 
@@ -280,7 +288,7 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 ### Task 9 – Manage Teams Settings
 
-Microsoft Teams includes a variety of global settings that control performance within Teams. As part of your Microsoft Teams pilot project, you will configure a number of these settings as determined by Adatum’s project team.
+Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Holly Spencer will configure a number of these settings as determined by Adatum’s project team.
 
 1. On the left-hand navigation pane in the **Teams admin center**, select **Org-wide settings** and then select **Teams settings.**
 
@@ -294,7 +302,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 	- Files
 
-		- ShareFile: **On**
+		- Citrix files: **On**
 
 		- DropBox: **Off**
 
@@ -312,7 +320,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 		- Set content pin: **Required for outside scheduled meeting**
 
-		- Resource accounts cans send messages: **On**
+		- Resource accounts can send messages: **On**
 
 	- Search by name
 

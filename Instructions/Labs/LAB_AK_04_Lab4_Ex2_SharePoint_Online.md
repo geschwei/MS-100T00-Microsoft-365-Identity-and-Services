@@ -71,47 +71,49 @@ A team site includes a group of related web pages, a default document library fo
  
 ### Task 2 – Hierarchical Permissions
 
-SharePoint Online uses hierarchical permissions to set authorization and access of sites. In other words, when a site is created (the Parent site) any sites that are later created under that site (children sites) will, by default, inherit the main site permissions of the parent site. Since you just created a team site for Human Resources, you now plan to configure site permissions to meet the HR team’s security requirements.
+SharePoint Online uses hierarchical permissions to set authorization and access of sites. In other words, when a site is created (known as the parent site) any sites that are later created under that site (known as children sites) will, by default, inherit the main site permissions of the parent site. Since you just created a team site for Human Resources, you now plan to configure site permissions to meet the HR team’s security requirements.
 
 1. In the **SharePoint admin center**, you should still be displaying **Active sites**.
 
 2. Select the **Human Resources** site that you created in the prior task.
 
-3. In the **Human Resources** pane that appears on the right, select the URL that is displayed under **URL.** 
+3. In the **Human Resources** window that appears, select the URL that is displayed under **URL.** 
 
 4. A new tab will open in Internet Explorer that displays the **Human Resources** site.
 
-5. In the upper right-hand corner of the **Human Resources** site, select the **gear** **(site settings)** icon.
+5. In the upper right-hand corner of the **Human Resources** site, select the **gear (Settings)** icon.
 
-6. In the drop-down menu, select **Site permissions.**
+6. In the **Settings** pane that appears, select **Site permissions.**
 
-7. At the bottom of the **Site permissions** pane, select **Advance permissions settings**, which opens a new **Permissions: Human Resources** window.
+7. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: Human Resources** tab for the Human Resources site.
 
-8. In the **Permissions: Human Resources** window, in the ribbon that appears at the top of the page, select **Check Permissions.**  
+8. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: Human Resources** window,, select **Check Permissions.**  
 
-	**Note:** This option will allow you to check access permissions for users and groups.
+	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the HR site, and Nestor and Patti as site members. The following steps will enable you to check what permissions they were assigned in these roles. 
 
-9. In the **Human Resources: Check Permissions** window, in the **User/Group** field, type **Libby**. As you type Libby, a window appears listing users whose first name starts with Libby. Select **Libby Hayward** and then select **Check now.** This will display the level of access that Libby has for this site, which is **Full Control**.
+9. In the **Human Resources: Check Permissions** window that appears, in the **User/Group** field, type **Diego**. As you type Diego, a window appears listing users whose first name starts with Diego. Select **Diego Siciliani** and then select **Check now**. Since Diego is an owner of this site, this confirms that he was automatically assigned **Full Control** permissions.
 
-10. Select the x next to Libby’s name to remove her name from the User/Group field. In the **User/Group** field, type **Alan**. As you type Alan, a window appears listing users whose first name starts with Alan. Select **Alan Yoo** and then select **Check now.** This will display the level of access that Alan has for this site, which is **Edit only**.
+10. In the **User/Group** field, select the **X** next to Diego’s name to remove it from the field. In the **User/Group** field, type **Nestor**. As you type Nestor, a window appears listing users whose first name starts with Nestor. Select **Nestor Wilke** and then select **Check now.** Since Nestor is member of this site, this confirms that he was automatically assigned **Edit** permissions.
 
-11. Repeat the prior step and check the permission for **Adam Hobbs**. You will see that Adam does not have permission to access or update the site.
+	If you repeat this step for **Patti Fernandez**, you will confirm that as a site member, she also has **Edit** permissions.
 
-12. Select **Close.**
+11. Repeat the prior step and check the permission for **Alex Wilber**. You will see that Alex does not have permission to access or update the site since he has not been assigned as a site member.
 
-13. You are now back in the **Permissions: Human Resources** window. You have been asked to create a new group of users and assign them permission to access the Human Resources site. In the ribbon that appears at the top of the page, select **Create Group.**  
+12. In the **Human Resources: Check Permissions** window, select **Close.**
+
+13. You are now back in the **Permissions: Human Resources** tab in your browser. You have been asked to create a new group of users and assign them permission to access the Human Resources site. In the ribbon that appears at the top of the page, select **Create Group.**  
 
 	‎**Best Practice:** It’s a best practice that you should use Groups to assign access permissions rather than assigning access to individual user accounts for two important reasons: Assigning individual users access to a site makes it difficult to track user access when the user leaves your organization, and direct permissions can override security groups permissions.
 
-14. In the **People and Group &gt; Create Group** window, enter the following information:   
+14. In the **People and Groups &gt; Create Group** window, enter the following information:   
 
 	- Name: **Information Technology**
 
 	- About me: **This group is used for members of the IT staff**
 
-	- Group owner: If Holly Spencer appears as the owner, select the x to the right of her name to remove her, and then enter **MOD.** As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator.**  
+	- Group owner: If Holly Spencer appears as the owner, select the **X** to the right of her name to remove her, and then enter **MOD**. As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator**.  
 	
-		‎**Best Practice:** When you create groups make sure this is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
+		‎**Best Practice:** When you create groups make sure the group owner is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
 
 	- Group Settings:
 
@@ -125,7 +127,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- Auto-accept requests: **No**
 
-		- Send membership requests to the following e-mail address: If Holly Spencer’s email appears as the owner, select the x to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+		- Send membership requests to the following e-mail address: If Holly Spencer’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
 	- Give group permission to this site:
 
@@ -137,21 +139,29 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 17. In the menu bar that appears above the user list, select **New**, and then in the drop-down menu, select **Add users to this group.**
 
-18. In the **Share ‘Human Resources’** window, the **Invite people** tab is selected in the left-hand pane by default. In the Enter names or email addresses field, enter **Alan**. As you type Alan, a window appears listing users whose first name starts with Alan. Select **Alan Yoo**. Repeat this process for **Adam Hobbs** and **Ada Russell.**
+18. In the **Share ‘Human Resources’** window, the **Invite people** tab is selected in the left-hand pane by default. In the **Enter names or email addresses** field, enter **Isaiah**. As you type Isaiah, a window appears listing users whose first name starts with Isaiah. Select **Isaiah Langer**. 
+
+	Repeat this step for **Joni Sherman** (type **Joni** next to Isaiah Langer's name in the **Enter names or email addresses** field).
 
 19. Below the personal message field, select **SHOW OPTIONS.**
 
 20. Uncheck the **Send an email invitation** option.
 
-21. Select **Share** to add the users to this group.
+21. Select **Share** to share the Human Resouces site with the members of this Information Technology group.
 
-22. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The members of the group (Alan, Holly, Ada, and Adam) should be displayed.
+22. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The members of the group (Holly, Isaiah, and Joni) should be displayed.
 
 23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **Human Resources** team site.
 
-24. The **Site permissions** settings should still be displayed in the right-hand pane. At the bottom of the pane, select **Advance permissions settings,** which takes you back to the **Permissions: Human Resources** page.
+24. In the upper right-hand corner of the **Human Resources** site, select the **gear (Settings)** icon.
 
-25. On the ribbon that appears at the top of the page, select **Permission Levels.**  
+25. In the **Settings** pane that appears, select **Site permissions.**
+
+26. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: Human Resources** tab for the Human Resources site.
+
+27. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: Human Resources** window,, select **Check Permissions.**  
+
+28. On the ribbon that appears at the top of the page, select **Permission Levels**.  
 
 	‎**Note:** This option enables you to customize permission levels to better fit your organization.
 
@@ -161,7 +171,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 	- Name: **Designer**
 
-	- List Permissions – select the following:
+	- List Permissions – select the following permission levels:
 
 		- **Add Items**
 
@@ -175,7 +185,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- **View Versions**
 
-	- Site Permissions – select the following:
+	- Site Permissions – select the following permission levels:
 
 		- **Create Subsites**
 
@@ -199,11 +209,11 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- **Open**
 
-28. Select **Create.** to apply the changes that you just made.
+28. Scroll to the bottom of the page and select **Create** to apply the changes that you just made.
 
 29. The **Permission Levels** window now displays the permissions that you just added.
 
-30. In Internet Explorer, close the **Permission Levels** tab, the **Human Resources - Home** tab, and the **SharePoint admin center** tab.
+30. In Internet Explorer, close the **Permission Levels** tab and the **SharePoint admin center** tab.
 
 
 # Proceed to Exercise 3

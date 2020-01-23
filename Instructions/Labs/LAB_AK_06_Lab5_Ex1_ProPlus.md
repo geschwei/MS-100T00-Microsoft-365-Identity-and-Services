@@ -1,16 +1,14 @@
 # Module 6 - Lab 5 - Exercise 1 - Manage an Office 365 ProPlus installation
 
-You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. 
+You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installation. Performing a user-driven Office 365 ProPlus installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
-In this exercise you will learn how to download and manage the Office 365 ProPlus suite for an individual user. Performing a user-driven Office 365 ProPlus installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
-
-In the first two tasks in this exercise, you will verify different conditions that affect whether a user can install Office 365 Pro Plus. In doing so, you will see what factors play a role in determining whether a user can download the deployment tool. There are two ways in which a user can be blocked from downloading the Office 365 ProPlus suite: <br/>
+In the first two tasks in this exercise, you will verify the conditions that affect whether a user can be blocked from downloading the Office 365 ProPlus suite: <br/>
 
 - The user does not have an appropriate Microsoft 365 license (which you will verify in Task 1 using Laura Atkins). 
 	
 - An admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify in Task 2 with Diego Siciliani).
 
-In the final task in this exercise, you will install the Office 365 ProPlus suite for one of the users.
+In the final task in this exercise, you will install the Office 365 ProPlus suite for one of Adatum's users.
 
 
 ### Task 1 – Verify how licensing affects installing Office 365 ProPlus
@@ -19,7 +17,9 @@ In this task, Holly will test whether a user who has not been assigned an approp
 
 Therefore, you must use one of Adatum's on-premises user accounts that exists in its VM environment. For this test, you will use **Laura Atkins**. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
 
-1. You should switch to your Domain Controller VM (LON-DC1) and if necessary, log in as **ADATUM\Administrator** and password **Pa55w.rd.**
+1. If you’re not logged into the Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now. 
+
+You should switch to your Domain Controller VM (LON-DC1) and if necessary, log in as **ADATUM\Administrator** and password **Pa55w.rd.**
 
 2. Open Internet Explorer. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 

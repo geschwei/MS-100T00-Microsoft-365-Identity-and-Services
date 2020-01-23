@@ -154,7 +154,7 @@ Holly is now going to test whether users can be prohibited from downloading Offi
 
 	Select the **refresh icon** that appears to the left of the address bar at the top of your browser. 
 
-29. In the **My account** window that appears, under the **Office apps &amp; devices** section, the Install Office button now appears.<br/>
+29. In the **My account** window that appears, under the **Office apps &amp; devices** section, the **Install Office** button now appears. 
 	
 	‎**Important:** You have just verified that a user with an Office license is able to download Office 365 ProPlus if the global Office download setting is turned On.
 
@@ -167,27 +167,31 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 1. On the Client 1 VM (LON-CL1), you should still be logged in as Laura Atkins. 
 
-2. You should still be in Laura’s **My account** window, since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, you can see that you have the ability to download Office since Laura is assigned an Office 365 E5 license and the global Office download setting is turned On.<br/>
+2. You should still be in Laura’s **My account** window, since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, the **Install Office** button now appears, since Laura is assigned an Office 365 E5 license and the global Office download setting is turned On.<br/>
 
-	‎To install Office 365 ProPlus to your PC, select the **Install Office** button that appears.
-	
-3. In the **Just a few more steps** window, select **Close**.
+	‎**Important:** Selecting this **Install Office** button will install the 64 bit, English version of Office 365 ProPlus. However, if you want to install a different language or version, then select **View apps &amp; devices**, which opens the **Apps &amp; devices** page; this enables you to select the language and version that you want to install. 
 
-4. In the notification bar that appears at the bottom of the page, select **Run** to download and run the 64 bit Office 365 ProPlus installation wizard on the client PC.
+	Since Laura wants to install the 64 bit English version of ProPlus, select the **Install Office** button.
+		
+3. In the **Just a few more steps** window that appears, select **Close**.
 
-5. If a **Do you want to allow this app to make changes to your device?** dialog box appears, type **adatum\administrator** in the **username** box, type **Pa55w.rd** in the **Password** box, and then select **Yes**. 
+4. In the notification bar that appears at the bottom of the page, select **Save** to download the 64 bit Office 365 ProPlus installation wizard to the client PC.
 
-6. You may receive a warning indicating that it may be expensive to continue downloading. Select **OK.** <br/>
+5. Once the Office 365 ProPlus installation file has finished downloading, select **Run** in the notification bar that appears at the bottom of the page.
+
+6. If a **Do you want to allow this app to make changes to your device?** dialog box appears, type **adatum\administrator** in the **username** box, type **Pa55w.rd** in the **Password** box, and then select **Yes**. 
+
+7. You may receive a warning indicating that it may be expensive to continue downloading. Select **OK.** <br/>
 
 	‎**Important:** This window may appear behind the Office window that displays the message: **We’re getting things ready.** If so, move the Office window to the side so that you can respond to the warning message. The Office install will NOT proceed until you select **OK** on the warning message (the Office window will just keep displaying the **We’re getting things ready** message, but it won’t actually do anything).
 
-7. The installation may take several minutes to complete. Once the installation finishes, select **Close**.
+8. The installation may take several minutes to complete. Once the installation finishes, select **Close**.
 
-8. Now let’s verify that you can use one of the Office 365 ProPlus apps. Select the **Start** icon in the lower-left corner of the taskbar. In the **Start** screen, scroll down and you’ll notice the following apps that are flagged as **New**: Access, Excel, Outlook, PowerPoint, Publisher, Skype for Business, and Word.
+9. Now let’s verify that you can use one of the Office 365 ProPlus apps. Select the **Start** icon in the lower-left corner of the taskbar. In the **Start** screen, scroll down and you’ll notice the following apps that are flagged as **New**: Access, Excel, Outlook, PowerPoint, Publisher, Skype for Business, and Word.
 
-9. In the **Start** screen, select **Word** to open it. 
+10. In the **Start** screen, select **Word** to open it. 
 
-10. If the **Sign in and Setup Office** window appears, perform the following steps:
+11. If the **Sign in and Setup Office** window appears, perform the following steps:
 
 	- Select **Sign in**.
 
@@ -199,15 +203,15 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 	- In the **You’re all set** window, select **Done**.
 
-11. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
+12. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
 
-12. In the **Accept the license agreement** window, select **Accept**.
+13. In the **Accept the license agreement** window, select **Accept**.
 
-13. Switch to your **Edge** browser and select the **My account** tab. This displays the status of your installs prior to the Office 365 ProPlus installation; therefore, select the **Refresh** icon at the top of the page, to the left of the address bar. 
+14. Switch to your **Edge** browser and select the **My account** tab. This displays the status of your installs prior to the Office 365 ProPlus installation; therefore, select the **Refresh** icon at the top of the page, to the left of the address bar. 
 
-14. After refreshing the **My account** page, it displays the **My account** tab in the left-hand navigation pane. Note in the **Install status** section that there’s 1 detected install.
+15. After refreshing the **My account** page, it displays the **My account** tab in the left-hand navigation pane. Note in the **Install status** section that there’s 1 detected install.
 
-15. Leave the Client 1 VM open as you will continue from this point in the next task.
+16. Leave the Client 1 VM open as you will continue from this point in the next task.
 
 
 # Proceed to Exercise 2

@@ -328,7 +328,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 3. Select **Save.**
 
-4. Since this is the end of Lab 4, close Internet Explorer.  
+4. Leave your LON-DC1 VM open for the next lab.  
 
 
 # End of Lab 4

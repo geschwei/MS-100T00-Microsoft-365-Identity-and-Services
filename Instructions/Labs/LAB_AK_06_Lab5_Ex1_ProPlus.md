@@ -1,20 +1,23 @@
-# Module 6 - Lab 5 - Exercise 1 - Install Office 365 ProPlus
+# Module 6 - Lab 5 - Exercise 1 - Manage an Office 365 ProPlus installation
 
-You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. You will also deploy and configure Office Telemetry components.
+You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this lab, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installations. 
 
-In this exercise you will learn how to download and manage the Office 365 ProPlus suite for an individual user. 
+In this exercise you will learn how to download and manage the Office 365 ProPlus suite for an individual user. Performing a user-driven Office 365 ProPlus installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
-### Task 1 – Prepare a User Account for Installing Office 365 ProPlus
+In the first two tasks in this exercise, you will verify different conditions that affect whether a user can install Office 365 Pro Plus. In doing so, you will see what factors play a role in determining whether a user can download the deployment tool. There are two ways in which a user can be blocked from downloading the Office 365 ProPlus suite: <br/>
 
-Performing a user-driven Office 365 ProPlus installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
-
-In this task, you will complete the first step by reviewing several user accounts to see which are eligible to perform a user-driven installation. In doing so, you will see what factors play a role in determining whether a user can download the deployment tool. In the next task, you will install the Office 365 ProPlus suite for one of the users.
-
-There are two ways in which a user can be blocked from downloading the Office 365 ProPlus suite: <br/>
-
-- First, an individual user can be prohibited from downloading Office 365 ProPlus if he or she does not have an appropriate Microsoft 365 license (which you will verify in this task with Laura Atkins). 
+- The user does not have an appropriate Microsoft 365 license (which you will verify in Task 1 using Laura Atkins). 
 	
-- Second, all users can be prohibited from downloading Office 365 ProPlus if an admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify with Adam Hobbs).
+- An admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify in Task 2 with Diego Siciliani).
+
+In the final task in this exercise, you will install the Office 365 ProPlus suite for one of the users.
+
+
+### Task 1 – Verify how licensing affects installing Office 365 ProPlus
+
+In this task, Holly will test whether a user who has not been assigned an appropriate Microsoft 365 license can download Office 365 ProPlus. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Office 365 accounts (M365xZZZZZZ.onmicrosoft.com accounts); they do not have corresponding on-premises (adatum) accounts. Without an on-premises account, you cannot log into the Client 1 VM as any of these users to install Office 365 Pro Plus on the client machine. 
+
+Therefore, you must use one of Adatum's on-premises user accounts that exists in its VM environment. For this test, you will use **Laura Atkins**. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
 
 1. You should switch to your Domain Controller VM (LON-DC1) and if necessary, log in as **ADATUM\Administrator** and password **Pa55w.rd.**
 
@@ -28,114 +31,139 @@ There are two ways in which a user can be blocked from downloading the Office 36
 
 6. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active Users**. 
 
-7. We’ll begin by testing whether a user without an appropriate Microsoft 365 license can install Office 365 ProPlus. For this test, you will remove both the Office 365 E5 license and the Enterprise Mobility + Security E5 license from Patti Fernandez's user account. In the list of active users, select the **Patti Fernandez** user account.
+7. You will begin by testing whether a user **without** an appropriate Microsoft 365 license can install Office 365 ProPlus. For this test, you will use **Laura Atkins**. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
 
-8. On the **Patti Fernandez** account window, select the **Licenses and Apps** tab that appears at the top of the form.
+In the **Microsoft 365 admin center**, at the top of the **Active users** window, select **Add a user** on the menu bar.
 
-9. In the list of licenses, uncheck BOTH the **Enterprise Mobility + Security E5** check box and the **Office 365 E5** check box. Patti should have no licenses assigned to her account. 
+8. In the **Set up the basics** window, enter the following information:
+	- First name: **Laura**
+	- Last name: **Atkins** 
+	- Display name: When you tab into this field, Laura Atkins will appear.
+	- Username: **Laura**
 
-10. Select **Save changes**. Once the licenses are unassigned from Patti's user account, the **Save changes** button changes to a checkmark. At this point, select the **X** in the upper right-hand corner of the window to close it and return to the list of active users.  
+	**IMPORTANT:** To the right of the Username field is the domain field. It’s already prefilled with the custom XXYYZZa.xxxCustomDomainxxx.xxx on-premises domain (where XXYYZZ is your UPN number and xxxCustomDomainxxx.xxx is your lab hosting provider's domain); however, you must select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). 
 
-11. You will now switch to the Client 1 VM (LON-CL1) and log in as **Patti Fernandez**. In the **Virtual Machine** box at the top of the VM, select the drop-down arrow and select the Client 1 VM (**LON-CL1**). 
+	After configuring this field, Laura’s Username should appear as: Laura@M365xZZZZZZ.onmicrosoft.com
 
-8. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow and select **Ctrl+Alt+Delete**. This will display the log-in credentials for the **ADATUM\Administrator** account. Since you want to log in as Laura, select **Other user** in the lower-left portion of the desktop.
+	- Password settings: select the **Let me create the password** option
+	- Password: **Pa55w.rd** 
+	- Uncheck the **Require this user to change their password when they first sign in** check box 
+	
+9. Select **Next**.
 
-9. In the **Other user** log in, enter **adatum\laura** with a password of **Pa55w.rd.**
+10. In the **Assign product licenses** window, select the **Create user without product license (not recommended)** option, and then select **Next**.
 
-10. In the Client 1 VM, Laura prefers to use Microsoft Edge as her browser. Select **Microsoft Edge** either on the desktop or on the taskbar.
+11. In the **Optional settings** window, select **Next**. 
 
-11. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
+12. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
 
-12. In the **Sign in** window, enter **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
+13. On the **Laura Atkins has been added** page, select **Close**. If a survey form appears, select **Cancel**. 
 
-13. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
+14. You will now switch to the Client 1 VM (LON-CL1) and log in as **Laura Atkins**. In the **Virtual Machine** box at the top of the VM, select the drop-down arrow and select the Client 1 VM (**LON-CL1**). 
 
-14. In the **Stay signed in?** window, select **Yes.**
+15. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow and select **Ctrl+Alt+Delete**. This will display the log-in credentials for the **ADATUM\Administrator** account. Since you want to log in as Laura, select **Other user** in the lower-left portion of the desktop.
 
-15. In the **Microsoft Office Home** page for Laura, notice that no apps appear. Select the **Install Office** drop-down arrow, and then select **Install software**.
+16. In the **Other user** log in, enter **adatum\laura** in the **Username** field, and enter **Pa55w.rd** as the **Password**.
 
-16. This displays the **My installs** window for Laura. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Office 365 ProPlus. <br/>
+17. If a **Networks** pane appears, select **No**. 
+
+18. In the Client 1 VM, Laura prefers to use Microsoft Edge as her browser. Select the **Microsoft Edge** icon on either the desktop or the taskbar.
+
+19. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
+
+20. In the **Sign in** window, enter **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
+
+21. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
+
+22. In the **Stay signed in?** window, select **Yes.**
+
+23. In the **Microsoft Office Home** page for Laura, notice that no apps appear. Select the **Install Office** drop-down arrow, and then select **Install software**.
+
+24. This displays the **My installs** window for Laura. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Office 365 ProPlus. <br/>
 	
 	‎**Important:** You have just verified that a user cannot download Office 365 Pro Plus if he or she has not been assigned an appropriate Office license.
 
-17. You’re now going to test whether users can be prohibited from downloading Office 365 ProPlus if an admin such as Holly turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.<br/>
+
+### Task 2 – Verify how the global Office download setting affects installing Office 365 ProPlus
+
+Holly is now going to test whether users can be prohibited from downloading Office 365 ProPlus if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.<br/>
 	
-	‎You need to switch back the Domain Controller VM, so select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Spencer, Adatum’s Enterprise Administrator.
+1. You must switch back the Domain Controller VM (LON-DC1), so select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the LON-DC1 VM. You should still be logged in as Holly Spencer, Adatum’s Enterprise Administrator.
 
-18. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, select **Show all** in the left-hand navigation pane, select **Settings,** and then select **Services &amp; add-ins**. 
+2. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, select **Show all** in the left-hand navigation pane, select **Settings,** and then select **Services &amp; add-ins**. 
 
-19. In the **Services and add-ins** window, scroll down through the list of services and add-ins and select **Office software download settings.**
+3. In the **Services and add-ins** window, scroll down through the list of services and add-ins and select **Office software download settings.**
 
-20. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently selected. Select this check box so that it’s blank, which turns this feature Off. 
+4. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently selected. Select this check box so that it’s blank, which turns this feature Off. 
 
-21. Select **Save** **changes** (which replaces the text in this button with a check mark).
+5. Select **Save** **changes** (which replaces the text in this button with a check mark).
 
-22. Select the X in the upper-right corner of this window to close it. 
+6. Select the X in the upper-right corner of this window to close it. 
 
-23. Let’s now see whether turning off this global download setting affects a licensed user from installing Office 365 ProPlus. In this case, we’re going to use **Adam Hobbs**. Let’s first check Adam’s license status. <br/>
+7. Let’s now see whether turning off this global download setting affects a licensed user from installing Office 365 ProPlus. In this case, we’re going to use **Adam Hobbs**. Let’s first check Adam’s license status. <br/>
 	
 	‎In the **Microsoft 365 admin center**, in the **Active users** list, select **Adam Hobbs**. 
 
-24. In Adam Hobbs’ account window, select the **Licenses and Apps** tab. In the **Licenses** section, note that Adam has not been assigned a license. Like Laura Atkins, you did not assign Adam a license when you added his account in Lab 1; therefore, you must assign Adam an Office 365 E5 license now.<br/>
+8. In Adam Hobbs’ account window, select the **Licenses and Apps** tab. In the **Licenses** section, note that Adam has not been assigned a license. Like Laura Atkins, you did not assign Adam a license when you added his account in Lab 1; therefore, you must assign Adam an Office 365 E5 license now.<br/>
 
 	In the **Licenses and Apps** tab, select the **Office 365 E5** check box and then select **Save changes**. You can then close Adam’s account window.
 
-25. Let’s now check whether Adam can download Office 365 ProPlus on to his client PC when the global Office download setting has been turned Off. To do this, you must switch back to the Client 1 VM and log in as Adam.<br/>
+9. Let’s now check whether Adam can download Office 365 ProPlus on to his client PC when the global Office download setting has been turned Off. To do this, you must switch back to the Client 1 VM and log in as Adam.<br/>
 	
 	‎In the **Virtual machine** field at the top of the VM, select the drop-down arrow and select the Client 1 VM (LON-CL1).
 
-26. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow, select **Ctrl+Alt+Delete,** and then on the desktop select **Switch user**. This will display the log-in credentials for **Laura Atkins**, who last used this VM. Since you want to log in as Adam Hobbs, select **Other user** in the lower-left portion of the desktop.
+10. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow, select **Ctrl+Alt+Delete,** and then on the desktop select **Switch user**. This will display the log-in credentials for **Laura Atkins**, who last used this VM. Since you want to log in as Adam Hobbs, select **Other user** in the lower-left portion of the desktop.
 
-27. In the **Other user** log in, enter **adatum\adam** and password **Pa55w.rd.**
+11. In the **Other user** log in, enter **adatum\adam** and password **Pa55w.rd.**
 
-28. In the Client 1 VM, Adam also prefers to use Microsoft Edge as his browser. Select **Microsoft Edge** either on the desktop or on the taskbar.
+12. In the Client 1 VM, Adam also prefers to use Microsoft Edge as his browser. Select **Microsoft Edge** either on the desktop or on the taskbar.
 
-29. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
+13. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
 
-30. In the **Sign in** window, enter **Adam@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
+14. In the **Sign in** window, enter **Adam@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
 
-31. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
+15. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
 
-32. In the **Stay signed in?** window, select **Yes.**
+16. In the **Stay signed in?** window, select **Yes.**
 
-33. If a **Get your work done with Office 365** window appears, select the X in the upper-right corner to close it.
+17. If a **Get your work done with Office 365** window appears, select the X in the upper-right corner to close it.
 
-34. In the **Microsoft Office Home** page for Adam, select the **Install Office** drop-down arrow, and then in the drop-down menu, select **Other install options**.<br/>
+18. In the **Microsoft Office Home** page for Adam, select the **Install Office** drop-down arrow, and then in the drop-down menu, select **Other install options**.<br/>
 	
 	‎**Note:** After selecting the **Install Office** button, you would typically select the **Office 365 apps** option to initiate the installation (unless you needed to select a different language or install other apps available with your subscription, in which case you would select **Other install options**). <br/>
 	
 	However, in this lab, we want you to verify that with the Global Office download setting turned Off, you cannot install Office. If you select the **Office 365 apps** option, you can select the taskbar option to run the .exe setup program, in which case it will download the file and start to run the program; however, because the Global Office download setting is turned Off, the setup will start but then immediately hang and not proceed through the installation. On the other hand, by selecting **Other install options** as you have been directed to do so in this step, it will open the **My installs** window (in the next step) and display a message indicating that Office installs are turned off. You were purposely directed to select **Other install options** to see this message.
 
-35. In the **My installs** window for Adam, in the **Office** section at the top of the page, a message is displayed indicating that the admin (Holly) has turned off Office installs. <br/>
+19. In the **My installs** window for Adam, in the **Office** section at the top of the page, a message is displayed indicating that the admin (Holly) has turned off Office installs. <br/>
 	
 	‎**Important:** You have just verified that a licensed user is unable to download Office 365 ProPlus if the global Office download setting has been turned Off.
 
-36. At this point you want Holly to turn the global Office download setting back On so that you can see if Adam can download Office 365 ProPlus. To do this, you must switch back the Domain Controller VM.<br/>
+20. At this point you want Holly to turn the global Office download setting back On so that you can see if Adam can download Office 365 ProPlus. To do this, you must switch back the Domain Controller VM.<br/>
 	
 	‎To do so, select the drop-down arrow in the **Virtual machine** field at the top of the VM and select the Domain Controller VM (LON-DC1). You should still be logged in as Holly Spencer.
 
-37. The **Microsoft 365 admin center** should still be displaying the **Services and add-ins** window. Select **Office software download settings.**
+21. The **Microsoft 365 admin center** should still be displaying the **Services and add-ins** window. Select **Office software download settings.**
 
-38. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a checkmark, which now turns this feature back On.
+22. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a checkmark, which now turns this feature back On.
 
-39. Select **Save** **changes** (which replaces the text in this button with a check mark).
+23. Select **Save** **changes** (which replaces the text in this button with a check mark).
 
-40. Select the X in the upper-right corner of this window to close it. 
+24. Select the X in the upper-right corner of this window to close it. 
 
-41. Now that this global Office download option is turned back On, let’s see how it affects Adam’s ability to download Office 365 ProPlus. To do this, you must switch back to the Client 1 VM. <br/>
+25. Now that this global Office download option is turned back On, let’s see how it affects Adam’s ability to download Office 365 ProPlus. To do this, you must switch back to the Client 1 VM. <br/>
 	
 	‎In the **Virtual machine** field at the top of the VM, select the drop-down arrow and select the Client 1 VM (LON-CL1).
 
-42. The Client 1 VM will open where it left off, which is displaying the **My installs** window from Adam’s **My account** page. The **My installs** window is still displaying the message from earlier when the global Office download option was turned off. Since you just turned this option back on, you need to refresh this page to see how it affects Adam’s ability to download Office 365 ProPlus. Select the **refresh icon** that appears to the left of the address bar. 
+26. The Client 1 VM will open where it left off, which is displaying the **My installs** window from Adam’s **My account** page. The **My installs** window is still displaying the message from earlier when the global Office download option was turned off. Since you just turned this option back on, you need to refresh this page to see how it affects Adam’s ability to download Office 365 ProPlus. Select the **refresh icon** that appears to the left of the address bar. 
 
-43. Once the **My installs** window refreshes, notice how the Office section at the top of the page provides the ability to install Office.<br/>
+27. Once the **My installs** window refreshes, notice how the Office section at the top of the page provides the ability to install Office.<br/>
 	
 	‎**Important:** You have just verified that a user with an Office license is able to download Office 365 ProPlus if the global Office download setting is turned On.
 
-44. Leave this page open and continue to the next task to perform the user-driven installation for Holly Spencer.
+28. Leave this page open and continue to the next task to perform the user-driven installation for Holly Spencer.
 
 
-### Task 2 – Perform a User-Driven Installation of Office 365 ProPlus 
+### Task 3 – Perform a User-Driven Installation of Office 365 ProPlus 
 
 In the prior task, you logged into Adam Hobbs’ client PC, and you verified that he could download Office 365 ProPlus. In this task, you will continue the process by having Adam perform a user-driven installation of the ProPlus suite from the Microsoft 365 portal.  
 

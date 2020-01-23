@@ -28,9 +28,15 @@ There are two ways in which a user can be blocked from downloading the Office 36
 
 6. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active Users**. 
 
-7. We’ll begin by testing whether a user without an appropriate Microsoft 365 license can install Office 365 ProPlus. For this test, you will switch to the Client 1 VM (LON-CL1) and log in as **Laura Atkins**. You added Laura in Lab 1, but you did not assign her an Office 365 E5 license. <br/>
+7. We’ll begin by testing whether a user without an appropriate Microsoft 365 license can install Office 365 ProPlus. For this test, you will remove both the Office 365 E5 license and the Enterprise Mobility + Security E5 license from Patti Fernandez's user account. In the list of active users, select the **Patti Fernandez** user account.
 
-	‎In the **Virtual Machine** box at the top of the VM, select the drop-down arrow and select the Client 1 VM (**LON-CL1**). 
+8. On the **Patti Fernandez** account window, select the **Licenses and Apps** tab that appears at the top of the form.
+
+9. In the list of licenses, uncheck BOTH the **Enterprise Mobility + Security E5** check box and the **Office 365 E5** check box. Patti should have no licenses assigned to her account. 
+
+10. Select **Save changes**. Once the licenses are unassigned from Patti's user account, the **Save changes** button changes to a checkmark. At this point, select the **X** in the upper right-hand corner of the window to close it and return to the list of active users.  
+
+11. You will now switch to the Client 1 VM (LON-CL1) and log in as **Patti Fernandez**. In the **Virtual Machine** box at the top of the VM, select the drop-down arrow and select the Client 1 VM (**LON-CL1**). 
 
 8. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow and select **Ctrl+Alt+Delete**. This will display the log-in credentials for the **ADATUM\Administrator** account. Since you want to log in as Laura, select **Other user** in the lower-left portion of the desktop.
 

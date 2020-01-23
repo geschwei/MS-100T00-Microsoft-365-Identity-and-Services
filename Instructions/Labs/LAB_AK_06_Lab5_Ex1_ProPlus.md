@@ -23,7 +23,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that exists in
 
 3. You will begin by testing whether a user **without** an appropriate Office 365 license can install Office 365 ProPlus. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have an Office 365 user account. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
 
-At the top of the **Active users** window, select **Add a user** on the menu bar.
+	At the top of the **Active users** window, select **Add a user** on the menu bar.
 
 4. In the **Set up the basics** window, enter the following information:
 	- First name: **Laura**
@@ -152,7 +152,7 @@ Holly is now going to test whether users can be prohibited from downloading Offi
 
 28. In the Client 1 VM, your Edge browser should still be open, and the **Apps and devices** page should be displayed along with the error message that indicated your admin has turned off Office installs. Since you just turned this option back on, you need to refresh this page to see how it affects Laura’s ability to download Office 365 ProPlus. 
 
-Select the **refresh icon** that appears to the left of the address bar at the top of your browser. 
+	Select the **refresh icon** that appears to the left of the address bar at the top of your browser. 
 
 29. In the **My account** window that appears, under the **Office apps &amp; devices** section, the Install Office button now appears.<br/>
 	

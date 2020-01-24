@@ -179,27 +179,18 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 8. The installation may take several minutes to complete. Once the installation finishes, select **Close**.
 
-9. Now let’s verify that you can use one of the Office 365 ProPlus apps. Select the **Start** icon in the lower-left corner of the taskbar. In the **Start** screen, scroll down and you’ll notice the following apps that are flagged as **New**: Access, Excel, Outlook, PowerPoint, Publisher, Skype for Business, and Word.
+9. Now let’s verify that you can use one of the Office 365 ProPlus apps. Select the **Start** icon in the lower-left corner of the taskbar. In the **Start** screen, expand the **Recently added** section at the top of the menu to display all the Office 365 ProPlus apps that were just installed.
 
 10. In the **Start** screen, select **Word** to open it. 
 
-11. If the **Sign in and Setup Office** window appears, perform the following steps:
+11. In the **Accept the license agreement** window, select **Accept**.
 
-	- Select **Sign in**.
+12. In the **Your privacy option** window, select **Close**.
 
-	- In the **Activate Office** window, enter **Adam@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
+13. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
 
-	- In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
-
-	- In the **Use this account everywhere on your device** window, select **Yes**.
-
-	- In the **You’re all set** window, select **Done**.
-
-12. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
-
-13. In the **Accept the license agreement** window, select **Accept**.
-
-14. Switch to your **Edge** browser and select the **My account** tab. This displays the status of your installs prior to the Office 365 ProPlus installation; therefore, select the **Refresh** icon at the top of the page, to the left of the address bar. 
+14. In your **Edge** browser select **Office apps &amp; devices** in the left-hand navigation pane. sectionthe 12. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
+. This displays the status of your installs prior to the Office 365 ProPlus installation; therefore, select the **Refresh** icon at the top of the page, to the left of the address bar. 
 
 15. After refreshing the **My account** page, it displays the **My account** tab in the left-hand navigation pane. Note in the **Install status** section that there’s 1 detected install.
 

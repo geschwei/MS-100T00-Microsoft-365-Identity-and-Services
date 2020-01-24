@@ -1,12 +1,16 @@
 # Module 6 - Lab 5 - Exercise 2 - Implement Office Telemetry Components 
 
-In this exercise, you will configure the Microsoft 365 Telemetry engine to gather information about the Adatum’s Microsoft 365 client. You will log in as Adam Hobbs in order to install the Telemetry engine.
+In this exercise, you will configure the Microsoft 365 Telemetry engine to gather information about the Adatum’s Microsoft 365 client. You will take on the persona of Laura Atkins and install the Telemetry engine on her client PC.
 
 ### Task 1 – Prepare to Deploy Office Telemetry Components 
 
-Before you can install the Telemetry Processor in the next step, you must first prepare your Client 1 VM for the installation. You will create a folder on the C Drive for storing the Telemetry components, and you will add Adam Hobbs as a Local Administrator on the VM. If Adam is not set up as a local admin, then when you run the Microsoft Office Telemetry Processor Setup Wizard in the next step, you will be prompted three different time as to whether you want to allow this app to make changes to your device, and you will have to enter the adatum\administrator account and password each time. By making Adam a local admin, you will not receive this message repeatedly throughout the wizard.
+Before Laura Atkins can install the Telemetry Processor in the next task, her Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. You will then add Laura as a Local Administrator on the VM. 
 
-1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as **Adam Hobbs**. You need to log in as the **adatum\administrator** account to make Adam a local admin. <br/>
+If Laura is not set up as a local admin, then when she runs the Microsoft Office Telemetry Processor Setup Wizard in the next task, she will be prompted three different times as to whether she wants to allow this app to make changes to her device, and she will have to enter the adatum\administrator account and password each time. By making Laura a local admin, she will not receive this message repeatedly throughout the installation wizard.
+
+The final step in the preparation process is to verify that the SQL Server 2017 services that are installed on LON-CL1 are all running. If any of the services are not running, the setup wizard will hang as it won't be able to connect to the SQL database.
+
+1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **Laura Atkins**. To make Laura a local admin on this machine, you must first log out as Laura and log back in as the **adatum\administrator** account. <br/>
 
 	‎Select the **Actions** field at the top of the VM, and in the drop-down menu select **Ctrl+Alt+Delete**.
 
@@ -16,21 +20,21 @@ Before you can install the Telemetry Processor in the next step, you must first 
 
 4. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
-5. You now want to add Adam Hobbs as a local administrator on LON-CL1. In the **Search** field on the taskbar at the bottom of the screen, enter **computer**, and then in the menu that appears, select **Computer Management**.
+5. You now want to add Laura Atkins as a local administrator on LON-CL1. In the **Search** field on the taskbar at the bottom of the screen, enter **computer**, and then in the menu that appears, select **Computer Management**.
 
-6. In the **Computer Management** window, in the file explorer pane on the left, under the **Computer Management** and then **System Tools** folders, expand **Local Users and Groups** and then select **Groups**. 
+6. In the **Computer Management** window, in the file explorer pane on the left, under the **System Tools** folder, expand **Local Users and Groups** and then select **Groups**. 
 
 7. In the list of groups in the detail pane on the right, double-click **Administrators**. 
 
-8. In the **Administrators Properties** window, select **Add**. 
+8. In the **Administrators Properties** window, select the **Add...** button that appears below the **Members** field.
 
-9. In the **Select Users, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type **Adam** and then select **Check Names**. The system will verify that Adam is a valid user and it will display **Adam Hobbs** in the field. Select **OK**. 
+9. In the **Select Users, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type **Laura** and then select **Check Names**. The system will verify that Laura is a valid user and it will display **Laura Atkins (Laura@adatum.com)** in the field. Select **OK**. 
 
-10. In the **Administrators Properties** window, select **OK**.
+10. In the **Administrators Properties** window, Laura should now appear in the **Members** field. Select **OK**.
 
 11. Close the Computer Management window.
 
-12. You now must sign out as the adatum\administrator and sign back in to the LON-CL1 VM as Adam Hobbs in order to run the Telemetry Setup Wizard in the next step. <br/>
+12. You now must sign out as the **adatum\administrator** and sign back into the LON-CL1 VM as Laura Atkins in order to run the Telemetry Setup Wizard in the next task. <br/>
 
 	‎Select the **Actions** field at the top of the VM, and in the drop-down menu select **Ctrl+Alt+Delete**.
 
@@ -38,26 +42,41 @@ Before you can install the Telemetry Processor in the next step, you must first 
 
 14. On the log-in screen, select **Other User**. 
 
-15. On the **Other user** log in screen, enter **adatum\adam** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
+15. On the **Other user** log in screen, enter **adatum\laura** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
-16. On the desktop, select the **File Explorer** icon on the taskbar. 
+16. If a **Microsoft Teams** window appears, then close it.
 
-17. In the **File Explorer** window, under **This PC**, right-click on **Local Disk (C:)** and in the menu that appears, select **New**, and then select **Folder**. 
+17. On the desktop, select the **File Explorer** icon on the taskbar. 
 
-18. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
+18. In the **File Explorer** window, expand **This PC** and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
 
-19. Minimize the **File Explorer** window as you will use it in a later task. 
+19. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
 
-20. You have now completed the prerequisites needed to install the Telemetry Processor. Proceed to the next step. 
+20. Minimize the **File Explorer** window as you will use it in the next task. 
+
+21. Select the **Start** icon in the lower-left corner of the taskbar. 
+
+22. Scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
+
+23. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
+
+24. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+
+	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu. 
+	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual**, right-click on the service, select **Properties**, and in the **Properties** window, select the **Service** tab and change the **Start Mode** to **Automatic**.  
+
+25. Close the Sql Server Configuration Manager window.
+
+26. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
 
 
 ### Task 2 - Install the Telemetry Processor  
 
 The Office Telemetry Processor runs on one or more computers and collects inventory, usage, and health data from a shared folder and imports the data to a SQL Server database controlled by your organization (the data is NOT sent to Microsoft). The processor is installed as a Windows service named "Office Telemetry Processor."
 
-In this task, you will continue to be logged into the Client 1 VM as Adam Hobbs, and you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
+In this task, you will continue to be logged into the Client 1 VM as Laura Atkins, and you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
 
-1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as Adam Hobbs. 
+1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as Laura Atkins. 
 
 2. On the taskbar, type **Telemetry** in the **Search** box.
 
@@ -69,31 +88,35 @@ In this task, you will continue to be logged into the Client 1 VM as Adam Hobbs,
 
 6. Select **step 1 - Set up prerequisites**. 
 
-7. Review the prerequisite information. You will use Microsoft SQL Server 2017 that is already installed on LON-CL1 for this lab. Select **Set up prerequisites** to collapse step 1. 
+7. Review the prerequisite information. You will use Microsoft SQL Server 2017 that is already installed on LON-CL1 for this lab, so you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
 
 8. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
 
 9. This starts the **Microsoft Office Telemetry Processor (x64) Setup Wizard**. Select **Next** on the **Welcome** page.
 
-10. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**.
+10. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
 
-11. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, but it may stay minimized on the taskbar. If so, select the icon to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
+11. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**. Since the **Run the Office Telemetry Processor settings wizard now** check box is selected, this wizard will begin once you select **Finish**.
 
-12. On the **Database Settings** page, select the **SQL Server** menu, select **(local)\TELEDASH** in the SQL Server menu, and then select **Connect**. 
+12. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
 
-13. In the **SQL database** box, type **Dashboard**, and then select **Create**. 
+13. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, but it may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
 
-14. Select **Next**. 
+14. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
 
-15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes**. 
+15. In the **SQL database** box, type **Dashboard**, and then select **Create**. 
 
-16. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, and then select **Next**. 
+16. Select **Next**. 
 
-17. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes**.
+17. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes**. 
 
-18. On the **Microsoft Customer Experience Improvement Program** page, select **the I don’t want to sign up for the program at this time** option and then select **Next**. 
+18. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, and then select **Next**. 
 
-19. Finish proceeding through the wizard. 
+19. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes**.
+
+20. On the **Microsoft Customer Experience Improvement Program** page, select **the I don’t want to sign up for the program at this time** option and then select **Next**. 
+
+21. Finish proceeding through the wizard. 
  
 
 ### Task 3 - Manage the Office 2019 Group Policy Administrative Templates  

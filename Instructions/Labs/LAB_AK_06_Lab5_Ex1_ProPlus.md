@@ -179,22 +179,13 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 8. The installation may take several minutes to complete. Once the installation finishes, select **Close**.
 
-9. Now let’s verify that you can use one of the Office 365 ProPlus apps. Select the **Start** icon in the lower-left corner of the taskbar. In the **Start** screen, expand the **Recently added** section at the top of the menu to display all the Office 365 ProPlus apps that were just installed.
+9. To verify Laura's Office 365 ProPlus installation, select the **Start** icon in the lower-left corner of the taskbar. Below the **Recently added** section (at the top of the **Start** menu) select **Expand** to display all the Office 365 ProPlus apps that were just installed. This should include Excel, Skype for Business, Access, Publisher, Outlook, PowerPoint, and Word.
 
-10. In the **Start** screen, select **Word** to open it. 
+10. Select your **Edge** browser icon on the taskbar, and on your **My account** window select **Apps &amp; devices** in the left-hand navigation pane. 
 
-11. In the **Accept the license agreement** window, select **Accept**.
+11. In the **Apps &amp; devices** page, under the **Office** section, select **DEVICES** to expand it. This displays all the devices on which you've currently installed Office 365 ProPlus. LON-CL1 should be the only device listed. 
 
-12. In the **Your privacy option** window, select **Close**.
-
-13. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
-
-14. In your **Edge** browser select **Office apps &amp; devices** in the left-hand navigation pane. sectionthe 12. Open a blank document, enter some text, save it to the **Documents** folder, and then close Word. 
-. This displays the status of your installs prior to the Office 365 ProPlus installation; therefore, select the **Refresh** icon at the top of the page, to the left of the address bar. 
-
-15. After refreshing the **My account** page, it displays the **My account** tab in the left-hand navigation pane. Note in the **Install status** section that there’s 1 detected install.
-
-16. Leave the Client 1 VM open as you will continue from this point in the next task.
+12. Leave the Client 1 VM open as you will continue from this point in the next task.
 
 
 # Proceed to Exercise 2

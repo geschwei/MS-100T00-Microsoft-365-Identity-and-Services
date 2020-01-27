@@ -175,33 +175,31 @@ For the purposes of your hosted lab environment, instead of creating a custom do
 
 27. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Host (A)** record and a **Mail Exchanger (MX)** record for this domain in the following steps.
 
-28. Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
+Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
 
-29. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
+28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
 
-30. In the **New Resource Record** window, you need to enter the Host’s IP address. At the start of this lab your instructor provided you with instruction on how to determine the Host's IP address. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
+29. In the **New Resource Record** window, you need to enter the Host’s IP address. At the start of this lab your instructor provided you with instruction on how to determine the Host's IP address. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
 
-31. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record** button at the bottom of the window.
+30. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record** button at the bottom of the window.
 
-32. In the **New Resource Record** window, you need to enter the domain for this VM. Leave the **Host or child domain** field blank, but select **Browse** next to the **Fully qualified domain name (FQDN) of mail server** field.
+31. In the **New Resource Record** window, you need to enter the domain for this VM. Leave the **Host or child domain** field blank, but select **Browse** next to the **Fully qualified domain name (FQDN) of mail server** field.
 
-33. In the **Browse** window, your domain controller VM name should appear (**LON-DC1**). Select this record and then select **OK**. 
+32. In the **Browse** window, your domain controller VM name should appear (**LON-DC1**). Select this record and then select **OK**. 
 
-34. In the **Browse** window, select the **Forward Lookup zones** folder and then select **OK**.
+33. In the **Browse** window, select the **Forward Lookup zones** folder and then select **OK**.
 
-35. In the **Browse** window, select your domain of **XXYYZZa.xxxCustomDomainxxx.xxx** and then select **OK.**
+34. In the **Browse** window, select your domain of **XXYYZZa.xxxCustomDomainxxx.xxx** and then select **OK.**
 
-36. In the **Browse** window, select the value **(same as parent folder)** under the **Name** column for the Host (A) record that contains the IP address of this domain and then select **OK.** 
+35. In the **Browse** window, select the value **(same as parent folder)** under the **Name** column for the Host (A) record that contains the IP address of this domain and then select **OK.** 
 
-37. In the **New Resource Record** window, the value of the FQDN is filled in. Select **OK** to create the record. 
+36. In the **New Resource Record** window, the value of the FQDN is filled in. Select **OK** to create the record. 
 
-38. In the **Resource Record Type** window, select **Done**. 
+37. In the **Resource Record Type** window, select **Done**. 
 
-39. In **DNS Manager**, you should now see the Host (A) and Mail Exchanger (MX) records that you just created for this domain.
+38. In **DNS Manager**, you should now see the Text (TXT, Host (A), and Mail Exchanger (MX) records that you just created for this domain. Close DNS Manager. 
 
-40. Close DNS Manager. 
-
-41. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
+39. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
 
 **Note:** For future reference - Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 
@@ -230,7 +228,7 @@ To prepare for Azure Active Directory, you must first download and install the M
 
 5. In the notification bar that appears at the bottom of the page asking whether you want to run or save msoidcli_64bit.msi from the Download Center, select **Run**. 
 
-6. In the **Microsoft Online Services Sign-in Assistant Setup** wizard, select **I accept the terms in the License Agreement and Privacy Statement**, and then select **Install**. 
+6. In the **Microsoft Online Services Sign-in Assistant Setup** wizard, select **I accept the terms in the License Agreement and Privacy Statement** and then select **Install**. 
 
 7. On the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
 

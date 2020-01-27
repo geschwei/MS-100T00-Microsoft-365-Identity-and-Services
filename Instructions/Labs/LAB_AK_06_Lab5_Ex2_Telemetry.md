@@ -16,7 +16,7 @@ The final step in the preparation process is to verify that the SQL Server 2017 
 
 2. In the menu that appears, select **Sign out**.
 
-3. On the log-in screen, select **Other User**. 
+3. Select the desktop, and then on the log-in screen that appears, select **Other User**. 
 
 4. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
@@ -24,27 +24,27 @@ The final step in the preparation process is to verify that the SQL Server 2017 
 
 6. In the **Computer Management** window, in the file explorer pane on the left, under the **System Tools** folder, expand **Local Users and Groups** and then select **Groups**. 
 
-7. In the list of groups in the detail pane on the right, double-click **Administrators**. 
+7. In the list of groups in the detail pane on the right, right-click on **Administrators**, and then in the menu that appears select **Properties**. 
 
 8. In the **Administrators Properties** window, select the **Add...** button that appears below the **Members** field.
 
-9. In the **Select Users, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type **Laura** and then select **Check Names**. The system will verify that Laura is a valid user and it will display **Laura Atkins (Laura@adatum.com)** in the field. Select **OK**. 
+9. In the **Select Users, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type **Laura** and then select **Check Names**. The system will verify that Laura is a valid user ID and it will display **Laura Atkins (Laura@adatum.com)** in the field. Select **OK**. 
 
 10. In the **Administrators Properties** window, Laura should now appear in the **Members** field. Select **OK**.
 
 11. Close the Computer Management window.
 
-12. You now must sign out as the **adatum\administrator** and sign back into the LON-CL1 VM as Laura Atkins in order to run the Telemetry Setup Wizard in the next task. <br/>
+12. If a **Welcome to Microsoft Teams** window appears, then close it.
+
+13. You now must sign out as the **adatum\administrator** and sign back into the LON-CL1 VM as Laura Atkins in order to run the Telemetry Setup Wizard in the next task. <br/>
 
 	‎Select the **Actions** field at the top of the VM, and in the drop-down menu select **Ctrl+Alt+Delete**.
 
-13. In the menu that appears, select **Sign out**.
+14. In the menu that appears, select **Sign out**.
 
-14. On the log-in screen, select **Other User**. 
+15. Select the desktop, and then on the log-in screen that appears, select **Other User**. 
 
-15. On the **Other user** log in screen, enter **adatum\laura** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
-
-16. If a **Microsoft Teams** window appears, then close it.
+16. On the **Other user** log in screen, enter **adatum\laura** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
 17. On the desktop, select the **File Explorer** icon on the taskbar. 
 
@@ -54,20 +54,22 @@ The final step in the preparation process is to verify that the SQL Server 2017 
 
 20. Minimize the **File Explorer** window as you will use it in the next task. 
 
-21. Select the **Start** icon in the lower-left corner of the taskbar. 
+21. If a **Welcome to Microsoft Teams** window appears, then close it.
 
-22. Scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
+22. Select the **Start** icon in the lower-left corner of the taskbar. 
 
-23. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
+23. Scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
 
-24. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+24. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
+
+25. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
 
 	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu. 
 	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual**, right-click on the service, select **Properties**, and in the **Properties** window, select the **Service** tab and change the **Start Mode** to **Automatic**.  
 
-25. Close the Sql Server Configuration Manager window.
+26. Close the Sql Server Configuration Manager window.
 
-26. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
+27. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
 
 
 ### Task 2 - Install the Telemetry Processor  
@@ -82,9 +84,9 @@ In this task, you will continue to be logged into the Client 1 VM as Laura Atkin
 
 3. Select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
 
-4. In **Microsoft Excel**, if an **Activate Office** dialog box appears, then close it now.
+4. If an **Accept the license agreement** window appears, then select the **Accept** button. If a **Your privacy option** window appears, then select **Close**. 
 
-5. Select the **Getting started** worksheet. 
+5. In **Microsoft Excel**, select the **Getting started** worksheet. 
 
 6. Select **step 1 - Set up prerequisites**. 
 

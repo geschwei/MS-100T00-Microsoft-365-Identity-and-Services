@@ -41,13 +41,13 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
-	‎**CD C:\labfiles\**
+	‎<strong>CD C:\labfiles\ </strong>
 
-2. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to Unrestricted enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+2. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 	‎**Set-ExecutionPolicy Unrestricted**
 
-3. A window appears asking you to confirm the execution policy change. Type **A** to select the **[A] Yes to All** option.
+3. You will then be prompted to confirm the execution policy change. Type **A** to select the **[A] Yes to All** option.
 
 4. Enter the following command that runs a PowerShell script (stored in the C:\labfiles folder) that creates problem users. These users will purposely have issues with their user account so that you can troubleshoot them in the next task with the IdFix tool.  <br/>
 
@@ -61,7 +61,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 	- **Logan Boyle**. Update the emailAddress attribute for Logan to **logan@adatum.com**.
 
-	- **Holly Spencer**. Update the emailAddress attribute for Holly to **holly @adatum.com**; Note: this includes a blank space between “holly” and “@adatum.com”. This blank space is there on purpose, so make sure you include it.
+	- **Holly Spencer**. Update the emailAddress attribute for Holly to **holly @adatum.com**. Note: this includes a blank space between “holly” and “@adatum.com”; this blank space is there on purpose.
 
 	- **Maj Hojski**. Update the emailAddress attribute for Maj to blank characters (“ “).  
 
@@ -70,7 +70,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix tool to fix the accounts that were broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
+In this task you will download and use the IdFix tool to fix the user accounts that were broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. Switch to the Client 1 VM (LON-CL1) and log in as **adatum\administrator**. The desktop will display the login screen for Adam Hobbs, who was the last user to previously user the Client 1 VM. On the Desktop, select **Other user**, and then enter **adatum\administrator** as the **User name** and **Pa55w.rd** as the **Password.**
 
@@ -135,7 +135,7 @@ In this task you will download and use the IdFix tool to fix the accounts that w
 
 ### Task 4: Prepare for Directory Synchronization    
 
-The Azure Active Directory Connect synchronization services (Azure AD Connect sync) is a main component of Azure AD Connect. It takes care of all the operations that are related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of two components, the on-premises Azure AD Connect sync component and the cloud service component in Azure AD called Azure AD Connect sync service.
+The Azure Active Directory Connect synchronization services (Azure AD Connect sync) is a main component of Azure AD Connect. It takes care of all the operations that are related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of the following two components: the on-premises Azure AD Connect sync component and the cloud service component in Azure AD called Azure AD Connect sync service.
 
 Before you can run Azure AD Connect, you must first configure several settings that control the synchronization process. Once you have completed the preparation process, you will then run the Azure AD Connect tool in the next task. 
 
@@ -234,7 +234,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 15. In the **Synchronization Service Desktop Manager** window, the Operations tab is displayed by default so that you can monitor the synchronization process.   <br/>
 
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization is a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes (the default syn interval for Azure AD Connect is set to 30 minutes during installation), any subsequent synchronizations will display Delta Synchronization in the Profile Name. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. 
+	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization is a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes (the default syn interval for Azure AD Connect is set to 30 minutes during installation), any subsequent synchronizations will display **Delta Synchronization** in the **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. 
 
 16. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com** (with a **Status** of **completed-export-errors**). Select this row.  
 

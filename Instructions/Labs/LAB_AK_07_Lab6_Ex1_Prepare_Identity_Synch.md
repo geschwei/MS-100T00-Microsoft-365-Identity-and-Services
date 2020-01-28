@@ -6,7 +6,11 @@ During this exercise you will set up and manage Azure AD Connect. You will creat
 
 ### Task 1: Configure your UPN suffix
 
-In Active Directory, the default User Principal Name (UPN) suffix is the DNS name of the domain where the user account was created. The Azure AD Connect wizard uses the UserPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Azure AD. This is the value that is used for signing into Azure AD. In this task, you will use PowerShell to change the user principal name of the domain for the entire Adatum Corporation.
+In Active Directory, the default User Principal Name (UPN) suffix is the DNS name of the domain where the user account was created. The Azure AD Connect wizard uses the UserPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Azure AD. This is the value that is used for signing into Azure AD. 
+
+If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included a number of on-premises user accounts, such as Holly Spencer, Laura Atkins, and so on. Then in the first lab in this course, you created a custom, accepted domain for Adatum titled **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name of your lab hosting provider's custom domain).
+
+In this task, you will use PowerShell to change the user principal name of the domain for the entire Adatum Corporation by replacing the originally established **adatum.com** domain with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** domain. In doing so, you will update the UPN suffix for the primary domain and the UPN on every on-premises user account in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. 
 
 1. On your Domain Controller VM (LON-DC1), make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
@@ -22,7 +26,7 @@ In Active Directory, the default User Principal Name (UPN) suffix is the DNS nam
 
 5. You must then run the following command that changes all existing adatum.com accounts to the new UPN @XXYYZZa.xxxCustomDomainxxx.xxx domain (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
 
-	‎**Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser \$_  -UserPrincipalName (\$_.SamAccountName + "@XXYYZZa.xxxCustomDomainxxx.xxx" )}**
+	‎**Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@XXYYZZa.xxxCustomDomainxxx.xxx" )}**
 
 6. You will continue using PowerShell on your Domain Controller VM in the next task.
 
@@ -31,13 +35,13 @@ In Active Directory, the default User Principal Name (UPN) suffix is the DNS nam
 
 Integrating your on-premises Active Directory with Azure AD makes your users more productive by providing a common identity for accessing both cloud and on-premises resources. However, errors can occur when identity data is synchronized from Windows Server Active Directory (AD DS) to Azure Active Directory (Azure AD). 
 
-For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **userPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running the IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Azure Active Directory. 
+For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running the IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Azure Active Directory. 
 
-In this task, you will run a script that breaks various Adatum user accounts. As part of your Adatum pilot project, you are purposely breaking these identity objects so that you can later run the IdFix tool to see how it will fix them. You will run IdFix in the next task.
+In this task, you will run a script that breaks various Adatum on-premises user accounts. As part of your Adatum pilot project, you are purposely breaking these identity objects so that you can later run the IdFix tool in the next task to see how it will fix them. 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
-	‎<strong>CD C:\labfiles\ </strong>
+	‎**CD C:\labfiles\**
 
 2. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to Unrestricted enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 

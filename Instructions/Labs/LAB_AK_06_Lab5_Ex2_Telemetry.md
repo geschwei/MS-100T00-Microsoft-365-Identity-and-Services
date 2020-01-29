@@ -115,7 +115,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 	**Important:** Once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. Do NOT select Run. You will not run the file on the LON-CL1 VM; instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there.
 	
-8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **ADATUM\Administrator**.  
+8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **adatum\Administrator**.  
 
 9. On LON-DC1, select the **Search** icon on the taskbar and then type **Run** in the **Search** box. In the list of search results, select **Run**. 
 

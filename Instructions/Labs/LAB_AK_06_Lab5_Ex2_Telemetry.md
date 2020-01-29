@@ -201,7 +201,7 @@ In this task, you will update the group policy templates that you downloaded and
 
 8. Wait for the text to generate and save the document as **Acquisition Strategy.docx** in the **Documents** folder. 
 
-9. Close the open document and close File Explorer. 
+9. Close the open document, close Word, and close File Explorer. 
 
 11. On the taskbar, type **Computer** in the **Search** box. 
 
@@ -209,11 +209,11 @@ In this task, you will update the group policy templates that you downloaded and
 
 13. In the **Computer Management** window, in the console tree on the left, under **System Tools**, expand **Task Scheduler**, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
 
-14. In the **Results** pane, drag the **Name** column to the right so that you can see each of the entire task names. Right click on **OfficeTelemetryAgentLogOn2016** and then select **Run**. 
+14. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
 
-15. Run the scheduled task again to ensure the data has been collected. 
+15. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
 
-16. Close the Computer Management window. 
+17. Close the Computer Management window. 
    
 
 ### Task 5 - Review Telemetry Data   

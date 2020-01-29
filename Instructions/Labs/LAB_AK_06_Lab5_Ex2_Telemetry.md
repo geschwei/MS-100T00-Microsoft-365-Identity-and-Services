@@ -50,7 +50,7 @@ The Office Telemetry Processor runs on one or more computers and collects invent
 
 In this task, you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
 
-1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as adatum\administrator. 
+1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as **adatum\administrator**. 
 
 2. On the taskbar, type **Telemetry** in the **Search** box.
 
@@ -97,7 +97,7 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 ### Task 3 - Manage the Office 2019 Group Policy Administrative Templates  
 
-In this task, you will download the Office 2019 Group Policy Administrative Template files (ADMX/ADML). These files are used by Group Policy to configure installations of Office 365 products, such as Office 365 ProPlus, and volume licensed versions of Office 2019 and Office 2016. You will perform this task as part of your Office Telemetry pilot project for Adatum.
+In this task, you will download the Office 2019 Group Policy Administrative Template files (ADMX/ADML). These files are used by Group Policy to configure installations of Office 365 products, such as Office 365 ProPlus, and volume licensed versions of Office 2016 and Office 2019. You will perform this task as part of your Office Telemetry pilot project for Adatum.
 
 1. On **LON-CL1**, you should still be logged in as adatum\administrator. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
 
@@ -183,19 +183,19 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. You will then schedule and run a task that collects Office Telemetry Agent logon information.
 
-1. Switch to **LON-CL1.** You should still be signed in as Adam Hobbs. 
+1. Switch to **LON-CL1.** You should still be signed in as **adatum\administrator**. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
+ 
+2. On the taskbar, right-click on the **Start** icon and select **Run**. 
 
-2. On the desktop, point to the lower left corner, right-click **Start**, and then select **Run**. 
-
-3. In the **Open** box, type **gpupdate /force**, and then select **OK**. 
+3. In the **Run** window, type **gpupdate /force** in the **Open:** field and then select **OK**. 
 
 4. Wait for the group policy update to complete. 
 
-5. On the **Start** screen, open **Word 2016**. 
+5. Select the **Start** icon, and in the **Start** menu, select **Word**. 
 
-6. Skip if the activation dialog appears, select **Accept and start Word**. 
+6. If an **Activation** dialog box appears, select **Accept and start Word**. 
 
-7. Type in the following text: <br/>
+7. Select **Blank document**, and then once the blank document opens, type in the following text: <br/>
 
 	**=rand(10,20)**
 
@@ -203,36 +203,32 @@ In this task, you will update the group policy templates that you downloaded and
 
 9. Close the open document and close File Explorer. 
 
-10. Select **Start**. 
+11. On the taskbar, type **Computer** in the **Search** box. 
 
-11. On the **Start** screen, type **Schedule tasks**. 
+12. In the list of search results, select **Computer Management**. <br/>
 
-12. In the **Results** pane, select **Schedule tasks.** <br/>
+13. In the **Computer Management** window, in the console tree on the left, under **System Tools**, expand **Task Scheduler**, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
 
-	‎**Note:** Since you are logged in as Adam is a local administrator, you do not have to right-click on **Schedule tasks** and select **Run as administrator.** 
-
-13. In the console tree, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
-
-14. In the **Results** pane, right click **OfficeTelemetryAgentLogOn2016** and then select **Run**. You may need to expand the **Name** column to see the task names. 
+14. In the **Results** pane, drag the **Name** column to the right so that you can see each of the entire task names. Right click on **OfficeTelemetryAgentLogOn2016** and then select **Run**. 
 
 15. Run the scheduled task again to ensure the data has been collected. 
 
-16. Close the Task Scheduler. 
+16. Close the Computer Management window. 
    
 
 ### Task 5 - Review Telemetry Data   
 
 In this task, you will review the Telemetry data that has been collected at Adatum. 
 
-1. On **LON-CL1**, you should still be signed in as Adam Hobbs.
+1. On **LON-CL1**, you should still be signed in as **adatum\administrator**.
 
-2. In the **Telemetry Dashboard**, select **step 5 Connect to the database to view telemetry data**. 
+2. In the **Telemetry Dashboard** in **Excel**, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
 
 3. Select **Connect to Database**. 
 
-4. In the **Data connection settings** dialog box, in the **SQL database** box, verify that Dashboard is listed as the Database name, and then select **Connect**. 
+4. In the **Data connection settings** dialog box, in the **SQL database** field, verify that **Dashboard** is displayed as the name of the SQL database, and then select **Connect**. 
 
-5. After the query is complete, select **Documents**. 
+5. This opens a window indicating that a query is being processed. After the query is complete, a spreadsheet is displayed with multiple workbooks. Select the **Documents** workbook. 
 
 6. Notice the documents reported. 
 

@@ -61,9 +61,13 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 12. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-13. On the **Holly Spencer has been added** page, select **Close.** If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
+13. On the **Holly Spencer has been added** page, select **Show** that appears next to the string of asterisks for the **Password**. Verify that the password is **Pa55w.rd** and then select **Close.** 
 
-14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+	**Note:** If you accidentally entered a different value, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon for Holly's account to change her password to the correct value.
+
+14. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
+
+15. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
 
 
 ### Task 2 – Create and Manage Groups  

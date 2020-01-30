@@ -119,7 +119,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
     
 5. Minimize your Windows PowerShell window (do NOT close it as you will use it later).
 
-6. Select the **Internet Explorer** icon on the taskbar at the bottom of the page and select the **Microsoft 365 admin center** tab that displays the **Organization Profile** page from the prior task. 
+6. Select the **Internet Explorer** icon on the taskbar at the bottom of the page and select the **Microsoft 365 admin center** tab that was left open from the prior task. 
 
 7. In the left-hand navigation pane, under **Settings**, select **Domains**. 
 
@@ -127,17 +127,17 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 9. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name), and then select **Next**. 
 
-10. In the **Verify domain** page, you must select a verification method to prove you own the domain. You can choose to verify using either a TXT record or a MX record. For this lab, we will use the **TXT record**, which is displayed by default. 
+10. In the **Verify domain** page, you must select a verification method to prove you own the domain. You can choose to verify using either a TXT record or a MX record. For this lab, you will use the **TXT record**. Since this option is displayed by default, proceed to the next step. 
 
-11. To configure the domain later on in DNS Manager, you need to copy the **TXT value**. To do so, select the **Copy to clipboard** icon that appears to the right of **TXT value** (next to the **MS=msXXXXXXXX** value). In the dialog box that appears, select **Allow access**.  <br/>
+11. To configure the domain later on in DNS Manager, you need to copy the **TXT value**. To do so, select the **Copy to clipboard** icon that appears to the left of the **MS=msXXXXXXXX** value. In the dialog box that appears, select **Allow access**.  <br/>
 
-    ‎**Important:** If you select **Verify** at this point, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. 
+    ‎**Important:** If you select **Verify** at this point, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that process, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. 
 
 12. You must now switch over to Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
 
 13. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
 
-14. In **DNS Manager**, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
+14. In the **DNS Manager** window, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
 
 15. Right-click on this **XXYYZZa.xxxCustomDomainxxx.xxx** zone, and in the menu that appears, select **Other New Records**. 
 
@@ -167,17 +167,17 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 26. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-27. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Host (A)** record and a **Mail Exchanger (MX)** record for this domain in the following steps.
+27. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Host (A)** record and a **Mail Exchanger (MX)** record for this domain in the following steps.  <br/>
 
-Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
+	Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
 
-28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record** button at the bottom of the window.
+28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record...** button at the bottom of the window.
 
 29. In the **New Resource Record** window, you need to enter the Host’s IP address. At the start of this lab your instructor provided you with instruction on how to determine the Host's IP address. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
 
-30. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record** button at the bottom of the window.
+30. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record...** button at the bottom of the window.
 
-31. In the **New Resource Record** window, you need to enter the domain for this VM. Leave the **Host or child domain** field blank, but select **Browse** next to the **Fully qualified domain name (FQDN) of mail server** field.
+31. In the **New Resource Record** window, leave the **Host or child domain** field blank, but select **Browse** next to the **Fully qualified domain name (FQDN) of mail server** field.
 
 32. In the **Browse** window, your domain controller VM name should appear (**LON-DC1**). Select this record and then select **OK**. 
 
@@ -187,11 +187,11 @@ Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx
 
 35. In the **Browse** window, select the value **(same as parent folder)** under the **Name** column for the Host (A) record that contains the IP address of this domain and then select **OK.** 
 
-36. In the **New Resource Record** window, the value of the FQDN is filled in. Select **OK** to create the record. 
+36. In the **New Resource Record** window, the value of the FQDN of the mail server is filled in. Select **OK** to create the record. 
 
 37. In the **Resource Record Type** window, select **Done**. 
 
-38. In **DNS Manager**, you should now see the Text (TXT, Host (A), and Mail Exchanger (MX) records that you just created for this domain. Close DNS Manager. 
+38. In **DNS Manager**, you should now see the Text (TXT), Host (A), and Mail Exchanger (MX) records that you created for this domain. Close the DNS Manager window. 
 
 39. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
 
@@ -204,19 +204,19 @@ Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx
 
 ### Task 4 – Prepare for Microsoft Azure Active Directory 
 
-Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. To access Azure Active Directory, you must first prepare for it by performing the following tasks: installing the Microsoft Online Services Sign-In Assistant (MOS SIA) and installing the Windows Azure Active Directory PowerShell Module.
+Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. To access Azure Active Directory, you must first prepare for it by performing the following tasks: installing the Microsoft Online Services Sign-In Assistant and installing the Windows Azure Active Directory PowerShell Module.
 
-The Microsoft Online Services Sign-In Assistant provides end-user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, such that end-users can access Microsoft Online Services without having to re-enter their credentials. 
+	- The Microsoft Online Services Sign-In Assistant (MOS SIA) provides end-user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, where end-users can access Microsoft Online Services without having to re-enter their credentials. 
 
-To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
+	- To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
 
-1. On the LON-DC1 VM, in Internet Explorer, open a new tab and then enter the following URL in the address bar: **https://aka.ms/AA6zxrs**   <br/>
+1. On the LON-DC1 VM, you must navigate to the **Microsoft Download Center** to download the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** wizard. <br/>
 
-    ‎This will take you to the **Microsoft Download Center** for the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW.**
+	To do so, open a new tab in Internet Explorer and then enter the following URL in the address bar: **https://aka.ms/AA6zxrs** 
+
+2. On this **Download Center** page, scroll down to the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** section, leave **English** as the selected language and then select the **Download** button. 
    
-2. Scroll down to the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** section, leave **English** as the Language, and then select **Download**. 
-   
-3. In the **Choose the download that you want** window, select the **msoidcli_64bit.msi** check box and then select **Next**. 
+3. In the **Choose the download you want** window, select the **msoidcli_64bit.msi** check box and then select **Next**. 
 
 4. If a notification bar appears at the bottom of the page indicating that Internet Explorer blocked a pop-up from www.microsoft.com, select **Allow once**.
 
@@ -226,7 +226,7 @@ To prepare for Azure Active Directory, you must first download and install the M
 
 7. On the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
 
-8. Close this tab in Internet Explorer. 
+8. Close this Download Center tab in Internet Explorer. 
 
 9. If Windows PowerShell is still open from the previous task when you added the custom domain, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of **Windows PowerShell** just as you did in the prior task.
 

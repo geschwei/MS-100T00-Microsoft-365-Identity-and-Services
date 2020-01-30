@@ -52,7 +52,9 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 15. In the **Organization information** window, enter the following information:
 
-	- Name: **Adatum Corporation** Note: The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
+	- Name: **Adatum Corporation** 
+	
+	Note: The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
 
 	- Street address: **555 Main Street**
 

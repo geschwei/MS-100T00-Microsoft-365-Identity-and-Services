@@ -116,7 +116,9 @@ Holly is now going to test whether users can be prohibited from downloading Offi
 
 14. In the **Stay signed in?** window, select **Yes.**
 
-15. In the **Microsoft Office Home** page for Laura, notice that the Office 365 apps now appear because Laura has been assigned an Office 365 license. Select the **Install Office** drop-down arrow, and then in the drop-down menu, select **Install software**.<br/>
+15. In the **Microsoft Office Home** page for Laura, notice that the Office 365 apps now appear because Laura has been assigned an Office 365 license. <br/>
+
+	Select the **Install Office** drop-down arrow, and then in the drop-down menu, select **Install software**.<br/>
 	
 16. In the **My account** window that appears, under the **Office apps &amp; devices** section, select **View apps &amp; devices**. 
 

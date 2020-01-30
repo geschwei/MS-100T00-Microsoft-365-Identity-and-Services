@@ -187,7 +187,17 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 11. In the **Apps &amp; devices** page, under the **Office** section, select **DEVICES** to expand it. This displays all the devices on which you've currently installed Office 365 ProPlus. LON-CL1 should be the only device listed. 
 
-12. Leave the Client 1 VM open as you will continue from this point in the next task.
+12. Select the **Start** icon on the taskbar, and then in the **Start** menu, select **Word**.
+
+13. On the **Accept the license agreement** window, select **Accept**.
+
+14. On the **Your privacy option** window, select **Close**.
+
+15. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. 
+
+16. Close Word.
+
+17. Leave the Client 1 VM open as you will continue from this point in the next task.
 
 
 # Proceed to Exercise 2

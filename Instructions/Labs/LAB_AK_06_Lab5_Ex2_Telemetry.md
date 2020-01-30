@@ -16,32 +16,30 @@ Before you can install the Telemetry Processor in the next task, the Client 1 VM
 
 4. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
-5. If a **Welcome to Microsoft Teams** window appears, then close it.
+5. On the desktop, select the **File Explorer** icon on the taskbar. 
 
-6. On the desktop, select the **File Explorer** icon on the taskbar. 
+6. In the **File Explorer** window, expand **This PC** and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
 
-7. In the **File Explorer** window, expand **This PC** and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
+7. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
 
-8. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
+8. Minimize the **File Explorer** window as you will use it in the next task. 
 
-9. Minimize the **File Explorer** window as you will use it in the next task. 
+9. If a **Welcome to Microsoft Teams!** window appears, then close it.
 
-10. If a **Welcome to Microsoft Teams** window appears, then close it.
+10. Select the **Start** icon in the lower-left corner of the taskbar. 
 
-11. Select the **Start** icon in the lower-left corner of the taskbar. 
+11. In the **Start** menu, scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
 
-12. In the **Start** menu, scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
+12. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-13. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
-
-14. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+13. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
 
 	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu. 
 	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual**, right-click on the service, select **Properties**, and in the **Properties** window, select the **Service** tab and change the **Start Mode** to **Automatic**.  
 
-15. Close the Sql Server Configuration Manager window.
+14. Close the Sql Server Configuration Manager window.
 
-16. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
+15. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
 
 
 ### Task 2 - Install the Telemetry Processor  

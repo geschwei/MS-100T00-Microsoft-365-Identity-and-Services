@@ -208,9 +208,9 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 Azure Active Directory is needed to perform several configuration steps when installing Microsoft 365. To access Azure Active Directory, you must first prepare for it by performing the following tasks: installing the Microsoft Online Services Sign-In Assistant and installing the Windows Azure Active Directory PowerShell Module.
 
-	- The Microsoft Online Services Sign-In Assistant (MOS SIA) provides end-user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, where end-users can access Microsoft Online Services without having to re-enter their credentials. 
+- The Microsoft Online Services Sign-In Assistant (MOS SIA) provides end-user sign-in capabilities to Microsoft Online Services, such as Office 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, where end-users can access Microsoft Online Services without having to re-enter their credentials. 
 
-	- To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
+- To prepare for Azure Active Directory, you must first download and install the Microsoft Online Services Sign-In Assistant, and then you must install the Windows Azure Active Directory PowerShell Module.  
 
 1. On the LON-DC1 VM, you must navigate to the **Microsoft Download Center** to download the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** wizard. <br/>
 

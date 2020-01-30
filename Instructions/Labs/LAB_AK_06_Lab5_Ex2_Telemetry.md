@@ -54,43 +54,39 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 3. Select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
 
-4. If an **Accept the license agreement** window appears, then select the **Accept** button. If a **Your privacy option** window appears, then select **Close**. 
+4. In **Microsoft Excel**, select the **Getting started** worksheet. 
 
-5. In **Microsoft Excel**, select the **Getting started** worksheet. 
+5. Select **step 1 - Set up prerequisites**. 
 
-6. Select **step 1 - Set up prerequisites**. 
+6. Review the prerequisite information. You will use Microsoft SQL Server 2017, which is already installed on LON-CL1 for this lab; therefore, you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
 
-7. Review the prerequisite information. You will use Microsoft SQL Server 2017 that is already installed on LON-CL1 for this lab, so you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
+7. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
 
-8. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
+8. This starts the **Microsoft Office Telemetry Processor (x64) Setup Wizard**. Select **Next** on the **Welcome** page.
 
-9. This starts the **Microsoft Office Telemetry Processor (x64) Setup Wizard**. Select **Next** on the **Welcome** page.
+9. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-10. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
+10. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**. Since the **Run the Office Telemetry Processor settings wizard now** check box is selected, this settings wizard will begin once you select **Finish**.
 
-11. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**. Since the **Run the Office Telemetry Processor settings wizard now** check box is selected, this wizard will begin once you select **Finish**.
+11. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-12. In the **Do you want to allow this app to make changes to your device?** window, select **Yes**. 
+12. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, but it may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
 
-13. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, but it may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
+13. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
 
-14. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
+14. In the **SQL database** box, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
 
-15. In the **SQL database** box, type **Dashboard**, and then select **Create**. 
+15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database now. 
 
-16. Select **Next**. 
+16. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, which is the location of the folder that you created at the start of this task for storing data from client computers. Select **Next**. 
 
-17. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database now. 
+17. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes**.
 
-18. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, and then select **Next**. 
+18. On the **Microsoft Customer Experience Improvement Program** page, select the **I don’t want to sign up for the program at this time** option and then select **Next**. 
 
-19. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes**.
+19. Select **Finish** to complete the wizard. 
 
-20. On the **Microsoft Customer Experience Improvement Program** page, select the **I don’t want to sign up for the program at this time** option and then select **Next**. 
-
-21. Select **Finish** to complete the wizard. 
-
-22. Leave the Telemetry Dashboard open in Excel for the next task.
+20. Leave the Telemetry Dashboard open in Excel for the next task.
  
 
 ### Task 3 - Manage the Office 2019 Group Policy Administrative Templates  
@@ -107,7 +103,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 5. On this **Microsoft Download Center** window, scroll down and select the **Download** button. 
 
-6. On the **Choose the download you want** window, select the check box for the 64 bit version of the administrative templates file (as of this writing, the file name is **admintemplates_x64_4966-1000_en-us.exe**; Note: the version number in this file name (4966-1000) may change if a more current file becomes available), and then select **Next**. 
+6. On the **Choose the download you want** window, select the check box for the 64 bit version of the administrative templates file (as of this writing, the file name is **admintemplates_x64_4966-1000_en-us.exe**; Note: the version number in this file name (4966-1000) may change if a more current file has been released by the time you run this lab), and then select **Next**. 
 
 7. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder.
 
@@ -115,65 +111,67 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 	
 8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **adatum\Administrator**.  
 
-9. On LON-DC1, select the **Search** icon on the taskbar and then type **Run** in the **Search** box. In the list of search results, select **Run**. 
+9. On LON-DC1, right-click on the **Start** button on the taskbar and in the menu that appears, select **Run**. 
 
 10. In the **Run** window, type **\\LON-CL1\C$\Users\Administrator.ADATUM\Downloads** and then select **OK**. 
 
 11. In the **File Explorer** window, the **C:\Users\Administrator.ADATUM\Downloads** folder appears. In the right-hand pane, double-click the **admintemplates_x64_4966-1000_en-us.exe** file to run it.  
 
-12. This initiates the **Microsoft Office Administrative Templates** wizard. If **The Microsoft Office Administrative Templates** window does not appear, select the icon for this wizard on the taskbar to display it. 
+12. If a **Do you want to run this file?** dialog box appears, select **Run**.
 
-13. In **The Microsoft Office Administrative Templates** window, select the check box to accept the Microsoft Software License Terms, and then select **Continue**.  
+13. This initiates the **Microsoft Office Administrative Templates** wizard. If **The Microsoft Office Administrative Templates** window does not appear, select the icon for this wizard on the taskbar to display it. 
 
-14. In the **Browse For Folder** window, expand **This PC**, select the **Documents** folder, and then select **OK**. 
+14. In **The Microsoft Office Administrative Templates** window, select the check box to accept the Microsoft Software License Terms, and then select **Continue**.  
+
+15. In the **Browse For Folder** window, expand **This PC**, select the **Documents** folder, and then select **OK**. 
 
 	**Note:** This will extract all the template files into a child folder (under **Documents**) titled **admx**.
 
-15. In the **Files extracted successfully** dialog box, select **OK**. 
+16. In the **Files extracted successfully** dialog box, select **OK**. 
 
-16. In the **File Explorer** window, under **This PC**, expand the **Documents** folder and then select the **admx** child folder. 
+17. In the **File Explorer** window, under **This PC**, expand the **Documents** folder and then select the **admx** child folder. 
 
-17. Select all the files in the **admx** folder, then right-click and select **Copy** to copy all the selected files to the clipboard. 
+18. Select all the files in the **admx** folder, then right-click and select **Copy** to copy all the selected files to the clipboard. 
 
-18. In the **File Explorer** window, browse to **C:\Windows\PolicyDefinitions**, then right-click in the **PolicyDefinitions** folder and select **Paste** to copy the **admx** files into the **PolicyDefinitions** folder. 
+19. In the **File Explorer** window, browse to **C:\Windows\PolicyDefinitions**, then right-click in the **PolicyDefinitions** folder and select **Paste** to copy the **admx** files into the **PolicyDefinitions** folder. 
 
-19. Close File Explorer. 
+20. Close File Explorer. 
 
-20. Select the **Search** icon on the taskbar and then type **Group Policy** in the **Search** box.
+21. Select the **Search** icon on the taskbar and then type **Group Policy** in the **Search** box.
 
-21. In the list of search results, select **Group Policy Management**. 
+22. In the list of search results, select **Group Policy Management**. 
 
-22. In the **Group Policy Management Console**, expand **Forest: Adatum.com.**, expand **Domains**, expand **Adatum.com**, and then select **IT**. 
+23. In the **Group Policy Management Console**, expand **Forest: Adatum.com.**, expand **Domains**, expand **Adatum.com**, and then select the **IT** folder. 
 
-23. Right-click **IT** and select **Create a GPO in this domain, and Link it here**. 
+24. Right-click on the **IT** folder and select **Create a GPO in this domain, and Link it here**. 
 
-24. In the **New GPO** dialog box, in the **Name** field, type **Office Telemetry Agent Settings** and then select **OK**. 
+25. In the **New GPO** dialog box, in the **Name** field, type **Office Telemetry Agent Settings** and then select **OK**. 
 
-25. In the left-hand pane in the **Group Policy Management** console, expand **IT**, and then select **Office Telemetry Agent Settings**. 
+26. In the left-hand pane in the **Group Policy Management** console, expand **IT**, and then select **Office Telemetry Agent Settings**. 
 
-26. If a **Group Policy Management Console** dialog box appears indicating you have selected a link to a GPO, select the **Do not show this message again** check box and then select **OK**.
+27. If a **Group Policy Management Console** dialog box appears indicating you have selected a link to a GPO, select the **Do not show this message again** check box and then select **OK**.
 
-27. In the left-hand pane in the **Group Policy Management** console, right-click **Office Telemetry Agent Settings** and then select **Edit**. 
+28. In the left-hand pane in the **Group Policy Management** console, right-click **Office Telemetry Agent Settings** and then select **Edit**. 
 
-28. In the **Group Policy Management Editor** window, under the **User Configuration** section in the left-hand pane, expand **Policies**, expand **Administrative Templates**, expand **Microsoft Office 2016**, and then select **Telemetry Dashboard**. 
+29. In the **Group Policy Management Editor** window, under the **User Configuration** section in the left-hand pane, expand **Policies**, expand **Administrative Templates**, expand **Microsoft Office 2016**, and then select **Telemetry Dashboard**. 
 
-29. In the list of settings that appear in the right-hand pane, right-click **Turn on telemetry data collection** and select **Edit**. 
+30. In the list of settings that appear in the right-hand pane, right-click **Turn on telemetry data collection** and select **Edit**. 
 
-30. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
+31. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
 
-31. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**.  
+32. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**.  
 
-32. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
+33. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
 
-33. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**.
+34. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**.
 
-34. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
+35. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
 
-35. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. 
+36. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. 
 
-36. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
+37. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
 
-37. Close the Group Policy Management Editor console. 
+38. Close the Group Policy Management Editor console. 
 
  
 

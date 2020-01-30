@@ -42,76 +42,70 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 10. If a **Get your work done with Office 365** window appears, then close it now. 
 
-11. If a **Set your time zone** window appears, select **set the time zone for your calendar**. In the **Outlook** window that opens, under **Time zone,** select your time zone and select **Save**, then close your browser window and re-open the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com**.
+11. In the **Microsoft Office Home** page, select the **Admin** app. This opens the **Microsoft 365 admin center**.
 
-12. If a notification bar appears at the bottom of the screen for enabling the **Skype for Business Browser Helper add-on**, select **Don’t enable**. 
+12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 
-13. If a **Good morning/afternoon/evening MOD Administrator** window appears, select **Get started**.
+13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Settings**. 
 
-14. In the **Microsoft Office Home** page, select the **Admin** app. This opens the **Microsoft 365 admin center.**
+14. In the **Settings** window, select the **Organization profile** tab, and then select **Organization information**.
 
-15. In the left-hand navigation pane, select the **Show All** ellipsis … icon to display all the navigation menu options.
+15. In the **Organization information** window, enter the following information:
 
-16. In the left-hand navigation pane, select **Settings** and then select **Organization profile**.
+	- Name: **Adatum Corporation** Note: The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
 
-17. In the **Organization Profile** window, it displays Contoso as the organization name. To the right of this, select the **pencil** (**Edit**) icon to change this information.   <br/>
-
-    ‎**Note:** The Contoso organization name was explained in the Introduction section at the start of this lab. In the following steps, you will change it to Adatum Corporation. 
-
-18. In the **Organization information** window, enter the following information:
-
-	- Name: **Adatum Corporation**
-
-	- Address: **555 Main Street**
+	- Street address: **555 Main Street**
 
 	- City: **Redmond**
 
-	- State: **Washington**
+	- State or province: **Washington**
 
-	- Postal Code: **98052**
+	- ZIP or postal code: **98052**
+	
+	- Country or region: **United States**
 
 	- Phone: **425-555-1234**
 
 	- Technical contact: **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
-	- Preferred language: **select your preferred language**
+	- Preferred language: **English**
 
-19. Select **Save**.
+16. Select **Save changes**.
 
-20. On the **Organization information** window, select **Close.**
+17. On the **Organization information** window, select the **X** in the upper right-hand corner to close the window.
 
-21. To the right of **Release preferences**, select the **pencil** (**Edit**) icon.
+18. On the **Organization profile** tab of the **Settings** window, select **Release preferences**.
 
-22. In the **Release preferences** window, select **Targeted release for selected users** and then select **Next.**  <br/>
+19. In the **Release preferences** window, select **Targeted release for select users** and then select **Save changes**.  <br/>
 
     ‎**Note:** One of the benefits of Office 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization. By setting up your Release preferences, you can control how and when your Office 365 tenant receives these updates.
 
-23. In the **Are you sure you want to change to Targeted release for select people** window, select **Yes.**  <br/>
+    **Note:** The **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they’ve been reviewed by the control group.
 
-    **Note:** This option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they’ve been reviewed by the control group.
+20. Under the **Targeted release for select users** option, select **Select users**.  <br/>
 
-24. In the **Release preferences** window, select **Add people.**
+21. In the **Choose uses for targeted release** window, select the **Who should receive targeted releases?** field. This will display the list of existing Microsoft 365 user accounts that have been preloaded into your Microsoft 365 tenant by your lab hosting provider.
 
-25. In the **Manage people for First** **release** window, in the list of users, select the check box for **MOD Administrator** and then select **Save**.
+22. In the list of users, select the **MOD Administrator** account and then select **Save changes**.
 
-26. Select **Close**, and then select **Close** again. This returns you to the **Organization Profile** window.
+23. On the **Release preferences** window, select the **X** in the upper right-hand corner to close the window.
 
-27. To the right of **Manage custom themes for your organization**, select the **pencil** (**Edit**) icon.
+24. On the **Organization profile** tab of the **Settings** window, select **Custom themes**.
 
-28. In the **Customize Office 365 for your organization** window, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore some different options for your tenant. Make any changes that you wish. <br/>
+25. In the **Custom themes** window, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore some different options for your tenant. Make any changes that you wish. <br/>
 
     **Note:** Some colors patterns aesthetically distract users. Avoid using high contrasting colors together, such as neon colors and high-resolution colors like white and bright pink.
 
-29. Once you’re done exploring and making any further changes, select **Save** and then **Close**.
+26. If you made any changes, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
 
-30. Remain logged into the domain controller VM and in Internet Explorer, leave your Microsoft 365 admin center tab and all tabs open for the remaining tasks. 
+27. Remain logged into the domain controller VM and leave all the tabs open in your browser for the remaining tasks. 
  
 
 ### Task 3 - Add a Custom Domain
 
 Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
 
-For the purposes of your hosted lab environment, instead of creating a custom domain titled @adatum.com, you will use the hosted lab domain name of XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is the UPN name assigned to your tenant by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain. Your instructor will provide you with your lab hosting provider's custom domain name.
+In your hosted lab environment, Adatum already has an existing on-premises domain titled **adatum.com**. In this lab, you will create a second domain for Adatum that is titled **XXYYZZa.xxxCustomDomainxxx.xxx**; you will replace **XXYYZZa** with the UPN name assigned to your tenant by your lab hosting provider, and you will replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. Your instructor will provide you with your lab hosting provider's custom domain name.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 

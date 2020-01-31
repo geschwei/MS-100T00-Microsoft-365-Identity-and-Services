@@ -155,23 +155,27 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 29. In the **Group Policy Management Editor** window, under the **User Configuration** section in the left-hand pane, expand **Policies**, expand **Administrative Templates**, expand **Microsoft Office 2016**, and then select **Telemetry Dashboard**. 
 
-30. In the list of settings that appear in the right-hand pane, right-click **Turn on telemetry data collection** and select **Edit**. 
+30. Maximize the **Group Policy Management Editor** window. This will enable you to see the **State** column, which is important for you to ensure that you have enabled the necessary settings.
 
-31. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
+31. In the list of settings, right-click **Turn on telemetry data collection** and select **Edit**. 
 
-32. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**.  
+32. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
 
-33. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
+33. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**.  
 
-34. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**.
+34. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
 
-35. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
+35. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**.
 
-36. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. 
+36. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
 
-37. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
+37. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. 
 
-38. Close the Group Policy Management Editor console. 
+38. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
+
+39. In the list of settings, the **State** of the four settings that you edited in the prior steps should all be **Enabled**.
+
+40. Close the Group Policy Management Editor console. 
 
  
 
@@ -193,9 +197,9 @@ In this task, you will update the group policy templates that you downloaded and
 
 7. Close Word. 
 
-8. On the taskbar, type **Computer** in the **Search** box. In the list of search results, select **Computer Management**. 
+8. On the taskbar, type **schedule** in the **Search** box. In the list of search results, right-click on **Task Scheduler** and select **Run as administrator**. 
 
-9. In the **Computer Management** window, in the console tree on the left, under **System Tools**, expand **Task Scheduler**, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
+9. In the **Task Scheduler** window, in the console tree on the left, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
 
 10. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
 

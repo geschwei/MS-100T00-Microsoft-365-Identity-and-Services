@@ -189,27 +189,19 @@ In this task, you will update the group policy templates that you downloaded and
 
 5. Select the **Start** icon, and in the **Start** menu, select **Word**. 
 
-6. If an **Activation** dialog box appears, select **Accept and start Word**. 
+6. Open a blank document in Word, enter some text in the document and then save it in the **Documents** folder. 
 
-7. Select **Blank document**, and then once the blank document opens, type in the following text: <br/>
+7. Close Word. 
 
-	**=rand(10,20)**
+8. On the taskbar, type **Computer** in the **Search** box. In the list of search results, select **Computer Management**. 
 
-8. Wait for the text to generate and save the document as **Acquisition Strategy.docx** in the **Documents** folder. 
+9. In the **Computer Management** window, in the console tree on the left, under **System Tools**, expand **Task Scheduler**, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
 
-9. Close the open document, close Word, and close File Explorer. 
+10. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
 
-11. On the taskbar, type **Computer** in the **Search** box. 
+11. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
 
-12. In the list of search results, select **Computer Management**. <br/>
-
-13. In the **Computer Management** window, in the console tree on the left, under **System Tools**, expand **Task Scheduler**, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
-
-14. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
-
-15. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
-
-17. Close the Computer Management window. 
+12. Close the Computer Management window. 
    
 
 ### Task 5 - Review Telemetry Data   
@@ -218,7 +210,7 @@ In this task, you will review the Telemetry data that has been collected at Adat
 
 1. On **LON-CL1**, you should still be signed in as **adatum\administrator**.
 
-2. In the **Telemetry Dashboard** in **Excel**, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
+2. In the **Telemetry Dashboard** spreadsheet in **Excel**, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
 
 3. Select **Connect to Database**. 
 

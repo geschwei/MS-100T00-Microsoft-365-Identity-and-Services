@@ -12,7 +12,9 @@ If you recall, your VM environment was created by your lab hosting provider with
 
 In this task, you will use PowerShell to change the user principal name of the domain for the entire Adatum Corporation by replacing the originally established **adatum.com** domain with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** domain. In doing so, you will update the UPN suffix for the primary domain and the UPN on every on-premises user account in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. 
 
-A company may change its domain name for a variety of reasons. For example, a company may purchase a new domain name, or a company may change its name and it wants its domain name to reflect the new name, or a company may be sold and it wants its domain name to reflect the new parent company’s name. Regardless of the underlying reason, the goal of changing a domain name is typically to change the domain name on each user’s email address. For this lab, Adatum has purchased a new domain (provided by your lab hosting provider); therefore, it wants to change the domain name of all its users’ email addresses from @adatum.com to @ XXYYZZa.xxxCustomDomainxxx.xxx.
+A company may change its domain name for a variety of reasons. For example, a company may purchase a new domain name, or a company may change its name and it wants its domain name to reflect the new company name, or a company may be sold and it wants its domain name to reflect the new parent company’s name. Regardless of the underlying reason, the goal of changing a domain name is typically to change the domain name on each user’s email address. 
+
+For this lab, Adatum has purchased a new domain (provided by your lab hosting provider); therefore, it wants to change the domain name of all its users’ email addresses from @adatum.com to @ XXYYZZa.xxxCustomDomainxxx.xxx.
 
 1. On your Domain Controller VM (LON-DC1), make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
@@ -22,7 +24,7 @@ A company may change its domain name for a variety of reasons. For example, a co
 
 4. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where you will replace XXYYZZa with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. <br/> 
 
-	‎In the following command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
+	‎In the following Powershell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
 	‎**Set-ADForest -identity adatum.com -UPNSuffixes @{replace="XXYYZZa.xxxCustomDomainxxx.xxx"}**
 
@@ -37,21 +39,21 @@ A company may change its domain name for a variety of reasons. For example, a co
 
 Integrating your on-premises Active Directory with Azure AD makes your users more productive by providing a common identity for accessing both cloud and on-premises resources. However, errors can occur when identity data is synchronized from Windows Server Active Directory (AD DS) to Azure Active Directory (Azure AD). 
 
-For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running the IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Azure Active Directory. 
+For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running Microsoft's IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Azure Active Directory. 
 
-In this task, you will run a script that breaks various Adatum on-premises user accounts. As part of your Adatum pilot project, you are purposely breaking these identity objects so that you can later run the IdFix tool in the next task to see how it will fix them. 
+In this task, you will run a script that breaks various Adatum on-premises user accounts. As part of your Adatum pilot project, you are purposely breaking these identity objects so that you can run the IdFix tool in the next task to see how it fixes the broken accounts. 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
 	‎<strong>CD C:\labfiles\ </strong>
 
-2. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+2. PowerShell's execution policy settings dictate which PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 	‎**Set-ExecutionPolicy Unrestricted**
 
 3. You will then be prompted to confirm the execution policy change. Type **A** to select the **[A] Yes to All** option.
 
-4. Enter the following command that runs a PowerShell script (stored in the C:\labfiles folder) that creates problem users. These users will purposely have issues with their user account so that you can troubleshoot them in the next task with the IdFix tool.  <br/>
+4. Enter the following command that runs a PowerShell script that creates problem user accounts. This script is stored in the C:\labfiles folder. The users that are included in this script purposely have issues with their user accounts; this will enable you to troubleshoot these accounts in the next task using the IdFix tool.  <br/>
 
 	‎<strong>.\CreateProblemUsers.ps1 </strong> <br/>
 	
@@ -63,7 +65,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 	- **Logan Boyle**. Update the emailAddress attribute for Logan to **logan@adatum.com**.
 
-	- **Holly Spencer**. Update the emailAddress attribute for Holly to **holly @adatum.com**. Note: this includes a blank space between “holly” and “@adatum.com”; this blank space is there on purpose.
+	- **Holly Spencer**. Update the emailAddress attribute for Holly to **holly @adatum.com**. Note: this includes a blank space between “holly” and “@adatum.com”; the blank space has been purposely inserted.
 
 	- **Maj Hojski**. Update the emailAddress attribute for Maj to blank characters (“ “).  
 

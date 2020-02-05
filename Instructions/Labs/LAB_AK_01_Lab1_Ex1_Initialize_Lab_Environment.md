@@ -36,7 +36,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 6. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-7. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+7. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider (admin@M365xZZZZZZ.onmicrosoft.com, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider) and then select **Next**.
 
 8. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
@@ -44,19 +44,21 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 10. If a **Get your work done with Office 365** window appears, then close it now. 
 
-11. In the **Microsoft Office Home** page, select the **Admin** app. This opens the **Microsoft 365 admin center**.
+11. In the **Microsoft Office Home** page, you are now signed in as the **MOD Administrator** account (note the **MA** initials in the circle that appears in the upper right-hand corner of the screen). The MOD Administrator is a pre-defined user created in Office 365 by your lab hosting provider. Since this user has been assigned an Office 365 administrator role (in this case, the Global Admin role), the Microsoft 365 admin center app is available on the home page along with all the other Office 365 apps. 
+
+	Select the **Admin** app. This opens the **Microsoft 365 admin center**.
 
 12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 
 13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Settings**. 
 
-14. In the **Settings** window, select the **Organization profile** tab, and then select **Organization information**.
+14. In the **Settings** window, the **Services** tab is displayed by default. Since you want to update the organization profile, select the **Organization profile** tab, and then in the list of organization settings, select **Organization information**.
 
 15. In the **Organization information** window, enter the following information:
 
 	- Name: **Adatum Corporation** 
 	
-	Note: The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
+	**Note:** The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
 
 	- Street address: **555 Main Street**
 
@@ -84,11 +86,11 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
     ‎**Note:** One of the benefits of Office 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization. By setting up your Release preferences, you can control how and when your Office 365 tenant receives these updates.
 
-    **Note:** The **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they’ve been reviewed by the control group.
+    The **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once the updates have been reviewed by the control group.
 
 20. Under the **Targeted release for select users** option, select **Select users**.  <br/>
 
-21. In the **Choose uses for targeted release** window, select the **Who should receive targeted releases?** field. This will display the list of existing Microsoft 365 user accounts that have been preloaded into your Microsoft 365 tenant by your lab hosting provider.
+21. In the **Choose users for targeted release** window, select the **Who should receive targeted releases?** field. This will display the list of existing Microsoft 365 user accounts that have been preloaded into your Microsoft 365 tenant by your lab hosting provider.
 
 22. In the list of users, select the **MOD Administrator** account and then select **Save changes**.
 
@@ -96,9 +98,9 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 24. On the **Organization profile** tab of the **Settings** window, select **Custom themes**.
 
-25. In the **Custom themes** window, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore some different options for your tenant. Make any changes that you wish. <br/>
+25. In the **Custom themes** window, scroll though the page and review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
 
-    **Note:** Some colors patterns aesthetically distract users. Avoid using high contrasting colors together, such as neon colors and high-resolution colors like white and bright pink.
+    **Note:** Some colors patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like white and bright pink.
 
 26. If you made any changes, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
 

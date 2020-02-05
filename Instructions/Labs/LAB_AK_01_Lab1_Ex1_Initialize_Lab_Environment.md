@@ -109,13 +109,13 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 ### Task 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
+Not every company has just one domain; in fact, many companies have more than one domain. For this lab, Adatum has purchased a new domain (XXYYZZa.xxxCustomDomainxxx.xxx, which is provided by your lab hosting provider). In this task, you will gain experience adding this domain for Adatum Corporation. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
 
-In your hosted lab environment, Adatum already has an existing on-premises domain titled **adatum.com**. In this lab, you will create a second domain for Adatum that will be titled **XXYYZZa.xxxCustomDomainxxx.xxx**; you will replace **XXYYZZa** with the UPN name assigned to your tenant by your lab hosting provider, and you will replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. Your instructor will provide you with your lab hosting provider's custom domain name.
+In your hosted lab environment, Adatum already has an existing on-premises domain titled **adatum.com**. In this lab, you will create a second domain for Adatum that will be titled **XXYYZZa.xxxCustomDomainxxx.xxx**; you will replace **XXYYZZa** with the UPN name assigned to your tenant by your lab hosting provider, and you will replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. Your instructor will provide you with your lab hosting provider's custom domain name and UPN name.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. You must now open **Windows PowerShell**. Select the magnifying glass (Search Windows) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. 
+2. You must now open **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. 
 
 3. In the menu that appears, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
@@ -125,81 +125,121 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
     
 5. Minimize your Windows PowerShell window (do NOT close it as you will use it later).
 
-6. Select the **Internet Explorer** icon on the taskbar at the bottom of the page and select the **Microsoft 365 admin center** tab that was left open from the prior task. 
+6. In your Internet Explorer browser that was left open from the prior task, in the left-hand navigation pane in the **Microsoft 365 admin center**, under **Settings**, select **Domains**. 
 
-7. In the left-hand navigation pane, under **Settings**, select **Domains**. 
+7. Note that in the list of domains, only the M365xZZZZZZ.onmicrosoft.com domain appears. The existing on-premises **adatum.com** domain does not appear in the list of Microsoft 365 domains. To add Adatum's new Microsoft 365 domain, select **+Add domain** to start the domain setup wizard. 
 
-8. Select **+Add domain** to start the domain setup wizard. 
+8. In the **Add a domain** page, in the **Domain name** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name), and then select **Use this domain**. 
 
-9. In the **Add a domain** page, in the **Enter a domain you own** field, enter your domain name in the form of **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is the unique UPN name provided by your lab hosting provider, and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name), and then select **Next**. 
+9. In the **Verify your domain** page, you must select a verification method to prove you own the domain. You can choose to verify using either a TXT record or a MX record. For this lab, you will use the **TXT record**, which is the option displayed by default. 
 
-10. In the **Verify domain** page, you must select a verification method to prove you own the domain. You can choose to verify using either a TXT record or a MX record. For this lab, you will use the **TXT record**. Since this option is displayed by default, proceed to the next step. 
-
-11. To configure the domain later on in DNS Manager, you need to copy the **TXT value**. To do so, select the **Copy to clipboard** icon that appears to the left of the **MS=msXXXXXXXX** value. In the dialog box that appears, select **Allow access**.  <br/>
+	To configure the domain later on in DNS Manager, you need to copy the **TXT value**. To do so, select the **Copy record** icon that appears under the **TXT value** (to the left of **MS=msXXXXXXXX**). In the dialog box that appears, select **Allow access** to copy this value from the webpage to your clipboard.  <br/>
 
     ‎**Important:** If you select **Verify** at this point, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that process, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. 
 
-12. You must now switch over to Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
+10. You must now switch over to Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
 
-13. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
+11. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu, select **DNS**. This will open **DNS Manager**.
 
-14. In the **DNS Manager** window, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
+12. In the **DNS Manager** window, in the **File Explorer** section in the left-hand column, expand **Forward Lookup Zones,** and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell (where XXYYZZa is the unique UPN name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's domain name). 
 
-15. Right-click on this **XXYYZZa.xxxCustomDomainxxx.xxx** zone, and in the menu that appears, select **Other New Records**. 
+13. Right-click on this **XXYYZZa.xxxCustomDomainxxx.xxx** zone, and in the menu that appears, select **Other New Records...** 
 
-16. In the **Resource Record Type** window that appears, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
+14. In the **Resource Record Type** window that appears, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
-17. In the **New Resource Record** box, leave the **Record name** field blank. 
+15. In the **New Resource Record** box, leave the **Record name** field blank. However, right-click in the **Text** field and select **Paste** from the menu. This will paste in the TXT valued of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
 
-18. In the **Text** field, right-click and select **Paste** from the menu. This will paste in the TXT valued of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
+16. Select **OK** to create the record. 
 
-19. Select **OK** to create the record. 
+17. In the **Resource Record Type** window, select **Done**. Leave your DNS Manager window open as you will return to it in a later step in this task.
 
-20. In the **Resource Record Type** window, select **Done**. Leave your DNS Manager window open as you will return to it in a later step in this task.
-
-21. You are now ready to return to the Microsoft 365 admin center and resume adding the domain record. If you’ll recall, when you were earlier adding the domain in the Microsoft 365 admin center, you indicated that you wanted to verify the domain using a TXT record. At that point you had to switch to DNS Manger and add the TXT record. Now that you’ve added the TXT record, you can go back to the Microsoft 365 admin center and proceed with the domain verification process.<br/>
+18. You are now ready to return to the Microsoft 365 admin center and resume adding the domain record. If you’ll recall, when you were earlier adding the domain in the Microsoft 365 admin center, you indicated that you wanted to verify the domain using a TXT record. At that point you had to switch to DNS Manger and add the TXT record. Now that you’ve added the TXT record, you can go back to the Microsoft 365 admin center and proceed with the domain verification process.<br/>
 
 	‎Select the **Internet Explorer** icon on the taskbar, and then in your browser select the **Microsoft 365 admin center** tab that displays the **Verify Domain** page. The **TXT name** should display your UPN name (XXYYZZa) and the **TXT value** should display your MS=msXXXXXXXX value.
 
-22. Scroll to the bottom of the window and select **Verify.**   <br/>
+19. Scroll to the bottom of the window and select **Verify.**   <br/>
+
+	**Note:** If you selected **Verify** in the prior step when you copied the TXT value just to see the error that you would receive, the **Verify** button changed to **Try again**. In this case, select **Try again** rather than **Verify**. 
 
     ‎**Important:** If you had a typo or any other configuration mistakes, the domain will not be verified. If this occurs, the **Choose your online services** window in the next step will not appear. In this case, you should repeat this task and take your time when configuring the domain to make sure you don’t run into similar issues at this step in the process.
 
-23. If your domain was successfully verified, the **Choose your online services** window will appear (also note at the top of the window that the **Add a domain** and **Verify domain** tasks have a checkmark displayed below them to indicate these tasks are complete). In this window, **Exchange** is the only service selected. This is sufficient for Adatum, so scroll to the bottom of the window and select **Next**. 
+20. If your domain was successfully verified, the **Activate records** window will appear. Select **Continue**.
 
-24. In the **Update DNS settings** window, scroll down through the window to see the MX, CNAME, and TXT records for this domain. At the bottom of the window is a check box titled **Skip this step.** Select this check box, which changes the **Verify** button to a **Skip** button. You have already created the TXT record, and in the following steps you will create additional MX and A records in DNS Manager. Therefore, select the **Skip** button.
+21. In the **Add DNS records** window, **Exchange and Exchange Online Protection** is the only service selected (this is sufficient for Adatum). Under this service, the description indicates that 3 records are needed for it to work properly: a Mail Exchanger (MX) record, an Alias (CNAME) record, and an additonal Text (TXT) record. You must now switch back and forth between this **Add DNS records** page and DNS Manager to add these additional records. For each record that you add, you will copy information from this **Add DNS records** page and then paste it into each record that you create in DNS Manager.  <br/>
 
-25. In the **Update DNS settings** window, select **Finish** to complete the new domain setup. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
+	On the **Add DNS records** page, select the arrow (**>**) in the **MX Records** section to expand it, and then select the arrow (**>**) in the **Expected** section to display both the value it expects you to add in DNS Manager and the actual value that you added. In this case, the **Actual** value is blank, since you have yet to add the MX record in DNS Manager. 
+	
+	Repeat this step for the **CNAME records** section and the **TXT records** section. All three record types should now be expanded.
+	
+22. You will begin by adding the **MX record** required by the Exchange and Exchange Online Protection service. 
 
-26. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
+	a. In the **MX record** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, XXYYZZa-xxxCustomDomainxxx-xxx.mail.protection.outlook.com) to copy this value to the clipboard.
+	
+	b. You must now switch to DNS Manager. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-27. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Host (A)** record and a **Mail Exchanger (MX)** record for this domain in the following steps.  <br/>
+	c. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
 
-	Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
+	d. In the **New Resource Record** window, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. 
+	
+	e. Select **OK**.
 
-28. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Host (A or AAAA),** and then select the **Create Record...** button at the bottom of the window.
+23. You will now add the **CNAME record** required by Exchange and Exchange Online Protection service. 
 
-29. In the **New Resource Record** window, you need to enter the Host’s IP address. At the start of this lab your instructor provided you with instruction on how to determine the Host's IP address. Enter that **IP Address** value here (for example, 64.64.206.13) and then select **OK**.
+	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
 
-30. In the **Resource Record Type** window, under **Select a resource record type**, scroll down and select **Mail Exchanger (MX),** and then select the **Create Record...** button at the bottom of the window.
+	b. This will return you to the **Add DNS records** page. In the **CNAME Records** section, under the **Host Name** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.XXYYZZa) to copy this value to the clipboard.
 
-31. In the **New Resource Record** window, leave the **Host or child domain** field blank, but select **Browse** next to the **Fully qualified domain name (FQDN) of mail server** field.
+	c. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-32. In the **Browse** window, your domain controller VM name should appear (**LON-DC1**). Select this record and then select **OK**. 
+	d. In **DNS Manager**, under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Alias (CNAME)...**
 
-33. In the **Browse** window, select the **Forward Lookup zones** folder and then select **OK**.
+	e. In the **New Resource Record** window, right-click in the **Alias name (uses parent domain if left blank)** field and select **Paste** from the menu that appears. <br/>
+	
+	**Note:** Do NOT select **OK** at this point. You must first switch back to the Microsoft 365 admin center and copy the value to paste into the FQDN field.
 
-34. In the **Browse** window, select your domain of **XXYYZZa.xxxCustomDomainxxx.xxx** and then select **OK.**
+	f. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
 
-35. In the **Browse** window, select the value **(same as parent folder)** under the **Name** column for the Host (A) record that contains the IP address of this domain and then select **OK.** 
+	g. In the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com).
 
-36. In the **New Resource Record** window, the value of the FQDN of the mail server is filled in. Select **OK** to create the record. 
+	h. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-37. In the **Resource Record Type** window, select **Done**. 
+	i. In the **New Resource Record** window, right-click in the **Fully qualified domain name (FQDN) for target host** field and select **Paste** from the menu that appears. 
+	
+	j. Select **OK**.
 
-38. In **DNS Manager**, you should now see the Text (TXT), Host (A), and Mail Exchanger (MX) records that you created for this domain. Close the DNS Manager window. 
+24. You will finish by adding the **TXT record** required by Exchange and Exchange Online Protection service. 
 
-39. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
+	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
+
+	b. This will return you to the **Add DNS records** page. In the **TXT Records** section, under the **TXT Name** column, select the copy icon that appears to the left of the expected value (for example, XXYYZZa) to copy this value to the clipboard.
+
+	c. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
+
+	d. In **DNS Manager**, under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **Other New Records...**
+	
+	e. In the **Resource Record Type** window that appears, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
+
+	f. In the **New Resource Record** box, right-click in the **Record name (uses parent domain if left blank)** field and select **Paste** from the menu. <br/>
+	
+	**Note:** Do NOT select **OK** at this point. You must first switch back to the Microsoft 365 admin center and copy the value to paste into the Text field.
+
+	g. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
+
+	h. In the **TXT Records** section, under the **TXT value** column, select the copy icon that appears to the left of the expected value (for example, v=spf1 include:spf.protection.outlook.com -all).
+
+	i. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
+
+	j. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears.
+	
+	k. Select **OK**.
+	
+	l. On the **Resource Record Type** window, select **Done**. 
+
+25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for Exchange to work within this domain. Close the DNS Manager window. 
+
+24. In the **Add DNS records** window, select **Continue** to complete the new domain setup. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
+
+38. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
 
 **Note:** For future reference - Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 

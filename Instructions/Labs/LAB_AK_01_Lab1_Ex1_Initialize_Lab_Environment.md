@@ -211,7 +211,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
 
-	b. This will return you to the **Add DNS records** page. In the **TXT Records** section, under the **TXT Name** column, select the copy icon that appears to the left of the expected value (for example, XXYYZZa) to copy this value to the clipboard.
+	b. This will return you to the **Add DNS records** page. In the **TXT Records** section, under the **TXT value** column, select the copy icon that appears to the left of the expected value (for example, v=spf1 include:spf.protection.outlook.com -all) to copy this value to the clipboard.
 
 	c. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
@@ -219,27 +219,21 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	e. In the **Resource Record Type** window that appears, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
-	f. In the **New Resource Record** box, right-click in the **Record name (uses parent domain if left blank)** field and select **Paste** from the menu. <br/>
+	f. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears.
 	
-	**Note:** Do NOT select **OK** at this point. You must first switch back to the Microsoft 365 admin center and copy the value to paste into the Text field.
-
-	g. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
-
-	h. In the **TXT Records** section, under the **TXT value** column, select the copy icon that appears to the left of the expected value (for example, v=spf1 include:spf.protection.outlook.com -all).
-
-	i. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
-
-	j. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears.
+	g. Select **OK**.
 	
-	k. Select **OK**.
-	
-	l. On the **Resource Record Type** window, select **Done**. 
+	h. On the **Resource Record Type** window, select **Done**. 
 
-25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for Exchange to work within this domain. Close the DNS Manager window. 
+25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. 
 
-24. In the **Add DNS records** window, select **Continue** to complete the new domain setup. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
+	Close the DNS Manager window. 
 
-38. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
+26. In the **Add DNS records** window, select **Continue** to complete the new domain setup. Each of the three record type sections should display a checkmark to indicate the corresponding MX, CNAME, and TXT records for Exchange were verified.
+
+27. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
+
+28. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
 
 **Note:** For future reference - Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
 

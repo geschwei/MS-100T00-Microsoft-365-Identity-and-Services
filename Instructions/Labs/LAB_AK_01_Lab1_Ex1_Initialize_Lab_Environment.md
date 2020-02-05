@@ -100,7 +100,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 25. In the **Custom themes** window, scroll though the page and review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
 
-    **Note:** Some colors patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like white and bright pink.
+    **Note:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
 26. If you made any changes, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
 
@@ -111,7 +111,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 Not every company has just one domain; in fact, many companies have more than one domain. In this task, you will gain experience adding a domain; in this case, you will add a second domain for Adatum Corporation. When you add a domain to Office 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
 
-In your hosted lab environment, Adatum already has an existing on-premises domain titled **adatum.com**. In this lab, you will create a second domain for Adatum that is titled **XXYYZZa.xxxCustomDomainxxx.xxx**; you will replace **XXYYZZa** with the UPN name assigned to your tenant by your lab hosting provider, and you will replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. Your instructor will provide you with your lab hosting provider's custom domain name.
+In your hosted lab environment, Adatum already has an existing on-premises domain titled **adatum.com**. In this lab, you will create a second domain for Adatum that will be titled **XXYYZZa.xxxCustomDomainxxx.xxx**; you will replace **XXYYZZa** with the UPN name assigned to your tenant by your lab hosting provider, and you will replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. Your instructor will provide you with your lab hosting provider's custom domain name.
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 

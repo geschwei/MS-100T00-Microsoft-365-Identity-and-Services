@@ -179,34 +179,38 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	c. In **DNS Manager**, under **Forward Lookup Zones**, the **XXYYZZa.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you earlier created. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
 
-	d. In the **New Resource Record** window, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. 
+	d. In the **New Resource Record** window, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in step a above.
 	
 	e. Select **OK**.
+	
+	f. At this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the MX record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. 
+	
+	If you select **Continue** now, it will display either a checkmark or an exclamation point next to **MX Record**. The checkmark in a green circle indicates that it successfully validated the MX record for this domain in DNS Manager, and the exclamation point in a red circle indicates that there was a problem with the MX record and it did not validate successfully. If the MX record did not validate successfully, then review the record to ensure you entered the proper information, make any necessary corrections, and then select **Continue** again. 
 
 23. You will now add the **CNAME record** required by Exchange and Exchange Online Protection service. 
 
 	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
 
-	b. This will return you to the **Add DNS records** page. In the **CNAME Records** section, under the **Host Name** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.XXYYZZa) to copy this value to the clipboard.
+	b. This will return you to the **Add DNS records** page. In the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com). <br/>
+		
+	**Important:** You will NOT copy the expected **Host Name** value. The value listed here as the expected host name is **autodiscover.XXYYZZa** (where XXYYZZa is your UPN name). However, if you paste this value in the **Alias name** field in the CNAME record, the CNAME record validation on this page will fail. When you create the CNAME record in DNS Manager, you will instead enter **autodiscover** as the Alias name and NOT **autodiscover.XXYYZZa**. 
+	
+	Therefore, the only value you need to copy for the CNAME record is the expected value for the **Points to address or value** column.
 
 	c. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
 	d. In **DNS Manager**, under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Alias (CNAME)...**
 
-	e. In the **New Resource Record** window, right-click in the **Alias name (uses parent domain if left blank)** field and select **Paste** from the menu that appears. <br/>
+	e. In the **New Resource Record** window, enter **autodiscover** in the **Alias name (uses parent domain if left blank)** field. 
 	
-	**Note:** Do NOT select **OK** at this point. You must first switch back to the Microsoft 365 admin center and copy the value to paste into the FQDN field.
-
-	f. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
-
-	g. In the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com).
-
-	h. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
-
-	i. In the **New Resource Record** window, right-click in the **Fully qualified domain name (FQDN) for target host** field and select **Paste** from the menu that appears. 
+	f. Right-click in the **Fully qualified domain name (FQDN) for target host** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in step b above.
 	
-	j. Select **OK**.
-
+	g. Select **OK**.
+	
+	h. At this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the CNAME record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. <br/>
+	
+	If you select **Continue** now, it will display either a checkmark or an exclamation point next to **CNAME Record**. The checkmark in a green circle indicates that it successfully validated the CNAME record for this domain in DNS Manager, and the exclamation point in a red circle indicates that there was a problem with the CNAME record and it did not validate successfully. If the CNAME record did not validate successfully, then review the record to ensure you entered the proper information, make any necessary corrections, and then select **Continue** again. 
+	
 24. You will finish by adding the **TXT record** required by Exchange and Exchange Online Protection service. 
 
 	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
@@ -219,27 +223,21 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	e. In the **Resource Record Type** window that appears, under **Select a resource record type**, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
-	f. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears.
+	f. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the expected **TXT value** that you copied to the clipboard in step b above.
 	
 	g. Select **OK**.
 	
 	h. On the **Resource Record Type** window, select **Done**. 
 
-25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. 
+25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. Minimize the DNS Manager window. 
 
-	Close the DNS Manager window. 
-
-26. In the **Add DNS records** window, select **Continue** to complete the new domain setup. Each of the three record type sections should display a checkmark to indicate the corresponding MX, CNAME, and TXT records for Exchange were verified.
-
-27. This returns you to the **Domains** window. Note the **Status** of the new **XXYYZZa.xxxCustomDomainxxx.xxx** domain that you just created. This warning message of **Possible service issues** is displayed because additional DNS records may need to be defined for the domain. You can ignore this as you will add MX and A records in the remaining steps in this task.  
-
-28. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
-
-**Note:** For future reference - Instead of using DNS Manger to create the Host and MX records above, you could have created them in PowerShell instead. If you use PowerShell to create these records, you would need to run the following commands (remember to replace XXYYZZa with the unique UPN name assigned to your tenant, replace xxxCustomDomainxxx.xxx with your lab hosting provider's domain name, and replace n.n.n.n with your unique IP address):
-
-‎**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' A n.n.n.n**   
+26. In the **Add DNS records** window, select **Continue** to complete the new domain setup. If you selected **Continue** after adding the MX and CNAME records, and if each validated successfully, then only the TXT record will be validated at this point. However, if you did not select **Continue** after adding the MX and CNAME records, then all three records will be validated at this point. <br/>
 	
-**dnscmd /recordadd XXYYZZa.xxxCustomDomainxxx.xxx '@' MX 10 XXYYZZa.xxxCustomDomainxxx.xxx**  
+	If all three records have been successfully validated, then the **Domain setup is complete** page will appear. If this occurs, then select the **Done** button to complete the domain setup process.
+	
+	However, if any of the three records did not validate successfully, then the **Add DNS records** window will return, and it will display either a checkmark or an exclamation point next to each record type to indicate which ones validated successfully and which ones did not. An exclamation point in a red circle indicates that there was a problem with the record and it did not validate successfully (note that the Actual value for the record is left blank). If this occurs, you must correct the data on the corresponding record in DNS Manager and then select **Continue** again. You must repeat this process until all three records have successfully validated and the **Domain setup is complete** page appears.
+
+27. Remain logged into the LON-DC1 VM with both **Internet Explorer** and **Windows PowerShell** left open for the next task. 
 
 
 ### Task 4 – Prepare for Microsoft Azure Active Directory 

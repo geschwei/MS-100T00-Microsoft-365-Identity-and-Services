@@ -193,7 +193,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	b. This will return you to the **Add DNS records** page. In the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com). <br/>
 		
-	**Important:** You will NOT copy the expected **Host Name** value. The value listed here as the expected host name is **autodiscover.XXYYZZa** (where XXYYZZa is your UPN name). However, if you paste this value in the **Alias name** field in the CNAME record, the CNAME record validation on this page will fail. When you create the CNAME record in DNS Manager, you will instead enter **autodiscover** as the Alias name and NOT **autodiscover.XXYYZZa**. 
+	**Important:** You will NOT copy the expected **Host Name** value. The value listed here as the expected host name is **autodiscover.XXYYZZa** (where XXYYZZa is your UPN name). However, if you paste this value in the **Alias name** field in the CNAME record, the CNAME record validation on this page will fail. When you create the CNAME record in DNS Manager in the following steps, you will instead enter **autodiscover** as the Alias name and NOT **autodiscover.XXYYZZa**. 
 	
 	Therefore, the only value you need to copy for the CNAME record is the expected value for the **Points to address or value** column.
 

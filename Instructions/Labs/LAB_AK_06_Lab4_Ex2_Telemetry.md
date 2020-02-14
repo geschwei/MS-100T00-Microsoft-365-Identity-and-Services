@@ -1,4 +1,4 @@
-# Module 6 - Lab 5 - Exercise 2 - Implement Office Telemetry Components 
+# Module 6 - Lab 4 - Exercise 2 - Implement Office Telemetry Components 
 
 In this exercise, you will configure the Microsoft 365 Telemetry engine on the LON-CL1 VM to gather information about the Adatum’s Microsoft 365 client. 
 
@@ -231,5 +231,5 @@ In this task, you will review the Telemetry data that has been collected at Adat
 9. Close Microsoft Excel, and at the prompt, select **Don’t Save**.
 
 
-# End of Lab 5
+# End of Lab 4
 

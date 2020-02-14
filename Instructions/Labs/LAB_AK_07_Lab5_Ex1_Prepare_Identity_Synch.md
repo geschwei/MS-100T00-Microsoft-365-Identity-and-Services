@@ -1,4 +1,4 @@
-# Module 7 - Lab 6 - Exercise 1 - Prepare for Identity Synchronization  
+# Module 7 - Lab 5 - Exercise 1 - Prepare for Identity Synchronization  
 
 As in the previous lab exercises you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
@@ -267,5 +267,5 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. Leave the Domain Controller VM open as it will be used in the next exercise.
 
 
-# Proceed to Exercise 2
+# Proceed to Lab 5 - Exercise 2
  

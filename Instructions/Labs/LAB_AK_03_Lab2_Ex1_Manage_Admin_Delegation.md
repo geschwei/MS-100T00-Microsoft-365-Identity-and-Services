@@ -1,4 +1,4 @@
-# Module 3 - Lab 3 - Exercise 1 - Manage Administration Delegation
+# Module 3 - Lab 2 - Exercise 1 - Manage Administration Delegation
 
 In this lab, you will continue in your role as Holly Spencer, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
 
@@ -170,5 +170,5 @@ In this task, you will begin by examining the administrative properties of two u
 34. Once Lynne is signed out, close Microsoft Edge. 
 
 
-# Proceed to Exercise 2
+# Proceed to Lab 2 - Exercise 2
 

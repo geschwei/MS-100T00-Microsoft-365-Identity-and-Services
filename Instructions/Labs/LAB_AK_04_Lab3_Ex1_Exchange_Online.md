@@ -1,4 +1,4 @@
-# Module 4 - Lab 4 - Exercise 1 - Review Key Features of Exchange Online
+# Module 4 - Lab 3 - Exercise 1 - Review Key Features of Exchange Online
 
 Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up and has been assigned to the Global Administrator role, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
 
@@ -426,5 +426,5 @@ In this task, you will use the Exchange Admin Center to view your accepted domai
 5. This concludes the exercise on reviewing Exchange Online features. You can close the **Exchange admin center** tab in Internet Explorer. This will return you to the Microsoft 365 admin center tab.
 
 
-# Proceed to Exercise 2
+# Proceed to Lab 3 - Exercise 2
 

@@ -1,4 +1,4 @@
-# Module 7 - Lab 6 - Exercise 2 - Implement Identity Synchronization 
+# Module 7 - Lab 5 - Exercise 2 - Implement Identity Synchronization 
 
 Azure AD Connect will continue to synchronize any delta changes every 30 minutes. In this exercise you are going to make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
@@ -569,5 +569,5 @@ If you’ll recall, you earlier created identity mismatch situations where the e
 8. Leave your Domain Controller VM open for use in the next exercise.
 
 
-# Proceed to Exercise 3
+# Proceed to Lab 5 - Exercise 3
  

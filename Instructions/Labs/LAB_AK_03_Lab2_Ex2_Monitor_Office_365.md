@@ -1,4 +1,4 @@
-# Module 3 - Lab 3 - Exercise 2 - Monitor and Troubleshoot Office 365  
+# Module 3 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Office 365  
 
 In this exercise you will be introduced to some troubleshooting tools in Office 365, and you will analyze Adatum’s Office 365 service health. 
 
@@ -160,4 +160,4 @@ With Microsoft 365, if you ever run into a situation where you need assistance w
 ‎  
 ‎
 
-# End of Lab 3
+# End of Lab 2

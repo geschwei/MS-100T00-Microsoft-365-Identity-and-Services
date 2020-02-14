@@ -1,4 +1,4 @@
-# Module 2 - Lab 2 - Exercise 1 - Manage Users and Groups 
+# Module 2 - Lab 1 - Exercise 2 - Manage Users and Groups 
 
 In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. In this lab, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly. You will create two Office 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use PowerShell to recover the deleted group.
 
@@ -205,4 +205,4 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 10. Leave your browser windows open so that they’re ready for the next task. 
 
 
-# End of Lab 2
+# End of Lab 1

@@ -288,4 +288,4 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 
 
-# End of Lab 1
+# Proceed to Lab 1 - Exercise 2

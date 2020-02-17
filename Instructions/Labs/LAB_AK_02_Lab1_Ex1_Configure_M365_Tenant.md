@@ -169,11 +169,11 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	**Exchange and Exchange Online Protection** is the only check box selected by default (this is sufficient for Adatum; you should NOT select any other check box). Under the **Exchange and Exchange Online Protection** service, the description indicates that 3 records are needed for it to work properly: a Mail Exchanger (MX) record, an Alias (CNAME) record, and an additonal Text (TXT) record. You must now switch back and forth between this **Add DNS records** page and DNS Manager to add these three additional records. For each record that you add in DNS Manager, you will copy information from this **Add DNS records** page and then paste it into each corresponding record that you create in DNS Manager.  <br/>
 
-	On the **Add DNS records** page, select the arrow (**>**) in the **MX Records** section to expand it. This displays the Expected , and then select the arrow (**>**) in the **Expected** section to display both the value it expects you to add in DNS Manager and the actual value that you added. In this case, the **Actual** value is blank, since you have yet to add the MX record in DNS Manager. 
+	On the **Add DNS records** page, select the arrow (**>**) in the **MX Records** section to expand it. This displays the **Expected value** that the domain setup wizard expects to see in the MX record that you create for this domain in DNS Manager. 
 	
-	Repeat this step for the **CNAME records** section and the **TXT records** section. All three record types should now be expanded.
+	Also select the arrow (**>**) in the **CNAME records** section and the **TXT records** section. All three record types should now be expanded.
 	
-22. You will begin by adding the **MX record** required by the Exchange and Exchange Online Protection service. 
+22. You will begin by adding the **MX record** required by the **Exchange and Exchange Online Protection** service. 
 
 	a. In the **MX record** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, XXYYZZa-xxxCustomDomainxxx-xxx.mail.protection.outlook.com) to copy this value to the clipboard.
 	
@@ -183,33 +183,33 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	d. In the **New Resource Record** window, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in step a above.
 	
-	e. Select **OK**.
+	e. Select **OK**. Note how this Mail Exchanger (MX) record appears in the details pane on the right for the XXYYZZa.xxxCustomDomainxxx.xxx domain that you previously created. Leave your DNS Manager window open as you will return to it in a later step in this task.
 	
-	f. At this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the MX record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. 
+	f. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab. At this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the MX record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. 
 	
 	If you select **Continue** now, it will display either a checkmark or an exclamation point next to **MX Record**. The checkmark in a green circle indicates that it successfully validated the MX record for this domain in DNS Manager, and the exclamation point in a red circle indicates that there was a problem with the MX record and it did not validate successfully. If the MX record did not validate successfully, then review the record to ensure you entered the proper information, make any necessary corrections, and then select **Continue** again. 
 
 23. You will now add the **CNAME record** required by Exchange and Exchange Online Protection service. 
 
-	a. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab.
-
-	b. This will return you to the **Add DNS records** page. In the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com). <br/>
+	a. On the **Add DNS records** page, in the **CNAME Records** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com). <br/>
 		
-	**Important:** You will NOT copy the expected **Host Name** value. The value listed here as the expected host name is **autodiscover.XXYYZZa** (where XXYYZZa is your UPN name). However, if you paste this value in the **Alias name** field in the CNAME record, the CNAME record validation on this page will fail. When you create the CNAME record in DNS Manager in the following steps, you will instead enter **autodiscover** as the Alias name and NOT **autodiscover.XXYYZZa**. 
+	**Important:** You will NOT copy the expected **Host Name** value. The value listed here as the expected host name is **autodiscover.XXYYZZa** (where XXYYZZa is your UPN name). However, if you paste this value in the **Alias name** field in the CNAME record in DNS Manager, the CNAME record validation on this page will fail. When you create the CNAME record in DNS Manager in the following steps, you will simply enter **autodiscover** as the Alias name and NOT **autodiscover.XXYYZZa**. <br/>
+	
+	The reason for only using autodiscover as the Alias name is that Autodiscover is an Exchange service that minimizes configuration and deployment. For small, single SMTP namespace organizations such as Adatum, only autodiscover is needed as the Alias, as opposed to autodiscover.XXYYZZa for larger organizations with multiple SMTP namespaces. By adding the CNAME record to your On-premise DNS server, you're creating a redirect record that allows users to configure Outlook and access OWA by using either Basic Authentication or Modern Authentication(OAUTH). <br/>
 	
 	Therefore, the only value you need to copy for the CNAME record is the expected value for the **Points to address or value** column.
 
-	c. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
+	b. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-	d. In **DNS Manager**, under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Alias (CNAME)...**
+	c. In **DNS Manager**, under **Forward Lookup Zones**, right-click the **XXYYZZa.xxxCustomDomainxxx.xxx** domain and select **New Alias (CNAME)...**
 
-	e. In the **New Resource Record** window, enter **autodiscover** in the **Alias name (uses parent domain if left blank)** field. 
+	d. In the **New Resource Record** window, enter **autodiscover** in the **Alias name (uses parent domain if left blank)** field. 
 	
-	f. Right-click in the **Fully qualified domain name (FQDN) for target host** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in step b above.
+	e. Right-click in the **Fully qualified domain name (FQDN) for target host** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in step b above.
 	
-	g. Select **OK**.
+	f. Select **OK**. Note how this CNAME (MX) record appears in the details pane on the right for the XXYYZZa.xxxCustomDomainxxx.xxx domain that you previously created. Leave your DNS Manager window open as you will return to it in a later step in this task.
 	
-	h. At this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the CNAME record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. <br/>
+	g. Switch back to the **Add DNS records** page in the Microsoft 365 admin center. On the taskbar at the bottom of the page, select the **Internet Explorer** icon and select the **Microsoft 365 admin center** tab. t this point, you can either select **Continue** at the bottom of the **Add DNS records** page to verify the CNAME record, or you can wait until you have added all three records and then select **Continue** to verify all three records at once. <br/>
 	
 	If you select **Continue** now, it will display either a checkmark or an exclamation point next to **CNAME Record**. The checkmark in a green circle indicates that it successfully validated the CNAME record for this domain in DNS Manager, and the exclamation point in a red circle indicates that there was a problem with the CNAME record and it did not validate successfully. If the CNAME record did not validate successfully, then review the record to ensure you entered the proper information, make any necessary corrections, and then select **Continue** again. 
 	
@@ -227,13 +227,13 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	f. In the **New Resource Record** window, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the expected **TXT value** that you copied to the clipboard in step b above.
 	
-	g. Select **OK**.
+	g. Select **OK**. 
 	
 	h. On the **Resource Record Type** window, select **Done**. 
 
 25. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. Minimize the DNS Manager window. 
 
-26. In the **Add DNS records** window, select **Continue** to complete the new domain setup. If you selected **Continue** after adding the MX and CNAME records, and if each validated successfully, then only the TXT record will be validated at this point. However, if you did not select **Continue** after adding the MX and CNAME records, then all three records will be validated at this point. <br/>
+26. This should return you to the **Add DNS records** window in Internet Explorer. Select **Continue** to complete the new domain setup. If you selected **Continue** after adding the MX and CNAME records, and if each validated successfully, then only the TXT record will be validated at this point. However, if you did not select **Continue** after adding the MX and CNAME records, then all three records will be validated at this point. <br/>
 	
 	If all three records have been successfully validated, then the **Domain setup is complete** page will appear. If this occurs, then select the **Done** button to complete the domain setup process.
 	

@@ -53,9 +53,9 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 11. Once the Client 1 VM opens, at the top of the VM, select the **Actions** drop-down arrow and select **Ctrl+Alt+Delete**. This will display the log-in credentials for the **ADATUM\Administrator** account. Since you want to log in as Laura, select **Other user** in the lower-left portion of the desktop.
 
-12. In the **Other user** log in, enter **adatum\laura** in the **Username** field, and enter **Pa55w.rd** as the **Password**.
+12. In the **Other user** log in, enter **adatum\laura** in the **Username** field, enter **Pa55w.rd** as the **Password**, and then select the arrow to log in.
 
-13. If a **Networks** pane appears, select **No**. 
+13. If a **Networks** pane appears, select **Yes**. 
 
 14. In the Client 1 VM, Laura prefers to use Microsoft Edge as her browser. Select the **Microsoft Edge** icon on either the desktop or the taskbar.
 
@@ -65,7 +65,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 17. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
 
-18. In the **Stay signed in?** window, select **Yes.**
+18. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes.**
 
 19. In the **Microsoft Office Home** page for Laura, notice that no Office 365 apps appear (since Laura does not have an Office 365 license assigned). Select the **Install Office** drop-down arrow, and then select **Install software**.
 

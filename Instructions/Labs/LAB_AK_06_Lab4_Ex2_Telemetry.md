@@ -89,7 +89,9 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 ### Task 3 - Manage the Office 2019 Group Policy Administrative Templates  
 
-In this task, you will download the Office 2019 Group Policy Administrative Template files (ADMX/ADML). These files are used by Group Policy to configure installations of Office 365 products, such as Office 365 ProPlus, and volume licensed versions of Office 2016 and Office 2019. You will perform this task as part of your Office Telemetry pilot project for Adatum.
+In this task, you will download the Office 2019 Group Policy Administrative Template files (ADMX/ADML). These files are used by Group Policy to configure installations of Office 365 products, such as Office 365 ProPlus, and volume licensed versions of Office 2016 and Office 2019. You can also use the group policy templates to enable and configure agents such as the Office Telemetry agent. 
+
+To enable and configure the agent, you can edit the registry on each monitored client computer in small or test environments. For production environments that contain hundreds or thousands of client computers, you can use Group Policy administrative templates. For the purpose of this lab, you will use the group policy templates to enable and configure the Office Telemetry agent.
 
 1. On **LON-CL1**, you should still be logged in as adatum\administrator. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
 
@@ -169,9 +171,11 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
  
 
-### Task 4 - Force Group Policy Update and Verify Policy Settings  
+### Task 4 - Force Group Policy Update and manually trigger data collection  
 
-In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. You will then schedule and run a task that collects Office Telemetry Agent logon information.
+In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. It is important to note that when a user logs into an Office client in a normal production environment, the Office Telemetry agent waits 10 minutes to allow other logon processes to be completed, and then waits a randomized number of minutes for up to 4 hours to avoid client computers sending data to the network at the same time. After this initial scan, the Office Telemetry agent scans and collects data every 8 hours.
+
+Obviously, waiting this length of time to collect data will not work in our lab environment, or in selected test scenarios. To bypass the normal Telemetry agent scan times, you can manually trigger the data collection and see data uploaded immediately to Office Telemetry Dashboard. This is what you will do in this lab by running the OfficeTelemetryAgentLogOn task within the Task Scheduler app.
 
 1. Switch to **LON-CL1.** You should still be signed in as the **adatum\Administrator**. If necessary, log in as the  **Administrator** with a Password of **Pa55w.rd**.
  
@@ -181,13 +185,13 @@ In this task, you will update the group policy templates that you downloaded and
 
 4. Wait for the group policy update to complete. 
 
-5. Select the **Start** icon, and in the **Start** menu, select **Word**. 
+5. You will now create a Word document so that you can later see this activity in the Office Telemetry data that is captured. Select the **Start** icon, and in the **Start** menu, select **Word**. 
 
 6. Open a blank document in Word, enter some text in the document and then save it in the **Documents** folder. 
 
 7. Close Word. 
 
-8. On the taskbar, type **schedule** in the **Search** box. In the list of search results, right-click on **Task Scheduler** and select **Run as administrator**. 
+8. You will now manually trigger the data collection process. On the taskbar, type **schedule** in the **Search** box. In the list of search results, right-click on **Task Scheduler** and select **Run as administrator**. 
 
 9. Maximize the **Task Scheduler** window.
 
@@ -202,7 +206,7 @@ In this task, you will update the group policy templates that you downloaded and
 
 ### Task 5 - Review Telemetry Data   
 
-In this task, you will review the Telemetry data that has been collected at Adatum. 
+In this task, you will open the Office Telemetry Dashboard to review the data that was collected when you manually triggered the data collection process in the prior task. 
 
 1. On **LON-CL1**, you should still be signed in as **adatum\administrator**.
 

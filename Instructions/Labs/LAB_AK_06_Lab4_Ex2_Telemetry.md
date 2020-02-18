@@ -8,38 +8,36 @@ Before you can install the Telemetry Processor in the next task, the Client 1 VM
 
 1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **Laura Atkins**. To install the Telemetry processor, you will log out as Laura and log back in as the **adatum\administrator** account. <br/>
 
-	‎Select the **Actions** field at the top of the VM, and in the drop-down menu select **Ctrl+Alt+Delete**.
+	‎If your LON-CL1 VM is still open to your browser, then in your lab hosting environment, select the **Ctrl+Alt+Delete** option, select **Sign out** in the menu that appears, select the desktop, and then on the log-in screen, select **Other User**. 
+	
+	However, if you LON-CL1 VM displays the desktop with the sign-in screen for Laura Atkins, then select **Other User**.
 
-2. In the menu that appears, select **Sign out**.
+2. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
 
-3. Select the desktop, and then on the log-in screen that appears, select **Other User**. 
+3. On the desktop, select the **File Explorer** icon on the taskbar. Maximize the File Explorer window that opens. 
 
-4. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
+4. In the **File Explorer** window, expand **This PC** (if necessary) and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
 
-5. On the desktop, select the **File Explorer** icon on the taskbar. 
+5. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
 
-6. In the **File Explorer** window, expand **This PC** and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
+6. Minimize the **File Explorer** window as you will use it in the next task. 
 
-7. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
+7. If a **Welcome to Microsoft Teams!** window appears, then close it.
 
-8. Minimize the **File Explorer** window as you will use it in the next task. 
+8. Select the **Start** icon in the lower-left corner of the taskbar. 
 
-9. If a **Welcome to Microsoft Teams!** window appears, then close it.
+9. In the **Start** menu, scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
 
-10. Select the **Start** icon in the lower-left corner of the taskbar. 
+10. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-11. In the **Start** menu, scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
-
-12. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
-
-13. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+11. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
 
 	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu. 
 	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual**, right-click on the service, select **Properties**, and in the **Properties** window, select the **Service** tab and change the **Start Mode** to **Automatic**.  
 
-14. Close the Sql Server Configuration Manager window.
+12. Close the Sql Server Configuration Manager window.
 
-15. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
+13. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
 
 
 ### Task 2 - Install the Telemetry Processor  
@@ -52,7 +50,7 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 2. On the taskbar, type **Telemetry** in the **Search** box.
 
-3. Select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
+3. In the list of search results, select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
 
 4. In **Microsoft Excel**, select the **Getting started** worksheet. 
 
@@ -74,13 +72,13 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 13. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
 
-14. In the **SQL database** box, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
+14. In the **SQL database** box, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the Dashboard database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
 
 15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database now. 
 
 16. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, which is the location of the folder that you created at the start of this task for storing data from client computers. Select **Next**. 
 
-17. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes**.
+17. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes** to configure the folder now.
 
 18. On the **Microsoft Customer Experience Improvement Program** page, select the **I don’t want to sign up for the program at this time** option and then select **Next**. 
 
@@ -105,15 +103,15 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 6. On the **Choose the download you want** window, select the check box for the 64 bit version of the administrative templates file (as of this writing, the file name is **admintemplates_x64_4966-1000_en-us.exe**; Note: the version number in this file name (4966-1000) may change if a more current file has been released by the time you run this lab), and then select **Next**. 
 
-7. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder.
+7. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder on your LON-CL1 VM.
 
-	**Important:** Once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. Do NOT select Run. You will not run the file on the LON-CL1 VM; instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there.
+	**Important:** Once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. **Do NOT select Run; instead, select the X to close this notification bar.** You will not run the file on the LON-CL1 VM; instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there.
 	
 8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **adatum\Administrator**.  
 
 9. On LON-DC1, right-click on the **Start** button on the taskbar and in the menu that appears, select **Run**. 
 
-10. In the **Run** window, type **\\LON-CL1\C$\Users\Administrator.ADATUM\Downloads** and then select **OK**. 
+10. In the **Run** window, type **\\LON-CL1\C$\Users\Administrator.ADATUM\Downloads** and then select **OK**. This opens a File Explorer window that displays the Downloads folder on LON-CL1. 
 
 11. In the **File Explorer** window, the **C:\Users\Administrator.ADATUM\Downloads** folder appears. In the right-hand pane, double-click the **admintemplates_x64_4966-1000_en-us.exe** file to run it.  
 
@@ -123,7 +121,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 14. In **The Microsoft Office Administrative Templates** window, select the check box to accept the Microsoft Software License Terms, and then select **Continue**.  
 
-15. In the **Browse For Folder** window, expand **This PC**, select the **Documents** folder, and then select **OK**. 
+15. In the **Browse For Folder** dialog box that appears, expand **This PC**, select the **Documents** folder, and then select **OK**. 
 
 	**Note:** This will extract all the template files into a child folder (under **Documents**) titled **admx**.
 
@@ -157,25 +155,17 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 30. Maximize the **Group Policy Management Editor** window. This will enable you to see the **State** column, which is important for you to ensure that you have enabled the necessary settings.
 
-31. In the list of settings, right-click **Turn on telemetry data collection** and select **Edit**. 
+31. In the list of settings, right-click **Turn on telemetry data collection** and select **Edit**. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
 
-32. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
+32. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
 
-33. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**.  
+33. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
 
-34. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
+34. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
 
-35. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**.
+35. In the list of settings, the **State** of the four settings that you edited in the prior steps should all be **Enabled**.
 
-36. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
-
-37. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. 
-
-38. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
-
-39. In the list of settings, the **State** of the four settings that you edited in the prior steps should all be **Enabled**.
-
-40. Close the Group Policy Management Editor console. 
+36. Close the Group Policy Management Editor console. 
 
  
 
@@ -183,7 +173,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. You will then schedule and run a task that collects Office Telemetry Agent logon information.
 
-1. Switch to **LON-CL1.** You should still be signed in as **adatum\administrator**. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
+1. Switch to **LON-CL1.** You should still be signed in as the **adatum\Administrator**. If necessary, log in as the  **Administrator** with a Password of **Pa55w.rd**.
  
 2. On the taskbar, right-click on the **Start** icon and select **Run**. 
 
@@ -199,13 +189,15 @@ In this task, you will update the group policy templates that you downloaded and
 
 8. On the taskbar, type **schedule** in the **Search** box. In the list of search results, right-click on **Task Scheduler** and select **Run as administrator**. 
 
-9. In the **Task Scheduler** window, in the console tree on the left, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
+9. Maximize the **Task Scheduler** window.
 
-10. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
+10. In the **Task Scheduler** window, in the console tree on the left, expand **Task Scheduler Library**, expand **Microsoft**, and then select **Office**. 
 
-11. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
+11. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
 
-12. Close the Computer Management window. 
+12. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
+
+13. Close the Task Scheduler window. 
    
 
 ### Task 5 - Review Telemetry Data   
@@ -214,21 +206,23 @@ In this task, you will review the Telemetry data that has been collected at Adat
 
 1. On **LON-CL1**, you should still be signed in as **adatum\administrator**.
 
-2. In the **Telemetry Dashboard** spreadsheet in **Excel**, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
+2. Select the **Excel** icon on the taskbar at the bottom of the page to display the Telemetry Dashboard1 spreadsheet.
 
-3. Select **Connect to Database**. 
+3. In the **Telemetry Dashboard** spreadsheet, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
 
-4. In the **Data connection settings** dialog box, in the **SQL database** field, verify that **Dashboard** is displayed as the name of the SQL database, and then select **Connect**. 
+4. Select **Connect to Database**. 
 
-5. This opens a window indicating that a query is being processed. After the query is complete, a spreadsheet is displayed with multiple workbooks. Select the **Documents** workbook. 
+5. In the **Data connection settings** dialog box, in the **SQL database** field, verify that **Dashboard** is displayed as the name of the SQL database, and then select **Connect**. 
 
-6. Notice the documents reported. 
+6. This opens a window indicating that a query is being processed. After the query is complete, a spreadsheet is displayed with multiple workbooks. Select the **Documents** workbook. 
 
-7. Select the **Solutions** menu. 
+7. Notice the documents reported. 
 
-8. Review the add-ins that have been reported as installed. Scroll right to see which add-ins are built into the application. 
+8. Select the **Solutions** menu. 
 
-9. Close Microsoft Excel, and at the prompt, select **Don’t Save**.
+9. Review the add-ins that have been reported as installed. Scroll right to see which add-ins are built into the application. 
+
+10. Close Microsoft Excel, and at the prompt, select **Don’t Save**.
 
 
 # End of Lab 4

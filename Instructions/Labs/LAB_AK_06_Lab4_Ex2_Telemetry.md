@@ -173,9 +173,11 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 ### Task 4 - Force Group Policy Update and manually trigger data collection  
 
-In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. It is important to note that when a user logs into an Office client in a normal production environment, the Office Telemetry agent waits 10 minutes to allow other logon processes to be completed, and then waits a randomized number of minutes for up to 4 hours to avoid client computers sending data to the network at the same time. After this initial scan, the Office Telemetry agent scans and collects data every 8 hours.
+In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. Once you have forced an update of the group policy templates, you will then create a Word doc so that you can later see this activity in the data that is captured by the Office Telemetry agent.
 
-Obviously, waiting this length of time to collect data will not work in our lab environment, or in selected test scenarios. To bypass the normal Telemetry agent scan times, you can manually trigger the data collection and see data uploaded immediately to Office Telemetry Dashboard. This is what you will do in this lab by running the OfficeTelemetryAgentLogOn task within the Task Scheduler app.
+It is important to note that when a user logs into an Office client in a normal production environment, the Office Telemetry agent waits 10 minutes to allow other logon processes to be completed, and then waits a randomized number of minutes for up to 4 hours to avoid client computers sending data to the network at the same time. After this initial scan, the Office Telemetry agent scans and collects data every 8 hours.
+
+Obviously, waiting this length of time to collect data will not work in our lab environment, or in selected test scenarios. To bypass the normal Office Telemetry agent scan times, you can manually trigger the data collection by running the OfficeTelemetryAgentLogOn2016 task within the Task Scheduler app. This is the process you will perform in this task. You will then view the collected data in the next task.
 
 1. Switch to **LON-CL1.** You should still be signed in as the **adatum\Administrator**. If necessary, log in as the  **Administrator** with a Password of **Pa55w.rd**.
  

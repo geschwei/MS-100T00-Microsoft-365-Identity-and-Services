@@ -201,9 +201,19 @@ Obviously, waiting this length of time to collect data will not work in our lab 
 
 11. In the **Results** pane, drag the right edge of the **Name** column to the right so that you can see the entire name of each task. 
 
-12. Select **OfficeTelemetryAgentLogOn2016**, then right-click on it and select **Run** in the menu that appears. Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
+12. Before manually triggering the data collection process by running the **OfficeTelemetryAgentLogOn2016** task, you are first going to review the properties for this task so that you can see how in a normal production environment this task would be triggered automatically to run. <br/>
 
-13. Close the Task Scheduler window. 
+	In the list of tasks, select the **OfficeTelemetryAgentLogOn2016** task, then right-click on it and select **Properties** in the menu that appears. 
+	
+13. In the the **OfficeTelemetryAgentLogOn2016 Properties** window, review the task description in the **General** tab. Then select the **Triggers** tab and review the condition that triggers the running of this task. If you wish, you can select the remaining tabs to see the additional settings that are configured for this task. When you are done reviewing this task, select **Cancel** to close the the **OfficeTelemetryAgentLogOn2016 Properties** window.
+
+14. Now that you have reviewed this task, you are manually going to run it to force an immediate collection of Telemetry data. Right-click on the **OfficeTelemetryAgentLogOn2016** task and select **Run** in the menu that appears.
+
+	Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
+
+15. To verify the task ran successfully, scroll to the right in the task window until you can see the **Last Run Result** column. This column will indicate whether an error occurred or the operation completed successfully.
+
+16. Close the Task Scheduler window. 
    
 
 ### Task 5 - Review Telemetry Data   

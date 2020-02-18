@@ -205,11 +205,11 @@ Obviously, waiting this length of time to collect data will not work in our lab 
 
 	In the list of tasks, select the **OfficeTelemetryAgentLogOn2016** task, then right-click on it and select **Properties** in the menu that appears. 
 	
-13. In the the **OfficeTelemetryAgentLogOn2016 Properties** window, review the task description in the **General** tab. Then select the **Triggers** tab and review the condition that triggers the running of this task. If you wish, you can select the remaining tabs to see the additional settings that are configured for this task. When you are done reviewing this task, select **Cancel** to close the the **OfficeTelemetryAgentLogOn2016 Properties** window.
+13. In the the **OfficeTelemetryAgentLogOn2016 Properties** window, review the task description in the **General** tab. Then select the **Triggers** tab and review the condition that triggers the running of this task, which is a user logon. If you wish, you can select the remaining tabs to see the additional settings that are configured for this task. When you are done reviewing this task, select **Cancel** to close the the **OfficeTelemetryAgentLogOn2016 Properties** window.
 
-14. Now that you have reviewed this task, you are manually going to run it to force an immediate collection of Telemetry data. Right-click on the **OfficeTelemetryAgentLogOn2016** task and select **Run** in the menu that appears.
+14. Now that you have reviewed this task, you are manually going to run it to force an immediate collection of Telemetry data (rather than waiting for a user to logon to trigger the task to run). <br/>
 
-	Verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
+	Right-click on the **OfficeTelemetryAgentLogOn2016** task and select **Run** in the menu that appears. Then verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
 
 15. To verify the task ran successfully, scroll to the right in the task window until you can see the **Last Run Result** column. This column will indicate whether an error occurred or the operation completed successfully.
 

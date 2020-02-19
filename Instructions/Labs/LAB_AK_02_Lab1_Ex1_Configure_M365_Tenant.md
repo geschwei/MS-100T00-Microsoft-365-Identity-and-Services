@@ -102,7 +102,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
     **Note:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-26. If you made any changes, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
+26. If you made any changes in the **Custom themes** window, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
 
 27. Remain logged into the domain controller VM and leave all the tabs open in your browser for the remaining tasks. 
  

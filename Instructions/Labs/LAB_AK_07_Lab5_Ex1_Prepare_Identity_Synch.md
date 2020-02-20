@@ -122,7 +122,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 20. On the menu bar at the top of the window, select **Query** to refresh the query results. Note: If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. 
 
-21. In the query results, note how two of the three users who you just fixed no longer appear in the results (Holly and Klemen). The exception is Maj Hoski. When you originally broke Maj's account by running the script in the prior task, it replaced her email address with blank characters. Then when you flagged her account to be edited back in Step 13, the IdFix tool replaced the blank characters with Majs' name. Now you need to fix this value by replacing her name with her actual email address. <br/>
+21. In the query results, note how two of the three users who you just fixed no longer appear in the results (Holly and Klemen). The exception is Maj Hoski. When you originally broke Maj's account by running the script in the prior task, it replaced her email address with blank characters. Then when you flagged her account to be edited back in Step 13, the IdFix tool replaced the blank characters with Maj's name. Now you need to fix this value by replacing her name with her actual email address. <br/>
 
 	Find the **Maj Hoski** row. Note how the **VALUE** for Maj is her name rather than her email address. To fix this email attribute for Maj, you must first select the **MajHojski** value in the **UPDATE** column and then replace it by typing **maj@adatum.com**. Then select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 

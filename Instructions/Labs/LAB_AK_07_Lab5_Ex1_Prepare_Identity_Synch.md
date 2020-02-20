@@ -18,21 +18,19 @@ For this lab, Adatum has purchased a new domain (provided by your lab hosting pr
 
 1. On your Domain Controller VM (LON-DC1), make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
-2. You must now open **Windows PowerShell**. Select the magnifying glass (**Search**) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. 
+2. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **powershell** in the Search box that appears,  right-clicking on **Windows PowerShell**, and selecting **Run as administrator** in the drop-down menu. 
 
-3. In the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
-
-4. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where you will replace XXYYZZa with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. <br/> 
+3. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where you will replace XXYYZZa with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. <br/> 
 
 	‎In the following Powershell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
 	‎**Set-ADForest -identity adatum.com -UPNSuffixes @{replace="XXYYZZa.xxxCustomDomainxxx.xxx"}**
 
-5. You must then run the following command that changes all existing adatum.com accounts to the new UPN @XXYYZZa.xxxCustomDomainxxx.xxx domain (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
+4. You must then run the following command that changes all existing adatum.com accounts to the new UPN @XXYYZZa.xxxCustomDomainxxx.xxx domain (remember to change XXYYZZa to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
 
 	‎**Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@XXYYZZa.xxxCustomDomainxxx.xxx" )}**
 
-6. You will continue using PowerShell on your Domain Controller VM in the next task.
+5. You will continue using PowerShell on your Domain Controller VM in the next task.
 
 
 ### Task 2: Prepare problem user accounts   
@@ -82,7 +80,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 	<strong>https://www.microsoft.com/en-us/download/details.aspx?id=36832 </strong>
 
-3. Scroll down on the **Download Center** page for **the IdFix Directory Synchronization Error Remediation Tool** and select the **Download** button. 
+3. Scroll down on the **Download Center** page to the **IdFix Directory Synchronization Error Remediation Tool** section and select the **Download** button. 
 
 4. In the notification bar that appears at the bottom of the page, select **Save**.
 
@@ -98,11 +96,11 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 9. In the **IdFix Privacy Statement** message box, select **OK**. 
 
-10. In the **IdFix** window, on the menu bar, select **Query** to query the directory. After a short wait, you should see several errors. Note: If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. 
+10. In the **IdFix** window, on the menu bar at the very top of the screen, select **Query** to query the directory. After a short wait, you should see several errors. Note: If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. 
 
-11. Select the **ERROR** column to sort the character errors to the top of the list.   <br/>
+11. In the row of column headings, select the **ERROR** column heading to sort the character errors to the top of the list.   <br/>
 
-	‎**Note:** If **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
+	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
 12. In the **Holly Spencer** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
@@ -110,7 +108,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 14. In the **Klemen Sic** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
-15. On the toolbar at the top of the window, select **Apply**. 
+15. On the menu bar at the top of the window, select **Apply**. 
 
 16. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
 
@@ -122,7 +120,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 19. Select the **IdFix tool** icon on the taskbar. 
 
-20. On the toolbar, select **Query**. 
+20. On the menu bar at the top of the window, select **Query** to refresh the query results. Note: If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. 
 
 21. In the query results, note how the three users who you just fixed no longer appear in the results. Find the **Logan Boyle** row. Note how the **VALUE** for Logan was incorrectly entered as **Lara@adatum.com**, which resulted in a duplicate error because this is the same email address as Lara Raisic, which appears above it. 
 
@@ -132,13 +130,13 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 	To fix this email attribute for Maj, you must first select the **MajHojski** value in the **UPDATE** column for Maj and then replace it by typing **maj@adatum.com**. Then select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
-23. On the toolbar at the top of the window, select **Apply**. 
+23. On the menu bar at the top of the window, select **Apply**. 
 
 24. In the **Apply Pending** diaolog box that appears, select **Yes**.  <br/>
 
 	‎**Note:** This will update the two user objects and correct their UPN. 
 
-25. On the toolbar, select **Query**. In the query results, note how the two users who you just fixed no longer appear in the results. As you can see, there are two users whose errors you have not fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in Task 5 when it processes users with these conditions. <br/>
+25. On the menu bar, select **Query**. In the query results, note how the two users who you just fixed no longer appear in the results. As you can see, there are two users whose errors you have not fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in Task 5 when it processes users with these conditions. <br/>
 
 	**Important:** Where there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column (which is the case for these two final users), or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many errors.  
 

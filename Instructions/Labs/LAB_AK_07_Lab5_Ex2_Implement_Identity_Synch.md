@@ -22,7 +22,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
   
 ‎This task resumes from the prior task, where you logged into the Domain Controller VM as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx.**
 
-1. On the Domain Controller VM (LON-DC1), you will first create a user account for **Scotty Heyward** in Microsoft 365. In **Internet Explorer**, select the **Microsoft 365 admin center** tab, and in the left-hand navigation pane, select **Users** and then **Active users**. 
+1. On the Domain Controller VM (LON-DC1), in **Internet Explorer**, you should be in the **Microsoft 365 admin center** tab and displaying the **Active users** after having completed the prior task.
 
 2. You will begin by creating a user account for Scotty Heyward in Microsoft 365 that references the **onmicrosoft.com** domain. <br/>
 
@@ -36,7 +36,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- Display name: When you tab into this field, **Scotty Heyward** will appear.
 
-	- Username: When you tab into this field, **Scotty** will appear; leave this as the username   <br/>
+	- Username: Ente **Scotty** as the username   <br/>
 
 		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, to create the identity mismatch, select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). So Scotty’s username should appear as: ‎**Scotty@M365xZZZZZZ.onmicrosoft.com**  
 
@@ -44,7 +44,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- Password: **Pa55w.rd** 
 
-	- Uncheck the **Make this user change their password when they first sign in** checkbox 
+	- Uncheck the **Require this user to change their password when they first sign in** check box 
 
 4. Select **Next**.
 
@@ -64,11 +64,11 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 10. You will now create an on-premises mailbox and user account for Scotty in Adatum’s on-premises Exchange Server that references the primary SMTP domain of **XXYYZZa.xxxCustomDomainxxx.xxx**.  <br/>
 
-	‎In the **Virtual machine** box at the top of the VM, switch to the **Exchange Server VM** (LON-EX1).
+	‎Switch to the **Exchange Server VM** (LON-EX1).
 
-11. In the **Exchange Server VM**, log in as **adatum\administrator** and **Pa55w.rd**. <br/>
+11. In the **Exchange Server VM**, log in as the **Administrator** (adatum\administrator) and **Pa55w.rd**. <br/>
 
-	‎**Note:** If you receive a notification that you need some updates, simply ignore it for lab purposes.
+	‎**Note:** If you receive a notification that you need some updates, simply ignore it for lab purposes. If a **Networks** pane appears, select **Yes** to allow your PC to be discoverable by other PCs on this network. 
 
 12. Select the **Start** icon on the lower-left corner of the taskbar. In the **Start** menu, in the list of programs, select **Microsoft Exchange Server 2019** to expand the program group, and then select **Exchange Administrative Center** (this is the on-premises Exchange Admin Center).
 
@@ -90,13 +90,13 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- Last name: **Heyward**
 
-	- Organizational unit: select **Browse**, and then under **Adatum.com** select **Users.** The **organizational unit** will fill in with **Adatum.com/Users**
+	- Organizational unit: select **Browse**, and then under **Adatum.com** double-click **Users.** In the **new user mailbox** window, the **organizational unit** will fill in with **Adatum.com/Users**
 
 	- User logon name: **Scotty** 
 
-	- Domain: To the right of the **User logon name**, select the drop-down arrow in the domain field and select **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name)
+	- Domain: To the right of the **User logon name**, the domain currently displays **Adatum.com**. Select the drop-down arrow in the domain field and select **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name)
 
-	- Password and Confirm password: **Pa55w.rd**
+	- New password and Confirm password: **Pa55w.rd**
 
 	- Leave the **Require password change on next logon** check box blank
 
@@ -129,7 +129,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 6. Select **OK**.  
 
-7. In the **Research** OU, double-click the **Purchasing** group.  
+7. In the detail pane on the right for the **Research** organizational unit, double-click the **Purchasing** group.  
 
 8. In the **Purchasing Properties** window, in the **E-mail** box, type **Purchasing@adatum.com**.  
 
@@ -172,11 +172,11 @@ Each group will be assigned several members. After the forced synchronization, y
 
 This task sets up another scenario for testing whether the sync process is working in Azure AD Connect. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
 
-1. This task continues from where the previous task left off in the Domain Controller VM (LON-DC1). In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, double-click the **Research** group.  
+1. This task continues from where the previous task left off in the Domain Controller VM (LON-DC1). In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. In the detail pane on the right, double-click the **Research** security group.  
 
 2. In the **Research Properties** window, select the **Members** tab to view the members of this group.  
 
-3. For each of the following users, select the user in the **Members** window, select the **Remove** button to remove it from the group, and confirm the removal by selecting **Yes**. Once finished, select **OK.**
+3. For each of the following users, select the user in the **Members** window, select the **Remove** button to remove it from the group, and confirm the removal by selecting **Yes**. Once you have finished removing these three users, select **OK.**
 
 	- **Cai Chu**  
 
@@ -197,9 +197,9 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 
 	‎**Important:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
 
-2. At this point, Windows PowerShell should NOT be open. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **PowerShell** in the Search box, and then in the menu, right-click on **Windows PowerShell** and select **Run as administrator**.  
+2. At this point, Windows PowerShell should NOT be open. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **PowerShell** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**.  
 
-3. Run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.   <br/>
+3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.   <br/>
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta** <br/>
 	
@@ -216,13 +216,13 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 2. If **Internet Explorer** is still open and a tab exists for the **Microsoft 365 admin center**, then select that tab now and proceed to the next step. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
 
-3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
+3. In the **Microsoft 365 admin center**, you should still be on the **Active Users** page; if not, then in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
 4. To validate the results of the synchronization, you need to see the **Sync Status** of each user. By default, this field is not displayed in the **Active users** list; therefore, you need to customize the **Active users** view to display this field.   <br/>
 
 	‎Scroll to the far-right side of the window, and in the heading bar, select **Choose columns**. 
 
-5. In the **Choose column** window, select the **Sync status** field and then select **Save.** 
+5. In the **Choose column** window, select the **Sync status** check box and then select **Save.** 
 
 6. In the **Active users** list, scroll to the right and verify the **Sync status** column appears. Hover your mouse over any of the **Sync status** icons to display the corresponding value.
 
@@ -230,7 +230,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
-	‎Locate **Scotty Heyward** in the **Active users** list (to quickly find Scotty, in the **Search** box that appears above list of users, enter **Scotty** and press Enter).  <br/>
+	‎Locate **Scotty Heyward** in the **Active users** list (to quickly find Scotty, in the **Search** box that appears on the menu bar above list of users, enter **Scotty** and press Enter).  <br/>
 	
 	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter Scotty again in the Search box). You cannot proceed until Scotty’s accounts appear. 
 
@@ -244,23 +244,27 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again.  
 
-10. In the **Groups** list, verify that the **Purchasing** and **Manufacturing** groups appear. <br/>
+10. In the **Groups** list, verify that the **Manufacturing** and **Purchasing** groups appear. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the two new groups appear. Continue to refresh the list until you see the groups.  
 
-11. In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** column. For this security group, hovering your mouse over the **Sync status** icon indicates that it was **Synced from on-premises**.
+11. In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** column (this column appears by default for Groups, and it appears to the right of the group Type column). For this security group, hovering your mouse over the **Sync status** icon indicates that it was **Synced from on-premises**.
 
 12. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
 13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. 
 
-14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. Close the **Manufacturing** group window.
+14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. <br/>
+
+	Close the **Manufacturing** group window.
 
 15. In the **Groups** list, select the **Purchasing** group. 
 
-16. In the **Purchasing** group window, note that it’s a public group that contains only one member. Select the **Members** tab. Recall for the Manufacturing security group, no owner was assigned. For this distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud.  
+16. In the **Purchasing** group window, select the **Members** tab. Recall for the Manufacturing security group, no owner was assigned. For this distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud. <br/>
 
-17. Now let’s examine these groups using Windows PowerShell. If **Windows PowerShell** is already open, then proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
+	Close the **Purchasing** group window.
+
+17. Now let’s examine these groups using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
 18. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 
@@ -315,7 +319,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 2. The first thing to do is to stop the Azure AD synchronization service. Select the magnifying glass (Search) icon on the taskbar and enter **services.** In the menu, select the **Services** desktop app.
 
-3. In the **Services** window, scroll down to **Microsoft Azure AD Sync**, select it, and then select **Stop** in the left-hand pane.
+3. In the **Services** window, scroll down to **Microsoft Azure AD Sync**, select it, and then select **Stop the service** in the left-hand pane.
 
 4. Once the service has stopped, minimize the **Services** window. You will return to this window later in this task to start the sync service.
 
@@ -333,7 +337,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	‎**Set-MsolDirSyncEnabled -EnableDirSync $false**  <br/>
 	
-	‎When prompted to continue, select **Yes**.  <br/>
+	‎When prompted to continue, enter **Y** to select **Yes**.  <br/>
 	
 	‎**Note:** The command that you run in this step turns off Directory Synchronization, which if left turned Off, would trigger all synchronized identities to be changed to cloud-only identities. Obviously, this is not something you would do in a real-world environment if you want to maintain synchronized accounts. Directory Synchronization is turned off here so that you can make the necessary corrections to Scotty’s accounts, at which time you will enable synchronization so that you can run a forced sync to apply your changes. It’s very important that you understand the implications of turning off Directory Synchronization as well as the rare cases such as this when you would need to do so.  
 	

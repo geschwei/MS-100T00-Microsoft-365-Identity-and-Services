@@ -264,7 +264,9 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
 
-19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. Leave the Domain Controller VM open as it will be used in the next exercise.
+19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. <br/>
+
+	Close the **Synchronization Service Manager**. Leave the Domain Controller VM open as it will be used in the next exercise.
 
 
 # Proceed to Lab 5 - Exercise 2

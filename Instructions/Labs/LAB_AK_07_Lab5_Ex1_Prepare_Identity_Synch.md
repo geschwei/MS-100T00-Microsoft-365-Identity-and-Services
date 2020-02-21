@@ -256,15 +256,13 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 15. In the taskbar at the bottom of the VM, select the **magnifying glass (Search)** icon, and then in the Search box, enter **Synchronization**. In the menu, select the **Synchronization Service** desktop application to open it.
 
-16. In the **Synchronization Service Desktop Manager** window, the Operations tab is displayed by default so that you can monitor the synchronization process.   <br/>
+16. In the **Synchronization Service Manager** window, the Operations tab is displayed by default so that you can monitor the synchronization process. 
 
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization is a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes (the default syn interval for Azure AD Connect is set to 30 minutes during installation), any subsequent synchronizations will display **Delta Synchronization** in the **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. 
-
-17. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com** (with a **Status** of **completed-export-errors**). Select this row.  
+17. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com** (with a **Status** of **completed-export-errors**), and then select this row.  
 
 18. In the bottom portion of the screen, note the number of users that were added and the number that were updated. Also note the two errors that appear in the **Export Errors** section. If you recall back in Task 3 when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). If you select the links to each of the **Export Errors**, you’ll see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.   <br/>
 
-	‎Also note that because a synchronization had not been performed prior to this, the initial synchronization is a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
+	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
 
 19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. Leave the Domain Controller VM open as it will be used in the next exercise.
 

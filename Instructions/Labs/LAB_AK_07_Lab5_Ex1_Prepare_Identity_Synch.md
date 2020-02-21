@@ -145,7 +145,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 ### Task 4: Prepare for Directory Synchronization    
 
-The Azure Active Directory Connect synchronization services (Azure AD Connect sync) is a main component of Azure AD Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of the following two components: the on-premises Azure AD Connect sync component and the cloud service component in Azure AD, which is known as the Azure AD Connect sync service.
+Azure Active Directory Connect synchronization service is a main component of Azure AD Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of an on-premises component (Azure AD Connect sync) and a cloud service component (Azure AD Connect sync service).
 
 Before you can run Azure AD Connect, you must first configure several settings that control the synchronization process, which you will do in this task. Once you have completed the preparation process, you will then run the Azure AD Connect tool in the next task. 
 
@@ -193,7 +193,7 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 19. Read the warning that appears at the top of the window and then select **Save changes**. 
 
-20. By making this change, you will be automatically signed out of Office 365 and you will be forced to sign back in.
+20. Since you are signed into Office 365 as Holly, and because you just changed her username, you will be automatically signed out of Office 365 and forced to sign back in.
 
 21. In the **Pick an account** window, you want to log in using Holly’s **Holly@XXYYZZa.xxxCustomDomainxxx.xx** account. Note that her **Holly@M365xZZZZZZ.onmicrosoft.com** account appears in the list, but not her **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** account. Therefore, select **Use another account.** 
 
@@ -207,9 +207,13 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 26. In your Internet Explorer browser, enter the following URL in the address bar to open the **Microsoft Office Home** page: **https://portal.office.com/** 
 
-27. In the Office 365 home page, you should still be signed into Office 365 as Holly Spencer (the circle in the upper-right corner displays **HS**). Select the circle that displays **HS**. Note how the Holly's account now displays the XXYYZZa.xxxCustomDomainxxx.xxx domain rather than her M365xZZZZZZ.onmicrosoft.com domain.
+27. In the Office 365 home page, you should still be signed into Office 365 as Holly Spencer (the circle in the upper-right corner displays **HS**). Select the circle that displays **HS**. This opens the **My Account** pane. <br/>
 
-26. Proceed to the next task. You are now ready to install the Azure AD Connect tool. 
+	In Holly's **My Account** pane, note how her username displays the XXYYZZa.xxxCustomDomainxxx.xxx domain rather than her M365xZZZZZZ.onmicrosoft.com domain. 
+
+28. Close the **My Account** pane.
+
+29. Proceed to the next task. You are now ready to install the Azure AD Connect tool. 
   
 
 ### Task 5: Running Azure AD Connect and Performing a Full Synchronization
@@ -218,23 +222,23 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 ‎This task resumes from the prior task, where on LON-DC1, you logged into Office 365 as **Holly@XXYYZZa.xxxCustomDomainxxx.xx** and you opened the Office 365 home page.
 
-1. In **Internet Explorer**, select the **Microsoft 365 admin center** tab. 
+1. In **Internet Explorer**, in the **Microsoft Office Home** page, select **Admin**. 
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then select **Active** **Users**. <br/>
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then select **Active Users**. <br/>
 
-	In the **Active users** list, note how Holly's username references the XXYYZZa.xxxCustomDomainxxx.xxx domain, whereas the Username for all other users references M365xZZZZZZ.onmicrosoft.com.
+	In the **Active users** list, note how Holly's username references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, whereas the Username for all other users references the **M365xZZZZZZ.onmicrosoft.com** domain.
 
 3. In the **Active users** window, on the menu bar, select the **ellipsis** icon (to the right of **User templates**), and then in the drop-down menu, select **Directory synchronization**. 
 
-4. In the **Azure Active Directory preparation** window, select **Go to the Download center to get the Azure AD Connect tool**. This takes you to the Microsoft Download Center.
+4. In the **Azure Active Directory preparation** window, select **Go to the Download center to get the Azure AD Connect tool**. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
-5. In the **Microsoft Download Center** page, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
+5. In the **Microsoft Download Center**, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
 
 6. In the notification bar that appears at the bottom of the page, select **Save**.
 
 7. Once the download is complete, in the notification bar at the bottom of the page, select **Run**.
 
-8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it in the taskbar and select it. On the Welcome to Azure AD Connect window in the setup wizard, select the **I agree to the license terms and privacy notice** option and then select **Continue**.
+8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it in the taskbar and select it. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
 9. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
@@ -242,11 +246,11 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 11. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.**
 
-12. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** option, and then select **Next**.
+12. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page, and then select **Next**.
 
 13. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
-	‎**Note:** In a real-world deployment, if you’re also preparing Azure AD Connect for an Exchange hybrid deployment, you would select the **Exchange hybrid deployment** option as well. In this lab, you will leave this option blank.
+	‎**Note:** In a real-world deployment, if you are also preparing Azure AD Connect for an Exchange hybrid deployment, you would select the **Exchange hybrid deployment** check box as well. In this lab, you will leave this check box blank.
 
 14. Wait for the installation to complete and then select **Exit**. 
 

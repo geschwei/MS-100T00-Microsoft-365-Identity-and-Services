@@ -260,7 +260,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 15. In the **Groups** list, select the **Purchasing** group. 
 
-16. In the **Purchasing** group window, select the **Members** tab. Recall for the Manufacturing security group, no owner was assigned. For this distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud. <br/>
+16. In the **Purchasing** group window, select the **Members** tab. Recall that for the Manufacturing group, no owner was automatically assigned during the sync process because the group was a Security group. However, since the Purchasing group is a distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. Also note that the three members that you had assigned to the on-premises group do not appear as group members in Microsoft 365. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud. <br/>
 
 	Close the **Purchasing** group window.
 

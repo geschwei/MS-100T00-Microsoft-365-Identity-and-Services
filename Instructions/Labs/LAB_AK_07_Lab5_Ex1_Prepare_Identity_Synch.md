@@ -266,7 +266,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. <br/>
 
-	Close the **Synchronization Service Manager**. Leave the Domain Controller VM open as it will be used in the next exercise.
+	Close the **Synchronization Service Manager**. In your browser, close the **Download Center** tab, and then in the **Microsoft 365 admin center** tab, close the **Azure Active Directory preparation** pane. Leave the Domain Controller VM open as it will be used in the next exercise.
 
 
 # Proceed to Lab 5 - Exercise 2

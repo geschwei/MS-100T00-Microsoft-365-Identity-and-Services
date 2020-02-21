@@ -385,7 +385,7 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 	- Update Scotty’s Microsoft 365 email addresses to include the email addresses from his on-premises account, change the primary SMTP address to this XXYYZZa.xxxCustomDomainxxx.xxx address, and add an additional alias for the mail.onmicrosoft.com account.<br/>
 	
-	By making these changes, the email addresses for Scotty’s on-premises and Microsoft 365 accounts should be identical. Then when you do a force sync it will synchronize the on-premises and Microsoft 365 addresses together in Scotty’s one Microsoft 365 account.   <br/>
+	By making these changes, the email addresses for Scotty’s on-premises and Microsoft 365 accounts should be identical. Then when you do a force sync, it will synchronize the on-premises and Microsoft 365 addresses together in Scotty’s one Microsoft 365 account.   <br/>
 	
 	‎You are currently in the Domain Controller VM (LON-DC1) looking at the Office 365 **Exchange admin center** for Exchange Online. You are in the **email address** tab for Scotty’s Microsoft 365 account. This displays the following two email addresses:
 
@@ -433,15 +433,15 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 33. You now need to create an email alias that matches the address of the XXYYZZa.xxxCustomDomainxxx.xxx accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
 
-34. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
+34. In the **new email address** window, under **Email address type**, leave the default **SMTP** address type selected. 
 
 35. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Office 365 Exchange admin center for Exchange Online. <br/>
 
 	‎Enter **Scotty@M365xZZZZZZ.mail.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 
-36. On the **email address** tab for Scotty, you should now see the following four email addresses (the SIP address is for Teams, the SMTP address is Scotty’s primary email address, and the two smtp address are email aliases):
+36. On the **email address** tab for Scotty, you should now see the following four email addresses (the **SIP** address is for Teams, the **SMTP** address is Scotty’s primary email address, and the two (lower-case) smtp addresses are email aliases):
 
-	- **SIP** - **Scotty@M365xZZZZZZ.onmicrosoft.com**
+	- **SIP - Scotty@M365xZZZZZZ.onmicrosoft.com**
 
 	- **SMTP – Scotty@XXYYZZa.xxxCustomDomainxxx.xxx**
 
@@ -459,39 +459,39 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 
 40. In the **Search** box, enter **Scotty.** This should display both of Scotty’s Microsoft 365 accounts. In the next few steps, you want to delete the second user account that was created by the sync process, which is the **XXYYZZa.xxxCustomDomainxxx.xxx** account. You need to do this so that you can add an email address to Scotty’s account that uses the XXYYZZa.xxxCustomDomainxxx.xxx domain; however, the system will prohibit you from adding this email address when this second account exists that already points to the XXYYZZa.xxxCustomDomainxxx.xxx domain.
 
-41. In the **Active users** list, select the **Scotty Heyward** account whose username is **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx**, select the **More options** icon to the left of the username (the three dots stacked on top of each other), and then select **Delete user.** 
+41. In the **Active users** list, select the circle and checkmark that appears when you hover your mouse to the left of the **Scotty Heyward** account whose username is **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx** (do NOT select on the Display Name, which opens the Properties window). Once the checkmark appears to the left of the Display Name, select the **More options** icon to the left of the username (the three dots stacked on top of each other), and then select **Delete user.** 
 
 42. On the **Delete this user?** page, select **Delete user**. Once the user is deleted, select **Close.**  <br/>
 
 	‎**Note:** If the deletion fails, then you will need to refresh the **Active users** list as the user’s sync status must be “**In cloud**”.
 
-43. You now need to update Scotty’s Microsoft 365 account to contain the email address that was assigned to his on-premises account. If you’ll recall, Scotty’s on-premises account originally had only one email address, which was his primary **SMTP** address of **Scotty@Adatum.com**. Previously in this task you changed th primary SMTP address of his on-premises account to **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx.** You will need to do the same here for his Microsoft 365 account.   
+43. You now need to update Scotty’s Microsoft 365 account to contain the email address that was assigned to his on-premises account. If you’ll recall, Scotty’s on-premises account originally had only one email address, which was his primary **SMTP** address of **Scotty@Adatum.com**. Previously in this task you changed th primary SMTP address of his on-premises account to **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx.** You will need to do the same here for his Microsoft 365 account. <br/>
 
-44. In **Internet Explorer**, select the **Exchange admin center** tab if you’re not already there. 
+	In **Internet Explorer**, select the **mailboxes - Microsoft Exchange** tab if you’re not already there. In the **Exchange admin center**, it should be displaying the **mailboxes** tab for **recipients**.
 
-45. Select **Scotty Heyward** and then select the **pencil (edit)** icon in the menu bar.
+44. In the list of **mailboxes**, select **Scotty Heyward** and then select the **pencil (edit)** icon in the menu bar.
 
-46. In Scotty’s user account window, select the **email address** tab in the left-hand navigation pane.
+45. In Scotty’s user account window, select the **email address** tab in the left-hand navigation pane.
 
-47. In the **email address** tab, select the **plus (+)** sign to add a new address. 
+46. In the **email address** tab, select the **plus (+)** sign to add a new address. 
 
-48. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
+47. In the **new email address** window, under **Email address type**, leave the default **SMTP** address type selected. 
 
-49. In the **Email address** field, enter **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name).
+48. In the **Email address** field, enter **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name).
 
-50. Select the **Make this the reply address** check box and then select **OK**.   <br/>
+49. Select the **Make this the reply address** check box and then select **OK**.   <br/>
 
-	‎**Note:** Setting this check box will make this smtp address the primary SMTP address, and it will change the current primary SMTP address to an email alias. 
+	‎**Important:** Setting this check box will make this smtp address the primary SMTP address, and it will change the current primary SMTP address to an email alias. 
 
-51. You now need to create another email alias that matches the address of the XXYYZZa.xxxCustomDomainxxx.xxx accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
+50. You now need to create another email alias that matches the address of the XXYYZZa.xxxCustomDomainxxx.xxx accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
 
-52. In the **new email address** window, under **Email address type**, leave the default SMTP address type selected. 
+51. In the **new email address** window, under **Email address type**, leave the default **SMTP** address type selected. 
 
-53. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Office 365 Exchange admin center for Exchange Online.   <br/>
+52. In the **Email address** field, you must enter the mail.onmicrosoft.com email address that you earlier found by querying the accepted domains in the Office 365 Exchange admin center for Exchange Online.   <br/>
 
 	‎Enter **Scotty@M365xZZZZZZ.mail.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**.
 
-54. On the **email address** tab for Scotty, you should now see the following email addresses(the SIP address is for Teams, the SMTP address is Scotty’s primary email address, and the two smtp address are email aliases):
+53. On the **email address** tab for Scotty, you should now see the following email addresses(the **SIP** address is for Teams, the **SMTP** address is Scotty’s primary email address, and the two (lower-case) smtp addresses are email aliases):
 
 	- **SIP** - **Scotty@M365xZZZZZZ.onmicrosoft.com**
 
@@ -503,21 +503,21 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 	Select **Save**.<br/>
 	
-	**Note:** You have now made the necessary corrections to fix the identity mismatch between the email addresses in Scotty’s on-premises and Microsoft 365 accounts. Proceed to the final steps to force synchronize the accounts. 
+	**Note:** You have now made the necessary corrections to fix the identity mismatch between the email addresses in Scotty’s on-premises and Microsoft 365 accounts. The remaining steps in this task will force synchronize the accounts. 
 
-55. At the start of this task, you disabled Azure AD synchronization while you made the corrections to Scotty’s accounts. You must now enable synchronization so that you can run a force sync.   <br/>
+54. At the start of this task, you disabled Azure AD synchronization while you made the corrections to Scotty’s accounts. You must now enable synchronization so that you can run a force sync.   <br/>
 
-	‎Maximize your PowerShell window and run the following command to enable directory synchronization:  <br/>
+	‎Select the PowerShell icon on the taskbar to display the PowerShell window and run the following command to enable directory synchronization:  <br/>
 	
 	‎**Set-MsolDirSyncEnabled -EnableDirSync $true**  <br/>
 	
-	‎When prompted to continue, select **Yes**.  
+	‎When prompted to continue, enter **Y** to select **Yes**.  
 
-56. Select the **Services** icon on your taskbar to return to the **Services** window. 
+55. Select the **Services** icon on your taskbar to return to the **Services** window. 
 
-57. In the **Services** window, scroll down to **Microsoft Azure AD Sync**, select it, and then select **Start** in the left-hand pane. Once the service has started, close the **Services** window.
+56. In the **Services** window, scroll down to **Microsoft Azure AD Sync**, select it, and then select **Start** in the left-hand pane. Once the service has started, close the **Services** window.
 
-58. You must then synchronize the on-premises email addresses for Scotty with his Microsoft 365 account by running a force sync. Since all of the email addresses match up between the on-premises account and the Microsoft 365 account, the synchronization process will map the two accounts together for synchronization purposes.  <br/>
+57. You must then synchronize the on-premises email addresses for Scotty with his Microsoft 365 account by running a force sync. Since all of the email addresses match up between the on-premises account and the Microsoft 365 account, the synchronization process will map the two accounts together for synchronization purposes.  <br/>
 
 	‎In your **Domain Controller VM**, in **Windows PowerShell** (which should still be open), run the following command that executes a force sync on the server that is running Azure AD Connect (for our lab, this is your Domain Controller):   <br/>
 	
@@ -525,11 +525,11 @@ In this task you will soft match Scotty’s forked accounts. Soft matching uses 
 	
 	‎**Note:** You may need to wait up to 10 minutes for the synchronization process to complete.  
 
-59. You now want to see if the identity mismatch was corrected in Scotty’s Microsoft 365 account. Navigate to the **Microsoft 365 admin center**, select **Active users**, and in the **Search** field, enter **Scotty** to display Scotty Heyward’s user account.   <br/>
+58. You now want to see if the identity mismatch was corrected in Scotty’s Microsoft 365 account. Navigate to the **Microsoft 365 admin center**, select **Active users**, and in the **Search** field, enter **Scotty** to display Scotty Heyward’s user account.   <br/>
 
 	‎You should only see one user account, and if you select it, you’ll see the XXYYZZa.xxxCustomDomainxxx.xxx address listed as Scotty’s primary email address, and you’ll see his onmicrosoft.com and mail.onmicrosoft.com addresses listed as email aliases. This user account should also have a sync status of “Synced from on-premises”.
 
-60. Leave your Domain Controller VM open, as well as Windows PowerShell, which will be used in the next task.
+59. Leave your Domain Controller VM open, as well as Windows PowerShell, which will be used in the next task.
  
 
 ### Task 7: Use Hard Matching to Troubleshoot Identity Mismatch  

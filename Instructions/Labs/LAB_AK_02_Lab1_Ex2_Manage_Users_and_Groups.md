@@ -29,7 +29,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 	- Username: When you tab into this field, **Holly** will appear; leave this as the username<br/>
 	
-		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, you MUST select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
+		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the **M365xZZZZZZ.onmicrosoft.com** cloud domain (where ZZZZZZ is your tenant ID provided by your lab hosting provider).<br/>
 	
 		After configuring this field, Holly’s username should appear as:<br/>
 
@@ -205,4 +205,5 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 10. Leave your browser windows open so that they’re ready for the next task. 
 
 
-# End of Lab 1
+# Proceed to Lab 1 - Exercise 3
+

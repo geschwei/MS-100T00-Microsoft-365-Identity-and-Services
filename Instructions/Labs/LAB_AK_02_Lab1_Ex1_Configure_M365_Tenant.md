@@ -2,7 +2,7 @@
 
 Adatum Corporation runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
 
-As Adatum's enterprise administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant and your instructor will guide you on how to obtain your Office 365 credentials in your lab-hosted environment, which you will use throughout the remaining labs in this course. 
+As Adatum's enterprise administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant, and your instructor will guide you on how to obtain your Office 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course. 
 
 In your lab environment, the trial tenant has already been selected and a default tenant admin account has already been created. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. You will then update Adatum's Microsoft 365 organizational profile, and you will prepare your tenant for Microsoft Azure Active Directory.
 
@@ -133,7 +133,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 8. Close this Download Center tab in Internet Explorer. 
 
-9. If Windows PowerShell is still open from the previous task when you added the custom domain, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of **Windows PowerShell** just as you did in the prior task.
+9. You must now open **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
 10. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
 

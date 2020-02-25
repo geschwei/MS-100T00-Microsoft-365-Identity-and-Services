@@ -166,7 +166,7 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. If Windows PowerShell is still open from the previous lab, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
+2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
 3. In **Windows PowerShell**, type the following commands (press Enter after each command):
 

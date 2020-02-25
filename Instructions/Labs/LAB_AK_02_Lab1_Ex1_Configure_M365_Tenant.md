@@ -1,10 +1,10 @@
 # Module 2 - Lab 1 - Exercise 1 - Configure your Microsoft 365 Tenant 
 
-In the following lab exercise you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. Adatum runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
+Adatum Corporation runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
 
-You have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this lab, you will set up a Microsoft 365 trial tenant and add a custom, on-premises accepted domain. 
+As Adatum's enterprise administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant and your instructor will guide you on how to obtain your Office 365 credentials in your lab-hosted environment, which you will use throughout the remaining labs in this course. 
 
-In this lab, the trial tenant has already been selected and a default tenant admin account has already been created. In your role as Holly Spencer, Adatum’s Enterprise Administrator, you will be responsible for the remainder of the initial setup. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. Once you create your Microsoft 365 account for Holly, you will log into Microsoft 365 as Holly from that point forward.
+In your lab environment, the trial tenant has already been selected and a default tenant admin account has already been created. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. You will then update Adatum's Microsoft 365 organizational profile, and you will prepare your tenant for Microsoft Azure Active Directory.
 
 
 ### Task 1 - Obtain Your Office 365 Credentials

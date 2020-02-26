@@ -1,6 +1,6 @@
 # Module 3 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Office 365  
 
-In this exercise you will be introduced to some troubleshooting tools in Office 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Office 365 service health by reviewing several of the key service health queries and reports that are available in Office 365. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team.
+In this exercise you will be introduced to some troubleshooting tools in Office 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Office 365 service health by reviewing several of the key service health queries and reports that are available in Office 365. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team should the need ever arise where you need assistance with a problem.
 
 ### Task 1 - Troubleshoot Mail Flow in Office 365  
 

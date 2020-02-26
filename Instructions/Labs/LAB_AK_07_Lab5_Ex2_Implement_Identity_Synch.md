@@ -4,7 +4,7 @@ In this exercise, you will enable synchronization between Adatum’s on-premises
 
 ‎**Important:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
 
-### Task 1: Running Azure AD Connect and Performing a Full Synchronization
+### Task 1: Install Azure AD Connect and Initiate Synchronization
 
 In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
 
@@ -242,7 +242,7 @@ This task sets up another scenario for testing whether the sync process is worki
 	‎**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
-### Task 5: Force synchronization   
+### Task 5: Force a manual synchronization   
 
 In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 

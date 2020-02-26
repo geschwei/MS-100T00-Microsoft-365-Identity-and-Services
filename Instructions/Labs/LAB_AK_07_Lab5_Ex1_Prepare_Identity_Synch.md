@@ -213,61 +213,8 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 28. Close the **My Account** pane.
 
-29. Proceed to the next task. You are now ready to install the Azure AD Connect tool. 
+29. Proceed to the next task. You are now ready to install the Azure AD Connect tool and enable synchronization. 
   
-
-### Task 5: Running Azure AD Connect and Performing a Full Synchronization
-
-In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
-
-‎This task resumes from the prior task, where on LON-DC1, you logged into Office 365 as **Holly@XXYYZZa.xxxCustomDomainxxx.xx** and you opened the Office 365 home page.
-
-1. In **Internet Explorer**, in the **Microsoft Office Home** page, select **Admin**. 
-
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then select **Active Users**. <br/>
-
-	In the **Active users** list, note how Holly's username references the **XXYYZZa.xxxCustomDomainxxx.xxx** domain, whereas the Username for all other users references the **M365xZZZZZZ.onmicrosoft.com** domain.
-
-3. In the **Active users** window, on the menu bar, select the **ellipsis** icon (to the right of **User templates**), and then in the drop-down menu, select **Directory synchronization**. 
-
-4. In the **Azure Active Directory preparation** window, select **Go to the Download center to get the Azure AD Connect tool**. This opens a new tab in your browser and takes you to the Microsoft Download Center.
-
-5. In the **Microsoft Download Center**, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
-
-6. In the notification bar that appears at the bottom of the page, select **Save**.
-
-7. Once the download is complete, in the notification bar at the bottom of the page, select **Run**.
-
-8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it in the taskbar and select it. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
-
-9. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
-
-10. On the **Connect to Azure AD** window, enter **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.** 
-
-11. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next.**
-
-12. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page, and then select **Next**.
-
-13. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
-
-	‎**Note:** In a real-world deployment, if you are also preparing Azure AD Connect for an Exchange hybrid deployment, you would select the **Exchange hybrid deployment** check box as well. In this lab, you will leave this check box blank.
-
-14. Wait for the installation to complete and then select **Exit**. 
-
-15. In the taskbar at the bottom of the VM, select the **magnifying glass (Search)** icon, and then in the Search box, enter **Synchronization**. In the menu, select the **Synchronization Service** desktop application to open it.
-
-16. In the **Synchronization Service Manager** window, the Operations tab is displayed by default so that you can monitor the synchronization process. 
-
-17. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com** (with a **Status** of **completed-export-errors**), and then select this row.  
-
-18. In the bottom portion of the screen, note the number of users that were added and the number that were updated. Also note the two errors that appear in the **Export Errors** section. If you recall back in Task 3 when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). If you select the links to each of the **Export Errors**, you’ll see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.   <br/>
-
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
-
-19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. <br/>
-
-	Close the **Synchronization Service Manager**. In your browser, close the **Download Center** tab, and then in the **Microsoft 365 admin center** tab, close the **Azure Active Directory preparation** pane. Leave the Domain Controller VM open as it will be used in the next exercise.
-
 
 # Proceed to Lab 5 - Exercise 2
  

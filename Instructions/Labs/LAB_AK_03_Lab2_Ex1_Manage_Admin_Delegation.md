@@ -1,6 +1,6 @@
 # Module 3 - Lab 2 - Exercise 1 - Manage Administration Delegation
 
-In this exercise, you will continue in your role as Holly Spencer, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning administrator roles to several of your users, configure Azure Rights Management and Compliance, and monitor and troubleshoot Microsoft 365. 
+In this exercise, you will continue in your role as Holly Spencer, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning administrator roles to several of your users. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell. This will give you experience using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
 
 
 ### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center

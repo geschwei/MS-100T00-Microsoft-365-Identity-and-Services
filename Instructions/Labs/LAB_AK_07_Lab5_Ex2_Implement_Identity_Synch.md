@@ -2,7 +2,7 @@
 
 Azure AD Connect will continue to synchronize any delta changes every 30 minutes. In this exercise you are going to make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
-‎**Important:** When you start this exercise, you should perform the first three tasks without any delay between them so that Azure AD Connect doesn’t automatically synchronize the changes that you make to the identity objects.
+‎**Important:** When you start this exercise, you should perform the first three tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
 
 ### Task 1: Create an Identity Mismatch Scenario for Synchronization  
 

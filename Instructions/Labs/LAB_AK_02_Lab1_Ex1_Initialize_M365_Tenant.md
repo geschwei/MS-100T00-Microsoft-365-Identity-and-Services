@@ -1,4 +1,4 @@
-# Module 2 - Lab 1 - Exercise 1 - Configure your Microsoft 365 Tenant 
+# Module 2 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant 
 
 Adatum Corporation runs their legacy applications (such as Microsoft Exchange) in an on-premises deployment. However, they recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which they must synchronize their on-premises and cloud deployments. 
 

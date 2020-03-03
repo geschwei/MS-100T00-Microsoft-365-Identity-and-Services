@@ -4,7 +4,7 @@ Adatum Corporation runs their legacy applications (such as Microsoft Exchange) i
 
 As Adatum's enterprise administrator, you have been tasked with deploying Microsoft 365 in Adatum’s hybrid deployment using a virtualized lab environment. In this exercise, you will set up Adatum's Microsoft 365 trial tenant, and your instructor will guide you on how to obtain your Office 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course. 
 
-In your lab environment, the trial tenant has already been selected and a default tenant admin account has already been created. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. You will then update Adatum's Microsoft 365 organizational profile, and you will prepare your tenant for Microsoft Azure Active Directory.
+In your lab environment, the trial tenant has already been selected and a default tenant admin account has already been created. You will log into the Domain Controller VM using the ADATUM\Administrator account, and when you access Microsoft 365 for the first time, you will initially log in using the tenant email account that has been assigned to your Microsoft 365 tenant. You will then update Adatum's Microsoft 365 organizational profile, and you will prepare your tenant for Microsoft Azure Active Directory and for a future lab using Microsoft Teams.
 
 
 ### Task 1 - Obtain Your Office 365 Credentials
@@ -152,6 +152,29 @@ Azure Active Directory is needed to perform several configuration steps when ins
 15. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Windows Azure Active Directory PowerShell Module.
 
 16. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next exercise.
+
+
+### Task 4 – Prepare for External Access using Microsoft Teams 
+
+When you get to Module 4, you will perform a lab involving Microsoft Teams. One of the tasks within that lab requires you to collaborate with your fellow students' individual Microsoft 365 tenants through Teams. To enable this communication between your tenant and your fellow students' tenants, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature now so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
+
+1. Each student should provide his or her **Tenant Email** account (**admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider) to the course instructor. The instructor should then display the list of accounts on a whiteboard for all students to see. 
+2. On your domain controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+
+	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider.
+3. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
+4. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
+7. In the **Teams admin center**, in the left navigation pane, select **Org-wide settings**.
+8. Select External access.
+9. Confirm that both toggle switches are in the ON position.
+10. Select Add a domain.
+11. Begin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
+12. The Action to take on this domain will be set to Allowed.
+13. Select Done.
+14. Select Save. 
+
+
+
 
 
 

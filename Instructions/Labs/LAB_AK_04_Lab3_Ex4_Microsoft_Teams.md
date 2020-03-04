@@ -331,4 +331,4 @@ Microsoft Teams includes a variety of global settings that control performance w
 4. Leave your LON-DC1 VM open for the next lab.  
 
 
-# Proceed to Exercise 5
+# Proceed to Lab 3 - Exercise 5

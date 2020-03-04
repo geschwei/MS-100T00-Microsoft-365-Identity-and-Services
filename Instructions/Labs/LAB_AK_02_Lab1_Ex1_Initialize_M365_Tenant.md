@@ -158,24 +158,20 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 When you get to Module 4, you will perform a lab involving Microsoft Teams. One of the tasks within that lab requires you to collaborate with your fellow students' individual Microsoft 365 tenants through Teams. To enable this communication between your tenant and your fellow students' tenants, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature now so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
 
-1. Each student should provide his or her **Tenant Email** account (**admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider) to the course instructor. The instructor should then display the list of accounts on a whiteboard for all students to see. 
-2. On your domain controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+
+1. On your domain controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
 	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider.
-3. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
-4. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
-7. In the **Teams admin center**, in the left navigation pane, select **Org-wide settings**.
-8. Select External access.
-9. Confirm that both toggle switches are in the ON position.
-10. Select Add a domain.
-11. Begin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
-12. The Action to take on this domain will be set to Allowed.
-13. Select Done.
-14. Select Save. 
-
-
-
-
+2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
+3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
+4. In the **Teams admin center**, in the left navigation pane, select **Org-wide settings**.
+5. Select External access.
+6. Confirm that both toggle switches are in the ON position.
+7. Select Add a domain.
+8. Begin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
+9. The Action to take on this domain will be set to Allowed.
+10. Select Done.
+11. Select Save. 
 
 
 # Proceed to Lab 1 - Exercise 2

@@ -1,4 +1,4 @@
-# Module 4 - Lab 3 - Exercise 3 - Review Key Features of Microsoft Teams
+# Module 4 - Lab 3 - Exercise 4 - Review Key Features of Microsoft Teams
 
 In this exercise you will learn how to manage and configure teams through the Microsoft Teams admin center.
 
@@ -331,4 +331,4 @@ Microsoft Teams includes a variety of global settings that control performance w
 4. Leave your LON-DC1 VM open for the next lab.  
 
 
-# End of Lab 3
+# Proceed to Exercise 5

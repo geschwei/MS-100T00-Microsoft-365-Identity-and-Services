@@ -32,7 +32,7 @@ A team site includes a group of related web pages, a default document library fo
 
 		- Time zone: since this group is located in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
 
-		- Site Description: **This site is used by the HR department** 
+		- Site Description: **This site is used by the IT department** 
 
 7. Select **Next**.
 

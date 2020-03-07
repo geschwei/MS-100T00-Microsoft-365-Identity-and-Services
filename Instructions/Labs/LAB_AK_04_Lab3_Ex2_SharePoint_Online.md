@@ -4,7 +4,7 @@ In this exercise you will review some of the basic administrator functions in Sh
 
 ### Task 1 – Site Management
 
-A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been tasked with creating a team site for the Human Resources department so that the HR team can work on projects and share information from anywhere and on any device. 
+A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been tasked with creating a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
 
 1. You should already be in the **Microsoft 365 admin center** after having finished the prior exercise. 
 
@@ -20,9 +20,9 @@ A team site includes a group of related web pages, a default document library fo
 
 6. In the **Get a team site connected to Office 365 Groups** window, enter the following information.
 
-	- Site name: **Human Resources**
+	- Site name: **IT Services**
 
-	- Group email address: this is the alias for the group email address. As you typed in **Human Resources** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word. Do not change this default value.
+	- Group email address: this is the alias for the group email address. As you typed in **IT Services** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word. Do not change this default value.
 
 	- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
 
@@ -48,50 +48,50 @@ A team site includes a group of related web pages, a default document library fo
 
 11. Select **Finish**.
 
-12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle and checkmark to the left of the **Human Resources** site name (do not select the Human Resources site name, as this will open a properties window for the site).
+12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle and checkmark to the left of the **IT Services** site name (do not select the IT Services site name, as this will open a properties window for the site).
 
 13. In the menu bar at the top of the page, select the **ellipsis (…)** icon, and in the drop-down menu that appears, select **Delete**. 
 
-14. In the **Delete Office 365 group** window, select the **Delete the group “Human Resources” and all its resources** check box, and then select **Delete.** Note that the Human Resources site disappears from the **Active sites** list. 
+14. In the **Delete Office 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
 
-15. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the Human Resources site that you just deleted appears in the list of deleted sites. 
+15. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the IT Services site that you just deleted appears in the list of deleted sites. 
 
-16. In the **Deleted sites** window, select the circle and checkmark to the left of the **Human Resources** site name (do not select the Human Resources site name).
+16. In the **Deleted sites** window, select the circle and checkmark to the left of the **IT Services** site name (do not select the IT Services site name).
 
 17. In the menu bar at the top of the page, select **Restore**.
 
-18. In the **Restore Office 365 group** window, select **Restore**.  Note that the Human Resources site disappears from the **Deleted sites** list. 
+18. In the **Restore Office 365 group** window, select **Restore**.  Note that the IT Services site disappears from the **Deleted sites** list. 
 
-19. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The Human Resources site should once again appear in the **Active sites** list. 
+19. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The IT Services site should once again appear in the **Active sites** list. 
 
-20. In the **Active sites** list, select the checkmark to the left of the **Human Resources** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
+20. In the **Active sites** list, select the checkmark to the left of the **IT Services** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
 
 21. Remain in the SharePoint admin center for the next task.
 
  
 ### Task 2 – Hierarchical Permissions
 
-SharePoint Online uses hierarchical permissions to set authorization and access of sites. In other words, when a site is created (known as the parent site) any sites that are later created under that site (known as children sites) will, by default, inherit the main site permissions of the parent site. Since you just created a team site for Human Resources, you now plan to configure site permissions to meet the HR team’s security requirements.
+SharePoint Online uses hierarchical permissions to set authorization and access of sites. In other words, when a site is created (known as the parent site) any sites that are later created under that site (known as children sites) will, by default, inherit the main site permissions of the parent site. Since you just created a team site for IT Services, you now plan to configure site permissions to meet the IT team's security requirements.
 
 1. In the **SharePoint admin center**, you should still be displaying **Active sites**.
 
-2. Select the **Human Resources** site that you created in the prior task.
+2. Select the **IT Services** site that you created in the prior task.
 
-3. In the **Human Resources** window that appears, select the URL that is displayed under **URL.** 
+3. In the **IT Services** window that appears, select the URL that is displayed under **URL.** 
 
-4. A new tab will open in Internet Explorer that displays the **Human Resources** site.
+4. A new tab will open in Internet Explorer that displays the **IT Services** site.
 
-5. In the upper right-hand corner of the **Human Resources** site, select the **gear (Settings)** icon.
+5. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
 
 6. In the **Settings** pane that appears, select **Site permissions.**
 
-7. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: Human Resources** tab for the Human Resources site.
+7. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: IT Services** tab for the IT Services site.
 
-8. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: Human Resources** window,, select **Check Permissions.**  
+8. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: IT Services** window,, select **Check Permissions.**  
 
 	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the HR site, and Nestor and Patti as site members. The following steps will enable you to check what permissions they were assigned in these roles. 
 
-9. In the **Human Resources: Check Permissions** window that appears, in the **User/Group** field, type **Diego**. As you type Diego, a window appears listing users whose first name starts with Diego. Select **Diego Siciliani** and then select **Check now**. Since Diego is an owner of this site, this confirms that he was automatically assigned **Full Control** permissions.
+9. In the **IT Services: Check Permissions** window that appears, in the **User/Group** field, type **Diego**. As you type Diego, a window appears listing users whose first name starts with Diego. Select **Diego Siciliani** and then select **Check now**. Since Diego is an owner of this site, this confirms that he was automatically assigned **Full Control** permissions.
 
 10. In the **User/Group** field, select the **X** next to Diego’s name to remove it from the field. In the **User/Group** field, type **Nestor**. As you type Nestor, a window appears listing users whose first name starts with Nestor. Select **Nestor Wilke** and then select **Check now.** Since Nestor is member of this site, this confirms that he was automatically assigned **Edit** permissions.
 
@@ -99,9 +99,9 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 11. Repeat the prior step and check the permission for **Alex Wilber**. You will see that Alex does not have permission to access or update the site since he has not been assigned as a site member.
 
-12. In the **Human Resources: Check Permissions** window, select **Close.**
+12. In the **IT Services: Check Permissions** window, select **Close.**
 
-13. You are now back in the **Permissions: Human Resources** tab in your browser. You have been asked to create a new group of users and assign them permission to access the Human Resources site. In the ribbon that appears at the top of the page, select **Create Group.**  
+13. You are now back in the **Permissions: IT Services** tab in your browser. You have been asked to create a new group of users and assign them permission to access the IT Services site. In the ribbon that appears at the top of the page, select **Create Group.**  
 
 	‎**Best Practice:** It’s a best practice that you should use Groups to assign access permissions rather than assigning access to individual user accounts for two important reasons: Assigning individual users access to a site makes it difficult to track user access when the user leaves your organization, and direct permissions can override security groups permissions.
 
@@ -139,7 +139,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 17. In the menu bar that appears above the user list, select **New**, and then in the drop-down menu, select **Add users to this group.**
 
-18. In the **Share ‘Human Resources’** window, the **Invite people** tab is selected in the left-hand pane by default. In the **Enter names or email addresses** field, enter **Isaiah**. As you type Isaiah, a window appears listing users whose first name starts with Isaiah. Select **Isaiah Langer**. 
+18. In the **Share ‘IT Services’** window, the **Invite people** tab is selected in the left-hand pane by default. In the **Enter names or email addresses** field, enter **Isaiah**. As you type Isaiah, a window appears listing users whose first name starts with Isaiah. Select **Isaiah Langer**. 
 
 	Repeat this step for **Joni Sherman** (type **Joni** next to Isaiah Langer's name in the **Enter names or email addresses** field).
 
@@ -147,19 +147,19 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 20. Uncheck the **Send an email invitation** option.
 
-21. Select **Share** to share the Human Resouces site with the members of this Information Technology group.
+21. Select **Share** to share the IT Services site with the members of this Information Technology group.
 
 22. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The members of the group (Holly, Isaiah, and Joni) should be displayed.
 
-23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **Human Resources** team site.
+23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **IT Services** team site.
 
-24. In the upper right-hand corner of the **Human Resources** site, select the **gear (Settings)** icon.
+24. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
 
 25. In the **Settings** pane that appears, select **Site permissions.**
 
-26. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: Human Resources** tab for the Human Resources site.
+26. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: IT Services** tab for the IT Services site.
 
-27. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: Human Resources** window,, select **Check Permissions.**  
+27. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: IT Services** window,, select **Check Permissions.**  
 
 28. On the ribbon that appears at the top of the page, select **Permission Levels**.  
 

@@ -14,9 +14,7 @@ A team site includes a group of related web pages, a default document library fo
 
 4. In the **Active sites** window, select the **+Create** option on the menu bar.   
 
-	‎**Note:** Depending on the team or company need, there are several templates that can be used.
-
-5. In the **Create a site** window, select **Team site.**
+5.  Depending on the team or company need, there are several templates that can be used. For the purposes of this lab, in the **Create a site** window, select **Team site.**
 
 6. In the **Get a team site connected to Office 365 Groups** window, enter the following information.
 

@@ -423,7 +423,7 @@ In this task, you will use the Exchange Admin Center to view your accepted domai
 
 	- In the window for this domain, you would select the **Authoritative** option and then select **Save**. However, since you did not make any changes, select **Cancel** to close this window.
 
-5. This concludes the exercise on reviewing Exchange Online features. You can close the **Exchange admin center** tab in Internet Explorer. This will return you to the Microsoft 365 admin center tab.
+5. This concludes the exercise on reviewing Exchange Online features. You can close the **Exchange admin center** tab in Internet Explorer. This will return you to the Microsoft 365 admin center tab, which you will access in the next exercise.
 
 
 # Proceed to Lab 3 - Exercise 2

@@ -297,7 +297,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again.  
 
-10. In the **Groups** list, verify that the **Manufacturing** group appear. However, you should also verify that the **Print Operators** group does not appear. As mentioned previously, built-in groups such as the Print Operators security group are not synced, even when you add memmbers to the group as you did in Task 3. <br/>
+10. In the **Groups** list, verify that the **Manufacturing** group appears, and that the **Print Operators** group does not appear. As mentioned previously, built-in groups such as the Print Operators security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in Task 3. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the Manufacturing group appears. Continue to refresh the list until you see the group.  
 

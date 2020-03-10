@@ -160,9 +160,9 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 ### Task 3: Create Group Accounts to Test Synchronization  
 
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create two groups in Adatum’s on-premises environment – a security group and a distribution group (also known as a distribution list). 
+To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a security group and you will update the group members in a built-in security group, all within Adatum’s on-premises environment. 
 
-Each group will be assigned several members. After the forced synchronization, you will validate that you can see the members for the security group but not the members of the distribution group. On-premises distribution groups are synced to Microsoft 365, but their members are not assigned as members in the group. Their individual user accounts are migrated, but not as members of distribution groups to which they are assigned.
+Each group will be assigned several members. After the forced synchronization, you will validate that you can see the security group in Microsoft 365 and that its members were synced up to the group. You will also validate that you cannot see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the Builtin container in Active Directory Users and Computers. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. However, they are not synchronized to Microsoft 365, even after adding members to them. 
 
 1. Switch to the Domain Controller VM (LON-DC1). If necessary, log in as **adatum\administrator** and **Pa55w.rd**. 
 
@@ -170,25 +170,13 @@ Each group will be assigned several members. After the forced synchronization, y
 
 3. In **Server Manager**, select **Tools** at the top of the screen, and then in the drop-down menu select **Active Directory Users and Computers.**
 
-4. You need to create a new group, which in this case will be a **Distribution group** (also known as a distribution list). In the console tree under **Adatum.com**, right-click **Research,** select **New,** and then select **Group**.  
+4. You will begin by adding members to one of the built-in security groups. In the **Active Directory Users and Computers** console tree, under **Adatum.com**, select the **Builtin** folder. This will display all the security group folders that were automatically created at the time the **Adatum.com** domain was created.
 
-5. In the **New Object - Group** window, enter the following information:
+5. In the detail pane on the right, double-click the **Print Operators** security group.
 
-	- Group name: **Purchasing**
+6. In the **Print Operators Properties** window, select the **Members** tab and then select the **Add** button.
 
-	- Group scope: **Universal**
-
-	- Group type: **Distribution**
-
-6. Select **OK**.  
-
-7. In the detail pane on the right for the **Research** organizational unit, double-click the **Purchasing** group.  
-
-8. In the **Purchasing Properties** window, in the **E-mail** box, type **Purchasing@adatum.com**.  
-
-9. Select the **Members** tab, and then select the **Add** button.
-
-10. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select**, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
+7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select** box, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
 
 	- **Ashlee Pickett** 
 
@@ -196,11 +184,13 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- **Morgan Brooks**  
 
-11. Select **OK** to return to the **Purchasing Properties window.**
+8. Select **OK** to return to the **Print Operators Properties** window.
 
-12. In the **Purchasing Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
+9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
 
-13. Now create a second group, although this one will be a **Security group**. Repeat steps 4-12 to create a group with the following properties:
+10. You will now create a new group, which will be a **Security group**. In the console tree under **Adatum.com**, right-click **Research,** select **New,** and then select **Group**.  
+
+11. In the **New Object - Group** window, enter the following information:
 
 	- Group name: **Manufacturing**
 
@@ -208,17 +198,27 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- Group type: **Security**
 
-	- Email: **Manufacturing@adatum.com**
+12. Select **OK**.  
 
-	- Group members:
+13. In the detail pane on the right for the **Research** organizational unit, double-click the **Manufacturing** group.  
 
-		- **Bernardo Rutter**
+14. In the **Manufacturing Properties** window, in the **E-mail** box, type **Manufacturing@adatum.com**.  
 
-		- **Charlie Miller**
+15. Select the **Members** tab, and then select the **Add** button.
 
-		- **Dawn Williamson**  
+16. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select** box, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
 
-‎14. Leave the **Active Directory Users and Computers** window open for the next task.  
+	- **Bernardo Rutter**
+
+	- **Charlie Miller**
+
+	- **Dawn Williamson**  
+
+17. Select **OK** to return to the **Manufacturing Properties window.**
+
+18. In the **Manufacturing Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
+
+19. Leave the **Active Directory Users and Computers** window open for the next task.  
 
  
 ### Task 4: Change Group Membership to Test Synchronization  
@@ -297,47 +297,39 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	‎In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again.  
 
-10. In the **Groups** list, verify that the **Manufacturing** and **Purchasing** groups appear. <br/>
+10. In the **Groups** list, verify that the **Manufacturing** group appear. However, you should also verify that the **Print Operators** group does not appear. As mentioned previously, built-in groups such as the Print Operators security group are not synced, even when you add memmbers to the group as you did in Task 3. <br/>
 
-	**Note:** You may need to wait up to 10 minutes before the two new groups appear. Continue to refresh the list until you see the groups.  
+	**Note:** You may need to wait up to 10 minutes before the Manufacturing group appears. Continue to refresh the list until you see the group.  
 
-11. In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** column (this column appears by default for Groups, and it appears to the right of the group Type column). For this security group, hovering your mouse over the **Sync status** icon indicates that it was **Synced from on-premises**.
+11. In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** column (this column appears by default for Groups, and it appears to the right of the **group Type** column). For this security group, hovering your mouse over the **Sync status** icon indicates that it was **Synced from on-premises**.
 
 12. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
 13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. 
 
-14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner); this will be different from the Purchasing distribution group that you’ll validate next. Also note the three members that you assigned to it. <br/>
+14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner). Close the **Manufacturing** group window.
 
-	Close the **Manufacturing** group window.
+15. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
-15. In the **Groups** list, select the **Purchasing** group. 
-
-16. In the **Purchasing** group window, select the **Members** tab. Recall that for the Manufacturing group, no owner was automatically assigned during the sync process because the group was a Security group. However, since the Purchasing group is a distribution group, note that Holly Spencer was automatically assigned as the group owner, as well as being assigned as a group member. Also note that the three members that you had assigned to the on-premises group do not appear as group members in Microsoft 365. The reason for this is that while distribution groups are synchronized to Microsoft 365, their members are not. Therefore, the synchronization process automatically assigns the group owner as the only member of the distribution group that appears in the cloud. <br/>
-
-	Close the **Purchasing** group window.
-
-17. Now let’s examine these groups using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
-
-18. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
+16. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 
 	‎**Connect-MsolService**
 
-19. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
+17. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
 
-20. Run the following command that retrieves all the Office 365 groups:   <br/>
+18. Run the following command that retrieves all the Office 365 groups:   <br/>
 
 	‎**Get-MsolGroup** 
 
-21. In the list of groups that’s displayed, you should verify that you can see the **Research, Manufacturing,** and **Purchasing** groups. 
+19. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the **Print Operators** group.
 
-22. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, select the **ObjectID** for the **Research** group in the prior list, right-click on it and select **Copy**.   <br/>
+20. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, select the **ObjectID** for the **Research** group in the prior list, right-click on it and select **Copy**.   <br/>
 
 	‎Then run the following command to retrieve this group (where **{ObjectID}** is the ObjectID of the Research group; when you get to this point when entering the command, right-click and select **Paste** to paste in the ObjectID that you previously copied): <br/>
 	
 	‎**Get-MsolGroupMember -GroupObjectId {ObjectID}**
 
-23. Verify the membership of the Research group does NOT contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
+21. Verify the membership of the Research group does NOT contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
 
 	- Cai Chu 
 
@@ -345,13 +337,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-24. Run the following command to display the number of license units that have been consumed:  <br/>
+22. Run the following command to display the number of license units that have been consumed:  <br/>
 
 	‎**Get-MsolAccountSku**  
 
-25. Repeat steps 22-24 for the **Purchasing** distribution group. Note that it only lists Holly Spencer as the lone member of the group. This is because distribution group members are not synchronized in the cloud as part of the group; only the group owner is listed as a member of the group.
-
-26. Repeat steps 22-24 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
+23. Repeat steps 20-22 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
 
 	- Bernardo Rutter
 
@@ -359,7 +349,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-27. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
+24. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
  
 
 ### Task 7: Use Soft Matching to Troubleshoot Identity Mismatch

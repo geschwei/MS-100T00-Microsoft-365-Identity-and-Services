@@ -160,4 +160,4 @@ With Microsoft 365, if you ever run into a situation where you need assistance w
 ‎  
 ‎
 
-# End of Lab 2
+# Proceed to Lab 2 - Exercise 3

@@ -1,4 +1,4 @@
-# Module 6 - Lab 4 - Exercise 1 - Manage an Office 365 ProPlus installation
+# Module 3 - Lab 2 - Exercise 3 - Manage an Office 365 ProPlus installation
 
 You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Office 365 ProPlus installation. Performing a user-driven Office 365 ProPlus installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
@@ -200,4 +200,4 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 17. Leave the Client 1 VM open as you will continue from this point in the next task.
 
 
-# Proceed to Lab 4 - Exercise 2
+# End of Lab 2

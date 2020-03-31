@@ -48,7 +48,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 	Select the **Admin** app. This opens the **Microsoft 365 admin center**.
 
-12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
+12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show all** to display all the navigation menu options.
 
 13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Settings**. 
 
@@ -131,11 +131,11 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 7. Once the installation is complete, on the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
 
-8. Close this Download Center tab in Internet Explorer. 
+8. Close this **Download Center** tab in Internet Explorer. 
 
 9. You must now open **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
-10. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
+10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
 
 	‎**Install-Module MSOnline** 
 	
@@ -159,16 +159,16 @@ Azure Active Directory is needed to perform several configuration steps when ins
 When you get to Module 4, you will perform a lab involving Microsoft Teams. One of the tasks within that lab requires you to collaborate with your fellow students' individual Microsoft 365 tenants through Teams. To enable this communication between your tenant and your fellow students' tenants, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature now so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
 
 
-1. On your domain controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+1. On your domain controller VM (LON-DC1), minimize your Windows PowerShell window and return to Internet Explorer. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
 	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider.
 2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
-4. In the **Teams admin center**, in the left navigation pane, select **Org-wide settings**.
-5. Select External access.
-6. Confirm that both toggle switches are in the ON position.
-7. Select Add a domain.
-8. Begin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
+4. In the **Teams admin center**, in the left-hand navigation pane, scroll down and select **Org-wide settings**.
+5. In the **Org-wide settings** group, select **External access**.
+6. On the **External access** page, confirm that both toggle switches are in the **On** position. If either are not set to **On** then set them to **On** now.
+7. Select **+ Add a domain**.
+8. In the **Add a domain** window, enter **    ** in the **Domain** field. egin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
 9. The Action to take on this domain will be set to Allowed.
 10. Select Done.
 11. Select Save. 

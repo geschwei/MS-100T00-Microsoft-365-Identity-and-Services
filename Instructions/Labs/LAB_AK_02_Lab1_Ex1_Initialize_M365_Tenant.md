@@ -173,7 +173,8 @@ By the time you get to the Mod 4 labs, External Access should be ready so that y
 7. Select **+ Add a domain**.
 8. In the **Add a domain** window, enter **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student's tenant suffix ID that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant suffix ID. 
 9. In the **Action to take on this domain** field, select **Allowed**.
-10. Select **Done** and then select **Save**. 
+10. Select **Done** and then select **Save**.
+11. In your Internet Explorer browser, close the **External access** tab. This should return you to the **Microsoft 365 admin center** tab, which you should leave open as you proceed to the next exercise.
 
 
 # Proceed to Lab 1 - Exercise 2

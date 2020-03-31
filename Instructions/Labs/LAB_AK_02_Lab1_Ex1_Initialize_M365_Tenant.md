@@ -156,8 +156,11 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 ### Task 4 – Prepare for External Access using Microsoft Teams 
 
-When you get to Module 4, you will perform a lab involving Microsoft Teams. One of the tasks within that lab requires you to collaborate with your fellow students' individual Microsoft 365 tenants through Teams. To enable this communication between your tenant and your fellow students' tenants, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature now so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
+When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Teams. To enable this communication between your tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature in this task so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
 
+**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant suffix ID (ZZZZZZ) from each of their domains (this would be each student's M365xZZZZZZ.onmicrosoft.com domain, where ZZZZZZ is each student's unique tenant suffix ID provided by your lab hosting provider). The instructor will then assign to each student the tenant suffix ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant suffix ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant suffix ID from your fellow student (in other words, you will enter the **M365xZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant suffix ID).
+
+By the time you get to the Mod 4 labs, External Access should be ready so that you can collaborate with the student whose domain you set up in this task. Conversely, you should also be able to collaborate with the student who entered your domain in his or her External Access setup.
 
 1. On your domain controller VM (LON-DC1), minimize your Windows PowerShell window and return to Internet Explorer. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
@@ -168,10 +171,9 @@ When you get to Module 4, you will perform a lab involving Microsoft Teams. One 
 5. In the **Org-wide settings** group, select **External access**.
 6. On the **External access** page, confirm that both toggle switches are in the **On** position. If either are not set to **On** then set them to **On** now.
 7. Select **+ Add a domain**.
-8. In the **Add a domain** window, enter **    ** in the **Domain** field. egin typing out the Domains that are being provided by the Trainer.(exclude your own domain)
-9. The Action to take on this domain will be set to Allowed.
-10. Select Done.
-11. Select Save. 
+8. In the **Add a domain** window, enter **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student's tenant suffix ID that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant suffix ID. 
+9. In the **Action to take on this domain** field, select **Allowed**.
+10. Select **Done** and then select **Save**. 
 
 
 # Proceed to Lab 1 - Exercise 2

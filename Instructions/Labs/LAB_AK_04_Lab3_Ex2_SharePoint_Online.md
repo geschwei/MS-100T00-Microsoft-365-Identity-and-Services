@@ -1,10 +1,10 @@
 # Module 4 - Lab 3 - Exercise 2 - Review Key Features of SharePoint Online
 
-In this exercise you will review some of the basic administrator functions in SharePoint Online.
+In this exercise you will review some of the basic administrative functions in SharePoint Online.
 
 ### Task 1 – Site Management
 
-A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been tasked with creating a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
+A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been asked to create a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
 
 1. You should already be in the **Microsoft 365 admin center** after having finished the prior exercise. 
 
@@ -24,11 +24,11 @@ A team site includes a group of related web pages, a default document library fo
 
 	- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
 
-	- Select a language: Select your appropriate language
+	- Select a language: Leave this as Englis
 
 	- Select **Advanced settings** to expand this section and then enter the following information:
 
-		- Privacy settings: Given the confidential nature of HR information, select **Private – only members can access this site**
+		- Privacy settings: Given the confidential nature of much of the IT department's information, select **Private – only members can access this site**
 
 		- Time zone: since this group is located in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
 
@@ -44,17 +44,17 @@ A team site includes a group of related web pages, a default document library fo
 
 10. Repeat the previous step for **Nestor Wilke**.
 
-11. Select **Finish**.
+11. Select **Finish**. The **IT Services** site should now appear in the list of **Active sites**.
 
-12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle and checkmark to the left of the **IT Services** site name (do not select the IT Services site name, as this will open a properties window for the site).
+12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle to the left of the **IT Services** site name (do not select the IT Services site name, as this will open a properties window for the site).
 
-13. In the menu bar at the top of the page, select the **ellipsis (…)** icon, and in the drop-down menu that appears, select **Delete**. 
+13. In the menu bar at the top of the page, select **Delete**. 
 
 14. In the **Delete Office 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
 
 15. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the IT Services site that you just deleted appears in the list of deleted sites. 
 
-16. In the **Deleted sites** window, select the circle and checkmark to the left of the **IT Services** site name (do not select the IT Services site name).
+16. In the **Deleted sites** window, select the circle to the left of the **IT Services** site name (do not select the IT Services site name).
 
 17. In the menu bar at the top of the page, select **Restore**.
 
@@ -62,7 +62,7 @@ A team site includes a group of related web pages, a default document library fo
 
 19. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The IT Services site should once again appear in the **Active sites** list. 
 
-20. In the **Active sites** list, select the checkmark to the left of the **IT Services** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
+20. In the **Active sites** list, select the circle to the left of the **IT Services** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
 
 21. Remain in the SharePoint admin center for the next task.
 
@@ -73,9 +73,9 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 1. In the **SharePoint admin center**, you should still be displaying **Active sites**.
 
-2. Select the **IT Services** site that you created in the prior task.
+2. Select the **IT Services** site that you created in the prior task (do not select the circle to the left of it as you did in the prior task; instead, select the site name like you normally would).
 
-3. In the **IT Services** window that appears, select the URL that is displayed under **URL.** 
+3. In the **IT Services** window that appears, select the URL (**.../sites/ITServices**) that is displayed under **URL.** 
 
 4. A new tab will open in Internet Explorer that displays the **IT Services** site.
 
@@ -83,11 +83,11 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 6. In the **Settings** pane that appears, select **Site permissions.**
 
-7. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: IT Services** tab for the IT Services site.
+7. At the bottom of the **Permissions** pane, select **Advanced permissions settings**, which opens a **Permissions: IT Services** tab for the IT Services site.
 
-8. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: IT Services** window,, select **Check Permissions.**  
+8. In the ribbon that appears in the **Permissions** tab, select **Check Permissions.**  
 
-	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the HR site, and Nestor and Patti as site members. The following steps will enable you to check what permissions they were assigned in these roles. 
+	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the IT Services site, and Nestor and Patti as site members. The following steps will enable you to check what permissions they were assigned in these roles. 
 
 9. In the **IT Services: Check Permissions** window that appears, in the **User/Group** field, type **Diego**. As you type Diego, a window appears listing users whose first name starts with Diego. Select **Diego Siciliani** and then select **Check now**. Since Diego is an owner of this site, this confirms that he was automatically assigned **Full Control** permissions.
 
@@ -95,7 +95,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 	If you repeat this step for **Patti Fernandez**, you will confirm that as a site member, she also has **Edit** permissions.
 
-11. Repeat the prior step and check the permission for **Alex Wilber**. You will see that Alex does not have permission to access or update the site since he has not been assigned as a site member.
+11. Repeat the prior step and check the permission for **Alex Wilber**. You will see that Alex's permission level is set to **None**, which means he does not have permission to access or update the site since he has not been assigned as a site member.
 
 12. In the **IT Services: Check Permissions** window, select **Close.**
 
@@ -119,21 +119,17 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- Who can edit the membership of the Group: **Group Owner**
 
-	- Membership Requests:
-
 		- Allow requests to join/leave this Group: **Yes**
 
 		- Auto-accept requests: **No**
 
 		- Send membership requests to the following e-mail address: If Holly Spencer’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
-	- Give group permission to this site:
-
 		- Choose the permission level group members get on this site: **Full Control – Has full control**
 
 15. Select **Create**. 
 
-16. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The users displayed in the list are the members of this group. Since Holly Spencer created the group, she is listed as the sole member.
+16. This displays the **Information Technology** group information. The users displayed in the list are the members of this group. Since Holly Spencer created the group, she is listed as the sole member.
 
 17. In the menu bar that appears above the user list, select **New**, and then in the drop-down menu, select **Add users to this group.**
 
@@ -149,23 +145,25 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 22. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The members of the group (Holly, Isaiah, and Joni) should be displayed.
 
-23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **IT Services** team site.
+23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **SharePoint admin center** and the **Active sites** list, with the **IT Services** pane open on the right-hand side. 
 
-24. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
+24. In the **IT Services** window that appears, select the URL (**.../sites/ITServices**) that is displayed under **URL.** 
 
-25. In the **Settings** pane that appears, select **Site permissions.**
+25. A new tab will open in Internet Explorer that displays the **IT Services** site.
 
-26. At the bottom of the **Site permissions** pane, select **Advanced permissions settings**, which opens a new **Permissions: IT Services** tab for the IT Services site.
+26. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
 
-27. In the ribbon that appears in the **Permissions** tab at the top of the **Permissions: IT Services** window,, select **Check Permissions.**  
+27. In the **Settings** pane that appears, select **Site permissions.**
 
-28. On the ribbon that appears at the top of the page, select **Permission Levels**.  
+28. At the bottom of the **Permissions** pane, select **Advanced permissions settings**, which opens the **Permissions: IT Services** tab for the IT Services site.
+
+29. On the ribbon that appears at the top of the page, select **Permission Levels**.  
 
 	‎**Note:** This option enables you to customize permission levels to better fit your organization.
 
-26. In the **Permission Levels** window, in the menu bar at the top of the page, select **Add a Permission Level.**
+30. In the **Permission Levels** window, in the menu bar at the top of the page, select **Add a Permission Level.**
 
-27. You want to create a permission level for your team’s web specialists who will be designing SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. In the window that appears, enter the following information:
+31. You want to create a permission level for your team’s web specialists who will be designing SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. In the window that appears, enter the following information:
 
 	- Name: **Designer**
 
@@ -207,11 +205,11 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 		- **Open**
 
-28. Scroll to the bottom of the page and select **Create** to apply the changes that you just made.
+32. Scroll to the bottom of the page and select **Create** to apply the changes that you just made.
 
-29. The **Permission Levels** window now displays the permissions that you just added.
+33. The **Permission Levels** window now displays the permissions that you just added.
 
-30. In Internet Explorer, close the **Permission Levels** tab and the **SharePoint admin center** tab.
+34. In Internet Explorer, close the **Permission Levels** tab and the **SharePoint admin center** tab.
 
 
 # Proceed to Lab 3 - Exercise 3

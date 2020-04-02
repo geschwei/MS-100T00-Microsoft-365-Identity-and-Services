@@ -2,11 +2,11 @@
 
 Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up and has been assigned to the Global Administrator role, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
 
-With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Online Administrator role, Holly can perform all the tasks in Exchange.
+With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Administrator role, Holly can perform all Exchange-related tasks.
 
 ### Task 1 – Manage Recipients
 
-As you continue in your role as Holly Spencer, you are ready to review how to create and manage mail flow recipients.
+As you continue in your role as Holly Spencer, you are ready to review the steps involved in creating and managing mail flow recipients.
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
@@ -16,7 +16,9 @@ As you continue in your role as Holly Spencer, you are ready to review how to cr
 
 4. In the **Exchange admin center,** select **recipients** in the left-hand navigation pane.
 
-5. In the **recipients** view, the **mailboxes** tab appears by default. You should see all the user accounts that were pre-created in your tenant by your lab hosting provider, along with Holly's mailbox that was added when you created her account in Lab 2. Select the mailbox for **Joni Sherman** by double-clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
+5. In the **recipients** view, the **mailboxes** tab appears by default (see the tabs at the top of the page). The mailboxes that appear in this view include all the user accounts that were pre-created in your tenant by the lab hosting provider, along with Holly's mailbox that was added when you created her account in Lab 2. <br/>
+
+	Select the mailbox for **Joni Sherman** by double-clicking on her **DISPLAY NAME.** This will open the **Edit Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
 
 6.  At the bottom of the **general** tab, select **More options**.
 
@@ -26,7 +28,7 @@ As you continue in your role as Holly Spencer, you are ready to review how to cr
 
 	‎**Note:** Custom attributes are properties your company can use for specific mailbox identification, such as a cost center number for the mailbox or other information such as an HR personnel number.
 
-9. In addition to the **general** tab, the left-hand pane of the **Edit User Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, you should still select the following tabs to see what information can be captured: 
+9. In addition to the **general** tab, the left-hand pane of the **Edit Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, take a few minutes now and select the following tabs to see what information can be captured: 
 
 	- **contact information.** This tab enables you to add personal information such as Street, City or Mobile number for the user.
 
@@ -40,18 +42,20 @@ As you continue in your role as Holly Spencer, you are ready to review how to cr
 
 11. Scroll down on this **mailbox delegation** window and select the plus (+) sign under the **Full Access** section. 
 
-12. In the **Select Full Access** window select **Holly Spencer**, select **add-&gt;**, and then select **OK.**  <br/>
+12. In the **Select Full Access** window select **Holly Spencer**, select the **add-&gt;** button, and then select **OK.**  <br/>
 
 	‎**Note:** After about an hour Holly Spencer will be able to access Joni’s mailbox without needing a password.
 
-13. On the **Edit User Mailbox** window select **Save** to authorize the changes and close the window.
+13. On Joni Sherman's **Edit Mailbox** window, select **Save**, and then select **OK** once the changes are saved.
+
+14. Leave your browser and all the tabs open for the next task.
 
  
 ### Task 2 – Manage Groups 
 
 In this task you will create two types of groups within Exchange Online. The first is a distribution list of email recipients, which is used to create a one-stop email list for contacting users simultaneously rather than having to email each recipient individually. The second type of group is an Office 365 group.
 
-1. In the **Exchange admin center (EAC)**, you should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
+1. Your browswer should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
 
 	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Office 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
 
@@ -65,13 +69,13 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
 
-	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, hold down the **Ctrl** key and select **Allan Deyoung**, **Diego Siciliani**, and **Lynne Robbins**. This will select all three users at once, at which point you should select the **add-&gt;** button and then select **OK**. 
+	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, select **Allan Deyoung**. Then hold down the **Ctrl** key and select **Diego Siciliani** and **Lynne Robbins**. This will select all three users at once, at which point you should select the **add-&gt;** button and then select **OK**. 
 
-4. Select **Save.**
-
-5. Select the **New Office 365 group** button. 
+4. Select **Save** and then select **OK** once the changes are saved successfully.
+*.
+5. Select the **+New Office 365 group** button (not the drop-down arrow to the right of it, but the button itself). 
 
 6. In the **Create a group** window that appears, enter the following information:
 
@@ -83,23 +87,23 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Privacy: **Public – Anyone can see content**
 
-	- Owners: Leave this as is
+	- Owners: Leave as **Holly**
 
-	- Language: select the language for the group
+	- Language: Leave as **English**
 
 	- Description: **Group of all company employees working on the Microsoft Dynamics CRM project.**
 
-	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their inbox
+	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their Inboxes
 
-7. Select **Save**. This will save the information that you entered and open the Dynamics CRM Project Team window.
+7. Select **Save** and then select **OK** once the changes are saved successfully.
 
 8. In the **Dynamics CRM Project Team** window, the **ownership** tab in the left-hand pane is displayed by default. Under **Owners**, select the **plus (+)** sign, and in the **Select Members** window, select **Nestor Wilke**, select the **add-&gt;** button, and then select **OK**.
 
 9. In the left-hand pane, select **membership**.
 
-10. Under **Members**, select the **plus (+)** sign, and in the **Select Members** window, hold down the **Ctrl** key and select **Isaiah Langer**, **Joni Sherman**, and **Patti Fernandez**. Since this process will select all three users, select the **add-&gt;** button and then select **OK.** 
+10. Under **Members**, select the **plus (+)** sign, and in the **Select Members** window, select **Isaiah Langer**. Then hold down the **Ctrl** key and select **Joni Sherman**, and **Patti Fernandez**. This process will select all three users. Select the **add-&gt;** button and then select **OK.** 
 
-11. Select **Save**.
+11. Select **Save**and then select **OK** once the changes are saved successfully.
 
 
 ### Task 3 - Upgrade Distribution Lists
@@ -108,17 +112,25 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane, and you should still be displaying the **groups** tab. If not, then navigate to **recipients &gt; groups**. 
 
-2. Below the tabs at the top of the screen is a row that enables you to perform either of two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** area, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
+2. Below the tabs at the top of the screen are two large boxes that enable you to perform two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** box, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
 
-3. By default, the **Bulk upgrade DLs to groups in Outlook** window displays the distribution lists (DLs) that are available for upgrade to Office 365 groups (the **Showing** field displays **Available for upgrade** by default). Adatum currently has only one distribution list, the Sales Department DL. Select the check box to the left of the **Sales Department** distribution list and at the bottom of the window select the **Start Upgrade** button.<br/>
+3. On the **Bulk upgrade DLs to groups in Outlook** window, the **Showing** field controls what information is being displayed. By default, it displays **Available for upgrade**, which displays any distribution lists that are available to be upgraded to an Office 365 group. Adatum currently has only one distribution list that's available to be upgraded, the Sales Department group. <br/>
+
+	Select the drop-down arrow in the **Showing** field and select the other option, **Upgraded DLs**. This option shows any distribution list groups that have been upgraded to an Office 365 group. As you can see, there are no groups currently in this list. <br/>
+
+	Now that you are familiar with the query options on this window, you want to return back to where you started so that you can upgrade the Sales Department group. Select the drop-down arrow for the **Showing** field and select the **Available for upgrade** option. 
+
+4. Select the check box to the left of the **Sales Department** distribution list and at the bottom of the window select the **Start Upgrade** button.<br/>
 	
-4. In the **Upgrade in progress** window, select **OK**. Note that the upgrade process may take a minute or two to complete.
+5. It may take a minute or so before the **Upgrade in progress** window appears. Select **OK**. 
 
-5. Once the upgrade is complete, the **Showing** field will change to **Upgraded DLs** and the **Sales Department** group will be displayed in the group list. 
+6. Once the upgrade is complete, the value in the **Showing** field will change to **Upgraded DLs** and the **Sales Department** group will be displayed in the group list.<br/>
 
-6. Select the **X** in the upper-right corner of the **Bulk Upgrade** window to close it.
+	Select the drop-down arrow for the **Showing** field and select the **Available for upgrade** option. As you can see, this query is now empty, since the Sales Department has been upgraded. 
 
-7. This returns you to the **groups** tab in the **recipients** view. Note how the **Sales Department** group still displays as a **Distribution list**. In the menu bar above the list, select the **Refresh** icon. The Sales Department group will now display as an **Office 365** group. 
+7. Select the **X** in the upper-right corner of the **Bulk Upgrade** window to close it.
+
+8. This returns you to the **groups** tab in the **recipients** view. If the **Sales Department** group still displays as a **Distribution list**, then select the **Refresh** icon in the menu bar above the list; the Sales Department group will now display as an **Office 365** group. 
  
 
 ### Task 4 - Configure a Group Naming Policy

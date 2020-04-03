@@ -77,7 +77,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 - You want to assign a different set of permissions for a different group of users, so you will follow best practices by creating a group of users and assigning the group a custom permission level (as opposed to assigning custom permissions to each individual user). In this case, you will create a new **Information Technology** group, you will assign Isaiah Langer and Joni Sherman to this group, and will you assign the group Full Control permissions. 
 
-- You will then create a permission level titled **Designer**, which will be used for Adatum’s web specialists who will design SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. 
+- You will then create a permission level titled **Designer**, which will be used for Adatum’s web specialists who will design SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. While you will not do it in this lab, you can later create a group for your web designers and assign that group this Designer permission level.  
 
 
 1. In the **SharePoint admin center**, you should still be displaying **Active sites**.

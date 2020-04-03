@@ -214,7 +214,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 		- **Open**
 
-32. Scroll to the bottom of the page and select **Create** to apply the changes that you just made.
+32. Scroll to the bottom of the page and select the **Create** button to save your changes.
 
 33. The **Permission Levels** window now displays the permissions that you just added.
 

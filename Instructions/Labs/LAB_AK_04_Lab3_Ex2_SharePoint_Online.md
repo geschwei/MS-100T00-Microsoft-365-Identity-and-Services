@@ -94,7 +94,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 7. At the bottom of the **Permissions** pane, select **Advanced permissions settings**, which opens a **Permissions: IT Services** page.
 
-8. In the ribbon that appears at the top of the screen, the **Permissions** tab is displayed be default. Under the **Check** section, select **Check Permissions.**  
+8. In the ribbon that appears at the top of the screen, the **PERMISSIONS** tab is displayed be default. Under the **Check** section, select **Check Permissions.**  
 
 	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the IT Services site, and Nestor and Patti as site members. The following steps will enable you to check what default team site permissions they were assigned in these roles. 
 

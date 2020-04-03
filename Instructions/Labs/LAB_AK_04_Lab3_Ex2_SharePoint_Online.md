@@ -73,7 +73,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 In this task, you will create the following hierarchical permission structure for Adatum:
 
-- When you created the IT Services team site in the prior task, you assigned Diego Siciliani as the group owner of the site, and you assigned Patti Fernandez and Nestor Wilke as group members for the site. In doing so, the default team site permission levels were assigned to Diego, Patti, and Nestro. Diego was assigned Full Control permission (as site owner), and Patti and Nestor were assigned Edit permissions (as site members). In this task, you will verify these default team site permission levels were automatically assigned to Diego, Patti, and Nestor.
+- When you created the IT Services team site in the prior task, you assigned Diego Siciliani as the group owner of the site, and you assigned Patti Fernandez and Nestor Wilke as group members for the site. In doing so, the default team site permission levels were assigned to Diego, Patti, and Nestor. Diego was assigned Full Control permission (as site owner), and Patti and Nestor were assigned Edit permissions (as site members). In this task, you will verify these default team site permission levels were automatically assigned to Diego, Patti, and Nestor.
 
 - You want to assign a different set of permissions for a different group of users, so you will follow best practices by creating a group of users and assigning the group a custom permission level (as opposed to assigning custom permissions to each individual user). In this case, you will create a new **Information Technology** group, you will assign Isaiah Langer and Joni Sherman to this group, and will you assign the group Full Control permissions. 
 

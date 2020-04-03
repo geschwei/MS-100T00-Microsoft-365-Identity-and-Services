@@ -24,7 +24,7 @@ A team site includes a group of related web pages, a default document library fo
 
 	- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
 
-	- Select a language: Leave this as Englis
+	- Select a language: Leave this as English
 
 	- Select **Advanced settings** to expand this section and then enter the following information:
 
@@ -71,6 +71,15 @@ A team site includes a group of related web pages, a default document library fo
 
 SharePoint Online uses hierarchical permissions to set authorization and access of sites. In other words, when a site is created (known as the parent site) any sites that are later created under that site (known as children sites) will, by default, inherit the main site permissions of the parent site. Since you just created a team site for IT Services, you now plan to configure site permissions to meet the IT team's security requirements.
 
+In this task, you will create the following hierarchical permission structure for Adatum:
+
+- In the prior task, you assigned Diego Siciliani as the group owner of the IT Services team site, and Patti Fernandez and Nestor Wilke as group members for this site. In doing so, default team site permission levels were assigned to Diego, Patti, and Nestro. Diego was assigned Full Control permission (as site owner), and Patti and Nestor were assigned Edit permissions (as site members). In this task, you will verify these default team site permission levels were automatically assigned to Diego, Patti, and Nestor.
+
+- You want to assign a different set of permissions for a different group of users, so you will follow best practices by creating a group of users and assigning the group a custom permission level (as opposed to assigning custom permissions to each individual user). In this case, you will create a new **Information Technology** group, you will assign Isaiah Langer and Joni Sherman to this group, and will you assign the group Full Control permissions. 
+
+- You will then create a permission level titled **Designer**, which will be used for Adatum’s web specialists who will design SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. 
+
+
 1. In the **SharePoint admin center**, you should still be displaying **Active sites**.
 
 2. Select the **IT Services** site that you created in the prior task (do not select the circle to the left of it as you did in the prior task; instead, select the site name like you normally would).
@@ -87,7 +96,7 @@ SharePoint Online uses hierarchical permissions to set authorization and access 
 
 8. In the ribbon that appears in the **Permissions** tab, select **Check Permissions.**  
 
-	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the IT Services site, and Nestor and Patti as site members. The following steps will enable you to check what permissions they were assigned in these roles. 
+	**Note:** This option enables you to check access permissions for users and groups. In this case, you will check the permissions that were assigned to Diego Siciliani, Nestor Wilke, and Patti Fernandez. In the prior task, you assigned Diego as an owner of the IT Services site, and Nestor and Patti as site members. The following steps will enable you to check what default team site permissions they were assigned in these roles. 
 
 9. In the **IT Services: Check Permissions** window that appears, in the **User/Group** field, type **Diego**. As you type Diego, a window appears listing users whose first name starts with Diego. Select **Diego Siciliani** and then select **Check now**. Since Diego is an owner of this site, this confirms that he was automatically assigned **Full Control** permissions.
 

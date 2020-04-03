@@ -175,6 +175,8 @@ In this task, you will create the following hierarchical permission structure fo
 31. You want to create a permission level for your team’s web specialists who will be designing SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. In the window that appears, enter the following information:
 
 	- Name: **Designer**
+	
+	- About Me: **This level restricts the level of use for web designers**
 
 	- List Permissions – select the following permission levels:
 

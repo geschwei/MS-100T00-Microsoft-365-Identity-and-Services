@@ -108,7 +108,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 12. In the **IT Services: Check Permissions** window, select **Close.**
 
-13. You are now back in the **Permissions: IT Services** tab in your browser. You have been asked to create a new group of users and assign them permission to access the IT Services site. In the ribbon that appears at the top of the page, select **Create Group.**  
+13. You are now back in the **Permissions: IT Services** tab in your browser. You have been asked to create a new group of users and assign them permission to access the IT Services site. In the ribbon that appears at the top of the page, under the **Grant** section, select **Create Group.**  
 
 	‎**Best Practice:** It’s a best practice that you should use Groups to assign access permissions rather than assigning access to individual user accounts for two important reasons: Assigning individual users access to a site makes it difficult to track user access when the user leaves your organization, and direct permissions can override security groups permissions.
 
@@ -166,7 +166,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 28. At the bottom of the **Permissions** pane, select **Advanced permissions settings**, which opens the **Permissions: IT Services** tab for the IT Services site.
 
-29. On the ribbon that appears at the top of the page, select **Permission Levels**.  
+29. On the ribbon that appears at the top of the page, under the **Manage** section, select **Permission Levels**.  
 
 	‎**Note:** This option enables you to customize permission levels to better fit your organization.
 

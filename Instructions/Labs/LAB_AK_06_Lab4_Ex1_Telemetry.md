@@ -6,7 +6,7 @@ In this exercise, you will configure the Microsoft 365 Telemetry engine on the L
 
 Before you can install the Telemetry Processor in the next task, the Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. The final step in the preparation process is to verify that the SQL Server 2017 services that are installed on LON-CL1 are all running. 
 
-1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **Laura Atkins**. To install the Telemetry processor, you will log out as Laura and log back in as the **adatum\administrator** account. <br/>
+1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **Laura Atkins**. To install the Telemetry processor, you will log out as Laura and log back in as the Administrator (domain admin) account. <br/>
 
 	‎If your LON-CL1 VM is still open to your browser, then in your lab hosting environment, select the **Ctrl+Alt+Delete** option, select **Sign out** in the menu that appears, select the desktop, and then on the log-in screen, select **Other User**. 
 	
@@ -32,8 +32,9 @@ Before you can install the Telemetry Processor in the next task, the Client 1 VM
 
 11. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
 
-	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu. 
-	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual**, right-click on the service, select **Properties**, and in the **Properties** window, select the **Service** tab and change the **Start Mode** to **Automatic**.  
+	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual** or **Other**, right-click on the service, select **Properties**, in the **Properties** window select the **Service** tab, select the value that appears to the right of the **Start Mode**, select **Automatic** in the menu that appears, and then select **OK**. Repeat this process for any other service whose **Start Mode** is not set to **Automatic**.  
+	
+	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu and proceed to the next step. Repeat this process for any other service whose **State** is not set to **Running**.  <br/>
 
 12. Close the Sql Server Configuration Manager window.
 

@@ -6,17 +6,19 @@ In this exercise you will review some of the basic administrative functions in S
 
 A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been asked to create a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
 
-1. You should already be in the **Microsoft 365 admin center** after having finished the prior exercise. 
+1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In the left-hand navigation pane, under **Admin Centers**, select **SharePoint.** This will open the SharePoint admin center.
+2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
-3. In the **SharePoint admin center**, in the left-hand navigation pane, select **Sites**, and then select **Active sites.** 
+3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **SharePoint.** This will open the SharePoint admin center.
 
-4. In the **Active sites** window, select the **+Create** option on the menu bar.   
+4. In the **SharePoint admin center**, in the left-hand navigation pane, select **Sites**, and then select **Active sites.** 
 
-5.  Depending on the team or company need, there are several templates that can be used. For the purposes of this lab, in the **Create a site** window, select **Team site.**
+5. In the **Active sites** window, select the **+Create** option on the menu bar.   
 
-6. In the **Get a team site connected to Office 365 Groups** window, enter the following information.
+6.  Depending on the team or company need, there are several templates that can be used. For the purposes of this lab, in the **Create a site** window, select **Team site.**
+
+7. In the **Get a team site connected to Office 365 Groups** window, enter the following information.
 
 	- Site name: **IT Services**
 
@@ -34,37 +36,37 @@ A team site includes a group of related web pages, a default document library fo
 
 		- Site Description: **This site is used by the IT department** 
 
-7. Select **Next**.
+8. Select **Next**.
 
-8. In the **Add group members** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
+9. In the **Add group members** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
 
-9. You now want to add **Patti Fernandez** and **Nestor Wilke** as members of this group. 
+10. You now want to add **Patti Fernandez** and **Nestor Wilke** as members of this group. 
 
 	In the **Add members** field, enter **Patti**. As you enter Patti, a window appears listing users whose first name starts with Patti. Select **Patti Fernandez**. 
 
-10. Repeat the previous step for **Nestor Wilke**.
+11. Repeat the previous step for **Nestor Wilke**.
 
-11. Select **Finish**. The **IT Services** site should now appear in the list of **Active sites**.
+12. Select **Finish**. The **IT Services** site should now appear in the list of **Active sites**.
 
-12. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle to the left of the **IT Services** site name (do not select the IT Services site name, as this will open a properties window for the site).
+13. You’re now going to test the process of deleting a team site and then restoring it. In the list of **Active sites**, select the circle to the left of the **IT Services** site name (do not select the IT Services site name, as this will open a properties window for the site).
 
-13. In the menu bar at the top of the page, select **Delete**. 
+14. In the menu bar at the top of the page, select **Delete**. 
 
-14. In the **Delete Office 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
+15. In the **Delete Office 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
 
-15. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the IT Services site that you just deleted appears in the list of deleted sites. 
+16. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the IT Services site that you just deleted appears in the list of deleted sites. 
 
-16. In the **Deleted sites** window, select the circle to the left of the **IT Services** site name (do not select the IT Services site name).
+17. In the **Deleted sites** window, select the circle to the left of the **IT Services** site name (do not select the IT Services site name).
 
-17. In the menu bar at the top of the page, select **Restore**.
+18. In the menu bar at the top of the page, select **Restore**.
 
-18. In the **Restore Office 365 group** window, select **Restore**.  Note that the IT Services site disappears from the **Deleted sites** list. 
+19. In the **Restore Office 365 group** window, select **Restore**.  Note that the IT Services site disappears from the **Deleted sites** list. 
 
-19. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The IT Services site should once again appear in the **Active sites** list. 
+20. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The IT Services site should once again appear in the **Active sites** list. 
 
-20. In the **Active sites** list, select the circle to the left of the **IT Services** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
+21. In the **Active sites** list, select the circle to the left of the **IT Services** site name. If you scroll to the right, you will see that the information that you previously entered for this site has been restored.
 
-21. Remain in the SharePoint admin center for the next task.
+22. Remain in the SharePoint admin center for the next task.
 
  
 ### Task 2 – Hierarchical Permissions

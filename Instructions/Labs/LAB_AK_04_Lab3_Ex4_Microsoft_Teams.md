@@ -2,9 +2,9 @@
 
 In this exercise you will learn how to manage and configure teams through the Microsoft Teams admin center.
 
-### Task 1 – Manage Meeting Policies
+### Task 1 – Manage Global Meeting Policy
 
-Meeting policies control the features that are available to meeting participants for meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are assigned this meeting policy by default. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign it to one or more users who will have the settings applied to them. 
+Meeting policies control the features that are available to participants in meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are automatically assigned this meeting policy. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign the policy to one or more users who will have the settings applied to them. 
 
 As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
 

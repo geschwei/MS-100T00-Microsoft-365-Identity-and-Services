@@ -8,30 +8,36 @@ Meeting policies control the features that are available to participants in meet
 
 As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
 
-1. In the **Microsoft 365 admin center**, in the left-hand navigation pane, under **Admin Centers**, select **Teams.** This will open the Microsoft Teams admin center.
+1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In the **Microsoft Teams admin center**, the left-hand navigation pane by default only displays the icons of each feature area. For easier navigation, select the navigation menu option at the top (the 3 lines that appear above the house). This expands the navigation pane. 
+2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
-3. In the left-hand navigation pane, select **Meetings** and then in the drop=down menu, select **Meeting policies**.
+3. To start fresh in this Teams lab exercise, close all SharePoint-related tabs in your Edge browser that were left open from the previous lab. Only leave the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab open. 
 
-4. In the **Meeting policies** window, scroll down to the list of meeting policies and select **Global (Org-wide default)**. 
+4. In the **Microsoft 365 admin center** tab, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Teams.** This will open the Microsoft Teams admin center.
 
-5. In the **Global** window that appears, under the **General** section, review each option. All options should be turned **On**.
+5. In the **Microsoft Teams admin center**, in the left-hand navigation pane, select **Meetings** and then in the drop=down menu, select **Meeting policies**.
 
-6. Under the **Audio &amp; video** section, review each option. Set **Allow transcription** to **On**.
+6. In the **Meeting policies** window, scroll down to the list of meeting policies and select **Global (Org-wide default)**. 
 
-7. Under the **Content Sharing** section, review each option. Set the **Screen sharing mode** to **Single application**.
+7. In the **Global** window that appears, under the **General** section, review each setting. All settings in this section should be turned **On**.
 
-8. Under the **Participants &amp; guests** section, review each option. Set **Allow dial-in users to bypass the lobby** to **On**.
+8. Under the **Audio &amp; video** section, review each setting. Set **Allow transcription** to **On**.
 
-9. Scroll to the bottom of the page and select **Save**.
+9. Under the **Content Sharing** section, review each setting. Set the **Screen sharing mode** to **Single application** and set the **Allow an external participant to give or request control** setting to **On**.
+
+10. Under the **Participants &amp; guests** section, review each setting. Because Adatum has had issues in the past with non-invited external users dialing into meetings, you have been asked to set the **Allow dial-in users to bypass the lobby** option to **Off**. This setting controls whether people who dial in by phone will automatically join the meeting or have to wait in the lobby until they are admitted to the call. Because the **Automatically admit people** setting is set to **Everyone in your organization**, anyone who dials-in will wait in the lobby until admitted; this includes both Adatum and non-Adatum participants. You may decide to turn this setting On if it proves to be problematic in practice, but for now, you want to begin with this level of control. 
+
+11. Scroll to the bottom of the page and select **Save**.
+
+12. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 2 – Manage Meeting Settings
 
 As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
 
-1. On the left-hand navigation pane in the **Teams admin center**, select **Meetings** and then select **Meeting settings.**
+1. On the left-hand navigation pane in the **Teams admin center**, under the **Meetings** group, select **Meeting settings.**
 
 2. On the **Meetings settings** page, under the **Email invitation** section, enter the following information:
 
@@ -41,18 +47,20 @@ As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the
 
 	- Help URL: **https://adatum.com/joiningmeetinghelp.html**
 
-	- Footer: **Please accept at your earliest convenience. Thank you!!!!**
+	- Footer: **Please accept at your earliest convenience. Thank you!**
 
-3. Select **Preview invite**.
+3. Select the **Preview invite** button.
 
-4. Review the preview image of the invitation and then select **Close**.
+4. Review the preview image of the invitation and then scroll down to the bottom of the preview window and select **Close**.
 
 5. On the **Meetings settings** page, under the **Network** section, review the current settings.  
 
 	‎**Note:** If you have specific ports that your company uses for sending and receiving media traffic, this is where you would enter those ports. If you do not have specific media ports prescribed by your network administrator, then you would leave this section alone. For the purposes of this lab, you will not update this section. 
 
 6. Scroll to the bottom of the page and select **Save**.
- 
+
+7. Leave all tabs open in your browser and proceed to the next task. 
+
 
 ### Task 3 – Manage Messaging Policies
 
@@ -101,7 +109,9 @@ As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a
 	- Remove users from a group chat: **Off**
 
 5. Select **Save.** 
- 
+
+6. Leave all tabs open in your browser and proceed to the next task. 
+
 
 ### Task 4 – Create a Resource Account
 
@@ -126,6 +136,8 @@ Creating a calling queue is a two-step process. In this task, you will first cre
 	- Resource account type: **Call queue**
 
 4. Select **Save**.
+
+5. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 5 - Create a Call Queue
@@ -172,6 +184,8 @@ Now that you have created the resource account for your calling queue, you will 
 
 8. Select **Save**.
 
+9. Leave all tabs open in your browser and proceed to the next task. 
+
 
 ### Task 6 - Create a Calling Policy 
 
@@ -204,6 +218,8 @@ As part of her Microsoft Teams pilot project, Holly Spencer has been tasked with
 	- Busy on busy is available when in a call: **On**
 
 5. Select **Save**.
+
+6. Leave all tabs open in your browser and proceed to the next task. 
  
 
 ### Task 7 – Manage External Access
@@ -239,7 +255,9 @@ As part of her Microsoft Teams pilot project, Holly Spencer will enable the user
 8. In the **External access** window, validate that **microsoft.com** and **spam.com** are represented in the list of domains.
 
 9. Select **Save.**
- 
+
+10. Leave all tabs open in your browser and proceed to the next task. 
+
 
 ### Task 8 – Manage Guest Access
 
@@ -285,6 +303,8 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 4. Select **Save.**
 
+5. Leave all tabs open in your browser and proceed to the next task. 
+
 
 ### Task 9 – Manage Teams Settings
 
@@ -328,7 +348,8 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 3. Select **Save.**
 
-4. Leave your LON-DC1 VM open for the next lab.  
+4. Leave all tabs open in your browser and proceed to the next task. 
+  
 
 
 # Proceed to Lab 3 - Exercise 5

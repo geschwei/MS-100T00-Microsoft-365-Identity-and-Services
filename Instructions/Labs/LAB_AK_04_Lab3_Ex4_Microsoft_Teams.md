@@ -359,7 +359,41 @@ Microsoft Teams includes a variety of global settings that control performance w
 3. Select **Save.**
 
 4. Leave all tabs open in your browser and proceed to the next task. 
-  
+
+
+### Task 10 – Configure Chat functionality for the Ticketing System
+
+In this task, you will open the Microsoft Teams desktop application on LON-CL1 and log in as Adatum’s MOD Administrator. You will then conduct a brief chat session with the IT Consultant (your fellow student whose tenant ID was assigned to you by your instructor). This will validate that you can use Teams to chat with the IT Consultant whenever necessary to discuss matters concerning the new Service Request Ticketing system.
+
+**IMPORTANT:** Remember that your instructor assigned your tenant ID to another student who is also building a similar ticketing system in his or her lab environment. When you receive this text, you will take on the role of the IT Consultant. So expect to receive a text message from that student, who will do so to validate that the Chat functionality is also working within his or her Teams’ application. 
+
+1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator (or Domain Admin) with a **Password** of **Pa55w.rd**; if not, then do so now. 
+
+2. In the **Search** field on the taskbar at the bottom of the screen, enter **Teams**. In the list that appears, select **Microsoft Teams** (or you can select the **Microsoft Teams** icon on your desktop).
+
+3. Maximize the Microsoft Teams window.
+
+4. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+
+	However, if the Teams app opens up without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If anything other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+
+5. On the **Use this account everywhere on your device** window, uncheck (clear) the **Allow my organization to manage my device** check box, and then select **Yes.**
+
+6. On the **You’re all set!** window, select **Done.**
+
+7. In the **Enjoy the team and the teamwork!** window, select **Let’s go.**
+
+8. In the **Microsoft Teams**, in the left-hand navigation pane, select **Chat**.
+
+9. On the very top row on the screen, to the left of the **Search or type a command** field is a **New Chat** icon (a pencil inside a square). Select this **New Chat** icon. 
+
+10. This opens a new chat window in the main body of the page. In the **To: Enter name, email, group or tag** field, enter the IT Consultant’s MOD Administrator account of **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student’s tenant suffix ID that was assigned to you by your instructor) and press **Enter**. 
+
+11. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
+
+12. This will open a new chat session with the IT Consultant (your fellow student). Send a message to this person and conduct a brief chat session to verify that you can communicate with him or her using the Chat functionality within Teams.
+
+13. When you have finished chatting, leave Teams open and proceed to the next task. 
 
 
 # Proceed to Lab 3 - Exercise 5

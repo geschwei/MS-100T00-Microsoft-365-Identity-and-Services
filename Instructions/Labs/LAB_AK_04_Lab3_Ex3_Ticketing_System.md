@@ -1,28 +1,18 @@
+<h1>Module 4 - Lab 3 - Exercise 3 - Create a Ticketing System in SharePoint </h1>
 <p>As Adatum begins its transition to Microsoft 365 as their hosted cloud solution, they want to use this opportunity to reduce the amount of third-party software products they currently use. This will help them achieve their goal of reducing their overall IT expenses. The CTO has asked Holly Spencer, Adatum&rsquo;s Enterprise Administrator, to design a solution that uses Microsoft 365 services to replace the third-party IT service request system that Adatum currently uses.</p>
-<p>&nbsp;</p>
 <p>Because Holly is busy with running the Microsoft 365 pilot project along with her other admin responsibilities, the CTO has authorized her to hire an IT consultant to design the new service request ticketing system. However, he doesn&rsquo;t want the consultant to have access to their entire Adatum system, so he wants Holly to implement &ldquo;good security practices&rdquo; by only providing the consultant with access to Adatum&rsquo;s IT pilot project environment.</p>
-<p>&nbsp;</p>
 <p><strong><u>Important: Collaboration with an External User</u></strong></p>
-<p>&nbsp;</p>
 <p>In Lab 1, your instructor assigned you the tenant suffix ID of a fellow student in your class. This student will take on the role of the IT consultant in your lab, and you will continue in your role as Holly Spencer. In a lab 1 exercise, you authorized external access to your tenant from this student&rsquo;s tenant ID. By providing external access to this tenant suffix ID, you and your fellow student will be able to collaborate&nbsp; through Microsoft Teams as you set up this new service request ticketing system.</p>
-<p>&nbsp;</p>
 <p>In the previous lab exercise, you created a SharePoint team site called IT Services. In this lab you will employ &ldquo;good security practices&rdquo; by only giving access to this site to your fellow student who was selected to play the role of the IT consultant. You will also set up the new service request ticketing system. Keep in mind that the student who was assigned as your IT consultant will also be taking on the role of Holly Spencer in his or her own lab, and you will be taking on the IT consultant role with another student. Therefore, each student in the class will take on dual roles &ndash; that of Holly Spencer in the student&rsquo;s own lab, and that of the IT consultant for a fellow student&rsquo;s lab.</p>
-<h1>&nbsp;</h1>
-<h1>&nbsp;</h1>
-<h1>Task 1 &ndash; Assign site permissions to your IT consultant</h1>
+<h3>Task 1 - Assign site permissions to your IT consultant</h3>
 <p>The fellow student assigned to you by your instructor will take on the role of the IT consultant that Adatum is employing to build its new service request ticketing system. As Holly Spencer, your first task (besides providing this student with External Access as you did in Lab 1) is to assign the consultant with permission to access the new IT Services team site that you created in the prior lab.</p>
-<p>&nbsp;</p>
 <p>In the prior lab, you created a new Information Technology group that was assigned to the IT Services site. This group included Isaiah Langer and Joni Sherman, and you assigned the group Full Control permissions. Since you do not want the IT consultant to have Full Control permissions, you do not want to assign him or her to the Information Technology group.</p>
-<p>&nbsp;</p>
 <p>Instead, in your role as Holly Spencer, you will perform the following steps in this task to assign the IT consultant to the IT Services team site with limited permissions:</p>
-<p>&nbsp;</p>
 <ul>
 <li>You will create a new permission level for the IT Services site titled <strong>Restricted Use</strong>. You will then assign to this permission level the limited set of permissions that you want assigned to any external users who will access the site (in this case, the IT Consultant).</li>
 <li>For the IT Services site, you will then create a new group of users titled <strong>Consultants</strong>, and you will assign your fellow student&rsquo;s <strong>MOD Administrator</strong> account (the IT Consultant) to this group.</li>
 <li>You will assign the <strong>Restricted Use </strong>permission level to this <strong>Consultants</strong> This will limit the actions the IT Consultant will be able to perform when accessing the IT Services site.</li>
 </ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <ol>
 <li>You should meet with the student who your instructor assigned to your lab to play the role of the IT consultant. During this meeting you should exchange the <strong>Mod Administrator </strong>accounts from both your tenants; this is the <strong>admin@M365xZZZZZZ.onmicrosoft.com</strong> account for each of your tenants (where ZZZZZZ is your tenant ID provided by your lab hosting provider).</li>
 <li>You should still be logged into your Domain Controller VM (LON-DC1) as <strong>ADATUM\Administrator</strong> and password <strong>rd</strong>; if not, then do so now.</li>
@@ -99,22 +89,15 @@
 <li>Select the X in the upper right corner of the screen to close the InPrivate Browsing session in Internet Explorer.</li>
 <li>This will return you to the <strong>People and Groups &gt; Consultants</strong> site in your normal IE browser session. Leave the browser open as you proceed to the next task.</li>
 </ol>
-<p>&nbsp;</p>
-<p><strong>&nbsp;</strong></p>
-<h1>Task 2 &ndash; Upload existing ticket request data (<strong>IT Consultant steps</strong>)</h1>
-<p>&nbsp;</p>
+<h3>Task 2 - Upload existing ticket request data (<strong>IT Consultant steps</strong>)</h3>
 <p>In this task, <strong><u>you will take on the persona of the IT consultant</u></strong> who is helping Holly Spencer implement a new service request ticketing system. In your role as the IT consultant, you are concerned that during this transition from Adatum&rsquo;s old ticketing system to the new one, Adatum may lose critical historical data, such as ticket volume and monthly activity. Therefore, you have recommended to Holly that you should upload the existing data from Adatum&rsquo;s old service request ticketing system to the new ticketing system.</p>
-<p>&nbsp;</p>
 <p>To facilitate this process, the existing ticketing data has been captured in a spreadsheet and a backup spreadsheet, and your lab service provider has stored these two spreadsheets on LON-CL1. For the purpose of this lab in which you are playing the role of the IT Consultant, LON-CL1 will take on the role of the consultant&rsquo;s PC for this particular task.</p>
-<p>&nbsp;</p>
 <p>As the IT Consultant in this task, you will perform two primary steps:</p>
 <ul>
 <li>You will connect to Adatum&rsquo;s IT Services team site from your PC (LON-CL1) to validate that you can access the site and authenticate your credentials.</li>
 <li>You will export the existing ticket data from the spreadsheet on your PC (LON-CL1) and upload it to a SharePoint list in the IT Services site that Adatum (Holly) created in the prior task. When the data is uploaded to the IT Services site, it will be uploaded as a SharePoint list (titled &ldquo;Service Desk Requests&rdquo;) on the site. <strong>IMPORTANT: </strong>There are two ways in which you can export the data from the spreadsheet and upload it to the SharePoint list on the IT Services site: through an Excel command, or by running a PowerShell script. Both options are presented in this task and you are free to choose whichever method you prefer. The Excel command is probably the more common method, but for those of you who prefer to work in PowerShell, using the PowerShell script provides another experience to add to your personal arsenal of PowerShell tools.</li>
 </ul>
-<p>&nbsp;</p>
 <p><strong>IMPORTANT:</strong> In this task, whenever you access the URL of the IT Services site, you will use <strong><u>your</u></strong> tenant suffix ID (ZZZZZZ) in the URL (<strong>https://M365xZZZZZZ.sharepoint.com/sites/ITServices</strong>), since you created the site in your Adatum tenant in the prior task. When you access this site in your role as the IT Consultant, you will sign in using the MOD Administrator&rsquo;s credentials for the IT Consultant&rsquo;s tenant; this will be <strong>admin@M365xZZZZZZ.onmicrosoft.com</strong>, where the tenant suffix ID (ZZZZZZ) will be <strong><u>your fellow student&rsquo;s</u></strong> tenant suffix ID that was assigned to you by your instructor.</p>
-<p>&nbsp;</p>
 <ol>
 <li>Switch to your Client 1 VM (LON-CL1).</li>
 <li>Log in as the administrator (or Domain Admin, depending on the account name created by your lab hosting provider), with a password of <strong>rd. Important: </strong>Remember, in this task you are acting in the role of the IT Consultant who is using his or her client PC (LON-CL1) to access the IT Services site on Adatum&rsquo;s tenant.</li>
@@ -175,11 +158,8 @@
 <li>Close Windows PowerShell.</li>
 <li>Leave your browser open and proceed to the next task.<br /> </li>
 </ol>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1>Task 3 - Add Additional Columns to the SharePoint list</h1>
+<h3>Task 3 - Add Additional Columns to the SharePoint list</h3>
 <p>In this task you will return to your role as Holly Spencer. You have just been informed by the IT Consultant that he or she finished exporting the existing ticketing system data and uploaded it to the new SharePoint site. However, as you reviewed the list of data on the IT Services site, you noticed that the <strong>Customer</strong> field and the <strong>Assign to</strong> fields were missing. The <strong>Customer</strong> field is the name of the person who entered the ticket, and the <strong>Assign to</strong> field is the name of the support engineer to whom the ticket was assigned. This is critical data for a service request system, so it is imperative that you add this information to the <strong>Service Desk Requests</strong> list.</p>
-<p>&nbsp;</p>
 <ol>
 <li>On LON-CL1, you must log out of Office 365 as the MOD Administrator account for the IT Consultant. Since Holly will be using her PC to perform this task, you will use LON-CL1 in this role-playing exercise as Holly&rsquo;s PC. <strong>Note:</strong> You would normally log out of the LON-CL1 machine and log back in as the new user, but you will skip that step in this role-playing exercise to save time (since you would log out as the Domain admin and log back in as the Domain admin). Since Holly will be using LON-CL1 as her personal PC, you must log out of Office 365 as the IT Consultant&rsquo;s MOD Administrator account and then log back into Office 365 as Holly. Select the <strong>MA </strong>icon in the upper right corner of the <strong>Edge </strong>browser, and in the menu that appears, select <strong>Sign out</strong>. <strong>Best Practice:</strong> When logging out of Office 365 as one user account and logging in as another, you should close all tabs except for the <strong>Sign out</strong> tab to avoid any confusion. Close all tabs in your browser except for the <strong>Sign out</strong> To log back in as Holly Spencer, enter the following URL in the address bar: <strong>https://portal.office.com</strong>. In the <strong>Pick an account</strong> window, select Holly&rsquo;s account if it appears; otherwise, select <strong>Use another account</strong> and then enter <strong>holly@M365xZZZZZZ.onmicrosoft.com</strong> (where ZZZZZZ is your tenant suffix ID). In the <strong>Enter password</strong> window, enter <strong>Pa55w.rd</strong> and select <strong>Sign in</strong>.</li>
 <li>After reviewing the Excel spreadsheet, you realized the missing data wasn&rsquo;t an upload issue because the <strong>Customer</strong> and <strong>Assign To</strong> columns were missing from the spreadsheet. While you cannot explain what caused this, you remember making a backup of the original spreadsheet. If these missing columns are in your backup file, you plan to add the two columns from your backup file to the <strong>Service Desk Requests</strong> list that is displayed in the IT Services site.</li>
@@ -210,9 +190,7 @@
 <li>Select</li>
 <li>Leave the browser and all existing tabs open on LON-CL1 for the next task.</li>
 </ol>
-<p>&nbsp;</p>
-<h1>&nbsp;</h1>
-<h1>Task 4 - Create filtered views for targeted viewing</h1>
+<h3>Task 4 - Create filtered views for targeted viewing</h3>
 <p>In this task, you will continue in your role as Holly Spencer, Adatum&rsquo;s Enterprise Administrator. You were just informed by your IT Consultant that while the default <strong>All items</strong> view in the <strong>Service Desk Requests</strong> list will display all the existing service tickets, this will not help the Customer Support Manager when she wants to focus on specific groups of cases. To address this issue, the IT Consultant has recommended that you create the following new filtered views to provide this visibility:</p>
 <ul>
 <li>Active cases</li>
@@ -220,7 +198,6 @@
 <li>Cases by Support Agent</li>
 <li>Cases by Customer</li>
 </ul>
-<p>&nbsp;</p>
 <ol>
 <li>You should still be signed into LON-CL1 as the Domain Admin, and you should be logged into Office 365 as Holly Spencer. In your browser, you should still have the tab open from the prior task that displays the <strong>Service Desk Requests </strong> If not, then navigate to this list now.</li>
 <li>You will begin by creating a view showing all active cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
@@ -399,4 +376,4 @@
 <p><strong>&nbsp;</strong></p>
 <p><strong>Congratulations! You have completed the building blocks for your new Service Desk Ticketing system. You will be adding functionality to the ticketing system in later labs.</strong></p>
 <p><strong>&nbsp;</strong></p>
-<p>END OF LAB</p>
+<h2>Proceed to Exercise 5</h2>

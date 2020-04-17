@@ -373,7 +373,6 @@
 <li>Leave the browser and all existing tabs open on LON-CL1 for a later exercise in which you will integrate the new Service Desk Ticketing system with Microsoft Teams.</li>
 </ol>
 <p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>Congratulations! You have completed the building blocks for your new Service Desk Ticketing system. You will be adding functionality to the ticketing system in later labs.</strong></p>
+<p><strong>Congratulations! You have completed the building blocks for your new Service Desk Ticketing system. You will add additional  functionality to the ticketing system in later labs.</strong></p>
 <p><strong>&nbsp;</strong></p>
 <h1>Proceed to Lab 3 - Exercise 4</h1>

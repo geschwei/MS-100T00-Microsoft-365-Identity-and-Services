@@ -376,4 +376,4 @@
 <p><strong>&nbsp;</strong></p>
 <p><strong>Congratulations! You have completed the building blocks for your new Service Desk Ticketing system. You will be adding functionality to the ticketing system in later labs.</strong></p>
 <p><strong>&nbsp;</strong></p>
-<h2>Proceed to Exercise 5</h2>
+<h1>Proceed to Lab 3 - Exercise 4</h1>

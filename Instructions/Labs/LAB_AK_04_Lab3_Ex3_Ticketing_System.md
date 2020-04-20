@@ -60,27 +60,23 @@
 <ul>
 <li>Name<strong>: Consultants</strong></li>
 <li>About Me<strong>: This group is used for allowing consultants to modify work products only</strong>.
-<ul>
 <li>Who can view the Membership of the Group<strong>: Everyone</strong></li>
 <li>Who can edit the membership of the Group<strong>: Group Owner</strong></li>
 <li>Allow requests to Join/leave this group<strong>: No</strong></li>
 <li>Auto-accept requests: <strong>No</strong></li>
+<li><p>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site </strong></p>
+<p><strong>Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.</p></li>
 </ul>
 </li>
-<li><p>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site </p>
-<p>Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.<strong> <br /> <br /> </strong></p</li>
-</ul>
-</li>
-<li>Select You will be redirected to the <strong>People and Groups</strong> &gt; <strong>Consultants</strong> page for this <strong>Consultants</strong> group.</li>
+<li>Select <strong>Create</strong>. You will be redirected to the <strong>People and Groups</strong> &gt; <strong>Consultants</strong> page for this <strong>Consultants</strong> group.</li>
 <li>On the menu bar that appears above the list of consultants, select the drop-down arrow next to <strong>New</strong>. In the menu that appears, select <strong>Add Users.</strong></li>
-<li>In the <strong>Share &lsquo;IT Services&rsquo;</strong> window that appears, in the <strong>Enter names or email addresses </strong>field, enter your fellow student&rsquo;s MOD Administrator email address, which will be <strong>admin@M365xZZZZZZ</strong><strong>.onmicrosoft.com</strong> (<strong>IMPORTANT:</strong> replace ZZZZZZ with your fellow student&rsquo;s unique tenant suffix ID that was assigned to you by your instructor; do NOT use your tenant ID). This same address will be displayed below the field in a menu. Select this address.
-<ul>
-<li><strong>Note: </strong>A message should appear below this field that says: <strong>admin@M365xZZZZZZ</strong><strong>.onmicrosoft.com is outside of your organization.</strong></li>
-</ul>
-</li>
+<li><p>In the <strong>Share &lsquo;IT Services&rsquo;</strong> window that appears, in the <strong>Enter names or email addresses </strong>field, enter your fellow student&rsquo;s MOD Administrator email address, which will be <strong>admin@M365xZZZZZZ</strong><strong>.onmicrosoft.com</strong> (<strong>IMPORTANT:</strong> replace ZZZZZZ with your fellow student&rsquo;s unique tenant suffix ID that was assigned to you by your instructor; do NOT use your tenant ID). </p>
+<p>This same address will be displayed below the field in a menu. Select this address.</p>
+<p><strong>Note: </strong>A message should appear below this field that says: <strong>admin@M365xZZZZZZ</strong><strong>.onmicrosoft.com is outside of your organization.</strong></p></li>
 <li>Select <strong>SHOW OPTIONS. </strong>Note that the <strong>Send an email invitation</strong> option is selected by default. Leave this option selected.</li>
-<li>Select</li>
-<li>Because you selected the option to <strong>Send an email invitation</strong>, your fellow student will receive an email invitation in his or her MOD Administrator&rsquo;s Inbox. To verify this email was received, you must open an InPrivate browsing session to impersonate your fellow student&rsquo;s tenant. This enables you to access your fellow student&rsquo;s MOD Administrator account within the student&rsquo;s tenant, and therefore access this MOD Administrator&rsquo;s Outlook Inbox. On your taskbar, right-click on the <strong>Internet Explorer</strong> icon and select <strong>Start InPrivate Browsing</strong> in the menu that appears.</li>
+<li>Select <strong>Share</strong>.</li>
+<li><p>Because you selected the option to <strong>Send an email invitation</strong>, your fellow student will receive an email invitation in his or her MOD Administrator&rsquo;s Inbox. To verify this email was received, you must open an InPrivate browsing session to impersonate your fellow student&rsquo;s tenant. This enables you to access your fellow student&rsquo;s MOD Administrator account within the student&rsquo;s tenant, and therefore access this MOD Administrator&rsquo;s Outlook Inbox.</p>
+  <p>On your taskbar, right-click on the <strong>Internet Explorer</strong> icon and select <strong>Start InPrivate Browsing</strong> in the menu that appears.</p></li>
 <li>This opens an InPrivate browsing session. Maximize the InPrivate browser window, and then enter the following URL in the address bar: <strong>https://outlook.office365.com/mail/inbox</strong>.</li>
 <li>In the <strong>Sign in</strong> window, enter your fellow student&rsquo;s MOD Administrator email address of <strong>admin@M365xZZZZZZ</strong><strong>.onmicrosoft.com</strong> (where ZZZZZZ is your fellow student&rsquo;s tenant suffix ID that was assigned to you by your instructor). In the <strong>Enter password</strong> window, enter your tenant email password (all students in the class have the same tenant password) and select <strong>Sign in</strong>.</li>
 <li>In the <strong>Stay signed in?</strong> dialog box, select <strong>Yes</strong>.</li>

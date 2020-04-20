@@ -234,7 +234,7 @@ As part of her Microsoft Teams pilot project, Holly Spencer wants to block commu
 
 2. In the **External access** window, leave the two settings involving Skype for Business/Teams and Skype users set to **On**. Also note that in the list of domains, the domain of the IT Consultant who helped formulate the new Service Request Ticketing system (**M365xZZZZZZonmicrosoft.com**) appears in the list, and that communication is Allowed with this domain.  
 
-3. To add the domain in which you want to allow communication, select **+Add a domain** in the menu bar that appears above the list.**  
+3. To add the domain in which you want to allow communication, select **+Add a domain** in the menu bar that appears above the list.  
 
 4. In the **Add a domain** window, enter the following information:
 
@@ -365,7 +365,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 In this task, you will open the Microsoft Teams desktop application on LON-CL1 and log in as Adatum’s MOD Administrator. You will then conduct a brief chat session with the IT Consultant (your fellow student whose tenant ID was assigned to you by your instructor). This will validate that you can use Teams to chat with the IT Consultant whenever necessary to discuss matters concerning the new Service Request Ticketing system.
 
-**IMPORTANT:** Remember that your instructor assigned your tenant ID to another student who is also building a similar ticketing system in his or her lab environment. When you receive this text, you will take on the role of the IT Consultant. So expect to receive a text message from that student, who will do so to validate that the Chat functionality is also working within his or her Teams’ application. 
+**IMPORTANT:** Remember that your instructor assigned your tenant suffix ID to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant. So expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
 
 1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator (or Domain Admin) with a **Password** of **Pa55w.rd**; if not, then do so now. 
 

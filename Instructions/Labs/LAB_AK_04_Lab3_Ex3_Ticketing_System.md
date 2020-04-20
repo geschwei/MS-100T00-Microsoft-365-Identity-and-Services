@@ -17,11 +17,11 @@
 <li>You should still be logged into your Domain Controller VM (LON-DC1) as <strong>ADATUM\Administrator</strong> and password <strong>Pa55w.rd</strong>; if not, then do so now.</li>
 <li>You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab in which you were logged in as Holly Spencer. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to <strong>https://portal.office.com/</strong>, log in as <strong>Holly@M365xZZZZZZ.onmicrosoft.com</strong> (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and <strong>Pa55w.rd</strong>, and then in the <strong>Microsoft Office Home</strong> page, select <strong>Admin</strong> to open the Microsoft 365 admin center.</li>
 <li>In the <strong>Microsoft 365 admin center</strong>, select <strong>Show all</strong> (if necessary), then scroll down to <strong>Admin centers</strong> and select <strong>SharePoint</strong>. This will open the <strong>SharePoint admin center.</strong></li>
-<li>You will begin by creating a new permission level for the IT Services site. In the <strong>SharePoint admin center</strong><strong>, in the left-hand navigation pane, select </strong><strong>Sites</strong><strong>, and then select </strong><strong>Active sites</strong><strong>. </strong></li>
+<li>You will begin by creating a new permission level for the IT Services site. In the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, select <strong>Sites</strong>, and then select <strong>Active sites</strong>.</li>
 <li>In the list of <strong>Active sites</strong>, locate the <strong>IT Services </strong>site and select the<strong> &hellip;/sites/ITServices</strong> value that appears in the URL column<strong>.</strong></li>
 <li>A new tab will open in Internet Explorer that displays the <strong>IT Services</strong> In the upper right-hand corner of the <strong>IT Services</strong> site, select the <strong>gear (Settings)</strong> icon.</li>
 <li>In the <strong>Settings</strong> pane that appears, select <strong>Site permissions.</strong></li>
-<li>At the bottom of the <strong>Site permissions</strong> pane, select <strong>Advanced permissions settings</strong>, which opens a <strong>Permissions: IT Services</strong></li>
+<li>At the bottom of the <strong>Site permissions</strong> pane, select <strong>Advanced permissions settings</strong>, which opens a <strong>Permissions: IT Services</strong> page.</li>
 <li>In the ribbon that appears at the top of the screen, the <strong>PERMISSIONS</strong> tab is displayed by default. Under the <strong>Manage</strong> section, select <strong>Permission Levels.</strong></li>
 <li>In the <strong>Permissions &gt; Permission Levels</strong> page, on the menu bar that appears above the list of permission levels, select <strong>Add a Permission Level</strong>.</li>
 <li>In the <strong>Permission Levels</strong> &gt; <strong>Add a Permission Level</strong> page, enter the following information:
@@ -105,16 +105,16 @@
 <li>Maximize the <strong>File Explorer</strong> window, and then select the <strong>Documents </strong></li>
 <li>If you will recall from the task description, you will be presented with two options for completing this task: through an Excel command, or by running a PowerShell script. 
   <ul>
-    <li>If you prefer to use Excel to accomplish this task, then proceed to step 6. </li>
-    <li>If you prefer to use PowerShell, then proceed to step 29.</li>
+    <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 6</strong>. </li>
+    <li>If you prefer to use PowerShell, then proceed to <strong>step 29</strong>.</li>
   </ul>
   </li>
 <br><br>
 <li><strong>START HERE TO USE EXCEL TO PERFORM THIS TASK.</strong> Since you are at this step, you have chosen to use Excel to export the table data into a SharePoint list in the IT Services site. 
-  <br><br>Confirm that the <strong>Service Request System.xlsx </strong>and <strong>xlsx</strong> files are present in the<strong> Documents</strong> folder. The <strong>Service Request System</strong> spreadsheet contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. The Backup file is simply a copy of the Service Request System file that was created for precautionary purposes. 
+  <br><br>Confirm that the <strong>Service Request System.xlsx </strong>and <strong>BackupFile.xlsx</strong> files are present in the<strong> Documents</strong> folder. The <strong>Service Request System</strong> spreadsheet contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. The Backup file is simply a copy of the Service Request System file that was created for precautionary purposes (it will come into play in the next task). 
   <br><br>Double-click the <strong>Service Request System.xlsx </strong>file to open it.</li>
 <li>If a <strong>Sign in to set up Office</strong> window appears, select the <strong>X</strong> in the upper right corner to close it.</li>
-<li>If an <strong>Accept the license agreement</strong> window appears, select the <strong>Accept</strong></li>
+<li>If an <strong>Accept the license agreement</strong> window appears, select the <strong>Accept</strong> button.</li>
 <li>If a <strong>Your privacy option</strong> window appears, select the <strong>Close</strong> button at the bottom of the window.</li>
 <li>In the next several steps, you will verify that in your role as the IT Consultant, you can connect to the IT Services site and that you can authenticate access to the site using your MOD Administrator&rsquo;s credentials. Even though you will use the Excel command to <strong>Get Data</strong> from another source and import it into your spreadsheet, you will actually NOT being doing that since you already have the data in the spreadsheet. You will simply use this <strong>Get Data </strong>command to verify that you can successfully access the IT Services site from your PC. 
   <br><br>In <strong>Excel,</strong> in the menu bar at the top of the screen, select <strong>Data</strong>.</li>
@@ -122,7 +122,7 @@
 <li>A new <strong>SharePoint lists </strong>window will open. In the <strong>Site URL</strong> field, enter <strong>https://M365xZZZZZZ.sharepoint.com/sites/ITServices</strong> (where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider, since the IT Services site is on your tenant). 
   <br><br><strong>Note: </strong>Before you select <strong>OK</strong>, copy the site URL that you just entered as you will need to enter this in future steps. Copying it now will save you from having to manually enter it later. Select <strong>OK</strong>.</li>
 <li>A dialog box will appear that allows you to select the type of authentication you want to use to access the IT Services site. In the left-hand pane, it lists three options: Anonymous, Windows, and Microsoft account. Anonymous is displayed by default. However, in this case, select M<strong>icrosoft Account</strong>.</li>
-<li>The dialog box displays a message indicating <strong>You aren&rsquo;t signed in</strong>. Select the <strong>Sign in </strong></li>
+<li>The dialog box displays a message indicating <strong>You aren&rsquo;t signed in</strong>. Select the <strong>Sign in</strong> button.</li>
 <li>A <strong>Sign In</strong> window will appear. Remember, in this task you are in the role of the IT Consultant, so you must enter the credentials of the IT Consultant&rsquo;s <strong>MOD Administrator </strong>account; therefore, enter<strong> admin@M365xZZZZZZ.onmicrosoft.com </strong>where ZZZZZZ is <strong>your fellow student&rsquo;s tenant suffix ID that was assigned to you by your instructor</strong>). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your tenant password (this will be the same for your tenant and that of all the other students&rsquo; tenants) and then select <strong>Sign in</strong>.</li>
 <li>On the <strong>Microsoft account</strong> window, it should now indicate that you (the IT Consultant) are signed in. Select <strong>Connect</strong>.</li>
 <li>On the <strong>Navigator</strong> window that appears, select <strong>Cancel</strong>. 
@@ -150,10 +150,10 @@
 <li>This will take you to the IT Services site where it will display a list showing the data that was exported from the spreadsheet and uploaded into the site. If you receive a <strong>We&rsquo;ve got a new look</strong> window, then close it.</li>
 <li>In the <strong>Microsoft SharePoint Foundation</strong> dialog box that displayed the link to the published list in the IT Services site, select <strong>OK</strong> to close the window.</li>
 <li>Close the Service Request System spreadsheet. Leave your Edge browser open. 
-  <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and process to the next task.</strong></li>
+  <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong></li>
   <br><br>
 <li><strong>START HERE TO USE POWERSHELL TO PERFORM THIS TASK. </strong>Since you are at this step, you have chosen to use Windows PowerShell to export the table data into a SharePoint list in the IT Services site rather than using Excel to accomplish this task. 
-  <br><br>Confirm that the <strong>Service Request System.csv </strong>file is present in the<strong> Documents</strong> This file contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. 
+  <br><br>Confirm that the <strong>Service Request System.csv </strong>file is present in the<strong> Documents</strong> folder. This file contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. 
   <br><br>Confirm that the <strong>ImportCsvToSharepointList.ps1</strong> script is present in the <strong>Documents</strong> folder. This script contains the PowerShell commands you will run to export the table data from the <strong>Service Request System.csv </strong>file and import it into a SharePoint list in the IT Services site.</li>
 <li>In the <strong>Search</strong> field on the taskbar at the bottom of the desktop, enter <strong>PowerShell</strong>. 
   <br><br><strong>Important: </strong>Because you MUST run several of the commands within this script individually rather than running the entire script at once, you should select <strong>Windows PowerShell ISE </strong>(not Windows PowerShell); therefore, right-click on <strong>Windows PowerShell ISE</strong> and select <strong>Run as administrator</strong>.</li>
@@ -195,34 +195,34 @@
   <br><br><strong>Best Practice:</strong> When logging out of Office 365 as one user account and logging in as another, you should close all tabs except for the <strong>Sign out</strong> tab to avoid any confusion. Close all tabs in your browser except for the <strong>Sign out</strong> tab. 
   <br><br>To log back in as Holly Spencer, enter the following URL in the address bar: <strong>https://portal.office.com</strong>. In the <strong>Pick an account</strong> window, select Holly&rsquo;s account if it appears; otherwise, select <strong>Use another account</strong> and then enter <strong>holly@M365xZZZZZZ.onmicrosoft.com</strong> (where ZZZZZZ is your tenant suffix ID). In the <strong>Enter password</strong> window, enter <strong>Pa55w.rd</strong> and select <strong>Sign in</strong>.</li>
 <li>After reviewing the Excel spreadsheet, you realized the missing data wasn&rsquo;t an upload issue because the <strong>Customer</strong> and <strong>Assign To</strong> columns were missing from the spreadsheet. While you cannot explain what caused this, you remember making a backup of the original spreadsheet. If these missing columns are in your backup file, you plan to add the two columns from your backup file to the <strong>Service Desk Requests</strong> list that is displayed in the IT Services site.</li>
-<li>Select the <strong>File Explorer</strong> icon on the taskbar to return to the <strong>Documents</strong> folder that you opened in the prior task. Double-click on the <strong>xlsx </strong>file to open it.</li>
+<li>Select the <strong>File Explorer</strong> icon on the taskbar to return to the <strong>Documents</strong> folder that you opened in the prior task. Double-click on the <strong>BackupFile.xlsx</strong> file to open it.</li>
 <li>Review the columns in the table and verify the <strong>Assign to</strong> and <strong>Customer </strong>columns appear. Since you have just verified that this data was captured in your backup file, you can proceed with adding these columns to the <strong>Service Desk Requests</strong></li>
 <li>In your Edge browser, in the <strong>Office 365 home </strong>page, select <strong>SharePoint</strong>.</li>
 <li>A <strong>News from sites</strong> window appears over top of the SharePoint admin center. Close this window. On the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, scroll down and under the <strong>Recent</strong> group, select <strong>IT Services</strong>.</li>
-<li>On the <strong>IT Services </strong>site, in the left-hand navigation pane, select the <strong>X</strong> above <strong>Microsoft Teams</strong> to hide this banner, and in the <strong>Hide </strong>dialog box, select <strong>Yes </strong>to confirm it. In the left-hand navigation pane, select <strong>Site Contents</strong>, and in <strong>Contents list</strong>, select the <strong>Service Desk Requests</strong></li>
+<li>On the <strong>IT Services </strong>site, in the left-hand navigation pane, select the <strong>X</strong> above <strong>Microsoft Teams</strong> to hide this banner, and in the <strong>Hide </strong>dialog box, select <strong>Yes </strong>to confirm it. In the left-hand navigation pane, select <strong>Site Contents</strong>, and in <strong>Contents list</strong>, select the <strong>Service Desk Requests</strong> list.</li>
 <li>In the <strong>Service Desk Requests</strong> list, you want to create a new column to display the <strong>Customer</strong> data from the <strong>xlsx</strong> spreadsheet. At the end of the column heading row, select <strong>+Add column.</strong></li>
 <li>In the menu that appears, select the data type for this column, which in this case is <strong>Person</strong>.
   <br><br><strong> Important:</strong> The<strong> Person</strong> data type validates that each entry must be a valid internal user account (such as Holly Spencer, Nestor Wilke, Lynne Robbins, and so on). This data type prohibits you from entering a name that is not a valid Microsoft 365 user account.</li>
-<li>In the <strong>Create a column</strong> window that appears, enter <strong>Customer </strong>in the <strong>Name</strong></li>
+<li>In the <strong>Create a column</strong> window that appears, enter <strong>Customer </strong>in the <strong>Name</strong> field.</li>
 <li>In the <strong>Type </strong>field, <strong>Person or Group </strong>is pre-filled based on your earlier selection. Leave this as is.</li>
 <li>Do NOT select the <strong>Allow selection of Groups</strong> option; leave this check box blank.</li>
 <li>Select<strong> More options</strong>.</li>
-<li>In the <strong>Require that this column contains information</strong> option, select</li>
+<li>In the <strong>Require that this column contains information</strong> option, select <strong>Yes</strong>.</li>
 <li>Select <strong>Save</strong>.</li>
 <li>The <strong>Customer</strong> column should appear in the list. All record entries for this column should be highlighted in yellow, and <strong>Required info</strong> should appear in this column for each record (this is because you set the <strong>Require that this column contains information</strong> option to <strong>Yes </strong>in the previous step when you created this column).</li>
 <li>On the menu bar, select <strong>Quick edit</strong>. The <strong>Quick Edit</strong> option can be used to bulk edit data, which is what you will do here. In the next few steps, you will copy the Customer data from the <strong>BackupCopy</strong> spreadsheet and paste it into this column in the SharePoint list.</li>
-<li>Select the <strong>Excel</strong> spreadsheet icon on the taskbar to display the <strong>xlsx </strong>spreadsheet. Select all the items in the <strong>Customer</strong> column (start in row 2 so that you do not copy the column header), then select <strong>Copy</strong> from the ribbon (selecting <strong>Ctrl+C</strong> to copy the column data sometimes results in an error when you attempt to paste in the copied cells in the next step). 
+<li>Select the <strong>Excel</strong> spreadsheet icon on the taskbar to display the <strong>BackupFile.xlsx </strong>spreadsheet. Select all the items in the <strong>Customer</strong> column (start in row 2 so that you do not copy the column header), then select <strong>Copy</strong> from the ribbon (selecting <strong>Ctrl+C</strong> to copy the column data sometimes results in an error when you attempt to paste in the copied cells in the next step). 
   <br><br><strong>Note:</strong> This will display a pane to the right that displays all the customer data being copied. Once the copy function completes, the pane will disappear. Do NOT proceed until the pane disappears. This may take a minute or so for the copy process to complete.</li>
-<li>Select the <strong>Edge</strong> browser icon on the taskbar, which should return you to the <strong>Quick edit</strong> page for the <strong>Service Desk Request </strong> Select all the empty fields in the <strong>Customer </strong>column and Press <strong>Ctrl+V. </strong>All items will automatically appear in the appropriate row for the<strong> Customer</strong> column.</li>
-<li>While you could remain in <strong>Quick edit</strong> to add the <strong>Assign To</strong> column, adding the column from the <strong>Quick Edit</strong> form does not allow you to set the column option that requires a value be entered in the <strong>Assign To</strong> Therefore, select <strong>Exit quick edit</strong> from the menu bar to return to the <strong>Service Desk Requests </strong>list.</li>
-<li>Repeat steps <strong>8-20</strong> to add a column for the <strong>Assign To</strong> data and to copy the <strong>Assign to</strong> data from the <strong>BackupFile</strong> spreasheet and paste it into the <strong>Quick edit</strong></li>
+<li>Select the <strong>Edge</strong> browser icon on the taskbar, which should return you to the <strong>Quick edit</strong> page for the <strong>Service Desk Request</strong> list. Select all the empty fields in the <strong>Customer </strong>column and Press <strong>Ctrl+V. </strong>All items will automatically appear in the appropriate row for the<strong> Customer</strong> column.</li>
+<li>While you could remain in <strong>Quick edit</strong> to add the <strong>Assign To</strong> column, adding the column from the <strong>Quick Edit</strong> form does not allow you to set the column option that requires a value be entered in the <strong>Assign To</strong> field. Therefore, select <strong>Exit quick edit</strong> from the menu bar to return to the <strong>Service Desk Requests </strong>list.</li>
+<li>Repeat steps <strong>8-20</strong> to add a column for the <strong>Assign To</strong> data and to copy the <strong>Assign to</strong> data from the <strong>BackupFile.xlsx</strong> spreadsheet and paste it into the <strong>Quick edit</strong>form.</li>
 <li>After reviewing the changes to the <strong>Service Desk Request</strong> list, you realize that the data type of the <strong>Description</strong> column only supports a <strong>single line of text</strong>. While this is fine for the existing data, going forward you want your customer support engineers to be able to enter more detailed information. Therefore, you want to modify this column to change the data type to <strong>multiple lines of text</strong>. 
   <br><br>To make this change, select the <strong>Description</strong> column heading. In the menu that appears, select <strong>Column Settings</strong>, and then in the sub-menu, select <strong>Edit</strong>.</li>
 <li>In the <strong>Edit </strong>column window, select the drop-down arrow in the <strong>Type</strong> field and select <strong>Multiple lines of text</strong>.</li>
 <li>Scroll down and select <strong>More options</strong>.</li>
   <li>Change the <strong>Number of lines for editing</strong> to <strong>10</strong>.</li>
 <li>Change the <strong>Require that this column contains information</strong> option to <strong>Yes</strong>.</li>
-<li>Select</li>
+<li>Select <strong>Save</strong>.</li>
 <li>Leave the browser and all existing tabs open on LON-CL1 for the next task.</li>
 </ol>
 <h3>Task 4 - Create filtered views for targeted viewing</h3>
@@ -234,7 +234,7 @@
 <li>Cases by Customer</li>
 </ul>
 <ol>
-<li>You should still be signed into LON-CL1 as the Domain Admin, and you should be logged into Office 365 as Holly Spencer. In your browser, you should still have the tab open from the prior task that displays the <strong>Service Desk Requests </strong> If not, then navigate to this list now.</li>
+<li>You should still be signed into LON-CL1 as the Domain Admin, and you should be logged into Office 365 as Holly Spencer. In your browser, you should still have the tab open from the prior task that displays the <strong>Service Desk Requests</strong> list. If not, then navigate to this list now.</li>
 <li>You will begin by creating a view showing all active cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
@@ -251,7 +251,7 @@
 <li>View Audience: <strong>Create a Public View</strong></li>
 </ul>
 </li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -278,7 +278,7 @@
 </li>
 </ul>
 <ol start="6">
-<li>Scroll to the bottom of the page and select</li>
+<li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will now create a view showing all closed cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
@@ -295,7 +295,7 @@
 <li>View Audience: <strong>Create a Public View</strong></li>
 </ul>
 </li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -322,7 +322,7 @@
 </li>
 </ul>
 <ol start="11">
-<li>Scroll to the bottom of the page and select</li>
+<li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will now create a view showing all cases for each support agent. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
@@ -339,7 +339,7 @@
 <li>View Audience: <strong>Create a Public View</strong></li>
 </ul>
 </li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -380,7 +380,7 @@
 <li>View Audience: <strong>Create a Public View</strong></li>
 </ul>
 </li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>2</strong></li>

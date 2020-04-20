@@ -1,9 +1,9 @@
 <h1>Module 4 - Lab 3 - Exercise 3 - Create a Ticketing System in SharePoint </h1>
 <p>As Adatum begins its transition to Microsoft 365 as their hosted cloud solution, they want to use this opportunity to reduce the amount of third-party software products they currently use. This will help them achieve their goal of reducing their overall IT expenses. The CTO has asked Holly Spencer, Adatum&rsquo;s Enterprise Administrator, to design a solution that uses Microsoft 365 services to replace the third-party IT service request system that Adatum currently uses.</p>
 <p>Because Holly is busy with running the Microsoft 365 pilot project along with her other admin responsibilities, the CTO has authorized her to hire an IT consultant to design the new service request ticketing system. However, he doesn&rsquo;t want the consultant to have access to their entire Adatum system, so he wants Holly to implement &ldquo;good security practices&rdquo; by only providing the consultant with access to Adatum&rsquo;s IT pilot project environment.</p>
-<p><strong><u>Important: Collaboration with an External User</u></strong></p>
-<p>In Lab 1, your instructor assigned you the tenant suffix ID of a fellow student in your class. This student will take on the role of the IT consultant in your lab, and you will continue in your role as Holly Spencer. In a lab 1 exercise, you authorized external access to your tenant from this student&rsquo;s tenant ID. By providing external access to this tenant suffix ID, you and your fellow student will be able to collaborate&nbsp; through Microsoft Teams as you set up this new service request ticketing system.</p>
-<p>In the previous lab exercise, you created a SharePoint team site called IT Services. In this lab you will employ &ldquo;good security practices&rdquo; by only giving access to this site to your fellow student who was selected to play the role of the IT consultant. You will also set up the new service request ticketing system. Keep in mind that the student who was assigned as your IT consultant will also be taking on the role of Holly Spencer in his or her own lab, and you will be taking on the IT consultant role with another student. Therefore, each student in the class will take on dual roles &ndash; that of Holly Spencer in the student&rsquo;s own lab, and that of the IT consultant for a fellow student&rsquo;s lab.</p>
+<h2>Important: Collaboration with an External User</h2>
+<p>In Lab 1, your instructor assigned you the tenant suffix ID of a fellow student in your class. Your fellow student's tenant ID will represent the IT Consultant who will partner with Holly Spencer in building Adatum's new service request ticketing sytem. In this lab, you will provide your fellow student's tenant ID with access to the new ticketing system. In a lab 1 exercise, you authorized external access to your tenant from this student&rsquo;s tenant ID. By providing external access to this tenant suffix ID, you and your fellow student will be able to collaborate&nbsp; through Microsoft Teams as you set up this new service request ticketing system (you will do this in the next lab that deals with Teams).</p>
+<p>In the previous lab exercise, you created a SharePoint team site called IT Services. As you develop this site, you will employ &ldquo;good security practices&rdquo; by limiting access to the site to Holly and your fellow student's tenant ID (this tenant ID represents the IT consultant). As you set up the new service request ticketing system, you will access the site using your fellow student's tenant ID to prove that the IT consultant can access the sytem. In the next lab involving Microsoft Teams, you will actually chat with your fellow student concerning the new ticketing system. Keep in mind that the student who was assigned as your IT consultant will also be taking on the role of Holly Spencer in his or her own lab, and you will be taking on the IT consultant role with another student. Therefore, each student in the class will take on dual roles &ndash; that of Holly Spencer in the student&rsquo;s own lab, and that of the IT consultant for a fellow student&rsquo;s lab.</p>
 <h3>Task 1 - Assign site permissions to your IT consultant</h3>
 <p>The fellow student assigned to you by your instructor will take on the role of the IT consultant that Adatum is employing to build its new service request ticketing system. As Holly Spencer, your first task (besides providing this student with External Access as you did in Lab 1) is to assign the consultant with permission to access the new IT Services team site that you created in the prior lab.</p>
 <p>In the prior lab, you created a new Information Technology group that was assigned to the IT Services site. This group included Isaiah Langer and Joni Sherman, and you assigned the group Full Control permissions. Since you do not want the IT consultant to have Full Control permissions, you do not want to assign him or her to the Information Technology group.</p>
@@ -36,7 +36,10 @@
 <li><strong>View items</strong></li>
 <li><strong>View versions </strong>(which selects <strong>Open Items</strong>)</li>
 <li><strong>View Application Pages</strong></li>
-<li>Select the following permissions under the <strong>Site Permissions</strong> section:</li>
+</ul>
+</li>
+<li>Select the following permissions under the <strong>Site Permissions</strong> section:
+<ul>
 <li><strong>Add and Customize Pages</strong> (which selects<strong> Browse Directories, View Pages</strong>, and<strong> Open</strong>)</li>
 <li><strong>Browse Directories</strong></li>
 <li><strong>Use Self-Service Site Creation </strong>(which selects <strong>Browse User information</strong>)</li>
@@ -47,12 +50,11 @@
 <li><strong>Open</strong></li>
 </ul>
 </li>
-</ul>
-</li>
 </ol>
 <ol start="13">
 <li>Scroll to the bottom of the page and select the <strong>Create </strong>button to create the new<strong> Restricted Use </strong>permission level.</li>
-<li>Once the permission level is created. you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> Verify that the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</li>
+<li><p>Once the permission level is created. you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> Verify that the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. </p>
+<p>On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</p></li>
 <li>In the ribbon displayed at the top of the screen, the <strong>PERMISSIONS </strong>tab is displayed by default. In this tab, under the <strong>Grant</strong> section, select <strong>Create Group</strong>.</li>
 <li>On the <strong>People and Groups &gt; Create Group</strong> page, enter the following information:
 <ul>
@@ -65,7 +67,8 @@
 <li>Auto-accept requests: <strong>No</strong></li>
 </ul>
 </li>
-<li>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.<strong> <br /> <br /> </strong></li>
+<li><p>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site </p>
+<p>Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.<strong> <br /> <br /> </strong></p</li>
 </ul>
 </li>
 <li>Select You will be redirected to the <strong>People and Groups</strong> &gt; <strong>Consultants</strong> page for this <strong>Consultants</strong> group.</li>

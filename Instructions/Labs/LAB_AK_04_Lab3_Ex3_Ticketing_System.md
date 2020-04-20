@@ -54,7 +54,7 @@
 <ol start="13">
 <li>Scroll to the bottom of the page and select the <strong>Create </strong>button to create the new<strong> Restricted Use </strong>permission level.</li>
 <li>Once the permission level is created. you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> Verify that the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. 
-  &nbsp;On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</li>
+  <br>On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</li>
 <li>In the ribbon displayed at the top of the screen, the <strong>PERMISSIONS </strong>tab is displayed by default. In this tab, under the <strong>Grant</strong> section, select <strong>Create Group</strong>.</li>
 <li>On the <strong>People and Groups &gt; Create Group</strong> page, enter the following information:
 <ul>

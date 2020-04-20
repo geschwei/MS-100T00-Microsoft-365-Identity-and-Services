@@ -111,7 +111,7 @@
   </ul>
   </li>
 <br><br>
-<li><strong>STEPS TO PERFORM THIS TASK USING EXCEL.</strong> Since you are at this step, you have chosen to use Excel to export the table data into a SharePoint list in the IT Services site. 
+<li><strong>START HERE TO USE EXCEL TO PERFORM THIS TASK.</strong> Since you are at this step, you have chosen to use Excel to export the table data into a SharePoint list in the IT Services site. 
   <br><br>Confirm that the <strong>Service Request System.xlsx </strong>and <strong>xlsx</strong> files are present in the<strong> Documents</strong> folder. The <strong>Service Request System</strong> spreadsheet contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. The Backup file is simply a copy of the Service Request System file that was created for precautionary purposes. 
   <br><br>Double-click the <strong>Service Request System.xlsx </strong>file to open it.</li>
 <li>If a <strong>Sign in to set up Office</strong> window appears, select the <strong>X</strong> in the upper right corner to close it.</li>
@@ -153,7 +153,7 @@
 <li>Close the Service Request System spreadsheet. Leave your Edge browser open. 
   <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and process to the next task.</strong></li>
   <br><br>
-<li><strong>STEPS TO PERFORM THIS TASK USING POWERSHELL. </strong>Since you are at this step, you have chosen to use Windows PowerShell to export the table data into a SharePoint list in the IT Services site rather than using Excel to accomplish this task. 
+<li><strong>START HERE TO USE POWERSHELL TO PERFORM THIS TASK. </strong>Since you are at this step, you have chosen to use Windows PowerShell to export the table data into a SharePoint list in the IT Services site rather than using Excel to accomplish this task. 
   <br><br>Confirm that the <strong>Service Request System.csv </strong>file is present in the<strong> Documents</strong> This file contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. 
   <br><br>Confirm that the <strong>ImportCsvToSharepointList.ps1</strong> script is present in the <strong>Documents</strong> folder. This script contains the PowerShell commands you will run to export the table data from the <strong>Service Request System.csv </strong>file and import it into a SharePoint list in the IT Services site.</li>
 <li>In the <strong>Search</strong> field on the taskbar at the bottom of the desktop, enter <strong>PowerShell</strong>. 

@@ -64,8 +64,8 @@
 <li>Who can edit the membership of the Group<strong>: Group Owner</strong></li>
 <li>Allow requests to Join/leave this group<strong>: No</strong></li>
 <li>Auto-accept requests: <strong>No</strong></li>
-<li><p>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site </strong></p>
-<p><strong>Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.</p></li>
+<li>Choose the permission level group members get on this site:<strong> Restricted use &ndash; This level restricts the level of use inside the IT Services site </strong>
+<br><br><strong>Note: </strong>This setting includes the<strong> Designer </strong>permission level that you created in the prior lab and the<strong> Restricted Use </strong>permission level that you just created in this task. You will only assign this group the <strong>Restricted Use </strong>permission level.</li>
 </ul>
 </li>
 <li>Select <strong>Create</strong>. You will be redirected to the <strong>People and Groups</strong> &gt; <strong>Consultants</strong> page for this <strong>Consultants</strong> group.</li>

@@ -110,6 +110,7 @@
     <li>If you prefer to use PowerShell, then proceed to step 29.</li>
   </ul>
   </li>
+<br><br>
 <li><strong>STEPS TO PERFORM THIS TASK USING EXCEL.</strong> Since you are at this step, you have chosen to use Excel to export the table data into a SharePoint list in the IT Services site. 
   <br><br>Confirm that the <strong>Service Request System.xlsx </strong>and <strong>xlsx</strong> files are present in the<strong> Documents</strong> folder. The <strong>Service Request System</strong> spreadsheet contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. The Backup file is simply a copy of the Service Request System file that was created for precautionary purposes. 
   <br><br>Double-click the <strong>Service Request System.xlsx </strong>file to open it.</li>

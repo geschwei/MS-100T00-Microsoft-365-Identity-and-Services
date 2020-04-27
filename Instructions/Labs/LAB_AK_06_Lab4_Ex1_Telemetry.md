@@ -4,41 +4,37 @@ In this exercise, you will configure the Microsoft 365 Telemetry engine on the L
 
 ### Task 1 – Prepare to Deploy Office Telemetry Components 
 
-Before you can install the Telemetry Processor in the next task, the Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. The final step in the preparation process is to verify that the SQL Server 2017 services that are installed on LON-CL1 are all running. 
+Before you can install the Telemetry Processor in the next task, the Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. The final step in the preparation process is to verify that the SQL Server 2016 services that are installed on LON-CL1 are all running. 
 
-1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **Laura Atkins**. To install the Telemetry processor, you will log out as Laura and log back in as the Administrator (domain admin) account. <br/>
+**Note:** Office Telemetry does currently run on SQL 2017 or 2019.
 
-	‎If your LON-CL1 VM is still open to your browser, then in your lab hosting environment, select the **Ctrl+Alt+Delete** option, select **Sign out** in the menu that appears, select the desktop, and then on the log-in screen, select **Other User**. 
+1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **adatum\Administrator** with a Password of **Pa55w.rd**; if not, then do so now. 
+
+2. On the desktop, select the **File Explorer** icon on the taskbar. Maximize the File Explorer window that opens. 
+
+3. In the **File Explorer** window, expand **This PC** (if necessary) and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
+
+4. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
+
+5. Minimize the **File Explorer** window as you will use it in the next task. 
+
+6. If a **Welcome to Microsoft Teams!** window appears, then close it.
+
+7. Select the **Start** icon in the lower-left corner of the taskbar. 
+
+8. In the **Start** menu, scroll down to the **Microsoft SQL Server 2016** program group, select it to expand the group, and then select **SQL Server 2016 Configuration Manager**.
+
+9. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
+
+10. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+
+	- Verify that the **Start Mode** for all the services is set to **Automatic**. If any of the services is set to **Manual** or **Other**, right-click on the service, select **Properties**, in the **Properties** window select the **Service** tab, select the value that appears to the right of the **Start Mode**, select **Automatic** in the menu that appears, and then select **OK**. Repeat this process for any other service whose **Start Mode** is not set to **Automatic**.  
 	
-	However, if you LON-CL1 VM displays the desktop with the sign-in screen for Laura Atkins, then select **Other User**.
+	- Verify that the **State** of all the  services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu and proceed to the next step. Repeat this process for any other service whose **State** is not set to **Running**.  <br/>
 
-2. On the **Other user** log in screen, enter **adatum\administrator** in the **User name** field, and enter **Pa55w.rd** in the **Password** field. 
+11. Close the Sql Server Configuration Manager window.
 
-3. On the desktop, select the **File Explorer** icon on the taskbar. Maximize the File Explorer window that opens. 
-
-4. In the **File Explorer** window, expand **This PC** (if necessary) and then right-click on **Local Disk (C:)**. In the menu that appears, select **New**, and then select **Folder**. 
-
-5. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
-
-6. Minimize the **File Explorer** window as you will use it in the next task. 
-
-7. If a **Welcome to Microsoft Teams!** window appears, then close it.
-
-8. Select the **Start** icon in the lower-left corner of the taskbar. 
-
-9. In the **Start** menu, scroll down to the **Microsoft SQL Server 2017** program group, select it to expand the group, and then select **SQL Server 2017 Configuration Manager**.
-
-10. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
-
-11. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
-
-	- Verify that the **Start Mode** for all three services is set to **Automatic**. If any of the services is set to **Manual** or **Other**, right-click on the service, select **Properties**, in the **Properties** window select the **Service** tab, select the value that appears to the right of the **Start Mode**, select **Automatic** in the menu that appears, and then select **OK**. Repeat this process for any other service whose **Start Mode** is not set to **Automatic**.  
-	
-	- Verify that the **State** of all three services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu and proceed to the next step. Repeat this process for any other service whose **State** is not set to **Running**.  <br/>
-
-12. Close the Sql Server Configuration Manager window.
-
-13. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
+12. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
 
 
 ### Task 2 - Install the Telemetry Processor  
@@ -57,7 +53,7 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 5. Select **step 1 - Set up prerequisites**. 
 
-6. Review the prerequisite information. You will use Microsoft SQL Server 2017, which is already installed on LON-CL1 for this lab; therefore, you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
+6. Review the prerequisite information. You will use Microsoft SQL Server 2016, which is already installed on LON-CL1 for this lab; therefore, you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
 
 7. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
 
@@ -69,13 +65,15 @@ In this task, you will install the Telemetry Processor so that Adatum can begin 
 
 11. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-12. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, but it may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
+12. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, you may run into either of two display situations with this window. 
+	- It may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
+	- Depending on your display settings, the window will open, but the bottom portion of the window may be behind the taskbar, and the buttons at the bottom of the window will not be visible. Try dragging the window up so that the buttons are visible. However, if the window will not go far enough up to display the buttons, then carefully drag the window up so that the bottom border line of the window is near the top of the taskbar but not above the taskbar. If you run into this situation with your display, stop dragging when the bottom border is close to the top of the taskbar and the buttons should appear. 
 
 13. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
 
-14. In the **SQL database** box, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the Dashboard database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
+14. You will next create a SQL database titled Dashboard. In the **SQL database** field, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the Dashboard database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
 
-15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database now. 
+15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database permissions and database role. 
 
 16. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, which is the location of the folder that you created at the start of this task for storing data from client computers. Select **Next**. 
 
@@ -94,7 +92,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 To enable and configure the agent, you can edit the registry on each monitored client computer in small or test environments. For production environments that contain hundreds or thousands of client computers, you can use Group Policy administrative templates. For the purpose of this lab, you will use the group policy templates to enable and configure the Office Telemetry agent.
 
-1. On **LON-CL1**, you should still be logged in as adatum\administrator. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
+1. On **LON-CL1**, you should still be logged in as **adatum\administrator**. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
 
 2. The **Telemetry Dashboard for Office** spreadsheet should still be open in Excel from the prior task; however, if you closed it at the end of the prior task, then on the taskbar, type **Telemetry** in the **Search** box and then select **Telemetry Dashboard for Office**.
 
@@ -104,11 +102,11 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 5. On this **Microsoft Download Center** window, scroll down and select the **Download** button. 
 
-6. On the **Choose the download you want** window, select the check box for the 64 bit version of the administrative templates file (as of this writing, the file name is **admintemplates_x64_4966-1000_en-us.exe**; Note: the version number in this file name (4966-1000) may change if a more current file has been released by the time you run this lab), and then select **Next**. 
+6. On the **Choose the download you want** window, select the check box for the 64 bit version of the administrative templates file (as of this writing, the file name is **admintemplates_x64_5002-1000_en-us.exe**; Note: the version number in this file name (5002-1000) may change if a more current file has been released by the time you run this lab), and then select the **Next** button in the bottom right corner of the screen. 
 
-7. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder on your LON-CL1 VM.
+7. You will download this templates file to LON-CL1, but you will NOT run it. Instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder on your LON-CL1 VM.
 
-	**Important:** Once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. **Do NOT select Run; instead, select the X to close this notification bar.** You will not run the file on the LON-CL1 VM; instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there.
+	**Important:** **Do NOT select Run; instead, select the Save option.** Also, once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. **Do NOT select Run; instead, select the X to close this notification bar.** 
 	
 8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **adatum\Administrator**.  
 

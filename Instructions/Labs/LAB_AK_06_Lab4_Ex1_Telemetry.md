@@ -106,7 +106,7 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 7. You will download this templates file to LON-CL1, but you will NOT run it. Instead, in the remaining steps in this task you will switch over to the domain controller VM (LON-DC1) and run the dowloaded file there. In the notification bar that appears at the bottom of the page, select **Save** to download the file to the **Downloads** folder on your LON-CL1 VM.
 
-	**Important:** **Do NOT select Run; instead, select the Save option.** Also, once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. **Do NOT select Run; instead, select the X to close this notification bar.** 
+	**Important: Do NOT select Run; instead, select the Save option.** Also, once the download has finished, a notification bar will appear at the bottom of the page asking whether you want to run the downloaded file. **Do NOT select Run; instead, select the X to close this notification bar.** 
 	
 8. Switch to the Domain Controller VM (LON-DC1). You should still be signed in as **adatum\Administrator**.  
 

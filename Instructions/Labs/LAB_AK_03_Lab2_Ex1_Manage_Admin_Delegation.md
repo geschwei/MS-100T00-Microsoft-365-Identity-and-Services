@@ -106,7 +106,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 7. In your VM lab environment, switch to the Client 1 VM (**LON-CL1**).
 
-8. On the log-in screen, you will log in as the **Domain Admin** account with a password of **Pa55w.rd**.
+8. On the log-in screen, you will log in as the **Administrator** account with a password of **Pa55w.rd**.
 
 9. If a **Networks** window appears, select **Yes**.
 

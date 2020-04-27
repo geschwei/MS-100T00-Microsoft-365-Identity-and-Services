@@ -51,7 +51,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 10. Switch to the Client 1 VM (**LON-CL1**). 
 
-11. You want to log in as **Laura Atkins**. Since the desktop displays the log-in credentials for the Domain Admin, select **Other user** in the lower-left portion of the desktop.
+11. You want to log in as **Laura Atkins**. Since the desktop displays the log-in credentials for the **Administrator**, select **Other user** in the lower-left portion of the desktop.
 
 12. In the **Other user** log in, enter **adatum\laura** in the **Username** field, enter **Pa55w.rd** as the **Password**, and then select the arrow to log in.
 

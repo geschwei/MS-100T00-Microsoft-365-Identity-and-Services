@@ -8,7 +8,7 @@ Before you can install the Telemetry Processor in the next task, the Client 1 VM
 
 **Note:** Office Telemetry does currently run on SQL 2017 or 2019.
 
-1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as **adatum\Administrator** with a Password of **Pa55w.rd**; if not, then do so now. 
+1. After having completed the previous exercise, you should still be logged into the Client 1 VM (LON-CL1) as the **Administrator** with a Password of **Pa55w.rd**; if not, then do so now. 
 
 2. On the desktop, select the **File Explorer** icon on the taskbar. Maximize the File Explorer window that opens. 
 

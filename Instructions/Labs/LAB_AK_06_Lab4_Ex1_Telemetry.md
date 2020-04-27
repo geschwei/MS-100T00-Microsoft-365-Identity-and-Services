@@ -92,7 +92,7 @@ In this task, you will download the Office 2019 Group Policy Administrative Temp
 
 To enable and configure the agent, you can edit the registry on each monitored client computer in small or test environments. For production environments that contain hundreds or thousands of client computers, you can use Group Policy administrative templates. For the purpose of this lab, you will use the group policy templates to enable and configure the Office Telemetry agent.
 
-1. On **LON-CL1**, you should still be logged in as **adatum\administrator**. If necessary, log in as **adatum\administrator** with a Password of **Pa55w.rd**.
+1. On **LON-CL1**, you should still be logged in as **Administrator**. If necessary, log in as **Administrator** with a Password of **Pa55w.rd**.
 
 2. The **Telemetry Dashboard for Office** spreadsheet should still be open in Excel from the prior task; however, if you closed it at the end of the prior task, then on the taskbar, type **Telemetry** in the **Search** box and then select **Telemetry Dashboard for Office**.
 
@@ -112,9 +112,9 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 9. On LON-DC1, right-click on the **Start** button on the taskbar and in the menu that appears, select **Run**. 
 
-10. In the **Run** window, type **\\LON-CL1\C$\Users\Administrator.ADATUM\Downloads** and then select **OK**. This opens a File Explorer window that displays the Downloads folder on LON-CL1. 
+10. In the **Run** window, type **\\LON-CL1\C$\Users\Administrator\Downloads** and then select **OK**. This opens a File Explorer window that displays the Downloads folder on LON-CL1. 
 
-11. In the **File Explorer** window, the **C:\Users\Administrator.ADATUM\Downloads** folder appears. In the right-hand pane, double-click the **admintemplates_x64_4966-1000_en-us.exe** file to run it.  
+11. In the **File Explorer** window, the **C:\Users\Administrator\Downloads** folder appears. In the right-hand pane, double-click the **admintemplates_x64_4966-1000_en-us.exe** file to run it.  
 
 12. If a **Do you want to run this file?** dialog box appears, select **Run**.
 
@@ -132,7 +132,7 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 18. Select all the files in the **admx** folder, then right-click and select **Copy** to copy all the selected files to the clipboard. 
 
-19. In the **File Explorer** window, browse to **C:\Windows\PolicyDefinitions**, then right-click in the **PolicyDefinitions** folder and select **Paste** to copy the **admx** files into the **PolicyDefinitions** folder. 
+19. In the **File Explorer** window, browse to **C:\Windows\PolicyDefinitions**, then right-click on the **PolicyDefinitions** folder and select **Paste** to copy the **admx** files into the **PolicyDefinitions** folder. 
 
 20. Close File Explorer. 
 
@@ -140,7 +140,7 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 22. In the list of search results, select **Group Policy Management**. 
 
-23. In the **Group Policy Management Console**, expand **Forest: Adatum.com.**, expand **Domains**, expand **Adatum.com**, and then select the **IT** folder. 
+23. Maximize the **Group Policy Management** console**, then in the tree view pane on the left, expand **Forest: Adatum.com.**, expand **Domains**, expand **Adatum.com**, and then select the **IT** folder. 
 
 24. Right-click on the **IT** folder and select **Create a GPO in this domain, and Link it here**. 
 
@@ -156,15 +156,19 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 30. Maximize the **Group Policy Management Editor** window. This will enable you to see the **State** column, which is important for you to ensure that you have enabled the necessary settings.
 
-31. In the list of settings, right-click **Turn on telemetry data collection** and select **Edit**. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK**. 
+31. In the list of settings, right-click **Turn on telemetry data collection** and select **Edit**. In the **Turn on telemetry data collection** window, select **Enabled**, and then select **OK** (depending on your display, you may need to maximize the window to see the **OK** button at the bottom of the screen). 
 
 32. In the list of settings, right-click **Turn on data uploading for Office Telemetry Agent** and select **Edit**. In the **Turn on data uploading for Office Telemetry Agent** window, select **Enabled**, and then select **OK**.  
 
-33. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
+33. In the list of settings, right-click **Specify the UNC path to store Office telemetry data** and select **Edit**. In the **Specify the UNC path to store Office telemetry data** window, select **Enabled**. 
 
-34. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. In the **Tag 1** box, type **Pilot** and then select **OK**. 
+	Under the **Options:** section, in the **UNC path to store Office telemetry data** field, type **\\LON-CL1\Telemetry** and then select **OK**. 
 
-35. In the list of settings, the **State** of the four settings that you edited in the prior steps should all be **Enabled**.
+34. In the list of settings, right-click **Specify custom tags for Office telemetry data** and select **Edit**. In the **Specify custom tags for Office telemetry data** window, select **Enabled**. 
+
+	Under the **Options:** section, in the **Tag 1** field, type **Pilot** and then select **OK**. 
+
+35. In the list of settings, the **State** of the four settings that you edited in the prior steps should all be **Enabled**. If you don't have **four** Enabled settings, then review the settings to see which one you missed.
 
 36. Close the Group Policy Management Editor console. 
 
@@ -172,21 +176,21 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
 ### Task 4 - Force Group Policy Update and manually trigger data collection  
 
-In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing it on the LON-CL1 PC. Once you have forced an update of the group policy templates, you will then create a Word doc so that you can later see this activity in the data that is captured by the Office Telemetry agent.
+In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing the group policy on the LON-CL1 PC. Once you have forced an update of the group policy templates, you will then create a Word doc so that you can later see this activity in the data that is captured by the Office Telemetry agent.
 
 It is important to note that when a user logs into an Office client in a normal production environment, the Office Telemetry agent waits 10 minutes to allow other logon processes to be completed, and then waits a randomized number of minutes for up to 4 hours to avoid client computers sending data to the network at the same time. After this initial scan, the Office Telemetry agent scans and collects data every 8 hours.
 
-Obviously, waiting this length of time to collect data will not work in our lab environment, or in selected test scenarios. To bypass the normal Office Telemetry agent scan times, you can manually trigger the data collection by running the OfficeTelemetryAgentLogOn2016 task within the Task Scheduler app. This is the process you will perform in this task. You will then view the collected data in the next task.
+Obviously, waiting this length of time to collect data will not work in our lab environment, or in selected test scenarios. To bypass the normal Office Telemetry agent scan times, you can manually trigger the data collection by running the **OfficeTelemetryAgentLogOn2016** task within the Task Scheduler app. This is the process you will perform in this task. You will then view the collected data in the next task.
 
-1. Switch to **LON-CL1.** You should still be signed in as the **adatum\Administrator**. If necessary, log in as the  **Administrator** with a Password of **Pa55w.rd**.
+1. Switch to **LON-CL1.** You should still be signed in as the **Administrator**. If necessary, log in as the **Administrator** with a Password of **Pa55w.rd**.
  
 2. On the taskbar, right-click on the **Start** icon and select **Run**. 
 
 3. In the **Run** window, type **gpupdate /force** in the **Open:** field and then select **OK**. 
 
-4. Wait for the group policy update to complete. 
+4. Wait for the group policy update to complete. Once it finishes, the command window will automatically close.
 
-5. You will now create a Word document so that you can later see this activity in the Office Telemetry data that is captured. Select the **Start** icon, and in the **Start** menu, select **Word**. 
+5. You will now create a **Microsoft Word** document so that you can later see this activity in the Office Telemetry data that is captured. In the **Search** field on the task bar, enter **Word**, and then select the **Word** app from the search result list. 
 
 6. Open a blank document in Word, enter some text in the document and then save it in the **Documents** folder. 
 
@@ -202,11 +206,11 @@ Obviously, waiting this length of time to collect data will not work in our lab 
 
 12. Before manually triggering the data collection process by running the **OfficeTelemetryAgentLogOn2016** task, you are first going to review the properties for this task so that you can see how in a normal production environment this task would be triggered automatically to run. <br/>
 
-	In the list of tasks, select the **OfficeTelemetryAgentLogOn2016** task, then right-click on it and select **Properties** in the menu that appears. 
+	Scroll down through the list of tasks and select the **OfficeTelemetryAgentLogOn2016** task (it's the last task in the list), then right-click on it and select **Properties** in the menu that appears. 
 	
-13. In the the **OfficeTelemetryAgentLogOn2016 Properties** window, review the task description in the **General** tab. Then select the **Triggers** tab and review the condition that triggers the running of this task, which is a user logon. If you wish, you can select the remaining tabs to see the additional settings that are configured for this task. When you are done reviewing this task, select **Cancel** to close the the **OfficeTelemetryAgentLogOn2016 Properties** window.
+13. In the the **OfficeTelemetryAgentLogOn2016 Properties** window, review the task description in the **General** tab. Then select the **Triggers** tab and review the condition that triggers the running of this task, which is a user logon. If you wish, you can select the remaining tabs to see the additional settings that are configured for this task. When you are done reviewing this task, close the **OfficeTelemetryAgentLogOn2016 Properties** window.
 
-14. Now that you have reviewed this task, you are manually going to run it to force an immediate collection of Telemetry data (rather than waiting for a user to logon to trigger the task to run). <br/>
+14. Now that you have reviewed this task, you are manually going to run it to force an immediate collection of Telemetry data (rather than waiting for a user to log on to trigger the task to run). <br/>
 
 	Right-click on the **OfficeTelemetryAgentLogOn2016** task and select **Run** in the menu that appears. Then verify that the **Status** of **OfficeTelemetryAgentLogOn2016** changed from **Ready** to **Running**. 
 
@@ -219,11 +223,11 @@ Obviously, waiting this length of time to collect data will not work in our lab 
 
 In this task, you will open the Office Telemetry Dashboard to review the data that was collected when you manually triggered the data collection process in the prior task. 
 
-1. On **LON-CL1**, you should still be signed in as **adatum\administrator**.
+1. On **LON-CL1**, you should still be signed in as the **Administrator**.
 
-2. Select the **Excel** icon on the taskbar at the bottom of the page to display the Telemetry Dashboard1 spreadsheet.
+2. Select the **Excel** icon on the taskbar at the bottom of the page to display the **Telemetry Dashboard1** spreadsheet.
 
-3. In the **Telemetry Dashboard** spreadsheet, in the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
+3. In the **Getting started** workbook, select **step 5 - Connect to the database to view telemetry data**. 
 
 4. Select **Connect to Database**. 
 

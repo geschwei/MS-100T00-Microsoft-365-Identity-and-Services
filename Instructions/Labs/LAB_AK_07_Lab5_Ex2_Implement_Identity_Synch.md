@@ -8,7 +8,7 @@ In this exercise, you will enable synchronization between Adatum’s on-premises
 
 In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
 
-‎This task resumes from the prior task, where on LON-DC1, you logged into Office 365 as **Holly@XXYYZZa.xxxCustomDomainxxx.xx** and you opened the Office 365 home page.
+‎This task resumes from the prior task, where on LON-DC1, you were logged in as the **Administrator** and you were logged into Office 365 as **Holly@XXYYZZa.xxxCustomDomainxxx.xx** (not Holly@M365xZZZZZZ.onmicrosoft.com).
 
 1. In **Internet Explorer**, in the **Microsoft Office Home** page, select **Admin**. 
 
@@ -22,11 +22,13 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 5. In the **Microsoft Download Center**, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
 
-6. In the notification bar that appears at the bottom of the page, select **Save**.
+6. In the notification bar that asks whether you want to Run or Save the **AzureADConnect.msi** file, select **Save**.
 
 7. Once the download is complete, in the notification bar at the bottom of the page, select **Run**.
 
-8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it in the taskbar and select it. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it in the taskbar and select it. <br/>
+
+	On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
 9. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
@@ -36,25 +38,30 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 12. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page, and then select **Next**.
 
-13. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+13. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected.   <br/>
 
-	‎**Note:** In a real-world deployment, if you are also preparing Azure AD Connect for an Exchange hybrid deployment, you would select the **Exchange hybrid deployment** check box as well. In this lab, you will leave this check box blank.
+	‎**Note:** In a real-world deployment, if you are also preparing Azure AD Connect for an Exchange hybrid deployment, you would select the **Exchange hybrid deployment** check box as well. In this lab, you will leave this check box blank. <br/>
 
-14. Wait for the installation to complete and then select **Exit**. 
+	Select **Install**.
+
+14. Wait for the configuration to complete and then select **Exit**. 
 
 15. In the taskbar at the bottom of the VM, select the **magnifying glass (Search)** icon, and then in the Search box, enter **Synchronization**. In the menu, select the **Synchronization Service** desktop application to open it.
 
-16. In the **Synchronization Service Manager** window, the Operations tab is displayed by default so that you can monitor the synchronization process. 
+16. In the **Synchronization Service Manager** window, the **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process. 
 
-17. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com** (with a **Status** of **completed-export-errors**), and then select this row.  
+17. Wait for the **Export** profile to complete for **M365xZZZZZZ.onmicrosoft.com**; when it finishes, its **Status** should be **completed-export-errors**. Once it's complete, select this row.  
 
-18. In the bottom portion of the screen, note the number of users that were added and the number that were updated. Also note the two errors that appear in the **Export Errors** section. If you recall back in Task 3 when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). If you select the links to each of the **Export Errors**, you’ll see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.   <br/>
+18. In the bottom portion of the screen, a detail pane appears showing the detailed information for this operation. 
 
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the Synchronization Service Manager window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
+	- In the **Export Statistics** section, note the number of users that were added and the number that were updated. 
+	- In the **Export Errors** section, note the two errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). Select the links under the **Export Errors** column and you will see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.   <br/>
 
-19. Now that you have seen Azure AD Connect complete a Full Synchronization, and rather than waiting for it to synchronize future updates, in the next task you will make some updates and manually force a synchronization. <br/>
+	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
 
-	Close the **Synchronization Service Manager**. In your browser, close the **Download Center** tab, and then in the **Microsoft 365 admin center** tab, close the **Azure Active Directory preparation** pane. Leave the Domain Controller VM open as it will be used in the next exercise.
+19. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. <br/>
+
+	Close the **Synchronization Service Manager**. In your browser, close the **Download Microsoft Azure AD Connect** tab, and then in the **Microsoft 365 admin center** tab, close the **Azure Active Directory preparation** pane. Leave the Domain Controller VM open as it will be used in the next exercise.
 
 
 ### Task 2: Create an Identity Mismatch Scenario for Synchronization  
@@ -81,7 +88,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	‎In the **Active users** window, in the menu bar, select **Add a user**.
 
-3. In the **Set up the basics** window, enter the following information:
+3. In the **Add a user** window, in the left-hand pane, you can see from the flow chart that there are four steps to add a user. In the **Set up the basics** window, enter the following information:
 
 	- First name: **Scotty**
 
@@ -97,7 +104,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- Password: **Pa55w.rd** 
 
-	- Uncheck the **Require this user to change their password when they first sign in** check box 
+	- If necessary, uncheck the **Require this user to change their password when they first sign in** check box 
 
 4. Select **Next**.
 
@@ -111,9 +118,9 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 7. In the **Optional settings** window, select **Next**.
 
-8. On the **You’re almost done – review and finish adding** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
+8. On the **Review and finish** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
 
-9. On the **Scotty Heyward has been added** page, select **Close.** 
+9. On the **Finish** page, select **Close.** 
 
 10. You will now create an on-premises mailbox and user account for Scotty in Adatum’s on-premises Exchange Server that references the primary SMTP domain of **XXYYZZa.xxxCustomDomainxxx.xxx**.  <br/>
 
@@ -123,13 +130,13 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	‎**Note:** If you receive a notification that you need some updates, simply ignore it for lab purposes. If a **Networks** pane appears, select **Yes** to allow your PC to be discoverable by other PCs on this network. 
 
-12. Select the **Start** icon on the lower-left corner of the taskbar. In the **Start** menu, in the list of programs, select **Microsoft Exchange Server 2019** to expand the program group, and then select **Exchange Administrative Center** (this is the on-premises Exchange Admin Center).
+12. Select the **Start** icon on the taskbar. In the **Start** menu, in the list of programs, select **Microsoft Exchange Server 2019** to expand the program group, and then select **Exchange Administrative Center** (this is the on-premises Exchange Admin Center).
 
 13. This opens **Internet Explorer**. In the **Set up Internet Explorer 11** dialog box that appears (the first time you run Internet Explorer), the **Use recommended security, privacy, and compatibility settings** option is selected by default. Accept this setting by selecting **OK**. 
 
 14. In the **This site is not secure** window that appears, select **More information** and then select **Go on to the webpage (not recommended).**
 
-15. In the on-premises **Exchange Admin Center** sign-in screen, **adatum\administrator** should be prefilled in the **Domain\user name** field; if it isn’t, you need to enter it. Enter **Pa55w.rd** in the **Password** field, and then select **sign in.**
+15. Maximize the Internet Explorer browser session that opens. In the on-premises **Exchange Admin Center** sign-in screen, **adatum\administrator** may be prefilled in the **Domain\user name** field; if it isn’t, you need to enter it. Enter **Pa55w.rd** in the **Password** field, and then select **sign in.**
 
 16. In the on-premises **Exchange admin center**, the **mailboxes** tab in the **recipients** window is displayed by default. Select the **plus (+)** sign on the menu bar to create a new on-premises user account and user mailbox. In the drop-down menu that appears, select **User mailbox**.
 
@@ -151,7 +158,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- New password and Confirm password: **Pa55w.rd**
 
-	- Leave the **Require password change on next logon** check box blank
+	- Require password change on next logon: Leave this field blank
 
 18. Select **Save**. Scotty Heyward should now appear in the list of mailboxes.
 
@@ -160,23 +167,23 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 ### Task 3: Create Group Accounts to Test Synchronization  
 
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a security group and you will update the group members in a built-in security group, all within Adatum’s on-premises environment. 
+To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
 
-Each group will be assigned several members. After the forced synchronization, you will validate that you can see the security group in Microsoft 365 and that its members were synced up to the group. You will also validate that you cannot see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the Builtin container in Active Directory Users and Computers. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. However, they are not synchronized to Microsoft 365, even after adding members to them within their on-premises, AD group. 
+Each group will be assigned several members. After the forced synchronization, you will validate that you can see the new security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate that you can NOT see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the Builtin container in Active Directory Users and Computers. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. However, they are not synchronized to Microsoft 365, even after adding members to them within their on-premises AD group. You will validate this functionality in this task.
 
-1. Switch to the Domain Controller VM (LON-DC1). If necessary, log in as **adatum\administrator** and **Pa55w.rd**. 
+1. Switch to the Domain Controller VM (LON-DC1). If necessary, log in as **Administrator** with a Password of **Pa55w.rd**. 
 
-2. If **Server Manager** is closed, then re-open it now. 
+2. If **Server Manager** is closed, then re-open it now; otherwise, select the **Server Manager** icon on the taskbar. 
 
-3. In **Server Manager**, select **Tools** at the top of the screen, and then in the drop-down menu select **Active Directory Users and Computers.**
+3. In **Server Manager**, select **Tools** at the top right side of the screen, and then in the drop-down menu select **Active Directory Users and Computers.**
 
-4. You will begin by adding members to one of the built-in security groups. In the **Active Directory Users and Computers** console tree, under **Adatum.com**, select the **Builtin** folder. This will display all the security group folders that were automatically created at the time the **Adatum.com** domain was created.
+4. You will begin by adding members to one of the built-in security groups. In the **Active Directory Users and Computers** console tree, under **Adatum.com**, select the **Builtin** folder. This will display all the builtin security group folders that were automatically created at the time the **Adatum.com** domain was created.
 
 5. In the detail pane on the right, double-click the **Print Operators** security group.
 
 6. In the **Print Operators Properties** window, select the **Members** tab and then select the **Add** button.
 
-7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select** box, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
+7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
 
 	- **Ashlee Pickett** 
 
@@ -188,7 +195,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
 
-10. You will now create a new group, which will be a **Security group**. In the console tree under **Adatum.com**, right-click **Research,** select **New,** and then select **Group**.  
+10. You will now create a new security group. In the console tree under **Adatum.com**, right-click **Research,** select **New,** and then select **Group**.  
 
 11. In the **New Object - Group** window, enter the following information:
 
@@ -200,13 +207,11 @@ Each group will be assigned several members. After the forced synchronization, y
 
 12. Select **OK**.  
 
-13. In the detail pane on the right for the **Research** organizational unit, double-click the **Manufacturing** group.  
+13. In the console tree under **Adatum.com**, select **Research**, and then in the detail pane on the right double-click the **Manufacturing** security group that you just added.  
 
 14. In the **Manufacturing Properties** window, in the **E-mail** box, type **Manufacturing@adatum.com**.  
 
-15. Select the **Members** tab, and then select the **Add** button.
-
-16. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** dialog box, in the **Enter the object names to select** box, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
+15. Select the **Members** tab, and then repeat steps 7-9 to add the following members to this group:  
 
 	- **Bernardo Rutter**
 
@@ -214,28 +219,28 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- **Dawn Williamson**  
 
-17. Select **OK** to return to the **Manufacturing Properties window.**
-
-18. In the **Manufacturing Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
-
-19. Leave the **Active Directory Users and Computers** window open for the next task.  
+16. Leave the **Active Directory Users and Computers** window open for the next task.  
 
  
 ### Task 4: Change Group Membership to Test Synchronization  
 
 This task sets up another scenario for testing whether the sync process is working in Azure AD Connect. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
 
-1. This task continues from where the previous task left off in the Domain Controller VM (LON-DC1). In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. In the detail pane on the right, double-click the **Research** security group.  
+1. This task continues from where the previous task left off in the Domain Controller VM (LON-DC1). In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. <br/>
+
+	In the detail pane on the right, double-click the **Research** security group.  
 
 2. In the **Research Properties** window, select the **Members** tab to view the members of this group.  
 
-3. For each of the following users, select the user in the **Members** window, select the **Remove** button to remove it from the group, and confirm the removal by selecting **Yes**. Once you have finished removing these three users, select **OK.**
+3. You want to remove the following users from the group:
 
 	- **Cai Chu**  
 
 	- **Shannon Booth**  
 
 	- **Tia Zecirevic**  
+	
+	While you can remove each user individually, the quickest way is to remove all three at one time. Select the first user, then hold the **Ctrl** key down while selecting the other two. With all three users selected, select the **Remove** button and then select **Yes** to confirm the removal. Verify the three users have been removed, and then select **OK.**
 
 4. Leave the Domain Controller VM open as you will continue using it in the next task. <br/>
 
@@ -246,7 +251,7 @@ This task sets up another scenario for testing whether the sync process is worki
 
 In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
-1. On the Domain Controller VM (LON-DC1), if the **Windows PowerShell** application is still open from the prior exercise, you MUST close it now.  <br/>
+1. On the Domain Controller VM (LON-DC1), if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
 	‎**Important:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
 
@@ -265,71 +270,57 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 
 In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises AD to Azure AD. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
-1. You should still be on your Domain Controller VM (LON-DC1) after finishing the prior task. If you need to log back in, log in as **adatum\administrator** with a password of **Pa55w.rd.**
+1. You should still be on your Domain Controller VM (LON-DC1) after finishing the prior task. If you need to log back in, log in as the **Administrator** with a password of **Pa55w.rd.**
 
-2. If **Internet Explorer** is still open and a tab exists for the **Microsoft 365 admin center**, then select that tab now and proceed to the next step. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
+2. In your **Internet Explorer** browser, if a tab exists for the **Microsoft 365 admin center**, then select that tab now and proceed to the next step. Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx.** and password **Pa55w.rd**, and then on the **Microsoft Office Home** page, select **Admin**. 
 
 3. In the **Microsoft 365 admin center**, you should still be on the **Active Users** page; if not, then in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
-4. To validate the results of the synchronization, you need to see the **Sync Status** of each user. By default, this field is not displayed in the **Active users** list; therefore, you need to customize the **Active users** view to display this field.   <br/>
-
-	‎Scroll to the far-right side of the window, and in the heading bar, select **Choose columns**. 
-
-5. In the **Choose column** window, select the **Sync status** check box and then select **Save.** 
-
-6. In the **Active users** list, scroll to the right and verify the **Sync status** column appears. Hover your mouse over any of the **Sync status** icons to display the corresponding value.
-
-7. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts.   <br/>
-
-	‎If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
+4. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
-	‎Locate **Scotty Heyward** in the **Active users** list (to quickly find Scotty, in the **Search** box that appears on the menu bar above list of users, enter **Scotty** and press Enter).  <br/>
+	‎Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
 	
-	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter Scotty again in the Search box). You cannot proceed until Scotty’s accounts appear. 
-
-8. Because you created an identity mismatch situation, the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account. Each of Scotty’s accounts will have its own mailbox because the mailboxes will have different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
-
-	‎Once Scotty’s two accounts appear, scroll to the right in the **Active users** list to display the **Sync status** of each. You’ll notice that Scotty’s **onmicrosoft.com** account has a sync status of **In cloud**, while his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account has a sync status of **Synced with Active Directory**. <br/>
+	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter **Scotty** again in the **Search** box). You cannot proceed until Scotty’s accounts appear. <br/>
 	
-	‎This is the result of the forked identity mismatch that we purposely created. To fix this situation, you will use soft matching to troubleshoot this problem in the next task.
+	Because you created an identity mismatch situation, the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account. Each account will have its own mailbox because the mailboxes have different domains and routing addresses; this is the result of the forked identity mismatch that you purposely created. To fix this situation, you will use soft matching to troubleshoot this problem in the next task. <br/>
 
-9. Now let’s examine the synchronization results for the groups that you updated in Tasks 2 and 3.  <br/>
+	**Note:** In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
+
+5. Now let’s examine the synchronization results for the groups that you updated in the previous tasks.  <br/>
 
 	‎In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again.  
 
-10. In the **Groups** list, verify that the **Manufacturing** group appears, and that the **Print Operators** group does not appear. As mentioned previously, built-in groups such as the Print Operators security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in Task 3. <br/>
+6. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
 
-	**Note:** You may need to wait up to 10 minutes before the Manufacturing group appears. Continue to refresh the list until you see the group.  
+	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-11. In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** column (this column appears by default for Groups, and it appears to the right of the **group Type** column). For this security group, hovering your mouse over the **Sync status** icon indicates that it was **Synced from on-premises**.
+7. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
-12. Select the **Manufacturing** group to open the **Manufacturing** group window. 
+8. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. <br/>
 
-13. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains the three members that you assigned. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. 
+	Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner). Verify that the three users that you added as members of the on-premises group have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** group window.
 
-14. In the **Manufacturing** group window, select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner). Close the **Manufacturing** group window.
+9. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
-15. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
-
-16. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
+10. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 
 	‎**Connect-MsolService**
 
-17. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
+11. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
 
-18. Run the following command that retrieves all the Office 365 groups:   <br/>
+12. Run the following command that retrieves all the Office 365 groups:   <br/>
 
 	‎**Get-MsolGroup** 
 
-19. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the **Print Operators** group.
+13. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the **Print Operators** group.
 
-20. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, select the **ObjectID** for the **Research** group in the prior list, right-click on it and select **Copy**.   <br/>
+14. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, you should copy the **ObjectID** for the **Research** group to your clipboard. Drag your mouse over the ObjectId string and then press **Ctrl-C**.   <br/>
 
-	‎Then run the following command to retrieve this group (where **{ObjectID}** is the ObjectID of the Research group; when you get to this point when entering the command, right-click and select **Paste** to paste in the ObjectID that you previously copied): <br/>
+	‎Then run the following command to display the members of this group. In the command, replace **<ObjectId>** with the value that you copied in the prior step by pressing **Ctrl-V** to paste in the value. <br/>
 	
-	‎**Get-MsolGroupMember -GroupObjectId {ObjectID}**
+	‎**Get-MsolGroupMember -GroupObjectId <ObjectID>**
 
-21. Verify the membership of the Research group does NOT contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
+15. Verify the membership of the Research group does **NOT** contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
 
 	- Cai Chu 
 
@@ -337,11 +328,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-22. Run the following command to display the number of license units that have been consumed:  <br/>
-
-	‎**Get-MsolAccountSku**  
-
-23. Repeat steps 20-22 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
+16. Repeat steps 14-15 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
 
 	- Bernardo Rutter
 
@@ -349,7 +336,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-24. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
+17. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
  
 
 ### Task 7: Use Soft Matching to Troubleshoot Identity Mismatch

@@ -2,9 +2,11 @@
 
 In this exercise, you will configure the Microsoft 365 Telemetry engine on the LON-CL1 VM to gather information about the Adatum’s Microsoft 365 client. 
 
-### Task 1 – Prepare to Deploy Office Telemetry Components 
+### Task 1 - Install the Telemetry Processor  
 
-Before you can install the Telemetry Processor in the next task, the Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. The final step in the preparation process is to verify that the SQL Server 2016 services that are installed on LON-CL1 are all running. 
+The Office Telemetry Processor runs on one or more computers and collects inventory, usage, and health data from a shared folder and imports the data to a SQL Server database controlled by your organization (the data is NOT sent to Microsoft). The processor is installed as a Windows service named "Office Telemetry Processor." 
+
+Before you can install the Telemetry Processor, the Client 1 VM (LON-CL1) must first be prepped for the installation. To do so, you will log into LON-CL1 as the administrator account and create a folder on the C Drive for storing the Telemetry components. You will then install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
 
 **Note:** Office Telemetry does currently run on SQL 2017 or 2019.
 
@@ -16,77 +18,50 @@ Before you can install the Telemetry Processor in the next task, the Client 1 VM
 
 4. In the **New folder** field, enter **Telemetry** as the folder name and then press Enter.
 
-5. Minimize the **File Explorer** window as you will use it in the next task. 
+5. Minimize the **File Explorer** window as you will use it later in this task. 
 
-6. If a **Welcome to Microsoft Teams!** window appears, then close it.
+6. On the taskbar, type **Telemetry** in the **Search** box.
 
-7. Select the **Start** icon in the lower-left corner of the taskbar. 
+7. In the list of search results, select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
 
-8. In the **Start** menu, scroll down to the **Microsoft SQL Server 2016** program group, select it to expand the group, and then select **SQL Server 2016 Configuration Manager**.
+8. In **Microsoft Excel**, select the **Getting started** worksheet. 
 
-9. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
+9. Select **step 1 - Set up prerequisites**. 
 
-10. In the **Sql Server Configuration Manager** window, select **SQL Server Services** in the left-hand pane. 
+10. Review the prerequisite information. You will use Microsoft SQL Server 2016, which is already installed on LON-CL1 for this lab; therefore, you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
 
-	- Verify that the **Start Mode** for all the services is set to **Automatic**. If any of the services is set to **Manual** or **Other**, right-click on the service, select **Properties**, in the **Properties** window select the **Service** tab, select the value that appears to the right of the **Start Mode**, select **Automatic** in the menu that appears, and then select **OK**. Repeat this process for any other service whose **Start Mode** is not set to **Automatic**.  
-	
-	- Verify that the **State** of all the  services is **Running**. If any of the services is **Stopped**, then right-click on the service and select **Start** in the menu and proceed to the next step. Repeat this process for any other service whose **State** is not set to **Running**.  <br/>
+11. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
 
-11. Close the Sql Server Configuration Manager window.
+12. This starts the **Microsoft Office Telemetry Processor (x64) Setup Wizard**. Select **Next** on the **Welcome** page.
 
-12. You have now completed the prerequisites needed to install the Telemetry Processor. Leave the LON-CL1 VM open and proceed to the next task to install the Telemetry Processor. 
+13. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
+14. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**. Since the **Run the Office Telemetry Processor settings wizard now** check box is selected, this settings wizard will begin once you select **Finish**.
 
-### Task 2 - Install the Telemetry Processor  
+15. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
 
-The Office Telemetry Processor runs on one or more computers and collects inventory, usage, and health data from a shared folder and imports the data to a SQL Server database controlled by your organization (the data is NOT sent to Microsoft). The processor is installed as a Windows service named "Office Telemetry Processor."
-
-In this task, you will install the Telemetry Processor so that Adatum can begin collecting data as part of its Office Telemetry pilot project. 
-
-1. After having completed the previous task, you should still be on the Client 1 VM (LON-CL1) and logged in as **adatum\administrator**. 
-
-2. On the taskbar, type **Telemetry** in the **Search** box.
-
-3. In the list of search results, select **Telemetry Dashboard for Office**. This opens a **TelemetryDashboard1.xlsx** file in **Microsoft Excel**.
-
-4. In **Microsoft Excel**, select the **Getting started** worksheet. 
-
-5. Select **step 1 - Set up prerequisites**. 
-
-6. Review the prerequisite information. You will use Microsoft SQL Server 2016, which is already installed on LON-CL1 for this lab; therefore, you do not need to install Microsoft SQL Server Express Edition as noted in this prerequisite. Select **Set up prerequisites** to collapse step 1. 
-
-7. Select **step 2 - Install Telemetry Processor**. In this step, select the **Install Telemetry Processor on This Computer** button. 
-
-8. This starts the **Microsoft Office Telemetry Processor (x64) Setup Wizard**. Select **Next** on the **Welcome** page.
-
-9. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
-
-10. In the **Completed the Microsoft Office Telemetry Processor (x64) Setup Wizard** page, select **Finish**. Since the **Run the Office Telemetry Processor settings wizard now** check box is selected, this settings wizard will begin once you select **Finish**.
-
-11. If a **Do you want to allow this app to make changes to your device?** window appears, select **Yes**. 
-
-12. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, you may run into either of two display situations with this window. 
+16. This initiates the **Office Telemetry Processor settings** wizard. The **Getting Started** window opens, you may run into either of two display situations with this window. 
 	- It may stay minimized on the taskbar. If so, select the icon on the taskbar to maximize the **Getting Started** window. On the **Getting Started** window, select **Next.**
 	- Depending on your display settings, the window will open, but the bottom portion of the window may be behind the taskbar, and the buttons at the bottom of the window will not be visible. Try dragging the window up so that the buttons are visible. However, if the window will not go far enough up to display the buttons, then carefully drag the window up so that the bottom border line of the window is near the top of the taskbar but not above the taskbar. If you run into this situation with your display, stop dragging when the bottom border is close to the top of the taskbar and the buttons should appear. 
 
-13. On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
+17 On the **Database Settings** page, select the drop-down arrow in the **SQL Server** field and in the menu that appears, select **(local)\TELEDASH** and then select **Connect**. 
 
-14. You will next create a SQL database titled Dashboard. In the **SQL database** field, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the Dashboard database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
+18. You will next create a SQL database titled Dashboard. In the **SQL database** field, type **Dashboard**, and then select **Create**. This displays a processing window that displays the status of the Dashboard database being created. Once the database has been created, the processing window will disappear. At this point, select **Next**. 
 
-15. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database permissions and database role. 
+19. In the **Office Telemetry Processor settings wizard** dialog box, select **Yes** to configure the database permissions and database role. 
 
-16. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, which is the location of the folder that you created at the start of this task for storing data from client computers. Select **Next**. 
+20. On the **Shared Folder** page, in the **Path** box, type **C:\Telemetry**, which is the location of the folder that you created at the start of this task for storing data from client computers. Select **Next**. 
 
-17. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes** to configure the folder now.
+21. In the **Office Telemetry Processor settings wizard** dialog box, read the information provided for sharing permissions and then select **Yes** to configure the folder now.
 
-18. On the **Microsoft Customer Experience Improvement Program** page, select the **I don’t want to sign up for the program at this time** option and then select **Next**. 
+22. On the **Microsoft Customer Experience Improvement Program** page, select the **I don’t want to sign up for the program at this time** option and then select **Next**. 
 
-19. Select **Finish** to complete the wizard. 
+23. Select **Finish** to complete the wizard. 
 
-20. Leave the Telemetry Dashboard open in Excel for the next task.
+24. Leave the Telemetry Dashboard open in Excel for the next task.
  
 
-### Task 3 - Manage the Office 2019 Group Policy Administrative Templates  
+### Task 2 - Manage the Office 2019 Group Policy Administrative Templates  
 
 In this task, you will download the Office 2019 Group Policy Administrative Template files (ADMX/ADML). These files are used by Group Policy to configure installations of Office 365 products, such as Office 365 ProPlus, and volume licensed versions of Office 2016 and Office 2019. You can also use the group policy templates to enable and configure agents such as the Office Telemetry agent. 
 
@@ -174,7 +149,7 @@ To enable and configure the agent, you can edit the registry on each monitored c
 
  
 
-### Task 4 - Force Group Policy Update and manually trigger data collection  
+### Task 3 - Force Group Policy Update and manually trigger data collection  
 
 In this task, you will update the group policy templates that you downloaded and configured in the prior task. Updating the templates will expedite the data collection process by enforcing the group policy on the LON-CL1 PC. Once you have forced an update of the group policy templates, you will then create a Word doc so that you can later see this activity in the data that is captured by the Office Telemetry agent.
 
@@ -219,7 +194,7 @@ Obviously, waiting this length of time to collect data will not work in our lab 
 16. Close the Task Scheduler window. 
    
 
-### Task 5 - Review Telemetry Data   
+### Task 4 - Review Telemetry Data   
 
 In this task, you will open the Office Telemetry Dashboard to review the data that was collected when you manually triggered the data collection process in the prior task. 
 

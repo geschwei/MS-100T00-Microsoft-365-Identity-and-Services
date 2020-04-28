@@ -278,7 +278,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 4. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
-	‎Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
+	Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
 	
 	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter **Scotty** again in the **Search** box). You cannot proceed until Scotty’s accounts appear. <br/>
 	
@@ -286,9 +286,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	**Note:** In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
 
-5. Now let’s examine the synchronization results for the groups that you updated in the previous tasks.  <br/>
-
-	‎In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again.  
+5. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again. 
 
 6. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
 

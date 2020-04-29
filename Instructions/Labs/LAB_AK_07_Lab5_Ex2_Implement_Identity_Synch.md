@@ -590,23 +590,29 @@ If you’ll recall, you earlier created identity mismatch situations where the e
 
 3. Open **Notepad**, then copy the **objectGUID** and paste it in **Notepad.**
 
-4. Run the following command to get the object ID of Holly’s **Microsoft 365** user account (don’t forget to replace ZZZZZZ with the tenant ID provided by your lab hosting provider):  <br/>
+4. At this point, you are ready to run a PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. However, sometimes when an indentity mismatch situation is created followed by a synchronization run, the sync process changes the user's alias in his or her Microsoft 365 account. For example, **holly@M365xZZZZZZ.onmicrosoft.com** may be changed to **hollyXXXX@M365xZZZZZZ.onmicrosoft.com** (where XXXX is some arbitrary string of text appended to the end of the alias). Therefore, you should verify first whether this occurred by checking the Active users list for Holly to see what her Username is - whether it's holly or hollyXXXX. <br/>
+
+	In **Internet Explorer**, select your **Microsoft 365 admin center** tab and then navigate to the **Active users** page. Enter **holly** in the **Search** field on the right side of the menu bar. Note the alias for Holly's **onmicrosoft.com** account; this is the Username you will use in the next step.	
+
+5. Run the following command to get the object ID of Holly’s **Microsoft 365** user account. <br/>
+
+	**Note:** When you enter the **UserPrincipalName** in this command, you must enter the **onmicrosoft.com** value that you found in the prior step when you searched for Holly's accounts. The alias portion of the UPN will either be **holly** or **hollyXXXX**. In the command example below, it uses **holly** since that would typically be the case; however, if the sync process appended a value to the end of the **holly** alias, then enter that value instead. Also, don’t forget to replace ZZZZZZ with the tenant ID provided by your lab hosting provider.  <br/>
 
 	**Get-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” |Select-Object -Property “ObjectID”**  <br/>
 	
 	‎**Note:** If you compare the object ID from this cloud account with the objectGuid that you earlier retrieved from Holly’s on-premises account, you’ll set that they don’t match. In the next steps you will perform a hard match to get them in sync.
 
-5. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account (don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider):  <br/>
+6. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
 
 	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID {paste in the objectGuid that you copied earlier to Notepad}**  
 
-6. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
+7. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  
 
-7. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
+8. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
 
-8. Leave your Domain Controller VM open for use in the next exercise.
+9. Leave your Domain Controller VM open for use in the next exercise.
 
 
 # Proceed to Lab 5 - Exercise 3

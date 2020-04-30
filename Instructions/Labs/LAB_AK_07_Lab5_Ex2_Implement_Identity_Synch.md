@@ -280,6 +280,13 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 3. In the **Microsoft 365 admin center**, you should still be on the **Active Users** page; if not, then in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
+4. To validate the results of the synchronization, you need to see the **Sync Type** of each user. By default, this field is not displayed in the **Active users** list; therefore, you need to customize the **Active users** view to display this field. <br/>
+
+	Scroll to the far-right side of the window, and in the heading bar, select **Choose columns**. 
+5. In the **Choose column** window, select the **Sync type** field and then select **Save**. 
+
+6. In the **Active users** list, scroll to the right and verify the **Sync type** column appears. 
+
 4. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
 	Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
@@ -287,6 +294,8 @@ In this task, you will validate whether the changes you made earlier were synchr
 	‎**Note:** You may need to wait up to 10 minutes before Scotty’s user accounts appears in the list. Continue to refresh the window until you see both his accounts (refreshing the page displays all the users, so you’ll have to enter **Scotty** again in the **Search** box). You cannot proceed until Scotty’s accounts appear. <br/>
 	
 	Because you created an identity mismatch situation, the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account. Each account will have its own mailbox because the mailboxes have different domains and routing addresses; this is the result of the forked identity mismatch that you purposely created. To fix this situation, you will use soft matching to troubleshoot this problem in the next task. <br/>
+	
+	Once Scotty’s two accounts appear, scroll to the right in the **Active users** list to display the **Sync type** of each. You’ll notice that Scotty’s **onmicrosoft.com** account has a sync type of **In cloud**, while his on-premises **CustomDomain.us** account has a sync type of **Synced with Active Directory**. <br/>
 
 	**Note:** In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
 
@@ -295,6 +304,8 @@ In this task, you will validate whether the changes you made earlier were synchr
 6. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
+
+11.	In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync type** indicates that it was **Synced from on-premises**.
 
 7. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
@@ -501,7 +512,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 42. On the **Delete this user?** page, select **Delete user**. Once the user account is deleted, select **Close.**  <br/>
 
-	‎**Note:** If the deletion fails, then refresh the **Active users** list and try again (this is due to the account's sync status).
+	‎**Note:** If the deletion fails, then refresh the **Active users** list and try again as the user’s **Sync type** must be **In cloud**.
 
 43. You now need to update Scotty’s Microsoft 365 account to contain the email address that was assigned to his on-premises account. If you’ll recall, Scotty’s on-premises account originally had only one email address, which was his primary **SMTP** address of **Scotty@Adatum.com**. Previously in this task you changed th primary SMTP address of his on-premises account to **Scotty@XXYYZZa.xxxCustomDomainxxx.xxx.** You will need to do the same here for his Microsoft 365 account. <br/>
 
@@ -573,6 +584,8 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 ### Task 8: Use Hard Matching to Troubleshoot Identity Mismatch  
 
 If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Spencer and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain. In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
+
+When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync type of **In cloud**, while his on-premises **xxxCustomDomainxxx.xxx** account had a sync type of **Synced with Active Directory**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching. 
 
 ‎Since the forced synchronization process created that same two user account situation for Holly Spencer as it did for Scotty Heyward, in this task you will use hard matching to fix the forked identity mismatch that occurred for Holly.
 

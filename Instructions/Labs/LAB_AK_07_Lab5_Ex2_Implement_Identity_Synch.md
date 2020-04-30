@@ -287,7 +287,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 6. In the **Active users** list, scroll to the right and verify the **Sync status** column appears. 
 
-4. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
+7. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
 	Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
 	
@@ -299,41 +299,41 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	**Note:** In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  <br/>
 
-5. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again. 
+8. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again. 
 
-6. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
+9. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-11.	In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** indicates that it was **Synced from on-premises**.
+10.	In the **Groups** list, locate the **Manufacturing** group. Scroll to the right and verify the value in the **Sync status** indicates that it was **Synced from on-premises**.
 
-7. Select the **Manufacturing** group to open the **Manufacturing** group window. 
+11. Select the **Manufacturing** group to open the **Manufacturing** group window. 
 
-8. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. <br/>
+12. In the **Manufacturing** group window, note that it’s a mail-enabled security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. <br/>
 
 	Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner). Verify that the three users that you added as members of the on-premises group have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** group window.
 
-9. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
+13. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
-10. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
+14. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 
 	‎**Connect-MsolService**
 
-11. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
+15. In the **Sign in** dialog box, log in as **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZ is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name) and password of **Pa55w.rd**.   
 
-12. Run the following command that retrieves all the Office 365 groups:   <br/>
+16. Run the following command that retrieves all the Office 365 groups:   <br/>
 
 	‎**Get-MsolGroup** 
 
-13. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the **Print Operators** group.
+17. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the **Print Operators** group.
 
-14. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, you should copy the **ObjectID** for the **Research** group to your clipboard. Drag your mouse over the ObjectId string and then press **Ctrl-C**.   <br/>
+18. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, you should copy the **ObjectID** for the **Research** group to your clipboard. Drag your mouse over the ObjectId string and then press **Ctrl-C**.   <br/>
 
 	‎Then run the following command to display the members of this group. In the command, replace **<ObjectId>** with the value that you copied in the prior step by pressing **Ctrl-V** to paste in the value. <br/>
 	
 	‎**Get-MsolGroupMember -GroupObjectId <ObjectID>**
 
-15. Verify the membership of the Research group does **NOT** contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
+19. Verify the membership of the Research group does **NOT** contain the users who you earlier removed from the group in AD DS. The users who were removed from the group were:  
 
 	- Cai Chu 
 
@@ -341,7 +341,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-16. Repeat steps 14-15 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
+20. Repeat steps 14-15 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members, each of which you should see in the list of group members:  
 
 	- Bernardo Rutter
 
@@ -349,7 +349,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-17. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
+21. Once you have completed the validation steps, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next two tasks when troubleshooting the identity mismatch between Scotty Heyward’s two user accounts in Microsoft 365.
  
 
 ### Task 7: Use Soft Matching to Troubleshoot Identity Mismatch
@@ -568,15 +568,15 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 57. You must then synchronize the on-premises email addresses for Scotty with his Microsoft 365 account by running a force sync. Since all of the email addresses match up between his on-premises account and his Microsoft 365 account, the synchronization process will map the two accounts together for synchronization purposes.  <br/>
 
-	‎In your **Domain Controller VM**, in **Windows PowerShell** (which should still be open), run the following command that executes a force sync on the server that is running Azure AD Connect (for our lab, this is your Domain Controller):   <br/>
+	‎Select the PowerShell icon on the taskbar to display the PowerShell window and run the following command to enable directory synchronization:   <br/>
 	
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  <br/>
 	
 	‎**Note:** You may need to wait up to 10 minutes for the synchronization process to complete.  
 
-58. You now want to see if the identity mismatch was corrected in Scotty’s Microsoft 365 account. Navigate to the **Microsoft 365 admin center**, select **Active users**, and in the **Search** field, enter **Scotty** to display Scotty Heyward’s user account.   <br/>
+58. You now want to see if the identity mismatch was corrected in Scotty’s Microsoft 365 account. In your browser, select the **Microsoft 365 admin center** tab, which should be displaying the **Active users** list (if not, navigate to there now). In the **Search** field, enter **Scotty** to display Scotty Heyward’s user account.   <br/>
 
-	‎You should only see one user account, and if you select it, you’ll see the XXYYZZa.xxxCustomDomainxxx.xxx address listed as Scotty’s primary email address, and you’ll see his onmicrosoft.com and mail.onmicrosoft.com addresses listed as email aliases. This user account should also have a sync status of “Synced from on-premises”.
+	‎You should only see one user account, and if you select it, you’ll see the **XXYYZZa.xxxCustomDomainxxx.xxx** address listed as Scotty’s **Primary email address**, and you’ll see his **onmicrosoft.com** and **mail.onmicrosoft.com** addresses listed as email **Aliases**. 
 
 59. Leave your Domain Controller VM open, as well as Windows PowerShell, which will be used in the next task.
  
@@ -585,7 +585,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 If you’ll recall, you earlier created identity mismatch situations where the email addresses in Holly Spencer and Scotty Heyward’s on-premises accounts and their cloud accounts each pointed to a different domain. In the prior task where you reviewed the results of the forced synchronization, you verified that the forced synchronization process ended up creating two user accounts for Scotty in Microsoft 365 – one for his **onmicrosoft.com** account and one for his on-premises **XXYYZZa.xxxCustomDomainxxx.xxx** account. Each of Scotty’s accounts had its own mailbox because the mailboxes had different domains and routing addresses. In a normal situation in which the two accounts have the same UPN, you will end up with one user account that has multiple SMTP address in the email address property chain.  
 
-When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync status of **In cloud**, while his on-premises **xxxCustomDomainxxx.xxx** account had a sync status of **Synced with Active Directory**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching. 
+When verifying the results of the forced synchronization in the earlier task, you noticed that Scotty’s **onmicrosoft.com** account had a sync status of **In cloud**, while his on-premises **xxxCustomDomainxxx.xxx** account had a sync status of **Synced from on-premises**. This was the result of the forked identity mismatch that we purposely created. You fixed this situation for Scotty in the prior task using soft matching. 
 
 ‎Since the forced synchronization process created that same two user account situation for Holly Spencer as it did for Scotty Heyward, in this task you will use hard matching to fix the forked identity mismatch that occurred for Holly.
 
@@ -603,29 +603,23 @@ When verifying the results of the forced synchronization in the earlier task, yo
 
 3. Open **Notepad**, then copy the **objectGUID** and paste it in **Notepad.**
 
-4. At this point, you are ready to run a PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. However, sometimes when an indentity mismatch situation is created followed by a synchronization run, the sync process changes the user's alias in his or her Microsoft 365 account. For example, **holly@M365xZZZZZZ.onmicrosoft.com** may be changed to **hollyXXXX@M365xZZZZZZ.onmicrosoft.com** (where XXXX is some arbitrary string of text appended to the end of the alias). Therefore, you should verify first whether this occurred by checking the Active users list for Holly to see what her Username is - whether it's holly or hollyXXXX. <br/>
-
-	In **Internet Explorer**, select your **Microsoft 365 admin center** tab and then navigate to the **Active users** page. Enter **holly** in the **Search** field on the right side of the menu bar. Note the alias for Holly's **onmicrosoft.com** account; this is the Username you will use in the next step.	
-
-5. Run the following command to get the object ID of Holly’s **Microsoft 365** user account. <br/>
-
-	**Note:** When you enter the **UserPrincipalName** in this command, you must enter the **onmicrosoft.com** value that you found in the prior step when you searched for Holly's accounts. The alias portion of the UPN will either be **holly** or **hollyXXXX**. In the command example below, it uses **holly** since that would typically be the case; however, if the sync process appended a value to the end of the **holly** alias, then enter that value instead. Also, don’t forget to replace ZZZZZZ with the tenant ID provided by your lab hosting provider.  <br/>
+4. At this point, you are ready to run a PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. <br/>
 
 	**Get-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” |Select-Object -Property “ObjectID”**  <br/>
 	
 	‎**Note:** If you compare the object ID from this cloud account with the objectGuid that you earlier retrieved from Holly’s on-premises account, you’ll set that they don’t match. In the next steps you will perform a hard match to get them in sync.
 
-6. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
+5. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
 
 	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID {paste in the objectGuid that you copied earlier to Notepad}**  
 
-7. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
+6. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  
 
-8. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
+7. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
 
-9. Leave your Domain Controller VM open for use in the next exercise.
+8. Leave your Domain Controller VM open for use in the next exercise.
 
 
 # Proceed to Lab 5 - Exercise 3

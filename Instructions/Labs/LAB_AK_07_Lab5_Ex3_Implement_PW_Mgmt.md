@@ -34,15 +34,17 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 13. On the **Azure Active Directory admin center** page, in the left-hand navigation pane, select **All services**.
 
-14. On the **All services** page, in the middle pane under the **Identity** group, select **Azure Active Directory**. 
+14. On the **All services** page, under the **Identity** group, select **Azure Active Directory**. 
 
-15. On the **Adatum Corporation – Overview** page, in the middle pane under the **Manage** group, select **Azure AD Connect**.
+15. On the **Adatum Corporation | Overview** page, in the middle navigation pane under the **Manage** section, select **Azure AD Connect**.
 
-16. On the **Adatum Corporation – Azure AD Connect** page, in the detail pane on the right, under the **USER SIGN IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-Through Authentication**. 
+16. On the **Adatum Corporation | Azure AD Connect** page, in the detail pane on the right, under the **USER SIGN IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-Through Authentication**. 
 
-17. On the **Pass-through authentication** page, review the list of servers on which your pass-through authentication agents are installed, and then close the **Pass-through authentication** page. 
+17. On the **Pass-through authentication** page, review the list of servers on which your pass-through authentication agents are installed.
 
-18. Leave the Azure AD admin center open as you will use it in the next task.
+18. Close the **Pass-through authentication** page, and then close the **Adatum Corporation | Overview** page. You should now be back to the **All services** page in the **Azure Active Directory admin center".
+
+19. Leave the **Azure Active Directory admin center** open as you will use it in the next task.
    
 
 ### Task 2: Deploy Azure AD Smart Lockout
@@ -51,35 +53,35 @@ Adatum’s CTO has asked you to deploy Azure AD Smart Lockout, which assists in 
 
 The CTO is anxious to implement Smart Lockout because it will lock out the attackers while letting Adatum’s users continue to access their accounts and be productive. The CTO has asked you to configure Smart Lockout so that users can’t use the same password more than once, and they can’t use passwords that you deem too simplistic or common. 
 
-1. On the Domain Controller (LON-DC1), open **Server Manager** if it’s not already open.
+1. On the Domain Controller (LON-DC1), select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
 
 2. In **Server Manager**, select **Tools** in the upper-right menu bar, and in the drop-down menu, select **Group Policy Management.**
 
-3. Maximize the **Group Policy Management** window.
+3. Maximize the **Group Policy Management** window, if necessary.
 
-4. You want to edit the group policy that includes your organization's account lockout policy.   <br/>
+4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree, expand **Forest:Adatum.com**, then expand **domain**, and then expand **Adatum.com**.  <br/>
 
-	‎In the root console tree, under **Adatum.com**, right-click on **Default Domain Policy,** and then in the drop-down menu, select **Edit**.
+	‎Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
 
 5. Maximize the **Group Policy Management Editor** window.
 
 6. In the **Default Domain Policy** tree in the right-hand pane, browse to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Account Policies.**
 
-7. Select **Account Lockout Policy**.
+7. In the **Account Policies** folder, select **Account Lockout Policy**.
 
-8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You’re going to use the **Azure AD admin center** to assign these values.   <br/>
+8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Azure AD admin center** to assign these values.   <br/>
 
-	‎In Internet Explorer, select the tab displaying the **Azure Active Directory admin center** that you used in the prior task. 
+	‎In **Internet Explorer**, select the **All services** tab; this takes you to the **Azure Active Directory admin center**. 
 
 9. In the **Azure Active Directory admin center**, in the left-hand navigation pane, select **Azure Active Directory**.
 
-10. In the **Adatum Corporation – Overview** page, in the middle pane under the **Manage** section, select **Security**.
+10. In the **Adatum Corporation | Overview** page, in the middle navigation pane under the **Manage** section, scroll down and select **Security**.
 
-11. In the **Security – Getting started** window, in the middle pane under the **Manage** section, select **Authentication Methods**.
+11. In the **Security | Getting started** window, in the middle pane under the **Manage** section, select **Authentication Methods**.
 
-12. In the **Authentication methods – Authentication method policy (Preview)** page, , in the middle pane under the **Manage** section, select **Password protection.**
+12. In the **Authentication methods | Authentication method policy (Preview)** page, in the middle pane under the **Manage** section, select **Password protection.**
 
-13. In the **Authentication methods – Password protection** window, in the detail pane on the right, enter the following information:
+13. In the **Authentication methods | Password protection** window, in the detail pane on the right, enter the following information:
 
 	- In the **Custom smart lockout** section:
 
@@ -91,7 +93,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 		- **Enforce custom list**: select **Yes**
 
-		- **Custom Banned Passwords** **List:** Enter the following values (press Enter after entering each value so that each value is on a separate line):
+		- **Custom banned password list:** Enter the following values (press Enter after entering each value so that each value is on a separate line):
 
 			- **Password01**
 
@@ -101,15 +103,25 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 			- **Never4get!!**
 
-14. Select **Save**.
+14. Select **Save** on the menu bar at the top of the page.
 
-15. Log out and try to log in to a random account using one of these banned passwords. Since you set the **Lockout threshold** to **3**, you will need to try logging in 3 times using one or more of the banned passwords to trigger the Smart Lockout threshold. 
+15. You should now test the banned password functionality. Select Holly Spencer's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
 
-16. When the Smart Lockout threshold is triggered, you should receive the following message while the account is locked: **Your account is temporarily locked to prevent unauthorized use. Try again later, and if you still have trouble, contact your admin.**
+16. A new tab will open displaying the **change password** window. Enter **Pa55w.rd** in the **Old password** field, enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **submit**. Note the error message that you receive.
 
-17. Try logging in immediately after receiving this message. You should be prohibited from doing so until after the **90 second lockout duration** that you set. 
+17. In your browser, close the **Change password** tab. 
 
-18. After 90 seconds, try logging in again to verify that you can once again attempt to log in. 
+18. You should now test the lockout threshold functionality. In the **My Dashboard - Azure Active Directory admin center** tab, select Holly Spencer's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**. 
+
+19. Once you are signed out as Holly, the **Pick an account** window will appear. Select **Use another account**. 
+
+20. In the **Sign in** window, enter **laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is the tenant suffix ID assigned to you by your lab hosting provider), and then select **Next**. 
+
+21. On the **Enter password** window, enter any mix of letters and then select **Sign in**. Note the invalid password error message. Repeat this step 2 more times. Since you set the **Lockout threshold** to **3**, note the error message that you receive after the third attempt. Laura's account has been temporarily locked to prevent unauthorized access. <br/>
+
+	**Note:** You will be prohibited from logging in as Laura until after the **90 second lockout duration** that you set earlier. 
+
+22. After 90 seconds, try logging in again to verify that you can log in. 
  
 
 # End of Lab 5

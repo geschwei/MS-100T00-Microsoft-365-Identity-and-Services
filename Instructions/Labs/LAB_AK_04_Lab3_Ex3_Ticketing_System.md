@@ -138,7 +138,7 @@
 <ul>
 <li>Address: If you copied the IT Services site URL from the earlier step, then paste that in now; otherwise, enter <strong>https://M365xZZZZZZ.sharepoint.com/sites/</strong><strong>ITservices</strong> (where ZZZZZZ is <strong>your tenant ID</strong> provided by your lab hosting provider) 
   <br><br><strong>Important:</strong> By default, the Address field is prefilled with &ldquo;http://&rdquo;. If you manually enter the URL, you must change this to &ldquo;https://&rdquo;; otherwise, your connection to the IT Services site will fail.</li>
-<li>Name: <strong>Service Desk Requests</strong></li>
+<li>Name: This is the name of the new distribution list that will be created in this site. For Adatum's new ticketing system, enter <strong>Service Desk Requests</strong>.</li>
 <li>Description: (optional) &ndash; leave blank</li>
 </ul>
 </li>

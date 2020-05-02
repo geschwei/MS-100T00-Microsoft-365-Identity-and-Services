@@ -136,10 +136,10 @@
 <li>In the ribbon, under the <strong>External Table Data</strong> section, select the <strong>Export </strong>drop-down arrow. In the menu that appears, select <strong>Export Table to SharePoint List</strong>.</li>
 <li>An <strong>Export Table to SharePoint List &ndash; Step 1 of 2</strong> window will appear. Enter the following information:
 <ul>
-<li>Address: If you copied the IT Services site URL from the earlier step, then paste that in now; otherwise, enter <strong>https://M365xZZZZZZ.sharepoint.com/sites/</strong><strong>ITservices</strong> (where ZZZZZZ is <strong>your tenant ID</strong> provided by your lab hosting provider) 
+<li><strong>Address:</strong> If you copied the IT Services site URL from the earlier step, then paste that in now; otherwise, enter <strong>https://M365xZZZZZZ.sharepoint.com/sites/</strong><strong>ITservices</strong> (where ZZZZZZ is <strong>your tenant ID</strong> provided by your lab hosting provider) 
   <br><br><strong>Important:</strong> By default, the Address field is prefilled with &ldquo;http://&rdquo;. If you manually enter the URL, you must change this to &ldquo;https://&rdquo;; otherwise, your connection to the IT Services site will fail.</li>
-<li>Name: This is the name of the new distribution list that will be created in this site. For Adatum's new ticketing system, enter <strong>Service Desk Requests</strong>.</li>
-<li>Description: (optional) &ndash; leave blank</li>
+<li><strong>Name:</strong> This is the name of the new distribution list that will be created in this site. For Adatum's new ticketing system, enter <strong>Service Desk Requests</strong>.</li>
+<li><strong>Description:</strong> (optional) &ndash; leave blank</li>
 </ul>
 </li>
 <li>Select <strong>Next</strong>.</li>

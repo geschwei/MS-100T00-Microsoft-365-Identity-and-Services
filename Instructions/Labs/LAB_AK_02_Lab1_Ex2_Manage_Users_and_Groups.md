@@ -53,7 +53,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 9. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
 
-10. In the **Roles information** that appears, select **Admin center access**. By doing so, the most commonly used Microsoft 365 administrator roles are displayed below this option and are available to be assigned. 
+10. In the **Roles** section, select **Admin center access**. By doing so, the most commonly used Microsoft 365 administrator roles are enabled below this option. 
 
 	**Note:** All of the admin roles will be displayed if you select **Show all by category**. For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of most commonly used roles.
 
@@ -61,7 +61,7 @@ Holly Spencer is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 12. On the **Review and finish** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-13. On the **Holly Spencer added to active users** page, select **Show** that appears next to the string of asterisks for the **Password**. Verify that the password is **Pa55w.rd** and then select **Close.** 
+13. On the **Holly Spencer added to active users** page, under the **User details** section, verify Holly's password is **Pa55w.rd** and then select **Close.** 
 
 	**Note:** If you accidentally entered a different password, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
 

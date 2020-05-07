@@ -11,7 +11,6 @@ In the prior lab exercise that when Power Apps created the app for the Service D
 - **Screen 3 – Edit screen.** The Edit screen has data entry fields for adding information for a new record or changing information for an existing record.  
 
 When you initially create these screens, you will just create their forms with their basic structure. Once the screens are in place, you will then add trigger mechanisms to these screens to add, view, edit, and delete records in your SharePoint list. 
-
  
 
 ### Task 1:  Create the Browse screen for your Power App
@@ -84,16 +83,10 @@ In your role as Holly Spencer, you will begin the process of creating a canvas a
 
 21. You have now finished creating the browse screen for your new app. Leave the Power Apps tabs open in your browser and proceed to the next task to create the Detail screen.
 
- 
-
-###  
 
 ### Task 2 – Create the Detail screen for your Power App  
 
 Holly is now ready to create screen #2 for her app, which is the Detail screen. In a Power App, the browse screen displays a summary of the items from the selected data source, which in this case is the Service Desk Requests list for the IT Services site. If the user selects a particular item from this browse list, the app will display all the fields for that item within a Detail screen. You will create the Detail screen for your app in this task. 
-
- 
-
  
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the Browse screen for your app in the prior task. The tab should be displaying the **Insert** tab from the menu bar; if not, select it now.   
@@ -151,7 +144,6 @@ Holly is now ready to create screen #2 for her app, which is the Detail screen. 
 ### Task 3:  Assign a trigger action to view the Detail screen
 
 In the prior task, you created the DetailScreen1 that will be used to display the detailed record information for an item that the user selects in BrowseScreen1. However, this will do you no good until you configure a trigger action within the app that instructs it to display DetailScreen1 when the user selects a record in BrowseScreen1. You must also configure a trigger action that enables you to return from DetailScreen1 back to BrowseScreen1. You will create both trigger actions in this task. 
-
  
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the detail screen for your app.   
@@ -195,10 +187,9 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎To change the color of the **Back arrow** icon, select this field and then select the color of your choice from the color menu that appears. Note that you can select different colors to see which one you prefer. Each time you select a color, the color of the **Back arrow** icon in the **DetailScreen1** image changes to that selection.   
 ‎  
 ‎Once you have selected the color that you want to use, press the **Esc** key on your keyboard to close the color menu. This will keep **Icon1** selected (if you select anywhere else, it will also close the color menu, but **Icon1** will be unselected and you will have to select it again to add a tool tip to the icon).
-
-  
-‎Scroll further down the **Properties pane** for the until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter.   
 ‎  
+‎Scroll further down the **Properties pane** for the until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter. 
+‎  	
 ‎**Note:** Hovering your mouse over the Back arrow icon on DetailScreen1 does not display the tool tip. You will test this out when you finish all other edits in this task and use Preview mode to test the changes that you made. 
 
 11. You now need to configure this **Back arrow** icon so that when the user selects it, **BrowseScreen1** is returned. In the **Tree view** pane, select the **Icon1** control under **DetailScreen1** if it’s not already selected.   
@@ -220,16 +211,11 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎Repeat the process that you learned earlier to save the file and return back to the Power App studio. Do **NOT** publish the app yet as you still have additional changes to make.
 
 15. Leave the Power Apps tabs open in your browser and proceed to the next task to create the Edit screen.
-
- 
-
  
 
 ### Task 4 - Create the Edit screen for your Power App  
 
 Holly is now ready to create screen #3 for her app, which is the Edit screen. This screen will enable users to add new Service tickets to the SharePoint list and edit and delete existing ones. You will create the Edit screen for your app in this task. 
-
- 
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the trigger actions for the Detail screen in the prior task. The tab should be displaying the **Insert** tab from the menu bar; if not, select it now.   
 ‎  
@@ -263,9 +249,6 @@ Holly is now ready to create screen #3 for her app, which is the Edit screen. Th
 
 9. Leave the Power Apps tabs open in your browser and proceed to the next task to assign a trigger action to the Detail screen.
 
- 
-
- 
 
 ### Task 5 - Assign trigger actions to create a new entry
 
@@ -412,15 +395,9 @@ The Edit screen that you created in the prior task provides the form needed to e
 
  
 
- 
-
- 
-
 ### Task 6 - Assign trigger actions to edit and delete a record
 
 Now that Holly has created the ability to add a new record into the SharePoint list, she wants to be able to edit and delete existing records as well. In this task, you will create the triggers needed to edit and delete a record in your app.
-
- 
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the Edit screen in the prior task. The tab should be displaying the **Insert** tab from the menu bar; if not, select it now. 
 
@@ -507,16 +484,11 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 ‎Repeat the process that you learned earlier to save the file and return back to the Power App studio. Do **NOT** publish the app yet as you still have additional changes to make.
 
 22. Leave the Power Apps tabs open in your browser and proceed to the next task to add a control that refreshes the connected data source.
-
- 
-
  
 
 ### Task 7 - Assign trigger to refresh the connected data source
 
 With the three screens for her app now in place, Holly wants to add one more control to the Browse screen. This control will refresh the connected data source (the SharePoint list) to ensure that what the user sees in the Browse screen is always current.
-
- 
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the Edit and Delete triggers in the prior task. The tab should be displaying the **Insert** tab from the menu bar; if not, select it now. 
 

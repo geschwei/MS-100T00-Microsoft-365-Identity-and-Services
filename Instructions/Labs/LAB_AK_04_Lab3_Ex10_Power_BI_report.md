@@ -163,7 +163,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 44. Since the Title field is referred to as the Issue Status in the SharePoint list, you want to rename it here to reflect this name in the chart.
 
-  - In the **Legend** field, select the **drop-down arrow** next to **Title**, and in the menu, select **Rename**. Enter **Issue Status** as the new name of the **Legend**.
+	- In the **Legend** field, select the **drop-down arrow** next to **Title**, and in the menu, select **Rename**. Enter **Issue Status** as the new name of the **Legend**.
 
 	- In the **Value** field, select the **drop-down arrow** next to **Count of** **Title**, and in the menu, select **Rename**. Enter **Count of Issue Status** as the new name of the **Value**.
 

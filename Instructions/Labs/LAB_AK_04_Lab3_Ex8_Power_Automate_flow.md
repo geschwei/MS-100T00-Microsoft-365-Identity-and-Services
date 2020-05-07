@@ -19,7 +19,7 @@ To improve communication between management and internal users, Holly Spencer ha
 
 4. If you are not already signed in with your corporate account, you will be prompted for your credentials, in which case you should enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and a Password of **Pa55w.rd**. 
 
-5. In the **Welcome to Power Automate** screen**,** select your **country/region** from the drop-down list and then select **Get Started**. 
+5. In the **Welcome to Power Automate** screen, select your **country/region** from the drop-down list and then select **Get Started**. 
 
 6. On the **Power Automate studio** screen, validate that Holly Spencer’s initials (**HS**) appear in the user icon in the upper right corner of the screen. If this user icon is someone other than Holly, then select the user icon, select **Sign out**, and then sign back in as Holly (**Holly@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your tenant ID, and a password of **Pa55w.rd**). 
 
@@ -57,7 +57,7 @@ To improve communication between management and internal users, Holly Spencer ha
 
 	- **To -** enter **MOD** in the field. A list of user accounts starting with MOD will appear. This list should include two MOD Administrator accounts – one for Adatum’s MOD Administrator, and one for the IT Consultant’s MOD Administrator. Select **Adatum’s MOD Administrator**, whose tenant suffix ID was provided to you by your lab hosting provider. Do **NOT** select the account whose tenant suffix ID is your fellow student’s tenant ID that was assigned to you by your instructor. 
 
-	- **Subject –** Select inside the **Subject** field; this will display a list of parameters that you can choose from to display in the **Subject** line of the email. This list includes various connectors as well as each field from the **Active Cases** view that you selected earlier. Scroll down in the list and select **Issue Title.** Note that when you make this selection, **Issue Title** appears in the **Subject** field**.** The subject line of the email will be the actual **Issue Title** for the item that was added or edited in the SharePoint list.   
+	- **Subject –** Select inside the **Subject** field; this will display a list of parameters that you can choose from to display in the **Subject** line of the email. This list includes various connectors as well as each field from the **Active Cases** view that you selected earlier. Scroll down in the list and select **Issue Title.** Note that when you make this selection, **Issue Title** appears in the **Subject** field. The subject line of the email will be the actual **Issue Title** for the item that was added or edited in the SharePoint list.   
 ‎  
 ‎**Note:** You can add additional parameters to the subject line; however, for this lab you will only select the **Issue Title**.  
 ‎  

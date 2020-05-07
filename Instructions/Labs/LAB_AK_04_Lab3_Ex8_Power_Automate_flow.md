@@ -102,9 +102,8 @@ To improve communication between management and internal users, Holly Spencer ha
 	- Customer – enter **Megan**, then select **Megan Bowen** from the list
 
 	- Assign To – enter **Allan**, then select **Allan Deyoung** from the list   
-‎
-
-**Note:** Alternatively, you could open the Power App that you created in the earlier exercise and create an entry to the Service Desk Requests SharePoint list. You could open a new browser tab and enter the following URL to access the app in Power Apps studio: **https://make.powerapps.com**
+‎<br/>
+	**Note:** Alternatively, you could open the Power App that you created in the earlier exercise and create an entry to the Service Desk Requests SharePoint list. You could open a new browser tab and enter the following URL to access the app in Power Apps studio: **https://make.powerapps.com**
 
 26. After you create the entry on the SharePoint list, switch back to the browser tab containing the flow (the tab name will have changed to **Run History | Power Automate**). 
 
@@ -122,9 +121,9 @@ To improve communication between management and internal users, Holly Spencer ha
 
 33. On the **Office 365 home** page, select **Outlook**. This will open the **Inbox** for the **MOD Administrator**.
 
-34. The **Inbox** should include an email from **Holly Spencer** with a subject line that starts with: **New or edited Service Request**. Select this email to open it.  
-‎  
-‎**Note:** It may take a few minutes for the email to show up in the MOD Administrator’s inbox.
+34. The **Inbox** should include an email from **Holly Spencer** with a subject line that starts with: **New or edited Service Request**. Select this email to open it.  <BR/>
+
+	**Note:** It may take a few minutes for the email to show up in the MOD Administrator’s inbox.
 
 35. After opening the email, verify the full subject line is: **New or edited Service Request: &lt;Issue Title from the record that you created&gt;**. Also verify that the body of the email message is correct, and that if you included any parameters in the message (such as the Customer and Assign To values), that they are correct as well.
 

@@ -105,5 +105,5 @@ In your role as Holly, you will update this DLP policy to include Outlook as an 
 ‎This displays a message below the menu bar that says: **Your flow is off: Service Request Flow for new/modified tickets.** This message simply indicates the status of the flow prior to it being turned **On.**
 
 12. Select the **Refresh** icon that appears to the right of the address bar. In the **Details** section, notice the **Status** of the flow, which should change from **Suspended** to **On**.  
-‎
+
 13. In your browser, close the **Power Automate** tabs, but leave the **SharePoint** tabs that are related to your **Service Desk Requests** list open for the next exercise. 

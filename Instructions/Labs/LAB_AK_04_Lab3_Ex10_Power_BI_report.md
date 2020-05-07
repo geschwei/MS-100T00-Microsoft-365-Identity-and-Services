@@ -144,9 +144,8 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 	- issueTitle – rename to **Issue Title** 
 
 	- Title – rename to **Issue Status**  
-‎
-
-This completes the **Table** visualization. 
+<br/>
+	This completes the **Table** visualization. 
 
 39. You will now create a second visualization for this page; this will be a **Stacked Column Chart** visualization that displays the total count of service tickets by **Location** and **Issue Status**.  
 ‎  
@@ -197,10 +196,8 @@ This completes the **Table** visualization.
 	- The toggle button is currently set to **Off**. Select this toggle button to turn it **On**, which will display a border around the chart.
 
 	- Select the down-arrow next to **Border** to see the available border options. In the **Color** option, change the color of the border to the color of your choice.   
-‎
-
-This completes the stacked chart visualization.  
-‎
+<br/>
+	This completes the stacked chart visualization.  
 
 54. Now that both visualizations are complete, note the data displayed for each. Both visualizations are based on ALL the records stored in the **Service Desk Requests** SharePoint List. Now let’s see what happens when you create data filters that filter the records viewed in each visualization. For example, if you created a filter for a specific customer, only the records for that customer would be processed by each visualization (as opposed to all customers that would be displayed by default).   
 ‎  
@@ -334,7 +331,7 @@ As part of her pilot project, Holly wants to share the dashboard that she just c
 
 9. Open your Edge browser and enter the following URL in the address bar: **https://app.powerbi.com**
 
-10. In the **Sign in** window, scroll down on the page until you reach the **Sign up and get started today** pane, enter **Laura@M365xZZZZZZ.****onmicrosoft.com** (where ZZZZZZ is your tenant suffix id) in the **Enter your work email address** field, and then select **USE IT FREE**.
+10. In the **Sign in** window, scroll down on the page until you reach the **Sign up and get started today** pane, enter **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant suffix id) in the **Enter your work email address** field, and then select **USE IT FREE**.
 
 11. If a **You have an account with us** window appears that indicates Laura is already using another Microsoft service, then select **Sign in** to enter your existing password. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**.
 

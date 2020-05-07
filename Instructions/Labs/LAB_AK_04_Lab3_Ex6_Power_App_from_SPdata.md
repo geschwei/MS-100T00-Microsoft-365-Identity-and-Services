@@ -215,7 +215,7 @@ The app that Holly created in the earlier task is known as a canvas app. It was 
 
 4. In the **Properties** pane, notice that on the top of the window it says **Gallery.** This indicates the type of component and underneath it shows the name given to the gallery component, **BrowseGallery1**. 
 
-5. In the **Properties** pane, locate the **Layou**t property for the gallery, which displays **Title, subtitle, and body.** Select the drop-down arrow for this field to see the available layout values in a **List** window. If you wanted to, this is where you would modify the layout of the gallery. Select the **Title, subtitle, and body** layout option to return to the **BrowseGallery1** window**.** 
+5. In the **Properties** pane, locate the **Layou**t property for the gallery, which displays **Title, subtitle, and body.** Select the drop-down arrow for this field to see the available layout values in a **List** window. If you wanted to, this is where you would modify the layout of the gallery. Select the **Title, subtitle, and body** layout option to return to the **BrowseGallery1** window. 
 
 6. On the **Properties** pane, locate the **Fields** property (it appears above the Layout property). Select **Edit**, which appears to the right of the **Fields** property. A new **Data** window opens which shows the fields from the SharePoint list that are mapped to the Body, Subtitle, and Title fields that appear for each record displayed in the browse screen.   
 ‎  

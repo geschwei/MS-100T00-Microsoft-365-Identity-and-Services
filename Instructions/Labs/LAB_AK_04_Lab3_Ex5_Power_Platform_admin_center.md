@@ -1,6 +1,6 @@
 # Module 4 - Lab 3 - Exercise 5 - Review the Power Platform Admin Center
 
-As Adatum begins its transition to Microsoft 365 as their hosted cloud solution, they want to use this opportunity to examine Microsoft’s Power Platform functionality. In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have been asked to expand your Microsoft 365 pilot project to include Microsoft’s Power Platform. Therefore, your first task towards that goal is to familiarize yourself with the Power Platform admin center, which provides a unified portal for administrators to manage environments and settings for Power Apps, Power Automate, and Power BI. 
+As Adatum begins its transition to Microsoft 365 as its hosted cloud solution, they want to use this opportunity to examine Microsoft’s Power Platform functionality. In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have been asked to expand your Microsoft 365 pilot project to include Microsoft’s Power Platform. Therefore, your first task towards that goal is to familiarize yourself with the Power Platform admin center, which provides a unified portal for administrators to manage environments and settings for Power Apps, Power Automate, and Power BI. 
 
 ### Task 1 – Review the Power Platform Admin Center
 

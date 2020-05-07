@@ -186,11 +186,11 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎  
 ‎To change the color of the **Back arrow** icon, select this field and then select the color of your choice from the color menu that appears. Note that you can select different colors to see which one you prefer. Each time you select a color, the color of the **Back arrow** icon in the **DetailScreen1** image changes to that selection.   
 ‎  
-‎Once you have selected the color that you want to use, press the **Esc** key on your keyboard to close the color menu. This will keep **Icon1** selected (if you select anywhere else, it will also close the color menu, but **Icon1** will be unselected and you will have to select it again to add a tool tip to the icon).
-‎  
-‎Scroll further down the **Properties pane** for the until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter. 
-‎  	
-‎**Note:** Hovering your mouse over the Back arrow icon on DetailScreen1 does not display the tool tip. You will test this out when you finish all other edits in this task and use Preview mode to test the changes that you made. 
+‎Once you have selected the color that you want to use, press the **Esc** key on your keyboard to close the color menu. This will keep **Icon1** selected (if you select anywhere else, it will also close the color menu, but **Icon1** will be unselected and you will have to select it again to add a tool tip to the icon). <br/>
+
+	‎Scroll further down the **Properties pane** for the until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter. <br/>
+	
+	‎**Note:** Hovering your mouse over the Back arrow icon on DetailScreen1 does not display the tool tip. You will test this out when you finish all other edits in this task and use Preview mode to test the changes that you made. 
 
 11. You now need to configure this **Back arrow** icon so that when the user selects it, **BrowseScreen1** is returned. In the **Tree view** pane, select the **Icon1** control under **DetailScreen1** if it’s not already selected.   
 ‎  

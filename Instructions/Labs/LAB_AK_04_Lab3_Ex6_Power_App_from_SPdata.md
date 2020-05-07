@@ -130,7 +130,7 @@ Once you create the Power App, you will add a new record using the app, you will
 ‎  
 ‎You should be back in preview mode in the **Power Apps Studio**. In the menu bar at the top of the page, select **File** on the top left side of the screen
 
-32. On the **Settings** page, you should enter the following information**:**
+32. On the **Settings** page, you should enter the following information:
 
 	- Name - **Service Request Ticketing App** 
 

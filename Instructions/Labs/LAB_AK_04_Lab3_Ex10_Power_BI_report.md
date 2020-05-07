@@ -63,7 +63,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎**Note:** If you click on **Service Desk Requests** but do NOT select the check box, the details for the table will display in Preview mode on the right, and the buttons at the bottom of the screen will be disabled. Since you want the buttons enabled, you must select the check box to the left of **Service Desk Requests**.   
 ‎  
-‎**Important:** Even though the **Load** button is highlighted by default, do **NOT** select it or press Enter**!!** There are a couple of fields that need to be manipulated first before you load them into the Power Query editor. You will do that in the next step.
+‎**Important:** Even though the **Load** button is highlighted by default, do **NOT** select it or press Enter!! There are a couple of fields that need to be manipulated first before you load them into the Power Query editor. You will do that in the next step.
 
 23. In the detail pane on the right side of the **Navigator** window, select the scroll bar at the bottom of the window and scroll to the right to view the data. While you will scroll past many fields that you will probably not recognize, look for the fields that are part of your SharePoint list.   
 ‎  
@@ -144,8 +144,8 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 	- issueTitle – rename to **Issue Title** 
 
 	- Title – rename to **Issue Status**  
-<br/>
-	This completes the **Table** visualization. 
+‎  
+‎This completes the **Table** visualization. 
 
 39. You will now create a second visualization for this page; this will be a **Stacked Column Chart** visualization that displays the total count of service tickets by **Location** and **Issue Status**.  
 ‎  
@@ -195,8 +195,8 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 	- The toggle button is currently set to **Off**. Select this toggle button to turn it **On**, which will display a border around the chart.
 
-	- Select the down-arrow next to **Border** to see the available border options. In the **Color** option, change the color of the border to the color of your choice.   
-<br/>
+	- Select the down-arrow next to **Border** to see the available border options. In the **Color** option, change the color of the border to the color of your choice.   <br/>
+	
 	This completes the stacked chart visualization.  
 
 54. Now that both visualizations are complete, note the data displayed for each. Both visualizations are based on ALL the records stored in the **Service Desk Requests** SharePoint List. Now let’s see what happens when you create data filters that filter the records viewed in each visualization. For example, if you created a filter for a specific customer, only the records for that customer would be processed by each visualization (as opposed to all customers that would be displayed by default).   
@@ -383,7 +383,7 @@ Now that Holly has created a report and dashboard and shared it with another Ada
 
 12. Select **Workspaces i**n the **Admin portal’s** navigation pane. **Test Workspace** should appear in the list of Workspaces. Select the **Test Workspace** name, which displays a check mark to the left of the name. In the menu bar that appears above the list, select **Details**. Review the information in the **Details pane** and then close it. 
 
-13. With the **Test Workspace** still selected, select **Edit** on the menu bar**.** In the **Edit workspace pane**, note how you can change the workspace name and description even though you could not add a workspace using the **Power BI Admin portal**. Close the **Edit workspace pane**.
+13. With the **Test Workspace** still selected, select **Edit** on the menu bar. In the **Edit workspace pane**, note how you can change the workspace name and description even though you could not add a workspace using the **Power BI Admin portal**. Close the **Edit workspace pane**.
 
 14. With the **Test Workspace** still selected, select **Access** on the menu bar. In the **Access pane**, note how you can add members to this workspace (you can do this through the **Workspaces** option in the **Power BI Service** as well). In the Enter email addresses field, enter **Patti**. In the list of users whose first name starts with Patti, select **Patti Fernandez** and then select **Add**. As you can see in the bottom portion of the pane, Patti now has **Member** permissions to this workspace. Close the **Access pane**. 
 

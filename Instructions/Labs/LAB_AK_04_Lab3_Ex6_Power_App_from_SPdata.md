@@ -1,4 +1,4 @@
-# Exercise 6 – Create a Power App from a SharePoint data source
+# Module 4 - Lab 3 - Exercise 6 - Create a Power App from a SharePoint data source
 
 In an earlier exercise in this lab, Holly created a Service Request Ticketing system to manage service desk requests. The ticketing system consisted of a SharePoint team site titled **IT Services** and a SharePoint list within this site titled **Service Desk Requests**. Holly populated this list with the service request tickets from Adatum’s old ticketing system. 
 

@@ -157,7 +157,7 @@
 <li>In the <strong>Search</strong> field on the taskbar at the bottom of the desktop, enter <strong>PowerShell</strong>. 
   <br><br><strong>Important: </strong>Because you MUST run several of the commands within this script individually rather than running the entire script at once, you should select <strong>Windows PowerShell ISE </strong>(not Windows PowerShell); therefore, right-click on <strong>Windows PowerShell ISE</strong> and select <strong>Run as administrator</strong>.</li>
 <li>In the <strong>User Account Control</strong> dialog box that appears, select <strong>Yes </strong>to allow this app to make changes to your device.</li>
-<li>In <strong>Windows PowerShell IS</strong>E, in the menu bar, select <strong>File </strong>and then select <strong>Open</strong>. Navigate to <strong>This PC</strong> and then to the <strong>Documents</strong> Select the <strong>ImportCsvFileToSharepointLis</strong>t script and then select <strong>Open</strong>.</li>
+<li>In <strong>Windows PowerShell ISE</strong>, in the menu bar, select <strong>File </strong>and then select <strong>Open</strong>. Navigate to <strong>This PC</strong> and then to the <strong>Documents</strong> Select the <strong>ImportCsvFileToSharepointList</strong> script and then select <strong>Open</strong>.</li>
 <li>In the script, you will run the commands in lines <strong>11-13</strong> together; therefore, select these lines in the script and then select the <strong>Run Selection (F8)</strong> icon on the menu bar.</li>
 <li>If you are prompted to confirm an <strong>Execution Policy Change</strong>, select <strong>Yes to All.</strong></li>
 <li>If you are prompted to confirm a <strong>NuGet provider is required to continue</strong>, select <strong>Yes</strong>.</li>

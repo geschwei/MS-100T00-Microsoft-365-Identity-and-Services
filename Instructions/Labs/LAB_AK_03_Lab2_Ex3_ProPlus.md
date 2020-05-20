@@ -65,24 +65,24 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 17. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes.**
 
-18. In the **Microsoft Office Home** page for Laura, notice that no Office 365 apps appear (since Laura does not have an Office 365 license assigned). Select the **Install Office** drop-down arrow, and then select **Install software**.
+18. In the **Microsoft Office Home** page for Laura, notice that no Microsoft 365 apps appear (since Laura does not have an Office 365 license assigned). Select the **Install Office** drop-down arrow, and then select **Install software**.
 
-19. This displays the **My account** window for Laura. Under the **Office apps &amp; devices** section, select **View apps &amp; devices**. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Office 365 ProPlus. <br/>
+19. This displays the **My account** window for Laura. Under the **Office apps &amp; devices** section, select **View apps &amp; devices**. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
 	‎**Important:** You have just verified that a user cannot download Microsoft 365 Apps for enterprise if he or she has not been assigned an appropriate Office 365 license.
 	
-20. Leave your LON-CL1 VM open and remain signed into Office 365 as Laura Atkins for the next task.
+20. Leave your LON-CL1 VM open and remain signed into Microsoft 365 as Laura Atkins for the next task.
 
 
 ### Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps for enterprise
 
 Holly is now going to test whether users can be prohibited from downloading Microsoft 365 Apps for enterprise if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.<br/>
 	
-1. Switch back the Domain Controller VM (**LON-DC1**). You should still be logged in as Holly Spencer, Adatum’s Enterprise Administrator.
+1. Switch back the Domain Controller VM (**LON-DC1**). You should still be logged into Microsoft 365 as Holly Spencer, Adatum’s Enterprise Administrator.
 
 2. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the left-hand navigation pane. Select **Settings**, and then within the group, select **Org Settings**. 
 
-3. In the **Settings** window, scroll down through the list of services and select **Office software download settings.**
+3. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office software download settings.**
 
 4. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently selected. Select this check box so that it’s blank, which turns this feature **Off**. 
 
@@ -116,7 +116,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 15. In the **Stay signed in?** window, select **Yes.**
 
-16. In the **Microsoft Office Home** page for Laura, notice that the Office 365 apps now appear because Laura has been assigned an Office 365 license. <br/>
+16. In the **Microsoft Office Home** page for Laura, notice that the Microsoft 365 apps now appear because Laura has been assigned an Office 365 license. <br/>
 
 	Select the **Install Office** drop-down arrow, and then in the drop-down menu, select **Install software**.<br/>
 	
@@ -138,7 +138,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 24. Once you receive a message indicating the changes are saved, select the **X** in the upper-right corner of this window to close it. 
 
-25. Now that this global Office download option is turned back On, let’s see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. To do this, you must switch back to the Client 1 VM (**LON-CL1**).
+25. Now that this global Office download option is turned back On, you should see if it affects Laura’s ability to download Microsoft 365 Apps for enterprise. To do this, you must switch back to the Client 1 VM (**LON-CL1**).
 
 26. In the Client 1 VM, Laura's Edge browser should still be open, and the **Apps and devices** page should be displayed along with the error message that indicated your admin has turned off Office installs. Since you just turned this option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise (Note: unlike the previous time when you refreshed this page and it did not refresh Laura's Office 365 license status, refreshing this page after updating the global download setting works). 
 
@@ -157,15 +157,15 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 1. On the Client 1 VM (LON-CL1), you should still be logged in as Laura Atkins. 
 
-2. You should still be in Laura’s **My account** window, since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, the **Install Office** button now appears, since Laura is assigned an Office 365 E5 license and the global Office download setting is turned On.<br/>
+2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, the **Install Office** button now appears since Laura is assigned an Office 365 E5 license and the global Office download setting is turned On.<br/>
 
 	‎**Important:** Selecting this **Install Office** button will install the 64 bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps &amp; devices**, which opens the **Apps &amp; devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  <br/>
 
-	Since Laura wants to install the 64 bit English version of Microsoft 365 Apps for enterprise, select the **Install Office** button.
+	Since Laura wants to install the 64-bit English version of Microsoft 365 Apps for enterprise, select the **Install Office** button.
 		
 3. In the **Just a few more steps** window that appears, select **Close**.
 
-4. In the notification bar that appears at the bottom of the page, select **Save** to download the 64 bit Microsoft 365 Apps for enterprise installation wizard to the client PC.
+4. In the notification bar that appears at the bottom of the page, select **Save** to download the 64-bit Microsoft 365 Apps for enterprise installation wizard to the client PC.
 
 5. Once the Microsoft 365 Apps for enterprise installation file has finished downloading, select **Run** in the notification bar that appears at the bottom of the page.
 

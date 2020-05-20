@@ -96,7 +96,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 19. Now that you have added a record into the Service Desk Ticketing system using the Power App, you want to test how the app works in editing an existing record.   
 ‎  
-‎Select the **right arrow (&gt;)** for any item. This displays the **Details** screen for that particular item. On this screen, you can either edit the record by selecting the **pencil icon** at the top of the form, or you can delete the record by selecting the **trash can icon**.  
+‎Select the **right arrow (&gt;)** for any item. This displays the **Details** screen for that item. On this screen, you can either edit the record by selecting the **pencil icon** at the top of the form, or you can delete the record by selecting the **trash can icon**.  
 ‎  
 ‎For this record, select the **pencil icon** to edit it. Change any of the fields (**Hint:** to easily identify your change in the Service Desk Requests list, change the **Issue Title** value to **Edit Test** or some other easily identifiable text. When you are done, select the **check mark** icon to save your change. 
 
@@ -112,7 +112,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 24. Now that you have added and changed records in the Service Desk Ticketing system using the Power App, you want to test how the app works in deleting an existing record.   
 ‎  
-‎Scroll down through the list and select the **right arrow (&gt;)** for the record that you added at the start of this task. This displays the **Details** screen for that particular item. 
+‎Scroll down through the list and select the **right arrow (&gt;)** for the record that you added at the start of this task. This displays the **Details** screen for that item. 
 
 25. To delete this record, select the **trash can** icon.
 
@@ -178,7 +178,7 @@ Now that Holly Spencer has built her first Power App and has used it to successf
 
 7. Select the fourth icon, the database icon, to display the **Data Sources** pane. This pane displays the source used in the current app, which is the **Service Desk Requests** list. From here you can add additional data sources to your app if you desire (you will not do so for the Service Request Ticketing app). Select the **X** to close the pane. 
 
-8. Select the final icon to display the **Advanced Tools** pane, which is currently empty because it’s under development. Select the **X** to xlose this pane.
+8. Select the final icon to display the **Advanced Tools** pane, which is currently empty because it’s under development. Select the **X** to close this pane.
 
 9. Select the **Tree view** icon to re-open the **Tree view** pane. 
 

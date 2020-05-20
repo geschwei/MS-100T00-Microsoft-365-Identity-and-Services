@@ -24,7 +24,7 @@ In your role as Holly Spencer, you want to review the Power Platform admin cente
 
 8. In the **New environment** pane that appears, enter the following information:
 
-	- Name: **MS100-Test**
+	- Name: **Adatum-Test**
 
 	- Type: **Sandbox**
 

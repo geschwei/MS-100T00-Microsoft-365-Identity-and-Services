@@ -623,7 +623,9 @@ When verifying the results of the forced synchronization in the earlier task, yo
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  
 
-9. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
+9. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account. <br/>
+
+	**Congratulations!** You have used hard matching to fix the forked identity mismatch that occurred for Holly. 
 
 10. Leave your Domain Controller VM open for use in the next exercise.
 

@@ -96,7 +96,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	- Display name: When you tab into this field, **Scotty Heyward** will appear.
 
-	- Username: Ente **Scotty** as the username   <br/>
+	- Username: Enter **Scotty** as the username   <br/>
 
 		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It’s already prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain; however, to create the identity mismatch, select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). So Scotty’s username should appear as: ‎**Scotty@M365xZZZZZZ.onmicrosoft.com**  
 
@@ -118,7 +118,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 7. In the **Optional settings** window, select **Next**.
 
-8. On the **Review and finish** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
+8. On the **Review and finish** window, review your selections. If anything must be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything looks good, select **Finish adding**. 
 
 9. On the **Finish** page, select **Close.** 
 
@@ -126,7 +126,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 	‎Switch to the **Exchange Server VM** (LON-EX1). 
 
-11. In the **Exchange Server VM**, log in as the **Administrator** (adatum\administrator) and **Pa55w.rd**. <br/>
+11. In the **Exchange Server VM**, log in as the **Administrator** and **Pa55w.rd**. <br/>
 
 	‎**Note:** If you receive a notification that you need some updates, simply ignore it for lab purposes. If a **Networks** pane appears, select **Yes** to allow your PC to be discoverable by other PCs on this network. 
 
@@ -138,7 +138,7 @@ By purposely creating this mismatch scenario, you will learn how to use Soft Mat
 
 15. Maximize the Internet Explorer browser session that opens. <br/>
 
-	**Note:** The address bar may be displayed in red, and a **Certificate error** message may appear at the end of it. You can ignore this message as it is simply the result of how the lab hosting provider's VM environment is not correctly interpreting system certificates. If you want to, you can take a moment to verify this. To do so, select the **Certificate error**, then in the **Mismatched Address** dialog box select **View certificates**, then in the **Certificate** window verfify the expiration date for the certificate.  Then select the **Certification Path** tab and verify in the **Certificate status** field that **This certificate is OK**. Close this window and proceed.  <br/>
+	**Note:** The address bar may be displayed in red, and a **Certificate error** message may appear at the end of it. You can ignore this message as it is simply the result of how the lab hosting provider's VM environment is not correctly interpreting system certificates. If you want to, you can take a moment to verify this. To do so, select the **Certificate error**, then in the **Mismatched Address** dialog box select **View certificates**, then in the **Certificate** window verify the expiration date for the certificate.  Then select the **Certification Path** tab and verify in the **Certificate status** field that **This certificate is OK**. Close this window and proceed.  <br/>
 
 	In the on-premises **Exchange Admin Center** sign-in screen, **adatum\administrator** may be prefilled in the **Domain\user name** field; if it isn’t, you need to enter it. Enter **Pa55w.rd** in the **Password** field, and then select **sign in.**
 
@@ -181,7 +181,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 3. In **Server Manager**, select **Tools** at the top right side of the screen, and then in the drop-down menu select **Active Directory Users and Computers.**
 
-4. You will begin by adding members to one of the built-in security groups. In the **Active Directory Users and Computers** console tree, under **Adatum.com**, select the **Builtin** folder. This will display all the builtin security group folders that were automatically created at the time the **Adatum.com** domain was created.
+4. You will begin by adding members to one of the built-in security groups. In the **Active Directory Users and Computers** console tree, under **Adatum.com**, select the **Builtin** folder. This will display all the built-in security group folders that were automatically created at the time the **Adatum.com** domain was created.
 
 5. In the detail pane on the right, double-click the **Print Operators** security group.
 
@@ -287,7 +287,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 6. In the **Active users** list, scroll to the right and verify the **Sync status** column appears. 
 
-7. Let’s begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you’ll recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
+7. Begin by validating the synchronization results for the addition of the Scotty Heyward user accounts. If you recall, you created an identity mismatch situation in Task 1 where the email addresses in Scotty’s on-premises account and his cloud account each pointed to a different domain. Let’s see how this manifested itself in Microsoft 365 following the synchronization.   <br/>
 	
 	Locate **Scotty Heyward** in the **Active users** list. To quickly find his record, enter **Scotty** in the **Search** box that appears on the menu bar above list of users and then press Enter.  <br/>
 	
@@ -301,7 +301,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 8. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Groups** again. 
 
-9. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add memmbers to the group as you did in the earlier task. <br/>
+9. In the **Groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add members to the group as you did in the earlier task. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
@@ -313,7 +313,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Spencer as the group owner). Verify that the three users that you added as members of the on-premises group have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** group window.
 
-13. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **Powershell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
+13. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 
 14. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 
@@ -382,7 +382,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 	
 	‎When prompted to continue, enter **Y** to select **Yes**.  <br/>
 	
-	‎**Important:** The command that you run in this step turns off Directory Synchronization, which if left turned Off, would trigger all synchronized identities to be changed to cloud-only identities. Obviously, this is not something you would do in a real-world environment if you want to maintain synchronized accounts. Directory Synchronization is turned off here so that you can make the necessary corrections to Scotty’s accounts, at which time you will enable synchronization so that you can run a forced sync to apply your changes. It’s very important that you understand the implications of turning off Directory Synchronization as well as the rare cases such as this when you would need to do so.  
+	‎**Important:** The command that you run in this step turns off Directory Synchronization, which if left turned Off, would trigger all synchronized identities to be changed to cloud-only identities. Obviously, this is not something you would do in a real-world environment if you wanted to maintain synchronized accounts. Directory Synchronization is turned off here so that you can make the necessary corrections to Scotty’s accounts, at which time you will enable synchronization so that you can run a forced sync to apply your changes. It’s very important that you understand the implications of turning off Directory Synchronization as well as the rare cases such as this when you would need to do so.  
 	
 7. Select your **Internet Explorer** icon from the taskbar. There’s an email address associated with Adatum’s accepted domain that you must add as an email alias for Scotty’s on-premises and Microsoft 365 accounts. <br/>
 
@@ -410,7 +410,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 15. Select **Cancel** to return to the list of recipient mailboxes.
 
-16. So now that you know what a normal, synchronized account looks like, let’s take a look at Scotty’s situation. As you’ll recall from the earlier task, the identity mismatch scenario that you created resulted in two accounts for Scotty in the Microsoft 365 **Active users** list. Each of Scotty’s accounts will have its own mailbox because the mailboxes will have different domain and routing addresses.   <br/>
+16. So now that you know what a normal, synchronized account looks like, you should analyze Scotty’s situation. As you recall from the earlier task, the identity mismatch scenario that you created resulted in two accounts for Scotty in the Microsoft 365 **Active users** list. Each of Scotty’s accounts will have its own mailbox because the mailboxes will have different domain and routing addresses.   <br/>
 
 	‎In the list of mailboxes, select the account for **Scotty Heyward** once it appears, and then select the **pencil (edit)** icon on the menu bar.  <br/>
 	
@@ -478,7 +478,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 	‎Enter **Scotty@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) and then select **OK**. <br/>
 	
-	**Note:** In the **Email address** list, this address now appears as Scotty's seconday SMTP address (non-bolded and lower-case smtp).
+	**Note:** In the **Email address** list, this address now appears as Scotty's secondary SMTP address (non-bolded and lower-case smtp).
 
 33. You now need to create an email alias that matches the address of the **mail.onmicrosoft.com** accepted domain. On the email address tab, select the **plus (+)** sign to add a new email address.
 
@@ -566,7 +566,7 @@ In this task you will soft match Scotty Heyward’s forked accounts. Soft matchi
 
 56. In the **Services** window, scroll down to **Microsoft Azure AD Sync**, select it, and then select **Start** in the left-hand pane. Once the service has started, close the **Services** window.
 
-57. You must then synchronize the on-premises email addresses for Scotty with his Microsoft 365 account by running a force sync. Since all of the email addresses match up between his on-premises account and his Microsoft 365 account, the synchronization process will map the two accounts together for synchronization purposes.  <br/>
+57. You must then synchronize the on-premises email addresses for Scotty with his Microsoft 365 account by running a force sync. Since all the email addresses match up between his on-premises account and his Microsoft 365 account, the synchronization process will map the two accounts together for synchronization purposes.  <br/>
 
 	‎Select the PowerShell icon on the taskbar to display the PowerShell window and run the following command to enable directory synchronization:   <br/>
 	
@@ -603,23 +603,29 @@ When verifying the results of the forced synchronization in the earlier task, yo
 
 3. Open **Notepad**, then copy the **objectGUID** and paste it in **Notepad.**
 
-4. At this point, you are ready to run a PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. <br/>
+4. At this point, you are ready to run a PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. However, sometimes when an identity mismatch situation is created followed by a synchronization run, the sync process changes the user's alias in his or her Microsoft 365 account. For example, **holly@M365xZZZZZZ.onmicrosoft.com** may be changed to **hollyXXXX@M365xZZZZZZ.onmicrosoft.com** (where XXXX is some arbitrary string of text appended to the end of the alias). Therefore, you should verify first whether this occurred by checking the **Active users** list for Holly to see what her Username is - whether it's holly or hollyXXXX. 
+
+	In Internet Explorer, select your **Microsoft 365 admin center** tab and then navigate to the **Active users** page. Enter **holly** in the **Search** field on the right side of the menu bar. Note the alias for Holly's **onmicrosoft.com** account; this is the Username you will use in the next step.
+
+5. Run the following PowerShell command to get the object ID of Holly's Microsoft 365 account, which should be **holly@M365xZZZZZZ.onmicrosoft.com**. <br/>
+
+	**Note:** When you enter the **UserPrincipalName** in this command, you must enter the **onmicrosoft.com** value that you found in the prior step when you searched for Holly's accounts. The alias portion of the UPN will either be **holly** or **hollyXXXX**. In the command example below, it uses **holly** since that would typically be the case; however, if the sync process appended a value to the end of the holly alias, then enter that value instead. Also, don’t forget to replace ZZZZZZ with the tenant ID provided by your lab hosting provider. 
 
 	**Get-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” |Select-Object -Property “ObjectID”**  <br/>
 	
 	‎**Note:** If you compare the object ID from this cloud account with the objectGuid that you earlier retrieved from Holly’s on-premises account, you’ll set that they don’t match. In the next steps you will perform a hard match to get them in sync.
 
-5. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
+6. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
 
 	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID {paste in the objectGuid that you copied earlier to Notepad}**  
 
-6. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
+7. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  
 
-7. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
+8. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
 
-8. Leave your Domain Controller VM open for use in the next exercise.
+9. Leave your Domain Controller VM open for use in the next exercise.
 
 
 # Proceed to Lab 4 - Exercise 3

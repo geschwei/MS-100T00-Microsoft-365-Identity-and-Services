@@ -8,7 +8,7 @@ With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly revie
 
 As you continue in your role as Holly Spencer, you are ready to review the steps involved in creating and managing mail flow recipients.
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. You should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
 
 2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
@@ -55,7 +55,7 @@ As you continue in your role as Holly Spencer, you are ready to review the steps
 
 In this task you will create two types of groups within Exchange Online. The first is a distribution list of email recipients, which is used to create a one-stop email list for contacting users simultaneously rather than having to email each recipient individually. The second type of group is an Office 365 group.
 
-1. Your browswer should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
+1. Your browser should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
 
 	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Office 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
 
@@ -69,7 +69,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wibler**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wilber**, select the **add-&gt;** button, and then select **OK**.
 
 	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, select **Allan Deyoung**. Then hold down the **Ctrl** key and select **Diego Siciliani** and **Lynne Robbins**. This will select all three users at once, at which point you should select the **add-&gt;** button and then select **OK**. 
 
@@ -103,7 +103,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 10. Under **Members**, select the **plus (+)** sign, and in the **Select Members** window, select **Isaiah Langer**. Then hold down the **Ctrl** key and select **Joni Sherman**, and **Patti Fernandez**. This process will select all three users. Select the **add-&gt;** button and then select **OK.** 
 
-11. Select **Save**and then select **OK** once the changes are saved successfully.
+11. Select **Save** and then select **OK** once the changes are saved successfully.
 
 
 ### Task 3 - Upgrade Distribution Lists
@@ -141,7 +141,7 @@ Adatum’s CTO wants Holly to implement a standard naming policy throughout the 
 
 1. In the **Exchange admin center**, you should still be displaying the list of groups. In the menu bar that appears over the list of groups, select the **ellipsis** (...) icon, and in the menu that appears, select **Configure group naming policy.**
 
-2. In the **group naming policy** window that appears, the **general** tab in the left-hand pane appears by default. Under the **Group Naming Policy** section, you can select a prefix and a suffix. In the **For the prefix, apply the following sequence:** field, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK** (do NOT select the **Add** button; this is for adding additional prefix values, whihc you will not do).
+2. In the **group naming policy** window that appears, the **general** tab in the left-hand pane appears by default. Under the **Group Naming Policy** section, you can select a prefix and a suffix. In the **For the prefix, apply the following sequence:** field, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK** (do NOT select the **Add** button; this is for adding additional prefix values, which you will not do).
 
 3. In the **For the suffix, apply the following sequence:** field, select the drop-down arrow and select **Text**. This opens an **Enter text** window. In the **Enter text** field, enter **Group** and then select **OK**.
 
@@ -186,7 +186,7 @@ A room mailbox is a resource mailbox that is assigned to a physical location, su
 
 8. In the **Maximum booking lead time (days)** field, change the value from **180** days to **60** days.  <br/>
 
-	‎**Note:** The standard duration of 180 days can be too long for scheduling out most meetings. As a best practice, organizations should establish a company standard so events do not over-book locations.
+	‎**Note:** The standard duration of 180 days can be too long for scheduling out most meetings. As a best practice, organizations should establish a company standard so that events do not over-book locations.
 
 9. In the **Maximum duration (hours)** field, change the value from **24.0** hours to **120** hours (this is five days, or one work week). 
 
@@ -283,7 +283,7 @@ Adatum has experienced a recent rash of malware infections. The company's CTO ha
 
 8. Below the first check box that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second check box that you selected in the prior step.
 
-9. Select **Save**, then select **OK** once the update is complete, adn then select **OK** once the changes are saved successfully.
+9. Select **Save**, then select **OK** once the update is complete, and then select **OK** once the changes are saved successfully.
 
 
 ### Task 8 – Manage Connection Filters

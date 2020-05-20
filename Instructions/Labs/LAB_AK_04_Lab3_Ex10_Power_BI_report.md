@@ -51,7 +51,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 17. In the **Power BI Desktop**, you want to create a new report based on the Service Desk Ticketing system you created earlier. You want to begin by naming the report, so select **File** from the menu bar, select **Save as,** and name your file **ServiceRequestPowerBI**. By default, the file will be saved in the **Documents** folder. Select **Save**.
 
-18. In the ribbon that appears at the top of the screen below the menu bar, select **Get data**. At the bottom of the the menu that appears, select **More…** 
+18. In the ribbon that appears at the top of the screen below the menu bar, select **Get data**. At the bottom of the menu that appears, select **More…** 
 
 19. In the **Get Data** window that opens, type **SharePoint** in the Search box that appears above the left-hand navigation pane. In the detail pane on the right, three SharePoint options will appear. Since you used the on-premises version of SharePoint to create the Service Request Ticketing system, select **SharePoint Online List**, and then select **Connect**.
 
@@ -230,7 +230,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 Adatum’s IT Consultant has explained to Holly that once she has created a report that contains one or more visualizations, she can then create a dashboard based on that report. In fact, she could create a dashboard from a report, from scratch, from a dataset, or by duplicating an existing dashboard. Since pinning visualizations from a report that's already been built onto a dashboard is the quickest and easiest way to create a dashboard, Holly has decided that this is the route she is going to take. For her pilot project, Holly has decided to create a dashboard from the report that she created in the prior task.
 
-Dashboards can only be created in Power BI Online because they are a feature of the Power BI service; they cannot be created in Power BI Desktop. Unlike Power BI reports, which are based on a single dataset and can created in both the Power BI Service and Power BI Deskstop, dashboards can be based on one or more datasets and are a feature of just the Power BI Service. 
+Dashboards can only be created in Power BI Online because they are a feature of the Power BI service; they cannot be created in Power BI Desktop. Unlike Power BI reports, which are based on a single dataset and can created in both the Power BI Service and Power BI Desktop, dashboards can be based on one or more datasets and are a feature of just the Power BI Service. 
 
 **Note:** At the end of this task are steps on how to use your mobile device to view the dashboard that you created. These steps are strictly optional. 
 
@@ -258,7 +258,7 @@ Dashboards can only be created in Power BI Online because they are a feature of 
 ‎  
 ‎**Note:** If you do not select anything when this pop-up window appears, it will close after a few seconds and you will remain in the report window. If this happens to you (for example, you were reading this instruction and the pop-up window suddenly closed), then in the left-hand navigation pane, select **My workspace**, select the **Dashboards** tab (if necessary), and then select the **ServiceRequestDashboard** you just created.
 
-9. On your Dashboard page, notice at the top of the page how you can ask a question about your data. Select **Ask a question about your data**, which displays a Q&A screen with several predefined questions related to the data displayed in your dashbaord. Select one of the available questions. If you enter your own question, Power BI will show a list of available questions that map to the text that you are typing.   
+9. On your Dashboard page, notice at the top of the page how you can ask a question about your data. Select **Ask a question about your data**, which displays a Q&A screen with several predefined questions related to the data displayed in your dashboard. Select one of the available questions. If you enter your own question, Power BI will show a list of available questions that map to the text that you are typing.   
 ‎  
 ‎If you select **Exit Q&amp;A** on the top left corner of the screen, you will return to the dashboard. However, in the next step you want to pin the stacked column visualization to the dashboard, so you need to return to the report view.  
 ‎  

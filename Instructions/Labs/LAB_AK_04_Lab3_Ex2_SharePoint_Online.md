@@ -6,7 +6,7 @@ In this exercise you will review some of the basic administrative functions in S
 
 A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been asked to create a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. You should still be logged into your Domain Controller VM (LON-DC1) as **Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
@@ -32,7 +32,7 @@ A team site includes a group of related web pages, a default document library fo
 
 		- Privacy settings: Given the confidential nature of much of the IT department's information, select **Private – only members can access this site**
 
-		- Time zone: since this group is located in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
+		- Time zone: since this group is in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
 
 		- Site Description: **This site is used by the IT department** 
 

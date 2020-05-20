@@ -26,7 +26,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Domain Controller VM (LON-DC1). If your VM environment opens with one of the other machines (LON-CL1 or LON-EX1), then switch to the LON-DC1 VM now.
 
-2. In your lab hosting provider's VM environment, you need to select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-DC1 as the **Administrator** (adatum\administrator) with the password **Pa55w.rd**. 
+2. In your lab hosting provider's VM environment, you need to select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-DC1 as the **Administrator** with the password **Pa55w.rd**. 
 
 3. If you receive a **Networks** warning message asking if you want this PC to be discoverable by other PCs and devices on this network, select **Yes.**
 
@@ -50,7 +50,7 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show all** to display all the navigation menu options.
 
-13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Settings**. 
+13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Org Settings**. 
 
 14. In the **Settings** window, the **Services** tab is displayed by default in the menu bar at the top of the screen. Since you want to update the organization profile, select the **Organization profile** tab, and then in the list of organization settings, select **Organization information**.
 
@@ -156,7 +156,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 ### Task 4 – Prepare for External Access using Microsoft Teams 
 
-When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Teams. To enable this communication between your tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propogate the changes through your tenant. Therefore, you will turn on this External Access feature in this task so that the internal changes made by the system have time to propogate through your tenant by the time you eventually get to the Module 4 lab.
+When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Teams. To enable this communication between your tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propagate the changes through your tenant. Therefore, you will turn on this External Access feature in this task so that the internal changes made by the system have time to propagate through your tenant by the time you eventually get to the Module 4 lab.
 
 **Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant suffix ID (ZZZZZZ) from each of their domains (this would be each student's M365xZZZZZZ.onmicrosoft.com domain, where ZZZZZZ is each student's unique tenant suffix ID provided by your lab hosting provider). The instructor will then assign to each student the tenant suffix ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant suffix ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant suffix ID from your fellow student (in other words, you will enter the **M365xZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant suffix ID).
 

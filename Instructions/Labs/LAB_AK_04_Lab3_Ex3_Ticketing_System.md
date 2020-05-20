@@ -280,8 +280,7 @@
 <li>You will now create a view showing all closed cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
-<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:</li>
-</ol>
+<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
 <li>In the <strong>Name</strong> section:
 <ul>
@@ -319,13 +318,12 @@
 </ul>
 </li>
 </ul>
-<ol start="11">
+</li>
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will now create a view showing all cases for each support agent. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
-<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:</li>
-</ol>
+<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
 <li>In the <strong>Name</strong> section:
 <ul>
@@ -354,19 +352,16 @@
 </ul>
 </li>
 </ul>
-<ol start="16">
-<li>In the<strong> Filter </strong>section:</li>
-</ol>
+<li>In the<strong> Filter </strong>section:
 <ul>
 <li>select <strong>Show all items in this view</strong></li>
 </ul>
-<ol start="17">
+</li>
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will finish this task by creating a view showing all cases for each customer. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
-<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:</li>
-</ol>
+<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
 <li>In the <strong>Name</strong> section:
 <ul>
@@ -395,13 +390,12 @@
 </ul>
 </li>
 </ul>
-<ol start="22">
-<li>In the<strong> Filter </strong>section:</li>
-</ol>
+</li>
+<li>In the<strong> Filter </strong>section:
 <ul>
 <li>select <strong>Show all items in this view</strong></li>
 </ul>
-<ol start="23">
+</li>
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>Leave the browser and all existing tabs open on LON-CL1 for a later exercise in which you will integrate the new Service Desk Ticketing system with Microsoft Teams.</li>
 </ol>

@@ -33,9 +33,9 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 ‎  
 ‎**Important:** You have created a data policy that has one of the two connectors used in your flow (SharePoint) in the **Business data only** group. However, Holly has forgotten that she actually has two connectors in her flow; the second connector is **Office 365 Outlook**, which manages the email that is automatically created and sent by the flow. This connector remains in the **No business data allowed** **(default)** group.   
 ‎  
-‎In practice, you would not implement this policy as you need both connectors used by the flow in the same group. Continue on to see how having connectors in both groups impacts the flow. 
+‎In practice, you would not implement this policy as you need both connectors used by the flow in the same group. Continue on to see how connectors in both groups impact the flow. 
 
-10. In your browser, select the **Manage your flows | Microsoft Power Automate** tab to return back to the **Flows** window that displays your flow in the **Team flows** tab. 
+10. In your browser, select the **Manage your flows | Microsoft Power Automate** tab to return to the **Flows** window that displays your flow in the **Team flows** tab. 
 
 11. Select the **Service Request Flow for new/modified tickets**, which displays the detail information about the selected flow.   
 ‎  

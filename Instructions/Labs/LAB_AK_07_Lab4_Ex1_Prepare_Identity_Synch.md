@@ -120,7 +120,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 18. Select the **File Explorer** icon on the taskbar. 
 
-19. In the **C:\Deployment Tools\IdFix** folder, double-click the **Verbose {date} {time}.txt** file to open **Notepad** and view the updated transactions in the transaction log. Maximixe the **Notepad** window and locate the three **Update** transactions that appear at the bottom of the file; these transactions reflect the updates you just initiated. When you have finished reviewing this log file, close Notepad. 
+19. In the **C:\Deployment Tools\IdFix** folder, double-click the **Verbose {date} {time}.txt** file to open **Notepad** and view the updated transactions in the transaction log. Maximize the **Notepad** window and locate the three **Update** transactions that appear at the bottom of the file; these transactions reflect the updates you just initiated. When you have finished reviewing this log file, close Notepad. 
 
 20. Select the **IdFix tool** icon on the taskbar. 
 
@@ -138,7 +138,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 24. On the menu bar at the top of the window, select **Apply**. 
 
-25. In the **Apply Pending** diaolog box that appears, select **Yes**.  <br/>
+25. In the **Apply Pending** dialog box that appears, select **Yes**.  <br/>
 
 	‎**Note:** This will update the two user objects and correct their UPN. 
 

@@ -237,8 +237,7 @@
 <li>You will begin by creating a view showing all active cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
-<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:</li>
-</ol>
+<li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
 <li>In the <strong>Name</strong> section:
 <ul>
@@ -276,7 +275,7 @@
 </ul>
 </li>
 </ul>
-<ol start="6">
+</li>
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will now create a view showing all closed cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>

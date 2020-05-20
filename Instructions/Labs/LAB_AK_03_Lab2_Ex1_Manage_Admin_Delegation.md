@@ -49,7 +49,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	To view all the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
 	
-	**Get-MsolRole**
+	**Get-MsolRole |Select-Object -Property Name,Description |Out-GridView**
 
 6. Holly now wants to assign **Patti Fernandez** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
 
@@ -132,7 +132,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 20. On the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
 
-21 As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords may have been compromised. Per Adatum's company policy, Lynne must reset their passwords to a temporary value, and then force them to reset their password at their next login.   <br/>
+21. As the **Helpdesk administrator**, Lynne has permission to change user passwords. Lynne was recently contacted by **Diego Siciliani** and **Allan Deyoung**, who each reported that their passwords may have been compromised. Per Adatum's company policy, Lynne must reset their passwords to a temporary value, and then force them to reset their password at their next login.   <br/>
 
 	‎In the **Active users** list, as you move your mouse from one user account to another, notice the **key (Reset a password)** icon that appears to the right of each user's name. Select the key icon that appears to the right of **Diego Siciliani's** name.
 
@@ -146,9 +146,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 26. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
-27 In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark.  
+27. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark.  
 
-28 Select **Reset**.<br/>
+28. Select **Reset**.<br/>
 
 29. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** check box. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. </br>
 
@@ -158,9 +158,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Check Allan Deyoung's account, since you just reset his password; uncheck his account if necessary. Only Nestor's account should be selected. 
 
-31 In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
+31. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
 
-32 In the **Block this user?** window, select the **Block this user from signing in** check box, and then select **Save changes.** 
+32. In the **Block this user?** window, select the **Block this user from signing in** check box, and then select **Save changes.** 
 
 33. The **Block this user?** window should display a message indicating that Nestor is now blocked from signing in. Select the **X** in the upper right-hand corner of the window to close it. 
 

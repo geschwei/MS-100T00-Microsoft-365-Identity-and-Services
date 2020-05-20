@@ -14,7 +14,7 @@ In your role as Holly Spencer, you want to review the Power Platform admin cente
 
 4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen. In the **Settings** pane that appears, select **Admin center**. This opens a new Internet Explorer session that displays the **Power Platform admin center.** <br/>
 
-	**Note:** As of this writing, the IE session does not fully expand and the Maximize option for the screen is not enabled. 
+	**Note:** As of this writing, the IE session does not fully expand and the Maximize option for the screen is disabled. 
 
 5. In the **Power Platform admin center**, in the left-hand navigation pane, select **Environments**. In the list of **Environments**, note how there is only one environment, the **Adatum Corporation (default)** environment. Select the **Adatum Corporation (default)** environment and review the information available for this environment. 
 

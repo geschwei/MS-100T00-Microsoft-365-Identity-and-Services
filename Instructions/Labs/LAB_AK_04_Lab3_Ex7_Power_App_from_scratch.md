@@ -2,7 +2,7 @@
 
 In the previous exercise, you used Power Apps to automatically build a canvas app from the SharePoint data source. In this exercise you will build a similar app from scratch, using the same SharePoint list as the data source. The purpose of this exercise is for you to learn how to build an app from scratch. 
 
-In the prior lab exercise that when Power Apps created the app for the Service Desk Ticketing system, it automatically created the screens used in the app – the browse screen, the detail screen, and the edit screen. When you create a canvas app from scratch, you will manually create each of these screens instead:   
+In the prior lab exercise when Power Apps created the app for the Service Desk Ticketing system, it automatically created the screens used in the app – the browse screen, the detail screen, and the edit screen. When you create a canvas app from scratch, you will manually create each of these screens instead:   
 
 - **Screen 1 – Browse screen.** The Browse screen will display the list of records from your SharePoint list, but it will only display a limited set of fields from each record. 
 

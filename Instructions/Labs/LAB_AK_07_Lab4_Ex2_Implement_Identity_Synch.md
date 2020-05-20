@@ -613,19 +613,19 @@ When verifying the results of the forced synchronization in the earlier task, yo
 
 	**Get-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” |Select-Object -Property “ObjectID”**  <br/>
 	
-	‎**Note:** If you compare the object ID from this cloud account with the objectGuid that you earlier retrieved from Holly’s on-premises account, you’ll set that they don’t match. In the next steps you will perform a hard match to get them in sync.
+6. Compare the object ID from this cloud account with the objectGuid that you earlier retrieved from Holly’s on-premises account. Verify the two values do not match. In the remaining steps in this task, you will perform a hard match to get them in sync.
 
-6. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
+7. Run the following command to change the Immutable ID on Holly’s cloud account to the same value as her on-premises objectGuid so that synchronization can occur account. Remember, the alias portion of the UPN will either be **holly** or **hollyXXXX**; use the same value that you used in the prior step. Also, don’t forget to replace ZZZZZZ with your unique tenant ID provided by your lab hosting provider.:  <br/>
 
 	‎**Set-Msoluser -UserPrincipalName “holly@M365xZZZZZZ.onmicrosoft.com” -ImmutableID {paste in the objectGuid that you copied earlier to Notepad}**  
 
-7. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
+8. Run the following command to force AD Connect to synchronize only the changes that were made:  <br/>
 
 	‎**Start-ADSyncSyncCycle -PolicyType Delta**  
 
-8. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
+9. After 10 minutes, navigate to the Microsoft 365 admin center and confirm that Holly has only one account.
 
-9. Leave your Domain Controller VM open for use in the next exercise.
+10. Leave your Domain Controller VM open for use in the next exercise.
 
 
 # Proceed to Lab 4 - Exercise 3

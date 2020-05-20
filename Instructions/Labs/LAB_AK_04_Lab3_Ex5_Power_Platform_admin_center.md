@@ -12,23 +12,17 @@ In your role as Holly Spencer, you want to review the Power Platform admin cente
 
 3. Open a new tab in your browser and enter the following URL in the address bar: **https://make.powersapps.com** 
 
-4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen and select **Admin center**. This opens the **Power Platform admin center.**
+4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen. In the **Settings** pane that appears, select **Admin center**. This opens a new Internet Explorer session that displays the **Power Platform admin center.** <br/>
 
-5. In the **Power Platform admin center**, in the left-hand navigation pane, **Environments** is selected by default. In the list of **Environments**, note how there is only one environment, the **Adatum Corporation (default)** environment. Select this environment. 
+	**Note:** As of this writing, the IE session does not fully expand and the Maximize option for the screen is not enabled. 
 
-6. The **Details** page for the **Adatum Corporation** environment is displayed. 
+5. In the **Power Platform admin center**, in the left-hand navigation pane, select **Environments**. In the list of **Environments**, note how there is only one environment, the **Adatum Corporation (default)** environment. Select the **Adatum Corporation (default)** environment and review the information available for this environment. 
 
-7. In the **Acces**s pane on the right, under **Environment admin**, select **See all**. 
+6. In the navigation pane at the top of the screen (**Environments > Adatum Corporation (default))**, select **Environments**.
 
-8. On the **Environment Admin** page, select the **Add people** button. 
+7. You have you have decided to create a new environment. On the menu bar at the top of the screen, select **+New** to create a new environment.
 
-9. In the **Add people to the Environment Admin security role** pane, select inside the **Search for a name, group name, or email address** field and enter **MOD**. In the list of users that appears whose name starts with **MOD**, select **MOD Administrator** and then select **Add**. 
-
-10. This returns you to the **Environment Admin** page which should display the **MOD Administrator**. In the navigation thread at the top of the page (**Environments &gt; Adatum Corporation (default) &gt; Environment Admin**), select **Environments**
-
-11. You have decided to create a new environment. On the menu bar at the top of the **Environments** page, select **+New**.
-
-12. In the **New environment** pane that appears, enter the following information:
+8. In the **New environment** pane that appears, enter the following information:
 
 	- Name: **MS100-Test**
 
@@ -38,23 +32,16 @@ In your role as Holly Spencer, you want to review the Power Platform admin cente
 
 	-  Create a database for this environment: **No**
 
-13. Select **Save.**   
-‎  
-‎**Note:** Trying to save this new environment record will result in an error message at the top of the **New environment** pane. The reason for this error is that a new environment requires at least 1 Gb of database capacity, which is not available with the tenant provided in your lab environment.   
-‎  
-‎Select **Cancel**.
+9. Select **Save.** <br/>
 
-14. In the **Power Platform admin center**, in the left-hand navigation pane, select **Resources**. 
+	**Note:** Trying to save this new environment record will result in an error message at the top of the window. This message indicates you need at least 1 Gb of database capacity, which is not available in your VM lab environment. Close the **New environment** window. 
 
-15. Under the **Resources** group, select **Dynamics 365** **Apps**. This page displays the Dynamics 365 apps that are available to be installed in your tenant. 
+10. Explore other areas of the **Power Platform admin center**, as desired. 
 
-16. Under the **Resources** group, select **Data integration**. This page displays statistics for all the latest Power Platform runs. Once you create your Power App and Power Automate flow in the upcoming lab exercises, you can return to this page to see the runs that have been made. 
+11. When you are finished, close the **Power Platform admin center** tab in your browser.
 
-17. Explore other areas of the **Power Platform admin center**, as desired. 
+12. In your browser, leave the **Power Apps** tab open for the next lab exercise.
 
-18. When you are finished, close the **Power Platform admin center** tab in your browser.
-
-19. In your browser, leave the **Power Apps** tab open for the next lab exercise.
-
+ 
 
 # Proceed to Lab 3 - Exercise 6

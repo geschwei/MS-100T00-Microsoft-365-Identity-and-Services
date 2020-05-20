@@ -4,7 +4,7 @@ In this exercise you will be introduced to some troubleshooting tools in Office 
 
 ### Task 1 - Troubleshoot Mail Flow in Office 365  
 
-Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenario to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none), and another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
+Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none), and another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
 1. Switch to your Domain Controller (LON-DC1) VM. You should still be logged into Microsoft 365 as Holly Spencer.
 
@@ -30,7 +30,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 12. Under **Message Header Analyzer**, it indicates that the Message Analyzer Header has moved to a new location. Select the link for the new location; this will open a new tab that displays the Message Header Analyzer. 
 
-13. In the **Message Analyer Header** window, paste the message (right-click and select **Paste**) in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**. 
+13. In the **Message Analyzer Header** window, paste the message (right-click and select **Paste**) in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**. 
 
 14. Note the diagnostic information that appears at the bottom of the window, below the **Received headers** row. To display this information, you must minimize the message header section in which you pasted in the information from the undelivered email. Select the minus sign (-) on the left-side of the **Insert the message header you would like to analyze** row to minimize the diagnostic data you pasted in. <br/>
 	
@@ -50,7 +50,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 17. In this email, you will send the mail to a non-existent mailbox in a valid domain (outlook.com). In the **To** field, enter an email address of **<a random series of numbers followed by your name>@outlook.com** (for example, 123456LynneRobbins@outlook.com). After entering the email address, tab off the **To** field to commit the entered value. <br/>
 	
-	**Note:** When this lab was originally written, it asked the student to enter **difflop8675399@outlook.com** in the **To** field. The lab author never assumed anyone would ever create a mailbox called **difflop8675399** in the outlook.com domain. This worked just fine for several months, until someone actually created this mailbox in outlook.com. So now you are asked to create a mailbox with a random series of numbers followed by your name. Hopefully the combination you choose is not a valid mailbox. If you do not receive an NDR reply within a minute (or less) after sending the email, then you can assume someone has created that mailbox in the outlook.com domain. If this occurs, then send another email with a mailbox address that you feel is completely bogus. 
+	**Note:** When this lab was originally written, it asked the student to enter **difflop8675399@outlook.com** in the **To** field. The lab author never assumed anyone would ever create a mailbox called **difflop8675399** in the outlook.com domain. This worked just fine for several months, until someone actually created this mailbox in outlook.com. So now you are asked to create a mailbox with a random series of numbers followed by your name. Hopefully, the combination you choose is not a valid mailbox. If you do not receive an NDR reply within a minute (or less) after sending the email, then you can assume someone has created that mailbox in the outlook.com domain. If this occurs, then send another email with a mailbox address that you feel is completely bogus. 
 
 18. Enter a subject and some body text and then send the email. 
 
@@ -60,7 +60,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 21. Switch to the **Message Header Analyzer** tab in your browser. 
 
-22. In the **Message Analyer Header** window, paste the message (right-click and select **Paste**) in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**.  <br/>
+22. In the **Message Analyzer Header** window, paste the message (right-click and select **Paste**) in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**.  <br/>
 
 	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, the user's domain (outlook.com) was valid, but the user mailbox was unavailable. 
 
@@ -86,11 +86,11 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 33. In the **Message trace search results** window that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** button that appears above the item list. 
 
-34. Double-click on the first failed message to view the **Message trace details** pane for that message. This displays the sender, recipient, status, and error informationn, as well as the **How to fix it** instructions. Scroll to the bottom of this pane and select the **Close** button to close the message window. <br/>
+34. Double-click on the first failed message to view the **Message trace details** pane for that message. This displays the sender, recipient, status, and error information, as well as the **How to fix it** instructions. Scroll to the bottom of this pane and select the **Close** button to close the message window. <br/>
 
 	Repeat this step for the other failed message. 
 
-35 Close the **Message trace seacrch results** window, and then close the **New message trace** window. This will return you to the **Message trace** window in the **Office 365 Security and Compliance center**.
+35. Close the **Message trace search results** window, and then close the **New message trace** window. This will return you to the **Message trace** window in the **Office 365 Security and Compliance center**.
 
 36. Remain signed into Office 365 as Holly. In your Internet Explorer browser, leave the tabs open for the next task.
   
@@ -111,7 +111,7 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 6. On the **Usage** page, scroll down and view the **Email activity** chart.  <br/>
 
-	‎**Note:** There might be little or no data shown because there is not much mailbox usage in the lab environment. 
+	‎**Note:** There may be little or no data shown due to the limiited mailbox usage in the lab environment. 
 
 7. Scroll back to the top of the **Usage** page and select the **Select a report** drop-down arrow. In the menu that appears, select **Exchange**, and then select **Mailbox usage**. 
 
@@ -129,13 +129,13 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 14. In the **Office 365 Security &amp; Compliance center**, scroll down in the left-hand navigation pane and select **Reports,** and then under the **Reports** section, select **Dashboard.** 
 
-15. Scroll down to any report that has data displayed (for example, **Top senders and recipients**) and click in the chart area to open the **Report Viewer** for that particular report. 
+15. Scroll down to any report that has data displayed (for example, **Top senders and recipients**) and click in the chart area to open the **Report Viewer** for that report. 
 
 16. After reviewing the report, select **Dashboard** in navigation thread at the top of the page (Home > Dashboard > Report Viewer - Security &amp; Compliance) to return to the report dashboard.
 
 17. Repeat these last two steps for any other report that has data displayed.
 
-18. Close the **Security &amp; Compliance center** tab in your Internet Explorer browser, but leave the other Microsoft 365 admin center tabs open for the next task.
+18. Close the **Security &amp; Compliance center** tab in your Internet Explorer browser but leave the other Microsoft 365 admin center tabs open for the next task.
  
 
 ### Task 3 – Submit a Help Request to Microsoft Support
@@ -146,7 +146,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 2. In the left-hand navigation bar, under the **Support** group, select **New service request**.
 
-3. In the **Support Assistant** window that appears, select the Message line at the bottom of the window (which currently displays **Messge e.g. How do I install Office?**) and type the following message: **This is a test of the service request system; a call back is not needed.** When you are done, select the **Send message** arrow icon that appears below the message line.
+3. In the **Support Assistant** window that appears, select the Message line at the bottom of the window (which currently displays **Message e.g. How do I install Office?**) and type the following message: **This is a test of the service request system; a call back is not needed.** When you are done, select the **Send message** arrow icon that appears below the message line.
 
 4. This displays a list of recommended articles related to the issue that you entered.
 

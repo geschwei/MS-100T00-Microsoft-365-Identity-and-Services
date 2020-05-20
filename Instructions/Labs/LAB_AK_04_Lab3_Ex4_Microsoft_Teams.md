@@ -26,7 +26,7 @@ As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the c
 
 9. Under the **Content Sharing** section, review each setting. Set the **Screen sharing mode** to **Single application** and set the **Allow an external participant to give or request control** setting to **On**.
 
-10. Under the **Participants &amp; guests** section, review each setting. Because Adatum has had issues in the past with non-invited external users dialing into meetings, you have been asked to set the **Allow dial-in users to bypass the lobby** option to **Off**. This setting controls whether people who dial in by phone will automatically join the meeting or have to wait in the lobby until they are admitted to the call. Because the **Automatically admit people** setting is set to **Everyone in your organization**, anyone who dials-in will wait in the lobby until admitted; this includes both Adatum and non-Adatum participants. You may decide to turn this setting On if it proves to be problematic in practice, but for now, you want to begin with this level of control. 
+10. Under the **Participants &amp; guests** section, review each setting. Because Adatum has had issues in the past with non-invited external users dialing into meetings, you have been asked to set the **Allow dial-in users to bypass the lobby** option to **Off**. This setting controls whether people who dial in by phone will automatically join the meeting or must wait in the lobby until they are admitted to the call. Because the **Automatically admit people** setting is set to **Everyone in your organization**, anyone who dials-in will wait in the lobby until admitted; this includes both Adatum and non-Adatum participants. You may decide to turn this setting **On** if it proves to be problematic in practice, but for now, you want to begin with this level of control. 
 
 11. Scroll to the bottom of the page and select **Save**.
 
@@ -86,7 +86,7 @@ As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a
 
 	- Chat: **On** 
 
-	- Use Giphys in conversations: **Off**
+	- Use Giphy in conversations: **Off**
 
 	- Giphy content rating: **Strict**
 
@@ -178,13 +178,13 @@ Now that you have created the resource account for your calling queue, you will 
 	
 		- Agents can opt out of taking calls: **On**
 		
-		- Agent alert time (in seconds) - 45 (entering the value in the field is easer than dragging the icon)
+		- Agent alert time (in seconds) - 45 (entering the value in the field is easier than dragging the icon)
 
 	- Call overflow handling: **leave all settings to their default values**
 
 	- Call time out handling: **leave all settings to their default values**
 
-8. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear and **Call Queue 1** will appear in the list of Call queues.
+8. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear, and **Call Queue 1** will appear in the list of Call queues.
 
 9. Leave all tabs open in your browser and proceed to the next task. 
 
@@ -219,7 +219,7 @@ As part of her Microsoft Teams pilot project, Holly Spencer has been tasked with
 
 	- Busy on busy is available when in a call: **On**
 
-5. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear and **Default Adatum Calling Policy** will appear in the list of Calling policies. Note how it is flagged as a Custom policy.
+5. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear, and **Default Adatum Calling Policy** will appear in the list of Calling policies. Note how it is flagged as a Custom policy.
 
 6. Leave all tabs open in your browser and proceed to the next task. 
  
@@ -293,7 +293,7 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 		- Chat: **On**
 
-		- Use Giphys in conversations: **Off**
+		- Use Giphy in conversations: **Off**
 
 		- Giphy content rating: **Strict**
 
@@ -365,7 +365,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 In this task, you will open the Microsoft Teams desktop application on LON-CL1 and log in as Adatum’s MOD Administrator. You will then conduct a brief chat session with the IT Consultant (your fellow student whose tenant ID was assigned to you by your instructor). This will validate that you can use Teams to chat with the IT Consultant whenever necessary to discuss matters concerning the new Service Request Ticketing system.
 
-**IMPORTANT:** Remember that your instructor assigned your tenant suffix ID to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant. So expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
+**IMPORTANT:** Remember that your instructor assigned your tenant suffix ID to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant; therefore, expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
 
 1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator (or Domain Admin) with a **Password** of **Pa55w.rd**; if not, then do so now. 
 
@@ -375,7 +375,7 @@ In this task, you will open the Microsoft Teams desktop application on LON-CL1 a
 
 4. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
-	However, if the Teams app opens up without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If anything other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+	However, if the Teams app opens without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If any value other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
 5. On the **Use this account everywhere on your device** window, uncheck (clear) the **Allow my organization to manage my device** check box, and then select **Yes.**
 

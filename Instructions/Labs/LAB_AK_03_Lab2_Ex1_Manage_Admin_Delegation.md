@@ -166,23 +166,23 @@ In this task, you will begin by examining the administrative properties of two u
 
 34. Lynne has just been informed that Nestor Wilke's username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
 
-35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Spencer to make this change. 
+35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Spencer to make this change. 
 
-36. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
+36. To verify whether Alex Wilber can sign in, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
 
-37. To verify whether Alex can sign in, in your **Edge** browser navigate to **https://portal.office.com**. 
+37. In your **Edge** browser navigate to **https://portal.office.com**. 
 
 38. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
 
-	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex cannot log in.
+	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in.
 
-39. In the **Pick an account** window, select Holly's account and sign in with her credentials. Navigate to the **Microsoft 365 admin center** and display the list of **Active users**. 
+39. Switch back to LON-DC1, where you should still be logged into **Microsoft 365** as Holly Spencer. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-40. Management has determined that Alex's account has, in fact, not been compromised, so Holly has been asked to remove the block on his sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block this user?** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
+40. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, he has asked Holly to remove the block on Alex's sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block this user?** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, select **Save changes**, and once Alex has been unblocked from signing in, close this window.
 	
-41. Once Lynne is signed out, close Microsoft Edge. 
+41. Leave your browser and all tabs open and proceed to the next exercise. 
 
 
 # Proceed to Lab 2 - Exercise 2

@@ -6,7 +6,7 @@ In this exercise you will be introduced to some troubleshooting tools in Office 
 
 Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none), and another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
-1. Switch to your Domain Controller (LON-DC1) VM. You should still be logged into Microsoft 365 as Holly Spencer.
+1. You should still be logged into LON-DC1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Spencer.
 
 2. In **Internet Explorer**, select the **Office 365 home page** tab (officially listed in the tab as **Microsoft Office Home**), which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@M365xZZZZZZ.onmicrosoft.com** and **Pa55w.rd**).
 

@@ -154,19 +154,35 @@ In this task, you will begin by examining the administrative properties of two u
 
 	If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider), and then select **Send email and close**.
 
-30. Management has recently discovered that Nestor Wilke’s username may have been compromised. As a result, Lynne has been asked to block Nestor’s account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Nestor Wilke’s** name (do NOT select Nestor’s name itself). 
+30. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Alex Wilber's** name (do NOT select Alex’s name itself). 
 
-	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Check Allan Deyoung's account, since you just reset his password; uncheck his account if necessary. Only Nestor's account should be selected. 
+	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Check Allan Deyoung's account, since you just reset his password; uncheck his account if necessary. Only Alex's account should be selected. 
 
 31. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
 
 32. In the **Block this user?** window, select the **Block this user from signing in** check box, and then select **Save changes.** 
 
-33. The **Block this user?** window should display a message indicating that Nestor is now blocked from signing in. Select the **X** in the upper right-hand corner of the window to close it. 
+33. The **Block this user?** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the window to close it. 
 
-34. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
+34. Lynne has just been informed that Nestor Wilke's username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
 
-35. Once Lynne is signed out, close Microsoft Edge. 
+35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Spencer to make this change. 
+
+36. Lynne has finished maintaining these accounts, so log out of the Microsoft 365 admin center by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
+
+37. To verify whether Alex can sign in, in your **Edge** browser navigate to **https://portal.office.com**. 
+
+38. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
+
+	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex cannot log in.
+
+39. In the **Pick an account** window, select Holly's account and sign in with her credentials. Navigate to the **Microsoft 365 admin center** and display the list of **Active users**. 
+
+40. Management has determined that Alex's account has, in fact, not been compromised, so Holly has been asked to remove the block on his sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block this user?** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
+
+	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, select **Save changes**, and once Alex has been unblocked from signing in, close this window.
+	
+41. Once Lynne is signed out, close Microsoft Edge. 
 
 
 # Proceed to Lab 2 - Exercise 2

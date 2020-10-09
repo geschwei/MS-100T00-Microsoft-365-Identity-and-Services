@@ -18,7 +18,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 6. In this email, you will send the mail to an email address in which the domain (alt.none) is an invalid domain. In the email pane that appears, type **user@alt.none** in the **To** text box. After entering the email address, tab off the **To** field to commit the entered value.
 
-7. Enter a subject and some body text and then send the email. 
+7. Enter a subject and some body text and then send the email. Then send the email. 
 
 8. Wait for the delivery failure message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
@@ -28,7 +28,7 @@ Holly Spencer, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 11. On the **Microsoft Remote Connectivity Analyzer** page, select the **Message Analyzer** tab. 
 
-12. Under **Message Header Analyzer**, it indicates that the Message Analyzer Header has moved to a new location. Select the link for the new location; this will open a new tab that displays the Message Header Analyzer. 
+12. Under **Message Header Analyzer**, it indicates that the Message Analyzer Header has moved to a new location. Select the link for the new location; this will open a new tab that displays the Message Header Analyzer. (**Note**: If the site is struggling to load please use this link https://mha.azurewebsites.net/) 
 
 13. In the **Message Analyzer Header** window, paste the message (right-click and select **Paste**) in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**. 
 

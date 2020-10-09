@@ -11,7 +11,7 @@ Start by familiarizing yourself with the SharePoint list which will serve as the
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. You should still have Internet Explorer and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Spencer. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
+2. You should still have Internet Explorer and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select **Admin** to open the Microsoft 365 admin center.
 
 3. In the **Microsoft 365 admin center**, select **Show all** (if necessary), then scroll down to **Admin centers** and select **SharePoint**. This will open the **SharePoint admin center.**
 
@@ -92,7 +92,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 17. You should now verify that the record has been added in the Service Desk Requests list in the IT Services site. Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the right side of the address bar. Scroll to the bottom of the list and verify the record appears.
 
-18. Switch back to the **App – Power Apps** tab in your browser. The app should still be running in preview mode; if not, press **F5** on your keyboard to run the app. 
+18. Switch back to the **App – Power Apps** tab in your browser by slecting the **"X"** in the top right corner. The app should still be running in preview mode; if not, press **F5** on your keyboard to run the app. 
 
 19. Now that you have added a record into the Service Desk Ticketing system using the Power App, you want to test how the app works in editing an existing record.   
 ‎  
@@ -159,7 +159,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 ### Task 3 – Review the Power App Studio
 
-Now that Holly Spencer has built her first Power App and has used it to successfully manage data in Adatum’s new Service Request Ticketing system, she wants to spend more time familiarizing herself with the contents of Power Apps Studio. In your role as Holly, you will use this task to review Power Apps Studio so that you can learn how the app works and view all the details behind each component.
+Now that Holly Dickson has built her first Power App and has used it to successfully manage data in Adatum’s new Service Request Ticketing system, she wants to spend more time familiarizing herself with the contents of Power Apps Studio. In your role as Holly, you will use this task to review Power Apps Studio so that you can learn how the app works and view all the details behind each component.
 
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
@@ -176,7 +176,7 @@ Now that Holly Spencer has built her first Power App and has used it to successf
 
 6. Select the third icon, the plus (+) sign, to display the **Insert** pane. The **Insert** pane display different components that can be added to an app. Scroll down through the list of components to familiarize yourself with what can be added, but do not add anything at this time. When you are done, select the **X** to close the pane.
 
-7. Select the fourth icon, the database icon, to display the **Data Sources** pane. This pane displays the source used in the current app, which is the **Service Desk Requests** list. From here you can add additional data sources to your app if you desire (you will not do so for the Service Request Ticketing app). Select the **X** to close the pane. 
+7. Select the fourth icon, the database icon, to display the **Data** pane. This pane displays the source used in the current app, which is the **Service Desk Requests** list. From here you can add additional data sources to your app if you desire (you will not do so for the Service Request Ticketing app). Select the **X** to close the pane. 
 
 8. Select the final icon to display the **Advanced Tools** pane, which is currently empty because it’s under development. Select the **X** to close this pane.
 
@@ -242,16 +242,16 @@ The app that Holly created in the earlier task is known as a canvas app. It was 
 
 ### Task 5 - Add the Ticketing System app to Microsoft Teams
 
-In your role as Holly Spencer, you have created the new Service Desk Ticketing system in SharePoint, and you just created a Power App that can access this system and maintain service desk tickets within it. At this point, you thought your work with the new ticketing system was done. 
+In your role as Holly Dickson, you have created the new Service Desk Ticketing system in SharePoint, and you just created a Power App that can access this system and maintain service desk tickets within it. At this point, you thought your work with the new ticketing system was done. 
 
-However, the IT Consultant has just informed Holly that there’s another way in which she can make the ticketing system available to Adatum’s users. By adding the Power App that she just created to Microsoft Teams, Adatum’s employees can work directly from Teams to access the app and submit their service request tickets. Holly is very excited to test this out. In your role as Holly Spencer, you will perform this task to add the new Power App to Microsoft Teams.
+However, the IT Consultant has just informed Holly that there’s another way in which she can make the ticketing system available to Adatum’s users. By adding the Power App that she just created to Microsoft Teams, Adatum’s employees can work directly from Teams to access the app and submit their service request tickets. Holly is very excited to test this out. In your role as Holly Dickson, you will perform this task to add the new Power App to Microsoft Teams.
  
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. You will first verify whether Teams is configured to allow the use of PowerApps.   
 ‎  
-‎In your browser, select the **Microsoft 365 admin center** tab if it’s still open; if not, open the **Office 365 home** page and select **Admin**. If required, log into Office 365 as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider) and a password of Pa55w.rd. 
+‎In your browser, select the **Microsoft 365 admin center** tab if it’s still open; if not, open the **Office 365 home** page and select **Admin**. If required, log into Microsoft 365 as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider) and a password of Pa55w.rd. 
 
 3. In the **Microsoft 365 admin center**, select the **…Show all** option in the navigation pane to display the admin centers, and then select **Teams**.
 
@@ -271,7 +271,7 @@ However, the IT Consultant has just informed Holly that there’s another way in
 ‎  
 ‎If the **Teams** app is not open on your taskbar, then enter **Teams** in the **Search** box on the taskbar, select **Microsoft Teams** from the menu, and sign in as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).   
 ‎  
-‎However, if the **Teams** app is open on the taskbar, then check who is signed into it by looking at the user account in the upper right hand corner of the application. If the user icon is **Holly Spencer**, then skip to the next step; otherwise, select the user icon and in the menu, select **Sign out**, and then sign back in as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).
+‎However, if the **Teams** app is open on the taskbar, then check who is signed into it by looking at the user account in the upper right hand corner of the application. If the user icon is **Holly Dickson**, then skip to the next step; otherwise, select the user icon and in the menu, select **Sign out**, and then sign back in as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).
 
 10. In the **Teams** window, in the left-hand navigation pane, select **Apps**. 
 

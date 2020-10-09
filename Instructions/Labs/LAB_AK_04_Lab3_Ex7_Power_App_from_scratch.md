@@ -15,7 +15,7 @@ When you initially create these screens, you will just create their forms with t
 
 ### Task 1:  Create the Browse screen for your Power App
 
-In your role as Holly Spencer, you will begin the process of creating a canvas app from scratch by building the app’s Browse screen.
+In your role as Holly Dickson, you will begin the process of creating a canvas app from scratch by building the app’s Browse screen.
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 

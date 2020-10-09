@@ -6,7 +6,7 @@ In this exercise you will learn how to manage and configure teams through the Mi
 
 Meeting policies control the features that are available to participants in meetings that are scheduled by users in your organization. An organization-wide policy named Global is created by default, and all users in your organization are automatically assigned this meeting policy. You can either make changes to this policy or create one or more custom policies and assign users to them. When you create a custom policy, you can allow or prevent certain features from being available to your users, and then assign the policy to one or more users who will have the settings applied to them. 
 
-As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
+As Holly Dickson, Adatum's Enterprise Administrator, you want to customize the company's Global meeting policy as part of Adatum’s pilot project for implementing Microsoft Teams.
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
@@ -18,9 +18,9 @@ As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the c
 
 5. In the **Microsoft Teams admin center**, in the left-hand navigation pane, select **Meetings** and then in the drop=down menu, select **Meeting policies**.
 
-6. In the **Meeting policies** window, scroll down to the list of meeting policies and select **Global (Org-wide default)**. 
+6. In the **Meeting policies** window, scroll down to the list of meeting policies and select **AllOn (Org-wide default)**. 
 
-7. In the **Global** window that appears, under the **General** section, review each setting. All settings in this section should be turned **On**.
+7. In the **AllOn** window that appears, under the **General** section, review each setting. All settings in this section should be turned **On**.
 
 8. Under the **Audio &amp; video** section, review each setting. Set **Allow transcription** to **On**.
 
@@ -28,14 +28,14 @@ As Holly Spencer, Adatum's Enterprise Administrator, you want to customize the c
 
 10. Under the **Participants &amp; guests** section, review each setting. Because Adatum has had issues in the past with non-invited external users dialing into meetings, you have been asked to set the **Allow dial-in users to bypass the lobby** option to **Off**. This setting controls whether people who dial in by phone will automatically join the meeting or must wait in the lobby until they are admitted to the call. Because the **Automatically admit people** setting is set to **Everyone in your organization**, anyone who dials-in will wait in the lobby until admitted; this includes both Adatum and non-Adatum participants. You may decide to turn this setting **On** if it proves to be problematic in practice, but for now, you want to begin with this level of control. 
 
-11. Scroll to the bottom of the page and select **Save**.
+Dickson. Scroll to the bottom of the page and select **Save**.
 
 12. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 2 – Manage Meeting Settings
 
-As Holly Spencer, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
+As Holly Dickson, Adatum’s Microsoft 365 Enterprise Administrator, you use the Teams meetings settings to control whether anonymous users can join Teams meetings and customize meeting invitations. You can also use these settings to enable Quality of Service (QoS) and set port ranges for real-time traffic. These settings apply to all Teams meetings that users schedule in your organization. As part of Adatum’s pilot project for implementing Microsoft Teams, you want to configure Teams meeting settings to see how they handle email invitations.
 
 1. On the left-hand navigation pane in the **Teams admin center**, under the **Meetings** group, select **Meeting settings.**
 
@@ -117,7 +117,7 @@ As part of her Microsoft Teams pilot project for Adatum, Holly wants to create a
 
 A resource account, which is referred to as a disabled user object in Azure Active Directory, can be used to represent resources in general. For example, a resource account in Exchange can be used to represent conference rooms, and in Microsoft Teams, resource accounts can be used to represent Phone System call queues and auto attendants. 
 
-As part of Adatum’s pilot project for implementing Microsoft Teams, Holly Spencer has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
+As part of Adatum’s pilot project for implementing Microsoft Teams, Holly Dickson has been asked to create a resource account for a cloud call queue, which is a service that accepts customer calls, plays a greeting message, and then places the customer calls in a wait queue while searching a pre-configured list of agents to answer each call. 
 
 Creating a calling queue is a two-step process. In this task, you will first create a resource account that represents the call queue. In the next task, you will create the actual call queue and associate it with this resource account. 
 
@@ -157,6 +157,8 @@ Now that you have created the resource account for your calling queue, you will 
 6. At the bottom of the **Add accounts** pane, select **Add.** This returns you to the **Call Queue 1** window, which now displays **Calling Queue 1** in the list of Resource accounts associated with this call queue.
 
 7. In the **Call Queue 1** window, scroll down the page and select the following values for each option:
+	
+	- Language: **"English (United States)"**
 
 	- Greeting: **No greeting**
 
@@ -193,7 +195,7 @@ Now that you have created the resource account for your calling queue, you will 
 
 In Microsoft Teams, calling policies control which calling and call forwarding features are available to users. Calling policies determine whether a user can make private calls, use call forwarding or simultaneous ringing to other users or external phone numbers, route calls to voicemail, send calls to Call Groups, use delegation for inbound and outbound calls, and so on. A default global policy is created automatically, but admins can also create and assign custom calling policies. 
 
-As part of her Microsoft Teams pilot project, Holly Spencer has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.
+As part of her Microsoft Teams pilot project, Holly Dickson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.
 
 1. On the left-hand navigation pane in the **Teams admin center**, under the **Voice** group, select **Calling policies.**
 
@@ -228,7 +230,7 @@ As part of her Microsoft Teams pilot project, Holly Spencer has been tasked with
 
 With Microsoft Teams’ external access feature, Teams users from other domains can participate in your chats and calls. You can also block the users in specific domains from joining chats and calls. 
 
-As part of her Microsoft Teams pilot project, Holly Spencer wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Holly wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
+As part of her Microsoft Teams pilot project, Holly Dickson wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Holly wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
 
 1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **External access.**
 
@@ -258,7 +260,7 @@ As part of her Microsoft Teams pilot project, Holly Spencer wants to block commu
 
 10. Select **Save.**
 
-11. Leave all tabs open in your browser and proceed to the next task. 
+Dickson. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 8 – Manage Guest Access
@@ -310,7 +312,7 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 ### Task 9 – Manage Teams Settings
 
-Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Holly Spencer will configure a number of these settings as determined by Adatum’s project team.
+Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Holly Dickson will configure a number of these settings as determined by Adatum’s project team.
 
 1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **Teams settings.**
 
@@ -322,7 +324,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 		
 	- Tagging
 		
-		- Tagging is enabled for: **Disabled**
+		- Tagging are managed by: **Disabled**
 
 	- Email integration
 
@@ -339,6 +341,8 @@ Microsoft Teams includes a variety of global settings that control performance w
 		- Box: **Off**
 
 		- Google Drive: **On**
+
+		- Egnyte: **Off**
 
 	- Organization
 
@@ -389,7 +393,7 @@ In this task, you will open the Microsoft Teams desktop application on LON-CL1 a
 
 10. This opens a new chat window in the main body of the page. In the **To: Enter name, email, group or tag** field, enter the IT Consultant’s MOD Administrator account of **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student’s tenant suffix ID that was assigned to you by your instructor) and press **Enter**. 
 
-11. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
+Dickson. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
 
 12. This will open a new chat session with the IT Consultant (your fellow student). Send a message to this person and conduct a brief chat session to verify that you can communicate with him or her using the Chat functionality within Teams.
 

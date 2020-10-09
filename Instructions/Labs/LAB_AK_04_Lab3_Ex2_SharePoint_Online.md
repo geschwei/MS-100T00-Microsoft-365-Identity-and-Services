@@ -4,7 +4,7 @@ In this exercise you will review some of the basic administrative functions in S
 
 ### Task 1 – Site Management
 
-A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Spencer has been asked to create a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
+A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Adatum is excited to use team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly Dickson has been asked to create a team site for the IT department so that the IT team can work on projects and share information from anywhere and on any device. 
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **Administrator** and password **Pa55w.rd**; if not, then do so now.
 
@@ -18,7 +18,7 @@ A team site includes a group of related web pages, a default document library fo
 
 6.  Depending on the team or company need, there are several templates that can be used. For the purposes of this lab, in the **Create a site** window, select **Team site.**
 
-7. In the **Get a team site connected to Office 365 Groups** window, enter the following information.
+7. In the **Get a team site connected to Microsoft 365 Groups** window, enter the following information.
 
 	- Site name: **IT Services**
 
@@ -38,7 +38,7 @@ A team site includes a group of related web pages, a default document library fo
 
 8. Select **Next**.
 
-9. In the **Add group members** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Spencer**.
+9. In the **Add group members** window, in the **Add additional owners** field, enter **Holly**. As you enter Holly, a window appears listing users whose first name starts with Holly. Select **Holly Dickson**.
 
 10. You now want to add **Patti Fernandez** and **Nestor Wilke** as members of this group. 
 
@@ -52,7 +52,7 @@ A team site includes a group of related web pages, a default document library fo
 
 14. In the menu bar at the top of the page, select **Delete**. 
 
-15. In the **Delete Office 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
+15. In the **Delete Microsoft 365 group** window, select the **Delete the group “IT Services” and all its resources** check box, and then select **Delete.** Note that the IT Services site disappears from the **Active sites** list. 
 
 16. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Deleted sites.** Note how the IT Services site that you just deleted appears in the list of deleted sites. 
 
@@ -60,7 +60,7 @@ A team site includes a group of related web pages, a default document library fo
 
 18. In the menu bar at the top of the page, select **Restore**.
 
-19. In the **Restore Office 365 group** window, select **Restore**.  Note that the IT Services site disappears from the **Deleted sites** list. 
+19. In the **Restore Microsoft 365 group** window, select **Restore**.  Note that the IT Services site disappears from the **Deleted sites** list. 
 
 20. In the left-hand navigation pane on the **SharePoint admin site**, under **Sites**, select **Active sites.** The IT Services site should once again appear in the **Active sites** list. 
 
@@ -120,7 +120,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 	- About me: **This group is used for members of the IT staff**
 
-	- Group owner: If Holly Spencer appears as the owner, select the **X** to the right of her name to remove her, and then enter **MOD**. As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator**.  
+	- Group owner: If Holly Dickson appears as the owner, select the **X** to the right of her name to remove her, and then enter **MOD**. As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator**.  
 	
 		‎**Best Practice:** When you create groups make sure the group owner is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
 
@@ -134,13 +134,13 @@ In this task, you will create the following hierarchical permission structure fo
 
 		- Auto-accept requests: **No**
 
-		- Send membership requests to the following e-mail address: If Holly Spencer’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+		- Send membership requests to the following e-mail address: If Holly Dickson’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
 
 		- Choose the permission level group members get on this site: **Full Control – Has full control**
 
 15. Select **Create**. 
 
-16. This displays the **Information Technology** group information. The users displayed in the list are the members of this group. Since Holly Spencer created the group, she is listed as the sole member.
+16. This displays the **Information Technology** group information. The users displayed in the list are the members of this group. Since Holly Dickson created the group, she is listed as the sole member.
 
 17. In the menu bar that appears above the user list, select **New**, and then in the drop-down menu, select **Add users to this group.**
 

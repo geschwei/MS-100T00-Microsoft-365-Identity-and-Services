@@ -24,7 +24,7 @@ As Holly Spencer, Adatum’s Enterprise Administrator (and Microsoft 365 Global 
 
 9. Repeat steps 3-8 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the list of commonly used admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
 
-10. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Spencer.
+10. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Dickson.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  

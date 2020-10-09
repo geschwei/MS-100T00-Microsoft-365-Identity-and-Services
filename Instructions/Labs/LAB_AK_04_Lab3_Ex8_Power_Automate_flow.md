@@ -1,13 +1,13 @@
 # Module 4 - Lab 3 - Exercise 8 - Create a flow using Power Automate
 
-In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have built a new service desk ticketing system in SharePoint that consists of a team site titled **IT Services** and a SharePoint list titled **Service Desk Requests**. In your effort to implement Microsoft’s Power Platform at Adatum, you then created a Power App that enables users to enter service tickets using the app rather than SharePoint, and you also added the app to Microsoft Teams so that users can access the Power App through Teams. 
+In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have built a new service desk ticketing system in SharePoint that consists of a team site titled **IT Services** and a SharePoint list titled **Service Desk Requests**. In your effort to implement Microsoft’s Power Platform at Adatum, you then created a Power App that enables users to enter service tickets using the app rather than SharePoint, and you also added the app to Microsoft Teams so that users can access the Power App through Teams. 
 
 As part of your Power Platform pilot project, you now want to investigate how you can use Power Automate to improve your new ticketing system. After reviewing Adatum’s old ticketing system, you realized that a lack of real-time communication between managers and customers (your internal users) was a key factor in its ineffectiveness. To address this issue, you have decided to build and share an automated flow within Power Automate that automatically sends an email to the MOD Administrator whenever a service request is created or modified.
  
 
 ### Task 1 - Create a Power Automate Flow
 
-To improve communication between management and internal users, Holly Spencer has decided to build and share an automated flow within Power Automate that sends an email to Adatum’s MOD Administrator whenever a service request is created or modified. This task will focus on creating the flow; the next task will address how to share the flow with another manager. 
+To improve communication between management and internal users, Holly Dickson has decided to build and share an automated flow within Power Automate that sends an email to Adatum’s MOD Administrator whenever a service request is created or modified. This task will focus on creating the flow; the next task will address how to share the flow with another manager. 
 
 1. After having completed the prior lab exercise in which you created a Power App from scratch, you should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
@@ -21,7 +21,7 @@ To improve communication between management and internal users, Holly Spencer ha
 
 5. In the **Welcome to Power Automate** screen, select your **country/region** from the drop-down list and then select **Get Started**. 
 
-6. On the **Power Automate studio** screen, validate that Holly Spencer’s initials (**HS**) appear in the user icon in the upper right corner of the screen. If this user icon is someone other than Holly, then select the user icon, select **Sign out**, and then sign back in as Holly (**Holly@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your tenant ID, and a password of **Pa55w.rd**). 
+6. On the **Power Automate studio** screen, validate that Holly Dickson’s initials (**HS**) appear in the user icon in the upper right corner of the screen. If this user icon is someone other than Holly, then select the user icon, select **Sign out**, and then sign back in as Holly (**Holly@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your tenant ID, and a password of **Pa55w.rd**). 
 
 7. From the left navigation pane, select **+ Create.**
 
@@ -56,7 +56,9 @@ To improve communication between management and internal users, Holly Spencer ha
 19. This opens an email form. Since Holly wants to send an email to Adatum’s MOD Administrator, enter the following information in this email:
 
 	- **To -** enter **MOD** in the field. A list of user accounts starting with MOD will appear. This list should include two MOD Administrator accounts – one for Adatum’s MOD Administrator, and one for the IT Consultant’s MOD Administrator. Select **Adatum’s MOD Administrator**, whose tenant suffix ID was provided to you by your lab hosting provider. Do **NOT** select the account whose tenant suffix ID is your fellow student’s tenant ID that was assigned to you by your instructor. 
-
+	
+		(**Note:** their is hypertext located at the bottom right of the flow tray that reads **Add dynamic content**. You can use this to input data directly from the ticket item)
+	
 	- **Subject –** Select inside the **Subject** field; this will display a list of parameters that you can choose from to display in the **Subject** line of the email. This list includes various connectors as well as each field from the **Active Cases** view that you selected earlier. Scroll down in the list and select **Issue Title.** Note that when you make this selection, **Issue Title** appears in the **Subject** field. The subject line of the email will be the actual **Issue Title** for the item that was added or edited in the SharePoint list.   
 ‎  
 ‎**Note:** You can add additional parameters to the subject line; however, for this lab you will only select the **Issue Title**.  
@@ -121,7 +123,7 @@ To improve communication between management and internal users, Holly Spencer ha
 
 33. On the **Office 365 home** page, select **Outlook**. This will open the **Inbox** for the **MOD Administrator**.
 
-34. The **Inbox** should include an email from **Holly Spencer** with a subject line that starts with: **New or edited Service Request**. Select this email to open it.  <BR/>
+34. The **Inbox** should include an email from **Holly Dickson** with a subject line that starts with: **New or edited Service Request**. Select this email to open it.  <BR/>
 
 	**Note:** It may take a few minutes for the email to show up in the MOD Administrator’s inbox.
 

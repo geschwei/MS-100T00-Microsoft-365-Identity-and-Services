@@ -94,11 +94,11 @@ In this task, you will create two new groups and then manage the groups by assig
 
 8. If a survey window appears, select **Cancel**.
 
-9. In the **Microsoft 365 admin center**, select **Groups** in the left-hand navigation pane, and then under it, select **Groups**. 
+9. In the **Microsoft 365 admin center**, select **Groups** in the left-hand navigation pane, and then under it, select **Active Groups**. 
 
-10. In the **Groups** page, select **Add a group** that appears on the menu bar above the list of groups.  
+10. In the **Active Groups** page, select **Add a group** that appears on the menu bar above the list of groups.  
 
-11. In the **Choose a group type** window, select **Office 365 (recommended)** and then select **Next**. 
+11. In the **Choose a group type** window, select **Microsoft 365 (recommended)** and then select **Next**. 
 
 12. In the **Set up the basics** window, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field. Select **Next**.
 

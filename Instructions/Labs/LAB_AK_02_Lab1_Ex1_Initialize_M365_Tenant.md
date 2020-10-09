@@ -40,71 +40,62 @@ In your role as Holly Spencer, Adatum’s Enterprise Administrator, you have bee
 
 8. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-9. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.**
+9. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** 
 
-10. If a **Get your work done with Office 365** window appears, then close it now. 
+	**Note:** In the top right corner of the screen, notice the initials **MA** that appear in a circle. This is the initials for the MOD Administrator account. If a user has a picture associated with his or her account, that picture will be displayed when the user logs in. Since the MOD Administrator has no picture assigned, the user name initials are displayed instead. <br/>
 
-11. In the **Microsoft Office Home** page, you are now signed in as the **MOD Administrator** account (note the **MA** initials in the circle that appears in the upper right-hand corner of the screen). The MOD Administrator is a pre-defined user created in Office 365 by your lab hosting provider. Since this user has been assigned an Office 365 administrator role (in this case, the Global Admin role), the Microsoft 365 admin center app is available on the home page along with all the other Office 365 apps. 
+10. If a **Get your work done with Office 365** window appears, then close it now. In the list of Office 365 apps will be on the **App Tray** to the left side of the screen on the home page, select the **App laucher** in the top right corner select **Admin**; this opens the **Microsoft 365 admin center.** 
 
-	Select the **Admin** app. This opens the **Microsoft 365 admin center**.
+11. In the left-hand navigation pane, select **Settings** and then under it, select **Settings**. 
+12. In the **Settings** page, select the **Org settings** tab.
+13. In the **Org settings** tab on the **Organization Profile** page, select **Organization information** from the list organization Profile.
+14. In the **Organization information** pane that appears, enter the following information:
 
-12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show all** to display all the navigation menu options.
+    - Name: **Adatum Corporation** (Note: Contoso is originally displayed as the organization name; this was explained in the Introduction section at the start of this lab. In this step you will change it to Adatum Corporation.)
 
-13. In the left-hand navigation pane, select **Settings**, and then in the **Settings** group, select **Org Settings**. 
+    - Address: **555 Main Street**
 
-14. In the **Settings** window, the **Services** tab is displayed by default in the menu bar at the top of the screen. Since you want to update the organization profile, select the **Organization profile** tab, and then in the list of organization settings, select **Organization information**.
+    - City: **Redmond**
 
-15. In the **Organization information** window, enter the following information:
+    - State: **Washington**
 
-	- Name: Replace Contoso with **Adatum Corporation** 
-	
-	**Note:** The Contoso organization name was explained in the Introduction section at the start of this lab. For the purposes of this lab, you will change it to Adatum Corporation.
+    - Postal Code: **98052**
 
-	- Street address: **555 Main Street**
+    - Phone:   **425-555-1234**
 
-	- City: **Redmond**
+    - Technical contact: do not change
 
-	- State or province: **Washington**
+    - Preferred language: **English**
 
-	- ZIP or postal code: **98052**
-	
-	- Country or region: **United States**
+15. Select **Save changes**.
+16. Scroll to the top of the **Organization information** pane. Note the message indicating the changes have been saved. Select the **X** in the upper right hand corner to close the pane.
+17. In the list of organization Profie, select **Release preferences**.
+18. In the **Release preferences** pane that appears, select the **Targeted release for selected users** option and then select **Save changes**.<br/>
 
-	- Phone: **425-555-1234**
+    **Note:** One of the benefits of Microsoft 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your Release preferences, you can control how and when your Office 365 tenant receives these updates. <br/>
 
-	- Technical contact: **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+    **Note:** This **Targeted release for selected users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
-	- Preferred language: **English**
+19. In the **Release preferences** pane, scroll down and select **Select users**.
+20. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users. In this list, select each of the following users (after selecting the user, you will have to select inside the field again to re-display the list): 
 
-16. Select **Save changes**.
+	- **Alex Wilber**
+	- **Joni Sherman**
+	- **Lynne Robbins**
+	- **MOD Administrator** <br/>
 
-17. On the **Organization information** window, select the **X** in the upper right-hand corner to close the window.
+    **Note:** Alex, Joni, and Lynne are administrators who are part of Holly's pilot team. Their accounts will be used throughout the labs for this course.
+21. Select **Save changes**.
+22. Close the **Release preferences** pane. 
+23. Tn the list of organization profile, select **Custom themes**.
+24. In the **Custom themes** pane, scroll to the bottom of the pane and select the **Show the user's display name** check box. <br/>
 
-18. On the **Organization profile** tab of the **Settings** window, select **Release preferences**.
+	As you scroll through the pane, review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
 
-19. In the **Release preferences** window, select **Targeted release for select users** and then select **Save changes**.  <br/>
+	**Note:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-    ‎**Note:** One of the benefits of Office 365 is the ability to have the latest features and updates applied to your environment automatically, which can reduce maintenance costs and overhead for an organization. By setting up your Release preferences, you can control how and when your Office 365 tenant receives these updates.
-
-    The **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to select people is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once the updates have been reviewed by the control group.
-
-20. Under the **Targeted release for select users** option, select **Select users**.  <br/>
-
-21. In the **Choose users for targeted release** window, select the **Who should receive targeted releases?** field. This will display the list of existing Microsoft 365 user accounts that have been preloaded into your Microsoft 365 tenant by your lab hosting provider.
-
-22. In the list of users, select the **MOD Administrator** account and then select **Save changes**.
-
-23. On the **Release preferences** window, select the **X** in the upper right-hand corner to close the window.
-
-24. On the **Organization profile** tab of the **Settings** window, select **Custom themes**.
-
-25. In the **Custom themes** window, scroll though the page and review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
-
-    **Note:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
-
-26. If you made any changes in the **Custom themes** window, select **Save changes** when you are done. When you are finished with the **Custom themes**, select the **X** in the upper right-hand corner to close the window.
-
-27. Remain logged into the domain controller VM and leave all the tabs open in your browser for the remaining tasks. 
+25. Select **Save changes** when you are done and then close the **Custom themes** pane.
+26. Remain logged into the Client 1 VM with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
 ### Task 3 – Prepare for Microsoft Azure Active Directory 
@@ -137,7 +128,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
 
-	‎**Install-Module MSOnline** 
+	‎	**Install-Module MSOnline** 
 	
 11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
 

@@ -1,6 +1,6 @@
 # Module 7 - Lab 4 - Exercise 3 - Implement Password Management 
 
-As Holly Spencer, Adatum’s Enterprise Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
+As Holly Dickson, Adatum’s Enterprise Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
 
 ### Task 1: Deploy Azure AD Pass-Through Authentication 
 
@@ -105,13 +105,13 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 14. Select **Save** on the menu bar at the top of the page.
 
-15. You should now test the banned password functionality. Select Holly Spencer's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
+15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
 
 16. A new tab will open displaying the **change password** window. Enter **Pa55w.rd** in the **Old password** field, enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **submit**. Note the error message that you receive.
 
 17. In your browser, close the **Change password** tab. 
 
-18. You should now test the lockout threshold functionality. In the **My Dashboard - Azure Active Directory admin center** tab, select Holly Spencer's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**. 
+18. You should now test the lockout threshold functionality. In the **My Dashboard - Azure Active Directory admin center** tab, select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**. 
 
 19. Once you are signed out as Holly, the **Pick an account** window will appear. Select **Use another account**. 
 

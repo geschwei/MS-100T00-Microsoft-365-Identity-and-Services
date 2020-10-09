@@ -1,19 +1,19 @@
 # Module 4 - Lab 3 - Exercise 10 - Build a Power BI report and dashboard
 
-Holly Spencer is nearing the end of her excursion into the Microsoft Power Platform environment. She has built two Power Apps and a Power Automate Flow, all based on the Service Desk Ticketing system she created earlier in SharePoint. 
+Holly Dickson is nearing the end of her excursion into the Microsoft Power Platform environment. She has built two Power Apps and a Power Automate Flow, all based on the Service Desk Ticketing system she created earlier in SharePoint. 
 
 She is now interested in building and sharing a Power BI report and dashboard based on the SharePoint ticketing system as well. Adatum’s IT Consultant has suggested that she use Power BI Desktop, which is a free application that she can install locally that will let her connect to, transform, and visualize the ticketing system data. She can then use Power BI Desktop to create reports, and then use the Power BI service to share her reports with others. 
 
-In your role as Holly Spencer, you will use this exercise to create some basic visualizations for a Power BI report; the visualizations will be based on the **Service Desk Requests** list in the SharePoint team site titled **IT Services**.
+In your role as Holly Dickson, you will use this exercise to create some basic visualizations for a Power BI report; the visualizations will be based on the **Service Desk Requests** list in the SharePoint team site titled **IT Services**.
 
 
 ### Task 1:  Create a Power BI report
 
 In this task, you will download and install the Microsoft Power BI Desktop. Once installed, you will create a Power BI report based on the new Service Desk Ticketing system that you created earlier in SharePoint.
 
-1. After having completed the prior lab exercise in which you created a Power Automate flow, you should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** and a password of **Pa55w.rd**; if not, then do so now.
+1. After having completed the prior lab exercise in which you created a Power Automate flow, you should still be logged into your Domain Controller VM (LON-CL1) as the **Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. In your Internet Explorer browser, make sure that your new Service Desk Ticketing system is open in a tab. The tab should be titled **IT Services – Service Desk Requests – All Items**. If you do not have this tab open, then go to the **SharePoint admin center**, select **Active Sites**, select **IT Services** from the **Active Sites** list, select **Site contents**, and then select the **Service Desk Requests** list. 
+2. In your Edge browser, make sure that your new Service Desk Ticketing system is open in a tab. The tab should be titled **IT Services – Service Desk Requests – All Items**. If you do not have this tab open, then go to the **SharePoint admin center**, select **Active Sites**, select **IT Services** from the **Active Sites** list, select **Site contents**, and then select the **Service Desk Requests** list. 
 
 3. In your browser, open a new tab and enter the following URL in the address bar: **https://aka.ms/pbiSingleInstaller**
 

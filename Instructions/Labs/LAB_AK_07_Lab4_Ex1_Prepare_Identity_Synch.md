@@ -1,6 +1,6 @@
 # Module 7 - Lab 4 - Exercise 1 - Prepare for Identity Synchronization  
 
-As in the previous lab exercises you will take on the role of Holly Spencer, Adatum Corporation’s Enterprise Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
+As in the previous lab exercises you will take on the role of Holly Dickson, Adatum Corporation’s Enterprise Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
 During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
 
@@ -8,7 +8,7 @@ During this exercise you will set up and manage Azure AD Connect. You will creat
 
 In Active Directory, the default User Principal Name (UPN) suffix is the DNS name of the domain where the user account was created. The Azure AD Connect wizard uses the UserPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Azure AD. This is the value that is used for signing into Azure AD. 
 
-If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included a number of on-premises user accounts, such as Holly Spencer, Laura Atkins, and so on. Then in the first lab in this course, you created a custom, accepted domain for Adatum titled **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name of your lab hosting provider's custom domain).
+If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included a number of on-premises user accounts, such as Holly Dickson, Laura Atkins, and so on. Then in the first lab in this course, you created a custom, accepted domain for Adatum titled **XXYYZZa.xxxCustomDomainxxx.xxx** (where XXYYZZa was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name of your lab hosting provider's custom domain).
 
 In this task, you will use PowerShell to change the user principal name of the domain for the entire Adatum Corporation by replacing the originally established **adatum.com** domain with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** domain. In doing so, you will update the UPN suffix for the primary domain and the UPN on every on-premises user account in AD DS with **@XXYYZZa.xxxCustomDomainxxx.xxx**. 
 
@@ -63,7 +63,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 	- **Logan Boyle**. Update the emailAddress attribute for Logan to **logan@adatum.com**.
 
-	- **Holly Spencer**. Update the emailAddress attribute for Holly to **holly @adatum.com**. Note: this includes a blank space between “holly” and “@adatum.com”; the blank space has been purposely inserted.
+	- **Holly Dickson**. Update the emailAddress attribute for Holly to **holly @adatum.com**. Note: this includes a blank space between “holly” and “@adatum.com”; the blank space has been purposely inserted.
 
 	- **Maj Hojski**. Update the emailAddress attribute for Maj to blank characters (“ “).  
 
@@ -106,7 +106,7 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
-13. In the **Holly Spencer** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
+13. In the **Holly Dickson** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
 14. In the **Maj Hojski** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
@@ -181,19 +181,19 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 11. In the **Internet Options** window, select **OK** to close the window.
 
-12. In your **Internet Explorer** browser, enter the following URL in the address bar to open the **Microsoft Office Home** page: **https://portal.office.com/** 
+12. In your **Internet Explorer** browser, enter the following URL in the address bar to open the **Microsoft Home** page: **https://portal.office.com/** 
 
-13. You should still be signed into Office 365 as Holly Spencer (the circle in the upper-right corner displays **HS**). If so, then proceed to the next step; otherwise, sign into Office 365 as **Holly@M365xZZZZZZ.onmicrosoft.com** with the password **Pa55w.rd** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). <br/>
+13. You should still be signed into Microsoft 365 as Holly Dickson (the circle in the upper-right corner displays **HS**). If so, then proceed to the next step; otherwise, sign into Microsoft 365 as **Holly@M365xZZZZZZ.onmicrosoft.com** with the password **Pa55w.rd** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider). <br/>
 
 	**Note:** As a best practice, close all other open tabs in your browser. 
 
-14. In the **Microsoft Office Home** page, select **Admin**. 
+14. In the **Microsoft Home** page, select **Admin**. 
 
 15. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then select **Active users**.  
 
-16. In the **Active users** list, select **Holly Spencer**. 
+16. In the **Active users** list, select **Holly Dickson**. 
 
-17. In Holly Spencer’s properties window, the **Account** tab is displayed by default. Under the **Username** section, select **Manage username**.
+17. In Holly Dickson’s properties window, the **Account** tab is displayed by default. Under the **Username** section, select **Manage username**.
 
 18. In the **Manage username** window, select the drop-down arrow in the **domain** field and then select the **XXYYZZa.xxxCustomDomainxxx.xxx** domain (where XXYYZZa is your unique UPN Name provided by your lab hosting provider and xxxCustomDomainxxx.xxx is your lab hosting provider's custom domain name).   <br/>
 
@@ -203,7 +203,7 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 	Read the warning that appears at the top of the window and then select **Save changes**. 
 
-19. Since you are signed into Office 365 as Holly, and because you just changed her username, you will be automatically signed out of Office 365 and forced to sign back in. In the **Sign out** tab in your browser, enter the following URL in the address bar: **https://portal.office.com**    
+19. Since you are signed into Microsoft 365 as Holly, and because you just changed her username, you will be automatically signed out of Microsoft 365 and forced to sign back in. In the **Sign out** tab in your browser, enter the following URL in the address bar: **https://portal.office.com**    
 
 20. In the **Pick an account** window, you want to log in using Holly’s **Holly@XXYYZZa.xxxCustomDomainxxx.xx** account. Note that her **Holly@M365xZZZZZZ.onmicrosoft.com** account appears in the list, but not her **Holly@XXYYZZa.xxxCustomDomainxxx.xxx** account. Therefore, select **Use another account.** 
 
@@ -215,9 +215,9 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 24. Close Internet Explorer, then select the **Internet Explorer** icon on the taskbar to open it again. 
 
-25. In your Internet Explorer browser, enter the following URL in the address bar to open the **Microsoft Office Home** page: **https://portal.office.com/** 
+25. In your Internet Explorer browser, enter the following URL in the address bar to open the **Microsoft 365 Home** page: **https://portal.office.com/** 
 
-26. In the Office 365 home page, you should still be signed into Office 365 as Holly Spencer (the circle in the upper-right corner displays **HS**). Select the circle that displays **HS**. This opens the **My Account** pane. <br/>
+26. In the Office 365 home page, you should still be signed into Microsoft 365 as Holly Dickson (the circle in the upper-right corner displays **HS**). Select the circle that displays **HS**. This opens the **My Account** pane. <br/>
 
 	In Holly's **My Account** pane, note how her username displays the **XXYYZZa.xxxCustomDomainxxx.xxx** domain rather than her **M365xZZZZZZ.onmicrosoft.com** domain. 
 

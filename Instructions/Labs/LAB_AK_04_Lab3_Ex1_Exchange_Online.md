@@ -1,12 +1,12 @@
 # Module 4 - Lab 3 - Exercise 1 - Review Key Features of Exchange Online
 
-Holly Spencer is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up and has been assigned to the Global Administrator role, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
+Holly Dickson is Adatum’s Enterprise Administrator. She has recently deployed Microsoft 365 in a virtualized lab environment. Now that she has a tenant account set up and has been assigned to the Global Administrator role, she has been asked to review the key administrative functions within Exchange Online, SharePoint Online, and Teams so that she becomes familiar with their functionality and can offer guidance to her IT team on how they can be used throughout Adatum.
 
 With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly review some of the basic administrative functions in Exchange Online related to mail flow and recipient management. Since the Global Administrator role includes the Exchange Administrator role, Holly can perform all Exchange-related tasks.
 
 ### Task 1 – Manage Recipients
 
-As you continue in your role as Holly Spencer, you are ready to review the steps involved in creating and managing mail flow recipients.
+As you continue in your role as Holly Dickson, you are ready to review the steps involved in creating and managing mail flow recipients.
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
 
@@ -42,9 +42,9 @@ As you continue in your role as Holly Spencer, you are ready to review the steps
 
 11. Scroll down on this **mailbox delegation** window and select the plus (+) sign under the **Full Access** section. 
 
-12. In the **Select Full Access** window select **Holly Spencer**, select the **add-&gt;** button, and then select **OK.**  <br/>
+12. In the **Select Full Access** window select **Holly Dickson**, select the **add-&gt;** button, and then select **OK.**  <br/>
 
-	‎**Note:** After about an hour Holly Spencer will be able to access Joni’s mailbox without needing a password.
+	‎**Note:** After about an hour Holly Dickson will be able to access Joni’s mailbox without needing a password.
 
 13. On Joni Sherman's **Edit Mailbox** window, select **Save**, and then select **OK** once the changes are saved.
 
@@ -57,9 +57,9 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 1. Your browser should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
 
-	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Office 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
+	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Microsoft 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
 
-2.	Select the drop-down arrow next to the **New Office 365 group** button. In the drop-down menu, select **Distribution list**.
+2.	Select the drop-down arrow next to the **New Microsoft 365 group** button. In the drop-down menu, select **Distribution list**.
 
 3. In the **new distribution list** window that appears, enter the following information:
 
@@ -69,13 +69,13 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
 
-	- Owners: Since you are logged into the EAC using Holly Spencer, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wilber**, select the **add-&gt;** button, and then select **OK**.
+	- Owners: Since you are logged into the EAC using Holly Dickson, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wilber**, select the **add-&gt;** button, and then select **OK**.
 
 	- Members: select the plus (+) sign under the **Members** section, and in the **Select Members** window, select **Allan Deyoung**. Then hold down the **Ctrl** key and select **Diego Siciliani** and **Lynne Robbins**. This will select all three users at once, at which point you should select the **add-&gt;** button and then select **OK**. 
 
 4. Select **Save** and then select **OK** once the changes are saved successfully.
 
-5. Select the **+New Office 365 group** button (not the drop-down arrow to the right of it, but the button itself). 
+5. Select the **+New Microsoft 365 group** button (not the drop-down arrow to the right of it, but the button itself). 
 
 6. In the **Create a group** window that appears, enter the following information:
 
@@ -114,7 +114,7 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 2. Below the tabs at the top of the screen are two large boxes that enable you to perform two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** box, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
 
-3. On the **Bulk upgrade DLs to groups in Outlook** window, the **Showing** field controls what information is being displayed. By default, it displays **Available for upgrade**, which displays any distribution lists that are available to be upgraded to an Office 365 group. Adatum currently has only one distribution list that's available to be upgraded, the Sales Department group. <br/>
+3. On the **Bulk upgrade DLs to groups in Outlook** window, the **Showing** field controls what information is being displayed. By default, it displays **Available for upgrade**, which displays any distribution lists that are available to be upgraded to an Microsoft 365 group. Adatum currently has only one distribution list that's available to be upgraded, the Sales Department group. <br/>
 
 	Select the drop-down arrow in the **Showing** field and select the other option, **Upgraded DLs**. This option shows any distribution list groups that have been upgraded to an Office 365 group. As you can see, there are no groups currently in this list. <br/>
 
@@ -196,7 +196,7 @@ A room mailbox is a resource mailbox that is assigned to a physical location, su
 
 	**Note:** This option allows a user to filter booking requests.
 
-12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window, select **Holly Spencer** and then hold down the **Ctrl** key and select and **Nestor Wilke**. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
+12. Under **Delegates**, select the **plus (+)** sign. In the **Select Delegates** window, select **Holly Dickson** and then hold down the **Ctrl** key and select and **Nestor Wilke**. This will select both users at once; then select the **add-&gt;** button and select **OK.** 
 
 13. Select **Save** and then select **OK** once the changes are successfully saved.
 

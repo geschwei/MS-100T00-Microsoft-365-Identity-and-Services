@@ -15,10 +15,10 @@ Because this course can be offered by learning partners using any one of several
 
 You should write down the following information (provided by your instructor) for later use:
 
-	- **Tenant suffix ID.** This tenant ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
-	- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
-	- **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format xxxUPNxxx.xxxCustomDomainxxx.xxx. You must replace xxxUPNxxx with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
-	- **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
+- **Tenant suffix ID.** This tenant ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
+- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
+- **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format xxxUPNxxx.xxxCustomDomainxxx.xxx. You must replace xxxUPNxxx with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
+- **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
 ### Task 2- Set up the Organization Profile
 
@@ -129,9 +129,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
 
-'''
-Install-Module MSOnline
-'''
+		Install-Module MSOnline
 	
 11. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
 
@@ -139,9 +137,7 @@ Install-Module MSOnline
 
 13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
 
-'''
-Install-Module AzureADPreview
-'''
+		Install-Module AzureADPreview
 	
 14. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery),** enter **A** to select **[A] Yes to All.** 
 

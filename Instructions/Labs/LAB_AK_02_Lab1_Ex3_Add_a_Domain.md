@@ -1,6 +1,6 @@
 # Module 2 - Lab 1 - Exercise 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. For this lab, Adatum has purchased a new domain (XXYYZZa.xxxCustomDomainxxx.xxx, which is provided by your lab hosting provider). In this exercise, you will gain experience adding this domain for Adatum Corporation. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
+Not every company has just one domain; in fact, many companies have more than one domain. For this lab, Adatum has purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx, which is provided by your lab hosting provider). In this exercise, you will gain experience adding this domain for Adatum Corporation. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
 
 ### Task 1 - Add a Custom Domain
 

@@ -170,39 +170,37 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In **Windows PowerShell**, at the command prompt type the following command to connect with an authenticated account to use Active Directory cmdlet requests: <br/> 
+3. In **Windows PowerShell**, at the command prompt type the following command and then press Enter to connect with an authenticated account to use Active Directory cmdlet requests: <br/> 
 
-   Connect-AzureAD   
+		Connect-AzureAD   
 
-	- A new window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd** as the Password.  
+4. A new window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd** as the Password.  
 
-	- You should then run the following command to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
+5. At the command prompt type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
 	
 		Get-AzureADMSDeletedGroup   
 
-	- Before you can restore this deleted group, you must first copy the Object ID of the Inside Sales group that appears in the table of deleted groups. When you perform the next command to restore the group, you will use this ID to identify the group that you want restored. <br/>
+6. Before you can restore this deleted group, you must first copy the Object ID of the Inside Sales group that appears in the table of deleted groups. When you perform this next command to restore the group, you will use this ID to identify the group that you want restored. <br/>
 	
 		To copy the ID, select the entire ID and then press Ctrl-C.
 
-	- You should then run the following command to retrieve and restore the deleted group whose Object ID matches the value you enter:<br/>  
-
-		‎**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, press Ctrl-V to paste in the Id. Then press Enter to run the command. **NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and hit the Delete key a couple of times after pressing Ctrl-V, and then press Enter again.  <br/>
+7. At the command prompt type the following command and then press Enter to retrieve and restore the deleted group whose Object ID matches the value you enter. **Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, press Ctrl-V to paste in the Id. Then press Enter to run the command. **NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and hit the Delete key a couple of times after pressing Ctrl-V, and then press Enter again.  <br/>
 
 		Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
 		
-4. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
+8. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-5. You should now validate that the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, select **Groups** from the left-hand navigation pane, and then under it select **Groups** to display the list of groups. 
+9. You should now validate that the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, select **Groups** from the left-hand navigation pane, and then under it select **Groups** to display the list of groups. 
 
-6. Verify that the **Inside Sales** group has been restored and is present in the list of groups. If the Inside Sales group does not appear, wait a minute or two and then select the **Refresh** icon to the left of the address bar in your Edge browser.
+10. Verify that the **Inside Sales** group has been restored and is present in the list of groups. If the Inside Sales group does not appear, wait a minute or two and then select the **Refresh** icon to the left of the address bar in your Edge browser.
 
-7. You now want to verify that the recovery process correctly updated the group's membership. From the **Groups** windows, select the **Inside Sales** group.
+11. You now want to verify that the recovery process correctly updated the group's membership. From the **Groups** windows, select the **Inside Sales** group.
 
-8. In the **Inside Sales** window, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group.
+12. In the **Inside Sales** window, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group.
 
-9. Close the **Inside Sales** window.
+13. Close the **Inside Sales** window.
 
-10. Leave your browser tabs open so that they’re ready for the next task. 
+14. Leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3

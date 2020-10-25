@@ -1,6 +1,14 @@
 # Module 2 - Lab 1 - Exercise 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. For this lab, Adatum has purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx, which is provided by your lab hosting provider). In this exercise, you will gain experience adding this domain for Adatum Corporation. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). 
+Not every company has just one domain; in fact, many companies have more than one domain. Adatum has purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx, which is provided by your lab hosting provider) that resides in Microsoft Azure and not on-premises. To support Adatum’s new custom domain, your lab hosting provider took on the role of Adatum’s third-party domain registrar. 
+
+In this exercise, you will gain experience adding this domain for Adatum Corporation. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). When a company adss a new domain to Microsoft 365, it must also maintain the DNS records that are necessary to support the services required by the company for the new domain. 
+
+Most companies do not personally manage their DNS records themselves; instead, they have a third-party resource that manages these records for them. To assist in this effort, Microsoft 365 provides certain third-party domain registrars with an automation tool that automatically adds and replaces a company’s DNS records. The automation tool also federates the sign in credentials for the third-party registrars and Microsoft 365.
+
+Using a tool to automatically maintain DNS records is a much-welcomed improvement from the days when companies had to manually maintain these records, which oftentimes introduced human error into a rather complicated process. Because these tools eliminate the need to manually add the DNS records, they eliminate human error from the process.
+
+That being said, for the purposes of this lab, you will be asked to manually create the necessary DNS records required by this new custom domain. In the other Microsoft 365 training courses that use a custom domain (such as MS-101T00 and MS-030T00), the custom domain and its DNS records will be created for the students by the lab hosting provider, who will take on the role of the third-party domain registrar for Adatum. However, this course will task you with creating these DNS records so that you gain experience and understanding of what the DNS records are about and why they are required for new custom domains.
 
 ### Task 1 - Add a Custom Domain
 

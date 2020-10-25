@@ -15,8 +15,8 @@ Because this course can be offered by learning partners using any one of several
 
 You should write down the following information (provided by your instructor) for later use:
 
-- **Tenant prefix.** This tenant prefix is for the onmicrosoft.com user accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their initials, such as LODSA) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ value for later use. When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts, you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
-- **Tenant password.** This is the password for the tenant admin account provided by your lab hosting provider.
+- **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. This is in the format of **{username}@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). **Record this xxxxxZZZZZZ value for later use.** When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts, you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
+- **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account.
 - **Domain name components.** You will create a custom domain in a later lab exercise that will be in the format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** You must replace **xxxUPNxxx** with the UPN name provided by your lab hosting provider, and you must replace **xxxCustomDomainxxx.xxx** with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new custom domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
@@ -154,9 +154,9 @@ When you get to Module 4, you will perform a lab in which you will create a new 
 
 By the time you get to the Mod 4 labs, External Access should be ready so that you can collaborate with the student whose domain you set up in this task. Conversely, you should also be able to collaborate with the student who entered your domain in his or her External Access setup.
 
-1. On LON-DC1, minimize your Windows PowerShell window and return to Internet Explorer. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+1. On LON-DC1, minimize your Windows PowerShell window and return to your Edge browser. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
-	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider.
+	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) with the tenant admin password provided by your lab hosting provider.
 2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
 4. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.

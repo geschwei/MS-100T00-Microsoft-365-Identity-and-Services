@@ -170,11 +170,9 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In **Windows PowerShell**, type the following commands (press Enter after each command):
+3. In **Windows PowerShell**, at the command prompt type the following command to connect with an authenticated account to use Active Directory cmdlet requests: <br/> 
 
-	- You must run the following command to connect with an authenticated account to use Active Directory cmdlet requests: <br/> 
-	
-		Connect-AzureAD   
+   Connect-AzureAD   
 
 	- A new window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd** as the Password.  
 

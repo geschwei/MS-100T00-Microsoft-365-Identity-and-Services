@@ -82,7 +82,7 @@ In this task, you will create two new groups and then manage the groups by assig
 	
 2. In your Microsoft Edge browser, navigate to **https://portal.office.com**. 
 
-3. In the **Pick an account** window, only the admin account that you just logged out from appears. Select **Use another account**. 
+3. In the **Pick an account** window, only the tenant admin account (the MOD administrator) that you just logged out from appears. Select **Use another account**. 
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 

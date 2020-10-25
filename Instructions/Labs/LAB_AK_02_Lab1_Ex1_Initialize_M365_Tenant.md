@@ -15,14 +15,14 @@ Because this course can be offered by learning partners using any one of several
 
 You should write down the following information (provided by your instructor) for later use:
 
-- **Tenant suffix ID.** This tenant ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
+- **Tenant suffix ID.** This tenant ID is for the onmicrosoft.com accounts that you will use to sign into Microsoft 365 throughout the labs. This is in the format of **{username}@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix; it consists of your lab hoster' prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their initials, such as LODSA) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ value for later use. When any of the lab steps direct you to sign into the Office 365 or Microsoft 365 portals, you must enter the xxxxxZZZZZZ value that you obtained here.
 - **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
 - **Domain name components.** The new accepted domain that you will create in Task 3 will be in the format xxxUPNxxx.xxxCustomDomainxxx.xxx. You must replace xxxUPNxxx with the UPN name provided by your lab hosting provider, and you must replace xxxCustomDomainxxx.xxx with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new accepted domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
 ### Task 2- Set up the Organization Profile
 
-In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account (you will do this in Task 3), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account will be admin@M365xZZZZZZ.onmicrosoft.com (where ZZZZZZ is the unique tenant ID assigned to your Microsoft 365 tenant); the display name for this account will be MOD Administrator.
+In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account (you will do this in Task 3), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account will be admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
 
 1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Domain Controller VM (LON-DC1). If your VM environment opens with one of the other machines (LON-CL1 or LON-EX1), then switch to the LON-DC1 VM now.
 
@@ -36,7 +36,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 6. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-7. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider (admin@M365xZZZZZZ.onmicrosoft.com, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider) and then select **Next**.
+7. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider (admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) and then select **Next**.
 
 8. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
@@ -150,20 +150,20 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Microsoft Teams. To enable this communication between your tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propagate the changes through your tenant. Therefore, you will turn on this External Access feature in this task so that the internal changes made by the system have time to propagate through your tenant by the time you eventually get to the Module 4 lab.
 
-**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant suffix ID (ZZZZZZ) from each of their domains (this would be each student's M365xZZZZZZ.onmicrosoft.com domain, where ZZZZZZ is each student's unique tenant suffix ID provided by your lab hosting provider). The instructor will then assign to each student the tenant suffix ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant suffix ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant suffix ID from your fellow student (in other words, you will enter the **M365xZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant suffix ID).
+**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant ID (ZZZZZZ) from each of their domains (this would be each student's xxxxxZZZZZZ.onmicrosoft.com domain, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). The instructor will then assign to each student the tenant ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant suffix ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant ID from your fellow student (in other words, you will enter the **xxxxxZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant ID).
 
 By the time you get to the Mod 4 labs, External Access should be ready so that you can collaborate with the student whose domain you set up in this task. Conversely, you should also be able to collaborate with the student who entered your domain in his or her External Access setup.
 
 1. On LON-DC1, minimize your Windows PowerShell window and return to Internet Explorer. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
-	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider.
+	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider.
 2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
 4. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.
 5. In the **Microsoft Teams admin center**, in the left-hand navigation pane, select **Org-wide settings** and then select **External access**.
 6. On the **External access** page, confirm that both toggle switches are in the **On** position. If either are set to **Off** then set them to **On** now.
 7. Below the toggle switches, select **+ Add a domain**.
-8. In the **Add a domain** window, enter **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student's tenant suffix ID that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant suffix ID. 
+8. In the **Add a domain** window, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant ID. 
 9. In the **Action to take on this domain** field, select **Allowed**.
 10. Select **Done** and then select **Save**.
 11. In your Microsoft Edge browser, close the **External access - Microsoft Teams** tab. This should return you to the **Microsoft 365 admin center** tab, which you should leave open as you proceed to the next exercise.

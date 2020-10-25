@@ -184,9 +184,13 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 	To copy the ID, select the entire ID and then press Ctrl-C.
 
-7. At the command prompt type the following command and then press Enter to retrieve and restore the deleted group whose Object ID matches the value you enter. **Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, press Ctrl-V to paste in the Id. Then press Enter to run the command. **NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and hit the Delete key a couple of times after pressing Ctrl-V, and then press Enter again.  <br/>
+7. At the command prompt type the following command and then press Enter to retrieve and restore the deleted group whose Object ID matches the value you enter. <br/>
+
+	**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, press Ctrl-V to paste in the Id. Then press Enter to run the command. <br/>
 
 		Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
+
+	**NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and then after pasting in the object ID, hit the Delete key a couple of times to delete any extraneous characters that may have been pasted in following the object ID, and then press Enter again.  <br/>
 		
 8. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 

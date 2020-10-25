@@ -196,7 +196,7 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 5. You should now validate that the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, select **Groups** from the left-hand navigation pane, and then under it select **Groups** to display the list of groups. 
 
-6. Verify that the **Inside Sales** group has been restored and is present in the list of groups. If the Inside Sales group does not appear, wait a minute or two and then select the **Refresh** icon to the right of the URL in Internet Explorer.
+6. Verify that the **Inside Sales** group has been restored and is present in the list of groups. If the Inside Sales group does not appear, wait a minute or two and then select the **Refresh** icon to the left of the address bar in your Edge browser.
 
 7. You now want to verify that the recovery process correctly updated the group's membership. From the **Groups** windows, select the **Inside Sales** group.
 

@@ -20,21 +20,21 @@ A team site includes a group of related web pages, a default document library fo
 
 7. In the **Get a team site connected to Microsoft 365 Groups** window, enter the following information.
 
-- Site name: **IT Services**
+	- Site name: **IT Services**
 
-- Group email address: this is the alias for the group email address. As you typed in **IT Services** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word. Do not change this default value.
+	- Group email address: this is the alias for the group email address. As you typed in **IT Services** in the **Site name** field, the same text automatically prefilled in this field, although the blank space was removed so that it appears as one word. Do not change this default value.
 
-- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
+	- Group owner: type **Diego**, and in the window that appears displaying the users whose first name starts with Diego, select **Diego Siciliani**.
 
-- Select a language: Leave this as **English**
+	- Select a language: Leave this as **English**
 
-- Select **Advanced settings** to expand this section and then enter the following information:
+	- Select **Advanced settings** to expand this section and then enter the following information:
 
-	- Privacy settings: Given the confidential nature of much of the IT department's information, select **Private – only members can access this site**
+		- Privacy settings: Given the confidential nature of much of the IT department's information, select **Private – only members can access this site**
 
-	- Time zone: since this group is in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
+		- Time zone: since this group is in Adatum’s Redmond, WA location, select **Pacific Time (US and Canada)**
 
-	- Site Description: **This site is used by the IT department** 
+		- Site Description: **This site is used by the IT department** 
 
 8. Select **Next**.
 
@@ -115,27 +115,27 @@ In this task, you will create the following hierarchical permission structure fo
 
 14. In the **People and Groups &gt; Create Group** window, enter the following information:   
 
-- Name: **Information Technology**
+	- Name: **Information Technology**
 
-- About me: **This group is used for members of the IT staff**
+	- About me: **This group is used for members of the IT staff**
 
-- Group owner: If Holly Dickson appears as the owner, select the **X** to the right of her name to remove her, and then enter **MOD**. As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator**.  
+	- Group owner: If Holly Dickson appears as the owner, select the **X** to the right of her name to remove her, and then enter **MOD**. As you type MOD, a window appears listing users whose first name starts with MOD. Select **MOD Administrator**.  
 	
-‎**Best Practice:** When you create groups make sure the group owner is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
+		‎**Best Practice:** When you create groups make sure the group owner is either a generic Administrator account or an Administrator group. Giving ownership of groups to individuals can cause editing issues because only the owners can make changes to groups.
 
-- Group Settings:
+	- Group Settings:
 
-	- Who can view the membership of the group: **Groups Members**
+		- Who can view the membership of the group: **Groups Members**
 
-	- Who can edit the membership of the Group: **Group Owner**
+		- Who can edit the membership of the Group: **Group Owner**
 
-	- Allow requests to join/leave this Group: **Yes**
+		- Allow requests to join/leave this Group: **Yes**
 
-	- Auto-accept requests: **No**
+		- Auto-accept requests: **No**
 
-	- Send membership requests to the following e-mail address: If Holly Dickson’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
+		- Send membership requests to the following e-mail address: If Holly Dickson’s email appears, select in the field and then select the **X** that appears to the right of her address to remove it, and then enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
 
-	- Choose the permission level group members get on this site: **Full Control – Has full control**
+		- Choose the permission level group members get on this site: **Full Control – Has full control**
 
 15. Select **Create**. 
 
@@ -175,47 +175,47 @@ In this task, you will create the following hierarchical permission structure fo
 
 31. You want to create a permission level for your team’s web specialists who will be designing SharePoint sites upon request. They need to be assigned permission levels that provide complete editing and administrative capabilities. In the window that appears, enter the following information:
 
-- Name: **Designer**
+	- Name: **Designer**
 	
-- About Me: **This level restricts the level of use for web designers**
+	- About Me: **This level restricts the level of use for web designers**
 
-- List Permissions – select the following permission levels:
+	- List Permissions – select the following permission levels:
 
-	- **Add Items**
+		- **Add Items**
 
-	- **Edit Items**
+		- **Edit Items**
 
-	- **Delete Items**
+		- **Delete Items**
 
-	- **View Items**
+		- **View Items**
 
-	- **Open Items**
+		- **Open Items**
 
-	- **View Versions**
+		- **View Versions**
 
-- Site Permissions – select the following permission levels:
+	- Site Permissions – select the following permission levels:
 
-	- **Create Subsites**
+		- **Create Subsites**
 
-	- **Add and Customize Pages**
+		- **Add and Customize Pages**
 
-	- **Apply Themes and Borders**
+		- **Apply Themes and Borders**
 
-	- **Apply Style Sheets**
+		- **Apply Style Sheets**
 
-	- **Browse Directories**
+		- **Browse Directories**
 
-	- **View Pages**
+		- **View Pages**
 
-	- **Enumerate Permissions** 
+		- **Enumerate Permissions** 
 
-	- **Browse User Information**
+		- **Browse User Information**
 
-	- **Use Remote Interfaces**
+		- **Use Remote Interfaces**
 
-	- **Use Client Integration Features**
+		- **Use Client Integration Features**
 
-	- **Open**
+		- **Open**
 
 32. Scroll to the bottom of the page and select the **Create** button to save your changes.
 

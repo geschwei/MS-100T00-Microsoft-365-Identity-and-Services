@@ -8,9 +8,9 @@ In your role as Holly Dickson, you want to review the Power Platform admin cente
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. You should still have Internet Explorer and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select **Admin** to open the Microsoft 365 admin center.
+2. You should still have your Microsoft Edge browser and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select the **Admin** icon to open the Microsoft 365 admin center.
 
-3. Open a new tab in your browser and enter the following URL in the address bar: **https://make.powersapps.com/home** 
+3. Open a new tab in your Edge browser and enter the following URL in the address bar: **https://make.powersapps.com/home** 
 
 4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen. In the **Settings** pane that appears, select **Admin center**. This opens a new Internet Explorer session that displays the **Power Platform admin center.** <br/>
 

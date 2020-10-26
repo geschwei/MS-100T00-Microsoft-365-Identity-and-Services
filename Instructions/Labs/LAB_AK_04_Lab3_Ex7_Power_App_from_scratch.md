@@ -2,7 +2,7 @@
 
 In the previous exercise, you used Power Apps to automatically build a canvas app from the SharePoint data source. In this exercise you will build a similar app from scratch, using the same SharePoint list as the data source. The purpose of this exercise is for you to learn how to build an app from scratch. 
 
-In the prior lab exercise when Power Apps created the app for the Service Desk Ticketing system, it automatically created the screens used in the app – the browse screen, the detail screen, and the edit screen. When you create a canvas app from scratch, you will manually create each of these screens instead:   
+In the prior lab exercise when Power Apps created the app for the Service Desk Ticketing system, it automatically created the following screens used in the app – the browse screen, the detail screen, and the edit screen. When you create a canvas app from scratch, you will manually create each of these screens instead:   
 
 - **Screen 1 – Browse screen.** The Browse screen will display the list of records from your SharePoint list, but it will only display a limited set of fields from each record. 
 
@@ -19,7 +19,7 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In Internet Explorer, open a new tab in the browser and enter the following URL in the address bar: **https://make.powerapps.com**
+2. In your Microsoft Edge browser, open a new tab and enter the following URL in the address bar: **https://make.powerapps.com**
 
 3. This will open the **Power Apps studio**. On the main body of the **Home** page, under the **Make your own app** section, select **Canvas app from blank**.
 
@@ -45,7 +45,7 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 10. In the **SharePoint** window that appears, select the **SharePoint** connection that is listed (this displays the administrator’s email associated with the SharePoint connection). 
 
-11. A **Connect to a SharePoint site** window opens on the right side of the screen that lists the available SharePoint sites at the bottom of the window. Select **IT services** **– https://m365xZZZZZZ.sharepoint.com/sites/ITServices** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).
+11. A **Connect to a SharePoint site** window opens on the right side of the screen that lists the available SharePoint sites at the bottom of the window. Select **IT services** **– https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
 12. In the **Choose a list** window, you must select the SharePoint list for this site that you want to use as the data source for this app. Select the check box next **Service Desk Requests** and then select **Connect** on the bottom of the screen.  
 ‎  

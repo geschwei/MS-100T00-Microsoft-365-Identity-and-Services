@@ -19,7 +19,7 @@
 <li>In the <strong>Microsoft 365 admin center</strong>, select <strong>Show all</strong> (if necessary), then scroll down to <strong>Admin centers</strong> and select <strong>SharePoint</strong>. This will open the <strong>SharePoint admin center.</strong></li>
 <li>You will begin by creating a new permission level for the IT Services site. In the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, select <strong>Sites</strong>, and then select <strong>Active sites</strong>.</li>
 <li>In the list of <strong>Active sites</strong>, locate the <strong>IT Services </strong>site and select the<strong> &hellip;/sites/ITServices</strong> value that appears in the URL column<strong>.</strong></li>
-<li>A new tab will open in Internet Explorer that displays the <strong>IT Services</strong> In the upper right-hand corner of the <strong>IT Services</strong> site, select the <strong>gear (Settings)</strong> icon.</li>
+<li>A new tab will open in your Edge browser that displays the <strong>IT Services</strong> In the upper right-hand corner of the <strong>IT Services</strong> site, select the <strong>gear (Settings)</strong> icon.</li>
 <li>In the <strong>Settings</strong> pane that appears, select <strong>Site permissions.</strong></li>
 <li>At the bottom of the <strong>Site permissions</strong> pane, select <strong>Advanced permissions settings</strong>, which opens a <strong>Permissions: IT Services</strong> page.</li>
 <li>In the ribbon that appears at the top of the screen, the <strong>PERMISSIONS</strong> tab is displayed by default. Under the <strong>Manage</strong> section, select <strong>Permission Levels.</strong></li>

@@ -16,8 +16,11 @@ Because this course can be offered by learning partners using any one of several
 You should write down the following information (provided by your instructor) for later use:
 
 - **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. This is in the format of **{username}@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). **Record this xxxxxZZZZZZ value for later use.** When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts, you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
+
 - **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account.
+
 - **Domain name components.** You will create a custom domain in a later lab exercise that will be in the format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** You must replace **xxxUPNxxx** with the UPN name provided by your lab hosting provider, and you must replace **xxxCustomDomainxxx.xxx** with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new custom domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
+
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
 ### Task 2- Set up the Organization Profile
@@ -42,14 +45,18 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 9. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** 
 
-	**Note:** In the top right corner of the screen, notice the initials **MA** that appear in a circle. This is the initials for the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider. If a user has a picture associated with his or her account, that picture will be displayed when the user logs in. Since the MOD Administrator has no picture assigned, the user name initials are displayed instead. <br/>
+	**Note:** In the top right corner of the screen, notice the initials **MA** that appear in a circle. This is the initials for the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider. If a user has a picture associated with his or her account, that picture will be displayed when the user logs in. Since the MOD Administrator has no picture assigned, the user's initials are displayed instead. <br/>
 
 10. If a **Get your work done with Office 365** window appears, then close it now. 
+
 11. On the **Office 365 Home** page, in the list of Microsoft 365 apps that appear on the left side of the screen, select the **Admin** icon; this opens the **Microsoft 365 admin center**. 
 
 12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** and then select **Settings**. In the Settings group, select **Org settings**. 
+
 13. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+
 14. In the **Organization profile** tab on the **Org settings** page, select **Organization information** from the list of profile data.
+
 15. In the **Organization information** pane that appears, enter the following information:
 
     - Name: **Adatum Corporation** (Note: Contoso is originally displayed as the organization name; this was explained in the Introduction section at the start of this lab. In this step you will change it to Adatum Corporation.)
@@ -69,8 +76,11 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
     - Preferred language: **English**
 
 16. Select **Save**.
+
 17. Scroll to the top of the **Organization information** pane. Note the message indicating the changes have been saved. Select the **X** in the upper right hand corner to close the pane.
+
 18. In the list of organization profie data, select **Release preferences**.
+
 19. In the **Release preferences** pane that appears, select the **Targeted release for selected users** option and then select **Save**.<br/>
 
     **Note:** One of the benefits of Microsoft 365 is the ability to have the latest features and updates automatically applied to your environment, which can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your Release preferences, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
@@ -78,6 +88,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
     **Note:** This **Targeted release for selected users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
 20. In the **Release preferences** pane, scroll down and select **Select users**.
+
 21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users. In this list, select each of the following users (after selecting the user, you will have to select inside the field again to re-display the list): 
 
 	- **Alex Wilber**
@@ -86,9 +97,13 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 	- **MOD Administrator** <br/>
 
     **Note:** Alex, Joni, and Lynne are administrators who are part of Holly's pilot team. Their accounts will be used throughout the labs for this course.
+    
 22. Select **Save**.
+
 23. Close the **Release preferences** pane. 
+
 24. Tn the list of organization profile data, select **Custom themes**.
+
 25. In the **Custom themes** pane, scroll to the bottom of the pane and select the **Show the user's display name** check box. <br/>
 
 	As you scroll through the pane, review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
@@ -96,6 +111,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
 26. Select **Save** when you are done and then close the **Custom themes** pane.
+
 27. Remain logged into LON-DC1 with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
@@ -157,15 +173,25 @@ By the time you get to the Mod 4 labs, External Access should be ready so that y
 1. On LON-DC1, minimize your Windows PowerShell window and return to your Edge browser. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
 	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) with the tenant admin password provided by your lab hosting provider.
+	
 2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
+
 3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
+
 4. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.
+
 5. In the **Microsoft Teams admin center**, in the left-hand navigation pane, select **Org-wide settings** and then select **External access**.
+
 6. On the **External access** page, confirm that both toggle switches are in the **On** position. If either are set to **Off** then set them to **On** now.
+
 7. Below the toggle switches, select **+ Add a domain**.
+
 8. In the **Add a domain** window, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant ID. 
+
 9. In the **Action to take on this domain** field, select **Allowed**.
+
 10. Select **Done** and then select **Save**.
+
 11. In your Microsoft Edge browser, close the **External access - Microsoft Teams** tab. This should return you to the **Microsoft 365 admin center** tab, which you should leave open as you proceed to the next exercise.
 
 

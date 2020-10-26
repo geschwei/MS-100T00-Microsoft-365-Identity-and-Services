@@ -11,7 +11,7 @@ Start by familiarizing yourself with the SharePoint list which will serve as the
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. You should still have Internet Explorer and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select **Admin** to open the Microsoft 365 admin center.
+2. You should still have Microsoft Edge and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select the **Admin** icon to open the Microsoft 365 admin center.
 
 3. In the **Microsoft 365 admin center**, select **Show all** (if necessary), then scroll down to **Admin centers** and select **SharePoint**. This will open the **SharePoint admin center.**
 
@@ -38,7 +38,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In Internet Explorer, the **Power Apps** tab should still be open from the prior exercise; if not, open a new tab in your browser and enter the following URL in the address bar: **https://make.powersapps.com** 
+2. In Microsoft Edge, the **Power Apps** tab should still be open from the prior exercise; if not, open a new tab in your browser and enter the following URL in the address bar: **https://make.powersapps.com** 
 
 3. In the **Power Apps** studio, in the left-hand navigation pane, select **+Create**.
 
@@ -48,9 +48,9 @@ Once you create the Power App, you will add a new record using the app, you will
 
 6. In the **Power Apps** studio, on the **Connections** page, the details pane displays the SharePoint connection page. Under the **How do you want to connect to your data?** field, select **Connect directly (cloud services)** and then select the **Create** button.
 
-7. On the left side of the screen, under **Connections**, you will see an available connection for SharePoint. In the main window, in the list of **Recent sites**, the **IT Services**– **https://m365xZZZZZZ.sharepoint.com/sites/ITservices** site should be displayed (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provided).   
+7. On the left side of the screen, under **Connections**, you will see an available connection for SharePoint. In the main window, in the list of **Recent sites**, the **IT Services**– **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** site should be displayed (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provided).   
 ‎  
-‎Select the **IT Services** – **https://m365xZZZZZZ.sharepoint.com/sites/ITservices** site.
+‎Select the **IT Services** – **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** site.
 
 8. In the **Choose a list** window that appears, you should select the list that you want to use as the data source for your Power App. In this case, select **Service Desk Requests** and select the **Connect** button at the bottom of the screen.
 
@@ -146,7 +146,7 @@ Once you create the Power App, you will add a new record using the app, you will
 
 35. On the **Service Request Ticketing** app page, select the **Share** button so that you can share this app with the IT Consultant. 
 
-36. On the **Share Service Request Ticketing app** window, in the **Enter a name, email address, or Everyone** field, enter **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is the tenant suffix ID for your fellow student that was assigned to you by your instructor). Select the **MOD Administrator (guest)** user account that is displayed in the user list below this field, and then select **Share**.
+36. On the **Share Service Request Ticketing app** window, in the **Enter a name, email address, or Everyone** field, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix for **your fellow student that was assigned to you by your instructor**). Select the **MOD Administrator (guest)** user account that is displayed in the user list below this field, and then select **Share**.
 
 37. Close the **Share Service Request Ticketing app** window by selecting the **X** in the upper right corner of the window. 
 
@@ -164,7 +164,7 @@ Now that Holly Dickson has built her first Power App and has used it to successf
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In Internet Explorer, the **Service Request Ticketing app** tab should still be open from the prior task; if not, repeat the steps from the prior task to create a new app using the **Service Desk Requests** list in SharePoint as your data source. Once you reach the point of previewing the app, then stop and move on to the next step in this task.  
+2. In you Microsoft Edge browser, the **Service Request Ticketing app** tab should still be open from the prior task; if not, repeat the steps from the prior task to create a new app using the **Service Desk Requests** list in SharePoint as your data source. Once you reach the point of previewing the app, then stop and move on to the next step in this task.  
 
 3. In **Power Apps Studio**, the navigation pane on the left side of the screen shows the **Tree view** for the screens contained in the application. There are two menu tabs in this Tree view – **Screens** and **Components**. The **Screens** tab is underlined, indicating that it’s the tab currently being displayed (it is displayed by default). Select the **X** that appears to the right of **Tree View** to close this pane.
 
@@ -204,18 +204,18 @@ Now that Holly Dickson has built her first Power App and has used it to successf
 
 ### Task 4 - Customize the Power App
 
-The app that Holly created in the earlier task is known as a canvas app. It was developed entirely by PowerApps based on the data source, which in this case was the Service Desk Requests list in SharePoint. One of the benefits of canvas apps is that they are customizable, even if they were not built from a blank canvas. In this section, you will make a small customization to the existing app. 
+The app that Holly created in the earlier task is known as a canvas app. It was developed entirely by PowerApps based on a data source, which in this case was the Service Desk Requests list in SharePoint. One of the benefits of canvas apps is that they are customizable, even if they were not built from a blank canvas. In this section, you will make a small customization to the existing app. 
  
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. In Internet Explorer, the **Service Request Ticketing app** tab should still be open from the prior task. If the **Tree view** pane is not open, then open it now. 
+2. In your Microsoft Edge browser, the **Service Request Ticketing app** tab should still be open from the prior task. If the **Tree view** pane is not open, then open it now. 
 
 3. In the **Tree view** pane, under the **Screens** tab, expand **BrowseScreen1** (if necessary) and select **BrowseGallery1**.
 
 4. In the **Properties** pane, notice that on the top of the window it says **Gallery.** This indicates the type of component and underneath it shows the name given to the gallery component, **BrowseGallery1**. 
 
-5. In the **Properties** pane, locate the **Layou**t property for the gallery, which displays **Title, subtitle, and body.** Select the drop-down arrow for this field to see the available layout values in a **List** window. If you wanted to, this is where you would modify the layout of the gallery. Select the **Title, subtitle, and body** layout option to return to the **BrowseGallery1** window. 
+5. In the **Properties** pane, locate the **Layout** property for the gallery, which displays **Title, subtitle, and body.** Select the drop-down arrow for this field to see the available layout values in a **List** window. If you wanted to, this is where you would modify the layout of the gallery. Select the **Title, subtitle, and body** layout option to return to the **BrowseGallery1** window. 
 
 6. On the **Properties** pane, locate the **Fields** property (it appears above the Layout property). Select **Edit**, which appears to the right of the **Fields** property. A new **Data** window opens which shows the fields from the SharePoint list that are mapped to the Body, Subtitle, and Title fields that appear for each record displayed in the browse screen.   
 ‎  
@@ -237,7 +237,7 @@ The app that Holly created in the earlier task is known as a canvas app. It was 
 
 14. Now that the changes have been saved and published, you can share the app with additional users if you wish. However, at the time you created the app in the previous task, you shared it with the IT Consultant’s **MOD Administrator** account. Since you don’t want to share it with any other users at this time, you will just ignore this **Share** option. 
 
-15. In your browser, close All the Power Apps-related tabs that are open. In this next exercise, you will open a new Power Apps session to start fresh.
+15. In your Edge browser, close **all** the Power Apps-related tabs that are open. In this next exercise, you will open a new Power Apps session to start fresh.
  
 
 ### Task 5 - Add the Ticketing System app to Microsoft Teams
@@ -251,7 +251,7 @@ However, the IT Consultant has just informed Holly that there’s another way in
 
 2. You will first verify whether Teams is configured to allow the use of PowerApps.   
 ‎  
-‎In your browser, select the **Microsoft 365 admin center** tab if it’s still open; if not, open the **Office 365 home** page and select **Admin**. If required, log into Microsoft 365 as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider) and a password of Pa55w.rd. 
+‎In your Edge browser, select the **Microsoft 365 admin center** tab if it’s still open; if not, open the **Office 365 home** page and select the **Admin** icon. If required, log into Microsoft 365 as **holly@xxxxxZZZZZZ.onmicosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and a password of **Pa55w.rd**. 
 
 3. In the **Microsoft 365 admin center**, select the **…Show all** option in the navigation pane to display the admin centers, and then select **Teams**.
 
@@ -267,11 +267,11 @@ However, the IT Consultant has just informed Holly that there’s another way in
 ‎  
 ‎Switch to **LON-CL1**. Log in as the **Administrator** with a password of **Pa55w.rd**.
 
-9. Since Holly created the Service Request Ticketing system app, you must be logged into Teams as Holly in order to add this Power App to Teams.  
+9. Since Holly created the Service Request Ticketing system app, you must be logged into Teams as Holly to add this Power App to Teams.  
 ‎  
-‎If the **Teams** app is not open on your taskbar, then enter **Teams** in the **Search** box on the taskbar, select **Microsoft Teams** from the menu, and sign in as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).   
+‎If the **Teams** app is not open on your taskbar, then enter **Teams** in the **Search** box on the taskbar, select **Microsoft Teams** from the menu, and sign in as **holly@xxxxxZZZZZZ.onmicosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).   
 ‎  
-‎However, if the **Teams** app is open on the taskbar, then check who is signed into it by looking at the user account in the upper right hand corner of the application. If the user icon is **Holly Dickson**, then skip to the next step; otherwise, select the user icon and in the menu, select **Sign out**, and then sign back in as **holly@M365xZZZZZZ.onmicosoft.com** (where ZZZZZZ is your tenant suffix ID provided by your lab hosting provider).
+‎However, if the **Teams** app is open on the taskbar, then check who is signed into it by looking at the user account in the upper right hand corner of the application. If the user icon is **Holly Dickson**, then skip to the next step; otherwise, select the user icon and in the menu, select **Sign out**, and then sign back in as **holly@xxxxxZZZZZZ.onmicosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
 10. In the **Teams** window, in the left-hand navigation pane, select **Apps**. 
 
@@ -293,7 +293,7 @@ However, the IT Consultant has just informed Holly that there’s another way in
 
 18. This opens the **General** channel. Note how a new tab was created for the **Service Request Ticketing app**, which is currently selected. The app is running in the window, which enables you to access and maintain service tickets in the **Service Desk Requests** list in SharePoint. 
 
-19. Since the Power App was shared with your IT Consultant’s MOD Administrator account, you can test this feature by either requesting that your fellow student log into Teams in his or her VM environment using LON-CL1, or testing it yourself by signing out of Teams as Holly and logging back in as the IT Consultant’s MOD Administrator account (**admin@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your fellow student’s tenant suffix ID that was assigned to you by your instructor).  
+19. Since the Power App was shared with your IT Consultant’s MOD Administrator account, you can test this feature by either requesting that your fellow student log into Teams in his or her VM environment using LON-CL1, or testing it yourself by signing out of Teams as Holly and logging back in as the IT Consultant’s MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is **your fellow student’s tenant prefix that was assigned to you by your instructor**).  
 ‎  
 ‎In either case, once Microsoft Teams is open, select **Teams** from the navigation pane. The **General** channel will appear by default, so select the **Service Request Ticketing app** tab at the top of the form to initiate the Power App within Microsoft Teams.
  
@@ -304,7 +304,7 @@ This task, which is strictly optional, provides instruction on how to run an app
 
 1. To run the app from your mobile device, download and install **Power Apps** from the **App Store** or **Google Play** onto an iPhone, iPad, or Android device.
 
-2. The app will be available in the list of published Power Apps. Open the app and sign-in as **holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant suffix ID that was assigned to you by your lab hosting provider). Enter your tenant password as the Password.
+2. The app will be available in the list of published Power Apps. Open the app and sign-in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix that was provided by your lab hosting provider). Enter your tenant password as the Password.
 
 3. Tap on the **Service Request Ticketing app** to run it. 
 

@@ -10,7 +10,7 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
 
-2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
+2. You should still have an Edge browser session and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
 3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Exchange**. This will open the **Exchange admin center.**
 
@@ -53,13 +53,13 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
  
 ### Task 2 – Manage Groups 
 
-In this task you will create two types of groups within Exchange Online. The first is a distribution list of email recipients, which is used to create a one-stop email list for contacting users simultaneously rather than having to email each recipient individually. The second type of group is an Office 365 group.
+In this task you will create two types of groups within Exchange Online. The first is a distribution list of email recipients, which is used to create a one-stop email list for contacting users simultaneously rather than having to email each recipient individually. The second type of group is a Microsoft 365 group.
 
 1. Your browser should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
 
-	**Note:** You should already see the Inside Sales group that you created in Lab 2. This is an Office 365 group whose email address is associated with the custom, on-premises domain (@XXYYZZa.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and an Microsoft 365 group whose email addresses will be in Microsoft 365 (@M365xZZZZZZ.onmicrosoft.com). 
+	**Note:** You should already see the **Inside Sales** group that you created in Lab 2. This is a Microsoft 365 group whose email address is associated with the custom, on-premises domain (@xxxUPNxxx.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and a Microsoft 365 group whose email addresses will be in Microsoft 365 (@xxxxxZZZZZZ.onmicrosoft.com). 
 
-2.	Select the drop-down arrow next to the **New Microsoft 365 group** button. In the drop-down menu, select **Distribution list**.
+2. Select the drop-down arrow next to the **New Microsoft 365 group** button. In the drop-down menu, select **Distribution list**.
 
 3. In the **new distribution list** window that appears, enter the following information:
 
@@ -67,7 +67,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Alias: **SalesDept**
 
-	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider).
+	- Email Address: tab into the field and the **SalesDept** alias will appear. In the domain field to the right of it, select the drop-down arrow and select **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
 	- Owners: Since you are logged into the EAC using Holly Dickson, her account is displayed as the default Owner. However, Holly wants Alex Wilber to co-own the group, so select the **plus (+)** sign under the **Owners** section, and in the **Select Owner** window, select **Alex Wilber**, select the **add-&gt;** button, and then select **OK**.
 
@@ -83,7 +83,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Group email address: **DynCRM**
 
-	- Group email address domain: In the domain field to the right of the **DynCRM** alias, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+	- Group email address domain: In the domain field to the right of the **DynCRM** alias, select the drop-down arrow and select **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
 
 	- Privacy: **Public – Anyone can see content**
 
@@ -108,15 +108,15 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 ### Task 3 - Upgrade Distribution Lists
 
-Organizations have typically relied on distribution groups in Exchange to communicate and collaborate with groups of people both inside and outside the company. However, Office 365 Groups offer a more powerful solution for collaboration, and Adatum’s CTO wants to take advantage of this feature. He has asked you to upgrade the company’s Sales Department distribution list to an Office 365 group so that the company’s sales staff can choose the people they want to collaborate with and easily set up a collection of resources for those people to share.
+Organizations have typically relied on distribution groups in Exchange to communicate and collaborate with groups of people both inside and outside the company. However, Microsoft 365 Groups offer a more powerful solution for collaboration, and Adatum’s CTO wants to take advantage of this feature. He has asked you to upgrade the company’s Sales Department distribution list to a Microsoft 365 group so that the company’s sales staff can choose the people they want to collaborate with and easily set up a collection of resources for those people to share.
 
 1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane, and you should still be displaying the **groups** tab. If not, then navigate to **recipients &gt; groups**. 
 
 2. Below the tabs at the top of the screen are two large boxes that enable you to perform two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** box, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
 
-3. On the **Bulk upgrade DLs to groups in Outlook** window, the **Showing** field controls what information is being displayed. By default, it displays **Available for upgrade**, which displays any distribution lists that are available to be upgraded to an Microsoft 365 group. Adatum currently has only one distribution list that's available to be upgraded, the Sales Department group. <br/>
+3. On the **Bulk upgrade DLs to groups in Outlook** window, the **Showing** field controls what information is being displayed. By default, it displays **Available for upgrade**, which displays any distribution lists that are available to be upgraded to a Microsoft 365 group. Adatum currently has only one distribution list that's available to be upgraded, the Sales Department group. <br/>
 
-	Select the drop-down arrow in the **Showing** field and select the other option, **Upgraded DLs**. This option shows any distribution list groups that have been upgraded to an Office 365 group. As you can see, there are no groups currently in this list. <br/>
+	Select the drop-down arrow in the **Showing** field and select the other option, **Upgraded DLs**. This option shows any distribution list groups that have been upgraded to a Microsoft 365 group. As you can see, there are no groups currently in this list. <br/>
 
 	Now that you are familiar with the query options on this window, you want to return back to where you started so that you can upgrade the Sales Department group. Select the drop-down arrow for the **Showing** field and select the **Available for upgrade** option. 
 
@@ -130,7 +130,7 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 7. Select the **X** in the upper-right corner of the **Bulk Upgrade** window to close it.
 
-8. This returns you to the **groups** tab in the **recipients** view. If the **Sales Department** group still displays as a **Distribution list**, then select the **Refresh** icon in the menu bar above the list; the Sales Department group will now display as an **Office 365** group. 
+8. This returns you to the **groups** tab in the **recipients** view. If the **Sales Department** group still displays as a **Distribution list**, then select the **Refresh** icon in the menu bar above the list; the Sales Department group will now display as a **Microsoft 365** group. 
  
 
 ### Task 4 - Configure a Group Naming Policy
@@ -168,7 +168,7 @@ A room mailbox is a resource mailbox that is assigned to a physical location, su
 
 	- Email address: **Con1**
 
-	- Email address domain: In the domain field to the right of the **Con1** alias, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+	- Email address domain: In the domain field to the right of the **Con1** alias, select the drop-down arrow and select **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
 
 	- Location: The room is in Building 5, Room 2011, so enter **5/2011**
 
@@ -249,7 +249,7 @@ One of the key features of Exchange Online is the ability to maintain different 
 
 	- User ID: **Bill** (this is the user’s alias for his internal Adatum account)
 
-	- User ID domain: in the domain field to the right of the User ID, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+	- User ID domain: in the domain field to the right of the User ID, select the drop-down arrow and select **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
 
 	- New password: **Pa55w.rd**
 
@@ -281,7 +281,7 @@ Adatum has experienced a recent rash of malware infections. The company's CTO ha
 	- **Notify administrator about undelivered messages from internal senders**
 	- **Notify administrator about undelivered messages from external senders**
 
-8. Below the first check box that you selected in the prior step, enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second check box that you selected in the prior step.
+8. Below the first check box that you selected in the prior step, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **Administrator email address** field. Then copy this value and paste it into the **Administrator email address** field below the second check box that you selected in the prior step.
 
 9. Select **Save**, then select **OK** once the update is complete, and then select **OK** once the changes are saved successfully.
 
@@ -309,7 +309,7 @@ Holly has investigated the situation and has found that in Exchange Online, you 
 
 ### Task 9 – Manage Spam Filters
 
-For Office 365 customers whose mailboxes are hosted in Microsoft Exchange Online, their email messages are automatically protected against spam and malware. Office 365 has built-in malware and spam filtering capabilities that help protect inbound and outbound messages from malicious software and help protect you from spam. 
+For Microsoft 365 customers whose mailboxes are hosted in Microsoft Exchange Online, their email messages are automatically protected against spam and malware. Office 365 has built-in malware and spam filtering capabilities that help protect inbound and outbound messages from malicious software and help protect you from spam. 
 
 As Adatum’s Global Admin, Holly doesn't need to set up or maintain the filtering technologies, which are enabled by default. However, she can make company-specific filtering customizations in the Exchange admin center. She has decided to test this out by configuring a spam policy to grant or deny an email by focusing on the language of the email and the location of the email's origin.
 
@@ -396,38 +396,38 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 4. In the **new rule** window that appears, enter the following information:
 
-	- Name: **Email size restriction**
+- Name: **Email size restriction**
 
-	- Apply this rule if: select **The message size is greater than or equal to...** 
+- Apply this rule if: select **The message size is greater than or equal to...** 
 
-		- To the right of this drop-down field, select **Enter text**.
+	- To the right of this drop-down field, select **Enter text**.
 
-		- In the **specify size (KB)** window, enter **1024** and then select **OK**. 
+	- In the **specify size (KB)** window, enter **1024** and then select **OK**. 
 
-	- Do the following: select **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
+- Do the following: select **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
 
-		- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email content and send it as a zipped file.**
+	- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email content and send it as a zipped file.**
 
-		- Select **OK.**
+	- Select **OK.**
 
-	- Under **Choose a mode for this rule**, select **Enforce.**
+- Under **Choose a mode for this rule**, select **Enforce.**
 
 5. Select **Save**.
 
 
 ### Task 11 – Validate Accepted Domains
 
-A domain that’s added to an organization's on-premises environment is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive and send email. In Lab 1, you created a domain for Adatum Corporation based on the unique UPN name assigned to your tenant and the custom domain name provided by your lab hosting provider (in this case, XXYYZZa.xxxCustomDomainxxx.xxx, where XXYYZZa is your unique UPN Name and xxxCustomDomainxxx.xxx is the domain of your lab hosting provider). 
+A domain that’s added to an organization's on-premises environment is called an accepted, or custom domain. You can create mailboxes with accepted domains to receive and send email. In Lab 1, you created a domain for Adatum Corporation based on the unique UPN name assigned to your tenant and the custom domain name provided by your lab hosting provider (in this case, xxxUPNxxx.xxxCustomDomainxxx.xxx, where xxxUPNxxx is your unique UPN Name and xxxCustomDomainxxx.xxx is the domain created by your lab hosting provider). 
 
 In this task, you will use the Exchange Admin Center to view your accepted domain and configure the domain type. Each domain can be changed to either authoritative (which accepts all inbound or outbound mail) or internal relay (which only accepts internal email). By default, all domains should be set to authoritative. You want to ensure that your custom domain’s type is set to authoritative.
 
 1. In the **Exchange admin center**, you should still be displaying **mail flow** from the left-hand navigation pane. In this list of mail flow tabs across the top of the screen, select **accepted domains.**
 
-2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (XXYYZZa.xxxCustomDomainxxx.xxx) that you added in Lab 1, and its Microsoft 365 cloud domain (M365xZZZZZZ.onmicrosoft.com).
+2. In the list of accepted domains, you should see Adatum’s two domains – its custom on-premises domain (xxxUPNxxx.xxxCustomDomainxxx.xxx) that you added in Lab 1, and its Microsoft 365 cloud domain (xxxxxZZZZZZ.onmicrosoft.com).
 
 3. You can see from this display that the domain type for each domain is already set to **Authoritative,** so you don’t need to make any changes here. 
 
-4. However, let’s assume that you set the domain type to **Internal Relay** when you initially created the custom **XXYYZZa.xxxCustomDomainxxx.xxx** domain. If you wanted to change it now to **Authoritative,** you would perform the following steps (you can perform the first step to see the window and the corresponding options, but the domain is already set to Authoritative, so you can’t actually make this change):
+4. However, let’s assume that you set the domain type to **Internal Relay** when you initially created the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain. If you wanted to change it now to **Authoritative,** you would perform the following steps (you can perform the first step to see the window and the corresponding options, but the domain is already set to Authoritative, so you can’t actually make this change):
 
 	- Select this domain in the list, and then select the **pencil (edit)** icon on the menu bar. 
 

@@ -6,9 +6,9 @@ In this exercise you will be introduced to some troubleshooting tools in Microso
 
 Holly Dickson, Adatum's new Enterprise Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none), and another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
-1. You should still be logged into LON-DC1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Spencer.
+1. You should still be logged into LON-DC1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Microsoft Office Home** tab to display the Office 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** and **Pa55w.rd**).
+2. In your **Microsoft Edge** browser, select the **Microsoft Office Home** tab to display the Office 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**).
 
 3. In the **Office 365 Home** page, select the **Outlook** icon in the column of app icons on the left. In the Outlook settings window that appears, accept **English** as the language, select your corresponding **Time zone**, and then select **Save**.
 
@@ -64,7 +64,7 @@ Holly Dickson, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, the user's domain (outlook.com) was valid, but the user mailbox was unavailable. 
 
-23. Close the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in Internet Explorer. 
+23. Close the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in your Edge browser. 
 
 24. If the **Microsoft 365 admin center** tab is still open in your browser, then select that now; otherwise, select the **Microsoft Office Home** tab in your Edge browser and then select the **Admin** icon. 
 
@@ -76,7 +76,7 @@ Holly Dickson, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 28. In the **Message trace** window, select **+Start a trace**. 
 
-29. In the **New message trace** window, select the **By these people** field. This displays the list of active users. Scroll down and select **Holly Spencer**.
+29. In the **New message trace** window, select the **By these people** field. This displays the list of active users. Scroll down and select **Holly Dickson**.
 
 30. Under the **Within this time range** section, select **1 day**. 
 

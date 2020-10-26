@@ -87,7 +87,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 3. In the **IT Services** window that appears, select the URL (**.../sites/ITServices**) that is displayed under **URL.** 
 
-4. A new tab will open in Internet Explorer that displays the **IT Services** site.
+4. A new tab will open in your Edge browser that displays the **IT Services** site.
 
 5. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
 
@@ -155,11 +155,11 @@ In this task, you will create the following hierarchical permission structure fo
 
 22. In the **People and Groups** window that appears, the **Information Technology** group information will appear. The members of the group (Holly, Isaiah, and Joni) should be displayed.
 
-23. Close this **Peoples and Groups** tab in Internet Explorer. This will return you to the **SharePoint admin center** and the **Active sites** list, with the **IT Services** pane open on the right-hand side. 
+23. Close this **Peoples and Groups** tab in your Edge browser. This will return you to the **SharePoint admin center** and the **Active sites** list, with the **IT Services** pane open on the right-hand side. 
 
 24. In the **IT Services** window that appears, select the URL (**.../sites/ITServices**) that is displayed under **URL.** 
 
-25. A new tab will open in Internet Explorer that displays the **IT Services** site.
+25. A new tab will open in your Edge browser that displays the **IT Services** site.
 
 26. In the upper right-hand corner of the **IT Services** site, select the **gear (Settings)** icon.
 

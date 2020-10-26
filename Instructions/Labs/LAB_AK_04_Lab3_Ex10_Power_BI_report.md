@@ -21,7 +21,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 5. In the **Choose the download you want** window, select **PBIDesktopSetup_x64.exe** then select **Next** on the bottom of the screen.
 
-6. If you receive a notification bar at the bottom of the screen that indicates Internet Explorer blocked a pop-up from Microsoft.com, select **Allow once**. 
+6. If you receive a notification bar at the bottom of the screen that indicates Microsoft Edge blocked a pop-up from Microsoft.com, select **Allow once**. 
 
 7. In the notification bar that appears at the bottom of the screen that asks what you want to do with **PBIDesktopSetup_x64.exe (271MB)**, select **Run.** 
 
@@ -309,7 +309,7 @@ As part of her pilot project, Holly wants to share the dashboard that she just c
 
 1. After having completed the prior task, you should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. You should also have the Power BI Service open in your Internet Explorer browser; if not, then open a new browser tab, enter **https://app.powerbi.com** in the address bar, and sign in as **Holly.**
+2. You should also have the Power BI Service open in your Edge browser; if not, then open a new browser tab, enter **https://app.powerbi.com** in the address bar, and sign in as **Holly.**
 
 3. In the **Power BI** tab in your browser, in the left-hand navigation pane, select **My Workspace.**
 
@@ -356,7 +356,7 @@ Now that Holly has created a report and dashboard and shared it with another Ada
 
 2. You should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-3. In **Internet Explorer**, you should still have the **Power BI Service** tab open; if not, open a new tab and enter the following URL in the address bar: **https://app.powerbi.com** 
+3. In your **Edge** browser, you should still have the **Power BI Service** tab open; if not, open a new tab and enter the following URL in the address bar: **https://app.powerbi.com** 
 
 4. At the top side of the **Power BI** **service screen**, to the right of the **Search** field, select the **gear (Settings)** icon, and in the menu that appears, select **Admin portal**.
 

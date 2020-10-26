@@ -1,6 +1,6 @@
 # Module 3 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
 
-You have taken on the persona of Holly Spencer, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
+You have taken on the persona of Holly Dickson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
 In the first two tasks in this exercise, you will verify the following conditions that affect whether a user can be blocked from downloading the Microsoft 365 Apps for enterprise suite: <br/>
 
@@ -13,15 +13,15 @@ In the final task in this exercise, you will install the Microsoft 365 Apps for 
 
 ### Task 1 – Verify how licensing affects installing Microsoft 365 Apps for enterprise
 
-In this task, Holly will test whether a user who has not been assigned an appropriate Office 365 license can download Microsoft 365 Apps for enterprise. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Office 365 accounts (M365xZZZZZZ.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum domain. Without an on-premises account, you cannot log into the Client 1 VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine. 
+In this task, Holly will test whether a user who has not been assigned an appropriate Office 365 license can download Microsoft 365 Apps for enterprise. For this test, you cannot use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Microsoft 365 accounts (xxxxxZZZZZZ.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum domain. Without an on-premises account, you cannot log into the Client 1 VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine. 
 
-Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its VM environment. For this test, you will use **Laura Atkins**. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
+Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its VM environment. For this test, you will use **Laura Atkins**. You will create a Microsoft 365 account for Laura, but you will not assign her an Office 365 license. 
 
 1. If you are not logged into the Domain Controller VM (LON-DC1) as **Administrator** and password **Pa55w.rd**, then please do so now. 
 
 2. The **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab. If the **Active users** window is not displayed, select **Users** in the left-hand navigation pane and then select **Active users**. 
 
-3. You will begin by testing whether a user **without** an appropriate Office 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have an Office 365 user account. You will create an Office 365 account for Laura, but you will not assign her an Office 365 license. 
+3. You will begin by testing whether a user **without** an appropriate Office 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will not assign her an Office 365 license. 
 
 	At the top of the **Active users** window, select **Add a user** on the menu bar.
 
@@ -31,9 +31,9 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	- Display name: When you tab into this field, Laura Atkins will appear.
 	- Username: **Laura**
 
-	**IMPORTANT:** To the right of the Username field is the domain field. It’s already prefilled with the custom **XXYYZZa.xxxCustomDomainxxx.xxx** on-premises domain (where XXYYZZ is your UPN number and xxxCustomDomainxxx.xxx is your lab hosting provider's domain); however, you must select the drop-down arrow and select the **M365xZZZZZZ.onmicrosoft.com** cloud domain instead (where ZZZZZZ is your tenant ID provided by your lab hosting provider). 
+	**IMPORTANT:** To the right of the Username field is the domain field. It’s already prefilled with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** on-premises domain (where xxxUPNxxx is your UPN number and xxxCustomDomainxxx.xxx is the custom domain); however, you must select the drop-down arrow and select the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain instead (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). 
 
-	After configuring this field, Laura’s **Username** should appear as: **Laura@M365xZZZZZZ.onmicrosoft.com**
+	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
 
 	- Password settings: select the **Let me create the password** option
 	- Password: **Pa55w.rd** 
@@ -59,7 +59,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 14. In **Microsoft Edge**, maximize your browser, then go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
 
-15. In the **Sign in** window, enter **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and then select **Next**.
+15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
 16. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
 
@@ -78,7 +78,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 Holly is now going to test whether users can be prohibited from downloading Microsoft 365 Apps for enterprise if an admin such as herself turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users.<br/>
 	
-1. Switch back the Domain Controller VM (**LON-DC1**). You should still be logged into Microsoft 365 as Holly Spencer, Adatum’s Enterprise Administrator.
+1. Switch back the Domain Controller VM (**LON-DC1**). You should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Enterprise Administrator.
 
 2. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the left-hand navigation pane. Select **Settings**, and then within the group, select **Org Settings**. 
 
@@ -104,13 +104,13 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 	
 	**Note:** Refreshing the **My account** page does not re-verify Laura's licensing status as it still returns the same error message as before when Laura was unlicensed. Therefore, you must log out of Office 365 and log back in. 
 
-11. Select the Laura Atkins icon (the circle with LA in it) in the upper-right corner of the screen, and in the drop-down menu that appears, select **Sign out**.
+11. Select the Laura Atkins icon (the circle with **LA** in it) in the upper-right corner of the screen, and in the drop-down menu that appears, select **Sign out**.
 	
 	**Important**: As a best practice to avoid any confusion when logging out as one user and logging in as another, close all other tabs that are open in your Edge browser except for this **Sign out** tab.
 
 12. In **Microsoft Edge**, go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/**
 
-13. In the **Pick an account** window, select **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider).
+13. In the **Pick an account** window, select **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
 14. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in.**
 

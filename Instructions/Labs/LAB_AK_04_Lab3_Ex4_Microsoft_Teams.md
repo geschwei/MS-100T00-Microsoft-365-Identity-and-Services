@@ -158,33 +158,33 @@ Now that you have created the resource account for your calling queue, you will 
 
 7. In the **Call Queue 1** window, scroll down the page and select the following values for each option:
 	
-- Language: **"English (United States)"**
+	- Language: **"English (United States)"**
 
-- Greeting: **No greeting**
+	- Greeting: **No greeting**
 
-- Music on hold: **Play default music**
+	- Music on hold: **Play default music**
 
-- Call answering: 
+	- Call answering: 
 
-	- **Choose which call agents to associate with this call queue:** Select the **Add users** button. In the **Add users** pane that appears on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Allan**. As you type **Allan**, a window appears listing users whose name starts with **Allan**. As you hover your mouse over **Allan Deyoung**, an **Add** button appears to the right of it. Select the **Add** button.
+		- **Choose which call agents to associate with this call queue:** Select the **Add users** button. In the **Add users** pane that appears on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Allan**. As you type **Allan**, a window appears listing users whose name starts with **Allan**. As you hover your mouse over **Allan Deyoung**, an **Add** button appears to the right of it. Select the **Add** button.
 		
-	**Important:** Note the red error message that appears across the top of the page. The error message indicates that Allan cannot be associated with this call queue because he is not enterprise-voice enabled. Select the **X** on the right side of this error message to close it.
+			**Important:** Note the red error message that appears across the top of the page. The error message indicates that Allan cannot be associated with this call queue because he is not enterprise-voice enabled. Select the **X** on the right side of this error message to close it.
+			
+		- **Choose which groups to associate with this call queue:** Select the **Add groups** button. In the **Add call agents** pane on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right of it. Select the **Add** button.
 		
-	- **Choose which groups to associate with this call queue:** Select the **Add groups** button. In the **Add call agents** pane on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right of it. Select the **Add** button.
-		
-	In the **Add call agents** pane, the Sales Department appears under **Selected groups**. Select the **Add** button at the bottom of the pane.
+			In the **Add call agents** pane, the Sales Department appears under **Selected groups**. Select the **Add** button at the bottom of the pane.
 
-	- Routing Method: **Round Robin**   
+			- Routing Method: **Round Robin**   
 		
-	- Presence-based routing - **Off**
+			- Presence-based routing - **Off**
 	
-	- Agents can opt out of taking calls: **On**
+			- Agents can opt out of taking calls: **On**
 		
-	- Agent alert time (in seconds) - **45** (entering the value in the field is easier than dragging the icon)
+			- Agent alert time (in seconds) - **45** (entering the value in the field is easier than dragging the icon)
 
-	- Call overflow handling: **leave all settings to their default values**
+			- Call overflow handling: **leave all settings to their default values**
 
-	- Call time out handling: **leave all settings to their default values**
+			- Call time out handling: **leave all settings to their default values**
 
 8. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear, and **Call Queue 1** will appear in the list of Call queues.
 
@@ -275,36 +275,36 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 3. Once you set this switch to **On**, a variety of additional settings are displayed. Scroll down the page and select the following values for each setting:
 
-- Calling
+	- Calling
 
-	- Make private calls: **Off**
+		- Make private calls: **Off**
 
-- Meeting
+	- Meeting
 
-	- Allow IP video: **On**
+		- Allow IP video: **On**
 
-	- Screen sharing mode: **Entire screen**
+		- Screen sharing mode: **Entire screen**
 
-	- Allow Meet Now: **On**
+		- Allow Meet Now: **On**
 
-- Messaging
+	- Messaging
 
-	- Edit sent messages: **Off**
+		- Edit sent messages: **Off**
 
-	- Delete sent Messages: **Off**
+		- Delete sent Messages: **Off**
 
-	- Chat: **On**
+		- Chat: **On**
 
-	- Use Giphy in conversations: **Off**
+		- Use Giphy in conversations: **Off**
 
-	- Giphy content rating: **Strict**
+		- Giphy content rating: **Strict**
+	
+		- Use Memes in conversations: **Off**
 
-	- Use Memes in conversations: **Off**
+		- User Stickers in conversations: **Off**
 
-	- User Stickers in conversations: **Off**
-
-	- Allow immersive reader for viewing messages: **On**
-
+		- Allow immersive reader for viewing messages: **On**
+	
 4. Select **Save.** Note the message that displays indicating it can take 2 to 24 hours for the changes to take effect. This message does not automatically disappear, so close this message by selecting the **X** that appears at the right-side of the message; otherwise, the message will remain at the top of your screen even as you navigate to other pages.
 
 5. Leave all tabs open in your browser and proceed to the next task. 
@@ -318,47 +318,47 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 2. In the **Teams settings** window, select the following values for each setting:
 
-- Notifications and feeds
+	- Notifications and feeds
 	
-	- Suggested feeds can appear in a user's activity feed: **On**
+		- Suggested feeds can appear in a user's activity feed: **On**
 		
-- Tagging
+	- Tagging
 		
-	- Tagging are managed by: **Disabled**
+		- Tagging are managed by: **Disabled**
 
-- Email integration
+	- Email integration
 
-	- Allow users to send emails to a channel email address: **On**
+		- Allow users to send emails to a channel email address: **On**
 
-	- Accept channel email from these SMTP Domains: **microsoft.com**
+		- Accept channel email from these SMTP Domains: **microsoft.com**
 
-- Files
+	- Files
 
-	- Citrix files: **On**
+		- Citrix files: **On**
 
-	- DropBox: **Off**
+		- DropBox: **Off**
 
-	- Box: **Off**
+		- Box: **Off**
 
-	- Google Drive: **On**
+		- Google Drive: **On**
 
-	- Egnyte: **Off**
+		- Egnyte: **Off**
 
-- Organization
+	- Organization
 
-	- Show Organization tab in chats: **On**
+		- Show Organization tab in chats: **On**
 
-- Devices
+	- Devices
 
-	- Require a secondary form of authentication to access meeting content: **No access**
+		- Require a secondary form of authentication to access meeting content: **No access**
 
-	- Set content PIN: **Required for outside scheduled meeting**
+		- Set content PIN: **Required for outside scheduled meeting**
 
-	- Resource accounts can send messages: **On**
+		- Resource accounts can send messages: **On**
 
-	- Search by name
+		- Search by name
 
-	- Scope directory search using an Exchange address book policy: **On**
+		- Scope directory search using an Exchange address book policy: **On**
 
 3. Select **Save**.
 

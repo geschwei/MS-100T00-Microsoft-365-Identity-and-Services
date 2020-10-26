@@ -45,7 +45,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎if the **Sign in to collaborate and share content** screen appears, it is used for signing into the Power BI Desktop, as well as signing up for a free 60 day trial offer using Power BI Pro. While Power BI Pro facilitates sharing and collaborating across departments, it is beyond the scope of this lab.   
 ‎  
-‎Therefore, if this **Sign in to collaborate and share content** screen appears, simply select the **Sign in** option and proceed through the sign in process using **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is the tenant suffix ID provided by your lab hosting provider) and her password of **Pa55w.rd**.  
+‎Therefore, if this **Sign in to collaborate and share content** screen appears, simply select the **Sign in** option and proceed through the sign in process using **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and her password of **Pa55w.rd**.  
 ‎  
 ‎**Note:** If the **Getting started with Power BI Desktop** window appears, it provides free tutorial videos and links to **What’s New**, **Forums**, **Power BI Blog**, and **Tutorials**. Feel free to review any of this information. When you are ready to proceed, select the **X** in the upper right-hand corner to close this window.
 
@@ -55,7 +55,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 19. In the **Get Data** window that opens, type **SharePoint** in the Search box that appears above the left-hand navigation pane. In the detail pane on the right, three SharePoint options will appear. Since you used the on-premises version of SharePoint to create the Service Request Ticketing system, select **SharePoint Online List**, and then select **Connect**.
 
-20. In the **SharePoint lists** window that appears, enter the following URL for the Service Request Ticketing system in the **Site URL** field: **https://m365xZZZZZZ.sharepoint.com/sites/ITservices** (where ZZZZZZ is the tenant suffix ID provided by your lab hosting partner). Select **OK.**  
+20. In the **SharePoint lists** window that appears, enter the following URL for the Service Request Ticketing system in the **Site URL** field: **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting partner). Select **OK.**  
 
 21. If a pop-up window appears that displays the SharePoint site URL at the top and three authentication options on the left-hand navigation pane (Anonymous, Windows, and Microsoft Account), select **Microsoft Account,** sign in as **Holly** (just as you did when you signed in)**,** and then select **Connect**.
 
@@ -111,17 +111,17 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎In the **Fields** pane, select the check boxes next to the following fields (note – actual field names are not always the same as the field name displayed in the SharePoint list):
 
-	- Created – select the **Created** check box
+- Created – select the **Created** check box
 
-	- Customer – select the **FieldValuesAsText.Customer** check box
+- Customer – select the **FieldValuesAsText.Customer** check box
 
-	- Assigned To – select the **FieldValuesAsText.Assignto** check box 
+- Assigned To – select the **FieldValuesAsText.Assignto** check box 
 
-	- Issue Title - select the **issueTitle** check box 
+- Issue Title - select the **issueTitle** check box 
 
-	- Location – select the **Location** check box
+- Location – select the **Location** check box
 
-	- Issue Status – select the **Title** check box
+- Issue Status – select the **Title** check box
 
 36. You can change the size of the table visualization in the report canvas by selecting the bottom right corner of the table and dragging it diagonally down to the right. Keep in mind that you will be adding a second visualization to this page, so leave enough room in the report canvas to add another visualization. 
 
@@ -137,13 +137,13 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎Change the names of the following fields:
 
-	- FieldValuesAsText.Customer – rename to **Customer**
+- FieldValuesAsText.Customer – rename to **Customer**
 
-	- FieldValuesAsText.Assignto – rename to **Assigned To**
+- FieldValuesAsText.Assignto – rename to **Assigned To**
 
-	- issueTitle – rename to **Issue Title** 
+- issueTitle – rename to **Issue Title** 
 
-	- Title – rename to **Issue Status**  
+- Title – rename to **Issue Status**  
 ‎  
 ‎This completes the **Table** visualization. 
 
@@ -236,9 +236,9 @@ Dashboards can only be created in Power BI Online because they are a feature of 
 
 1. After having completed the prior task, you should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. In Internet Explorer, open a new browser tab and enter the following URL in the address bar: **https://powerbi.microsoft.com** 
+2. In your Edge browser, open a new tab and then enter the following URL in the address bar: **https://powerbi.microsoft.com** 
 
-3. This opens the **Microsoft Power BI service**, which is required to create a dashboard. On the right-hand side of the top row, select **Sign in**. In the **Pick an account** window, select Holly’s account (**holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is the tenant suffix ID provided by your lab hosting provider). In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**. In the **Stay signed in?** window, select **Yes**.
+3. This opens the **Microsoft Power BI service**, which is required to create a dashboard. On the right-hand side of the top row, select **Sign in**. In the **Pick an account** window, select Holly’s account (**holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**. In the **Stay signed in?** window, select **Yes**.
 
 4. In the left-hand navigation pane, select **My workspace.**  
 ‎  
@@ -294,7 +294,7 @@ Dashboards can only be created in Power BI Online because they are a feature of 
 
 21. To run the app from your mobile device, you must first download and install **Power BI** from the **App Store** or **Google Play**.
 
-22. Once you have downloaded and installed the **Power BI** app to your phone, open the app and sign-in as **holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant suffix ID).
+22. Once you have downloaded and installed the **Power BI** app to your phone, open the app and sign-in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is  tenant prefix provided by your lab hosting provider).
 
 23. You will see the dashboard and report listed on under **Recents.** 
 
@@ -331,7 +331,7 @@ As part of her pilot project, Holly wants to share the dashboard that she just c
 
 9. Open your Edge browser and enter the following URL in the address bar: **https://app.powerbi.com**
 
-10. In the **Sign in** window, scroll down on the page until you reach the **Sign up and get started today** pane, enter **Laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant suffix id) in the **Enter your work email address** field, and then select **USE IT FREE**.
+10. In the **Sign in** window, scroll down on the page until you reach the **Sign up and get started today** pane, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **Enter your work email address** field, and then select **USE IT FREE**.
 
 11. If a **You have an account with us** window appears that indicates Laura is already using another Microsoft service, then select **Sign in** to enter your existing password. In the **Enter password** window, enter **Pa55w.rd** and then select **Sign in**.
 
@@ -345,13 +345,12 @@ As part of her pilot project, Holly wants to share the dashboard that she just c
 
 **Note:** You would perform similar steps if you shared a report with another user; sharing within Power BI is not limited to just dashboards.
 
-16. Leave your Internet Explorer browser open and do not close the Power BI Service tab.
+16. Leave your Edge browser open and do NOT close the Power BI Service tab.
 
 
 ### Task 4:  Explore the Power BI Admin Portal
 
 Now that Holly has created a report and dashboard and shared it with another Adatum user, she wants to explore the administrative functionality within Power BI that’s available in the Power BI Admin Portal.
-
 
 1. Switch back to the Domain Controller (LON-DC1) VM.
 

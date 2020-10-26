@@ -11,7 +11,7 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 
 1. After having completed the prior exercise in which you created a flow in Power Automate and assigned to it an additional owner, you should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. You should still have the browser tab open to the ** Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab. If not, then repeat the steps you performed in the prior task to get to this tab (from **Power Automate studio**, select **My flows**, and then select the **Team flows** tab.
+2. You should still have your Edge browser open to the **Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab. If not, then repeat the steps you performed in the prior task to get to this tab (from **Power Automate studio**, select **My flows**, and then select the **Team flows** tab).
 
 3. In the top right corner of the screen, select the **gear (Settings)** icon, and then in the **Settings** pane that appears select **Admin Center**.
 
@@ -34,11 +34,10 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 10. This brings you to the final section which you will review all the **settings**,affirm that they're accurate by selecting**Create policy**.
 
 11. You will be brough back to the **Data policies** page where the new **DLP Policy** should be present.
-‎
 
-    **Important:** You have created a data policy that has one of the two connectors used in your flow (SharePoint) in the **Business data only** group. However, Holly has forgotten that she actually has two connectors in her flow; the second connector is **Office 365 Outlook**, which manages the email that is automatically created and sent by the flow. This connector remains in the **No business data allowed** **(default)** group.   
-‎  
-‎In practice, you would not implement this policy as you need both connectors used by the flow in the same group. Continue on to see how connectors in both groups impact the flow. 
+      **Important:** You have created a data policy that has one of the two connectors used in your flow (SharePoint) in the **Business data only** group. However, Holly has forgotten that she actually has two connectors in her flow; the second connector is **Office 365 Outlook**, which manages the email that is automatically created and sent by the flow. This connector remains in the **No business data allowed** **(default)** group.   
+   
+      In practice, you would not implement this policy as you need both connectors used by the flow in the same group. Continue on to see how connectors in both groups impact the flow. 
 
 12. In your browser, select the **Manage your flows | Microsoft Power Automate** tab to return to the **Flows** window that displays your flow in the **Team flows** tab. 
 
@@ -63,7 +62,7 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 17. In the heading at the top of the page, **Flow &gt; Service Request Flow for new/modified tickets**, select **Flow** to return to the list of flows. 
 
 18. Leave your browser and all its tabs open for the next task.
-‎
+
 
 ### Task 2:  Edit your data loss prevention policy
 
@@ -75,7 +74,7 @@ In your role as Holly, you will update this DLP policy to include Outlook as an 
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. You should still have the browser tab open to the **Manage your flows | Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab.   
+2. You should still have your Edge browser open to the **Manage your flows | Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab.   
 ‎  
 ‎In your browser, select the **Microsoft Flow Admin Center** tab, which should be displaying the **Data loss prevention policies** window. If you closed this tab at the end of the prior task, then in the **Manage your flows | Microsoft Power Automate** tab, select the gear **(Settings)** icon, select **Admin center** in the **Settings** pane, and then in the **Microsoft Flow Admin Center,** select **Data policies.**
 

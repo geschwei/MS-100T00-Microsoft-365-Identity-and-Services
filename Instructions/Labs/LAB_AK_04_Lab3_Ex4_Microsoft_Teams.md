@@ -10,7 +10,7 @@ As Holly Dickson, Adatum's Enterprise Administrator, you want to customize the c
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
-2. You should still have Internet Explorer and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Internet Explorer, navigate to **https://portal.office.com/**, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
+2. You should still have your Edge browser and the **Microsoft 365 admin center** open from the prior lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select the **Admin** icon to open the Microsoft 365 admin center.
 
 3. To start fresh in this Teams lab exercise, close all SharePoint-related tabs in your Edge browser that were left open from the previous lab. Only leave the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab open. 
 
@@ -28,7 +28,7 @@ As Holly Dickson, Adatum's Enterprise Administrator, you want to customize the c
 
 10. Under the **Participants &amp; guests** section, review each setting. Because Adatum has had issues in the past with non-invited external users dialing into meetings, you have been asked to set the **Allow dial-in users to bypass the lobby** option to **Off**. This setting controls whether people who dial in by phone will automatically join the meeting or must wait in the lobby until they are admitted to the call. Because the **Automatically admit people** setting is set to **Everyone in your organization**, anyone who dials-in will wait in the lobby until admitted; this includes both Adatum and non-Adatum participants. You may decide to turn this setting **On** if it proves to be problematic in practice, but for now, you want to begin with this level of control. 
 
-Dickson. Scroll to the bottom of the page and select **Save**.
+11. Scroll to the bottom of the page and select **Save**.
 
 12. Leave all tabs open in your browser and proceed to the next task. 
 
@@ -131,7 +131,7 @@ Creating a calling queue is a two-step process. In this task, you will first cre
 
 	- Username: **CQ1**
 
-	- Domain name: In the domain name field to the right of the username, select the drop-down arrow and select **M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider)
+	- Domain name: In the domain name field to the right of the username, select the drop-down arrow and select **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider)
 
 	- Resource account type: **Call queue**
 
@@ -158,29 +158,29 @@ Now that you have created the resource account for your calling queue, you will 
 
 7. In the **Call Queue 1** window, scroll down the page and select the following values for each option:
 	
-	- Language: **"English (United States)"**
+- Language: **"English (United States)"**
 
-	- Greeting: **No greeting**
+- Greeting: **No greeting**
 
-	- Music on hold: **Play default music**
+- Music on hold: **Play default music**
 
-	- Call answering: 
+- Call answering: 
+
+	- **Choose which call agents to associate with this call queue:** Select the **Add users** button. In the **Add users** pane that appears on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Allan**. As you type **Allan**, a window appears listing users whose name starts with **Allan**. As you hover your mouse over **Allan Deyoung**, an **Add** button appears to the right of it. Select the **Add** button.
+		
+	**Important:** Note the red error message that appears across the top of the page. The error message indicates that Allan cannot be associated with this call queue because he is not enterprise-voice enabled. Select the **X** on the right side of this error message to close it.
+		
+	- **Choose which groups to associate with this call queue:** Select the **Add groups** button. In the **Add call agents** pane on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right of it. Select the **Add** button.
+		
+	In the **Add call agents** pane, the Sales Department appears under **Selected groups**. Select the **Add** button at the bottom of the pane.
+
+	- Routing Method: **Round Robin**   
+		
+	- Presence-based routing - **Off**
 	
-		- **Choose which call agents to associate with this call queue:** Select the **Add users** button. In the **Add users** pane that appears on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Allan**. As you type **Allan**, a window appears listing users whose name starts with **Allan**. As you hover your mouse over **Allan Deyoung**, an **Add** button appears to the right of it. Select the **Add** button.
+	- Agents can opt out of taking calls: **On**
 		
-		**Important:** Note the red error message that appears across the top of the page. The error message indicates that Allan cannot be associated with this call queue because he is not enterprise-voice enabled. Select the **X** on the right side of this error message to close it.
-		
-		- **Choose which groups to associate with this call queue:** Select the **Add groups** button. In the **Add call agents** pane on the right-side of the screen, in the **Find distribution lists or groups** box, enter **Sales.** As you type Sales, a window appears listing the groups whose name starts with Sales. As you hover your mouse over **Sales Department**, an **Add** button appears to the right of it. Select the **Add** button.
-		
-		In the **Add call agents** pane, the Sales Department appears under **Selected groups**. Select the **Add** button at the bottom of the pane.
-
-		- Routing Method: **Round Robin**   
-		
-		- Presence-based routing - **Off**
-	
-		- Agents can opt out of taking calls: **On**
-		
-		- Agent alert time (in seconds) - 45 (entering the value in the field is easier than dragging the icon)
+	- Agent alert time (in seconds) - **45** (entering the value in the field is easier than dragging the icon)
 
 	- Call overflow handling: **leave all settings to their default values**
 
@@ -234,7 +234,7 @@ As part of her Microsoft Teams pilot project, Holly Dickson wants to block commu
 
 1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **External access.**
 
-2. In the **External access** window, leave the two settings involving Skype for Business/Teams and Skype users set to **On**. Also note that in the list of domains, the domain of the IT Consultant who helped formulate the new Service Request Ticketing system (**M365xZZZZZZonmicrosoft.com**) appears in the list, and that communication is Allowed with this domain.  
+2. In the **External access** window, leave the two settings involving Skype for Business/Teams and Skype users set to **On**. Also note that in the list of domains, the domain of the IT Consultant who helped formulate the new Service Request Ticketing system (**xxxxxZZZZZZonmicrosoft.com**) appears in the list, and that communication is Allowed with this domain.  
 
 3. To add the domain in which you want to allow communication, select **+Add a domain** in the menu bar that appears above the list.  
 
@@ -260,7 +260,7 @@ As part of her Microsoft Teams pilot project, Holly Dickson wants to block commu
 
 10. Select **Save.**
 
-Dickson. Leave all tabs open in your browser and proceed to the next task. 
+11. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 8 – Manage Guest Access
@@ -275,35 +275,35 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 3. Once you set this switch to **On**, a variety of additional settings are displayed. Scroll down the page and select the following values for each setting:
 
-	- Calling
+- Calling
 
-		- Make private calls: **Off**
+	- Make private calls: **Off**
 
-	- Meeting
+- Meeting
 
-		- Allow IP video: **On**
+	- Allow IP video: **On**
 
-		- Screen sharing mode: **Entire screen**
+	- Screen sharing mode: **Entire screen**
 
-		- Allow Meet Now: **On**
+	- Allow Meet Now: **On**
 
-	- Messaging
+- Messaging
 
-		- Edit sent messages: **Off**
+	- Edit sent messages: **Off**
 
-		- Delete sent Messages: **Off**
+	- Delete sent Messages: **Off**
 
-		- Chat: **On**
+	- Chat: **On**
 
-		- Use Giphy in conversations: **Off**
+	- Use Giphy in conversations: **Off**
 
-		- Giphy content rating: **Strict**
+	- Giphy content rating: **Strict**
 
-		- Use Memes in conversations: **Off**
+	- Use Memes in conversations: **Off**
 
-		- User Stickers in conversations: **Off**
+	- User Stickers in conversations: **Off**
 
-		- Allow immersive reader for viewing messages: **On**
+	- Allow immersive reader for viewing messages: **On**
 
 4. Select **Save.** Note the message that displays indicating it can take 2 to 24 hours for the changes to take effect. This message does not automatically disappear, so close this message by selecting the **X** that appears at the right-side of the message; otherwise, the message will remain at the top of your screen even as you navigate to other pages.
 
@@ -318,49 +318,49 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 2. In the **Teams settings** window, select the following values for each setting:
 
-	- Notifications and feeds
+- Notifications and feeds
 	
-		- Suggested feeds can appear in a user's activity feed: **On**
+	- Suggested feeds can appear in a user's activity feed: **On**
 		
-	- Tagging
+- Tagging
 		
-		- Tagging are managed by: **Disabled**
+	- Tagging are managed by: **Disabled**
 
-	- Email integration
+- Email integration
 
-		- Allow users to send emails to a channel email address: **On**
+	- Allow users to send emails to a channel email address: **On**
 
-		- Accept channel email from these SMTP Domains: **microsoft.com**
+	- Accept channel email from these SMTP Domains: **microsoft.com**
 
-	- Files
+- Files
 
-		- Citrix files: **On**
+	- Citrix files: **On**
 
-		- DropBox: **Off**
+	- DropBox: **Off**
 
-		- Box: **Off**
+	- Box: **Off**
 
-		- Google Drive: **On**
+	- Google Drive: **On**
 
-		- Egnyte: **Off**
+	- Egnyte: **Off**
 
-	- Organization
+- Organization
 
-		- Show Organization tab in chats: **On**
+	- Show Organization tab in chats: **On**
 
-	- Devices
+- Devices
 
-		- Require a secondary form of authentication to access meeting content: **No access**
+	- Require a secondary form of authentication to access meeting content: **No access**
 
-		- Set content PIN: **Required for outside scheduled meeting**
+	- Set content PIN: **Required for outside scheduled meeting**
 
-		- Resource accounts can send messages: **On**
+	- Resource accounts can send messages: **On**
 
 	- Search by name
 
-		- Scope directory search using an Exchange address book policy: **On**
+	- Scope directory search using an Exchange address book policy: **On**
 
-3. Select **Save.**
+3. Select **Save**.
 
 4. Leave all tabs open in your browser and proceed to the next task. 
 
@@ -369,17 +369,17 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 In this task, you will open the Microsoft Teams desktop application on LON-CL1 and log in as Adatum’s MOD Administrator. You will then conduct a brief chat session with the IT Consultant (your fellow student whose tenant ID was assigned to you by your instructor). This will validate that you can use Teams to chat with the IT Consultant whenever necessary to discuss matters concerning the new Service Request Ticketing system.
 
-**IMPORTANT:** Remember that your instructor assigned your tenant suffix ID to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant; therefore, expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
+**IMPORTANT:** Remember that your instructor assigned your tenant prefix to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant; therefore, expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
 
-1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator (or Domain Admin) with a **Password** of **Pa55w.rd**; if not, then do so now. 
+1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator with a password of **Pa55w.rd**; if not, then do so now. 
 
 2. In the **Search** field on the taskbar at the bottom of the screen, enter **Teams**. In the list that appears, select **Microsoft Teams** (or you can select the **Microsoft Teams** icon on your desktop).
 
 3. Maximize the Microsoft Teams window.
 
-4. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+4. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
-	However, if the Teams app opens without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If any value other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ in your tenant suffix ID provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+	However, if the Teams app opens without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If any value other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
 5. On the **Use this account everywhere on your device** window, uncheck (clear) the **Allow my organization to manage my device** check box, and then select **Yes.**
 
@@ -391,9 +391,9 @@ In this task, you will open the Microsoft Teams desktop application on LON-CL1 a
 
 9. On the very top row on the screen, to the left of the **Search or type a command** field is a **New Chat** icon (a pencil inside a square). Select this **New Chat** icon. 
 
-10. This opens a new chat window in the main body of the page. In the **To: Enter name, email, group or tag** field, enter the IT Consultant’s MOD Administrator account of **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your fellow student’s tenant suffix ID that was assigned to you by your instructor) and press **Enter**. 
+10. This opens a new chat window in the main body of the page. You want to chat with your fellow student; therefore, in the **To: Enter name, email, group or tag** field, enter the IT Consultant’s MOD Administrator account of **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is **your fellow student’s tenant prefix** that was assigned to you by your instructor) and press **Enter**. 
 
-Dickson. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
+11. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
 
 12. This will open a new chat session with the IT Consultant (your fellow student). Send a message to this person and conduct a brief chat session to verify that you can communicate with him or her using the Chat functionality within Teams.
 

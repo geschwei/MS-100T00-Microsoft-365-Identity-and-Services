@@ -19,7 +19,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 1. If you are not logged into the Domain Controller VM (LON-DC1) as **Administrator** and password **Pa55w.rd**, then please do so now. 
 
-2. The **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab. If the **Active users** window is not displayed, select **Users** in the left-hand navigation pane and then select **Active users**. 
+2. The **Microsoft 365 admin center** should still be open in your Edge browser from the prior lab. If the **Active users** window is not displayed, select **Users** in the left-hand navigation pane and then select **Active users**. 
 
 3. You will begin by testing whether a user **without** an appropriate Office 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will not assign her an Office 365 license. 
 
@@ -102,7 +102,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 	Select the **Refresh** icon on the address bar to return you to the **My account** page. Under the **Office apps &amp; devices** section, select **View apps &amp; devices**. <br/>
 	
-	**Note:** Refreshing the **My account** page does not re-verify Laura's licensing status as it still returns the same error message as before when Laura was unlicensed. Therefore, you must log out of Office 365 and log back in. 
+	**Note:** Refreshing the **My account** page does not re-verify Laura's licensing status as it still returns the same error message as before when Laura was unlicensed. Therefore, you must log out of Microsoft 365 and log back in. 
 
 11. Select the Laura Atkins icon (the circle with **LA** in it) in the upper-right corner of the screen, and in the drop-down menu that appears, select **Sign out**.
 	

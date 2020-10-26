@@ -396,21 +396,21 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 4. In the **new rule** window that appears, enter the following information:
 
-- Name: **Email size restriction**
+	- Name: **Email size restriction**
 
-- Apply this rule if: select **The message size is greater than or equal to...** 
+	- Apply this rule if: select **The message size is greater than or equal to...** 
 
-	- To the right of this drop-down field, select **Enter text**.
+		- To the right of this drop-down field, select **Enter text**.
 
-	- In the **specify size (KB)** window, enter **1024** and then select **OK**. 
+		- In the **specify size (KB)** window, enter **1024** and then select **OK**. 
 
-- Do the following: select **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
+	- Do the following: select **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
 
-	- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email content and send it as a zipped file.**
+		- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email content and send it as a zipped file.**
 
-	- Select **OK.**
+		- Select **OK.**
 
-- Under **Choose a mode for this rule**, select **Enforce.**
+	- Under **Choose a mode for this rule**, select **Enforce.**
 
 5. Select **Save**.
 

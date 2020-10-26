@@ -111,17 +111,17 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎In the **Fields** pane, select the check boxes next to the following fields (note – actual field names are not always the same as the field name displayed in the SharePoint list):
 
-- Created – select the **Created** check box
+	- Created – select the **Created** check box
 
-- Customer – select the **FieldValuesAsText.Customer** check box
+	- Customer – select the **FieldValuesAsText.Customer** check box
 
-- Assigned To – select the **FieldValuesAsText.Assignto** check box 
+	- Assigned To – select the **FieldValuesAsText.Assignto** check box 
 
-- Issue Title - select the **issueTitle** check box 
+	- Issue Title - select the **issueTitle** check box 
 
-- Location – select the **Location** check box
+	- Location – select the **Location** check box
 
-- Issue Status – select the **Title** check box
+	- Issue Status – select the **Title** check box
 
 36. You can change the size of the table visualization in the report canvas by selecting the bottom right corner of the table and dragging it diagonally down to the right. Keep in mind that you will be adding a second visualization to this page, so leave enough room in the report canvas to add another visualization. 
 
@@ -137,13 +137,13 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎Change the names of the following fields:
 
-- FieldValuesAsText.Customer – rename to **Customer**
+	- FieldValuesAsText.Customer – rename to **Customer**
 
-- FieldValuesAsText.Assignto – rename to **Assigned To**
+	- FieldValuesAsText.Assignto – rename to **Assigned To**
 
-- issueTitle – rename to **Issue Title** 
+	- issueTitle – rename to **Issue Title** 
 
-- Title – rename to **Issue Status**  
+	- Title – rename to **Issue Status**  
 ‎  
 ‎This completes the **Table** visualization. 
 

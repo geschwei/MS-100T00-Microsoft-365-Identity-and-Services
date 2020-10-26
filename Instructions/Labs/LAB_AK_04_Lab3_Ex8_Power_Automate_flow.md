@@ -11,17 +11,17 @@ To improve communication between management and internal users, Holly Dickson ha
 
 1. After having completed the prior lab exercise in which you created a Power App from scratch, you should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
-2. In your Internet Explorer browser, make sure that your new ticketing system is open in a tab. The tab should be titled **IT Services – Service Desk Requests – All Items**. If you do not have this tab open, then go to the **SharePoint admin center**, select **Active Sites**, select **IT Services** from the **Active Sites** list, select **Site contents**, and then select the **Service Desk Requests** list. 
+2. In your Microsoft Edge browser, make sure that your new ticketing system is open in a tab. The tab should be titled **IT Services – Service Desk Requests – All Items**. If you do not have this tab open, then go to the **SharePoint admin center**, select **Active Sites**, select **IT Services** from the **Active Sites** list, select **Site contents**, and then select the **Service Desk Requests** list. 
 
-3. In Internet Explorer, you want to open the Power Automate studio. Open a new tab in the browser and enter the following URL in the address bar:  **https://flow.microsoft.com**   
+3. In your Edge browser, you want to open the Power Automate studio. Open a new tab in the browser and enter the following URL in the address bar:  **https://flow.microsoft.com**   
 ‎  
 ‎On the **Microsoft Power Automate** screen, select **Sign in** at the top of the screen. 
 
-4. If you are not already signed in with your corporate account, you will be prompted for your credentials, in which case you should enter **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant ID provided by your lab hosting provider) and a Password of **Pa55w.rd**. 
+4. If you are not already signed in with your corporate account, you will be prompted for your credentials, in which case you should enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and a password of **Pa55w.rd**. 
 
 5. In the **Welcome to Power Automate** screen, select your **country/region** from the drop-down list and then select **Get Started**. 
 
-6. On the **Power Automate studio** screen, validate that Holly Dickson’s initials (**HS**) appear in the user icon in the upper right corner of the screen. If this user icon is someone other than Holly, then select the user icon, select **Sign out**, and then sign back in as Holly (**Holly@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your tenant ID, and a password of **Pa55w.rd**). 
+6. On the **Power Automate studio** screen, validate that Holly Dickson’s initials (**HD**) appear in the user icon in the upper right corner of the screen. If this user icon is someone other than Holly, then select the user icon, select **Sign out**, and then sign back in as Holly (**Holly@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and a password of **Pa55w.rd**. 
 
 7. From the left navigation pane, select **+ Create.**
 
@@ -33,7 +33,7 @@ To improve communication between management and internal users, Holly Dickson ha
 
 11. If a pop-up window appears on how to Enter SharePoint site addresses and list/library name, read it and then select **Do not show again.**
 
-12. You are now in the **Power Automate designer** tool, which is displaying the trigger you selected. In the **Site Address** field, select the **drop-down arrow**. A list should appear displaying the URL for the **IT Services** site that you created and published: **IT Services - https://m365xZZZZZZ.sharepoint.com/sites/ITServices.** Select this site.   
+12. You are now in the **Power Automate designer** tool, which is displaying the trigger you selected. In the **Site Address** field, select the **drop-down arrow**. A list should appear displaying the URL for the **IT Services** site that you created and published: **IT Services - https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select this site.   
 ‎  
 ‎**Note:** If you do not see the **IT Services** site in the drop-down list, then switch to the browser tab containing the **Service Desk Request** list and copy the URL. Switch back to the browser tab running the Power Automate designer tool, select **Enter custom value,** and then past the URL for the **Service Desk Request** list. However, notice how Power Automate trims the URL so that it is only the site address and does not include the name of the list. You will need to do the same here.
 
@@ -117,11 +117,11 @@ To improve communication between management and internal users, Holly Dickson ha
 
 30. Once the dialog box appears indicating that you are signed out, enter the following URL in the address bar: **https://portal.office.com**
 
-31. In the **Pick an account** window, select **admin@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your tenant suffix ID that was provided by your lab hosting provider)
+31. In the **Pick an account** window, select **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
 32. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
-33. On the **Office 365 home** page, select **Outlook**. This will open the **Inbox** for the **MOD Administrator**.
+33. On the **Office 365 Home** page, select the **Outlook** icon from the column of app icons on the left side of the screen. This will open the **Inbox** for the **MOD Administrator**.
 
 34. The **Inbox** should include an email from **Holly Dickson** with a subject line that starts with: **New or edited Service Request**. Select this email to open it.  <BR/>
 
@@ -149,8 +149,6 @@ To improve communication between management and internal users, Holly Dickson ha
 ### Task 2 – Assign an additional owner to the flow
 
 In this task you will add an additional owner to the Power Automate flow that you just created. Generally, it is a good practice to designate additional owners to a flow, just as you would for a SharePoint site. This ensures that any issue can be addressed and the flow can continue to run if the primary owner has changed roles or left the company. For the flow that Holly just created for her pilot project, she wants to add Allan Deyoung as an additional owner.
-
- 
 
 1. After having completed the prior task in which you created a flow in Power Automate, you should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 

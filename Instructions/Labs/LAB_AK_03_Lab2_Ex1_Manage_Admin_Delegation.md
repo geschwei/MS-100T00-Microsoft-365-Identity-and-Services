@@ -29,7 +29,7 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Office 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Office 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
+This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
 
 1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
@@ -37,7 +37,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 		Connect-MsolService
 	
-3. In the **Sign in** dialog box that appears, log in as **Holly@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is your unique tenant ID provided by your lab hosting provider) with password **Pa55w.rd**. 
+3. In the **Sign in** dialog box that appears, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider) with password **Pa55w.rd**. 
 
 4. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
@@ -45,16 +45,16 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-5. The "official" name of all roles within Office 365 includes the complete spelling of the word "administrator"; whereas, in the Office 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role.
+5. The "official" name of all roles within Microsoft 365 includes the complete spelling of the word "administrator"; whereas, in the Microsoft 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role.
 
-	To view all the available roles in Office 365, enter the following command in the Windows PowerShell window and then press Enter:
+	To view all the available roles in Microsoft 365, enter the following command in the Windows PowerShell window and then press Enter:
 	
 	
 		Get-MsolRole |Select-Object -Property Name,Description |Out-GridView
 
 6. Holly now wants to assign **Patti Fernandez** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
 
-	Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) 
+	Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider) 
 
 7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
 
@@ -115,7 +115,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Office 365 as **Allan Deyoung**. In the **Sign-in** window, enter **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  
+12. You will begin by signing into Microsoft 365 as **Allan Deyoung**. In the **Sign-in** window, enter **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  
 
 13. On the **Stay signed in?** window, select **Yes**.
 
@@ -125,7 +125,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 16. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with Allan's picture in it), and in his **My account** pane, select **Sign out.**   
 
-17. You will now sign into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Allan, you're signed out now**. In this window, it gives you the option of signing back in as Allan, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the Tenant Password provided by your instructor.
+17. You will now sign into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Allan, you're signed out now**. In this window, it gives you the option of signing back in as Allan, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the Tenant Password provided by your instructor.
 
 18. Select **Yes** on the **Stay signed in?** window. 
 
@@ -143,7 +143,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 24. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Dickson to make this change. Select **Close**. 
 
-25. If a survey request window appars, select **Cancel**.
+25. If a survey request window appears, select **Cancel**.
 
 26. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
@@ -153,7 +153,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 29. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** check box. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. </br>
 
-	If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider), and then select **Send email and close**.
+	If you enter multiple email addresses, they must be separated by a semicolon and a space, so enter a semicolon and a space following Lynne's email address, enter Allan's email address of **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider), and then select **Send email and close**.
 
 30. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Alex Wilber's** name (do NOT select Alex’s name itself). 
 
@@ -167,13 +167,13 @@ In this task, you will begin by examining the administrative properties of two u
 
 34. Lynne has just been informed that Nestor Wilke's username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
 
-35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Spencer to make this change. 
+35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. 
 
 36. To verify whether Alex Wilber can sign in, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
 
 37. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-38. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
+38. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in.
 

@@ -13,21 +13,21 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 
 2. You should still have your Edge browser open to the **Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab. If not, then repeat the steps you performed in the prior task to get to this tab (from **Power Automate studio**, select **My flows**, and then select the **Team flows** tab).
 
-3. In the top right corner of the screen, select the **gear (Settings)** icon, and then in the **Settings** pane that appears select **Admin Center**.
+3. In the top right corner of the screen, select the **gear (Settings)** icon. In the **Settings** pane that appears, under the **Power Automate** section, select **Admin Center**.
 
-4. A new tab will open in your browser that displays the **Microsoft Flow Admin Center**. In the left-hand navigation pane select **Data policies**.
+4. A new tab will open in your browser that displays the **Power Platform admin center**. In the left-hand navigation pane select **Data policies**.
 
-5. In the top right-side of the screen, select **+New Policy**.  
-‎  
-‎**Note:** If the window that appears is partially hidden by the left-hand navigation pane, select the icon that appears at the top of the navigation pane (the three lines stacked on top of each other). This contracts the pane and only displays the navigation icons. In doing so, the entire **Data Policy Name** window will appear. If you select the icon at the top of the navigation pane again, the window will still appear properly, and the navigation pane will display the text for each icon. 
+5. On the **Data policies** page, select the **+New Policy** button. This initiates a **New Policy** wizard, which displays the pages to be completed in the middle pane on the screen. 
 
-6. In the **Data Policy Name** window, Name the Policy **DLP Policy** then select **Next**.
+6. In the **Policy Name** page, enter **DLP Policy** in the **Name your policy** field and then select **Next**.
 
-7. In the **Assign Connectors** tab, type **Share** inside the **Search connectors** bar. the  **SharePoint** connector will display in the filtered list. select the **SharePoint connector**. 
+7. In the **Assign Connectors** page, the menu bar displays tabs for three types of connectors - the **Business** connectors (there are currently no Business connectors), the **Non-business** connectors (which currently includes over 400 connectors; this is also the default tab displayed), and the **Blocked** connectors (which also contains no connectors). In the list of **Non-business** connectors, you want to select the connector for SharePoint.
 
-    **Notice**: A yellow banner stating "**One or more of the selected connectors can't be blocked**". In order to select the SharePoint connector, it needs to be moved to the Buisness Tab.
+   The quickest way to select the SharePoint connector is to use the **Search connectors** field that appears to the right of the menu bar. Enter **share** in this field. This will filter the list of **Non-business** connectors and only show those with **share** in the connector name. This will save you from having to scroll down through hundreds of **Non-business** connectors to those whose name starts with **share**. In the list of filtered **Non-business** connectors, select the **SharePoint** connector. 
 
-8. Select the **elipsis** located next to the SharePoint connector and select **Move to Business**. Once this is accomplished, select the Business tab to see the SharePoint connector. Select **Next**.
+8. When you selected the **SharePoint** connector in the prior step, a yellow banner stating "**One or more of the selected connectors can't be blocked**" appeared at the top of the screen. Note how the value of the **Blockable** column for the SharePoint connector display **Yes**. This indicates that in order to select the SharePoint connector, it must first be moved from the list of **Non-business** connectors to the list of **Business** connectors, since doing so will change the connector to a non-blockable connector.
+
+   To move the **SharePoint** connector to the **Business** tab, select the **Move to Business** option that appears at the top of the screen, above the yellow banner. Once this is accomplished, note how the **Business** tab now displays **(1)** next to it (indicating there is now one Business connector), and how the number of **Non-business** connectors is now reduced by 1. Select the **Business** tab to see the SharePoint connector. Select **Next**.
 
 9. The next section is the **Scope** section. this is were we will define the enviroment in which the new policy will apply to. Select **Add all enviroments**. then select **Next**.
 

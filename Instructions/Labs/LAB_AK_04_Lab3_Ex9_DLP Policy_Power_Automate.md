@@ -21,25 +21,25 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 
 6. In the **Policy Name** page, enter **DLP Policy** in the **Name your policy** field and then select **Next**.
 
-7. In the **Assign Connectors** page, the menu bar displays tabs for three types of connectors - the **Business** connectors (there are currently no Business connectors), the **Non-business** connectors (which currently includes over 400 connectors; this is also the default tab displayed), and the **Blocked** connectors (which also contains no connectors). In the list of **Non-business** connectors, you want to select the connector for SharePoint.
+7. In the **Assign Connectors** page, the menu bar displays tabs for three groups of connectors - the **Business** connectors (there are currently no Business connectors), the **Non-business** connectors (which currently includes over 400 connectors; this is also the default tab displayed), and the **Blocked** connectors (which also contains no connectors). In the list of **Non-business** connectors, you want to select the connector for SharePoint.
 
    The quickest way to select the SharePoint connector is to use the **Search connectors** field that appears to the right of the menu bar. Enter **share** in this field. This will filter the list of **Non-business** connectors and only show those with **share** in the connector name. This will save you from having to scroll down through hundreds of **Non-business** connectors to those whose name starts with **share**. In the list of filtered **Non-business** connectors, select the **SharePoint** connector. 
 
-8. When you selected the **SharePoint** connector in the prior step, a yellow banner stating "**One or more of the selected connectors can't be blocked**" appeared at the top of the screen. Note how the value of the **Blockable** column for the SharePoint connector display **Yes**. This indicates that in order to select the SharePoint connector, it must first be moved from the list of **Non-business** connectors to the list of **Business** connectors, since doing so will change the connector to a non-blockable connector.
+8. When you selected the **SharePoint** connector in the prior step, a yellow banner stating "**One or more of the selected connectors can't be blocked**" appeared at the top of the screen. Note how the value of the **Blockable** column for the SharePoint connector displays **Yes**. This indicates that in order to select the SharePoint connector, it must first be moved from the list of **Non-business** connectors to the list of **Business** connectors, since doing so will change the connector to a non-blockable connector.
 
-   To move the **SharePoint** connector to the **Business** tab, select the **Move to Business** option that appears at the top of the screen, above the yellow banner. Once this is accomplished, note how the **Business** tab now displays **(1)** next to it (indicating there is now one Business connector), and how the number of **Non-business** connectors is now reduced by 1. Select the **Business** tab to see the SharePoint connector. Select **Next**.
+   To move the **SharePoint** connector to the **Business** tab, select the **Move to Business** option that appears at the top of the screen, above the yellow banner. Once this is accomplished, note how the **Business** tab now displays **(1)** next to it (indicating there is now one Business connector), and how the number of **Non-business** connectors is now reduced by 1. Select the **Business** tab to see the SharePoint connector. Note how the value of the **Blockable** column now displays **No**. Select **Next**.
 
-9. The next section is the **Scope** section. this is were we will define the enviroment in which the new policy will apply to. Select **Add all enviroments**. then select **Next**.
+9. On the **Scope** page, you must define the environment to which the new policy will apply. Select the **Add all environments** option and then select **Next**.
 
-10. This brings you to the final section which you will review all the **settings**,affirm that they're accurate by selecting**Create policy**.
+10. On the **Review** page, review all the settings that you previously assigned to the new policy. If any setting needs to be changed, select the **Edit** option for that setting. If all settings are correct, select the **Create policy** button.
 
-11. You will be brough back to the **Data policies** page where the new **DLP Policy** should be present.
+11. On the **Data policies** page, you should now see in the list of policies the new **DLP Policy** that you just created.
 
-      **Important:** You have created a data policy that has one of the two connectors used in your flow (SharePoint) in the **Business data only** group. However, Holly has forgotten that she actually has two connectors in her flow; the second connector is **Office 365 Outlook**, which manages the email that is automatically created and sent by the flow. This connector remains in the **No business data allowed** **(default)** group.   
+      **Important:** You have created a data policy that has one of the two connectors used in your flow (SharePoint) in the **Business** group. However, Holly has forgotten that she actually has two connectors in her flow; the second connector is **Office 365 Outlook**, which manages the email that is automatically created and sent by the flow. This connector remains in the **Non-business** group.   
    
       In practice, you would not implement this policy as you need both connectors used by the flow in the same group. Continue on to see how connectors in both groups impact the flow. 
 
-12. In your browser, select the **Manage your flows | Microsoft Power Automate** tab to return to the **Flows** window that displays your flow in the **Team flows** tab. 
+12. In your Edge browser, select the **Manage your flows | Microsoft Power Automate** tab to return to the **Flows** window that displays your flow in the **Team flows** tab. 
 
 13. Select the **Service Request Flow for new/modified tickets**, which displays the detail information about the selected flow.   
 ‎  
@@ -49,7 +49,7 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 ‎  
 ‎Do NOT proceed to the next step until the **Status** of the flow has changed to **Suspended**. You may need to refresh the window a few times until you see this status change. 
 
-14. Once the flow has been suspended, select **Edit i**n the menu bar at the top of the page. 
+14. Once the flow has been suspended, select **Edit** in the menu bar at the top of the page. 
 
 15. In the window that is returned, you will see the actions for your flow. Select **Save**.   
 ‎  
@@ -61,24 +61,24 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 
 17. In the heading at the top of the page, **Flow &gt; Service Request Flow for new/modified tickets**, select **Flow** to return to the list of flows. 
 
-18. Leave your browser and all its tabs open for the next task.
+18. Leave your Edge browser and all its tabs open for the next task.
 
 
 ### Task 2:  Edit your data loss prevention policy
 
-Although you created the DLP policy using the Flow Admin Center, the policy applies to all applications and flows in the Adatum Corporation environment. As such, the policy would apply for any Power App that uses these connections.
+Although you created the DLP policy using the Power Platform admin center, the policy applies to all applications and flows in the Adatum Corporation environment. As such, the policy would apply for any Power App that uses these connections.
 
-Now that Holly has seen what happens when she creates a DLP policy that only includes the SharePoint connector, she realizes that she needs to update the policy to include both Outlook and SharePoint in the **Business data only** group. While this will allow her flow to work, it will also prevent any future flow or app from running if it uses SharePoint, Outlook, and any other connector, since the additional connector is not in the **Business data only** group. For example, if Holly creates a second flow that includes SharePoint, Outlook, and Twitter, this first flow would still work, but the second flow would not since Twitter is not included in the **Business data only** group for this policy.
+Now that Holly has seen what happens when she creates a DLP policy that only includes the SharePoint connector, she realizes that she needs to update the policy to include both Outlook and SharePoint in the group of **Business** connectors. While this will allow her flow to work, it will also prevent any future flow or app from running if it uses SharePoint, Outlook, and any other connector, since the additional connector is not in the **Business** group. For example, if Holly creates a second flow that includes SharePoint, Outlook, and Twitter, this first flow would still work, but the second flow would not since Twitter is not included in the **Business** group for this policy.
 
-In your role as Holly, you will update this DLP policy to include Outlook as an additional connector in the **Business data only** group. 
+In your role as Holly, you will update this DLP policy to include Outlook as an additional connector in the **Business** group. 
 
 1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and a password of **Pa55w.rd**; if not, then do so now.
 
 2. You should still have your Edge browser open to the **Manage your flows | Microsoft Power Automate** tab, which should still be displaying the **Flows** window and the **Team flows** tab.   
 ‎  
-‎In your browser, select the **Microsoft Flow Admin Center** tab, which should be displaying the **Data loss prevention policies** window. If you closed this tab at the end of the prior task, then in the **Manage your flows | Microsoft Power Automate** tab, select the gear **(Settings)** icon, select **Admin center** in the **Settings** pane, and then in the **Microsoft Flow Admin Center,** select **Data policies.**
+‎In your browser, select the **Power Platform admin center** tab, which should be displaying the **Data policies** window. If you closed this tab at the end of the prior task, then in the **Manage your flows | Microsoft Power Automate** tab, select the gear **(Settings)** icon, select **Admin center** in the **Settings** pane, and then in the **Power Platform admin center,** select **Data policies.**
 
-3. In the **Data loss prevention policies** window, locate your policy in the list, and then select the **Pencil (Edit)** icon that appears to the far right of the screen for this policy.
+3. In the **Data policies** window, note how at the top of the screen it displays the **+New Policy** option. Now select the **DLP policy** that you created. Note how this caused the **Edit Policy** and **Delete Policy** options to appear next to the **+New Policy** option. Select **Edit Policy**.
 
 4. You will basically repeat the same steps that you performed in the prior task when you assigned the SharePoint connector to the policy; however, this time you will assign **Office 365 Outlook**.   
 ‎  

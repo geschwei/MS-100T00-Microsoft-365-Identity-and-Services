@@ -28,7 +28,7 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 10. On the **Configuration complete** page, select **Exit**. Pass-Through Authentication has now been enabled.  
 
-11. To verify that Pass-Through Authentication is successfully enabled, select a new tab in **Internet Explorer** and enter the following URL in the address bar: **https://aad.portal.azure.com/**
+11. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://aad.portal.azure.com/**
 
 12. This opens the **Azure Active Directory admin center**. In the left-hand navigation pane, select **Azure Active Directory**. 
 
@@ -71,7 +71,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Azure AD admin center** to assign these values.   <br/>
 
-	‎In **Internet Explorer**, select the **All services** tab; this takes you to the **Azure Active Directory admin center**. 
+	‎In your Edge browser, select the **All services** tab; this takes you to the **Azure Active Directory admin center**. 
 
 9. In the **Azure Active Directory admin center**, in the left-hand navigation pane, select **Azure Active Directory**.
 

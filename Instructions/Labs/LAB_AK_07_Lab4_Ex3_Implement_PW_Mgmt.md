@@ -14,7 +14,7 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 3. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@XXYYZZa.xxxCustomDomainxxx.xxx.** Enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
+4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.xxxCustomDomainxxx.xxx.** Enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
 
 5. On the **User sign-in** page, select **Pass-Through Authentication** and then select **Next**. 
 
@@ -115,7 +115,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 19. Once you are signed out as Holly, the **Pick an account** window will appear. Select **Use another account**. 
 
-20. In the **Sign in** window, enter **laura@M365xZZZZZZ.onmicrosoft.com** (where ZZZZZZ is the tenant suffix ID assigned to you by your lab hosting provider), and then select **Next**. 
+20. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
 21. On the **Enter password** window, enter any mix of letters and then select **Sign in**. Note the invalid password error message. Repeat this step 2 more times. Since you set the **Lockout threshold** to **3**, note the error message that you receive after the third attempt. Laura's account has been temporarily locked to prevent unauthorized access. <br/>
 

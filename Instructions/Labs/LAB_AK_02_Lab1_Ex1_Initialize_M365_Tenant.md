@@ -127,7 +127,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 	To do so, open a new tab in your **Edge** browser session and then enter the following URL in the address bar: **https://aka.ms/AA6zxrs** 
 
-2. On this **Download Center** page, scroll down to the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** section, leave **English** as the selected language and then select the **Download** button. 
+2. On this **Microsoft Download Center** page, scroll down to the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** section, leave **English** as the selected language and then select the **Download** button. 
    
 3. In the **Choose the download you want** window, select the **msoidcli_64bit.msi** check box and then select **Next**. 
 
@@ -139,7 +139,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 7. Once the installation is complete, on the **Completed the Microsoft Online Services Sign-in Assistant Setup Wizard** page, select **Finish**. 
 
-8. Close this **Download Microsoft Online Services** tab in your Edge browser. 
+8. Close the **Download Microsoft Online Services** tab in your Edge browser. 
 
 9. You must now open **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search Windows box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu that appears. 
 
@@ -159,34 +159,36 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 15. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Windows Azure Active Directory PowerShell Module.
 
-16. Remain logged into the domain controller VM and keep the Windows PowerShell window open for the next exercise.
+16. Leave the Windows PowerShell window open, but minimize it for now.
+
+17. Remain logged into the domain controller VM and keep your Edge browser open.
 
 
 ### Task 4 – Prepare for External Access using Microsoft Teams 
 
 When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Microsoft Teams. To enable this communication between your tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Teams. When you turn on this External Access feature, it can take over 30 minutes for your system to propagate the changes through your tenant. Therefore, you will turn on this External Access feature in this task so that the internal changes made by the system have time to propagate through your tenant by the time you eventually get to the Module 4 lab.
 
-**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant ID (ZZZZZZ) from each of their domains (this would be each student's xxxxxZZZZZZ.onmicrosoft.com domain, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). The instructor will then assign to each student the tenant ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant suffix ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant ID from your fellow student (in other words, you will enter the **xxxxxZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant ID).
+**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant ID (ZZZZZZ) from each of their domains (this would be each student's xxxxxZZZZZZ.onmicrosoft.com domain, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider; ZZZZZZ is the tenant ID portion of the tenant prefix that is unique to each student). The instructor will then assign to each student the tenant ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant ID). When you enable External Access in this task, you will enter the domain associated with the assigned tenant ID from your fellow student (in other words, you will enter the **xxxxxZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant ID).
 
 By the time you get to the Mod 4 labs, External Access should be ready so that you can collaborate with the student whose domain you set up in this task. Conversely, you should also be able to collaborate with the student who entered your domain in his or her External Access setup.
 
-1. On LON-DC1, minimize your Windows PowerShell window and return to your Edge browser. You should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+1. On LON-DC1, in your Microsoft Edge browser, you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
 
 	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) with the tenant admin password provided by your lab hosting provider.
 	
 2. If necessary, in the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show All** to display all the navigation menu options.
 
-3. In the left-hand navigation pane, in the **Admin Centers** group, select **Teams**.
+3. In the **Microsoft 365 admin center**, in the left-hand navigation pane under the **Admin Centers** group, select **Teams**.
 
-4. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.
+4. A new tab will open in your Edge browser that displays the **Microsoft Teams admin center**. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.
 
 5. In the **Microsoft Teams admin center**, in the left-hand navigation pane, select **Org-wide settings** and then select **External access**.
 
-6. On the **External access** page, confirm that both toggle switches are in the **On** position. If either are set to **Off** then set them to **On** now.
+6. On the **External access** page, confirm that both toggle switches for both external access options are in the **On** position. If either are set to **Off**, then set them to **On** now.
 
 7. Below the toggle switches, select **+ Add a domain**.
 
-8. In the **Add a domain** window, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor) in the **Domain** field. Do NOT enter your own tenant ID. 
+8. In the **Add a domain** pane that appears, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ **is your fellow student's tenant prefix** that was assigned to you by your instructor) in the **Domain** field. **Do NOT enter your own tenant prefix.** 
 
 9. In the **Action to take on this domain** field, select **Allowed**.
 

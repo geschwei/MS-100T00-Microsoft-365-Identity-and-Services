@@ -19,7 +19,7 @@ You should write down the following information (provided by your instructor) fo
 
 - **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account.
 
-- **Domain name components.** You will create a custom domain in a later lab exercise that will be in the format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** You must replace **xxxUPNxxx** with the UPN name provided by your lab hosting provider, and you must replace **xxxCustomDomainxxx.xxx** with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new custom domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
+- **Custom Domain name.** Your lab hosting provider has created a custom domain name for Adatum that you will use when adding a custom domain into Microsoft 365 in a later lab exercise. The domain name is in the format **xxxUPNxxx.xxxCustomDomainxxx.xxx.** You must replace **xxxUPNxxx** with the UPN name provided by your lab hosting provider, and you must replace **xxxCustomDomainxxx.xxx** with the lab hosting provider's domain name. For example, let's assume your lab hosting provider is Fabrikam Inc. If the UPN number it assigns to your tenant is AMPVU3a and its custom domain name is fabrikam.us, then the domain name for your new custom domain would be AMPVU3a.fabrikam.us. Your instructor will provide you with your lab hosting provider's UPN number and custom domain name.  
 
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
@@ -39,19 +39,19 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 6. In your browser go to the **Microsoft Office Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-7. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider (admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) and then select **Next**.
+7. In the **Sign in** dialog box, copy and paste in the **Tenant Username** provided by your lab hosting provider (admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) and then select **Next**.
 
 8. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 9. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** 
 
-	**Note:** In the top right corner of the screen, notice the initials **MA** that appear in a circle. This is the initials for the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider. If a user has a picture associated with his or her account, that picture will be displayed when the user logs in. Since the MOD Administrator has no picture assigned, the user's initials are displayed instead. <br/>
+	**Note:** In the top right corner of the screen, notice the initials **MA** that appear in a circle. These are the initials of the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider. If any of the other Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with the account, that picture will be displayed when the user logs in. When a user such as the MOD Administrator has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
 
 10. If a **Get your work done with Office 365** window appears, then close it now. 
 
-11. On the **Office 365 Home** page, in the list of Microsoft 365 apps that appear on the left side of the screen, select the **Admin** icon; this opens the **Microsoft 365 admin center**. 
+11. On the **Microsoft Office Home** tab, in the column of Microsoft 365 app icons that appear on the left side of the screen, scroll down and select the **Admin** icon; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** and then select **Settings**. In the Settings group, select **Org settings**. 
+12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
 13. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
@@ -79,17 +79,17 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 17. Scroll to the top of the **Organization information** pane. Note the message indicating the changes have been saved. Select the **X** in the upper right hand corner to close the pane.
 
-18. In the list of organization profie data, select **Release preferences**.
+18. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.
 
-19. In the **Release preferences** pane that appears, select the **Targeted release for selected users** option and then select **Save**.<br/>
+19. In the **Release preferences** pane that appears, select the **Targeted release for select users** option and then select **Save**.<br/>
 
     **Note:** One of the benefits of Microsoft 365 is the ability to have the latest features and updates automatically applied to your environment, which can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your Release preferences, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
 
-    **Note:** This **Targeted release for selected users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
+    **Note:** This **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
-20. In the **Release preferences** pane, scroll down and select **Select users**.
+20. In the **Release preferences** pane, below the list of release options, select **Select users**.
 
-21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users. In this list, select each of the following users (after selecting the user, you will have to select inside the field again to re-display the list): 
+21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users. In this list, select each of the following users (Note: You have to select each user, one at a time; after selecting a user, you will have to select inside the field again to re-display the list so that you can display the next user, and so on.): 
 
 	- **Alex Wilber**
 	- **Joni Sherman**
@@ -100,7 +100,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
     
 22. Select **Save**.
 
-23. Close the **Release preferences** pane. 
+23. After selecting the users, scroll to the bottom onf the **Release preferences** pane to verify you selected the required users. Close the **Release preferences** pane once these four users are selected. 
 
 24. Tn the list of organization profile data, select **Custom themes**.
 
@@ -110,9 +110,9 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-26. Select **Save** when you are done and then close the **Custom themes** pane.
+26. Select **Save** when you are done and then close the **Custom themes** pane once your changes have been saved.
 
-27. Remain logged into LON-DC1 with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+27. Remain logged into LON-DC1 with Microsoft Edge open to the **Microsoft 365 admin center** tab for the next task.
 
 
 ### Task 3 – Prepare for Microsoft Azure Active Directory 

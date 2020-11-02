@@ -100,7 +100,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
     
 22. Select **Save**.
 
-23. After selecting the users, scroll to the bottom onf the **Release preferences** pane to verify you selected the required users. Close the **Release preferences** pane once these four users are selected. 
+23. After selecting the users, scroll to the bottom onf the **Release preferences** pane to verify you selected the required users. Close the **Release preferences** pane once you verified these four users were selected. 
 
 24. Tn the list of organization profile data, select **Custom themes**.
 

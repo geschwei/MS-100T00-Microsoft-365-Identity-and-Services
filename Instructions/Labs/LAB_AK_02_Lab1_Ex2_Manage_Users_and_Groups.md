@@ -37,7 +37,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 	
 	- Password settings: select the **Let me create the password** option
 
-	- Password: **Pa55w.rd** 
+	- Password: **Pa55w.rd** (Hint: Select the eye icon at the right side of the field to verify the password that you entered)
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
@@ -47,7 +47,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 	- Select location: **United States**
 
-	- Licenses: Under **Assign user a product license**, select **Office 365 E5** 
+	- Licenses: The **Assign user a product license** option should be selected by default; under this option, select **Office 365 E5** 
 
 8. Select **Next.**
 
@@ -55,15 +55,15 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 10. In the **Roles** section, select **Admin center access**. By doing so, the most commonly used Microsoft 365 administrator roles are enabled below this option. 
 
-	**Note:** All the admin roles will be displayed if you select **Show all by category**. For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of most commonly used roles.
+	**Note:** If you scroll down past this list of the most commonly used admin roles and select **Show all by category**, the complete list of admin roles will be displayed (sorted by category). For Holly, you do not need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of most commonly used roles.
 
 11. Select **Global admin** and then select **Next**.
 
 12. On the **Review and finish** window, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-13. On the **Holly Dickson added to active users** page, under the **User details** section, verify Holly's password is **Pa55w.rd** and then select **Close.** 
+13. On the **Holly Dickson added to active users** page, under the **User details** section, select **Show** next to the password to verify Holly's password is **Pa55w.rd** and then select **Close.** 
 
-	**Note:** If you accidentally entered a different password, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
+	**Note:** If you accidentally entered a different password, then once you return to the **Active users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
 
 14. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 

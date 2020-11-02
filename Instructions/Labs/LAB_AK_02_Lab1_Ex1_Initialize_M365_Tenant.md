@@ -89,7 +89,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 20. In the **Release preferences** pane, below the list of release options, select **Select users**.
 
-21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users. In this list, select each of the following users (Note: You have to select each user, one at a time; after selecting a user, you will have to select inside the field again to re-display the list so that you can display the next user, and so on.): 
+21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the ten Microsoft 365 user accounts created for your tenant by your lab hosting provider). In this list, select each of the following users (Note: You have to select each user, one at a time; after selecting a user, you will have to select inside the field again to re-display the list so that you can display the next user): 
 
 	- **Alex Wilber**
 	- **Joni Sherman**

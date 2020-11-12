@@ -77,7 +77,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 16. Select **Save**.
 
-17. Scroll to the top of the **Organization information** pane. Note the message indicating the changes have been saved. Select the **X** in the upper right hand corner to close the pane.
+17. Scroll to the top of the **Organization information** pane. Note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
 
 18. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.
 
@@ -89,7 +89,7 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 20. In the **Release preferences** pane, below the list of release options, select **Select users**.
 
-21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the ten Microsoft 365 user accounts created for your tenant by your lab hosting provider). In this list, select each of the following users (Note: You have to select each user, one at a time; after selecting a user, you will have to select inside the field again to re-display the list so that you can display the next user): 
+21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the ten Microsoft 365 user accounts created for your tenant by your lab hosting provider). In this list, select each of the following users (Note: You have to select each user, one at a time; after selecting a user, you must select inside the field again to re-display the list so that you can display the next user): 
 
 	- **Alex Wilber**
 	- **Joni Sherman**
@@ -100,13 +100,13 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
     
 22. Select **Save**.
 
-23. After selecting the users, scroll to the bottom onf the **Release preferences** pane to verify you selected the required users. Close the **Release preferences** pane once you verified these four users were selected. 
+23. After selecting the users, scroll to the bottom of the **Release preferences** pane to verify you selected the required users. Close the **Release preferences** pane once you verified these four users were selected. 
 
 24. Tn the list of organization profile data, select **Custom themes**.
 
 25. In the **Custom themes** pane, scroll to the bottom of the pane and select the **Show the user's display name** check box. <br/>
 
-	As you scroll through the pane, review the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
+	As you scroll through the pane, review the various theme and branding options that are available for you to update. For this lab, you can change any of the options or leave the default values as is. For example, you can add the logo of your company and set the background image as the default for all your users. Along with these options you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
 
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it is recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
@@ -121,7 +121,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 - **Install the Microsoft Online Services Sign-In Assistant.** The Microsoft Online Services Sign-In Assistant (MOS SIA) provides end-user sign-in capabilities to Microsoft Online Services, such as Microsoft 365. The MOS SIA installs client components that allow applications, such as Microsoft Outlook and the Windows Azure Active Directory PowerShell Module, to authenticate to Microsoft Online Services. The MOS SIA can also provide an improved sign-in experience, where end-users can access Microsoft Online Services without having to re-enter their credentials. 
 
-- **Install the Windows Azure Active Directory PowerShell Module.** In order to connect to manage users and organization settings in Microsoft 365 through Windows Powershell, you must first install the Azure Active Directory PowerShell Module. This can simply be installed through PowerShell itself. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
+- **Install the Windows Azure Active Directory PowerShell Module.** To manage users and organization settings in Microsoft 365 through Windows PowerShell, you must first install the Azure Active Directory PowerShell Module. This can simply be installed through PowerShell itself. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
 1. On the LON-DC1 VM, you must navigate to the **Microsoft Download Center** to download the **Microsoft Online Services Sign-In Assistant for IT Professionals RTW** wizard. <br/>
 
@@ -143,23 +143,23 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 9. You must now open **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search Windows box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu that appears. 
 
-10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:<br/>
+10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
 
-		Install-Module MSOnline
+			Install-Module MSOnline
 	
-11. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery),** enter **A** to select **[A] Yes to All.** 
+11. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
-12. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
+12. If you are prompted to install the **NuGet provider,** enter **Y** to select **[Y] Yes**. 
 
-13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:<br/>
+13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:
 
-		Install-Module AzureADPreview
+			Install-Module AzureADPreview
 	
-14. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery),** enter **A** to select **[A] Yes to All.** 
+14. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
 15. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Windows Azure Active Directory PowerShell Module.
 
-16. Leave the Windows PowerShell window open, but minimize it for now.
+16. Leave the Windows PowerShell window open but minimize it for now.
 
 17. Remain logged into the domain controller VM and keep your Edge browser open.
 

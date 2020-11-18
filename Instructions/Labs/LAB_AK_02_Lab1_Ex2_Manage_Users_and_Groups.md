@@ -11,15 +11,15 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 **Important:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) and store it away for security reasons. **This account should be a non-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated (because it is not personalized). Because the username and password for this account are typically shared among several users, this first Global admin is a perfect target for attacks; therefore, it is always recommended that organizations create personalized service admin accounts and keep as few Global admins as possible. For those Global admins that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson), and they should each have Multi-Factor Authentication (MFA) enforced. That being said, you will not turn on MFA for Holly's account because time is limited in this training course and we do not want to take up lab time by making you log in using a second authentication method every time Holly logs in.
 
-1. On the LON-DC1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
+1. On LON-DC1, the **Microsoft 365 admin center** should still be open in your Edge browser from the prior lab, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**. 
 
 3. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. In this task, you are taking on the role of the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Enterprise Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. 
 
-4. In the **Active Users** window, select **Add a user** that appears on the menu bar above the list of active users. 
+4. In the **Active Users** window, select **Add a user** that appears on the menu bar above the list of active users. This initiates the **Add a user** wizard.
 
-5. In the **Set up the basics** window, enter the following information:
+5. In the **Add a user** wizard, on the **Set up the basics** page, enter the following information:
 
 	- First name: **Holly**
 
@@ -43,7 +43,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 6. Select **Next**.
 
-7. In the **Assign product licenses** window, enter the following information:
+7. In the **Assign product licenses** page, enter the following information:
 
 	- Select location: **United States**
 
@@ -63,9 +63,9 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 13. On the **Holly Dickson added to Active users** page, under the **User details** section, select **Show** next to the password to verify Holly's password is **Pa55w.rd** and then select **Close.** 
 
-	**Note:** If you accidentally entered a different password, then once you return to the **Active users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
+	**Note:** If you accidentally entered a different password, then once you return to the **Active users** page, you must select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to **Pa55w.rd**.
 
-14. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+14. Remain logged into LON-DC1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 2 – Create and Manage Groups  
@@ -74,9 +74,9 @@ After completing the previous task, you should still be signed into the **Micros
 
 In this task, you will create two new groups and then manage the groups by assigning users to them. One group will be a Microsoft 365 group and the other a Security group; this will enable you to see some of the differences in the two types of groups. After creating the groups, you will then delete one of them. This will set up the next task, which examines how to recover a deleted group using Windows PowerShell.
 
-1. On the **Microsoft 365 admin center** tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser, and in the **MOD Administrator** window that appears, select **Sign out.** <br/>
+1. On LON-DC1, on the **Microsoft 365 admin center** tab in your Edge browser, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right-hand corner of your browser, and in the **MOD Administrator** window that appears, select **Sign out.** <br/>
 	
-	**Important:** When signing out of one user account and signing in as another, you should close all your browser tabs except for your current tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Take a moment now and close all other browser tabs except for the **Sign out** tab. 
+	**Important:** When signing out of one user account and signing in as another, you should close all the browser tabs except for your current tab (which will be the **Sign out** tab). This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Take a moment now and close all other browser tabs except for the **Sign out** tab. 
 	
 2. In your Microsoft Edge browser, in the **Sign out** tab, enter the following URL in the address bar to sign back into Microsoft 365: **https://portal.office.com** 
 
@@ -88,26 +88,29 @@ In this task, you will create two new groups and then manage the groups by assig
 
 6. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
 
-7. On the **Office 365 Home** page, in the column of app icons that appear along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center; this opens the **Microsoft 365 admin center** in a new browser tab.
+7. On the **Office 365 Home** page, in the column of app icons that appears along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center; this opens the **Microsoft 365 admin center** in a new browser tab.
 
 8. If a survey window appears, select **Cancel**.
 
 9. In the **Microsoft 365 admin center**, select **Groups** in the left-hand navigation pane, and then under it, select **Active Groups**. 
 
-10. In the **Active groups** page, select **Add a group** that appears on the menu bar above the list of groups.  
+10. In the **Active groups** page, select **Add a group** that appears on the menu bar above the list of groups. This initiates the **Add a group** wizard. 
 
-11. In the **Choose a group type** window, select **Microsoft 365 (recommended)** and then select **Next**. 
+11. In the **Add a group** wizard, on the **Choose a group type** page, select **Microsoft 365 (recommended)** and then select **Next**. 
 
-12. In the **Set up the basics** window, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field (even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
+12. In the **Set up the basics** page, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field (even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
 
-13. In the **Assign Owners** window, you will assign Allan Deyoung and Patti Fernandez as owners of this group. 
-	- Enter **Allan** in the **Owners** field. In the list of users whose name starts with Allan, select **Allan Deyoung**. 
-	- Enter **Patti** in the **Owners** field. In the list of users whose name starts with Patti, select **Patti Fernandez**. 
-	- Select **Next**.
+13. In the **Assign Owners** window, you will assign Allan Deyoung and Patti Fernandez as owners of this group. <br/>
 
-14. In the **Edit settings** window, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, select the **Public** option (you must select it even if it's already selected in order to enable the **Next** button at the bottom of the page), and under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if need be). Select **Next**.
+	Select into the **Owners** field and in the list of users that appears, select **Allan Deyoung**. <br/>
+	
+	Select into the **Owners** field and in the list of users that appears, select **Patti Fernandez**. <br/>
+	
+	Select **Next**.
 
-15. In the **Review and finish adding group** window, review the content that you entered. If everything is correct, select **Create group**; otherwise, select **Back** and fix anything that must be corrected (or select **Edit** under the specific area that needs adjustment).
+14. In the **Edit settings** page, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, select the **Public - Anyone can see group content** option (you must select it even if it's already selected in order to enable the **Next** button at the bottom of the page), and under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if need be). Select **Next**.
+
+15. In the **Review and finish adding group** page, review the content that you entered. If everything is correct, select **Create group**; otherwise, select **Back** and fix anything that must be corrected (or select **Edit** under the specific area that needs adjustment).
 
 16. On the **New group created** window, note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of groups. </br>
 
@@ -125,17 +128,17 @@ In this task, you will create two new groups and then manage the groups by assig
 
 18. If either of the two new groups do not appear in the **Active groups** list, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional few minutes for both groups to appear.
 
-	**Note:** The IT admins group does not have a group email address because it's a Security group. Two additional group types are Mail-enabled Security groups and Distribution groups. We did not use either of these group types in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a matter of minutes to appear. 
+	**Note:** The IT admins group does not have a group email address because it's a Security group. Two additional group types are Mail-enabled Security groups and Distribution groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a matter of minutes to appear. 
 
-19. You’re now ready to add members to the groups. In the list of **Active groups**, select the **Inside Sales** group, which opens a window for the group. 
+19. You’re now ready to add members to the groups. In the list of **Active groups**, select the **Inside Sales** group. 
 
-20. In the **Inside Sales** group window, select the **Members** tab.
+20. In the **Inside Sales** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
-21. Under the **Members** section, you can see the two owners (Allan and Patti), but you can also see that there are zero (0) members. Select **View all and manage members** to add members to the group. 
+21. The **Members** tab displays sections for the Owners and the Members. Under the **Owners** section, you can see the two owners (Allan and Patti). Under the **Members** section, you can see that there are zero (0) members. Under this section, select **View all and manage members** to add members to the group. 
 
-22. In the **Inside Sales** group window, select **+ Add members**. This displays the list of current users.
+22. In the **Inside Sales** group window that appears, select **+ Add members**. This displays the list of active Microsoft 365 users.
 
-23. In the list of users, select **Diego Siciliani** and **Lynne Robbins**, and then scroll to the bottom and select **Save**. 
+23. In the list of users, select the check boxes for **Diego Siciliani** and **Lynne Robbins**, and then at the bottom of the window select **Save**. 
 
 24. Select **Close**. This displays the list of users for this group. Select **Close** again. 
 
@@ -145,7 +148,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 27. You now want to test the effect of deleting a group. In the list of **Active groups,** select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete group**. 
 
-28. In the **Delete Inside Sales?** window, select the **Delete group** button.
+28. In the **Delete Inside Sales?** pane that appears, select the **Delete group** button.
 
 29. Once the group is deleted, select **Close**. 
 
@@ -155,7 +158,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 32. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
 
-33. Remain logged into the domain controller VM with the Microsoft 365 admin center open in your browser for the next task.
+33. Remain logged into LON-DC1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 3 – Recover Groups using PowerShell 
@@ -164,7 +167,7 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 **NOTE:** You should have installed the Windows Azure Active Directory PowerShell Module in the prior lab exercise.   
 
-1. If you’re not logged into the LON-DC1 VM as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
@@ -178,31 +181,31 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 	
 			Get-AzureADMSDeletedGroup   
 
-6. Before you can restore this deleted Inside Sales group, you must first copy the Object ID of the Inside Sales group that appears in the table of deleted groups. When you perform this next command to restore the group, you will use this ID to identify the group that you want restored. 
-
-	To copy the ID, select the entire ID and then press Ctrl-C.
-
-7. At the command prompt type the following command and then press Enter to retrieve and restore the deleted group whose Object ID matches the value you enter. <br/>
-
-	**Note:** Replace the {objectId} in the following command with the ID number for the Inside Sales group that you copied in the prior step. When you enter the following Restore command and you get to the point of pasting in the {objectId} parameter, press Ctrl-V to paste in the Id. Then press Enter to run the command. <br/>
+6. At the command prompt, either type or copy and paste in the following command; however, do not enter anything yet for the {objectId}. 
 
 			Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
 
+	Do NOT hit Enter yet as you must copy and paste in the Object ID of the Inside Sales group that appears in the table of deleted groups after you ran the command in the prior step. <br/>
+	
+	To copy the object ID, select the entire ID of the Inside Sales group and then press Ctrl-C. To paste in the object ID, place your cursor in the correct position in the command line and press Ctrl-V. <br/>
+	
+	Then press Enter to retrieve and restore the deleted group whose Object ID matches the value you entered. <br/>
+
 	**NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and then after pasting in the object ID, hit the Delete key a couple of times to delete any extraneous characters that may have been pasted in following the object ID, and then press Enter again.  <br/>
 		
-8. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
+7. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-9. You should now verify the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, and then under **Groups** in the left-hand navigation pane, select **Active groups**. 
+8. You should now verify the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, and then under **Groups** in the left-hand navigation pane, select **Active groups**. 
 
-10. Verify the **Inside Sales** group has been restored and is present in the list of active groups. If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
+9. Verify the **Inside Sales** group has been restored and is present in the list of active groups. If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-11. You now want to verify that the recovery process correctly updated the group's membership. From the **Active groups** windows, select the **Inside Sales** group.
+10. You now want to verify that the recovery process correctly updated the group's membership. From the **Active groups** windows, select the **Inside Sales** group.
 
-12. In the **Inside Sales** window, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group.
+11. In the **Inside Sales** pane, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group.
 
-13. Close the **Inside Sales** window.
+12. Close the **Inside Sales** window.
 
-14. Leave your browser tabs open so that they’re ready for the next task. 
+13. Remain logged into LON-DC1 and leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3

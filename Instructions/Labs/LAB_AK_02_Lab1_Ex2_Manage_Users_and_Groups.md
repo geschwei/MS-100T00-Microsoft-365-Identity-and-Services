@@ -177,19 +177,17 @@ In this task, you will use Windows PowerShell to recover the Inside Sales group 
 
 4. A new window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd** as the Password.  
 
-5. At the command prompt type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
+5. At the command prompt, type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
 	
 			Get-AzureADMSDeletedGroup   
 
-6. At the command prompt, either type or copy and paste in the following command; however, do not enter anything yet for the {objectId}. 
+6. At the command prompt, either type or copy and paste in the following command; however, do not press Enter yet as you must first replace {objectId} with the actual Object ID of the deleted Inside Sales group. 
 
 			Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
 
-	Do NOT hit Enter yet as you must copy and paste in the Object ID of the Inside Sales group that appears in the table of deleted groups after you ran the command in the prior step. <br/>
+	After entering or copy and pasting in the command, you must replace {objectId} with the Object ID of the Inside Sales group that appears in the table of deleted groups that was displayed after you ran the command in the prior step. To do so, you must select the entire ID of the Inside Sales group and then copy it to the clipboard by pressing Ctrl-C. To paste in the object ID, place your cursor in the correct position in the command line where {objectId} should appear and then press Ctrl-V. <br/>
 	
-	To copy the object ID, select the entire ID of the Inside Sales group and then press Ctrl-C. To paste in the object ID, place your cursor in the correct position in the command line and press Ctrl-V. <br/>
-	
-	Then press Enter to retrieve and restore the deleted group whose Object ID matches the value you entered. <br/>
+	After pasting in the Object ID, press Enter to run the command. This will retrieve and restore the deleted group whose Object ID matches the value you entered. <br/>
 
 	**NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and then after pasting in the object ID, hit the Delete key a couple of times to delete any extraneous characters that may have been pasted in following the object ID, and then press Enter again.  <br/>
 		

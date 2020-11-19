@@ -147,9 +147,10 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 			Install-Module MSOnline
 	
-11. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
-12. If you are prompted to install the **NuGet provider,** enter **Y** to select **[Y] Yes**. 
+11. If you are prompted to install the **NuGet provider,** enter **Y** to select **[Y] Yes**. 
+
+12. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
 13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:
 

@@ -88,7 +88,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 6. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
 
-7. On the **Office 365 Home** page, in the column of app icons that appears along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center; this opens the **Microsoft 365 admin center** in a new browser tab.
+7. On the **Office 365 Home** page, in the column of app icons that appears along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center in a new browser tab.
 
 8. If a survey window appears, select **Cancel**.
 

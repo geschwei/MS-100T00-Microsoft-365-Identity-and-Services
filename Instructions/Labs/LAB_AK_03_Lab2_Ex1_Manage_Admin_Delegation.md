@@ -1,20 +1,20 @@
 # Module 3 - Lab 2 - Exercise 1 - Manage Administration Delegation
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you experience using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
 
 ### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
 
 As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global Admin, you will use the Microsoft 365 admin center to assign administrator rights to several users. 
 
-1. If you’re not logged into the Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
 2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**. 
 
-4. In Diego Siciliani’s properties window, the **Account** tab is displayed by default. Scroll down to the **Roles** section and select **Manage roles**. 
+4. In the **Diego Siciliani** pane that appears, the **Account** tab is displayed by default. In this tab, scroll down to the **Roles** section and select **Manage roles**. 
 
-5. In the **Manage roles** window, the **User (no admin center access)** option is currently selected be default. Now that you want to assign Diego an administrator role, select the **Admin center access** option. This enables the admin roles for selection. 
+5. In the **Manage roles** window, the **User (no admin center access)** option is currently selected by default. Now that you want to assign Diego an administrator role, select the **Admin center access** option. This enables the admin roles for selection. 
 
 6. Diego has been promoted to Billing administrator, but since the Billing admin role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
@@ -24,14 +24,14 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 9. Repeat steps 3-8 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the list of commonly used admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
 
-10. Remain logged into the domain controller VM and the Microsoft 365 admin center as Holly Dickson.
+10. Remain logged into LON-DC1 and the Microsoft 365 admin center as Holly Dickson.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. In addition, PowerShell enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
 
-1. On the LON-DC1 VM, navigate to the Windows PowerShell window that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
+1. On LON-DC1, select the Windows PowerShell icon on the taskbar that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
 2. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
 

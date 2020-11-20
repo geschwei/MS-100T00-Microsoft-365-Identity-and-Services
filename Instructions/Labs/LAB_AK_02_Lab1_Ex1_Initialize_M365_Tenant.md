@@ -187,7 +187,7 @@ By the time you get to the Module 4 labs, External Access should be ready so tha
 
 6. On the **External access** page, confirm that the toggle switches for both external access options are in the **On** position. If either are set to **Off**, then set them to **On** now.
 
-7. Below the toggle switches, select **+ Add a domain**.
+7. Below the toggle switches, select **+Add a domain**.
 
 8. In the **Add a domain** pane that appears, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ **is your fellow student's tenant prefix** that was assigned to you by your instructor) in the **Domain** field. **Do NOT enter your own tenant prefix.** 
 

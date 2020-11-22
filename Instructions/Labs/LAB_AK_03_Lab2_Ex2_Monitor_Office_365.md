@@ -10,11 +10,11 @@ Holly Dickson, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 2. In your **Microsoft Edge** browser, select the **Microsoft Office Home** tab to display the Office 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**).
 
-3. In the **Office 365 Home** page, select the **Outlook** icon in the column of app icons on the left. In the Outlook settings window that appears, accept **English** as the language, select your corresponding **Time zone**, and then select **Save**.
+3. In the **Office 365 Home** page, select the **Outlook** icon in the column of app icons on the left. If an **Outlook settings** window appears, accept **English** as the language, select your corresponding **Time zone**, and then select **Save**.
 
-4. While Outlook will open in a new tab, a **Welcome** window will appear over top of it. You cannot close this Welcome window, so you must select the **>** on this window and in each successive window until you reach the final one (feel free to read about the new Outlook features in each window). On the final window, select **Get started**, which will display Holly's mailbox in Outlook. 
+4. While Outlook will open in a new tab, a **Welcome** window will appear over top of it. Select the **X** in the upper-right corner of the window to close it.  
 
-5. In Holly’s mailbox, at the top of the left-hand navigation pane, select the **New message** button to create a new email.
+5. Holly's **Inbox** will be displayed in Outlook. In Holly’s mailbox, at the top of the left-hand navigation pane, select the **New message** button to create a new email.
 
 6. In this email, you will send the mail to an email address in which the domain (alt.none) is an invalid domain. In the email pane that appears, type **user@alt.none** in the **To** text box. After entering the email address, tab off the **To** field to commit the entered value.
 

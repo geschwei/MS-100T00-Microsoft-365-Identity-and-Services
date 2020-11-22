@@ -8,7 +8,7 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active Users**. 
+2. In the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson. In the left-hand navigation pane, select **Users** and then select **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**. 
 
@@ -93,7 +93,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 **Password Note:** When logging into Microsoft 365 as any of the existing user accounts that were created for you in the Microsoft 365 tenant (for example, Allan Deyoung, Lynne Robbins, and so on), you must use the same Tenant Password that you used in Lab 1 when you signed in using the tenant email account (admin@xxxxxZZZZZZ.onmicrosoft.com) to set up your organization profile. All the existing Microsoft 365 user accounts in your tenant have been assigned this same Tenant Password, which your instructor will provide for you.
 
-1. In the Domain Controller VM (LON-DC1), you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
+1. In LON-DC1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
 
 2. In the **Microsoft 365 admin center**, if you are not displaying the **Active Users**, then navigate to there now.  
 

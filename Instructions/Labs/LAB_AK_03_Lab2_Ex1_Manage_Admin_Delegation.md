@@ -121,15 +121,15 @@ In this task, you will begin by examining the administrative properties of two u
 
 14. If a **Get your work done with Office 365** window appears, select the **X** to close it.
 
-15. In the **Office 365 Home** page, if an **Office 365 apps** box appears below the **Install Office** button, select **Got it!** to close the box. Note how the **Admin** option is not available in the column of app icons on the left side of the screen since Allan was never assigned an administrator role. 
+15. In the **Office 365 Home** page, note how the **Admin** option is not available in the column of app icons on the left side of the screen since Allan was never assigned an administrator role. 
 
-16. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with Allan's picture in it), and in his **My account** pane, select **Sign out.**   
+16. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with Allan's picture in it), and in the **Allan Deyoung** window that appears, select **Sign out.**   
 
 17. You will now sign into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Allan, you're signed out now**. In this window, it gives you the option of signing back in as Allan, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the Tenant Password provided by your instructor.
 
-18. Select **Yes** on the **Stay signed in?** window. 
+18. If a **Get your work done with Office 365** window appears, select the **X** to close it.
 
-19. In the **Office 365 home** page, if an **Office 365 apps** box appears below the **Install Office** button, select **Got it!** to close the box. Since Lynne has been assigned to an administrator role, note how the **Admin** icon appears in the column of app icons on the left side of the screen. Select the **Admin** icon to open the Microsoft 365 admin center.
+19. In the **Office 365 home** page, note how the **Admin** icon appears in the column of app icons on the left side of the screen; this is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
 20. In the **Microsoft 365 admin center**, select **Users** on the left-hand navigation pane and then select **Active users**. 
 
@@ -139,7 +139,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 22. In the **Reset password** window for Diego, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark. 
 
-23. Select **Reset**.
+23. Select **Reset password**.
 
 24. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Dickson to make this change. Select **Close**. 
 
@@ -149,7 +149,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 27. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark.  
 
-28. Select **Reset**.<br/>
+28. Select **Reset password**.<br/>
 
 29. On the **Reset password** window, you should receive a message indicating the password was successfully reset. Select the **Send password in email** check box. This displays an **Email the new password to the following recipients** field, which displays Lynne Robbins' email address. Since you also want to email this temporary password to Allan, you should enter Allan's email address following Lynne's. </br>
 
@@ -157,19 +157,19 @@ In this task, you will begin by examining the administrative properties of two u
 
 30. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Alex Wilber's** name (do NOT select Alex’s name itself). 
 
-	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Check Allan Deyoung's account, since you just reset his password; uncheck his account if necessary. Only Alex's account should be selected. 
+	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Examine Allan Deyoung's account, since you just reset his password; uncheck his account if necessary (select the check mark to unselect it). Only Alex's account should be selected. 
 
 31. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
 
-32. In the **Block this user?** window, select the **Block this user from signing in** check box, and then select **Save changes.** 
+32. In the **Block sign-in** window, verify Alex's email address appears below the window heading. Select the **Block this user from signing in** check box, and then select **Save changes.** 
 
-33. The **Block this user?** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the window to close it. 
+33. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the window to close it. 
 
 34. Lynne has just been informed that Nestor Wilke's username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
 
 35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. 
 
-36. To verify whether Alex Wilber can sign in, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in her **My account** pane, select **Sign out.** 
+36. To verify whether Alex Wilber can sign in, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
 37. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 

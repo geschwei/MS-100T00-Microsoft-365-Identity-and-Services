@@ -8,7 +8,7 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then **Active Users**. 
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**. 
 
@@ -33,7 +33,7 @@ This task is similar to the prior one in that you will assign administrator righ
 
 1. On LON-DC1, select the Windows PowerShell icon on the taskbar that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
-2. You should begin by running the following command that connects your PowerShell session to the Microsoft Online Service:  <br/>
+2. You should begin by connecting your PowerShell session to the Microsoft Online Service. At the command prompt, type the following command, and then press Enter:  <br/>
 
 		Connect-MsolService
 	

@@ -211,7 +211,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 11. Run the following command that displays a list of all the Microsoft 365 groups:   <br/>
 
-	‎	Get-MsolGroup
+		Get-MsolGroup
 
 12. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the  **Print Operators** group (this is the built-in group that did not synchronize from on-premises to Microsoft 365).
 

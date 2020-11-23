@@ -102,7 +102,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 	To do this, you must first switch back to **LON-CL1**.
 
-10. In LON-CL1, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **My account** window should be displayed, and the **Apps and devices** section should still be displayed along with the error message that you received in the prior task that indicated Laura was not assigned an Office license. <br/>
+10. In **LON-CL1**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **My account** window should be displayed, and the **Apps and devices** section should still be displayed along with the error message that you received in the prior task that indicated Laura was not assigned an Office license. <br/>
 
 	Select the **Refresh icon** that appears to the left of the address bar at the top of your browser. This will refresh the **Office apps &amp; devices** page. <br/>
 	
@@ -134,7 +134,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 	To do this, switch back to **LON-DC1**. 
 
-20. On LON-DC1, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the left-hand navigation pane, select **Org Settings**. 
+20. On **LON-DC1**, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the left-hand navigation pane, select **Org Settings**. 
 
 21. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office installation options**.
 
@@ -148,7 +148,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 	To do this, switch back to **LON-CL1**.
 
-26. On LON-CL1, Laura's Edge browser should still be open, and the **Office apps and devices** page should be displayed along with the error message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+26. On **LON-CL1**, Laura's Edge browser should still be open, and the **Office apps and devices** page should be displayed along with the error message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
 
 	**Note:** Unlike the previous time when you refreshed this page and it did not reflect Laura's updated Office 365 license status, refreshing this page after updating the global download setting works. 
 
@@ -165,7 +165,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 In the prior task, you logged into Laura Atkins’ client PC, and you verified that she could download Microsoft 365 Apps for enterprise once she was assigned an Office 365 license and the global Office download setting was turned On. In this task, you will continue the process by having Laura perform a user-driven installation of the Microsoft 365 Apps for enterprise suite from the Microsoft 365 portal.  
 
-1. On LON-CL1, you should still be logged in as Laura Atkins. 
+1. On **LON-CL1**, you should still be logged in as Laura Atkins. 
 
 2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps &amp; devices** section, the **Install Office** button now appears since Laura is assigned an Office 365 E5 license and the global Office download setting is turned On.<br/>
 
@@ -203,7 +203,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 15. Close Word.
 
-16. Leave LON-CL1 open as you will continue from this point in the next task.
+16. Leave LON-CL1 open.
 
 
 # End of Lab 2

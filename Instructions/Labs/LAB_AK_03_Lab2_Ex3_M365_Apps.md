@@ -19,7 +19,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 1. You should still be logged into LON-DC1 as **Administrator** and password **Pa55w.rd**. 
 
-2. The **Microsoft 365 admin center** should still be open in your Edge browser from the prior lab. In the left-hand navigation pane, select **Users** and then select **Active users**. 
+2. The **Microsoft 365 admin center** should still be open in your Edge browser from the prior lab, where you should be logged into Microsoft 365 as Holly Dickson. In the left-hand navigation pane, select **Users** and then select **Active users**. 
 
 3. You will begin by testing whether a user **without** an appropriate Office 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will not assign her an Office 365 license. 
 

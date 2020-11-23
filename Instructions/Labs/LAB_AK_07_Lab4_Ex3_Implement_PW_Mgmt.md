@@ -42,7 +42,7 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 17. On the **Pass-through authentication** page, review the list of servers on which your pass-through authentication agents are installed.
 
-18. Close the **Pass-through authentication** page, and then close the **Adatum Corporation | Overview** page. You should now be back to the **All services** page in the **Azure Active Directory admin center".
+18. Close the **Pass-through authentication** page, and then close the **Adatum Corporation | Overview** page. You should now be back to the **All services** page in the **Azure Active Directory admin center**.
 
 19. Leave the **Azure Active Directory admin center** open as you will use it in the next task.
    

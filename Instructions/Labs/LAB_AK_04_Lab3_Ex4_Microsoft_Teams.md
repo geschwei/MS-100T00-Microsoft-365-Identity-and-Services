@@ -158,7 +158,7 @@ Now that you have created the resource account for your calling queue, you will 
 
 7. In the **Call Queue 1** window, scroll down the page and select the following values for each option:
 	
-	- Language: **"English (United States)"**
+	- Language: **English (United States)**
 
 	- Greeting: **No greeting**
 

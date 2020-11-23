@@ -8,7 +8,9 @@ With regard to Microsoft Exchange, Adatum’s CTO has requested that Holly revie
 
 As you continue in your role as Holly Dickson, you are ready to review the steps involved in creating and managing mail flow recipients.
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
+1. At the end of the previous lab, you were on LON-CL1, where you took on the role of Laura Atkins and installed Microsoft 365 Apps for enterprise. For this lab exercise, you must switch back to LON-DC1, where you will resume your pilot project in the role of Holly Dickson. <br/>
+
+	Switch to **LON-DC1**, where you should still be logged in as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
 
 2. You should still have an Edge browser session and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 

@@ -94,7 +94,7 @@ Holly Dickson, Adatum's new Enterprise Administrator, wants to prepare herself f
 
 35. Close the **Message trace search results** window, and then close the **New message trace** window. This will return you to the **Home > Message trace** window in the **Office 365 Security and Compliance center**. Leave this tab open for the next task.
 
-36. Remain signed into Microsoft 365 as Holly. In your Edge browser, leave the tabs open for the next task.
+36. In your Edge browser, close the **Mail - Holly Dickson - Outlook** tab, but leave the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab open for the next task.
   
 
 ### Task 2 - Monitor Service Health and Analyze Reports 

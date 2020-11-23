@@ -18,7 +18,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 3. At the command prompt, you should run the following command to create a new zone in your on-premises DNS (remember to replace xxxUPNxxx with the unique UPN name assigned to your tenant by your lab hosting provider, and replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain name): <br/>
 
-			dnscmd /zoneadd xxxUPNxxx.xxxCustomDomainxxx.xxx /DsPrimary
+		dnscmd /zoneadd xxxUPNxxx.xxxCustomDomainxxx.xxx /DsPrimary
     
 4. Minimize your Windows PowerShell window (do NOT close it as you will use it later).
 

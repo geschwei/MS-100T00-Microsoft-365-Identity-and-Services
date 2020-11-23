@@ -130,9 +130,11 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 	
 	‎**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
 
-19. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. To do this, you must switch back to **LON-DC1**. You should still be logged into Microsoft 365 as Holly Dickson.
+19. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
 
-20. In the **Microsoft 365 admin center**, under the **Settings** section in the left-hand navigation pane, select **Org Settings**. 
+	To do this, switch back to **LON-DC1**. 
+
+20. On LON-DC1, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the left-hand navigation pane, select **Org Settings**. 
 
 21. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office installation options**.
 
@@ -156,7 +158,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 	
 	‎**Important:** You have just verified that a user with an Office license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On.
 
-28. Leave this page open and continue to the next task to perform the user-driven installation for Laura Atkins.
+28. Remain on LON-CL1 and continue to the next task to perform the user-driven installation for Laura Atkins.
 
 
 ### Task 3 – Perform a User-Driven Installation of Microsoft 365 Apps for enterprise 

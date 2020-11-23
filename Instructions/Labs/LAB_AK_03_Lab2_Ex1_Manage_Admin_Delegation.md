@@ -18,11 +18,13 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 6. Diego has been promoted to Billing administrator, but since the Billing admin role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
-7. In the list of roles that appear by category, scroll down to the **Other** category, select **Billing admin**, and then select **Save changes**. 
+7. In the list of roles that are sorted by category, scroll down to the **Other** category, select **Billing admin**, and then select **Save changes**. 
 
 8. On the **Manage roles** window, select the **X** in the upper-right corner of the screen to close it. This returns you to the **Active users** list. 
 
-9. Repeat steps 3-8 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role (both roles are in the list of commonly used admin roles that appear under the **Admin center access** option; you do not have to select **Show all by category**). 
+9. Repeat steps 3-8 for **Lynne Robbins.** Assign Lynne to both the **Helpdesk admin** role and the **User admin** role. <br/>
+
+	**Note:** Both roles are in the list of commonly used admin roles that appear under the **Admin center access** option; therefore, you do not have to select **Show all by category**. 
 
 10. Remain logged into LON-DC1 and the Microsoft 365 admin center as Holly Dickson.
 
@@ -45,18 +47,20 @@ This task is similar to the prior one in that you will assign administrator righ
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-5. The "official" name of all roles within Microsoft 365 includes the complete spelling of the word "administrator"; whereas, in the Microsoft 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role.
-
-	To view all the available roles in Microsoft 365, enter the following command in the Windows PowerShell window and then press Enter:
+5. To view all the available roles in Microsoft 365, enter the following command in the Windows PowerShell window and then press Enter:
 	
 	
 		Get-MsolRole |Select-Object -Property Name,Description |Out-GridView
 
-6. Holly now wants to assign **Patti Fernandez** to the **Service support admin** role. In the Windows PowerShell window, at the command prompt, type the following command, and then press Enter:  <br/>
+6. This displays a window that shows all the Microsoft 365 roles. Notice how the "official" name of all roles within Microsoft 365 includes the complete spelling of the word "administrator"; whereas, in the Microsoft 365 admin center, "administrator" is abbreviated to "admin" simply for display purposes. When using PowerShell to perform role-related commands in the following steps, you must spell out the entire word "administrator". If you enter "admin" instead of "administrator", the command will return an error indicating that it cannot find the role. <br/>
 
-	Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) 
+	Close the window displaying the Microsoft 365 roles.
 
-7. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
+7. Holly now wants to assign **Patti Fernandez** to the **Service support administrator** role. In the Windows PowerShell window, at the command prompt, type the following command (don't forget to replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider), and then press Enter:  <br/>
+
+	Add-MsolRoleMember -RoleName "Service support administrator” –RoleMemberEmailAddress PattiF@xxxxxZZZZZZ.onmicrosoft.com  
+
+8. You now want to verify which users have been assigned to certain roles. Displaying the users assigned to a role is a two-step process in PowerShell.<br/>
 
 	‎**Important:** Do NOT perform the following commands just yet – this is an informational step whose purpose is to describe what you will be doing in the remaining steps in this task. 
 	
@@ -68,23 +72,23 @@ This task is similar to the prior one in that you will assign administrator righ
 	
 		Get-MsolRoleMember -RoleObjectId $role.ObjectId
 			
-8. You should now run the following two commands as described in the previous step to verify that Patti Fernandez was assigned the Service support administrator role:  <br/> 
+9. You should now run the following two commands as described in the previous step to verify that Patti Fernandez was assigned the Service support administrator role:  <br/> 
 
 		&dollar;role = Get-MsolRole -RoleName "Service support administrator" <br/>
 
 		Get-MsolRoleMember -RoleObjectId $role.ObjectId
 	
-9. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service support administrator** role. 
+10. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service support administrator** role. 
 
-10. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing administrator** role.  <br/>
+11. You should now run the following two commands to verify which Adatum users have been assigned to the **Billing administrator** role.  <br/>
 
 		&dollar;role = Get-MsolRole -RoleName "Billing administrator"  <br/>
 
 		Get-MsolRoleMember -RoleObjectId $role.ObjectId
 
-11. Verify that **Diego Siciliani** is in the list of users who have been assigned the **Billing administrator** role (you assigned Diego to this role in the prior task using the Microsoft 365 admin center). 
+12. Verify that **Diego Siciliani** is in the list of users who have been assigned the **Billing administrator** role (you assigned Diego to this role in the prior task using the Microsoft 365 admin center). 
 	
-12. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+13. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  
@@ -111,19 +115,19 @@ In this task, you will begin by examining the administrative properties of two u
 
 9. If a **Networks** window appears, select **Yes**.
 
-10. On the taskbar, select the **Microsoft Edge** icon. 
+10. On the taskbar, select the **Microsoft Edge** icon. Maximize your Edge browser window if necessary.
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
 12. You will begin by signing into Microsoft 365 as **Allan Deyoung**. In the **Sign-in** window, enter **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  
 
-13. On the **Stay signed in?** window, select **Yes**.
+13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**.
 
 14. If a **Get your work done with Office 365** window appears, select the **X** to close it.
 
 15. In the **Office 365 Home** page, note how the **Admin** option is not available in the column of app icons on the left side of the screen since Allan was never assigned an administrator role. 
 
-16. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with Allan's picture in it), and in the **Allan Deyoung** window that appears, select **Sign out.**   
+16. You will now sign out of Microsoft 365 as Allan. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Allan Deyoung** (the circle in the upper right-hand corner with Allan's picture in it), and in the **Allan Deyoung** window that appears, select **Sign out.**   
 
 17. You will now sign into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Allan, you're signed out now**. In this window, it gives you the option of signing back in as Allan, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the Tenant Password provided by your instructor.
 
@@ -141,7 +145,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 23. Select **Reset password**.
 
-24. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global Admins can change another admin’s password, Lynne will need to ask Holly Dickson to make this change. Select **Close**. 
+24. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, he was assigned to the Billing Admin role. Since only Global admins can change another admin’s password, and because Lynne is not a Global admin, she will have to ask Holly Dickson to make this change. Select **Close**. 
 
 25. If a survey request window appears, select **Cancel**.
 
@@ -157,7 +161,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 30. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the circle to the left of **Alex Wilber's** name (do NOT select Alex’s name itself). 
 
-	**Note:** If any other user account is selected, you must unselect that user account before proceeding. Examine Allan Deyoung's account, since you just reset his password; uncheck his account if necessary (select the check mark to unselect it). Only Alex's account should be selected. 
+	**Note:** Since you are going to run a global command on Alex's account rather than a command associated with his account, you only want Alex's account selected in the list of active users. If any other user account is selected, you must unselect that user account before proceeding. Examine Allan Deyoung's account, since you just reset his password; uncheck his account if necessary (select the check mark to unselect it). Only Alex's account should be selected. 
 
 31. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
 
@@ -167,9 +171,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 34. Lynne has just been informed that Nestor Wilke's username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
 
-35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. 
+35. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Admin, and Lynne is not. Only a Global Admin can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
-36. To verify whether Alex Wilber can sign in, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
+	Close the **Block sign-in** window.
+
+36. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
 37. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
@@ -181,9 +187,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 40. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block sign-in** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
 
-	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, select **Save changes**, and once Alex has been unblocked from signing in, close this window.
+	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, select **Save changes**. <br/>
 	
-41. Leave your browser and all tabs open and proceed to the next exercise. 
+	Note the warning message that's displayed indicating it can take up to 15 minutes before Alex can sign in again. As such, you will **NOT** try to log back in as Alex on LON-CL1. Instead, remain on LON-DC1 and simply close the **Unblock sign-in** window.
+	
+41. On LON-DC1, leave your browser and all tabs open and proceed to the next exercise. 
 
 
 # Proceed to Lab 2 - Exercise 2

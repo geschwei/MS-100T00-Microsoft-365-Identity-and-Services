@@ -106,7 +106,7 @@
 <li>If you will recall from the task description, you will be presented with two options for completing this task: through an Excel command, or by running a PowerShell script. 
   <ul>
     <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 6</strong>. </li>
-    <li>If you prefer to use PowerShell, then proceed to <strong>step 29</strong>.</li>
+    <li>If you prefer to use PowerShell, then proceed to <strong>step 28</strong>.</li>
   </ul>
   </li>
 <br><br>

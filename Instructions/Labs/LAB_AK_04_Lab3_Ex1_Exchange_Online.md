@@ -14,13 +14,13 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
 
 2. You should still have an Edge browser session and the Microsoft 365 admin center open from the prior lab. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft Office Home** page, select **Admin** to open the Microsoft 365 admin center.
 
-3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Exchange**. This will open the **Exchange admin center.**
+3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), then scroll down to **Admin centers** and select **Exchange**. This will open the **Exchange admin center** in a new tab. This is the Exchange admin center for Microsoft Exchange Online. 
 
-4. In the **Exchange admin center,** select **recipients** in the left-hand navigation pane.
+4. In the **Exchange admin center**, select **recipients** in the left-hand navigation pane.
 
-5. In the **recipients** view, the **mailboxes** tab appears by default (see the tabs at the top of the page). The mailboxes that appear in this view include all the user accounts that were pre-created in your tenant by the lab hosting provider, along with Holly's mailbox that was added when you created her account in Lab 2. <br/>
+5. In the **recipients** view, the **mailboxes** tab appears by default (see the tabs across the top of the page - mailboxes, groups, resources, and so on). The mailboxes that appear in this view include all the user accounts that were pre-created in your tenant by the lab hosting provider, along with the mailboxes for Holly Dickson and Laura Atkins that were created when you added their Microsoft 365 user accounts in the prior lab. <br/>
 
-	Select the mailbox for **Joni Sherman** by double-clicking on her **DISPLAY NAME.** This will open the **Edit Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
+	Select the mailbox for **Joni Sherman** by double-clicking on her **DISPLAY NAME.** This will open the **Edit User Mailbox** window with Joni’s data prefilled. By default, the window displays the **general** tab (the tabs appear in the left-hand pane).
 
 6.  At the bottom of the **general** tab, select **More options**.
 
@@ -30,7 +30,7 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
 
 	‎**Note:** Custom attributes are properties your company can use for specific mailbox identification, such as a cost center number for the mailbox or other information such as an HR personnel number.
 
-9. In addition to the **general** tab, the left-hand pane of the **Edit Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, take a few minutes now and select the following tabs to see what information can be captured: 
+9. In addition to the **general** tab, the left-hand pane of the **Edit Mailbox** window includes several other tabs that enable you to enter additional information pertaining to this specific mailbox. While you will not enter any of this optional information for the purposes of this lab, take a few minutes now and select the following tabs to see what additional information can be captured: 
 
 	- **contact information.** This tab enables you to add personal information such as Street, City or Mobile number for the user.
 
@@ -40,11 +40,11 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
 
 	- **member of.** This tab displays the Distribution groups that include this user.
 	
-10. On the left-hand pane select **mailbox delegation.** This option allows the admin to assign a user to this mailbox’s Send As, Send on Behalf, or Full Access permissions. This option is commonly used if you want another user to be able to send messages from this mailbox.
+10. On the left-hand pane select **mailbox delegation.** This tab enables the admin to assign a user to this mailbox’s Send As, Send on Behalf, or Full Access permissions. This option is commonly used if you want another user to be able to send messages from this mailbox.
 
 11. Scroll down on this **mailbox delegation** window and select the plus (+) sign under the **Full Access** section. 
 
-12. In the **Select Full Access** window select **Holly Dickson**, select the **add-&gt;** button, and then select **OK.**  <br/>
+12. In the **Select Full Access** window, select **Holly Dickson** from the list of user accounts, select the **add-&gt;** button, and then select **OK.**  <br/>
 
 	‎**Note:** After about an hour Holly Dickson will be able to access Joni’s mailbox without needing a password.
 
@@ -57,7 +57,7 @@ As you continue in your role as Holly Dickson, you are ready to review the steps
 
 In this task you will create two types of groups within Exchange Online. The first is a distribution list of email recipients, which is used to create a one-stop email list for contacting users simultaneously rather than having to email each recipient individually. The second type of group is a Microsoft 365 group.
 
-1. Your browser should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients**’ page.  <br/>
+1. Your browser should still be open to the **Exchange admin center** from the prior task, and it should still be displaying **recipients** from the left-hand navigation pane. In the prior task, you worked with user accounts using the **mailboxes** tab. In this task, you will be creating groups, so select the **groups** tab at the top of the **recipients** page.  <br/>
 
 	**Note:** You should already see the **Inside Sales** group that you created in Lab 2. This is a Microsoft 365 group whose email address is associated with the custom, on-premises domain (@xxxUPNxxx.xxxCustomDomainxxx.xxx). In the following steps, you will create a Distribution list group and a Microsoft 365 group whose email addresses will be in Microsoft 365 (@xxxxxZZZZZZ.onmicrosoft.com). 
 

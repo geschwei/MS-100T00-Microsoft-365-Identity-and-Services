@@ -115,17 +115,17 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 7. To the right of this chart, view the **Email activity** chart.  <br/>
 
-	‎**Note:** There may be little or no data shown due to the limiited mailbox usage in the lab environment. 
+	‎**Note:** There may be little or no data shown due to the limited mailbox usage in the lab environment. 
 
 8. Under the **Email activity** chart select the **View more** button. This displays the **Email activity** report. In the report header at the top of the page, select the **Exchange activity** drop-down arrow. In the menu that appears, select the **Exchange** drop-down arrow and then select **Mailbox usage**. 
 
-9. The default mailbox usage that is initially displayed is **30 days**. Select the other date views at the top of the report (**7 days**, **90 days** and **180 days**) to see how the display changes. 
+9. The default mailbox usage that is initially displayed is **30 days**. Select the other date views at the top of the report (**7 days**, **90 days**, and **180 days**) to see how the display changes. 
 
 10. Scroll down to the bottom of the page to see mailbox details for each of the active users.
 
 11. Scroll back to the top of the page. On the menu bar above the chart, it currently displays **Mailbox usage** followed by a drop-down arrow. Select the drop-down arrow, and in the menu that appears, select **SharePoint**. In the SharePoint group, select **Site usage**. 
 
-12. The default site usage that is initially displayed at the top-right of the screen is **Past 30 days**. Select the drop-down arrow next to this and in the menu that appears, select the other date views to see how the display changes: **7 days**, **90 days** and **180 days**. 
+12. The default site usage that is initially displayed at the top-right of the screen is **Past 30 days**. Select the drop-down arrow next to this and in the menu that appears, select the other date views to see how the display changes: **7 days**, **90 days**, and **180 days**. 
 
 13. Scroll down to the bottom of the page to see details for each of the site collections for your tenant.
 

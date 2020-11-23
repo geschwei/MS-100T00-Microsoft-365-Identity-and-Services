@@ -82,7 +82,7 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 2. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the left-hand navigation pane. Select **Settings**, and then within the group, select **Org Settings**. 
 
-3. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office installation options.**
+3. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office installation options**.
 
 4. In the **Office installation options** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently selected. Select this check box so that it’s blank, which turns this feature **Off**. 
 
@@ -130,9 +130,9 @@ Holly is now going to test whether users can be prohibited from downloading Micr
 
 20. The **Microsoft 365 admin center**, under the **Settings** section in the left-hand navigation pane, select **Org Settings**. 
 
-21. In the **Settings** window, scroll down and select **Office software download settings**.
+21. In the **Settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Office installation options**.
 
-22. In the **Office software download settings** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a checkmark, which now turns this feature back On.
+22. In the **Office installation options** window, under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a checkmark, which now turns this feature back On.
 
 23. Select **Save changes**.
 

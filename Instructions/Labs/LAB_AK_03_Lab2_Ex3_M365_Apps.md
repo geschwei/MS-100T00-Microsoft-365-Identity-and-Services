@@ -199,7 +199,9 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 13. On the **Your privacy option** window, select **Close**.
 
-14. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. 
+14. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
+
+	**Note:** If a warning message appears below the Word ribbon that indicates you must activate it before it will expire, select the **Activate*** button, and then on the **Sign in to set up Office** page, select **Sign in**. Sign in as **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **Pa55w.rd**.
 
 15. Close Word.
 

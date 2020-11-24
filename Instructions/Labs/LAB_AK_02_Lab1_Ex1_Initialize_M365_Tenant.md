@@ -27,7 +27,7 @@ You should write down the following information (provided by your instructor) fo
 
 In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account will be admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
 
-1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Domain Controller VM (LON-DC1). If your VM environment opens with one of the other machines (LON-CL1 or LON-EX1), then switch to LON-DC1 now.
+1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Domain Controller VM (LON-DC1). If your VM environment opens with one of the other machines, either the local client PC (LON-CL1) or Adatum's on-premises Exchange Server (LON-EX1), then switch to LON-DC1 now.
 
 2. On **LON-DC1**, you must select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-DC1 as the **Administrator** with the password **Pa55w.rd**. 
 
@@ -53,9 +53,9 @@ In your role as Holly Dickson, Adatum’s Enterprise Administrator, you have bee
 
 12. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
-13. On the **Org settings** page, the **Services** tab at the top of the page is displayed by default. Select the **Organization profile** tab.
+13. On the **Org settings** page, the **Services** tab at the top of the page is displayed by default. To the right of the **Services** tab is the **Organization profile** tab; select this tab now. 
 
-14. In the **Organization profile** tab on the **Org settings** page, select **Organization information** from the list of profile data.
+14. On the **Org settings** page, in the **Organization profile** tab, select **Organization information** from the list of profile data.
 
 15. In the **Organization information** pane that appears, enter the following information:
 
@@ -145,7 +145,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 10. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
 
-			Install-Module MSOnline
+		Install-Module MSOnline
 	
 
 11. If you are prompted to install the **NuGet provider,** enter **Y** to select **[Y] Yes**. 
@@ -154,7 +154,7 @@ Azure Active Directory is needed to perform several configuration steps when ins
 
 13. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You must then run the following command to install the Azure AD PowerShell module that you just retrieved in the earlier step:
 
-			Install-Module AzureADPreview
+		Install-Module AzureADPreview
 	
 14. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
@@ -191,9 +191,9 @@ By the time you get to the Module 4 labs, External Access should be ready so tha
 
 8. In the **Add a domain** pane that appears, enter **xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ **is your fellow student's tenant prefix** that was assigned to you by your instructor) in the **Domain** field. **Do NOT enter your own tenant prefix.** 
 
-9. In the **Action to take on this domain** field, select **Allowed**.
+9. In the **Action to take on this domain** field, select **Allowed**, and then select **Done**.
 
-10. Select **Done** and then select **Save**.
+10. On the **External access** page, select **Save**.
 
 11. In your Microsoft Edge browser, close the **External access - Microsoft Teams** tab. This should return you to the **Microsoft 365 admin center** tab, which you should leave open as you proceed to the next exercise.
 

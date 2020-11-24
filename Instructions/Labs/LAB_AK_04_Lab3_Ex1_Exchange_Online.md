@@ -268,7 +268,7 @@ One of the key features of Exchange Online is the ability to maintain different 
 
 Adatum has experienced a recent rash of malware infections. The company's CTO has asked Holly to investigate the various options that are available in Exchange Online to fortify Adatum’s messaging environment.
 
-**Note:** In these next three tasks you will configure malware, connection, and spam filters, respectively. These filters used to be configured in the Exchange admin center; however, starting December 1, 2020, that functionality has been moved to the Security and Compliance Center, which is where you will go to create these filters.
+**Note:** In these next three tasks you will configure malware, connection, and spam filters, respectively. These filters were previously configured in the Exchange admin center; however, starting December 1, 2020, that functionality has been moved to the Security and Compliance Center, which is where you will go to create these filters.
 
 1. On LON-DC1, select the **Microsoft 365 admin center** tab in your Edge browser, and then in the left-hand navigation pane under **Admin centers**, select **Security**.
 
@@ -408,9 +408,10 @@ As Adatum’s Global Admin, Holly doesn't need to set up or maintain the filteri
 
 18. In the **Default** window that appears, select the **Enable end-user spam notifications** check box, and then change the **Send end-user spam notifications every (days)** value to **5**.
 
-19. Select **Save**. In the list of settings for this policy, note the **End-user spam notifications** setting is now turned **On** and the **Send end-user spam notifications every (days)** setting set to **5**.
+19. Select **Save**. In the list of settings for this policy, note the **End-user spam notifications** setting is now turned **On** and the **Send end-user spam notifications every (days)** setting is set to **5**.
 
 20. In your Edge browser, close the **Security & Compliance** center tab, but leave all other tabs open. 
+
 
 ### Task 10 – Manage Mail Flow Rules 
 
@@ -418,7 +419,7 @@ After Holly reviewed the messaging environment at Adatum Corporation, she realiz
 
 Holly has discovered that mail flow rules contain a richer set of conditions, exceptions, and actions, all of which will provide her with the flexibility to implement many types of messaging policies for Adatum. She is eager to put this to the test regarding a significant issue currently affecting Adatum’s messaging environment - users who send extremely large email messages. She has decided that her first task will be to create a mail flow rule that restricts email size.
 
-1. In the **Exchange Admin Center**, in the left-hand navigation pane, select **mail flow.**
+1. On LON-DC1, select the **Exchange admin center** tab in your Edge browser, and then in the left-hand navigation pane select **mail flow**.
 
 2. In the list of mail flow tabs across the top of the page, **rules** is already selected by default since it’s the first tab. <br/>
 
@@ -434,10 +435,12 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 
 		- To the right of this drop-down field, select **Enter text**.
 
-		- In the **specify size (KB)** window, enter **1024** and then select **OK**. 
+		- In the **specify size (KB)** window that appears, enter **1024** and then select **OK**. 
 
-	- Do the following: select **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
+	- Do the following: hover your mouse over **Block the message...**, and then in the drop-down menu that appears, select **Reject the message and include an explanation**. 
 
+		- To the right of this drop-down field, select **Enter text**.
+		
 		- In the **specify rejection reason** window, enter the following text: **Your message exceeds the size limit. Please adjust the message size or compress the email content and send it as a zipped file.**
 
 		- Select **OK.**
@@ -445,6 +448,8 @@ Holly has discovered that mail flow rules contain a richer set of conditions, ex
 	- Under **Choose a mode for this rule**, select **Enforce.**
 
 5. Select **Save**.
+
+6. Leave your Edge browser open as well as all the tabs.
 
 
 ### Task 11 – Validate Accepted Domains

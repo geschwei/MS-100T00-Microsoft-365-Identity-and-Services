@@ -31,7 +31,6 @@
 <ul>
 <li><strong>Manage lists</strong> (which selects <strong>View Items</strong>)</li>
 <li><strong>Add items</strong></li>
-<li><strong>View items</strong></li>
 <li><strong>View versions </strong>(which selects <strong>Open Items</strong>)</li>
 <li><strong>View Application Pages</strong></li>
 </ul>
@@ -39,17 +38,11 @@
 <li>Select the following permissions under the <strong>Site Permissions</strong> section:
 <ul>
 <li><strong>Add and Customize Pages</strong> (which selects<strong> Browse Directories, View Pages</strong>, and<strong> Open</strong>)</li>
-<li><strong>Browse Directories</strong></li>
 <li><strong>Use Self-Service Site Creation </strong>(which selects <strong>Browse User information</strong>)</li>
-<li><strong>View Pages</strong></li>
-<li><strong>Browse User Information</strong></li>
 <li><strong>Use Remote interfaces</strong></li>
 <li><strong>Use Client integration features</strong></li>
-<li><strong>Open</strong></li>
 </ul>
 </li>
-</ol>
-<ol start="13">
 <li>Scroll to the bottom of the page and select the <strong>Create </strong>button to create the new<strong> Restricted Use </strong>permission level.</li>
 <li>Once the permission level is created. you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> Verify that the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. 
   <br><br>On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</li>

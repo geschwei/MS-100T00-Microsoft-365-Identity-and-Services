@@ -17,7 +17,7 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 
 3. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. In this task, you are taking on the role of the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Enterprise Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. 
 
-4. In the **Active Users** window, select **Add a user** that appears on the menu bar above the list of active users. This initiates the **Add a user** wizard.
+4. In the **Active Users** window, select **Add user** that appears on the menu bar above the list of active users. In the drop-down menu that appears, select **Single user**. This initiates the **Add a user** wizard.
 
 5. In the **Add a user** wizard, on the **Set up the basics** page, enter the following information:
 
@@ -64,8 +64,10 @@ Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user
 13. On the **Holly Dickson added to Active users** page, under the **User details** section, select **Show** next to the password to verify Holly's password is **Pa55w.rd** and then select **Close.** 
 
 	**Note:** If you accidentally entered a different password, then once you return to the **Active users** page, you must select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to **Pa55w.rd**.
+	
+14. If a survey window appears, select **Cancel**.
 
-14. Remain logged into LON-DC1 with the **Microsoft 365 admin center** open in your browser for the next task.
+15. Remain logged into LON-DC1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 2 – Create and Manage Groups  
@@ -88,7 +90,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 6. If a **Get your work done with Office 365** window appears, select the **X** to close it. 
 
-7. On the **Office 365 Home** page, in the column of app icons that appears along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center in a new browser tab.
+7. On the **Office 365 Home** page, in the column of Microsoft 365 app icons that appears along the left side of the screen, select the **Admin** icon to open the Microsoft 365 admin center in a new browser tab.
 
 8. If a survey window appears, select **Cancel**.
 
@@ -108,7 +110,11 @@ In this task, you will create two new groups and then manage the groups by assig
 	
 	Select **Next**.
 
-14. In the **Edit settings** page, enter **insidesales** in the **Group email address** field. Under the **Privacy** section, select the **Public - Anyone can see group content** option (you must select it even if it's already selected in order to enable the **Next** button at the bottom of the page), and under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if need be). Select **Next**.
+14. In the **Edit settings** page, enter the following information and then select **Next**: <br/>
+
+	- Enter **insidesales** in the **Group email address** field
+	- Under the **Privacy** section, select the **Public - Anyone can see group content** option (you must select it even if it's already selected in order to enable the **Next** button at the bottom of the page)
+	- Under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if need be)
 
 15. In the **Review and finish adding group** page, review the content that you entered. If everything is correct, select **Create group**; otherwise, select **Back** and fix anything that must be corrected (or select **Edit** under the specific area that needs adjustment).
 
@@ -126,7 +132,7 @@ In this task, you will create two new groups and then manage the groups by assig
 
 	**Note:** there is no owner, email address, or privacy setting for Security groups
 
-18. If either of the two new groups do not appear in the **Active groups** list, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional few minutes for both groups to appear.
+18. If either of the two new groups do not appear in the **Active groups** list, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for both groups to appear.
 
 	**Note:** The IT admins group does not have a group email address because it's a Security group. Two additional group types are Mail-enabled Security groups and Distribution groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a matter of minutes to appear. 
 

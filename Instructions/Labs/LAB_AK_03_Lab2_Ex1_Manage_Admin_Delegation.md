@@ -151,7 +151,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 26. In the **Active users** list, select the **key (Reset a password)** icon for **Allan Deyoung**. 
 
-27. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark.  
+27. In the **Reset password** window for Allan, select the **Let me create the password** option, and then enter **P@$$w0rd** in the **Password** field. If necessary, select the **Require this user to change their password when they first sign in** check box so that it displays a check mark. This is just a temporary password, so Lynne wants to force Allan to change it the next time he logs in.  
 
 28. Select **Reset password**.<br/>
 

@@ -31,7 +31,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	- Display name: When you tab into this field, Laura Atkins will appear.
 	- Username: **Laura**
 
-	**IMPORTANT:** To the right of the Username field is the domain field. It’s already prefilled with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** on-premises domain (where xxxUPNxxx is your UPN number and xxxCustomDomainxxx.xxx is the custom domain); however, you must select the drop-down arrow and select the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain instead (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). 
+	**IMPORTANT:** To the right of the Username field is the domain field. You want this value to be Adatum's **xxxxxZZZZZZ.onmicrosoft.com** domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). However, if the custom domain that you added in a prior lab is set as the default domain, then this field will be prefilled with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** on-premises domain (where xxxUPNxxx is your UPN number and xxxCustomDomainxxx.xxx is the custom domain). If the custom domain is displayed in this field, you must select the drop-down arrow and select the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain instead. 
 
 	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
 
@@ -67,9 +67,11 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 17. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes.**
 
-18. In the **Microsoft Office Home** page for Laura, notice that no column of Microsoft 365 app icons appears on the left-side of the screen; this is because Laura does not have an Office 365 license assigned. Select the **Install Office** button, and then select **Install software**.
+18. In the **Microsoft Office Home** page for Laura, notice that no column of Microsoft 365 app icons appears on the left-side of the screen; this is because Laura does not have an Office 365 license assigned. <br/>
 
-19. This displays the **My account** window for Laura. Under the **Office apps &amp; devices** section, select **View apps &amp; devices**. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
+	Select the **Install Office** button, and then in the drop-down menu that appears, select **Install software**. This opens the **My account** window for Laura.
+
+19. In Laura's **My account** window, under the **Office apps &amp; devices** section, select **View apps &amp; devices**. Note the message that appears at the top of page. Laura has not been assigned an Office license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
 	‎**Important:** You have just verified that a user cannot download Microsoft 365 Apps for enterprise if he or she has not been assigned an appropriate Office 365 license.
 	
@@ -183,7 +185,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 7. You may receive a **Continuing could be expensive** dialog box that displays a warning message indicating that it may be expensive to continue downloading because you're connected to a network that limits downloads every month. <br/>
 
-	**Important:** If you receive this dialog box, it may appear in the taskbar but not on the desktop. Hover your mouse over the **Office** icon on the taskbar, and then select the **Continuing could be expensive** dialog box if it appears. If you do receive this dialog box, the Office install will NOT proceed until you select **Continue** (the Office window will just keep displaying the **We’re getting things ready** message, but it won’t actually do anything). <br/>
+	**Important:** If you receive this dialog box, it may appear in the taskbar but not on the desktop. If this occurs, hover your mouse over the **Office** icon on the taskbar, and then select the **Continuing could be expensive** dialog box if it appears. If you do receive this dialog box, the Office install will NOT proceed until you select **Continue** (the Office window will just keep displaying the **We’re getting things ready** message, but it won’t actually do anything). <br/>
 	
 	In the **Continuing could be expensive** dialog box, select **Continue**.
 
@@ -193,15 +195,13 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to set up Office** page, select the **X** in the upper-right hand corner to close the window.
+11. On the **Sign in to set up Office** page, sign in as **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **Pa55w.rd**.
 
 12. On the **Accept the license agreement** window, select **Accept**.
 
 13. On the **Your privacy option** window, select **Close**.
 
 14. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
-
-	**Note:** If a warning message appears below the Word ribbon that indicates you must activate it before it will expire, select the **Activate*** button, and then on the **Sign in to set up Office** page, select **Sign in**. Sign in as **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **Pa55w.rd**.
 
 15. Close Word.
 

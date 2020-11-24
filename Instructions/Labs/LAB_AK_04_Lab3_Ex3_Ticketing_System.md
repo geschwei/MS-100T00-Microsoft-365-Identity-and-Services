@@ -43,8 +43,10 @@
 <li><strong>Use Client integration features</strong></li>
 </ul>
 </li>
+</ol>
+<ol start="12">  
 <li>Scroll to the bottom of the page and select the <strong>Create </strong>button to create the new<strong> Restricted Use </strong>permission level.</li>
-<li>Once the permission level is created. you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> Verify that the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. 
+<li>Once the permission level is created you will be redirected to the<strong> Permissions</strong> &gt; <strong>Permission Levels</strong> page. Verify the new <strong>Restricted Us</strong>e permission level appears in the list of permission levels for this IT Services site. 
   <br><br>On this <strong>Permissions</strong> &gt; <strong>Permission Levels</strong> heading line, select the <strong>Permissions </strong>link to return to the <strong>Permissions: IT Services</strong> page.</li>
 <li>In the ribbon displayed at the top of the screen, the <strong>PERMISSIONS </strong>tab is displayed by default. In this tab, under the <strong>Grant</strong> section, select <strong>Create Group</strong>.</li>
 <li>On the <strong>People and Groups &gt; Create Group</strong> page, enter the following information:
@@ -67,7 +69,7 @@
 <li>Select <strong>SHOW OPTIONS. </strong>Note that the <strong>Send an email invitation</strong> option is selected by default. Leave this option selected.</li>
 <li>Select <strong>Share</strong>.</li>
 <li>Because you selected the option to <strong>Send an email invitation</strong>, your fellow student will receive an email invitation in his or her MOD Administrator&rsquo;s Inbox. To verify this email was received, you must open an InPrivate browsing session to impersonate your fellow student&rsquo;s tenant. This enables you to access your fellow student&rsquo;s MOD Administrator account within the student&rsquo;s tenant, and therefore access this MOD Administrator&rsquo;s Outlook Inbox.
-  <br><br>On your taskbar, right-click on the <strong>Microsoft Edge</strong> icon and select <strong>Start InPrivate Browsing</strong> in the menu that appears.</li>
+  <br><br>On your taskbar, right-click on the <strong>Microsoft Edge</strong> icon and select <strong>New InPrivate window</strong> in the menu that appears.</li>
 <li>This opens an InPrivate browsing session. Maximize the InPrivate browser window, and then enter the following URL in the address bar: <strong>https://outlook.office365.com/mail/inbox</strong></li>
 <li>In the <strong>Sign in</strong> window, enter your fellow student&rsquo;s MOD Administrator email address of <strong>admin@xxxxxZZZZZZ</strong><strong>.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student&rsquo;s tenant prefix that was assigned to you by your instructor). In the <strong>Enter password</strong> window, enter your tenant email password (all students in the class have the same tenant password) and select <strong>Sign in</strong>.</li>
 <li>In the <strong>Stay signed in?</strong> dialog box, select <strong>Yes</strong>.</li>

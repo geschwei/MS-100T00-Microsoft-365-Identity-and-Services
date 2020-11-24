@@ -17,7 +17,7 @@
 <li>You should still be logged into LON-DC1 as <strong>ADATUM\Administrator</strong> and password <strong>Pa55w.rd</strong>; if not, then do so now.</li>
 <li>You should still have your Edge browser and the SharePoint admin center open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, navigate to the SharePoint admin center just as you did in the prior lab exercise.</li>
 <li>In the <strong>SharePoint admin center</strong>, you will begin by creating a new permission level for the IT Services site. In the left-hand navigation pane, select <strong>Sites</strong>, and then select <strong>Active sites</strong>.</li>
-<li>In the list of <strong>Active sites</strong>, locate the <strong>IT Services </strong>site and select the<strong> &hellip;/sites/ITServices</strong> value that appears in the URL column<strong>.</strong></li>
+<li>In the list of <strong>Active sites</strong>, locate the <strong>IT Services </strong>site and then select the<strong> &hellip;/sites/ITServices</strong> value that appears in the URL column for this site.</li>
 <li>A new tab will open in your Edge browser that displays the <strong>IT Services</strong> site. In the upper right-hand corner of the <strong>IT Services</strong> site, select the <strong>gear (Settings)</strong> icon.</li>
 <li>In the <strong>Settings</strong> pane that appears, select <strong>Site permissions.</strong></li>
 <li>At the bottom of the <strong>Site permissions</strong> pane, select <strong>Advanced permissions settings</strong>, which opens a <strong>Permissions: IT Services</strong> page.</li>

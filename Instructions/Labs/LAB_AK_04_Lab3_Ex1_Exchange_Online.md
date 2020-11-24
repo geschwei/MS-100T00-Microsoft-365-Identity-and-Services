@@ -370,7 +370,7 @@ As Adatum’s Global Admin, Holly doesn't need to set up or maintain the filteri
 
 6. In the **International spam settings** pane that appears, select the **Filter email messages written in the following languages** check box. 
 
-7. You should already know the languages that you want to filter. In the **Languages** field, enter the first letter of a language that you want to filter. This will display all languages that start with that letter (as well as any languages that contain that letter within the name of the langauge). <br/>
+7. You should already know the languages that you want to filter. In the **Languages** field, enter the first letter of a language that you want to filter. This will display all languages that start with that letter (as well as any languages that contain that letter within the name of the language). <br/>
 
 	Enter a letter and then select a language with that letter in it that you want to filter. Repeat this step for a couple of languages. 
 

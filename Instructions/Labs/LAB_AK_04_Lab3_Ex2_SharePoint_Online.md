@@ -223,7 +223,7 @@ In this task, you will create the following hierarchical permission structure fo
 
 33. The **Permission Levels** window now displays the permission level that you just added.
 
-34. In your Edge browser session, close the **Permission Levels** tab and the **SharePoint admin center** tab.
+34. In your Edge browser session, close the **Permission Levels** tab. Leave the **SharePoint admin center** tab open as you will use it in the next lab exercise.
 
 
 # Proceed to Lab 3 - Exercise 3

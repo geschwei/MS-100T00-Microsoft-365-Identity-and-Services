@@ -93,7 +93,7 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 	- Language: Leave as **English**
 
-	- Description: **Group of all company employees working on the Microsoft Dynamics CRM project.**
+	- Description: **Adatum users working on the Microsoft Dynamics CRM project.**
 
 	- Subscribe new members: leave this check box selected so that members get conversations and calendar events sent to their Inboxes
 
@@ -110,9 +110,9 @@ In this task you will create two types of groups within Exchange Online. The fir
 
 ### Task 3 - Upgrade Distribution Lists
 
-Organizations have typically relied on distribution groups in Exchange to communicate and collaborate with groups of people both inside and outside the company. However, Microsoft 365 Groups offer a more powerful solution for collaboration, and Adatum’s CTO wants to take advantage of this feature. He has asked you to upgrade the company’s Sales Department distribution list to a Microsoft 365 group so that the company’s sales staff can choose the people they want to collaborate with and easily set up a collection of resources for those people to share.
+Organizations have typically relied on distribution groups in Exchange to communicate and collaborate with groups of people both inside and outside the company. However, Microsoft 365 Groups offer a more powerful solution for collaboration, and Adatum’s CTO wants to take advantage of this feature. He has asked you to upgrade the company’s Sales Department distribution list to a Microsoft 365 group so that Adatum’s Sales staff can choose the people they want to collaborate with and easily set up a collection of resources for those people to share.
 
-1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane, and you should still be displaying the **groups** tab. If not, then navigate to **recipients &gt; groups**. 
+1. In the **Exchange admin center**, you should still be displaying **recipients** from the left-hand navigation pane, and you should still be displaying the **groups** tab. 
 
 2. Below the tabs at the top of the screen are two large boxes that enable you to perform two functions: create a group in Outlook and upgrade distribution lists. In the **UPGRADE Distribution Lists** box, select the **Get Started** button. This opens a **Bulk upgrade DLs to groups in Outlook** window.
 
@@ -126,9 +126,9 @@ Organizations have typically relied on distribution groups in Exchange to commun
 	
 5. It may take a minute or so before the **Upgrade in progress** window appears. Select **OK**. 
 
-6. Once the upgrade is complete, the value in the **Showing** field will change to **Upgraded DLs** and the **Sales Department** group will be displayed in the group list.<br/>
+6. Note how the value in the **Showing** field is changed to **Upgraded DLs**. If the **Sales Department** group is not displayed in the group list, select the **Refresh** button to the right of the **Showing** field. <br/>
 
-	Select the drop-down arrow for the **Showing** field and select the **Available for upgrade** option. As you can see, this query is now empty, since the Sales Department has been upgraded. 
+	Once the **Sales Department** group appears in the list, select the drop-down arrow for the **Showing** field and select the **Available for upgrade** option. As you can see, this query is now empty, since the Sales Department has been upgraded. 
 
 7. Select the **X** in the upper-right corner of the **Bulk Upgrade** window to close it.
 
@@ -139,11 +139,13 @@ Organizations have typically relied on distribution groups in Exchange to commun
 
 A group naming policy enables organizations to standardize and manage the names of distribution groups created by its users. You can require that a specific prefix and suffix be added to the name for a distribution group at the time it's created, and you can also block specific words from being used. This helps organizations minimize the use of inappropriate words in group names. 
 
-Adatum’s CTO wants Holly to implement a standard naming policy throughout the organization based on the following format: {Department}{Group Name}{City}
+Adatum’s CTO wants Holly to implement a standard naming policy throughout the organization based on the following format: **{Department}{Group Name}{City}**
 
 1. In the **Exchange admin center**, you should still be displaying the list of groups. In the menu bar that appears over the list of groups, select the **ellipsis** (...) icon, and in the menu that appears, select **Configure group naming policy.**
 
-2. In the **group naming policy** window that appears, the **general** tab in the left-hand pane appears by default. Under the **Group Naming Policy** section, you can select a prefix and a suffix. In the **For the prefix, apply the following sequence:** field, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK** (do NOT select the **Add** button; this is for adding additional prefix values, which you will not do).
+2. In the **group naming policy** window that appears, the **general** tab in the left-hand pane appears by default. Under the **Group Naming Policy** section, you can select a prefix and a suffix. <br/>
+
+	In the **For the prefix, apply the following sequence:** field, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **Department**, and then select **OK** (do NOT select the **Add** button; this is for adding additional prefix values, which you will not do).
 
 3. In the **For the suffix, apply the following sequence:** field, select the drop-down arrow and select **Text**. This opens an **Enter text** window. In the **Enter text** field, enter **Group** and then select **OK**.
 
@@ -151,7 +153,7 @@ Adatum’s CTO wants Holly to implement a standard naming policy throughout the 
 
 5. In the **followed by...** field that appears, select the drop-down arrow and select **Attribute.** This opens a **select an attribute** window. Select the drop-down arrow, select **City**, and then select **OK**.
 
-6. Review the **Preview of policy** example and then select the **Save** button at the bottom of the window.
+6. Review the **Preview of policy** example that is based on the parameters you selected. If any need to be fixed, select the correct values now. When everything looks OK, select the **Save** button at the bottom of the window.
 
 
 ### Task 5 – Manage Resources
@@ -162,7 +164,7 @@ A room mailbox is a resource mailbox that is assigned to a physical location, su
 
 2. In the menu bar that appears over the list of resources, select the **plus (+)** sign and then in the drop-down menu, select **Room mailbox.**  <br/>
 	
-	‎**Note:** This selection is designed for administrators to set up a meeting location to be used for booking purposes. When scheduling meetings, you will be able to select the room from the Global Address List (GAL).
+	‎**Note:** This selection is designed for administrators to set up a meeting location for booking purposes. When scheduling meetings, you will be able to select the room from the Global Address List (GAL).
 
 3. In the **new room mailbox** window that appears, enter the following information:
 
@@ -182,7 +184,7 @@ A room mailbox is a resource mailbox that is assigned to a physical location, su
 
 5. **Conference Room 1** now appears in the list of resources. You must now edit the booking properties for this resource. Since Conference Room 1 is the only resource in the list, it's already selected by default; therefore, select the **Edit** (pencil) icon on the menu bar.
 
-6. In the **Conference Room 1** window that appears, select **booking options** in the left-hand pane.
+6. In the **Conference Room 1** window that appears, select the **booking options** tab in the left-hand pane.
 
 7. Select the **Allow scheduling only during working hours** check box. 
 

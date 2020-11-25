@@ -93,11 +93,9 @@
 <p><strong>IMPORTANT:</strong> In this task, whenever you access the URL of the IT Services site, you will use <strong><u>your</u></strong> tenant prefix (xxxxxZZZZZZ) in the URL (<strong>https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices</strong>), since you created the site in your Adatum tenant in the prior task. When you access this site in your role as the IT Consultant, you will sign in using the MOD Administrator&rsquo;s credentials for the IT Consultant&rsquo;s tenant; this will be <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong>, where the tenant prefix (xxxxxZZZZZZ) will be <strong><u>your fellow student&rsquo;s</u></strong> tenant prefix that was assigned to you by your instructor.</p>
 <ol>
 <li>Switch to <strong>LON-CL1</strong>.</li>
-<li>In <strong>LON-CL1</strong>, you should still be logged in as <strong>Laura Atkins /strong> from the earlier lab in which you installed Microsoft 365 Apps for enterprise. For this lab, you will sign out of LON-CL1 as Laura and sign back in as the Administrator. </li>
-<li>Select the <strong>Ctrl+Alt+Delete</strong> function in your VM lab environment. On the desktop menu, select <strong>Switch user</strong>. On the desktop, the <strong>Administrator</strong> is selected by default. Enter <strong>Pa55w.rd</strong> in the Password field and then select the forward arrow.   and then select <strong>Sign out</strong>.
-<li>  
-  
-  
+<li>In <strong>LON-CL1</strong>, you should still be logged in as <strong>Laura Atkins</strong> from the earlier lab in which you installed Microsoft 365 Apps for enterprise. For this lab, you will sign out of LON-CL1 as Laura and sign back in as the on-premises Administrator (adatum\administrator). </li>
+<li>Select the <strong>Ctrl+Alt+Delete</strong> function in your VM lab environment. On the desktop menu, select <strong>Switch user</strong>. On the desktop, the <strong>Administrator</strong> is selected by default. Enter <strong>Pa55w.rd</strong> in the Password field and then select the forward arrow. The desktop should now display the logged on user as <strong>adatum\administrator</strong>.
+<li>On the desktop, select the <strong>Microsoft Edge</strong icon on the taskbar. In the Edge browser that opens, enter the following URL in the address bar: <strong>https://portal.office.com</strong>
   <br><br><strong>Important: </strong>Remember, in this task you are acting in the role of the IT Consultant who is using his or her client PC (LON-CL1) to access the IT Services site on Adatum&rsquo;s tenant.</li>
 <li>Select the <strong>File Explorer</strong> icon that is located on the taskbar at the bottom of the screen.</li>
 <li>Maximize the <strong>File Explorer</strong> window, and then select the <strong>Documents </strong></li>

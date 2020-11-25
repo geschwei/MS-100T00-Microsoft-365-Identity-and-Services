@@ -77,7 +77,8 @@
 <li>In the email, it will display <strong>Go To</strong> <strong>IT Services</strong>. The<strong> IT Services </strong>portion of this message is hyperlinked. Select <strong>IT Services</strong>.</li>
 <li>A new tab will open in your InPrivate browsing session that displays <strong>Welcome to SharePoint Online. </strong>On this webpage, select <strong>Organizational account. </strong></li>
 <li>This will open the <strong>IT Services</strong> site that you created in your tenant. In other words, by using an InPrivate browsing session, you are impersonating your fellow student by being signed into his or her tenant, and from your fellow student&rsquo;s browser (i.e. in the InPrivate browsing session), you are accessing the <strong>IT Services</strong> site that Holly created in Adatum&rsquo;s Microsoft 365 tenant.</li>
-<li>In the menu bar at the top of the page, select the <strong>+New</strong> dropdown option. In the menu that appears, you should see all the objects the IT Consultant can create in this site.</li>
+<li>On the <strong>IT Services</strong> site, in the left-hand navigation pane, select <strong>Documents</strong>.</li>
+<li>On the <strong>Documents</strong> page, select <strong>+New</strong> on the menu bar. In the drop-down menu that appears, you should see all the objects the IT Consultant can create in this site.</li>
 <li>Select the X in the upper right corner of the screen to close the InPrivate Browsing session in Microsoft Edge.</li>
 <li>This will return you to the <strong>People and Groups &gt; Consultants</strong> site in your normal Edge browser session. Leave the browser open as you proceed to the next task.</li>
 </ol>

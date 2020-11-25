@@ -80,6 +80,7 @@
 <li>On the <strong>IT Services</strong> site, in the left-hand navigation pane, select <strong>Documents</strong>.</li>
 <li>On the <strong>Documents</strong> page, select <strong>+New</strong> on the menu bar. In the drop-down menu that appears, you should see all the objects the IT Consultant can create in this site.</li>
 <li>Select the X in the upper right corner of the screen to close the InPrivate Browsing session in Microsoft Edge.</li>
+<li>Close the Microsoft Outlook mail message that you opened earlier. </li>
 <li>This will return you to the <strong>People and Groups &gt; Consultants</strong> site in your normal Edge browser session. Leave the browser open as you proceed to the next task.</li>
 </ol>
 <h3>Task 2 - Upload existing ticket request data (<strong>IT Consultant steps</strong>)</h3>

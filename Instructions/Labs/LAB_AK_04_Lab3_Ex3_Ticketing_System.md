@@ -146,7 +146,7 @@
 <li>If you receive a dialog box that indicates "Office has blocked this content because it uses a sign-in method that may be insecure", select the <strong>Open Trust Center</strong> button to unblock the content.
   <br><br>In the <strong>Trust Center</strong> window that appears, select the <strong>Ask me what to do for each host</strong> option and then select <strong>OK</strong>.
   <br><br>If you receive a dialog box indicating that Microsoft Excel cannot connect to the server at this time, and that the table cannot be published, select <strong>OK</strong>.
-  <br><br>On the <strong>Export Table to SharePoint List &ndash; Step 1 of 2</strong> window, select <strong>Next>. 
+  <br><br>On the <strong>Export Table to SharePoint List &ndash; Step 1 of 2</strong> window, select <strong>Next</strong>. 
   <br><br>On the dialog box that asks if you want to continue signing in at xxxxxZZZZZZ.sharepoint.com even though the sign-in method may be insecure, select <strong>Yes</strong>. </li>
 <li>An <strong>Export Table to SharePoint List &ndash; Step 2 of 2</strong> window will appear. Review the information and then select <strong>Finish</strong>.</li>
 <li>A <strong>Microsoft SharePoint Foundation</strong> dialog box will appear that indicates the table was successfully published. Do NOT select OK; instead, select the <strong>link</strong> to the site in which the table was published.</li>

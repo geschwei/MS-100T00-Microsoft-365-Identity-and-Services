@@ -9,7 +9,7 @@
 <p>Instead, in your role as Holly Dickson, you will perform the following steps in this task to assign the IT consultant to the IT Services team site with limited permissions:</p>
 <ul>
 <li>You will create a new permission level for the IT Services site titled <strong>Restricted Use</strong>. You will then assign to this permission level the limited set of permissions that you want assigned to any external users who will access the site (in this case, the IT Consultant).</li>
-<li>For the IT Services site, you will then create a new group of users titled <strong>Consultants</strong>, and you will assign your fellow student&rsquo;s tenant admin account (the IT Consultant) to this group.</li>
+<li>For the IT Services site, you will then create a new group of users titled <strong>Consultants</strong>, and you will assign your fellow student&rsquo;s tenant admin account (which represents the IT Consultant) to this group.</li>
 <li>You will assign the <strong>Restricted Use </strong>permission level to this <strong>Consultants</strong> group. This will limit the actions the IT Consultant will be able to perform when accessing the IT Services site.</li>
 </ul>
 <ol>

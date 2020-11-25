@@ -81,7 +81,8 @@
 <li>On the <strong>Documents</strong> page, select <strong>+New</strong> on the menu bar. In the drop-down menu that appears, you should see all the objects the IT Consultant can create in this site.</li>
 <li>Select the X in the upper right corner of the screen to close the InPrivate Browsing session in Microsoft Edge.</li>
 <li>Close the Microsoft Outlook mail message that you opened earlier. </li>
-<li>This will return you to the <strong>People and Groups &gt; Consultants</strong> site in your normal Edge browser session. Leave the browser open as you proceed to the next task.</li>
+<li>This will return you to the <strong>People and Groups &gt; Consultants</strong> site in your normal Edge browser session. If your fellow student's MOD Administrator account does not appear in the list of consultants, select the <strong>Refresh</strong> icon on the left-side of the address bar at the top of the page to refresh the list. Your fellow student's <strong>MOD Administrator</strong> account should now appear. </li>
+<li>Leave the browser open and proceed to the next task.</li>
 </ol>
 <h3>Task 2 - Upload existing ticket request data (<strong>IT Consultant steps</strong>)</h3>
 <p>In this task, <strong>you will take on the persona of the IT consultant</strong> who is helping Holly Dickson implement a new service request ticketing system. In your role as the IT consultant, you are concerned that during this transition from Adatum&rsquo;s old ticketing system to the new one, Adatum may lose critical historical data, such as ticket volume and monthly activity. Therefore, you have recommended to Holly that you should upload the existing data from Adatum&rsquo;s old service request ticketing system to the new ticketing system.</p>

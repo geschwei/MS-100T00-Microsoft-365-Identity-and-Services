@@ -13,7 +13,7 @@
 <li>You will assign the <strong>Restricted Use </strong>permission level to this <strong>Consultants</strong> group. This will limit the actions the IT Consultant will be able to perform when accessing the IT Services site.</li>
 </ul>
 <ol>
-<li>You should meet with the student who your instructor assigned to your lab to play the role of the IT consultant. During this meeting you should exchange the <strong>Mod Administrator </strong>accounts from both your tenants; this is the <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> account for each of your tenants (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).</li>
+<li>You should meet with the student who your instructor assigned to your lab to play the role of the IT consultant. During this meeting you should exchange the tenant admin accounts <strong>(admin@xxxxxZZZZZZ.onmicrosoft.com) </strong> from each of your tenants along with the tenant admin's password.</li>
 <li>You should still be logged into LON-DC1 as <strong>ADATUM\Administrator</strong> and password <strong>Pa55w.rd</strong>; if not, then do so now.</li>
 <li>You should still have your Edge browser and the SharePoint admin center open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, navigate to the SharePoint admin center just as you did in the prior lab exercise.</li>
 <li>In the <strong>SharePoint admin center</strong>, you will begin by creating a new permission level for the IT Services site. In the left-hand navigation pane, select <strong>Sites</strong>, and then select <strong>Active sites</strong>.</li>

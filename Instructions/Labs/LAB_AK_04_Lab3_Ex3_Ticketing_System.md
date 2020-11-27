@@ -105,7 +105,7 @@
 <li>If you will recall from the task description, you will be presented with two options for completing this task: through an Excel command, or by running a PowerShell script. 
   <ul>
     <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 7</strong>. </li>
-    <li>If you prefer to use PowerShell, then proceed to <strong>step 27</strong>.</li>
+    <li>If you prefer to use PowerShell, then proceed to <strong>step 26</strong>.</li>
   </ul>
   </li>
 <br><br>
@@ -146,14 +146,13 @@
 <li>Select <strong>Next</strong>.</li>
 <li>An <strong>Export Table to SharePoint List &ndash; Step 2 of 2</strong> window will appear. Review the information and then select <strong>Finish</strong>.</li>
 <li>A <strong>Microsoft SharePoint Foundation</strong> dialog box will appear that indicates the table was successfully published. 
-  <br><br><strong>Important:</strong>Do NOT select OK; instead, select the <strong>link</strong> to the site in which the table was published.</li>
-<li>If a <strong>Sign in</strong> window appears, enter the MOD Administrator&rsquo;s account for the IT Consultant&rsquo;s tenant. In this case, enter <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your tenant password (this will be the same for your tenant and that of all the other students&rsquo; tenants) and then select <strong>Sign in</strong>.</li>
-<li>This will take you to the IT Services site where it will display a list showing the data that was exported from the spreadsheet and uploaded into the site. If you receive a <strong>We&rsquo;ve got a new look</strong> window, then close it.</li>
-<li>On the taskbar at the bottom of the screen, select the <strong>Excel</strong> icon. In the <strong>Microsoft SharePoint Foundation</strong> dialog box that displayed the link to the published list in the IT Services site, select <strong>OK</strong> to close the window.
-    <br><br>Close Excel. </li>
+  <br><br><strong>Important:</strong>Do NOT select OK; instead, select the <strong>link</strong> to the site in which the table was published. This will take you to the IT Services site where it will display a list showing the data that was exported from the spreadsheet and uploaded into the site. 
+  <br><br><strong>Note:</strong>If a <strong>Sign in</strong> window appears, enter the MOD Administrator&rsquo;s account for the IT Consultant&rsquo;s tenant. In this case, enter <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your fellow student's tenant password and then select <strong>Sign in</strong>.</li>
+<li>On the taskbar at the bottom of the screen, select the <strong>Excel</strong> icon. In the <strong>Microsoft SharePoint Foundation</strong> dialog box that displayed the link to the published list in the IT Services site, select <strong>OK</strong> to close the window. </li>
+<li>Close Excel. </li>
 <li>Leave your Edge browser open. 
-  <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong></li>
-<br><br>
+  <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong>
+<br><br></li>
 <li><strong>START HERE TO USE POWERSHELL TO PERFORM THIS TASK. </strong>Since you are at this step, you have chosen to use Windows PowerShell to export the table data into a SharePoint list in the IT Services site rather than using Excel to accomplish this task. 
   <br><br>Confirm that the <strong>Service Request System.csv </strong>file is present in the<strong> Documents</strong> folder. This file contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. 
   <br><br>Confirm that the <strong>ImportCsvToSharepointList.ps1</strong> script is present in the <strong>Documents</strong> folder. This script contains the PowerShell commands you will run to export the table data from the <strong>Service Request System.csv </strong>file and import it into a SharePoint list in the IT Services site.</li>

@@ -105,7 +105,7 @@
 <li>If you will recall from the task description, you will be presented with two options for completing this task: through an Excel command, or by running a PowerShell script. 
   <ul>
     <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 7</strong>. </li>
-    <li>If you prefer to use PowerShell, then proceed to <strong>step 29</strong>.</li>
+    <li>If you prefer to use PowerShell, then proceed to <strong>step 27</strong>.</li>
   </ul>
   </li>
 <br><br>
@@ -144,11 +144,6 @@
 </ul>
 </li>
 <li>Select <strong>Next</strong>.</li>
-<li>If you receive a dialog box that indicates "Office has blocked this content because it uses a sign-in method that may be insecure", select the <strong>Open Trust Center</strong> button to unblock the content.
-  <br><br>In the <strong>Trust Center</strong> window that appears, select the <strong>Ask me what to do for each host</strong> option and then select <strong>OK</strong>.
-  <br><br>If you receive a dialog box indicating that Microsoft Excel cannot connect to the server at this time, and that the table cannot be published, select <strong>OK</strong>.
-  <br><br>On the <strong>Export Table to SharePoint List &ndash; Step 1 of 2</strong> window, select <strong>Next</strong>. 
-  <br><br>On the dialog box that asks if you want to continue signing in at xxxxxZZZZZZ.sharepoint.com even though the sign-in method may be insecure, select <strong>Yes</strong>. </li>
 <li>An <strong>Export Table to SharePoint List &ndash; Step 2 of 2</strong> window will appear. Review the information and then select <strong>Finish</strong>.</li>
 <li>A <strong>Microsoft SharePoint Foundation</strong> dialog box will appear that indicates the table was successfully published. Do NOT select OK; instead, select the <strong>link</strong> to the site in which the table was published.</li>
 <li>If a <strong>Sign in</strong> window appears, enter the MOD Administrator&rsquo;s account for the IT Consultant&rsquo;s tenant. In this case, enter <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your tenant password (this will be the same for your tenant and that of all the other students&rsquo; tenants) and then select <strong>Sign in</strong>.</li>

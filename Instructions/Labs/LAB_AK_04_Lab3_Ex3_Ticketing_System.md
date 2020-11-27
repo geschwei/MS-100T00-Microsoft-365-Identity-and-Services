@@ -184,7 +184,7 @@
 <li>In the script, lines <strong>73-79</strong> represent one command; therefore, all these lines must be selected together and run as one selection. 
   <br><br>At the command prompt, select lines <strong>73-79</strong> in the script and then select the <strong>Run Selection (F8)</strong> icon on the menu bar. This command will display a summary each of the rows that were imported from the .csv file.</li>
 <li>At the command prompt, you have finished running the commands in this script. Close Windows PowerShell.</li>
-<li>Open your Edge browser and then enter the following URL in the address bar to navigate to the <strong>IT Services</strong> site: <strong>https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices</strong> (where xxxxxZZZZZZ is <u>your tenant prefix</u> provided by your lab hosting provider).</li>
+<li>Open your Edge browser and enter the following URL in the address bar to navigate to the <strong>IT Services</strong> site: <strong>https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices</strong> (where xxxxxZZZZZZ is <u>your tenant prefix</u> provided by your lab hosting provider).</li>
 <li>In the <strong>IT Services</strong> site, in the left-hand pane, select <strong>Site contents</strong>. In the list of Site contents, select the <strong>Service Desk Requests</strong> item.</li>
   <li>This displays the <strong>Service Desk Requests</strong> list. Review the 30 items in the list, which should match the 30 items in the .csv file.</li>
 <li>Close Windows PowerShell.</li>

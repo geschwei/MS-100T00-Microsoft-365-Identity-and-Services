@@ -87,25 +87,23 @@
 </ol>
 <h3>Task 2 - Upload existing ticket request data (<strong>IT Consultant steps</strong>)</h3>
 <p>In this task, <strong>you will take on the persona of the IT consultant</strong> who is helping Holly Dickson implement a new service request ticketing system. In your role as the IT consultant, you are concerned that during this transition from Adatum&rsquo;s old ticketing system to the new one, Adatum may lose critical historical data, such as ticket volume and monthly activity. Therefore, you have recommended to Holly that you should upload the existing data from Adatum&rsquo;s old service request ticketing system to the new ticketing system.</p>
-<p>To facilitate this process, the existing ticketing data has been captured in a spreadsheet and a backup spreadsheet, and your lab service provider has stored these two spreadsheets on LON-CL1. For the purpose of this lab in which you are playing the role of the IT Consultant, LON-CL1 will take on the role of the consultant&rsquo;s PC for this particular task.</p>
+<p>To facilitate this process, the existing ticketing data has been captured in a spreadsheet and a backup spreadsheet, and your lab service provider has stored these two spreadsheets on LON-CL1. </p>
 <p>As the IT Consultant in this task, you will perform two primary steps:</p>
 <ul>
-<li>You will connect to Adatum&rsquo;s IT Services team site from your PC (LON-CL1) to validate that you can access the site and authenticate your credentials.</li>
-<li>You will export the existing ticket data from the spreadsheet on your PC (LON-CL1) and upload it to a SharePoint list in the IT Services site that Adatum (Holly) created in the prior task. When the data is uploaded to the IT Services site, it will be uploaded as a SharePoint list (titled &ldquo;Service Desk Requests&rdquo;) on the site. 
+<li>You will connect to Adatum&rsquo;s IT Services team site to validate that you can access the site and authenticate your credentials.</li>
+<li>You will export the existing ticket data from the spreadsheet on LON-CL1 and upload it to a SharePoint list in the IT Services site that Adatum (Holly) created in the prior task. When the data is uploaded to the IT Services site, it will be uploaded as a SharePoint list (titled &ldquo;Service Desk Requests&rdquo;) on the site. 
   <br><br><strong>IMPORTANT: </strong>There are two ways in which you can export the data from the spreadsheet and upload it to the SharePoint list on the IT Services site: through commands in the Excel spreadsheet, or by running a PowerShell script. Both options are presented in this task and you are free to choose whichever method you prefer. Using the Excel spreadsheet commands is probably the more common method, but for those of you who prefer to work in PowerShell, using the PowerShell script provides another experience to add to your personal repository of PowerShell tools.</li>
 </ul>
 <p><strong>CAUTION:</strong> In this task, whenever you access the URL of the IT Services site, you will use <strong><u>your</u></strong> tenant prefix (xxxxxZZZZZZ) in the URL (<strong>https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices</strong>), since you created the site in your Adatum tenant in the prior task. When you access this site in your role as the IT Consultant, you will sign in using your fellow student's tenant admin username and password (which represents the IT Consultant); the username will be <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong>, where the tenant prefix (xxxxxZZZZZZ) will be <strong><u>your fellow student&rsquo;s</u></strong> tenant prefix that was assigned to you by your instructor.</p>
 <ol>
 <li>Switch to <strong>LON-CL1</strong>.</li>
-<li>In <strong>LON-CL1</strong>, you should still be logged in as <strong>Laura Atkins</strong> from the earlier lab in which you installed Microsoft 365 Apps for enterprise. For this lab, you will sign out of LON-CL1 as Laura and sign back in as the on-premises Administrator (adatum\administrator). </li>
-<li>Select the <strong>Ctrl+Alt+Delete</strong> function in your VM lab environment. On the desktop menu, select <strong>Switch user</strong>. On the desktop, the <strong>Administrator</strong> is selected by default. Enter <strong>Pa55w.rd</strong> in the Password field and then select the forward arrow. The desktop should now display the logged on user as <strong>adatum\administrator</strong>.
-  <br><br><strong>Important: </strong>Remember, in this task you are acting in the role of the IT Consultant who is using his or her client PC (LON-CL1) to access the IT Services site on Adatum&rsquo;s tenant. Because of the limitations of our VM environment, you will have to temporarily suspend reality since the logged on user to LON-CL1 will be Adatum's administrator, while the actual user is the IT Consultant who is using LON-CL1 to represent his or her personal PC to externally access Adatum's environment.</li>
+<li>On <strong>LON-CL1</strong>, you should still be logged in as the Adatum <strong>administrator</strong> (adatum\administrator) from the earlier lab in which you installed Microsoft 365 Apps for enterprise. If you did not log out of LON-CL1 as Laura Atkins and log back in as the administrator at the end of the earlier lab, then do so now.
 <li>Select the <strong>File Explorer</strong> icon that is located on the taskbar at the bottom of the screen.</li>
 <li>Maximize the <strong>File Explorer</strong> window, and then select the <strong>Documents </strong>.</li>
 <li>If you will recall from the task description, you will be presented with two options for completing this task: through commands in the Excel spreadsheet, or by running a PowerShell script. 
   <ul>
-    <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 7</strong>. </li>
-    <li>If you prefer to use PowerShell, then proceed to <strong>step 26</strong>.</li>
+    <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 6</strong>. </li>
+    <li>If you prefer to use PowerShell, then proceed to <strong>step 25</strong>.</li>
   </ul>
   </li>
 <br><br>

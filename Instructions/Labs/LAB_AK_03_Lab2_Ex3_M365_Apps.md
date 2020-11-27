@@ -205,7 +205,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 15. Close Word.
 
-16. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of LON-CL1 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL1 for using in the next lab.
+16. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of LON-CL1 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL1 for the next lab.
 
 	On LON-CL1, select the **Ctrl+Alt+Delete** function in your VM lab environment. 
 	

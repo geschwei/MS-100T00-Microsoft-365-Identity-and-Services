@@ -82,11 +82,11 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 4. Once the **setup.exe** file is downloaded, it will appear in the notification bar at the bottom of the screen. Select **Open file**. 
 
-5. In the **Do you want to run this file?** dialog box, select **Run**.
+5. If a **Do you want to run this file?** dialog box appears, select **Run**.
 
 6. In the **Do you want to install this application?** dialog box, select **Install**.
 
-7. In the **Do you want to run this file?** dialog box, select **Run**.
+7. If a **Do you want to run this file?** dialog box appears, select **Run**.
 
 8. In the **IdFix Privacy Statement** message box, select **OK**. 
 

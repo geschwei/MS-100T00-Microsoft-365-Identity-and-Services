@@ -53,7 +53,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 4. Enter the following command that runs a PowerShell script that creates problem user accounts. This script is stored in the C:\labfiles folder. The users that are included in this script purposely have issues with their user accounts; this will enable you to troubleshoot these accounts in the next task using the IdFix tool.  <br/>
 
-		.\CreateProblemUsers.ps1 </strong>
+		.\CreateProblemUsers.ps1
 	
 	**Note:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following changes in AD DS:
 

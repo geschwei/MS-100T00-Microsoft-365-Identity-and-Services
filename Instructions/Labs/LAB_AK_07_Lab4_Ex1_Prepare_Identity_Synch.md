@@ -63,7 +63,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 	- **Logan Boyle**. Update the emailAddress attribute for Logan to **logan@adatum.com**.
 
-	- **Maj Hojski**. Update the emailAddress attribute for Maj to blank characters (“ “).  
+	- **Maj Hojski**. Update the emailAddress attribute for Maj to **majhojski**.  
 
 5. Close PowerShell.
 

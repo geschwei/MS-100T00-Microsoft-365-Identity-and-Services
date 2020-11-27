@@ -31,6 +31,7 @@
 <ul>
 <li><strong>Manage lists</strong> (which selects <strong>View Items</strong>)</li>
 <li><strong>Add items</strong></li>
+<li><strong>Edit items</strong></li>
 <li><strong>View versions </strong>(which selects <strong>Open Items</strong>)</li>
 <li><strong>View Application Pages</strong></li>
 </ul>

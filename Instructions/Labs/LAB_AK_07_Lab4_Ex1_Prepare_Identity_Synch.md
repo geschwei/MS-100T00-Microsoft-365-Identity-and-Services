@@ -43,7 +43,7 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
-		<strong>CD C:\labfiles\ </strong>
+		CD C:\labfiles\
 
 2. PowerShell's execution policy settings dictate which PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 

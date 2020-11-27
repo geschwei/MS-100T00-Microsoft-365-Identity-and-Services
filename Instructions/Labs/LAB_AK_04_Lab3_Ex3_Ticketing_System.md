@@ -92,7 +92,7 @@
 <ul>
 <li>You will connect to Adatum&rsquo;s IT Services team site from your PC (LON-CL1) to validate that you can access the site and authenticate your credentials.</li>
 <li>You will export the existing ticket data from the spreadsheet on your PC (LON-CL1) and upload it to a SharePoint list in the IT Services site that Adatum (Holly) created in the prior task. When the data is uploaded to the IT Services site, it will be uploaded as a SharePoint list (titled &ldquo;Service Desk Requests&rdquo;) on the site. <br/>
-  <strong>IMPORTANT: </strong>There are two ways in which you can export the data from the spreadsheet and upload it to the SharePoint list on the IT Services site: through an Excel command, or by running a PowerShell script. Both options are presented in this task and you are free to choose whichever method you prefer. The Excel command is probably the more common method, but for those of you who prefer to work in PowerShell, using the PowerShell script provides another experience to add to your personal repository of PowerShell tools.</li>
+  <strong>IMPORTANT: </strong>There are two ways in which you can export the data from the spreadsheet and upload it to the SharePoint list on the IT Services site: through commands in the Excel spreadsheet, or by running a PowerShell script. Both options are presented in this task and you are free to choose whichever method you prefer. Using the Excel spreadsheet commands is probably the more common method, but for those of you who prefer to work in PowerShell, using the PowerShell script provides another experience to add to your personal repository of PowerShell tools.</li>
 </ul>
 <p><strong>IMPORTANT:</strong> In this task, whenever you access the URL of the IT Services site, you will use <strong><u>your</u></strong> tenant prefix (xxxxxZZZZZZ) in the URL (<strong>https://xxxxxZZZZZZ.sharepoint.com/sites/ITServices</strong>), since you created the site in your Adatum tenant in the prior task. When you access this site in your role as the IT Consultant, you will sign in using your fellow student's tenant admin username and password (which represents the IT Consultant); the username will be <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong>, where the tenant prefix (xxxxxZZZZZZ) will be <strong><u>your fellow student&rsquo;s</u></strong> tenant prefix that was assigned to you by your instructor.</p>
 <ol>
@@ -102,14 +102,14 @@
   <br><br><strong>Important: </strong>Remember, in this task you are acting in the role of the IT Consultant who is using his or her client PC (LON-CL1) to access the IT Services site on Adatum&rsquo;s tenant. Because of the limitations of our VM environment, you will have to temporarily suspend reality since the logged on user to LON-CL1 will be Adatum's administrator, while the actual user is the IT Consultant who is using LON-CL1 to represent his or her personal PC to externally access Adatum's environment.</li>
 <li>Select the <strong>File Explorer</strong> icon that is located on the taskbar at the bottom of the screen.</li>
 <li>Maximize the <strong>File Explorer</strong> window, and then select the <strong>Documents </strong>.</li>
-<li>If you will recall from the task description, you will be presented with two options for completing this task: through an Excel command, or by running a PowerShell script. 
+<li>If you will recall from the task description, you will be presented with two options for completing this task: through commands in the Excel spreadsheet, or by running a PowerShell script. 
   <ul>
     <li>If you prefer to use Excel to accomplish this task, then proceed to <strong>step 7</strong>. </li>
     <li>If you prefer to use PowerShell, then proceed to <strong>step 26</strong>.</li>
   </ul>
   </li>
 <br><br>
-<li><strong>START HERE TO USE EXCEL TO PERFORM THIS TASK.</strong> 
+<li><strong>START HERE TO PERFORM THIS TASK USING EXCEL.</strong> 
   <br><br>Since you are at this step, you have chosen to use Excel to export the table data into a SharePoint list in the IT Services site. 
   <br><br>Confirm that the <strong>Service Request System.xlsx </strong>and <strong>BackupFile.xlsx</strong> files are present in the<strong> Documents</strong> folder. The <strong>Service Request System</strong> spreadsheet contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. The <strong>Backup File</strong> spreadsheet, which is simply a copy of the Service Request System file, was created for precautionary purposes (it will come into play in the next task). Note that there are two files with the name <strong>Service Request System</strong>; one is an Excel spreadsheet file with a .xlsx extension, and the other is a comma separated value file with a .csv extension. The Excel spreadsheet file is used in this section, whereas students that chose to use PowerShell will use the .csv file.
   <br><br>Double-click the <strong>Service Request System.xlsx </strong>file to open it. Make sure you open the .xlsx file and not the .csv file. </li>
@@ -154,7 +154,7 @@
 <li>Leave your Edge browser open. 
   <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong>
 <br><br></li>
-<li><strong>START HERE TO USE POWERSHELL TO PERFORM THIS TASK. </strong>
+<li><strong>START HERE TO PERFORM THIS TASK USING POWERSHELL. </strong>
   <br><br>Since you are at this step, you have chosen to use Windows PowerShell to export the table data into a SharePoint list in the IT Services site rather than using Excel to accomplish this task. 
   <br><br>Confirm that the <strong>Service Request System.csv </strong>file is present in the<strong> Documents</strong> folder. This file contains copies of the service request tickets from Adatum&rsquo;s old ticketing system. 
   <br><br>Confirm that the <strong>ImportCsvToSharepointList.ps1</strong> script is present in the <strong>Documents</strong> folder. This script contains the PowerShell commands you will run to export the table data from the <strong>Service Request System.csv </strong>file and import it into a SharePoint list in the IT Services site.</li>

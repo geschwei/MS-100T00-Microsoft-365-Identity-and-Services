@@ -197,20 +197,36 @@
 <li>In the <strong>Pick an account</strong> window, select Holly&rsquo;s account if it appears; otherwise, select <strong>Use another account</strong> and then enter <strong>holly@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the <strong>Enter password</strong> window, enter <strong>Pa55w.rd</strong> and select <strong>Sign in</strong>.</li>
 <li>After reviewing the data that was imported into the Service Desk Requests list, you noticed that the <strong>Customer</strong> field and the <strong>Assign to</strong> fields were missing. However, after reviewing the spreadsheet, you realized the missing data wasn&rsquo;t an upload issue because the <strong>Customer</strong> and <strong>Assign To</strong> columns were missing from the spreadsheet. 
 <br><br>While you cannot explain what caused this, you remember making a backup of the original spreadsheet. If these missing columns are in your backup file, you plan to add the two columns from your backup file to the <strong>Service Desk Requests</strong> list that is displayed in the IT Services site.
-<br><br>Select the <strong>File Explorer</strong> icon on the taskbar to return to the <strong>Documents</strong> folder that you opened in the prior task. Double-click on the <strong>BackupFile.xlsx</strong> file to open it.</li>
+<br><br>Select the <strong>File Explorer</strong> icon on the taskbar to return to the <strong>Documents</strong> folder that you opened in the prior task. Double-click on the <strong>Backupfile.xlsx</strong> file to open it.</li>
 <li>Review the columns in the table and verify the <strong>Assign to</strong> and <strong>Customer </strong>columns appear. Since you have just verified that this data was captured in your backup file, you can proceed with adding these columns to the <strong>Service Desk Requests</strong> list.</li>
-<li>In your Edge browser, in the <strong>Office 365 home </strong>page, select <strong>SharePoint</strong>.</li>
-<li>A <strong>News from sites</strong> window appears over top of the SharePoint admin center. Close this window. On the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, scroll down and under the <strong>Recent</strong> group, select <strong>IT Services</strong>.</li>
-<li>On the <strong>IT Services </strong>site, in the left-hand navigation pane, select the <strong>X</strong> above <strong>Microsoft Teams</strong> to hide this banner, and in the <strong>Hide </strong>dialog box, select <strong>Yes </strong>to confirm it. In the left-hand navigation pane, select <strong>Site Contents</strong>, and in <strong>Contents list</strong>, select the <strong>Service Desk Requests</strong> list.</li>
-<li>In the <strong>Service Desk Requests</strong> list, you want to create a new column to display the <strong>Customer</strong> data from the <strong>xlsx</strong> spreadsheet. At the end of the column heading row, select <strong>+Add column.</strong></li>
-<li>In the menu that appears, select the data type for this column, which in this case is <strong>Person</strong>.
-  <br><br><strong> Important:</strong> The<strong> Person</strong> data type validates that each entry must be a valid internal user account (such as Holly Dickson, Nestor Wilke, Lynne Robbins, and so on). This data type prohibits you from entering a name that is not a valid Microsoft 365 user account.</li>
-<li>In the <strong>Create a column</strong> window that appears, enter <strong>Customer </strong>in the <strong>Name</strong> field.</li>
-<li>In the <strong>Type </strong>field, <strong>Person or Group </strong>is pre-filled based on your earlier selection. Leave this as is.</li>
-<li>Do NOT select the <strong>Allow selection of Groups</strong> option; leave this check box blank.</li>
-<li>Select<strong> More options</strong>.</li>
+<li>In your Edge browser, in the <strong>Office 365 home </strong>page, select the <strong>SharePoint</strong> icon in the column of Microsoft 365 app icons on the left-side of the screen.
+  <br><br>If a <strong>Pick an account</strong> window appears, select Holly's account. </li>
+<li>A <strong>News from sites</strong> window appears over top of the SharePoint admin center. Close this window. </li>
+<li>On the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, scroll down and under the <strong>Recent</strong> group, select <strong>IT Services</strong>.</li>
+<li>On the <strong>IT Services </strong>site, near the bottom of the left-hand navigation pane, select the <strong>X</strong> above <strong>Microsoft Teams</strong> to hide this banner, and in the <strong>Hide </strong>dialog box, select <strong>Yes </strong>to confirm it. 
+  <br><br>In the left-hand navigation pane, select <strong>Site Contents</strong>, and in the <strong>Contents</strong> list, select <strong>Service Desk Requests</strong>.
+<br><br>In the <strong>Service Desk Requests</strong> list, you want to create a new column to display the <strong>Customer</strong> data that you will import from the <strong>Backupfile.xlsx</strong> spreadsheet. The instruction to perform this step will differ depending on whether you used Excel or PowerShell to create the Service Desk Requests list. </li>
+<li>If you used Excel to create the Service Desk Requests list, then perform the following steps:
+<ol>
+<li>At the end of the column heading row, select the <strong>plus (+) sign</strong> icon, and then in the drop-down menu that appears, select <strong>More Column Types</strong>.
+<li>In the <strong>Create Column</strong> window that appears, enter <strong>Customer</strong> in the <strong>Name</strong> field.</li>
+<li>Under <strong>The type of information in this column is:</strong> option, select <strong>Person or Group</strong>.</li>
 <li>In the <strong>Require that this column contains information</strong> option, select <strong>Yes</strong>.</li>
+<li>Under the <strong>Allow selection of</strong> option, verify <strong>People Only</strong> is selected; if not, select it now.</li>
+<li>Select <strong>OK</strong>.</li>
+</ol>
+</li>
+<li>If you used PowerShell to create the Service Desk Requests list, then perform the following steps:
+<ol>
+<li>At the end of the column heading row, select <strong>+Add column</strong>, and then in the drop-down menu that appears, select <strong>Person</strong>.
+<li>In the <strong>Create a column</strong> window that appears, enter <strong>Customer</strong> in the <strong>Name</strong> field.</li>
+<li>In the <strong>Type</strong> field, verify it's already set to <strong>Person or Group</strong>.</li>
+<li>Verify the <strong>Allow selection of Groups</strong> check box is NOT selected. Do NOT select this check box. </li>
+<li>Select <strong>More options</strong>.</li>
+<li>Select the <strong>Require that this column contains information</strong> toggle switch to change it to <strong>Yes</strong>. </li>
 <li>Select <strong>Save</strong>.</li>
+</ol>
+</li>
 <li>The <strong>Customer</strong> column should appear in the list. All record entries for this column should be highlighted in yellow, and <strong>Required info</strong> should appear in this column for each record (this is because you set the <strong>Require that this column contains information</strong> option to <strong>Yes </strong>in the previous step when you created this column).</li>
 <li>On the menu bar, select <strong>Quick edit</strong>. The <strong>Quick Edit</strong> option can be used to bulk edit data, which is what you will do here. In the next few steps, you will copy the Customer data from the <strong>BackupCopy</strong> spreadsheet and paste it into this column in the SharePoint list.</li>
 <li>Select the <strong>Excel</strong> spreadsheet icon on the taskbar to display the <strong>BackupFile.xlsx </strong>spreadsheet. Select all the items in the <strong>Customer</strong> column (start in row 2 so that you do not copy the column header), then select <strong>Copy</strong> from the ribbon (selecting <strong>Ctrl+C</strong> to copy the column data sometimes results in an error when you attempt to paste in the copied cells in the next step). 

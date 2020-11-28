@@ -222,7 +222,7 @@
   <br><br><strong>Note:</strong> If a window appears showing the progress of the Copy command, do NOT proceed until the pane disappears. This may take a minute or so for the copy process to complete. If a progress window does not appear, then proceed to the next step.</li>
 <li>Select the <strong>Edge</strong> browser icon on the taskbar, which should return you to the grid view page for the <strong>Service Desk Requests</strong> list. Select all the empty fields in the <strong>Customer </strong>column and press <strong>Ctrl+V</strong>. All items will automatically appear in the appropriate row for the<strong> Customer</strong> column.</li>
 <li>Select the <strong>Exit grid view</strong> option on the menu bar to see how the Customer data appears in normal display view. 
-<li>Repeat steps <strong>11-21</strong> to add a column for the <strong>Assign To</strong> data and to copy the <strong>Assign to</strong> data from the <strong>BackupFile.xlsx</strong> spreadsheet and paste it into the <strong>Service Desk Requests</strong> list.</li>
+<li>Repeat steps <strong>11-22</strong> to add a column for the <strong>Assign To</strong> data and to copy the <strong>Assign to</strong> data from the <strong>BackupFile.xlsx</strong> spreadsheet and paste it into the <strong>Service Desk Requests</strong> list.</li>
 <li>After reviewing the changes to the <strong>Service Desk Requests</strong> list, you realize that the data type of the <strong>Description</strong> column only supports a <strong>single line of text</strong>. While this is fine for the existing data, going forward you want your customer support engineers to be able to enter more detailed information. Therefore, you want to modify this column to change the data type to <strong>multiple lines of text</strong>. 
   <br><br>To make this change, select the <strong>Description</strong> column heading. In the menu that appears, select <strong>Column Settings</strong>, and then in the sub-menu, select <strong>Edit</strong>.</li>
 <li>In the <strong>Edit column</strong> window, select the drop-down arrow in the <strong>Type</strong> field and select <strong>Multiple lines of text</strong>.</li>
@@ -242,45 +242,27 @@
 <ol>
 <li>You should still be signed into LON-CL1 as the <strong>Administrator</strong>, and you should be logged into Microsoft 365 as Holly Dickson. In your browser, you should still have the tab open from the prior task that displays the <strong>Service Desk Requests</strong> list. If not, then navigate to this list now.</li>
 <li>You will begin by creating a view showing all active cases. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
-<li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
+<li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the bottom of the page and in the <strong>Views</strong> section, select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>In the <strong>Name</strong> section:
-<ul>
 <li>View Name: <strong>Active Cases</strong></li>
-</ul>
-</li>
-<li>In the <strong>Audience</strong> section:
-<ul>
 <li>View Audience: <strong>Create a Public View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
-<li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
-<li><strong>Location</strong> &ndash; Position from left: <strong>3</strong></li>
-<li><strong>Issue title</strong> - Position from left: <strong>4</strong></li>
-<li><strong>Description</strong> &ndash; Position from left: <strong>5</strong></li>
+<li><strong>Date</strong> &ndash; Position from left: <strong>2</strong></li>
+<li><strong>Customer</strong> &ndash; Position from left: <strong>3</strong></li>
+<li><strong>Location</strong> &ndash; Position from left: <strong>4</strong></li>
+<li><strong>issueTitle</strong> - Position from left: <strong>5</strong></li>
+<li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
 </ul>
-</li>
-<li>In the <strong>Sort </strong>section:
-<ul>
-<li>First sort by the column: <strong>Assign to</strong></li>
-</ul>
-</li>
-<li>In the <strong>Filter </strong>section, you want to create a filter that only selects records whose <strong>Issue status = Active:</strong>
-<ul>
-<li>Select the <strong>Show items only when the following is true</strong> option and enter the following filter information:
-<ul>
-<li>Show the items when column &ndash; select <strong>Issue status</strong></li>
-<li>Operand field &ndash; select <strong>Is equal to</strong></li>
+<li>Sort section - First sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
+<li>Then sort by the column: <strong>Date</strong> and <strong>Show items in ascending order</strong></li>
+<li>Filter section - <strong>Show items only when the following is true</strong> </li>
+<li>Show the items when column section &ndash; select <strong>Issue status</strong> column</li>
+<li>Operand field &ndash; <strong>Is equal to</strong></li>
 <li>Condition field &ndash; enter <strong>Active</strong></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
@@ -289,17 +271,9 @@
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>In the <strong>Name</strong> section:
-<ul>
 <li>View Name: <strong>Closed Cases</strong></li>
-</ul>
-</li>
-<li>In the <strong>Audience</strong> section:
-<ul>
 <li>View Audience: <strong>Create a Public View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -307,42 +281,22 @@
 <li><strong>Issue title</strong> - Position from left: <strong>4</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>5</strong></li>
 </ul>
-</li>
-<li>In the <strong>Sort </strong>section:
-<ul>
-<li>First sort by the column: <strong>Assign to</strong></li>
-</ul>
-</li>
-<li>In the <strong>Filter </strong>section, you want to create a filter that only selects records whose <strong>Issue status = Closed:</strong>
-<ul>
-<li>Select the <strong>Show items only when the following is true</strong> option and enter the following filter information:
-<ul>
-<li>Show the items when column &ndash; select <strong>Issue status</strong></li>
-<li>Operand field &ndash; select <strong>Is equal to</strong></li>
+<li>Sort section - First sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
+<li>Filter section - <strong>Show items only when the following is true</strong> </li>
+<li>Show the items when column section &ndash; select <strong>Issue status</strong> column</li>
+<li>Operand field &ndash; <strong>Is equal to</strong></li>
 <li>Condition field &ndash; enter <strong>Closed</strong></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+</li>  
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will now create a view showing all cases for each support agent. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>In the <strong>Name</strong> section:
-<ul>
 <li>View Name: <strong>Support Agent View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Audience</strong> section:
-<ul>
 <li>View Audience: <strong>Create a Public View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -351,36 +305,20 @@
 <li><strong>Issue Status</strong> &ndash; Position from left: <strong>5</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
 </ul>
-</li>
-<li>In the <strong>Sort </strong>section:
-<ul>
-<li>First sort by the column: <strong>Assign to</strong></li>
-<li>Then sort by the column<strong>: Customer</strong></li>
+<li>Sort section - First sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
+<li>Then sort by the column: <strong>Customer</strong> and <strong>Show items in ascending order</strong></li>
+<li>Filter section - <strong>Show all items in this view</strong> </li>
 </ul>
-</li>
-</ul>
-<li>In the<strong> Filter </strong>section:
-<ul>
-<li>select <strong>Show all items in this view</strong></li>
-</ul>
-</li>
+</li>    
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>You will finish this task by creating a view showing all cases for each customer. On the <strong>Service Desk Requests</strong> page, select the <strong>gear</strong> (<strong>Settings</strong>) icon in the top right corner of the webpage. In the menu that appears, select <strong>List settings.</strong></li>
 <li>In the<strong> Service Desk Requests &gt; Settings </strong>page, scroll down to the <strong>Views</strong> section and select<strong> Create view.</strong></li>
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>In the <strong>Name</strong> section:
-<ul>
-<li>View Name: <strong>Customer View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Audience</strong> section:
-<ul>
-<li>View Audience: <strong>Create a Public View</strong></li>
-</ul>
-</li>
-<li>In the <strong>Column</strong> section, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
+<li>View Name: <strong>Support Agent View</strong></li>
+<li>View Audience: <strong>Customer View</strong></li>
+<li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>2</strong></li>
@@ -389,20 +327,11 @@
 <li><strong>Issue Status</strong> &ndash; Position from left: <strong>5</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
 </ul>
-</li>
-<li>In the <strong>Sort </strong>section:
-<ul>
-<li>First sort by the column: <strong>Customer</strong></li>
-<li>Then sort by the column<strong>: Assign to</strong></li>
+<li>Sort section - First sort by the column: <strong>Customer</strong> and <strong>Show items in ascending order</strong></li>
+<li>Then sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
+<li>Filter section - <strong>Show all items in this view</strong> </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>In the<strong> Filter </strong>section:
-<ul>
-<li>select <strong>Show all items in this view</strong></li>
-</ul>
-</li>
+</li>    
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
 <li>Leave the Edge browser and all existing tabs open on LON-CL1 for a later exercise in which you will integrate the new Service Desk Ticketing system with Microsoft Teams.</li>
 </ol>

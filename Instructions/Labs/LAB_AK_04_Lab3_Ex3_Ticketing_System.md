@@ -234,10 +234,10 @@
 <h3>Task 4 - Create filtered views for targeted viewing</h3>
 <p>In this task, you will continue in your role as Holly Dickson, Adatum&rsquo;s Enterprise Administrator. You were just informed by your IT Consultant that while the default <strong>All items</strong> view in the <strong>Service Desk Requests</strong> list will display all the existing service tickets, this will not help the Customer Support Manager when she wants to focus on specific groups of cases. To address this issue, the IT Consultant has recommended that you create the following new filtered views to provide this visibility:</p>
 <ul>
-<li>Active cases</li>
-<li>Closed cases</li>
-<li>Cases by Support Agent</li>
-<li>Cases by Customer</li>
+<li>Active cases by Support Agent</li>
+<li>Closed cases by Support Agent</li>
+<li>All Cases by Support Agent</li>
+<li>All Cases by Customer</li>
 </ul>
 <ol>
 <li>You should still be signed into LON-CL1 as the <strong>Administrator</strong>, and you should be logged into Microsoft 365 as Holly Dickson. In your browser, you should still have the tab open from the prior task that displays the <strong>Service Desk Requests</strong> list. If not, then navigate to this list now.</li>

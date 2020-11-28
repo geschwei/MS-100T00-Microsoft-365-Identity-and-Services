@@ -226,7 +226,6 @@
   <br><br>To make this change, select the <strong>Description</strong> column heading. In the menu that appears, select <strong>Column Settings</strong>, and then in the sub-menu, select <strong>Edit</strong>.</li>
 <li>In the <strong>Edit column</strong> window, select the drop-down arrow in the <strong>Type</strong> field and select <strong>Multiple lines of text</strong>.</li>
 <li>Select <strong>More options</strong>.</li>
-<li>Change the <strong>Number of lines for editing</strong> to <strong>10</strong>.</li>
 <li>Change the <strong>Require that this column contains information</strong> option to <strong>Yes</strong>.</li>
 <li>Select <strong>Save</strong>.</li>
 <li>Leave the browser and all existing tabs open on LON-CL1 for the next task.</li>

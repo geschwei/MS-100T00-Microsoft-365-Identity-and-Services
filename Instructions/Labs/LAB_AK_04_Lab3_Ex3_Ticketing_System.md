@@ -149,7 +149,7 @@
   <br><br><strong>Note:</strong> If a <strong>Sign in</strong> window appears, enter the MOD Administrator&rsquo;s account for the IT Consultant&rsquo;s tenant. In this case, enter <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your fellow student's tenant password and then select <strong>Sign in</strong>.</li>
 <li>On the taskbar at the bottom of the screen, select the <strong>Excel</strong> icon. In the <strong>Microsoft SharePoint Foundation</strong> dialog box that displayed the link to the published list in the IT Services site, select <strong>OK</strong> to close the window. </li>
 <li>Close Excel. </li>
-<li>Leave your Edge browser open. 
+<li>Close your Edge browser open. 
   <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong>
 <br><br></li>
 <li><strong>START HERE TO PERFORM THIS TASK USING POWERSHELL. </strong>
@@ -193,7 +193,7 @@
 <ol>
 <li>On LON-CL1 you should have closed the Edge browser at the end of the prior task. If not, then do so now. </li>
 <li>Since Holly will be using her PC to perform this task, you will use LON-CL1 in this role-playing exercise as Holly&rsquo;s PC rather than the IT Consultant's PC as you did in the prior task.
-  <br><br>Select the <strong>Edge</strong> icon on the taskbar to open your browser, and then enter the following URL in the address bar: <strong>https://portal.office.com</strong>. </li>
+  <br><br>Select the <strong>Microsoft Edge</strong> icon on the taskbar to open your browser, and then enter the following URL in the address bar: <strong>https://portal.office.com</strong>. </li>
 <li>In the <strong>Pick an account</strong> window, select Holly&rsquo;s account if it appears; otherwise, select <strong>Use another account</strong> and then enter <strong>holly@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the <strong>Enter password</strong> window, enter <strong>Pa55w.rd</strong> and select <strong>Sign in</strong>.</li>
 <li>After reviewing the Excel spreadsheet, you realized the missing data wasn&rsquo;t an upload issue because the <strong>Customer</strong> and <strong>Assign To</strong> columns were missing from the spreadsheet. While you cannot explain what caused this, you remember making a backup of the original spreadsheet. If these missing columns are in your backup file, you plan to add the two columns from your backup file to the <strong>Service Desk Requests</strong> list that is displayed in the IT Services site.</li>
 <li>Select the <strong>File Explorer</strong> icon on the taskbar to return to the <strong>Documents</strong> folder that you opened in the prior task. Double-click on the <strong>BackupFile.xlsx</strong> file to open it.</li>

@@ -334,7 +334,7 @@
 </ul>
 </li>    
 <li>Scroll to the bottom of the page and select <strong>OK</strong>.</li>
-<li>In your Edge browser, close all tabs EXCEPT for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. </li>
+<li>In your Edge browser, close all tabs EXCEPT for the <strong>Microsoft Office Home</strong> tab and the <strong>Microsoft 365 admin center</strong> tab. </li>
 </ol>
 <p><strong>&nbsp;</strong></p>
 <p><strong>Congratulations! You have completed the building blocks for your new Service Desk Ticketing system. You will add additional functionality to the ticketing system in later labs.</strong></p>

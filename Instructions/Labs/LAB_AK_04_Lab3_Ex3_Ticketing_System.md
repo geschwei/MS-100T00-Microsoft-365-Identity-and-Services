@@ -149,7 +149,7 @@
   <br><br><strong>Note:</strong> If a <strong>Sign in</strong> window appears, enter the MOD Administrator&rsquo;s account for the IT Consultant&rsquo;s tenant. In this case, enter <strong>admin@xxxxxZZZZZZ.onmicrosoft.com</strong> (where xxxxxZZZZZZ is your fellow student's tenant prefix that was assigned to you by your instructor). Select <strong>Next</strong>, and then in the <strong>Enter password</strong> window, enter your fellow student's tenant password and then select <strong>Sign in</strong>.</li>
 <li>On the taskbar at the bottom of the screen, select the <strong>Excel</strong> icon. In the <strong>Microsoft SharePoint Foundation</strong> dialog box that displayed the link to the published list in the IT Services site, select <strong>OK</strong> to close the window. </li>
 <li>Close Excel. </li>
-<li>Close your Edge browser open. 
+<li>Close your Edge browser. 
   <br><br><strong>Important:</strong> This completes the steps involved in using Excel to export the table data into a SharePoint list (Service Desk Requests) in the IT Services site. <strong>You should SKIP the remaining steps in this task and proceed to the next task.</strong>
 <br><br></li>
 <li><strong>START HERE TO PERFORM THIS TASK USING POWERSHELL. </strong>

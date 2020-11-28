@@ -10,17 +10,15 @@ In your role as Holly Dickson, you want to review the Power Platform admin cente
 
 2. On **LON-DC1**, you should still have your Microsoft Edge browser and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select the **Admin** icon to open the Microsoft 365 admin center.
 
-3. Open a new tab in your Edge browser and enter the following URL in the address bar: **https://make.powersapps.com/home** 
+3. In your Edge browser, close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Open a new tab in your Edge browser and enter the following URL in the address bar: **https://make.powersapps.com/home** 
 
-4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen. In the **Settings** pane that appears, select **Admin center**. This opens a new Internet Explorer session that displays the **Power Platform admin center.** <br/>
+4. This opens the **PowerApps** studio. Select the **gear (Settings)** icon on the top right corner of the screen. In the **Settings** pane that appears, select **Admin center**. This opens a new tab that displays the **Power Platform admin center.** <br/>
 
-	**Note:** As of this writing, the IE session does not fully expand and the Maximize option for the screen is disabled. 
+5. In the **Power Platform admin center**, the **Environments** tab in the left-hand navigation pane is displayed by default. In the list of **Environments**, note how there is only one environment, the **Adatum Corporation (default)** environment. Select the **Adatum Corporation (default)** environment and review the information available for this environment. 
 
-5. In the **Power Platform admin center**, in the left-hand navigation pane, select **Environments**. In the list of **Environments**, note how there is only one environment, the **Contoso (default)** environment. Select the **Contoso (default)** environment and review the information available for this environment. 
+6. In the navigation pane at the top of the screen (**Environments > Adatum Corporation (default))**, select **Environments**.
 
-6. In the navigation pane at the top of the screen (**Environments > Contoso (default))**, select **Environments**.
-
-7. You have you have decided to create a new environment. On the menu bar at the top of the screen, select **+New** to create a new environment.
+7. You have decided to create a new environment. On the menu bar at the top of the screen, select **+New** to create a new environment.
 
 8. In the **New environment** pane that appears, enter the following information:
 

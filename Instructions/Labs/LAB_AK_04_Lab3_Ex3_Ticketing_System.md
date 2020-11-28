@@ -204,29 +204,17 @@
 <li>A <strong>News from sites</strong> window appears over top of the SharePoint admin center. Close this window. </li>
 <li>On the <strong>SharePoint admin center</strong>, in the left-hand navigation pane, scroll down and under the <strong>Recent</strong> group, select <strong>IT Services</strong>.</li>
 <li>On the <strong>IT Services </strong>site, near the bottom of the left-hand navigation pane, select the <strong>X</strong> above <strong>Microsoft Teams</strong> to hide this banner, and in the <strong>Hide </strong>dialog box, select <strong>Yes </strong>to confirm it. 
-  <br><br>In the left-hand navigation pane, select <strong>Site Contents</strong>, and in the <strong>Contents</strong> list, select <strong>Service Desk Requests</strong>.
-<br><br>In the <strong>Service Desk Requests</strong> list, you want to create a new column to display the <strong>Customer</strong> data that you will import from the <strong>Backupfile.xlsx</strong> spreadsheet. The instruction to perform this step will differ depending on whether you used Excel or PowerShell to create the Service Desk Requests list. </li>
-<li>If you used Excel to create the Service Desk Requests list, then perform the following steps:
-<ol>
-<li>At the end of the column heading row, select the <strong>plus (+) sign</strong> icon, and then in the drop-down menu that appears, select <strong>More Column Types</strong>.
-<li>In the <strong>Create Column</strong> window that appears, enter <strong>Customer</strong> in the <strong>Name</strong> field.</li>
-<li>Under <strong>The type of information in this column is:</strong> option, select <strong>Person or Group</strong>.</li>
-<li>In the <strong>Require that this column contains information</strong> option, select <strong>Yes</strong>.</li>
-<li>Under the <strong>Allow selection of</strong> option, verify <strong>People Only</strong> is selected; if not, select it now.</li>
-<li>Select <strong>OK</strong>.</li>
-</ol>
-</li>
-<li>If you used PowerShell to create the Service Desk Requests list, then perform the following steps:
-<ol>
-<li>At the end of the column heading row, select <strong>+Add column</strong>, and then in the drop-down menu that appears, select <strong>Person</strong>.
+<br><br>In the left-hand navigation pane, select <strong>Site Contents</strong>, and in the <strong>Contents</strong> list, select <strong>Service Desk Requests</strong>. You want to create a new column to display the <strong>Customer</strong> data that you will import from the <strong>Backupfile.xlsx</strong> spreadsheet.  </li>
+<li>On the menu bar at the top of the page, the option to the right of the <strong>+New</strong> button will either display <strong>Edit in grid view</strong> or <strong>Exit grid view</strong>. This option allows you to toggle in or out of grid view. You do NOT want to be in grid view to edit the list. 
+<br><br>If this option displays <strong>Edit in grid view</strong>, it means you are not in grid view, so proceed to the next step.   
+<br><br>If this option displays <strong>Exit grid view</strong>, then you are in grid view, which you do not want to be in. In this case, select <strong>Exit grid view</strong>. </li>
+<li>At the end of the column heading row, select <strong>+Add column</strong>, and then in the drop-down menu that appears, select <strong>Person</strong>. </li>
 <li>In the <strong>Create a column</strong> window that appears, enter <strong>Customer</strong> in the <strong>Name</strong> field.</li>
 <li>In the <strong>Type</strong> field, verify it's already set to <strong>Person or Group</strong>.</li>
 <li>Verify the <strong>Allow selection of Groups</strong> check box is NOT selected. Do NOT select this check box. </li>
 <li>Select <strong>More options</strong>.</li>
 <li>Select the <strong>Require that this column contains information</strong> toggle switch to change it to <strong>Yes</strong>. </li>
 <li>Select <strong>Save</strong>.</li>
-</ol>
-</li>
 <li>The <strong>Customer</strong> column should appear in the list. All record entries for this column should be highlighted in yellow, and <strong>Required info</strong> should appear in this column for each record (this is because you set the <strong>Require that this column contains information</strong> option to <strong>Yes </strong>in the previous step when you created this column).</li>
 <li>On the menu bar, select <strong>Quick edit</strong>. The <strong>Quick Edit</strong> option can be used to bulk edit data, which is what you will do here. In the next few steps, you will copy the Customer data from the <strong>BackupCopy</strong> spreadsheet and paste it into this column in the SharePoint list.</li>
 <li>Select the <strong>Excel</strong> spreadsheet icon on the taskbar to display the <strong>BackupFile.xlsx </strong>spreadsheet. Select all the items in the <strong>Customer</strong> column (start in row 2 so that you do not copy the column header), then select <strong>Copy</strong> from the ribbon (selecting <strong>Ctrl+C</strong> to copy the column data sometimes results in an error when you attempt to paste in the copied cells in the next step). 

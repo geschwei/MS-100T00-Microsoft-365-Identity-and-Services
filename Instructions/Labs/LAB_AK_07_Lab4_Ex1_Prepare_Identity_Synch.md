@@ -22,7 +22,7 @@ For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx doma
 
 3. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
 
-	‎In the following Powershell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
+	‎In the following PowerShell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
 		Set-ADForest -identity adatum.com -UPNSuffixes @{replace="xxxUPNxxx.xxxCustomDomainxxx.xxx"}
 
@@ -51,7 +51,7 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 3. You will then be prompted to confirm the execution policy change. Type **A** and press Enter to select the **[A] Yes to All** option.
 
-4. Enter the following command that runs a PowerShell script that creates a problem user account. This script is stored in the C:\labfiles folder. The user that is included in this script purposely has issues with his user account; this will enable you to troubleshoot this accounts in the next task using the IdFix tool.  <br/>
+4. Enter the following command that runs a PowerShell script that creates a problem user account. This script, which is stored in the C:\labfiles folder, will purposely create an issue with the UserPrincipalName for the user's on-premises account; this will enable you to troubleshoot this account in the next task using the IdFix tool.  <br/>
 
 		.\CreateProblemUsers.ps1
 	
@@ -64,7 +64,7 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix tool to fix the user account that was broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
+In this task you will download and use the IdFix tool to fix the on-premises user account that was broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 

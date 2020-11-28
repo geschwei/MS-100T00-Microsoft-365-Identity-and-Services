@@ -39,7 +39,7 @@ Integrating your on-premises Active Directory with Azure AD makes your users mor
 
 For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running Microsoft's IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Azure Active Directory. 
 
-In this task, you will run a script that breaks various Adatum on-premises user accounts. As part of your Adatum pilot project, you are purposely breaking these identity objects so that you can run the IdFix tool in the next task to see how it fixes the broken accounts. 
+In this task, you will run a script that breaks an on-premises user account. As part of your Adatum pilot project, you are purposely breaking this identity object so that you can run the IdFix tool in the next task to see how you can fix the broken account. 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
@@ -51,26 +51,20 @@ In this task, you will run a script that breaks various Adatum on-premises user 
 
 3. You will then be prompted to confirm the execution policy change. Type **A** and press Enter to select the **[A] Yes to All** option.
 
-4. Enter the following command that runs a PowerShell script that creates problem user accounts. This script is stored in the C:\labfiles folder. The users that are included in this script purposely have issues with their user accounts; this will enable you to troubleshoot these accounts in the next task using the IdFix tool.  <br/>
+4. Enter the following command that runs a PowerShell script that creates a problem user account. This script is stored in the C:\labfiles folder. The user that is included in this script purposely has issues with his user account; this will enable you to troubleshoot this accounts in the next task using the IdFix tool.  <br/>
 
 		.\CreateProblemUsers.ps1
 	
-	**Note:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following changes in AD DS:
+	**Note:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
 
 	- **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character. 
-
-	- **Lara Raisic**. Update the emailAddress attribute for Lara to **lara@adatum.com**. 
-
-	- **Logan Boyle**. Update the emailAddress attribute for Logan to **logan@adatum.com**.
-
-	- **Maj Hojski**. Update the emailAddress attribute for Maj to **majhojski**.  
 
 5. Close PowerShell.
 
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix tool to fix the user accounts that were broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
+In this task you will download and use the IdFix tool to fix the user account that was broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
@@ -96,50 +90,25 @@ In this task you will download and use the IdFix tool to fix the user accounts t
 
 	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
-11. If you will recall, in the script that broke the users' accounts, Maj Hojski's email address attribute was set to all blank characters. In the row indicating blank characters, this is **Maj Hojski** row. Select the drop-down arrow in the **ACTION** field and select **EDIT**. 
+11. In the **Klemen Sic** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
 
-12. In the **Klemen Sic** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. 
+12. On the menu bar at the top of the window, select **Apply**. 
 
-13. On the menu bar at the top of the window, select **Apply**. 
+13. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
 
-14. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
+	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for this user; this indicates that IdFix updated the user object and corrected the error. 
 
-	‎**Note:** Notice that the value in the **Action** column changed from **EDIT** to **COMPLETE** for these two users; this indicates that IdFix updated the two user objects and corrected the errors. 
-
-15. Select the **File Explorer** icon on the taskbar. 
-
-16. In the **C:\Deployment Tools\IdFix** folder, double-click the **Verbose {date} {time}.txt** file to open **Notepad** and view the updated transactions in the transaction log. Maximize the **Notepad** window and locate the three **Update** transactions that appear at the bottom of the file; these transactions reflect the updates you just initiated. When you have finished reviewing this log file, close Notepad. 
-
-17. Select the **IdFix tool** icon on the taskbar. 
-
-18. On the menu bar at the top of the window, select **Query** to refresh the query results. 
-
-19. In the query results, note how one of the two users who you just fixed no longer appears in the results (Klemen). The exception is **Maj Hoski**. When you originally broke Maj's account by running the script in the prior task, it replaced her email address with blank characters. Then when you flagged her account to be edited in the earlier step, the IdFix tool replaced the blank characters with Maj's name. Now you need to fix this value by replacing her name with her actual email address. <br/>
-
-	Find the **Maj Hoski** row. Note how the **VALUE** for Maj is her name rather than her email address. To fix this email attribute for Maj, you must first select the **MajHojski** value in the **UPDATE** column and then replace it by typing **maj@adatum.com**. Then select the drop-down arrow in the **ACTION** field and select **EDIT**. 
-
-20. Find the **Logan Boyle** row. Note how the **VALUE** for Logan was incorrectly entered as **Lara@adatum.com**, which resulted in a duplicate error because this is the same email address as Lara Raisic, which appears above it. <br/>
-
-	To fix this email attribute for Logan, you must first select the **[E]Lara@adatum.com** value in the **UPDATE** column for Logan and then replace it by typing **logan@adatum.com**. Then select the drop-down arrow in the **ACTION** field and select **EDIT**. 
-
-21. On the menu bar at the top of the window, select **Apply**. 
-
-22. In the **Apply Pending** dialog box that appears, select **Yes**.  <br/>
-
-	‎**Note:** This will update the two user objects and correct their UPN. 
-
-23. On the menu bar, select **Query**. In the query results, note how the two users who you just fixed no longer appear in the results. <br/>
+14. On the menu bar, select **Query**. In the query results, note how the Klemen Sic row no longer appears in the results, since you just fixed this object. <br/>
 
 	**Note:** If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. <br/>
 
 	As you can see, there are two users whose errors you have not fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in the next exercise when it processes users with these conditions. <br/>
 
-	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column (which is the case for these two final users), or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many errors.  
+	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many errors.  
 
-24. Close the IdFix and File Explorer windows. 
+15. Close the IdFix window. 
 
-25. Leave your Edge browser open. 
-
+16. Leave your Edge browser open. 
 
 
 ### Task 4: Prepare for Directory Synchronization    

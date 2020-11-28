@@ -214,13 +214,15 @@ In Microsoft Teams, calling policies control which calling and call forwarding f
 
 As part of her Microsoft Teams pilot project, Holly Dickson has been tasked with creating a custom calling policy for Adatum. Instead of customizing the default global policy, she will follow best practice guidelines and create her own customized policy that will be used as Adatum’s default policy.
 
-1. On the left-hand navigation pane in the **Teams admin center**, under the **Voice** group, select **Calling policies.**
+1. On LON-DC1, you should still be logged in as the Adatum Administrator, and you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. 
 
-2. In the **Calling policies** window, scroll down through the list to see the predefined calling policies, and then select **+Add** in the menu bar that appears above the list of calling policies.
+2. In your Edge browser, in the **Microsoft Teams admin center**, select **Voice** in the left-hand navigation pane and then select **Calling policies.**
 
-3. The unnamed field at the top of the page is the title of your new calling policy. Select this field and enter **Default Adatum Calling Policy** as the name of the policy.
+3. In the **Calling policies** window, scroll down through the list to see the predefined calling policies, and then select **+Add** in the menu bar that appears above the list of calling policies.
 
-4. Scroll down the page and select the following values for each setting:
+4. Select the **Add new calling policy** field at the top of the page and enter **Default Adatum Calling Policy** as the name of the policy. 
+
+5. Scroll down the page and select the following values for each setting:
 
 	- Make private calls: **On**
 
@@ -237,10 +239,12 @@ As part of her Microsoft Teams pilot project, Holly Dickson has been tasked with
 	- Prevent toll bypass and send calls through the PSTN: **On**
 
 	- Busy on busy is available when in a call: **On**
+	
+	- Allow web PSTN calling: **On**
 
-5. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear, and **Default Adatum Calling Policy** will appear in the list of Calling policies. Note how it is flagged as a Custom policy.
+6. Select **Save**. A Saved message will appear across the top of the page once the changes have been saved. This message will eventually disappear, and **Default Adatum Calling Policy** will appear in the list of Calling policies. Note how it is flagged as a Custom policy in the list.
 
-6. Leave all tabs open in your browser and proceed to the next task. 
+7. Leave all tabs open in your browser and proceed to the next task. 
  
 
 ### Task 7 – Manage External Access
@@ -249,35 +253,37 @@ With Microsoft Teams’ external access feature, Teams users from other domains 
 
 As part of her Microsoft Teams pilot project, Holly Dickson wants to block communication with users from a specific domain (spam.com) that has been the source of multiple spam attacks within Adatum over the past year. At the same time, Holly wants to allow communication with the users from another domain (microsoft.com) that is one of Adatum's key business partners.
 
-1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **External access.**
+1. On LON-DC1, you should still be logged in as the Adatum Administrator, and you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. 
 
-2. In the **External access** window, leave the two settings involving Skype for Business/Teams and Skype users set to **On**. Also note that in the list of domains, the domain of the IT Consultant who helped formulate the new Service Request Ticketing system (**xxxxxZZZZZZonmicrosoft.com**) appears in the list, and that communication is Allowed with this domain.  
+2. In your Edge browser, in the **Microsoft Teams admin center**, select **Org-wide settings** in the left-hand navigation pane and then select **External access.**
 
-3. To add the domain in which you want to allow communication, select **+Add a domain** in the menu bar that appears above the list.  
+3. In the **External access** window, leave the two settings involving Skype for Business/Teams and Skype users set to **On**. Also note that in the list of domains, the domain of the IT Consultant who helped formulate the new Service Request Ticketing system (**xxxxxZZZZZZonmicrosoft.com**) appears in the list, and that communication is Allowed with this domain. You added this domain back in Lab 1. 
 
-4. In the **Add a domain** window, enter the following information:
+4. To add the domain in which you want to allow communication, select **+Add a domain** in the menu bar that appears above the list.  
+
+5. In the **Add a domain** window, enter the following information:
 
 	- Domain: **microsoft.com**
 
 	- Action to take on this domain: **Allowed**
 
-5. Select **Done.** 
+6. Select **Done.** 
 
-6. To add the blocked domain, in the **External access** window, select **Add a domain.**
+7. To add the blocked domain, in the **External access** window, select **Add a domain.**
 
-7. In the **Add a domain** pane that appears on the right, enter the following information:
+8. In the **Add a domain** pane that appears on the right, enter the following information:
 
 	- Domain: **spam.com**
 
 	- Action to take on this domain: **Blocked**
 
-8. Select **Done.**
+9. Select **Done.**
 
-9. In the **External access** window, validate that **microsoft.com** and **spam.com** are represented in the list of domains and that each has the appropriate Status.
+10. In the **External access** window, validate that **microsoft.com** and **spam.com** are represented in the list of domains and that each has the appropriate Status.
 
-10. Select **Save.**
+11. Select **Save.**
 
-11. Leave all tabs open in your browser and proceed to the next task. 
+12. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 8 – Manage Guest Access
@@ -286,11 +292,13 @@ Microsoft Teams’ guest access feature is a tenant-level setting that is turned
 
 As part of your Microsoft Teams pilot project for Adatum, you will turn on guest access and then customize a variety of the guest settings as defined by Adatum’s project team.
 
-1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **Guest access.**
+1. On LON-DC1, you should still be logged in as the Adatum Administrator, and you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. 
 
-2. In the **Guest access** window, set the **Allow guest access in Teams** setting to **On**. 
+2. In your Edge browser, in the **Microsoft Teams admin center**, under **Org-wide settings** in the left-hand navigation pane select **Guest access.**
 
-3. Once you set this switch to **On**, a variety of additional settings are displayed. Scroll down the page and select the following values for each setting:
+3. In the **Guest access** window, set the **Allow guest access in Teams** setting to **On**. 
+
+4. Once you set this switch to **On**, a variety of additional settings are displayed. Scroll down the page and select the following values for each setting:
 
 	- Calling
 
@@ -322,18 +330,20 @@ As part of your Microsoft Teams pilot project for Adatum, you will turn on guest
 
 		- Allow immersive reader for viewing messages: **On**
 	
-4. Select **Save.** Note the message that displays indicating it can take 2 to 24 hours for the changes to take effect. This message does not automatically disappear, so close this message by selecting the **X** that appears at the right-side of the message; otherwise, the message will remain at the top of your screen even as you navigate to other pages.
+5. Select **Save.** Note the message that displays indicating it can take a couple of hours for the changes to take effect. This message does not automatically disappear, so close this message by selecting the **X** that appears at the right-side of the message; otherwise, the message will remain at the top of your screen even as you navigate to other pages.
 
-5. Leave all tabs open in your browser and proceed to the next task. 
+6. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 9 – Manage Teams Settings
 
 Microsoft Teams includes a variety of global settings that control performance within Teams. As part of her Microsoft Teams pilot project, Holly Dickson will configure a number of these settings as determined by Adatum’s project team.
 
-1. On the left-hand navigation pane in the **Teams admin center**, under the **Org-wide settings** group, select **Teams settings.**
+1. On LON-DC1, you should still be logged in as the Adatum Administrator, and you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson. 
 
-2. In the **Teams settings** window, select the following values for each setting:
+2. In your Edge browser, in the **Microsoft Teams admin center**, under **Org-wide settings** in the left-hand navigation pane select **Teams settings.**
+
+3. In the **Teams settings** window, select the following values for each setting:
 
 	- Notifications and feeds
 	
@@ -341,7 +351,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 		
 	- Tagging
 		
-		- Tagging are managed by: **Disabled**
+		- Tags are managed by: **Disabled**
 
 	- Email integration
 
@@ -353,7 +363,7 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 		- Citrix files: **On**
 
-		- DropBox: **Off**
+		- DropBox: **On**
 
 		- Box: **Off**
 
@@ -373,13 +383,13 @@ Microsoft Teams includes a variety of global settings that control performance w
 
 		- Resource accounts can send messages: **On**
 
-		- Search by name
+	- Search by name
 
 		- Scope directory search using an Exchange address book policy: **On**
 
-3. Select **Save**.
+4. Select **Save**. Note the message that displays indicating it can take a few hours for the changes to take effect. This message will eventually disappear.
 
-4. Leave all tabs open in your browser and proceed to the next task. 
+5. Leave all tabs open in your browser and proceed to the next task. 
 
 
 ### Task 10 – Configure Chat functionality for the Ticketing System
@@ -388,33 +398,27 @@ In this task, you will open the Microsoft Teams desktop application on LON-CL1 a
 
 **IMPORTANT:** Remember that your instructor assigned your tenant prefix to another student, who is also building a similar ticketing system in his or her lab environment. For that student, you will take on the role of the IT Consultant; therefore, expect to receive a text message from that student, who will do so to validate that Chat functionality is working within his or her Teams’ application. 
 
-1. Switch to the **LON-CL1** VM. You should still be logged into your LON-CL1 VM as the Administrator with a password of **Pa55w.rd**; if not, then do so now. 
+1. Switch to **LON-CL1**. You should still be logged into your LON-CL1 VM as the Administrator with a password of **Pa55w.rd**; if not, then do so now. 
 
-2. In the **Search** field on the taskbar at the bottom of the screen, enter **Teams**. In the list that appears, select **Microsoft Teams** (or you can select the **Microsoft Teams** icon on your desktop).
+2. Double-click the **Microsoft Teams** icon on your desktop. Maximize the Microsoft Teams window (if necessary).
 
-3. Maximize the Microsoft Teams window.
+3. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
-4. You want to sign into Microsoft Teams as Adatum’s MOD Administrator. If you receive a log-in screen, then log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+	However, if the Teams app opens without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to the next step. 
+	
+	If any value other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
 
-	However, if the Teams app opens without displaying the log-in screen, you should check the user icon circle in the upper right corner of the screen. If the circle displays **MA** (for your MOD Administrator), then proceed to **step 8**. If any value other than **MA** is displayed in the circle, then you are not logged in as the MOD Administrator. In this case, select the circle, and in the menu that appears, select **Sign out**. Then proceed through the sign-in process and log in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and enter your tenant email password as the **Password**.
+4. In **Microsoft Teams**, in the left-hand navigation pane, select **Chat**.
 
-5. On the **Use this account everywhere on your device** window, uncheck (clear) the **Allow my organization to manage my device** check box, and then select **Yes.**
+5. On the very top row on the screen, to the right of the **Chat** command is a **Filter** icon and a **New Chat** icon (a pencil inside a square). Select this **New Chat** icon. 
 
-6. On the **You’re all set!** window, select **Done.**
+6. This opens a new chat window in the main body of the page. You want to chat with your fellow student; therefore, in the **To: Start typing a name or group** field, enter the IT Consultant’s MOD Administrator account of **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is **your fellow student’s tenant prefix** that was assigned to you by your instructor) and then press **Enter**. 
 
-7. In the **Enjoy the team and the teamwork!** window, select **Let’s go.**
+7. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
 
-8. In the **Microsoft Teams**, in the left-hand navigation pane, select **Chat**.
+8. This will open a new chat session with the IT Consultant (your fellow student). Send a message to this person and conduct a brief chat session to verify that you can communicate with him or her using the Chat functionality within Teams.
 
-9. On the very top row on the screen, to the left of the **Search or type a command** field is a **New Chat** icon (a pencil inside a square). Select this **New Chat** icon. 
-
-10. This opens a new chat window in the main body of the page. You want to chat with your fellow student; therefore, in the **To: Enter name, email, group or tag** field, enter the IT Consultant’s MOD Administrator account of **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is **your fellow student’s tenant prefix** that was assigned to you by your instructor) and press **Enter**. 
-
-11. Teams will perform an external search on this user account. It should display the result of this search below the **To:** field. Select this value. 
-
-12. This will open a new chat session with the IT Consultant (your fellow student). Send a message to this person and conduct a brief chat session to verify that you can communicate with him or her using the Chat functionality within Teams.
-
-13. When you have finished chatting, leave Teams open and proceed to the next task. 
+9. When you have finished chatting, leave Teams open and proceed to the next task. 
 
 
 # Proceed to Lab 3 - Exercise 5

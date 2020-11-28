@@ -9,7 +9,7 @@ Rather than having Adatum’s Support team use SharePoint to enter and manage ne
 
 Start by familiarizing yourself with the SharePoint list which will serve as the data source for your Power App.
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. You should still be logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. You should still have Microsoft Edge and the **Microsoft 365 admin center** open from the prior lab in which you were logged in as Holly Dickson. If so, proceed to the next step; otherwise, open Microsoft Edge, navigate to **https://portal.office.com/**, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **Pa55w.rd**, and then in the **Microsoft 365 Home** page, select the **Admin** icon to open the Microsoft 365 admin center.
 
@@ -19,13 +19,13 @@ Start by familiarizing yourself with the SharePoint list which will serve as the
 
 5. In the list of **Active sites**, locate the **IT Services** site and select the **…/sites/ITServices** value that appears in the URL column.
 
-6. In the **IT Services** site, in the left-hand navigation pane, select **Site content**s.
+6. In the **IT Services** site, in the left-hand navigation pane, select **Site contents**.
 
 7. In the list of site contents, select **Service Desk Requests**.
 
 8. Review the columns in this list that you added in the earlier lab exercise. These columns will be used by the Power App that you create.
 
-9. Keep this browser tab open for the next task.
+9. Keep this browser tab open and proceed to the next task.
 
  
 
@@ -33,10 +33,9 @@ Start by familiarizing yourself with the SharePoint list which will serve as the
 
 Adatum’s IT Consultant has informed Holly that by building a Power App from a data source, she will see how easy it is to create a fully functioning app because Power Apps will do all the work for her. In this task, Holly wants to test this out by creating a Power App for entering and managing service tickets using the existing Service Desk Requests SharePoint list as the app’s data source. 
 
-Once you create the Power App, you will add a new record using the app, you will edit an existing record using the app, and you will delete a record through the app. In each case, you will verify that the corresponding activity occurred in the Service Desk Requests list in the IT Services site in SharePoint. Once you have added, edited, and deleted a record using the Power App, you will save the Power App for your users to access.
- 
+Once you create the Power App, you will add a new record using the app, you will edit an existing record using the app, and you will delete a record through the app. In each case, you will verify the corresponding activity occurred in the Service Desk Requests list in the IT Services site in SharePoint. Once you have added, edited, and deleted a record using the Power App, you will save the Power App for your users to access.
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. You should still be logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. In Microsoft Edge, the **Power Apps** tab should still be open from the prior exercise; if not, open a new tab in your browser and enter the following URL in the address bar: **https://make.powersapps.com** 
 
@@ -44,11 +43,11 @@ Once you create the Power App, you will add a new record using the app, you will
 
 4. On the **Three ways to make an app** page, scroll down to the **Start from data** section and select **SharePoint**. 
 
-5. A new browser tap opens that displays available Connections. A **Hi Holly** dialog box will appear over top of this page. Since your country/region is the United States, select **Get started**.
+5. A new browser tap opens that displays the available Connections. A **Hi Holly** dialog box will appear over top of this page. Since your country/region is the United States, select **Get started**.
 
-6. In the **Power Apps** studio, on the **Connections** page, the details pane displays the SharePoint connection page. Under the **How do you want to connect to your data?** field, select **Connect directly (cloud services)** and then select the **Create** button.
+6. In the **Power Apps** studio, on the **Connections** page, the details pane displays the **SharePoint** connection page. Under the **How do you want to connect to your data?** option, select **Connect directly (cloud services)** and then select the **Create** button.
 
-7. On the left side of the screen, under **Connections**, you will see an available connection for SharePoint. In the main window, in the list of **Recent sites**, the **IT Services**– **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** site should be displayed (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provided).   
+7. On the left side of the screen, under **Connections**, you will see an available connection for SharePoint. In the detail pane, in the list of **Recent sites**, the **IT Services**– **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** site should be displayed (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provided).   
 ‎  
 ‎Select the **IT Services** – **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** site.
 
@@ -56,15 +55,19 @@ Once you create the Power App, you will add a new record using the app, you will
 
 9. Power Apps will connect directly to that SharePoint list and build a fully functional application using the **Service Desk Requests** list as its data source. When it is finished, a **Welcome to Power Apps Studio** dialog box will appear. Select **See a preview of this app** to preview the app from your browser. 
 
-10. A preview of the app will appear as **BrowseScreen1**. If the size of the screen is so small that you cannot read it, move the slider at the bottom of the screen to increase the image to a legible size.
+10. A preview of the app will appear as **BrowseScreen1** (see the BrowseScreen1 pane on the right-side of the screen). If the size of the screen is so small that you cannot read it, move the slider at the bottom of the screen to increase the image to a legible size.
 
 11. Now that you have seen how the app will appear, you want to test the app by running it. To run the app, press **F5.**  
 ‎   
-‎**Note:** If your SharePoint list is already populated with entries, you will see them listed here. In this case, you should see a summary of the 30 records in the Service Desk Requests lists. If you were working with a list that was empty, you would see nothing listed under **Search items**.
+‎**Note:** If your SharePoint list is already populated with entries, you will see them listed here. In this task, you should see a summary of the 30 records in the Service Desk Requests lists. If you were working with a list that was empty, you would see nothing listed under **Search items**.
 
 12. You now want to test how to add a record to the list. To create a new item, select the **plus (+)** sign that appears at the top right corner of the **Service Desk Requests** app. This opens a data entry form that contains fields mapping to each of the columns in the Service Desk Requests list. 
 
-13. In the Service Desk Requests data entry form, enter the following information:
+13. In the Service Desk Requests data entry form that apears, enter the following information:
+
+	- Customer – leave blank
+
+	- Assign To – enter **Allan**, then select **Allan Deyoung** from the user list that appears
 
 	- Issue Status – **Active**
 
@@ -76,9 +79,6 @@ Once you create the Power App, you will add a new record using the app, you will
 
 	- Location – **Main Office**
 
-	- Customer – Leave blank
-
-	- Assign To – enter **Allan**, then select **Allan Deyoung** from the user list that appears
 
 14. To save the record that you just added, select the **check mark** icon that appears at the top right corner of the **Service Desk Requests** app.   
 ‎  

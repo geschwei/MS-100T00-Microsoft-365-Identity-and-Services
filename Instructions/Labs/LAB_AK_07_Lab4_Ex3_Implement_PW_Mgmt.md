@@ -6,17 +6,17 @@ As Holly Dickson, Adatum’s Enterprise Administrator, you have been asked by Ad
 
 Pass-through Authentication allows users to log in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and never synchronized to the cloud. When a user logs in, the PTA agent takes the authentication to your on-premises environment to verify if the password is correct and then communicates the result with Azure AD.   
 
-‎Adatum's CTO wants to provide the company's users with a better logon experience (since PTA requires one less password to remember) as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its pilot project.
+‎Adatum's CTO wants to provide the company's users with a better logon experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its pilot project.
 
-1. On your **Domain Controller VM** (LON=DC1) select the **Start** button, and then in the **Start** menu, select the **Azure AD Connect** program group, and then select **Azure AD Connect**.
+1. On LON=DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Microsoft Azure Active Directory Connect** wizard.
 
 2. In the **Welcome to Azure AD Connect** window, you will receive a page indicating the synchronization service scheduler is suspended until this setup wizard is closed. This is because if you start the Azure AD Connect installation wizard (which you did in an earlier task), then the scheduler is temporarily suspended. Select **Configure.**
 
 3. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.xxxCustomDomainxxx.xxx.** Enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**.
+4. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.xxxCustomDomainxxx.xxx.** Enter **Pa55w.rd** in the **PASSWORD** field, select **Next** button to enable it, and then select the **Next** button again to proceed to the next page. 		.
 
-5. On the **User sign-in** page, select **Pass-Through Authentication** and then select **Next**. 
+5. On the **User sign-in** page, under the **Select the Sign On method** option, select **Pass-through authentication** and then select **Next**. 
 
 6. On the **Enable single sign-on** page, select **Enter credentials**. 
 
@@ -26,23 +26,23 @@ Pass-through Authentication allows users to log in to cloud-based services using
 
 9. On the **Ready to configure** page, select **Configure**. 
 
-10. On the **Configuration complete** page, select **Exit**. Pass-Through Authentication has now been enabled.  
+10. On the **Configuration complete** page, select **Exit**. Pass-Through Authentication has now been enabled. 
 
-11. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://aad.portal.azure.com/**
+11. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://aad.portal.azure.com**
 
 12. This opens the **Azure Active Directory admin center**. In the left-hand navigation pane, select **Azure Active Directory**. 
 
 13. On the **Azure Active Directory admin center** page, in the left-hand navigation pane, select **All services**.
 
-14. On the **All services** page, under the **Identity** group, select **Azure Active Directory**. 
+14. On the **All services** page, three groups are displayed - General, Identity, and Security. Under the **Identity** group, select **Azure Active Directory**. 
 
 15. On the **Adatum Corporation | Overview** page, in the middle navigation pane under the **Manage** section, select **Azure AD Connect**.
 
-16. On the **Adatum Corporation | Azure AD Connect** page, in the detail pane on the right, under the **USER SIGN IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-Through Authentication**. 
+16. On the **Adatum Corporation | Azure AD Connect** page, in the detail pane on the right, under the **USER SIGN IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-through authentication**. 
 
 17. On the **Pass-through authentication** page, review the list of servers on which your pass-through authentication agents are installed.
 
-18. Close the **Pass-through authentication** page, and then close the **Adatum Corporation | Overview** page. You should now be back to the **All services** page in the **Azure Active Directory admin center**.
+18. Select the **X** in the upper-right corner of the **Pass-through authentication** page to close it, and then do the same to close the **Adatum Corporation | Azure AD Connect** page. You should now be back to the **All services** page in the **Azure Active Directory admin center**.
 
 19. Leave the **Azure Active Directory admin center** open as you will use it in the next task.
    
@@ -53,25 +53,25 @@ Adatum’s CTO has asked you to deploy Azure AD Smart Lockout, which assists in 
 
 The CTO is anxious to implement Smart Lockout because it will lock out the attackers while letting Adatum’s users continue to access their accounts and be productive. The CTO has asked you to configure Smart Lockout so that users can’t use the same password more than once, and they can’t use passwords that you deem too simplistic or common. 
 
-1. On the Domain Controller (LON-DC1), select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
+1. On LON-DC1, select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
 
 2. In **Server Manager**, select **Tools** in the upper-right menu bar, and in the drop-down menu, select **Group Policy Management.**
 
 3. Maximize the **Group Policy Management** window, if necessary.
 
-4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree, expand **Forest:Adatum.com**, then expand **domain**, and then expand **Adatum.com**.  <br/>
+4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree, expand **Forest:Adatum.com**, then expand **Domains**, and then expand **Adatum.com**.  <br/>
 
 	‎Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
 
-5. Maximize the **Group Policy Management Editor** window.
+5. Maximize the **Group Policy Management Editor** window that appears.
 
-6. In the **Default Domain Policy** tree in the right-hand pane, browse to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Account Policies.**
+6. In the **Default Domain Policy** tree in the left-hand pane, under **Computer Configuration**, expand **Policies**, expand **Windows Settings**, expand **Security Settings**, and then expand **Account Policies.**
 
 7. In the **Account Policies** folder, select **Account Lockout Policy**.
 
 8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Azure AD admin center** to assign these values.   <br/>
 
-	‎In your Edge browser, select the **All services** tab; this takes you to the **Azure Active Directory admin center**. 
+	‎Select the Edge browser icon on the taskbar, which should be displaying the **All services** tab in the **Azure Active Directory admin center**. 
 
 9. In the **Azure Active Directory admin center**, in the left-hand navigation pane, select **Azure Active Directory**.
 
@@ -79,7 +79,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 11. In the **Security | Getting started** window, in the middle pane under the **Manage** section, select **Authentication Methods**.
 
-12. In the **Authentication methods | Authentication method policy (Preview)** page, in the middle pane under the **Manage** section, select **Password protection.**
+12. In the **Authentication methods | Authentication method policy** page, in the middle pane under the **Manage** section, select **Password protection.**
 
 13. In the **Authentication methods | Password protection** window, in the detail pane on the right, enter the following information:
 
@@ -111,17 +111,21 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 17. In your browser, close the **Change password** tab. 
 
-18. You should now test the lockout threshold functionality. In the **My Dashboard - Azure Active Directory admin center** tab, select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**. 
+18. You should now test the lockout threshold functionality. In the **Authentication methods - Azure Active Directory admin center** tab, select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**. 
 
 19. Once you are signed out as Holly, the **Pick an account** window will appear. Select **Use another account**. 
 
 20. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
-21. On the **Enter password** window, enter any mix of letters and then select **Sign in**. Note the invalid password error message. Repeat this step 2 more times. Since you set the **Lockout threshold** to **3**, note the error message that you receive after the third attempt. Laura's account has been temporarily locked to prevent unauthorized access. <br/>
+21. On the **Enter password** window, enter any mix of letters and then select **Sign in**. Note the invalid password error message. 
+
+	Repeat this step 2 more times. 
+	
+	Since you set the **Lockout threshold** to **3**, note the error message that you receive after the third attempt. Laura's account has been temporarily locked to prevent unauthorized access. <br/>
 
 	**Note:** You will be prohibited from logging in as Laura until after the **90 second lockout duration** that you set earlier. 
 
-22. After 90 seconds, try logging in again to verify that you can log in. 
+22. After 90 seconds, verify that you can log in once the lockout threshold has ended by logging in using the password **Pa55w.rd**. If your log in is successful, you should return to the Azure Active Directory admin center.
  
 
 # End of Lab 4

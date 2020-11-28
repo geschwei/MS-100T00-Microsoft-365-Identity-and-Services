@@ -4,7 +4,7 @@ Adatum's CTO has heard a lot about Microsoft SharePoint and is interested in imp
 
 ### Task 1 – Site Management
 
-A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Holly is excited about the possibility of using team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly wants create a team site for the IT department so that IT personnel can work on projects and share information from anywhere and on any device. 
+A team site includes a group of related web pages, a default document library for files, lists for data management, and web parts that can be customized to meet your collaboration needs. Holly is excited about the possibility of using team sites in SharePoint Online to improve collaboration between team members when working on specific projects. As part of Adatum's pilot project, Holly wants to create a team site for the IT department so that IT personnel can work on projects and share information from anywhere and on any device. 
 
 1. You should still be logged into LON-DC1 as **Administrator** and password **Pa55w.rd**; if not, then do so now.
 

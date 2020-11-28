@@ -322,11 +322,11 @@
 <ul>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Date</strong> &ndash; Position from left: <strong>2</strong></li>
-<li><strong>Assign To</strong> &ndash; Position from left: <strong>2</strong></li>
-<li><strong>issueTitle</strong> - Position from left: <strong>3</strong></li>
-<li><strong>Location</strong> &ndash; Position from left: <strong>4</strong></li>
-<li><strong>Issue Status</strong> &ndash; Position from left: <strong>5</strong></li>
-<li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
+<li><strong>Assign To</strong> &ndash; Position from left: <strong>3</strong></li>
+<li><strong>issueTitle</strong> - Position from left: <strong>4</strong></li>
+<li><strong>Location</strong> &ndash; Position from left: <strong>5</strong></li>
+<li><strong>Issue Status</strong> &ndash; Position from left: <strong>6</strong></li>
+<li><strong>Description</strong> &ndash; Position from left: <strong>7</strong></li>
 </ul>
 <li>Sort section - First sort by the column: <strong>Customer</strong> and <strong>Show items in ascending order</strong></li>
 <li>Then sort by the column: <strong>Date</strong> and <strong>Show items in ascending order</strong></li>

@@ -246,7 +246,7 @@
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>View Name: <strong>Active Cases</strong></li>
+<li>View Name: <strong>Active Cases by Support Agent</strong></li>
 <li>View Audience: <strong>Create a Public View</strong></li>
 <li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
@@ -271,14 +271,14 @@
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>View Name: <strong>Closed Cases</strong></li>
+<li>View Name: <strong>Closed Cases by Support Agent</strong></li>
 <li>View Audience: <strong>Create a Public View</strong></li>
 <li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
 <li><strong>Location</strong> &ndash; Position from left: <strong>3</strong></li>
-<li><strong>Issue title</strong> - Position from left: <strong>4</strong></li>
+<li><strong>issueTitle</strong> - Position from left: <strong>4</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>5</strong></li>
 </ul>
 <li>Sort section - First sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
@@ -294,13 +294,13 @@
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>View Name: <strong>Support Agent View</strong></li>
+<li>View Name: <strong>All Cases by Support Agent</strong></li>
 <li>View Audience: <strong>Create a Public View</strong></li>
 <li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>1</strong></li>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>2</strong></li>
-<li><strong>Issue title</strong> - Position from left: <strong>3</strong></li>
+<li><strong>issueTitle</strong> - Position from left: <strong>3</strong></li>
 <li><strong>Location</strong> &ndash; Position from left: <strong>4</strong></li>
 <li><strong>Issue Status</strong> &ndash; Position from left: <strong>5</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
@@ -316,19 +316,20 @@
 <li>In the<strong> Settings &gt; View Type </strong>page, select<strong> Standard view.</strong></li>
 <li>In the<strong> Settings &gt; Create View </strong>page, enter the following information:
 <ul>
-<li>View Name: <strong>Support Agent View</strong></li>
-<li>View Audience: <strong>Customer View</strong></li>
+<li>View Name: <strong>All Cases by Customer</strong></li>
+<li>View Audience: <strong>Create a Public View</strong></li>
 <li>In the list of Columns, you must first uncheck all the columns currently selected. Then you MUST select the following columns <strong>in the order they appear below</strong>, which is in ascending <strong>Position from left</strong> sequence. If you select them as you progress from top to bottom in the list on the page, the system will automatically adjust the <strong>Position from left</strong> values to different values:
 <ul>
 <li><strong>Customer</strong> &ndash; Position from left: <strong>1</strong></li>
+<li><strong>Date</strong> &ndash; Position from left: <strong>2</strong></li>
 <li><strong>Assign To</strong> &ndash; Position from left: <strong>2</strong></li>
-<li><strong>Issue title</strong> - Position from left: <strong>3</strong></li>
+<li><strong>issueTitle</strong> - Position from left: <strong>3</strong></li>
 <li><strong>Location</strong> &ndash; Position from left: <strong>4</strong></li>
 <li><strong>Issue Status</strong> &ndash; Position from left: <strong>5</strong></li>
 <li><strong>Description</strong> &ndash; Position from left: <strong>6</strong></li>
 </ul>
 <li>Sort section - First sort by the column: <strong>Customer</strong> and <strong>Show items in ascending order</strong></li>
-<li>Then sort by the column: <strong>Assign to</strong> and <strong>Show items in ascending order</strong></li>
+<li>Then sort by the column: <strong>Date</strong> and <strong>Show items in ascending order</strong></li>
 <li>Filter section - <strong>Show all items in this view</strong> </li>
 </ul>
 </li>    

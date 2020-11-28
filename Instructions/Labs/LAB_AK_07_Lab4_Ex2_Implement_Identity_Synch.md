@@ -14,31 +14,33 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, select **Users**, and then select **Active Users**. <br/>
 
-4. In the **Active users** window, on the menu bar, select the **ellipsis** icon (to the right of **User templates**), and then in the drop-down menu, select **Directory synchronization**. 
+4. In the **Active users** window, on the menu bar, select the **ellipsis** icon (to the right of **Export users**), and then in the drop-down menu, select **Directory synchronization**. 
 
-5. In the **Active Directory preparation** window, select **Download Microsoft Azure Active Directory Connect tool**. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+5. In the **Azure Active Directory preparation** window, select **Go to the Download center to get the Azure AD Connect tool**. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
 6. In the **Microsoft Download Center**, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
 
 7. In the notification bar at the bottom of the screen, once the **AzureADConnect.msi** file has finished downloading, select **Open file**.
 
-8. In the **Do you want to run this file?** dialog box, select **Run**.
+8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. 
 
-9. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it on the taskbar (it will be the final icon on the right) and select it. <br/>
+	If a **Do you want to run this file?** dialog box appears, select **Run**.
 
-	On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+	If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it on the taskbar (it will be the final icon on the right) and select it. 
+
+9. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
 10. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
-11. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next** (you may have to select **Next** twice; once to enable it and again to proceed). 
+11. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next** (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-12. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next** (you may have to select **Next** twice; once to enable it and again to proceed). 
+12. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-13. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page, and then select **Next**.
+13. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
 14. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.
 
-15. Wait for the configuration to complete and then select **Exit**. 
+15. Wait for the configuration to complete (which may take several minutes) and then select **Exit**. 
 
 16. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
@@ -49,18 +51,18 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
-17. In the **Synchronization Service Manager** window, the **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process. 
+17. Maximimize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
 18. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com**; when it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
 
 19. In the bottom portion of the screen, a detail pane appears showing the detailed information for this operation. 
 
-	- In the **Export Statistics** section, note the number of users that were added and the number that were updated. 
-	- In the **Export Errors** section, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). Select the links under the **Export Errors** column and you will see that these are the two users that were not synchronized by the Azure AD Connect tool due to these data validation errors.   <br/>
+	- In the **Export Statistics** pane on the left, note the number of users that were added and the number that were updated. 
+	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). Select the links (CN={xxxxxx...) under the **Export Errors** column that apply to the two **Data Validation** errors and you will see that these are the two users that were not synchronized by the Azure AD Connect tool due to these errors.   <br/>
 
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
+	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
 
-20. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager**. 
+20. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
 21. In your browser, close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. 
 
@@ -86,7 +88,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 6. In the **Print Operators Properties** window, select the **Members** tab and then select the **Add** button.
 
-7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names (type all three at once with a semi-colon separating them), and then select **Check Names**:  
+7. In the **Select Users, Contacts, Computers, Service Accounts, or Groups** window, in the **Enter the object names to select** field, type the following names (type all three at once with a semi-colon separating them):  
 
 	- **Ashlee Pickett** 
 
@@ -94,7 +96,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- **Morgan Brooks**  
 
-8. Select **OK** to return to the **Print Operators Properties** window.
+8. Select **Check Names** and once they are all validated, select **OK** to return to the **Print Operators Properties** window.
 
 9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
 
@@ -110,9 +112,9 @@ Each group will be assigned several members. After the forced synchronization, y
 
 12. Select **OK**.  
 
-13. In the console tree under **Adatum.com**, double-click on the **Manufacturing** security group that you just added in the **Research** folder.  
+13. In the console tree under **Adatum.com**, select the **Research** folder, and then in the detail pane on the right, double-click on the **Manufacturing** security group.  
 
-14. In the **Manufacturing Properties** window, in the **E-mail** box, type **Manufacturing@adatum.com**.  
+14. In the **Manufacturing Properties** window, enter **Manufacturing@adatum.com** in the **E-mail** field.  
 
 15. Select the **Members** tab, and then repeat steps 6-9 to add the following members to this group:  
 
@@ -185,21 +187,21 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Groups**, and then select **Active groups**. 
 
-4. In the **Active groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises environment to Microsoft 365, even when you add members to the group as you did in the earlier task. <br/>
+4. In the **Active groups** window, verify that the **Manufacturing** group appears in the list, and that the **Print Operators** group does NOT appear. As mentioned previously, built-in groups such as the **Print Operators** security group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task. <br/>
 
 	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
 
-5.	In the **Active groups** list, locate the **Manufacturing** group. <br/>
+5. In the **Active groups** list, locate the **Manufacturing** group. <br/>
 
 	Scroll to the right and verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@xxxxxZZZZZZ.onmicrosoft.com**, which is the group's mailbox in Exchange Online. <br/>
 
-	Scroll further to the right and verify the value in the **Sync status** indicates that it was **Synced from on-premises**. You can do this by holding your mouse over the icon that appears in the **Sync status** column to display to icon name.
+	Hover your mouse over the icon in the **Sync status** column and verify that it indicates **Synced from on-premises**. 
 
-6. Select the **Manufacturing** group to open the **Manufacturing** group window. 
+6. Select the **Manufacturing** group to open the **Manufacturing** pane. 
 
-7. In the **Manufacturing** group window, note up under the Manufacturing title that it’s a mail-enabled security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. <br/>
+7. In the **Manufacturing** pane, under the Manufacturing title at the top of the pane, note that it’s a mail-enabled security group that contains three members. Also note the message indicating that you can only manage this group in your on-premises environment using either Active Directory users and groups (i.e. Users and Computers) or the on-premises Exchange admin center. <br/>
 
-	The window currently displays the **General** tab. Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Dickson as the group owner). Verify that the three users that you added as members of the on-premises group have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** group window.
+	The window currently displays the **General** tab. Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Dickson as the group owner). Verify the three users that you added as members of the on-premises group (Bernardo, Dawn, and Charlie) have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** pane.
 
 8. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
 

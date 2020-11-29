@@ -107,7 +107,7 @@ To improve communication between management and internal users, Holly Dickson ha
 
 26. After you create the entry on the SharePoint list, switch back to the browser tab containing the flow (the tab name will have changed to **Run History | Power Automate**). 
 
-27. On the top of the screen you should hopefully see a message indicating **Your flow ran successfully**, and next to each step in the flow you will see **green check marks**. Keep this tab open. 
+27. On the top of the screen, you should hopefully see a message indicating **Your flow ran successfully**, and next to each step in the flow you will see **green check marks**. Keep this tab open. 
 
 28. To verify whether the flow sent an email to the **MOD Administrator**, you should check the user’s Inbox in Outlook to see whether an email was received.
 

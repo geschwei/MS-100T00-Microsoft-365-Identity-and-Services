@@ -235,7 +235,7 @@ Holly is now ready to create screen #3 for her app, which is the Edit screen. Th
 ‎  
 ‎In the canvas in the middle of the page, the form should immediately update to display data entry boxes that are associated with each of the column headers from this SharePoint list.
 
-6. Below the **Insert ribbon** is the **Function property** **bar**. The field on the left side of the function currently displays **Data Source.** Select the down arrow that appears in this field. A menu appears that displays the properties for the edit form that you just added. Select **Item**. 
+6. Below the **Insert ribbon** is the **Function property bar**. The field on the left side of the function currently displays **DataSource.** Select the down arrow that appears in this field. A menu appears that displays the properties for the edit form that you just added. Select **Item**. 
 
 7. Notice how the **function input box** that appears to the right of the **Item** field is blank. The item property for the edit form represents the record that will be added to the data source that will be displayed.   
 ‎  
@@ -277,7 +277,7 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 4. You now must associate a trigger mechanism to this **Plus sign (+)** icon so that when the user selects it, **EditScreen1** will be returned.   
 ‎  
-‎Below the **Insert ribbon** is the **Function property** **bar**. The field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Plus sign (+)** **sign** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎Below the **Insert ribbon** is the **Function property** **bar**. The field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Plus sign (+) sign** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
 5. In the function box, enter **NewForm(Form1); Navigate(EditScreen1)** and then press Enter.   
 ‎  
@@ -285,13 +285,13 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 	- **NewForm(Form1)** - changes the form mode to New to enable the entry of a new record in **Form1**, which is the name of the edit form under **EditScreen1**. 
 
-	- **Navigate(EditScreen1) –** navigates the user to the screen (EditScreen1) which contains the edit form (Form1).
+	- **Navigate(EditScreen1)** – navigates the user to the screen (EditScreen1) which contains the edit form (Form1).
 
 6. Now that the **Plus sign (+)** icon has been configured, you decide that you want to make some cosmetic changes to it. First, you decide that you want to change the location of the icon from the top left corner of **BrowseScreen1** to the top right. To do this, select the border of the **Plus sign (+)** icon (so that an image of crossed arrows appears) and drag it across to the right corner.
 
 7. Next, you want to change the color of the icon and assign it a tool tip.  
 ‎  
-‎If the **Plus sign (+)** icon is not selected, then click on it now (this will select **Icon2** under **BrowseScreen1** in the **Tree view** pane and display the **Properties pane** for this icon on the right side of the page).   
+‎If the **Plus sign (+)** icon is not selected, then click on it now (this will select **Icon2** under **BrowseScreen1** in the **Tree view** pane and display the **Properties pane** for Icon2 on the right side of the page).   
 ‎  
 ‎Repeat the processes that you learned earlier to select a color and to add a tooltip for this icon. Choose whichever color you wish and enter **Create new item** for the tooltip. 
 
@@ -303,15 +303,15 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 10. Now that you have added the **check mark** icon to **EditScreen1**, you must associate a trigger mechanism to the check mark so that the data is submitted when the **check mark** icon is selected. In the **Tree view** pane, the **Icon3** control should be selected; if not, then do so now.   
 ‎  
-‎In the **Function property** **bar**, the field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **check mark** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎In the **Function property bar**, the field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **check mark** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
 11. In the function box, enter **SubmitForm(Form1)** and then press Enter. 
 
-12. You have just associated a trigger mechanism to submit the data in the edit form (**Form1**) for processing when the check mark icon is selected. You must now create another trigger mechanism to navigate away from **Form1** and back to the prior screen once the data has been successfully submitted. This is a navigation trigger; there is no icon associated with it.  
+12. You have just associated a trigger mechanism to submit the data in the edit form (**Form1**) for processing when the check mark icon is selected. You must now create another trigger mechanism to navigate away from **Form1** and back to the prior screen once the data has been successfully submitted. **This is a navigation trigger; there is no icon associated with it.**  
 ‎  
 ‎In the **Tree view** pane, under **EditScreen1**, select **Form1**. 
 
-13. In the **Function property** **bar**, the field on the left side of the function currently displays **Data Source**. Select the down arrow for this field and select **On Success** from the menu. 
+13. In the **Function property** **bar**, the field on the left side of the function currently displays **Item**. Select the down arrow for this field and select **OnSuccess** from the menu. 
 
 14. In the function box, enter **Back()** and then press Enter. 
 
@@ -323,9 +323,9 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 17. You notice that the “X” (Cancel) icon is partially placed over the check mark icon in the upper left corner of the screen. To fix this, you want to move the “X” icon to the upper right corner of the form. To do this, select the border of the “X” icon (so that an image of crossed arrows appears) and drag it across to the right corner. You will also need to drag it up a bit so that it’s on the same line as the check mark icon.
 
-18. Now that you have added the **Cancel** icon to **EditScreen1**, you must associate a trigger mechanism to the icon so that EditScreen1 is reset and the user is returned back to the most recently processed screen when the **“X”** icon is selected. In the **Tree view** pane, the **Icon4** control should be selected; if not, then do so now.   
+18. Now that you have added the **Cancel** icon to **EditScreen1**, you must associate a trigger mechanism to the icon so that EditScreen1 is reset and the user is returned back to the most recently processed screen when the “X” icon is selected. In the **Tree view** pane, the **Icon4** control should be selected; if not, then do so now.   
 ‎  
-‎In the **Function property** **bar**, the field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Cancel** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎In the **Function property bar**, the field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Cancel** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
 19. In the function box, enter **ResetForm(Form1); Back()**.   
 ‎  
@@ -333,7 +333,7 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 	- **ResetForm(Form1)** - resets **Form1**, which is the name of the edit form under **EditScreen1**. 
 
-	- **Back() -** takes the user back to the most recently displayed screen.
+	- **Back()** - takes the user back to the most recently displayed screen.
 
 20. After reviewing the Edit form, you decide that you want to change the colors of the two icons that you just added to **EditScreen1**, and you want to add a tooltip for each as well. With prior icons, you selected the color of your choice. However, for these two icons, the IT Consultant has suggested to Holly that she use two specific colors – green for the check mark and red for the “X” icon.    
 ‎  
@@ -355,7 +355,7 @@ The Edit screen that you created in the prior task provides the form needed to e
 
 	- Date – **June**
 
-	- Issue Title – **Test record**
+	- Issue Title (and Title, if you created the list using PowerShell) – **Test record**
 
 	- Description – **Testing trigger actions**
 
@@ -371,13 +371,13 @@ The Edit screen that you created in the prior task provides the form needed to e
 ‎  
 ‎In the **Assign To** field, enter **Allan** in the field and then select **Allan Deyoung** from the list. 
 
-26. Select the **check mark icon** to submit the form.
+26. Select the **check mark** icon to submit the form.
 
 27. This time, all the data should have been successfully processed, the record should have been added to the **Service Desk Requests** list, and **BrowseScreen1** should be returned.
 
 28. You should now verify that the record has been added to the **Service Desk Requests** list in the **IT Services** site.   
 ‎  
-‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the right side of the address bar. Scroll down through the list and verify the record that you entered appears in the list.
+‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the left side of the address bar. Scroll down through the list and verify the record that you entered appears in the list.
 
 29. Switch back to the **&lt;app name&gt; - Saved (Unpublished) – Power Apps** tab in your browser. You should still be on the browse screen for the app (**BrowseScreen1**) and it should still be running in Preview mode. 
 

@@ -49,7 +49,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 16. In the **Get Data** window that opens, type **SharePoint** in the Search box that appears above the left-hand navigation pane. In the detail pane on the right, three SharePoint options will appear. Since you used the on-premises version of SharePoint to create the Service Request Ticketing system, select **SharePoint Online List**, and then select **Connect**.
 
-17. In the **SharePoint lists** window that appears, enter the following URL for the Service Request Ticketing system in the **Site URL** field: **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting partner). Select **OK.**  
+17. In the **SharePoint Online lists** window that appears, enter the following URL for the Service Request Ticketing system in the **Site URL** field: **https://xxxxxZZZZZZ.sharepoint.com/sites/ITservices** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting partner). Select **OK.**  
 
 18. In the pop-up window that appears that displays the SharePoint site URL at the top and three authentication options on the left-hand navigation pane (Anonymous, Windows, and Microsoft Account), select **Microsoft Account**. A message will be displayed indicating you are not signed in. Select the **Sign in** button. In the **Pick and account** window, repeat the previous steps to sign in as **Holly**.
 
@@ -57,9 +57,9 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 19. A **Navigator** window opens that provides a list of tables from the SharePoint data source that is used by the Service Desk Ticketing system. In the list of tables that appear in the left-hand pane, select the check box to the left of **Service Desk Requests**. The details for this table will then appear on the right side of the window. If the details for this table do not appear, select the **Refresh** icon on the top right corner of the navigator window.  
 ‎  
-‎**Note:** If you click on **Service Desk Requests** but do NOT select the check box, the details for the table will display in Preview mode on the right, and the buttons at the bottom of the screen will be disabled. Since you want the buttons enabled, you must select the check box to the left of **Service Desk Requests**.   
+‎**Note:** If you select **Service Desk Requests** but do NOT select the check box, the details for the table will display in Preview mode on the right, and the buttons at the bottom of the screen will be disabled. Since you want the buttons enabled, you must select the check box to the left of **Service Desk Requests**.   
 ‎  
-‎**Important:** Even though the **Load** button is highlighted by default, **do NOT select it or press Enter - in fact, do NOT select any of the buttons at the bottom of the page!!** There are a couple of fields that need to be manipulated first before you load them into the Power Query editor. You will do that in the next step.
+‎**Important:** Even though the **Load** button is highlighted by default, **do NOT select it or press Enter - in fact, do NOT select any of the buttons at the bottom of the page at this time!!** There are a couple of fields that need to be manipulated first before you load them into the Power Query editor. You will do that in the next step.
 
 20. In the detail pane on the right side of the **Navigator** window, select the scroll bar at the bottom of the window and scroll to the right to view the data. While you will scroll past many fields that you will probably not recognize, look for the fields that are part of your SharePoint list.   
 ‎  
@@ -71,7 +71,7 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 ‎  
 ‎You will do this in the next few steps when you use the **Power Query Editor** to select the person’s name from the **Customer** and **Assign To** records. 
 
-21. At the bottom of the window, select the **Transform Data** button, which opens the **Power Query Editor**. Maximize this window.
+21. Now that you understand how the Customer and Assign To fields are handled, you are ready to proceed. At the bottom of the window, select the **Transform Data** button, which opens the **Power Query Editor**. Maximize this window.
 
 22. The **Power Query Editor** provides a great deal of functionality that enables you to transform data, clean data, create relationships between tables, and so on. For this exercise, you will use the Power Query Editor to focus on the simplest way of getting the persons’ names to appear in the Customer field and the Assigned To field.   
 ‎  
@@ -87,9 +87,9 @@ In this task, you will download and install the Microsoft Power BI Desktop. Once
 
 27. Note how the **FieldValuesAsText** column is replaced with two **FieldValuesAsText**-related columns, one titled **FieldValuesAsText.Customer** and the other **FieldValuesAsText.Assignto.** The names associated with these fields are displayed for each record from the SharePoint list. 
 
-28. On the far-left end of the ribbon at the top of the **Power Query Editor**, select **Close &amp; Apply**. In the drop-down menu that appears, select **Close &amp; Apply**. If a warning message appears in a yellow bar below the ribbon that indicates **There are pending changes in your queries that haven't been applied**, select the **Apply changes** button that appears on the right-side of the message bar.
+28. On the far-left end of the ribbon at the top of the **Power Query Editor**, select **Close &amp; Apply**. In the drop-down menu that appears, select **Close &amp; Apply**. 
 
-An **Apply query changes** window appears that shows the progression of applying the data from the SharePoint list to the report. It will take a few seconds for the query changes to apply.
+	An **Apply query changes** window appears that shows the progression of applying the data from the SharePoint list to the report. It will take a few seconds for the query changes to apply.
 
 29. Once the query process completes, a **Fields** pane should appear on the far right of the screen. If the **Fields** pane is not expanded to show the actual fields, select the left pointing arrow **(&lt;)** that appears above **Fields** to open the pane.   
 ‎  

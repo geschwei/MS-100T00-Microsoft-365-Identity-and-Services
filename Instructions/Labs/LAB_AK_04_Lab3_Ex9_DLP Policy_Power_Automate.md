@@ -61,11 +61,11 @@ In this task, Holly wants to create a data lost prevention policy for the flows 
 
 14. Once the flow has been suspended, select **Edit** in the menu bar at the top of the page. 
 
-15. In the window that is returned, you will see the actions for your flow. Select **Save**.   
-‎  
-‎A **Flow Checker** pane appears on the right-side of the screen. Each of the two connectors used in this flow have been flagged as violating Adatum's DLP policy, since both connectors are not in the same group. Close the **Flow checker** pane,
-‎  
-‎**Important:** Since this flow was already created at the time the policy was established, Power Automate automatically suspended the flow, which, in effect, turned the flow **Off**. If you subsequently create a new entry or modify an existing entry in the SharePoint list after the flow has been suspended, the flow will not run. 
+15. In the window that is returned, you will see the actions for your flow. Select **Save**. 
+
+   A **Flow Checker** pane appears on the right-side of the screen. Each of the two connectors used in this flow have been flagged as violating Adatum's DLP policy, since both connectors are not in the same group. Close the **Flow checker** pane.
+
+   **Important:** Since this flow was already created at the time the policy was established, Power Automate automatically suspended the flow, which, in effect, turned the flow **Off**. If you subsequently create a new entry or modify an existing entry in the SharePoint list after the flow has been suspended, the flow will not run. 
 
 16. At the top of the page, to the left of the flow name, select the left arrow to return to the Detail page for the flow. 
 

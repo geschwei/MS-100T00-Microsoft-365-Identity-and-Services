@@ -118,4 +118,8 @@ In your role as Holly, you will update this DLP policy to include Outlook as an 
 
 12. Select the **Refresh** icon that appears to the left of the address bar. In the **Details** section, notice the **Status** of the flow, which should change from **Suspended** to **On**.  
 
-13. In your browser, close the **Power Automate** and **Power Platform** tabs, but leave the **SharePoint** tabs that are related to your **Service Desk Requests** list open for the next exercise. 
+13. In your Edge browser, close the **Power Automate** and **Power Platform** tabs, but leave open the **SharePoint** tabs that are related to your **Service Desk Requests** list for the next exercise. 
+
+ 
+# Proceed to Lab 3 - Exercise 10
+

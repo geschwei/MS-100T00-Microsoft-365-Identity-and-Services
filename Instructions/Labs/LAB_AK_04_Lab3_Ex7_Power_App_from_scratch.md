@@ -411,7 +411,7 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 
 5. Now that you have added the **Edit** icon to **EditScreen1**, you must associate a trigger mechanism to it so that EditScreen1 is displayed when the **Edit** icon is selected. In the **Tree view** pane, the **Icon5** control should be selected; if not, then do so now.   
 ‎  
-‎In the **Function property** **bar**, the field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Edit** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎In the **Function property** **bar**, the field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Edit** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
 6. In the function box, enter **EditForm(Form1); Navigate(EditScreen1)** and then press Enter.   
 ‎  
@@ -419,11 +419,11 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 
 	- **EditForm(Form1)** - changes the form mode to Edit to enable updates to an existing record, where **Form1** is the name of the edit form under **EditScreen1**. 
 
-	- **Navigate(EditScreen1) –** navigates the user to the screen (**EditScreen1**) containing the edit form.
+	- **Navigate(EditScreen1)** – navigates the user to the screen (**EditScreen1**) containing the edit form.
 
 7. You now want to add another icon to **DetailScreen1** that enables you to delete a record. In the **Tree view** pane, select **DetailScreen1**. 
 
-8. If necessary, scroll to the top of the canvas so that you can see the top of the **DetailScreen1** form. On the **Insert ribbon**, select **Icons**, and in the menu that appears, select **Trash**. Notice how the **Trash** **(trash can)** icon shows up on the screen, and in the **Tree view** pane, **Icon6** appears below **DetailScreen1**. 
+8. If necessary, scroll to the top of the canvas so that you can see the top of the **DetailScreen1** form. On the **Insert ribbon**, select **Icons**, and in the menu that appears, select **Trash**. Notice how the **Trash (trash can)** icon shows up on the screen, and in the **Tree view** pane, **Icon6** appears below **DetailScreen1**. 
 
 9. You notice that the **Trash** icon is partially placed over the **Back arrow** icon in the upper left corner of the screen. To fix this, you want to move the **Trash** icon to the upper right corner of the form and to the right of the **Pencil** icon. To do this, select the border of the Trash icon (so that an image of crossed arrows appears) and drag it across to the right corner, to the right of the **Pencil** icon. You will also need to drag it up a bit so that it’s on the same line as the **Pencil** icon.  
 ‎  
@@ -431,19 +431,19 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 
 10. Now that you have added the **Trash** icon to **DetailScreen1**, you must associate a trigger mechanism to it so that the selected record is deleted from the SharePoint list when the **Trash** icon is selected. In the **Tree view** pane, the **Icon6** control should be selected; if not, then do so now.   
 ‎  
-‎In the **Function property** **bar**, the field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Edit** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎In the **Function property** **bar**, the field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Edit** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
-11. In the function box, enter **Remove('Service Desk Requests', Gallery1.Selected); If(IsEmpty(Errors('Service Desk Requests', Gallery1.Selected)), Back())** and then press Enter.   
+11. In the function box, enter **Remove('Service Desk Requests', Gallery1.Selected); If(IsEmpty(Errors('Service Desk Requests', Gallery1.Selected)), Back() )** and then press Enter (copy and paste this function if your VM environment provides a copy and paste feature; this will ensure that you do not enter a typo).   
 ‎  
 ‎This function actually encapsulates two separate actions: 
 
-	- **Remove('Service Desk Requests', Gallery1.Selected) -** removes from the SharePoint list titled Service Desk Requests the entry that was selected from the gallery in BrowseScreen1.
+	- **Remove('Service Desk Requests', Gallery1.Selected)** - removes from the SharePoint list titled Service Desk Requests the entry that was selected from the gallery in BrowseScreen1.
 
-	- **If(IsEmpty(Errors('Service Desk Requests', Gallery1.Selected)), Back()) -** checks for the existence of errors when editing the SharePoint list. Errors can occur for many reasons, including network outages, inadequate permissions, and edit conflicts. If there are no errors (the error table is empty) then the app will go back to the most recently displayed screen. The “If” statement does not include any action if there are errors in the error table; however, PowerApps will, by default, display a message.
+	- **If(IsEmpty(Errors('Service Desk Requests', Gallery1.Selected)), Back())** - checks for the existence of errors when editing the SharePoint list. Errors can occur for many reasons, including network outages, inadequate permissions, and edit conflicts. If there are no errors (the error table is empty) then the app will go back to the most recently displayed screen. The “If” statement does not include any action if there are errors in the error table; however, PowerApps will, by default, display a message.
 
 12. After reviewing the Detail form, you decide that you want to change the colors of each icon and display a tool tip when you hover your mouse over them.   
 ‎  
-‎Since you cannot remember which control in the **Tree view** pane is associated with each icon, on the canvas for **DetailScreen1**, select the **Pencil** icon. In the **Tree view** pane, you notice this highlights **Icon5** under **DetailScreen1**. The **Properties pane** on the right also displays the properties for this icon.  
+‎Since you cannot remember which control in the **Tree view** pane is associated with each icon, on the canvas for **DetailScreen1**, select the **Pencil** icon. In the **Tree view** pane, you notice this highlights **Icon5** under **DetailScreen1**. The **Properties pane** on the right also displays the properties for this icon. 
 ‎  
 ‎Repeat the processes that you learned earlier to select a color and to add a tooltip for this icon. Choose whichever color you wish and enter **Edit** for the tooltip.  
 ‎  
@@ -463,7 +463,7 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 
 16. You should now verify that the record has been changed in the **Service Desk Requests** list in the **IT Services** site.   
 ‎  
-‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the right side of the address bar. Scroll down through the list and verify the record that you entered appears in the list.
+‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the left side of the address bar. Scroll down through the list and verify the record that you entered appears in the list.
 
 17. Switch back to the **&lt;app name&gt; - Saved (Unpublished) – Power Apps** tab in your browser. You should still be on the Detail screen for the app (**DetailScreen1**) and it should still be running in Preview mode (if not, select **DetailScreen1** in the **Tree view** pane and then press F5 on the keyboard). The record that you just changed should still be displayed.
 
@@ -473,7 +473,7 @@ Now that Holly has created the ability to add a new record into the SharePoint l
 
 19. You should now verify that the record has been deleted from the **Service Desk Requests** list in the **IT Services** site.   
 ‎  
-‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the right side of the address bar. Scroll down through the list and verify the record that you deleted does not appear in the list.
+‎Select the **IT Services – Service Desk Requests** tab in your browser, and then select the **Refresh** icon on the left side of the address bar. Scroll down through the list and verify the record that you deleted does not appear in the list.
 
 20. Switch back to the **&lt;app name&gt; - Saved (Unpublished) – Power Apps** tab in your browser. You should still be on the Browse screen for the app (**BrowseScreen1**) and it should still be running in Preview mode. You should see that the deleted record no longer appears in this list as well.  
 ‎  
@@ -494,7 +494,7 @@ With the three screens for her app now in place, Holly wants to add one more con
 
 2. In the **Tree view** pane, select **BrowseScreen1**. 
 
-3. In the earlier task when you first created **BrowseScreen1**, the Gallery’s border went to the very top of the screen. Since you knew you would be adding controls to the screen later on, you moved the Gallery’s top border down to provide enough space at the top of the screen to add these controls. You then added the **Add** icon for creating a new record, and you moved it to the top right corner of the screen. You now want to add the **Reload** icon and move it to the left of the **Add** icon.   
+3. In the earlier task when you first created **BrowseScreen1**, the Gallery’s border went to the very top of the screen. Since you knew you would be adding controls to the screen later on, you moved the Gallery’s top border down to provide enough space at the top of the screen to add these controls. You then added the **plus sign (Add)** icon for creating a new record, and you moved it to the top right corner of the screen. You now want to add the **Reload** icon and move it to the left of the **Add** icon.   
 ‎  
 ‎Scroll to the top of **BrowseScreen1** so that you can see the top of the screen with the **Add** icon.  
 ‎   
@@ -504,9 +504,10 @@ With the three screens for her app now in place, Holly wants to add one more con
 
 4. You now must associate a trigger mechanism to this **Reload** icon so that when the user selects it, the list of data that is displayed in the Gallery will be refreshed.   
 ‎  
-‎Below the **Insert ribbon** is the **Function property** **bar**. The field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Reload** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎Below the **Insert ribbon** is the **Function property** **bar**. The field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Reload** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
-5. In the function box, enter **Refresh('Service Desk Requests')** and then press Enter.   
+5. In the function box, enter **Refresh('Service Desk Requests')** and then press Enter. 
+
 ‎Now that the **Reload** icon has been configured, you decide that you want to make some cosmetic changes to it. First, you decide that you want to change the location of the icon from the top left corner of **BrowseScreen1** to the left of the **Add** icon. To do this, select the border of the **Reload** icon (so that an image of crossed arrows appears) and drag it across to so that it’s to the left of the **Add** icon.
 
 6. Next, you want to change the color of this icon and assign it a tool tip.   

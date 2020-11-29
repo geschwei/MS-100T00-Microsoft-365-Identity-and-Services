@@ -17,7 +17,7 @@ When you initially create these screens, you will just create their forms with t
 
 In your role as Holly Dickson, you will begin the process of creating a canvas app from scratch by building the app’s Browse screen.
 
-1. You should still be logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. Switch to LON-DC1, where you should still be logged in as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. In your Microsoft Edge browser, open a new tab and enter the following URL in the address bar: **https://make.powerapps.com**
 
@@ -25,11 +25,11 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 4. On the **Canvas app from blank** window that appears, enter a name for your app (anything that you want) in the **App name** field, and in the **Format** section, select the **Phone** option. 
 
-5. Scroll down to the bottom of the window and select **Create**. If a **Welcome to Power Apps studio** dialog box appears, select **Skip**.
+5. Select the **Create** button at the bottom of the window. If a **Welcome to Power Apps studio** dialog box appears, select **Skip**.
 
-6. Notice how in the **Tree view** pane, none of the browse, detail, or edit screens appear under the **Screens** tab. Those screens were automatically created when you created an app from an existing data source, as you did in the prior lab exercise. But when creating a canvas app from scratch, as you are doing here, you must manually create those screens.   
+6. In the **Power Apps** studio, notice how in the **Tree view** pane, none of the browse, detail, or edit screens appear under the **Screens** tab. Those screens were automatically created when you created an app from an existing data source, as you did in the prior lab exercise. But when creating a canvas app from scratch, as you are doing here, you must manually create those screens.   
 ‎  
-‎**Screen1** is the only screen in the Tree view pane since it is the name of the blank screen that appears on the canvas. By default, the font size on the screen is so small (20%) that you cannot read it. Use the slider to increase the font size. While the text on the screen says **Add an item from the insert pane or connect to data**, do not select either of these options at this time. You will eventually configure the properties of this screen from the **Insert** pane, but for now, let’s begin by renaming this app screen.   
+‎**Screen1** is the only screen in the Tree view pane since it is the name of the blank screen that appears on the canvas. By default, the font size on the screen is so small (20%) that it is difficult to read. Use the slider to increase the font size. While the text on the screen says **Add an item from the insert pane or connect to data**, do not select either of these options at this time. You will eventually configure the properties of this screen from the **Insert** pane, but for now, let’s begin by renaming this app screen.   
 ‎  
 ‎In the **Tree view** pane, select the **ellipses** icon that appears to the right of **Screen1**. In the menu that appears, select **Rename**, and then enter **BrowseScreen1** as the new screen name (this will keep the screen name consistent with the naming convention that is used when Power Apps automatically creates screens for an app).
 
@@ -39,7 +39,7 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 9. On the canvas pane, you will see the vertical gallery and a **Select a data source** window. Note that in the **Tree view** pane, the default name of the vertical gallery you just added is **Gallery1.** Gallery1 represents the list of records that will be displayed in BrowseScreen1 from your data source. Since you have yet to define a data source, you can see that it simply fills in sample records. Once you select your data source, you will see the actual records from your data source in the gallery of the Browse screen.   
 ‎  
-‎In the **Select a data source** window, enter **Share** (short for SharePoint) in the field (this is a search box). This will display a list of data sources starting with **Share**. In the list, select **SharePoint**. Alternatively, you could select the down arrow next to **Connectors** and select **SharePoint**.  
+‎In the **Select a data source** window, enter **Share** (short for SharePoint) in the **Search** field. This will display a list of data sources starting with **Share**. In the list, select **SharePoint**. Alternatively, you could select the down arrow next to **Connectors** and select **SharePoint**.  
 ‎  
 ‎**Important:** If you happened to click somewhere else on the screen before you performed the prior step of entering **Share** in the Search box, the **Select a data source** window will disappear. **Do not worry!** You will simply perform this step using the **Properties pane**. First, in the **Tree view** pane, select **Gallery1** if it is not already selected. In the **Gallery1 Properties pane** on the right, in the **Data source** field, select the drop-down arrow. In the window that appears, select **Connectors** and then select **SharePoint**. 
 
@@ -53,7 +53,7 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 13. On the canvas for **BrowseScreen1**, with **Gallery1** still selected in the **Tree view** pane, reduce the screen size on the slider to about 40% so that you can see more of the screen. Scroll from the top to the bottom of the screen and notice how the Gallery’s border starts at the very top of **BrowseScreen1** and goes a little past the middle of the screen.   
 ‎  
-‎Since Holly wants to add a couple of controls to the top of this screen (an Add icon and a Refresh icon), you need to make room at the top of the screen for these controls. Therefore, you need to move the Gallery down to provide space at the top of the screen for the controls.   
+‎Since Holly wants to add a couple of controls to the top of this screen (an **Add** icon and a **Refresh** icon), you need to make room at the top of the screen for these controls. Therefore, you need to move the Gallery down to provide space at the top of the screen for the controls.   
 ‎  
 ‎To do this, first scroll down to the bottom of the screen (so that you can see the bottom of **BrowseScreen1**). Then hold your mouse over the middle circle in the bottom border line of the Gallery; this will change your mouse icon to an up and down arrow. With your left mouse button held down, drag the bottom border of the gallery to the very bottom of **BrowseScreen1**.  
 ‎  
@@ -65,13 +65,13 @@ In your role as Holly Dickson, you will begin the process of creating a canvas a
 
 15. Holly now wants to change which fields that are displayed in the gallery. In the **Properties pane**, select **Edit** that appears to the right of the **Fields** property. A new **Data** window opens which shows the **Body**, **Subtitle**, and **Title** fields; these are the three fields you selected for the **Layout** property in the prior step. For each field, you can select which field from the SharePoint list you want displayed in that field. Power Apps selects a default SharePoint field for each, but you can change them to display whatever fields that you want.   
 ‎  
-‎By default, the **Body1** field is mapped to the **Issue Title**, the **Subtitle1** field is mapped to the **Date**, and the **Title1** field is mapped to the **Issue Status**.   
-‎  
 ‎Holly has decided to customize the browse screen to change the **Body1** field so that it maps to the **Assigned To** column of the SharePoint list. Select the drop-down arrow for the **Body1** field. Note how the field is selected in the Gallery image. Select the drop-down arrow again for the **Body1** field to display the list of available fields. Scroll to the top of the list and select **Assign To**. 
 
 16. In the **Data** window, notice two changes - the value in **Body1** is now **Assign To**, and a **Display value** field has appeared below the **Assign To** value. Select the drop-down arrow for the **Display value** field, and in the menu list, select **DisplayName**. 
 
 17. Notice how the records displayed in the gallery have been updated to reflect the **Assign To** field. 
+
+18. Repeat this process by changing the **Subtitle** field to **Issue Status** and the **Title** field to **Issue Title**.
 
 18. Close the **Data** window by selecting the **X** in the upper right corner.
 
@@ -91,7 +91,7 @@ Holly is now ready to create screen #2 for her app, which is the Detail screen. 
 
 1. You should still have the **&lt;app name&gt; - Power Apps** tab open in your browser from when you finished creating the Browse screen for your app in the prior task. The tab should be displaying the **Insert** tab from the menu bar; if not, select it now.   
 ‎  
-‎In the **Insert ribbon** that appears below the menu bar, select **New Screen**. In the menu of available screen types that appear, select **Blank**. This opens a new blank screen on the canvas pane that is titled **Screen2**.
+‎In the **Insert ribbon** that appears below the menu bar, select **New Screen**. In the menu of available screen types that appears, select **Blank**. This opens a new blank screen on the canvas pane that is titled **Screen2**.
 
 2. In the **Tree view** pane under the **Screens** tab, select the **ellipses** next to **Screen2**, select the **Rename** option from the menu that appears, and then enter **DetailScreen1** in the name field.
 
@@ -111,7 +111,7 @@ Holly is now ready to create screen #2 for her app, which is the Detail screen. 
 
 6. When a user selects an item on the Browse screen, the fields associated with that item will be displayed in this Detail screen. To accomplish that, you must associate the properties of the item selected from the SharePoint list with the fields in this Detail screen. You will do this by configuring a function property that is associated with each item in the form.  
 ‎  
-‎Below the **Insert ribbon** is a **Function property** **bar**. The field on the left side of the function currently displays **Data Source.** Select the down arrow that appears in this field. A menu appears that displays the properties for the display form that you just added. Select **Item**. 
+‎Below the **Insert ribbon** is a **Function property bar**. The field on the left side of the function currently displays **Data Source.** Select the down arrow that appears in this field. A menu appears that displays the properties for the display form that you just added. Select **Item**. 
 
 7. Notice how the **function box** that appears to the right of the **Item** field is blank. The item property for the display form represents the record from the data source that will be displayed. In this case we want the item to be the record the user selects from the gallery in **BrowseScreen1**. If you will recall, the gallery of records displayed in BrowseScreen1 is titled **Gallery1**.   
 ‎  
@@ -119,13 +119,13 @@ Holly is now ready to create screen #2 for her app, which is the Detail screen. 
 ‎  
 ‎**Note:** By entering this function, the display form in the canvas will populate with values that map to the columns from the SharePoint list. The display form will select the values from the first record in the SharePoint list. In practice, when a user selects a record from the list of items in **BrowseScreen1**, the details of that record will be displayed in this **DetailScreen1** screen. 
 
-8. In the **Tree view** pane, under **DetailsScreen1**, you will see the control named **FormViewer1** (this is the display form). Select the arrow **(&gt;)** that appears to the left of this control to expand it. Notice all the **Data Cards** that appear under this form control; these represent the columns of the SharePoint list that are displayed in **DetailsScreen1**.   
+8. In the **Tree view** pane, under **DetailsScreen1**, you will see the control named **FormViewer1** (this is the display form). Select the arrow **(&gt;)** that appears to the left of this control to expand it. Notice all the **Data Cards** that appear under this form control; these represent the columns of the SharePoint list record that are displayed in **DetailsScreen1**.   
 ‎  
-‎**Note:** These Data Card controls in the **Tree view** pane enable you to customize the fields displayed on this screen. For example, you remove any of the fields if you do not want to see them in this Detail screen by selecting the Data Card in the Tree view pane, selecting the ellipsis icon that appears to the right of it, and them selecting the Delete option. Because Holly wants to display all the SharePoint fields, do not remove any of them from the Detail screen.   
+‎**Note:** These Data Card controls in the **Tree view** pane enable you to customize the fields displayed on this screen. For example, you remove any of the fields if you do not want to see them in this Detail screen by selecting the Data Card in the Tree view pane, selecting the ellipsis icon that appears to the right of it, and them selecting the **Delete** option. Because Holly wants to display all the SharePoint fields, do not remove any of them from the Detail screen.   
 ‎  
-‎For this app, Holly wants to rearrange the order of the fields. Select the **FormViewer1** control (if necessary) in the **Tree view** pane, then go to the **Properties pane** and select **Edit Fields**, which appears next to the **Fields** property. 
+‎However, for this app, Holly wants to rearrange the order of the fields. Select the **FormViewer1** control (if necessary) in the **Tree view** pane, then go to the **Properties pane** and select **Edit Fields**, which appears next to the **Fields** property. 
 
-9. In the **Fields** window that appears, the fields appear in the order in which they will be displayed in this form. Holly has decided to move the **Custome**r field up so that it appears after the **Date** field.  
+9. In the **Fields** window that appears, the fields appear in the order in which they will be displayed in this form. Holly has decided to move the **Customer** field up so that it appears after the **Date** field.  
 ‎  
 ‎Hover your cursor over the **Customer** field and note how an **ellipses** icon appears to the right of the field. Select this **ellipses** icon. In the menu that appears, select **Move up**. As you do this, notice how the **Customer** field moves up one spot in the list, above the **Location** field.   
 ‎  
@@ -156,7 +156,7 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎  
 ‎In the prior step you selected **Gallery1** (under **BrowseScreen1)**. If you recall, Gallery1 represents the summarized list of items in the Browse screen. You will now configure this function property to create the trigger action that controls what to do when an item within Gallery1 is selected on the Browse screen.  
 ‎  
-‎In the **Function property** **bar**, select the down-arrow for the field on the left side of the function, and in the menu that appears, scroll down and select **On Select**. 
+‎In the **Function property bar**, select the down-arrow for the field on the left side of the function, and in the menu that appears, scroll down and select **OnSelect**. 
 
 4. On the formula input box, enter **Navigate(DetailScreen1)** and then press Enter. 
 
@@ -164,7 +164,7 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎  
 ‎To test whether you have properly configured this trigger action, **press F5** to go into Preview mode. Select any record in the gallery and Power Apps should display the record details in DetailsScreen1. Close Preview mode by selecting the **X** in the upper right corner of the screen. 
 
-6. Review the list of records displayed in the gallery in BrowseScreen1. On the right side of each record is a right arrow (>), which is referred to as the **NextArrow** control. If a user selects this arrow, it will also display the details for the record.   
+6. If necessary, select **Gallery1** under **BrowseScreen1** in the Tree view. Review the list of records displayed in the gallery in BrowseScreen1. On the right side of each record is a right arrow (>), which is referred to as the **NextArrow** control. If a user selects this arrow, it will also display the details for the record. 
 ‎  
 ‎So if you are wondering why you configured an **OnSelect** trigger action to display the details of a record when you can simply select the **NextArrow** control, the answer is that the trigger action simply provides another option for displaying the record details.   
 ‎  
@@ -188,13 +188,13 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 ‎  
 ‎Once you have selected the color that you want to use, press the **Esc** key on your keyboard to close the color menu. This will keep **Icon1** selected (if you select anywhere else, it will also close the color menu, but **Icon1** will be unselected and you will have to select it again to add a tool tip to the icon). <br/>
 
-	‎Scroll further down the **Properties pane** for the until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter. <br/>
+	‎Scroll further down the **Properties pane** until you get to the **Tooltip** property. Select the **Tooltip** box, enter **Back**, and press Enter. <br/>
 	
 	‎**Note:** Hovering your mouse over the **Back arrow** icon on DetailScreen1 does not display the tool tip. You will test this out when you finish all other edits in this task and use Preview mode to test the changes that you made. 
 
 11. You now need to configure this **Back arrow** icon so that when the user selects it, **BrowseScreen1** is returned. In the **Tree view** pane, select the **Icon1** control under **DetailScreen1** if it’s not already selected.   
 ‎  
-‎In the **Function property bar**, the field on the left side of the function currently displays **On Select.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Back arrow** icon. If **On Select** is not displayed in this field, select the drop-down arrow and select it from the menu. 
+‎In the **Function property bar**, the field on the left side of the function currently displays **OnSelect.** While this value is left over from the prior task, it’s also the trigger action that you want to associate with this **Back arrow** icon. If **OnSelect** is not displayed in this field, select the drop-down arrow and select it from the menu. 
 
 12. On the formula input box, enter **Navigate(BrowseScreen1)** and then press Enter.   
 ‎  
@@ -202,7 +202,7 @@ In the prior task, you created the DetailScreen1 that will be used to display th
 
 13. To test whether you have properly configured this trigger action, **press F5** to go into Preview mode. The record that was selected in the gallery will be displayed in **DetailScreen1**.   
 ‎  
-‎You should begin by hovering your mouse over the **Back arrow** icon, where the tool tip of **Back** should appear. Select the **Back arrow** icon, which should return you to **BrowseScreen1**.   
+‎You should begin by hovering your mouse over the **Back arrow** icon, which should display the **Back** tool tip. Select the **Back arrow** icon, which should return you to **BrowseScreen1**.   
 ‎  
 ‎Close Preview mode by selecting the **X** in the upper right corner of the screen.
 

@@ -17,7 +17,7 @@ When you initially create these screens, you will just create their forms with t
 
 In your role as Holly Dickson, you will begin the process of creating a canvas app from scratch by building the app’s Browse screen.
 
-1. You should still be logged into your Domain Controller VM (LON-DC1) as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
+1. You should still be logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**; if not, then do so now.
 
 2. In your Microsoft Edge browser, open a new tab and enter the following URL in the address bar: **https://make.powerapps.com**
 
